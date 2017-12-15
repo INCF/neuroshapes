@@ -1,0 +1,110 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/shacl/rec-shacl-20170720/v0.1.0",
+    {
+      "nsg": "{{vocabsbase}}/neurosciencegraph/core/v0.1.0/",
+      "this": "{{schemasbase}}/simulation/circuit/v0.0.1/shapes/"
+    }
+  ],
+  "@type": "owl:Ontology",
+  "imports": [
+    "{{schemasbase}}/core/typedlabeledontologyterm/v0.1.0",
+    "{{schemasbase}}/core/entity/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:Circuit",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{schemasbase}}/core/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:cells",
+              "name": "Cells",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:connectome",
+              "name": "Connectome",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:location",
+              "name": "Location",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:morphologies",
+              "name": "Morphologies",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:segment_index",
+              "name": "Segment index",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:soma_index",
+              "name": "Soma index",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:synapse_index",
+              "name": "Synapse index",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:targets",
+              "name": "Targets",
+              "description": "Targets",
+              "node": "this:TargetShape"
+            },
+            {
+              "path": "nsg:date",
+              "name": "Creation date",
+              "description": "Circuit creation date",
+              "datatype": "xsd:dateTime",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:brainRegion",
+              "name": "Brain Region",
+              "description": "Term representing a brain region",
+              "node": "{{schemasbase}}/core/typedlabeledontologyterm/v0.1.0/shapes/BrainRegionOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:species",
+              "name": "Species",
+              "description": "Term representing a species",
+              "node": "{{schemasbase}}/core/typedlabeledontologyterm/v0.1.0/shapes/SpeciesOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TargetShape",
+      "@type": "sh:NodeShape",
+      "label": "A shape for target list",
+      "targetObjectsOf": "nsg:targets",
+      "nodeKind": "sh:Literal"
+    }
+  ]
+}
