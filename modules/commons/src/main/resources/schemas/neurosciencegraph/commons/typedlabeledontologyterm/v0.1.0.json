@@ -26,7 +26,7 @@
       "label": "The shape of an ontology term representing a model simulation status",
       "and": [
         {
-          "node": "bbplotsh:LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
