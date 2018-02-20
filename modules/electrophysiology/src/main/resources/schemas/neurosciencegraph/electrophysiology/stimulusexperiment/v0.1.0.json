@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/bbp/electrophysiology/stimulusexperiment/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/electrophysiology/stimulusexperiment/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",

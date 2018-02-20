@@ -8,7 +8,7 @@
   "name": "Trace Generation",
   "sweep": "46",
   "activity": {
-    "@id": "{{base}}/data/bbp/experiment/stimulusexperiment/v0.1.1/fcdab649-7ed9-4bf6-a413-41ab8827e89",
+    "@id": "{{base}}/data/neurosciencegraph/experiment/stimulusexperiment/v0.1.1/fcdab649-7ed9-4bf6-a413-41ab8827e89",
     "@type": "nsg:StimulusExperiment"
   }
 }
