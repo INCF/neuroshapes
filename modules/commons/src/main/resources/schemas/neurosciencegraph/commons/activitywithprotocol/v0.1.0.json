@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/commons/activitywithprotocol/v0.1.0/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/nexus/provsh/activity/v1.0.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "ActivityWithProtocolShape",
+      "@type": "sh:NodeShape",
+      "label": "Activity description.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/nexus/provsh/activity/v1.0.0/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "@id": "HadProtocolValueShape",
+              "path": "nsg:hadProtocol",
+              "name": "Protocol",
+              "description": "The value of nsg:hadProtocol should be of type nsg:Protocol.",
+              "class": "nsg:Protocol",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/protocol/v0.1.0/shapes/ProtocolShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
