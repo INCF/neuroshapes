@@ -1,0 +1,116 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ReconstructedCellShape",
+      "@type": "sh:NodeShape",
+      "label": "Reconstructed cell shape definition",
+      "targetClass": "nsg:ReconstructedCell",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:projectName",
+              "name": "Project name",
+              "description": "Project name as given by the organization who generates the data",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:axonProjection",
+              "name": "Axon projection",
+              "description": "Axon projection of the reconstructed cell.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell.",
+              "node": "bbptlocsh:BrainLocationShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:mType",
+              "name": "Morphology type",
+              "description": "The morphology type of the reconstructed cell.",
+              "editorialNote": "Need the cell type for class restriction.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:mSubType",
+              "name": "Morphology sub-type",
+              "description": "The morphology sub-type of the reconstructed cell.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:reconstructedCellIntegrity",
+              "name": "Reconstructed cell ntegrity",
+              "description": "Gives information on the integrity of the reconstructed cell.",
+              "node": "nsg:ReconstructedCellIntegrityShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:somaType",
+              "name": "Soma type",
+              "description": "Gives information on the type of soma of the reconstructed cell, values can be 3D or 2D contour, 1 point, 3 point.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ReconstructedCellIntegrityShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:apicalDendrite",
+          "name": "Apical dendrite integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:basalDendrite",
+          "name": "Basal dendrite integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:axon",
+          "name": "Axon integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:soma",
+          "name": "Soma integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}
