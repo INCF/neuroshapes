@@ -1,0 +1,11 @@
+{
+  "@context":"{{base}}/contexts/nexus/core/mediatype/v0.1.0",
+  "@type":"dcterms:FileFormat",
+  "@id": "{{base}}/data/orgId/domainId/domainId/v0.0.1/1f0ac497-31f7-4c5b-9732-10073a922230",
+  "identifier":"https://www.iana.org/assignments/media-types/application/pdf",
+  "isDefinedBy":"http://www.iana.org/assignments/media-types",
+  "comment":"pdf",
+  "deprecated":false,
+  "seeAlso":"https://www.iana.org/assignments/media-types/application/pdf",
+  "sameAs":"https://www.iana.org/assignments/media-types/application/pdf"
+}

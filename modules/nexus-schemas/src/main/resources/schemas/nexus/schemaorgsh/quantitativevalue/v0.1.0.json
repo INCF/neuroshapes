@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "this": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "label": "A point value or interval for product characteristics and other purposes.",
+      "property": [
+        {
+          "path": "schema:unitCode",
+          "name": "Unit Code",
+          "description": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.",
+          "or": [
+            {
+              "nodeKind": "sh:IRI"
+            },
+            {
+              "datatype": "xsd:string"
+            }
+          ]
+        },
+        {
+          "path": "schema:unitText",
+          "name": "Unit Text",
+          "description": "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for unitCode.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:value",
+          "name": "Value",
+          "description": "The value of the quantitative value or property value node.",
+          "or": [
+            {
+              "datatype": "xsd:float"
+            },
+            {
+              "datatype": "xsd:decimal"
+            },
+            {
+              "datatype": "xsd:double"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

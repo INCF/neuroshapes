@@ -1,0 +1,5 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/mediatype/v0.1.0",
+  "@type": "dcterms:FileFormat",
+  "name": "application/pdf"
+}
