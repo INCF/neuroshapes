@@ -1,0 +1,4 @@
+{
+  "@context":"{{base}}/contexts/nexus/core/mediatype/v0.1.0",
+  "name":"application/pdf"
+}
