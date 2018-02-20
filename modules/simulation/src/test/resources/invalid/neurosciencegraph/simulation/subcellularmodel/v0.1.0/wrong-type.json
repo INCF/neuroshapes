@@ -5,7 +5,7 @@
   "@type": "nsg:WrongType",
   "name": "Entity Name",
   "modelScript": {
-    "@id": "{{base}}/data/bbp/simulation/modelscript/v0.1.0/cfd2ba87-ac84-4615-98d6-048b79d05c0e",
+    "@id": "{{base}}/data/neurosciencegraph/simulation/modelscript/v0.1.0/cfd2ba87-ac84-4615-98d6-048b79d05c0e",
     "@type": "nsg:ModelScript",
     "name": "Entity Name",
     "description": "Entity Description",

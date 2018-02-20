@@ -7,15 +7,15 @@
   ],
   "generated": [
     {
-      "@id": "{{base}}/dev/v0/data/neurosciencegraph/simulation/etypefeatureprotocol/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47g",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/etypefeatureprotocol/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47g",
       "@type": "nsg:ETypeFeatureProtocol"
     },
     {
-      "@id": "{{base}}/dev/v0/data/neurosciencegraph/simulation/tracefeature/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47h",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/tracefeature/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47h",
       "@type": "nsg:TraceFeature"
     },
     {
-      "@id": "{{base}}/dev/v0/data/neurosciencegraph/simulation/threshold/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47i",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/threshold/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47i",
       "@type": "nsg:Threshold"
     }
   ]

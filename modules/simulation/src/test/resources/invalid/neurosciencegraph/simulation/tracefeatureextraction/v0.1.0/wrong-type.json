@@ -8,25 +8,25 @@
   "name": "Feature extraction activity",
   "used": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/simulation/tracecollection/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/tracecollection/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
       "@type": "nsg:TraceCollection"
     },
     {
-      "@id": "{{base}}/dev/v0/data/bbp/simulation/configuration/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47f",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/configuration/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47f",
       "@type": "nsg:Configuration"
     }
   ],
   "generated": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/simulation/etypefeatureprotocol/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47g",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/etypefeatureprotocol/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47g",
       "@type": "nsg:ETypeFeatureProtocol"
     },
     {
-      "@id": "{{base}}/dev/v0/data/bbp/simulation/tracefeature/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47h",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/tracefeature/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47h",
       "@type": "nsg:TraceFeature"
     },
     {
-      "@id": "{{base}}/dev/v0/data/bbp/simulation/threshold/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47i",
+      "@id": "{{base}}/data/neurosciencegraph/simulation/threshold/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47i",
       "@type": "nsg:Threshold"
     }
   ]
