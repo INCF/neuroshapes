@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape"
+        },
+        {
+          "xone": [
+            {
+              "path": "schema:unitText",
+              "name": "Unit text",
+              "datatype": "xsd:string"
+            },
+            {
+              "path": "schema:unitCode",
+              "name": "Unit",
+              "or": [
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+                },
+                {
+                  "datatype": "xsd:string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "name": "Value",
+              "description": "The value of the quantitative value is required.",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:RepeatedQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:repetions",
+              "name": "Repetitions",
+              "description": "Number of repetitions of an activity (a measurement for example).",
+              "or": [
+                {
+                  "datatype": "xsd:integer"
+                },
+                {
+                  "node": "this:QuantitativeValueShape"
+                }
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:PositiveQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "minInclusive": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:NegativeQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "maxExclusive": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
