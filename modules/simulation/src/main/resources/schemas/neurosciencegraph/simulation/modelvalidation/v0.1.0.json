@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/modelvalidation/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ModelValidationShape",
+      "@type": "sh:NodeShape",
+      "label": "Model validation shape",
+      "targetClass": "nsg:ModelValidation",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "name": "Model",
+              "description": "Used model.",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
+              "class": "nsg:ModelInstance",
+              "minCount": 1
+            },
+            {
+              "path": "prov:used",
+              "name": "Model",
+              "description": "Used model.",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
+              "class": "nsg:VariableReport",
+              "minCount": 1
+            },
+            {
+              "path": "nsg:generated",
+              "name": "Result",
+              "description": "Generated model validation result.",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/analysisresult/v0.1.0/shapes/AnalysisResultShape",
+              "class": "nsg:ValidationResult",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
