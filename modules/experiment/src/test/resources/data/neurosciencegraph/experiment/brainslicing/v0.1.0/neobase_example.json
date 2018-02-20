@@ -14,7 +14,7 @@
   },
   "generated": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
       "@type": [
         "nsg:Slice",
         "prov:Entity"
@@ -23,14 +23,14 @@
   ],
   "hadProtocol": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
       "@type": "nsg:Protocol"
     }
   ],
   "startedAtTime": "2001-10-23T00:00:00",
   "used": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/protocol/v0.1.0/3f427a96-a366-43d8-b39e-b85cb378d326",
       "@type": [
         "nsg:Subject",
         "prov:Entity"
@@ -39,13 +39,13 @@
   ],
   "wasAssociatedWith": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/core/person/v0.1.0/b147cbfa-96f1-41a9-8ac6-8c049f158ef7",
+      "@id": "{{base}}/data/neurosciencegraph/core/person/v0.1.0/b147cbfa-96f1-41a9-8ac6-8c049f158ef7",
       "@type": "prov:Agent"
     }
   ],
   "wasStartedBy": [
     {
-      "@id": "{{base}}/dev/v0/data/bbp/core/person/v0.1.0/b147cbfa-96f1-41a9-8ac6-8c049f158ef7",
+      "@id": "{{base}}/data/neurosciencegraph/core/person/v0.1.0/b147cbfa-96f1-41a9-8ac6-8c049f158ef7",
       "@type": "prov:Agent"
     }
   ]

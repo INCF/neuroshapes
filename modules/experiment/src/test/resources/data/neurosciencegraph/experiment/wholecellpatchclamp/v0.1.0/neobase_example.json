@@ -8,7 +8,7 @@
   ],
   "generated": [
     {
-      "@id": "{{base}}/data/bbp/experiment/patchedslice/v0.1.1/7eae1a02-222e-4bd1-a8e7-bccce599193e",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/patchedslice/v0.1.1/7eae1a02-222e-4bd1-a8e7-bccce599193e",
       "@type": [
         "nsg:PatchedSlice",
         "prov:Entity"
@@ -17,7 +17,7 @@
   ],
   "used": [
     {
-      "@id": "{{base}}/data/bbp/experiment/slice/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/slice/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
       "@type": [
         "nsg:Slice",
         "prov:Entity"

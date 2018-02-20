@@ -12,7 +12,7 @@
         "nsg:PatchedCell",
         "prov:Entity"
       ],
-      "@id": "{{base}}/data/bbp/experiment/patchedcell/v0.1.0/f4880a5e-3096-4527-bbf8-05d797b8c424"
+      "@id": "{{base}}/data/neurosciencegraph/experiment/patchedcell/v0.1.0/f4880a5e-3096-4527-bbf8-05d797b8c424"
     }
   ]
 }

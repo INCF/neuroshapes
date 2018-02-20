@@ -6,14 +6,14 @@
     "nsg:WrongType"
   ],
   "generated": {
-    "@id": "{{base}}/dev/v0/data/bbp/experiment/slice/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
+    "@id": "{{base}}/data/neurosciencegraph/experiment/slice/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
     "@type": [
       "nsg:Slice",
       "prov:Entity"
     ]
   },
   "used": {
-    "@id": "{{base}}/dev/v0/data/bbp/experiment/subject/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
+    "@id": "{{base}}/data/neurosciencegraph/experiment/subject/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
     "@type": [
       "nsg:Subject",
       "prov:Entity"
