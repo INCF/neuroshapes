@@ -6,7 +6,8 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0"
+    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -22,7 +23,8 @@
             {
               "path": "schema:unitText",
               "name": "Unit text",
-              "datatype": "xsd:string"
+              "datatype": "xsd:string",
+              "minCount":1
             },
             {
               "path": "schema:unitCode",
@@ -34,7 +36,8 @@
                 {
                   "datatype": "xsd:string"
                 }
-              ]
+              ],
+              "minCount":1
             }
           ]
         },

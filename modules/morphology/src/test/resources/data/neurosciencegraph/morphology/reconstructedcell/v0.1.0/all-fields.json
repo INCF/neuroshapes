@@ -8,13 +8,12 @@
   ],
   "name": "JY160810_A_idA",
   "providerId": "JY160810_A_idA",
-  "brainLocation": [
-    {
-      "@type": "BrainRegion",
+  "brainLocation": {
+    "brainRegion": {
       "@id": "http://purl.obolibrary.org/obo/FMA_62200",
       "label": "ventral posterolateral thalamic nucleus"
     }
-  ],
+  },
   "projectName": "Thalamus project",
   "spacialCellName": "idA",
   "mType": {

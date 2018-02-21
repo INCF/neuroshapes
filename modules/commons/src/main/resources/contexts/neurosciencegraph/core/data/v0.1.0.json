@@ -7,7 +7,8 @@
       "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
       "schema": "http://schema.org/",
       "brainRegion": {
-        "@id": "nsg:brainRegion"
+        "@id": "nsg:brainRegion",
+        "type": "@id"
       },
       "geometry": {
         "@id": "nsg:geometry"
@@ -463,6 +464,45 @@
       },
       "unitText": {
         "@id": "schema:unitText"
+      },
+      "upperPoint": {
+        "@id": "nsg:upperPoint"
+      },
+      "lowerPoint": {
+        "@id": "nsg:lowerPoint"
+      },
+      "imageVolume": {
+        "@id": "nsg:imageVolume"
+      },
+      "voxelType": {
+        "@id": "nsg:voxelType"
+      },
+      "volumeDimension": {
+        "@id": "nsg:volumeDimension"
+      },
+      "imageOrigin": {
+        "@id": "nsg:imageOrigin"
+      },
+      "imageDirection": {
+        "@id": "nsg:imageDirection"
+      },
+      "secondRow": {
+        "@id": "nsg:secondRow"
+      },
+      "thirdRow": {
+        "@id": "nsg:thirdRow"
+      },
+      "voxelResolution": {
+        "@id": "nsg:voxelResolution"
+      },
+      "voxelResolutionValue": {
+        "@id": "nsg:voxelResolutionValue"
+      },
+      "boundingbox": {
+        "@id": "nsg:boundingbox"
+      },
+      "isRegisteredIn": {
+        "@id": "nsg:isRegisteredIn"
       }
     }
   ]
