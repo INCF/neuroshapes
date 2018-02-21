@@ -1,0 +1,51 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
+  "@type": "nsg:AtlasSpatialReferenceSystem",
+  "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/98a9f04c-b7da-4acf-99ce-fb0acecaf8cb",
+  "name": "Paxinos rat atlas spatial reference system",
+  "description": "Paxinos rat atlas spatial reference system",
+  "origin": {
+    "@type": "nsg:Vector3D",
+    "valueX": -8125,
+    "valueY": -7920,
+    "valueZ": -144.4
+  },
+  "orientation": {
+    "@type": "nsg:RotationalMatrix",
+    "firstRow": {
+      "@type": "nsg:Vector3D",
+      "valueX": 1,
+      "valueY": 0,
+      "valueZ": 0
+    },
+    "secondRow": {
+      "@type": "nsg:Vector3D",
+      "valueX": 0,
+      "valueY": 1,
+      "valueZ": 0
+    },
+    "thirdRow": {
+      "@type": "nsg:Vector3D",
+      "valueX": 0,
+      "valueY": 0,
+      "valueZ": 1
+    }
+  },
+  "boundingBox": {
+    "@type": "nsg:BoundingBox",
+    "upperPoint": {
+      "@type": "nsg:Vector3D",
+      "valueX": 8195,
+      "valueY": 16400,
+      "valueZ": 11295.6
+    },
+    "lowerPoint": {
+      "@type": "nsg:Vector3D",
+      "valueX": -8125,
+      "valueY": -7920,
+      "valueZ": -144.4
+    },
+    "unitText": "micron"
+  },
+  "unitText": "micron"
+}
