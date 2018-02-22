@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activitywithprotocol/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "@type": "nxv:Schema",
@@ -19,7 +19,7 @@
       "targetClass": "nsg:AtlasConstruction",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activitywithprotocol/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
         },
         {
           "property": [
