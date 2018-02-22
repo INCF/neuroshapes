@@ -2,5 +2,5 @@ language: scala
 scala:
    - 2.12.2
 script:
-  - sbt -jvm-opts .jvmopts ... compile
-  - sbt -jvm-opts .jvmopts ... test
+  - sbt -javaOptions=.jvmopts compile
+  - sbt -javaOptions=.jvmopts test
