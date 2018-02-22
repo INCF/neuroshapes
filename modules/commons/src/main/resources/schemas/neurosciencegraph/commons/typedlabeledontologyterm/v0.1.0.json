@@ -121,7 +121,7 @@
       ]
     },
     {
-      "@id": "this:UnitCodeOntologyTermShape",
+      "@id": "this:UnitOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a unit code",
       "and": [
