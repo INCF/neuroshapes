@@ -2,13 +2,13 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/core/collection/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/collection/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/nexus/provsh/collection/v1.0.0",
-    "{{base}}/schemas/neurosciencegraph/core/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/nexus/provsh/collection/v1.0.0"
   ],
   "shapes": [
     {
@@ -17,6 +17,9 @@
       "label": "A collection shape.",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
+        {
+          "node": "{{base}}/schemas/nexus/provsh/collection/v1.0.0/shapes/CollectionShape"
+        },
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
         },

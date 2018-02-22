@@ -7,8 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/nexus/provsh/emptycollection/v1.0.0",
-    "{{base}}/schemas/neurosciencegraph/core/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/emptycollection/v0.1.0"
   ],
   "shapes": [
     {
@@ -18,24 +17,7 @@
       "comment": "A size should be provided.",
       "targetClass": "nsg:EmptyCollection",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "and": [
-        {
-          "node": "{{base}}/schemas/nexus/provsh/emptycollection/v1.0.0/shapes/EmptyCollectionShape"
-        },
-        {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/sizedcollection/v0.1.0/shapes/EntityShape"
-        },
-        {
-          "property": [
-            {
-              "path": "schema:size",
-              "name": "Collection Size",
-              "description": "Collection size. The collection can be empty with size 0",
-              "minCount": 1
-            }
-          ]
-        }
-      ]
+      "node": "{{base}}/schemas/neurosciencegraph/commons/emptycollection/v0.1.0/shapes/EmptyCollectionShape"
     }
   ]
 }
