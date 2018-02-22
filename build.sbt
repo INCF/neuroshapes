@@ -116,6 +116,9 @@ lazy val common = Seq(
     ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
 )
 
+resolvers += Resolver.bintrayRepo("bogdanromanx", "maven") // required until sbt-bintray is released
+
+
 lazy val noPublish = Seq(publishLocal := {}, publish := {})
 
 addCommandAlias("review", ";clean;test")
