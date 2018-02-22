@@ -7,13 +7,15 @@
   "generated": [
     {
       "@type": [
-        "nsg:ParcellationImageData"
+        "nsg:ParcellationImageData",
+        "prov:Entity"
       ],
       "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationimagedata/v0.1.21/fd80b57a-9333-4aa2-9d59-7f7dd3a25a92"
     },
     {
       "@type": [
-        "nsg:ParcellationLabel"
+        "nsg:ParcellationLabel",
+        "prov:Entity"
       ],
       "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationlabel/v0.1.0/cf43d997-b012-486f-bd4b-1b2cc70b3454"
     }

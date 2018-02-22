@@ -16,7 +16,6 @@
       "@id": "this:PersonShape",
       "@type": "sh:NodeShape",
       "label": "Schema.org person specification is used as a vocabulary to describe a person.",
-      "targetClass": "nsg:Person",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {

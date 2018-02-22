@@ -64,10 +64,10 @@
         {
           "property": [
             {
-              "path": "schema:repetions",
+              "path": "schema:repetitions",
               "name": "Repetitions",
               "description": "Number of repetitions of an activity (a measurement for example).",
-              "or": [
+              "xone": [
                 {
                   "datatype": "xsd:integer"
                 },
