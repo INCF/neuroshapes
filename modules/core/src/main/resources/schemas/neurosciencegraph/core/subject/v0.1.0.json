@@ -8,7 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/core/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0"
   ],
   "shapes": [
@@ -29,7 +29,7 @@
               "path": "nsg:species",
               "name": "Species",
               "description": "The species of the subject",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/SpeciesOntologyTermShape",
               "minCount": 1,
               "maxCount": 1
             },
@@ -37,21 +37,21 @@
               "path": "nsg:strain",
               "name": "Strain",
               "description": "Subject strain",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/StrainOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:transgenic",
               "name": "Transgenic",
               "description": "Transgenic modification of subject",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/TransgenicOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:sex",
               "name": "Sex",
               "description": "The sex of the subject",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/SexOntologyTermShape",
               "maxCount": 1
             },
             {
@@ -87,21 +87,21 @@
               "path": "nsg:diseaseModel",
               "name": "Disease",
               "description": "Disease modeled in subject.",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/DiseaseModelOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:disease",
               "name": "Disease",
               "description": "Disease of subject.",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/DiseaseOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:treatment",
               "name": "Treatment",
               "description": "Treatment of the subject.",
-              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/core/typedlabeledontologyterm/v0.1.0/shapes/TreatmentOntologyTermShape",
               "maxCount": 1
             },
             {

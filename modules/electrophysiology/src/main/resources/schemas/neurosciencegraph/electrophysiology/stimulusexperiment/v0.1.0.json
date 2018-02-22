@@ -8,7 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "shapes": [
     {
@@ -50,14 +50,14 @@
         {
           "path": "nsg:stimulusType",
           "name": "Stimulus type",
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/StimulusTypeOntologyTermShape",
           "minCount": 1,
           "maxCount": 1
         },
         {
           "path": "nsg:eCode",
           "name": "eCode",
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/EcodeOntologyTermShape",
           "maxCount": 1
         },
         {

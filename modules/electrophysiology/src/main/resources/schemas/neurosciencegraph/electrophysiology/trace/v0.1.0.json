@@ -9,7 +9,7 @@
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "shapes": [
     {
@@ -55,7 +55,7 @@
                   "datatype": "xsd:string"
                 },
                 {
-                  "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+                  "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/UnitOntologyTermShape"
                 }
               ],
               "maxCount": 1
