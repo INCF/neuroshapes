@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/atlas/imagevolume/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/atlas/imagestack/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
@@ -12,11 +12,11 @@
   ],
   "shapes": [
     {
-      "@id": "this:ImageVolumeShape",
+      "@id": "this:ImageStackShape",
       "@type": "sh:NodeShape",
-      "label": "Image volume",
+      "label": "Image stack",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:ImageVolume",
+      "targetClass": "nsg:ImageStack",
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
@@ -31,42 +31,56 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:voxelType",
-              "name": "Volume type",
-              "description": "Type of the voxel",
-              "datatype": "xsd:string",
+              "path": "nsg:sliceDirection",
+              "name": "Slice Direction",
+              "description": "Slice direction of the image stack",
+              "sh:in": {
+                "@list": [
+                  "Sagittal",
+                  "Axial",
+                  "Coronal"
+                ]
+              },
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "nsg:volumeDimension",
-              "name": "Volume Dimension",
-              "description": "Dimension of the 3D volume in voxel",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
+              "path": "nsg:sliceWidth",
+              "name": "Slice width",
+              "description": "Width of the 2D slice",
+              "datatype": "xsd:integer",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "nsg:voxelResolution",
-              "name": "Voxel resolution",
-              "description": "Resolution of the voxel",
-              "node": "this:VoxelResolutionShape",
+              "path": "nsg:sliceHeight",
+              "name": "Slice height",
+              "description": "Height of the 2D slice",
+              "datatype": "xsd:integer",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "nsg:imageOrigin",
-              "name": "Image Origin",
-              "description": "Origin of the image volume",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
+              "path": "nsg:sliceResolution",
+              "name": "Slice resolution",
+              "description": "Resolution of the 2D slice",
+              "node": "this:SliceResolutionShape",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "nsg:imageDirection",
-              "name": "Image direction",
-              "description": "Direction of the image volume represented as a rotational matrix",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/RotationalMatrixShape",
+              "path": "nsg:numberOfSlices",
+              "name": "Number of slices",
+              "description": "Number of slices of the image stack",
+              "datatype": "xsd:integer",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:sliceInterval",
+              "name": "Slice interval",
+              "description": "Slice interval",
+              "node": "this:SliceIntervalShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -75,20 +89,48 @@
       ]
     },
     {
-      "@id": "this:VoxelResolutionShape",
+      "@id": "this:SliceResolutionShape",
       "@type": "sh:NodeShape",
-      "targetObjectsOf": "nsg:voxelResolution",
-      "and": [
+      "and" : [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/QuantitativeValueShape"
         },
         {
           "property": [
             {
-              "path": "schema:value",
-              "name": "Voxel resolution value",
-              "description": "Voxel resolution value",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
+              "path": "nsg:widthResolution",
+              "name": "Width resolution",
+              "description": "Slice resolution in width",
+              "datatype": "xsd:float",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:heightResolution",
+              "name": "Height resolution",
+              "description": "Slice height",
+              "datatype": "xsd:float",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:SliceIntervalShape",
+      "@type": "sh:NodeShape",
+      "and" : [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:sliceIntervalValue",
+              "name": "Slice interval value",
+              "description": "Slice interval value",
+              "datatype": "xsd:float",
               "minCount": 1,
               "maxCount": 1
             }
