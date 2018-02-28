@@ -503,6 +503,33 @@
       },
       "isRegisteredIn": {
         "@id": "nsg:isRegisteredIn"
+      },
+      "sliceDirection": {
+        "@id": "nsg:sliceDirection"
+      },
+      "sliceWidth": {
+        "@id": "nsg:sliceWidth"
+      },
+      "sliceHeight": {
+        "@id": "nsg:sliceHeight"
+      },
+      "numberOfSlices": {
+        "@id": "nsg:numberOfSlices"
+      },
+      "sliceResolution": {
+        "@id": "nsg:sliceResolution"
+      },
+      "sliceInterval": {
+        "@id": "nsg:sliceInterval"
+      },
+      "widthResolution": {
+        "@id": "nsg:widthResolution"
+      },
+      "heightResolution": {
+        "@id": "nsg:heightResolution"
+      },
+      "sliceIntervalValue": {
+        "@id": "nsg:sliceIntervalValue"
       }
     }
   ]
