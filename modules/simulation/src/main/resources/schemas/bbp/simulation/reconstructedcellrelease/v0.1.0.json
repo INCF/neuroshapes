@@ -24,7 +24,7 @@
         {
           "property": [
             {
-              "path": "dcterms:hasPart",
+              "path": "nsg:hasPart",
               "name": "Reconstructed cell",
               "description": "Reconstructed cells part of the release.",
               "class": "nsg:ReconstructedCell",
