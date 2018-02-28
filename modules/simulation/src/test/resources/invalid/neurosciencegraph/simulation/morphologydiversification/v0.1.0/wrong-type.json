@@ -7,18 +7,18 @@
     "nsg:WrongType"
   ],
   "used": [
-      {
-        "@id": "{{base}}/data/neurosciencegraph/simulation/reconstructedcellrelease/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
-        "@type": "nsg:ReconstructedCellRelease"
-      },
-      {
-        "@id": "{{base}}/data/neurosciencegraph/simulation/configuration/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
-        "@type": "nsg:Configuration"
-      }
-    ],
+    {
+      "@id": "{{base}}/data/neurosciencegraph/simulation/reconstructedcellrelease/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
+      "@type": "nsg:ReconstructedCellRelease"
+    },
+    {
+      "@id": "{{base}}/data/neurosciencegraph/simulation/configuration/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
+      "@type": "nsg:Configuration"
+    }
+  ],
   "generated":
-      {
-        "@id": "{{base}}/data/neurosciencegraph/simulation/morphologyrelease/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
-        "@type": "nsg:MorphologyRelease"
-      }
+  {
+    "@id": "{{base}}/data/neurosciencegraph/simulation/morphologyrelease/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae",
+    "@type": "nsg:MorphologyRelease"
+  }
 }

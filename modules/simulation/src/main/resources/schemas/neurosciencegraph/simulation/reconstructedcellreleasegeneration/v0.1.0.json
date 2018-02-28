@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/nexus/provsh/generation/v0.1.0"
+    "{{base}}/schemas/nexus/provsh/generation/v1.0.0"
   ],
   "shapes": [
     {
@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/nexus/provsh/generation/v0.1.0/shapes/GenerationShape"
+          "node": "{{base}}/schemas/nexus/provsh/generation/v1.0.0/shapes/GenerationShape"
         },
         {
           "property": [
@@ -34,7 +34,7 @@
               "path": "prov:atTime",
               "name": "At time",
               "description": "At time.",
-              "datatype": "xsd:datetime",
+              "nodeType": "xsd:datetime",
               "minCount": 1,
               "maxCount": 1
             },
