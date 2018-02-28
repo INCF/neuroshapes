@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+  ],
+  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationlabel/v0.1.0/cf43d997-b012-486f-bd4b-1b2cc70b3454",
+  "@type": "nsg:ParcellationLabel",
+  "name": "Allen mouse CCFv3 atlas parcellation labels",
+  "atlasVersion": "v0.2.3",
+  "originalFileName": "original file name",
+  "mediaType": "application/txt",
+  "contentSize": {
+    "value": 50,
+    "unitCode": "mb"
+  },
+  "digest": [
+    {
+      "alg": "MD5",
+      "value": "c02aa11a4c6"
+    },
+    {
+      "alg": "SHA-256",
+      "value": "639e...60cba"
+    }
+  ]
+}
