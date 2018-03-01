@@ -25,7 +25,7 @@
         {
           "property": [
             {
-              "path": "nsg:property",
+              "path": "nsg:edgePopulation",
               "name": "Properties",
               "description": "Collection of nrn files or syn2.",
               "editorialNote": "Add media type constraint: application/nrn.",
