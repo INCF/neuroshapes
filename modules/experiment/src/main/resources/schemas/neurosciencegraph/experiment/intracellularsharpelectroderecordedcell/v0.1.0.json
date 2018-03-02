@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/experiment/intrasharprecordedcell/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/experiment/intracellularsharpelectroderecordedcell/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
@@ -14,10 +14,10 @@
   ],
   "shapes": [
     {
-      "@id": "this:IntraSharpRecordedCellShape",
+      "@id": "this:IntraCellularSharpElectrodeRecordedCellShape",
       "@type": "sh:NodeShape",
       "label": "Intracellular sharp electrode-recorded cell shape definition",
-      "targetClass": "nsg:IntraSharpRecordedCell",
+      "targetClass": "nsg:IntraCellularSharpElectrodeRecordedCell",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {

@@ -32,8 +32,9 @@
             {
               "path": "prov:generated",
               "description": "The recorded slice generated",
-              "class": "nsg:IntracellularSharpElectrodeRecordedSlice",
-              "minCount": 1
+              "class": "nsg:IntraCellularSharpElectrodeRecordedSlice",
+              "minCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/intracellularsharpelectroderecordedslice/v0.1.0/shapes/IntraCellularSharpElectrodeRecordedSliceShape"
             }
           ]
         }

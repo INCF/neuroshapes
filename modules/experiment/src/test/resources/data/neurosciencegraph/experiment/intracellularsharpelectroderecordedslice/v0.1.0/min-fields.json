@@ -4,12 +4,12 @@
   ],
   "@type": [
     "prov:Entity",
-    "nsg:IntraSharpRecordedSlice"
+    "nsg:IntraCellularSharpElectrodeRecordedSlice"
   ],
   "name": "C010600A",
   "hasPart": [
     {
-      "@id": "{{base}}/data/neurosciencegraph/experiment/intrasharprecordedcellcollection/v0.1.0/a5cbe9e9-2ca9-4f55-8ed2-c7f45b4945fc",
+      "@id": "{{base}}/data/neurosciencegraph/experiment/intracellularsharpelectroderecordedcellcollection/v0.1.0/a5cbe9e9-2ca9-4f55-8ed2-c7f45b4945fc",
       "@type": "nsg:Collection"
     }
   ],

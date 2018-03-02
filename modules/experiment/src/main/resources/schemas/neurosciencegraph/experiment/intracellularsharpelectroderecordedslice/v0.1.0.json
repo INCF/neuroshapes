@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/experiment/intrasharprecordedslice/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/experiment/intracellularsharpelectroderecordedslice/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
@@ -12,10 +12,10 @@
   ],
   "shapes": [
     {
-      "@id": "this:IntraSharpRecordedSliceShape",
+      "@id": "this:IntraCellularSharpElectrodeRecordedSliceShape",
       "@type": "sh:NodeShape",
       "label": "Intracellular sharp electrode-recorded slice shape definition",
-      "targetClass": "nsg:IntraSharpRecordedSlice",
+      "targetClass": "nsg:IntraCellularSharpElectrodeRecordedSlice",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
@@ -35,7 +35,7 @@
               "description": "The collections of recorded cells.",
               "class": "nsg:Collection",
               "minCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/intrasharprecordedcellcollection/v0.1.0/shapes/PatchedCellCollectionShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/intracellularsharpelectroderecordedcellcollection/v0.1.0/shapes/IntraCellularSharpElectrodeRecordedCellCollectionShape"
             },
             {
               "path": "prov:wasRevisionOf",

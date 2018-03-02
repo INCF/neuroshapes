@@ -8,8 +8,8 @@
     ],
     "generated": [
         {
-            "@id": "{{base}}/data/neurosciencegraph/experiment/intrasharprecordedslice/v0.1.1/7eae1a02-222e-4bd1-a8e7-bccce599193e",
-            "@type": ["nsg:IntraSharpRecordedSlice", "prov:Entity"]
+            "@id": "{{base}}/data/neurosciencegraph/experiment/intracellularsharpelectroderecordedslice/v0.1.1/7eae1a02-222e-4bd1-a8e7-bccce599193e",
+            "@type": ["nsg:IntraCellularSharpElectrodeRecordedSlice", "prov:Entity"]
         }
     ],
     "used": [

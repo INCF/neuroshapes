@@ -9,10 +9,10 @@
   "hadMember": [
     {
       "@type": [
-        "nsg:IntraSharpRecordedCell",
+        "nsg:IntraCellularSharpElectrodeRecordedCell",
         "prov:Entity"
       ],
-      "@id": "{{base}}/data/neurosciencegraph/experiment/intrasharprecordedcell/v0.1.0/f4880a5e-3096-4527-bbf8-05d797b8c424"
+      "@id": "{{base}}/data/neurosciencegraph/experiment/intracellularsharpelectroderecordedcell/v0.1.0/f4880a5e-3096-4527-bbf8-05d797b8c424"
     }
   ]
 }

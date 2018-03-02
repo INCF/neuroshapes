@@ -4,7 +4,7 @@
   ],
   "@type": [
     "prov:Entity",
-    "nsg:IntraSharpRecordedCell"
+    "nsg:IntraCellularSharpElectrodeRecordedCell"
   ],
   "name": "C010600A2-MT-C1",
   "brainLocation": {
