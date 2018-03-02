@@ -31,14 +31,6 @@
               "minCount": 1
             },
             {
-              "path": "prov:used",
-              "name": "Model",
-              "description": "Used model.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
-              "class": "nsg:VariableReport",
-              "minCount": 1
-            },
-            {
               "path": "nsg:generated",
               "name": "Result",
               "description": "Generated model validation result.",

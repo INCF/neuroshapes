@@ -12,7 +12,7 @@
   ],
   "shapes": [
     {
-      "@id": "this:DetailedCircuitSimulationShape",
+      "@id": "this:SimulationShape",
       "@type": "sh:NodeShape",
       "label": "Model simulation activity shape",
       "comment": "Query: Get all simulation that generates a voltage trace layer 5",
