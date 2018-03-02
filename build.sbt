@@ -101,11 +101,22 @@ lazy val simulation = project
     moduleName := "nsg-simulation-schemas"
   )
 
+lazy val literature = project
+  .in(file("modules/literature"))
+  .enablePlugins(WorkbenchPlugin)
+  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
+  .dependsOn(core)
+  .settings(common)
+  .settings(
+    name       := "nsg-literature-schemas",
+    moduleName := "nsg-literature-schemas"
+  )
+
 lazy val root = project
   .in(file("."))
   .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
   .settings(common, noPublish)
-  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons)
+  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, literature, nexusschema,nsgcommons)
 
 lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),

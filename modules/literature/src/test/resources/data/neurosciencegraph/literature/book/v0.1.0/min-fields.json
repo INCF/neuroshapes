@@ -1,0 +1,17 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "schema:Book"
+    ],
+    "schema:isbn": "9780195159561",
+    "schema:datePublished": "2004-01-08",
+    "schema:name": "The Synaptic Organization of the Brain",
+    "schema:bookEdition": "5th edition",
+    "schema:publisher": {
+        "@id": "{{base}}/data/nexus/schemaorg/organization/v0.1.0/f4880a5e-3096-4527-bbf8-05d797b8c424",
+        "@type": "schema:Organization"
+    }
+}

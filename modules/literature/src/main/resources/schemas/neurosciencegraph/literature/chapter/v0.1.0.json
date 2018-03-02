@@ -1,0 +1,108 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+          "this": "{{base}}/schemas/neurosciencegraph/literature/chapter/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+        {
+            "@id": "this:ChapterShape",
+            "@type": "sh:NodeShape",
+            "label": "schema.org chapter shape definition.",
+            "targetClass": "schema:Chapter",
+            "nodekind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                   "node": "{{base}}/templates/core/entity/v0.1.0/shapes/EntityShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "schema:name",
+                            "name": "title",
+                            "description": "The title of the chapter",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:author",
+                            "name": "author(s)",
+                            "description": "The author(s) of this chapter",
+                            "or": [
+                                {
+                                    "class": "schema:Person",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                                },
+                                {
+                                    "class": "schema:Organization",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/organization/v0.1.0/shapes/OrganizationShape"
+                                }
+                            ],
+                            "minCount": 1
+                        },
+                        {
+                            "path": "schema:datePublished",
+                            "name": "publicationDate",
+                            "description": "Date of first publication",
+                            "datatype": "xsd:date",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:isPartOf",
+                            "name": "book",
+                            "description": "The book in which this chapter appears",
+                            "class": "schema:Book",
+                            "node": "{{base}}/schemas/neurosciencegraph/literature/book/v0.1.0/shapes/BookShape",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:url",
+                            "name": "url",
+                            "description": "URL at which the full text or abstract of the chapter can be obtained.",
+                            "nodeKind": "sh:IRI"
+                        },
+                        {
+                            "path": "schema:keywords",
+                            "name": "keywords",
+                            "description": "Keywords or tags used to describe this chapter. Multiple entries in a keywords list are typically delimited by commas.",
+                            "datatype": "xsd:string"
+                        },
+                        {
+                            "path": "schema:license",
+                            "name": "license",
+                            "description": "A license document that applies to this chapter, typically indicated by URL.",
+                            "nodeKind": "sh:IRI"
+                        },
+                        {
+                            "path": "schema:pagination",
+                            "name": "pagination",
+                            "description": "Start and end page, or other equivalent indicator",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "http://doi.org/",
+                            "name": "DOI",
+                            "description": "Digital Object Identifier",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:description",
+                            "name": "abstract",
+                            "description": "A description of the chapter, normally the abstract or summary",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

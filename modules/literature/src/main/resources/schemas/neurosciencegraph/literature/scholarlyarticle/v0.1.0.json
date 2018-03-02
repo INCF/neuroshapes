@@ -1,0 +1,115 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+          "this": "{{base}}/schemas/neurosciencegraph/literature/scholarlyarticle/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+        {
+            "@id": "this:ScholarlyArticleShape",
+            "@type": "sh:NodeShape",
+            "label": "schema.org scholarly article shape definition.",
+            "targetClass": "schema:ScholarlyArticle",
+            "nodekind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                   "node": "{{base}}/templates/core/entity/v0.1.0/shapes/EntityShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "schema:name",
+                            "name": "title",
+                            "description": "The title of the scholarly article",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:author",
+                            "name": "author(s)",
+                            "description": "The author(s) of this scholarly article",
+                            "or": [
+                                {
+                                    "class": "schema:Person",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                                },
+                                {
+                                    "class": "schema:Organization",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/organization/v0.1.0/shapes/OrganizationShape"
+                                }
+                            ],
+                            "minCount": 1
+                        },
+                        {
+                            "path": "schema:datePublished",
+                            "name": "publicationDate",
+                            "description": "Date of first publication",
+                            "datatype": "xsd:date",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:isPartOf",
+                            "name": "volume",
+                            "description": "The volume in which this article appears",
+                            "class": "schema:PublicationVolume",
+                            "node": "{{base}}/schemas/neurosciencegraph/literature/publicationvolume/v0.1.0/shapes/PublicationVolumeShape",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:url",
+                            "name": "url",
+                            "description": "URL at which the full text or abstract of the scholarly article can be obtained.",
+                            "nodeKind": "sh:IRI"
+                        },
+                        {
+                            "path": "schema:keywords",
+                            "name": "keywords",
+                            "description": "Keywords or tags used to describe this article. Multiple entries in a keywords list are typically delimited by commas.",
+                            "datatype": "xsd:string"
+                        },
+                        {
+                            "path": "schema:license",
+                            "name": "license",
+                            "description": "A license document that applies to this article, typically indicated by URL.",
+                            "nodeKind": "sh:IRI"
+                        },
+                        {
+                            "path": "schema:pagination",
+                            "name": "pagination",
+                            "description": "Start and end page, or other equivalent indicator",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "http://doi.org/",
+                            "name": "DOI",
+                            "description": "Digital Object Identifier",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "https://www.ncbi.nlm.nih.gov/pmc/articles",
+                            "name": "Pubmed ID",
+                            "description": "Pubmed ID",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:description",
+                            "name": "abstract",
+                            "description": "A description of the article, normally the abstract or summary",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

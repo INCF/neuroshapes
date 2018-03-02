@@ -1,0 +1,30 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "schema:Chapter"
+    ],
+    "schema:isPartOf": {
+        "@id": "{{base}}/data/neurosciencegraph/literature/book/v0.1.0/c3330a5e-3096-4527-bbf8-05d797b8c989",
+        "@type": "schema:Book"
+    },
+    "schema:name": "Thalamus",
+    "schema:author": [
+        {
+            "@id": "{{base}}/data/nexus/schemaorg/person/v0.1.0/d8880a5e-3096-4527-bbf8-16d797b8c988",
+            "@type": "schema:Person"
+        },
+        {
+            "@id": "{{base}}/data/nexus/schemaorg/person/v0.1.0/e8880a5e-3096-4527-bbf8-17d797b8c989",
+            "@type": "schema:Person"
+        }
+    ],
+    "schema:datePublished": "2004-01-08",
+    "schema:pagination": "311-359",
+    "http://doi.org/": "10.1093/acprof:oso/9780195159561.003.0008",
+    "schema:keywords": "brain regions, diencephalon, synaptic circuits, neocortex, peripheral sense organs",
+    "schema:url": {"@id": "http://www.oxfordscholarship.com/view/10.1093/acprof:oso/9780195159561.001.1/acprof-9780195159561-chapter-8"},
+    "schema:description": "The thalamus is the largest part of the diencephalon, one of the major subdivisions of the brain, and provides the major route for afferents to the neocortex. Essentially no messages can reach the neocortex without first passing through the thalamus. Messages from many different sources pass through the thalamus on the way to the neocortex, including messages from peripheral sense organs (such as vision, hearing, touch, temperature, pain, taste, olfaction), other regions of the brain (such as the cerebellum and the mamillary bodies), and the neocortex itself. This chapter discusses the general organization of the thalamus, covering its neuronal elements, synaptic connections, basic neuronal circuit, dendritic cable properties, membrane properties, synaptic transmission, and first order and higher order relays"
+}

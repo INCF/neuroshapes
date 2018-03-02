@@ -1,0 +1,30 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "schema:ScholarlyArticle"
+    ],
+    "schema:isPartOf": {
+        "@id": "{{base}}/data/neurosciencegraph/literature/publicationvolume/v0.1.0/a8880a5e-3096-4527-bbf8-05d797b8c987",
+        "@type": "schema:PublicationVolume"
+    },
+    "schema:name": "A quantitative description of membrane current and its application to conduction and excitation in nerve",
+    "schema:author": [
+        {
+            "@id": "{{base}}/data/nexus/schemaorg/person/v0.1.0/d8880a5e-3096-4527-bbf8-05d797b8c988",
+            "@type": "schema:Person"
+        },
+        {
+            "@id": "{{base}}/data/nexus/schemaorg/person/v0.1.0/e8880a5e-3096-4527-bbf8-05d797b8c989",
+            "@type": "schema:Person"
+        }
+    ],
+    "schema:datePublished": "1952-08-28",
+    "schema:pagination": "500–544",
+    "http://doi.org/": "10.1113/jphysiol.1952.sp004764/",
+    "schema:keywords": "squid, axon",
+    "schema:url": {"@id": "http://onlinelibrary.wiley.com/doi/10.1113/jphysiol.1952.sp004764/abstract"},
+    "https://www.ncbi.nlm.nih.gov/pmc/articles": "PMC1392413"
+}
