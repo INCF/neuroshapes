@@ -9,7 +9,7 @@
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "shapes": [
     {
@@ -35,7 +35,7 @@
               "path": "nsg:axonProjection",
               "name": "Axon projection",
               "description": "Axon projection of the reconstructed cell.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/BrainRegionOntologyTermShape",
               "maxCount": 1
             },
             {
@@ -51,28 +51,28 @@
               "name": "Morphology type",
               "description": "The morphology type of the reconstructed cell.",
               "editorialNote": "Need the cell type for class restriction.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:mSubType",
               "name": "Morphology sub-type",
               "description": "The morphology sub-type of the reconstructed cell.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:reconstructedCellIntegrity",
               "name": "Reconstructed cell ntegrity",
               "description": "Gives information on the integrity of the reconstructed cell.",
-              "node": "nsg:ReconstructedCellIntegrityShape",
+              "node": "this:ReconstructedCellIntegrityShape",
               "maxCount": 1
             },
             {
               "path": "nsg:somaType",
               "name": "Soma type",
               "description": "Gives information on the type of soma of the reconstructed cell, values can be 3D or 2D contour, 1 point, 3 point.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/SomaTypeTermShape",
               "maxCount": 1
             }
           ]

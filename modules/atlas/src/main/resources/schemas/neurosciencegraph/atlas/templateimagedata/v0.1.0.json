@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/atlas/templateimagedata/v0.1.0/shapes/"
+    }
+  ],
+  "import": [
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/atlas/imagestack/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/atlas/imagevolume/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:TemplateImageDataShape",
+      "@type": "sh:NodeShape",
+      "description": "Template image data",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:TemplateImageData",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "xone": [
+                {
+                  "path": "nsg:imageStack",
+                  "name": "Image Stack",
+                  "description": "Image stack",
+                  "node": "{{base}}/schemas/neurosciencegraph/atlas/imagestack/v0.1.0/shapes/ImageStackShape",
+                  "maxCount": 1
+                },
+                {
+                  "path": "nsg:imageVolume",
+                  "name": "Image volume",
+                  "description": "Image volume",
+                  "node": "{{base}}/schemas/neurosciencegraph/atlas/imagevolume/v0.1.6/shapes/ImageVolumeShape",
+                  "maxCount": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

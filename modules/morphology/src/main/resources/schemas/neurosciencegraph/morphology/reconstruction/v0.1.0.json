@@ -8,7 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "shapes": [
     {
@@ -27,7 +27,7 @@
               "path": "nsg:objectiveType",
               "name": "Objective type",
               "description": "Type of objective that was used for the reconstruction such as dry, oil or water.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/ObjectiveTypeOntologyTermShape",
               "maxCount": 1
             },
             {

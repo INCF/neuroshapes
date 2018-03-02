@@ -9,7 +9,7 @@
   "imports": [
     "{{base}}/schemas/nexus/provsh/generation/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
   ],
   "shapes": [
     {
@@ -72,7 +72,7 @@
               "path": "nsg:measuredHoldingPotential",
               "name": "Measured holding potential",
               "description": "Measured holding potential of patched cell.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/RepeatedQuantitativeMeasurementShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/RepeatedQuantitativeValueShape",
               "maxCount": 1
             },
             {
@@ -141,7 +141,7 @@
         {
           "path": "schema:unitCode",
           "name": "Unit",
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/UnitOntologyTermShape",
           "minCount": 1,
           "maxCount": 1
         },

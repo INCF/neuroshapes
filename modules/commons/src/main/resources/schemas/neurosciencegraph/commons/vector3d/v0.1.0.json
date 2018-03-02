@@ -10,7 +10,6 @@
     {
       "@id": "this:Vector3DShape",
       "@type": "sh:NodeShape",
-      "targetClass": "nsg:Vector3D",
       "nodeKind": "sh:BlankNodeOrIRI",
       "property": [
         {

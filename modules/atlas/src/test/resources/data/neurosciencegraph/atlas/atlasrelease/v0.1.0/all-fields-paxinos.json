@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+  ],
+  "@id": "{{base}}/data/neurosciencegraph/atlas/atlasrelease/v0.1.0/11987133-0e46-4247-9004-33d5dac2100b",
+  "@type": "nsg:AtlasRelease",
+  "name": "Paxinos rat atlas release",
+  "releaseDate": "2016-10-10",
+  "citation": "https://doi.org/10.1038/nsmb.2904",
+  "license": "http://creativecommons.org/ns#CC-BY-4",
+  "parcellationVolume": {
+    "@type": "nsg:ParcellationVolume",
+    "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationvolume/v0.1.1/ce14d082-e005-4515-af97-72f73a97334d"
+  },
+  "parcellationOntology": {
+    "@type": "nsg:ParcellationOntology",
+    "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationontology/v0.1.0/97ba433d-217f-44f3-9e4b-91911087521c"
+  },
+  "spatialReferenceSystem": {
+    "@type": "nsg:AtlasSpatialReferenceSystem",
+    "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/98a9f04c-b7da-4acf-99ce-fb0acecaf8cb"
+  }
+}

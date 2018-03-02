@@ -1,6 +1,6 @@
 val commonsVersion = "0.7.6"
 val provVersion    = "1.0.0"
-val kgVersion      = "0.9.1"
+val kgVersion      = "0.9.4"
 
 lazy val prov           = "ch.epfl.bluebrain.nexus" %% "nexus-prov"      % provVersion
 lazy val commonsSchemas = "ch.epfl.bluebrain.nexus" %% "commons-schemas" % commonsVersion
@@ -27,6 +27,7 @@ lazy val nexusschema = project
     noPublish,
     name       := "kg-nsg-schemas",
     moduleName := "kg-nsg-schemas",
+    resolvers  += Resolver.bintrayRepo("bogdanromanx", "maven"),
     libraryDependencies ++= Seq(
       commonsSchemas,
       kgSchemas
@@ -116,6 +117,8 @@ lazy val common = Seq(
   scmInfo := Some(
     ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
 )
+
+
 
 lazy val noPublish = Seq(publishLocal := {}, publish := {})
 
