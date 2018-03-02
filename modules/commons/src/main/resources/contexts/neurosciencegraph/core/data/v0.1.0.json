@@ -433,8 +433,11 @@
       "normalizedScore": {
         "@id": "nsg:normalizedScore"
       },
-      "property": {
-        "@id": "nsg:property"
+      "edgePopulation": {
+        "@id": "nsg:edgePopulation"
+      },
+      "target": {
+        "@id": "nsg:target"
       },
       "downloadURL": {
         "@id": "schema:downloadURL",
