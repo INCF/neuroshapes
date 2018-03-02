@@ -25,27 +25,39 @@
           "property": [
             {
               "path": "prov:used",
-              "name": "Model",
-              "description": "Used model.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
-              "class": "nsg:ModelInstance",
-              "minCount": 1
+              "minCount": 2
             },
             {
               "path": "prov:used",
               "name": "Model",
               "description": "Used model.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
-              "class": "nsg:VariableReport",
-              "minCount": 1
+              "sh:qualifiedValueShape": {
+                "class": "nsg:ModelInstance"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape"
             },
             {
-              "path": "nsg:generated",
-              "name": "Result",
+              "path": "prov:used",
+              "name": "Variable report",
+              "description": "Used variable report.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:VariableReport"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/variablereport/v0.1.0/shapes/VariableReportShape"
+            },
+            {
+              "path": "prov:generated",
+              "name": "Analysis Result",
               "description": "Generated analysis result.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/analysisresult/v0.1.0/shapes/AnalysisResultShape",
               "class": "nsg:AnalysisResult",
-              "minCount": 1
+              "minCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/analysisresult/v0.1.0/shapes/AnalysisResultShape"
             }
           ]
         }

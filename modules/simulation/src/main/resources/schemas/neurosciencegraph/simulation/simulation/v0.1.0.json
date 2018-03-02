@@ -26,35 +26,47 @@
           "property": [
             {
               "path": "prov:used",
+              "minCount": 2
+            },
+            {
+              "path": "prov:used",
               "name": "Model",
               "description": "Used model.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape",
-              "class": "nsg:Model",
-              "minCount": 1
+              "sh:qualifiedValueShape": {
+                "class": "nsg:ModelInstance"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape"
             },
             {
               "path": "prov:used",
               "name": "Configuration",
               "description": "Used configuration.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape",
-              "class": "nsg:Configuration",
-              "minCount": 1
+              "sh:qualifiedValueShape": {
+                "class": "nsg:Configuration"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
             },
             {
               "path": "nsg:status",
               "name": "Status",
               "description": "Simulation status.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/ModelSimulationStatusOntologyTermShape",
               "datatype": "nsg:SimulationStatus",
-              "minCount": 1
+              "minCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/ModelSimulationStatusOntologyTermShape"
             },
             {
               "path": "prov:generated",
               "name": "Generated report",
               "description": "Generated variable report (file attached (bbp, h5, nwb), variable name, target taken from (to be controlled) [compartment, soma, summation, extra cellular recording])),",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/variablereport/v0.1.0/shapes/VariableReportShape",
               "class": "nsg:VariableReport",
-              "minCount": 1
+              "minCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/variablereport/v0.1.0/shapes/VariableReportShape"
             }
           ]
         }

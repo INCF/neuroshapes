@@ -23,7 +23,7 @@
             {
               "path": "prov:activity",
               "name": "Activity",
-              "description": "Points at feature experiment activity that generated trace",
+              "description": "Points at the feature experiment activity that generated the emodelFeature",
               "editorialNote": "The sh:node constraint can be added once the validator support node constraint.",
               "class": "nsg:TraceFeatureExtraction",
               "minCount": 1,

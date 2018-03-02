@@ -109,7 +109,7 @@ lazy val root = project
 lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
   autoScalaLibrary   := false,
-  workbenchVersion   := "0.3.0",
+  workbenchVersion   := "0.2.2",
   bintrayOmitLicense := true,
   homepage           := Some(url("https://github.com/INCF/neuroshapes")),
   licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),

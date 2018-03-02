@@ -24,17 +24,29 @@
           "property": [
             {
               "path": "prov:used",
+              "minCount": 2
+            },
+            {
+              "path": "prov:used",
               "name": "Trace collection",
               "description": "Used trace collections.",
-              "class": "nsg:TraceCollection",
-              "minCount": 1
+              "sh:qualifiedValueShape": {
+                "class": "nsg:TraceCollection"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1
             },
             {
               "path": "prov:used",
               "name": "BluePyEfe configuration",
               "description": "The used BluePyEfe configuration file (s).",
-              "class": "nsg:Configuration",
-              "minCount": 1
+              "sh:qualifiedValueShape": {
+                "class": "nsg:Configuration"
+            },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1
             },
             {
               "path": "prov:generated",
