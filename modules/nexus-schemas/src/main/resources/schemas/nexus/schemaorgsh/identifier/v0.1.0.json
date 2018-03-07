@@ -20,7 +20,7 @@
           "description": "A landing page describing the dataset.",
           "xone": [
             {
-              "datatype": "xsd:anyURI"
+              "nodeKind": "sh:IRI"
             },
             {
               "datatype": "xsd:string"
