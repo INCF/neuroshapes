@@ -4,7 +4,7 @@
     "nsg:ParcellationImageData",
     "nsg:DocumentAtlas"
   ],
-  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationimagedata/v0.1.0/0da39627-9c59-40ff-aab8-7756aab3f7d4",
+  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationimagedata/v0.1.0/56d77c99-5aea-4b31-9a8b-0a3c0b513c56",
   "voxelType": "uint8",
   "volumeDimension": {
     "@type": "Vector3D",
