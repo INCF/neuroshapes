@@ -1,6 +1,7 @@
 {
   "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
   "@type": "nsg:TemplateVolume",
+  "@id": "https://bbp.epfl.ch/nexus/v0/data/neurosciencegraph/atlas/templatevolume/v0.1.0/8af31361-9e83-4bd1-b985-83cdb95fc66a",
   "name": "Paxinos rat atlas template volume",
   "description": "Paxinos rat atlas template volume",
   "imageVolume": {
@@ -51,6 +52,6 @@
   },
   "isRegisteredIn": {
     "@type": "nsg:AtlasSpatialReferenceSystem",
-    "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/98a9f04c-b7da-4acf-99ce-fb0acecaf8cb"
+    "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/a5f8aee2-c06a-4b47-bdea-c5b26d63db99"
   }
 }
