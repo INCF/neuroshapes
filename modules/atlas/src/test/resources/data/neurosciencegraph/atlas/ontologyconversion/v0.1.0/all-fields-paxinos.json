@@ -10,7 +10,7 @@
         "nsg:ParcellationOntology",
         "prov:Entity"
       ],
-      "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationvolume/v0.1.0/672f96e2-aebd-40c1-b883-e26a2cf3271c"
+      "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationontology/v0.1.0/672f96e2-aebd-40c1-b883-e26a2cf3271c"
     }
   ],
   "used": [
@@ -19,7 +19,7 @@
         "nsg:ParcellationLabel",
         "prov:Entity"
       ],
-      "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationimagedata/v0.1.0/0029cffb-b6ad-4236-8e05-af8b1ec88a52"
+      "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationlabel/v0.1.0/0029cffb-b6ad-4236-8e05-af8b1ec88a52"
     }
   ],
   "hadProtocol": {

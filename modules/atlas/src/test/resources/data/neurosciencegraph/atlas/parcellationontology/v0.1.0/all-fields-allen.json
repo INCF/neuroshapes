@@ -6,20 +6,22 @@
   "@type": "nsg:ParcellationOntology",
   "name": "Allen mouse CCFv3 atlas parcellation ontology",
   "atlasVersion": "v0.2.3",
-  "originalFileName": "original file name",
-  "mediaType": "application/txt",
-  "contentSize": {
-    "value": 50,
-    "unitCode": "mb"
-  },
-  "digest": [
-    {
-      "alg": "MD5",
-      "value": "c02aa11a4c6"
+  "distribution": {
+    "accessURL": "http://projectpath/allen/parcellation_label.ttl",
+    "mediaType": "application/ttl",
+    "contentSize": {
+      "value": 50,
+      "unitCode": "mb"
     },
-    {
-      "alg": "SHA-256",
-      "value": "639e...60cba"
-    }
-  ]
+    "digest": [
+      {
+        "alg": "MD5",
+        "value": "c02aa11a4c6"
+      },
+      {
+        "alg": "SHA-256",
+        "value": "639e...60cba"
+      }
+    ]
+  }
 }

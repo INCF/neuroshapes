@@ -34,13 +34,11 @@
               "path": "nsg:sliceDirection",
               "name": "Slice Direction",
               "description": "Slice direction of the image stack",
-              "sh:in": {
-                "@list": [
+              "sh:in": [
                   "Sagittal",
                   "Axial",
                   "Coronal"
-                ]
-              },
+                ],
               "minCount": 1,
               "maxCount": 1
             },

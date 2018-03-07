@@ -19,6 +19,6 @@
     "unitText": "micron"
   },
   "distribution": {
-    "accessURL": "/gpfs/bbp.cscs.ch/project/proj39/data/whole_brain_mouse/236174/"
+    "accessURL": "http://projectpath/whole_brain_mouse/236174"
   }
 }
