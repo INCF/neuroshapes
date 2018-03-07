@@ -1,6 +1,6 @@
 {
   "@context":"{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
-  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationvolume/v0.1.1/ce14d082-e005-4515-af97-72f73a97334d",
+  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationvolume/v0.1.0/e94c1e8f-1aa2-4005-bc89-00f8059e5058",
   "@type": "nsg:ParcellationVolume",
   "name": "Allen mouse CCFv3 atlas parcellation volume",
   "description": "Allen mouse CCFv3 atlas parcellation volume",

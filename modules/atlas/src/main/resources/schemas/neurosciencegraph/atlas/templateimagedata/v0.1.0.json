@@ -18,31 +18,14 @@
       "description": "Template image data",
       "nodeKind": "sh:BlankNodeOrIRI",
       "targetClass": "nsg:TemplateImageData",
-      "and": [
+      "xone": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "class": "nsg:ImageStack",
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/imagestack/v0.1.0/shapes/ImageStackShape"
         },
         {
-          "property": [
-            {
-              "xone": [
-                {
-                  "path": "nsg:imageStack",
-                  "name": "Image Stack",
-                  "description": "Image stack",
-                  "node": "{{base}}/schemas/neurosciencegraph/atlas/imagestack/v0.1.0/shapes/ImageStackShape",
-                  "maxCount": 1
-                },
-                {
-                  "path": "nsg:imageVolume",
-                  "name": "Image volume",
-                  "description": "Image volume",
-                  "node": "{{base}}/schemas/neurosciencegraph/atlas/imagevolume/v0.1.6/shapes/ImageVolumeShape",
-                  "maxCount": 1
-                }
-              ]
-            }
-          ]
+          "class": "nsg:ImageVolume",
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/imagevolume/v0.1.6/shapes/ImageVolumeShape"
         }
       ]
     }

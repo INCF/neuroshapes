@@ -1,7 +1,7 @@
 {
   "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
   "@type": "nsg:AtlasSpatialReferenceSystem",
-  "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/98a9f04c-b7da-4acf-99ce-fb0acecaf8cb",
+  "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/a5f8aee2-c06a-4b47-bdea-c5b26d63db99",
   "name": "Paxinos rat atlas spatial reference system",
   "description": "Paxinos rat atlas spatial reference system",
   "origin": {
