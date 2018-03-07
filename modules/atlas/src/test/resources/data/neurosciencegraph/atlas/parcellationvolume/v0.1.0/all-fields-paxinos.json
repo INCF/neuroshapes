@@ -1,7 +1,7 @@
 {
   "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
-  "@id": "{{base}}/data/neurosciencegraph/atlas/parcellationvolume/v0.1.1/ce14d082-e005-4515-af97-72f73a97334d",
   "@type": "nsg:ParcellationVolume",
+  "@id": "https://bbp.epfl.ch/nexus/v0/data/neurosciencegraph/atlas/parcellationvolume/v0.1.0/2dc18237-9fbf-408e-8631-166724d4defb",
   "name": "Paxinos rat atlas parcellation volume",
   "description": "Paxinos rat atlas parcellation volume",
   "voxelType": "uint8",
@@ -49,6 +49,6 @@
   },
   "isRegisteredIn": {
     "@type": "nsg:AtlasSpatialReferenceSystem",
-    "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/98a9f04c-b7da-4acf-99ce-fb0acecaf8cb"
+    "@id": "{{base}}/data/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0/a5f8aee2-c06a-4b47-bdea-c5b26d63db99"
   }
 }
