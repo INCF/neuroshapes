@@ -39,6 +39,12 @@
           "maxCount": 1
         },
         {
+          "path": "nsg:atlasSpatialReferenceSystem",
+          "name": "Atlas Spatial Reference System",
+          "class": "nsg:AtlasSpatialReferenceSystem",
+          "maxCount": 1
+        },
+        {
           "path": "nsg:positionInLayer",
           "name": "Position in layer",
           "description": "Position in layer (deep / superficial)",
@@ -80,13 +86,7 @@
         },
         {
           "property": [
-            {
-              "path": "nsg:spatialReferenceSystem",
-              "name": "Spatial Reference System",
-              "class": "nsg:SpatialReferenceSystem",
-              "minCount": 1,
-              "maxCount": 1
-            }
+
           ]
         }
       ]
