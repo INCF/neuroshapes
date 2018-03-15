@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.0"
   ],
   "shapes": [
     {
@@ -18,7 +18,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.0/shapes/ModelInstanceShape"
         },
         {
           "property": [
@@ -41,6 +41,7 @@
             {
               "path": "nsg:modelScript",
               "name": "Model script",
+              "comment":"A memodel modelscript shape is needed here.",
               "class": "nsg:ModelScript"
             }
           ]

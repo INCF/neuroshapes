@@ -8,7 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.0"
   ],
   "shapes": [
     {
@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0/shapes/ModelInstanceShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.0/shapes/ModelInstanceShape"
         },
         {
           "property": [

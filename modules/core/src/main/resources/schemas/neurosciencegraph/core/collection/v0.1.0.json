@@ -16,7 +16,7 @@
       "label": "A collection shape.",
       "targetClass": "nsg:Collection",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/collection/v1.0.0/shapes/CollectionShape"
+      "node": "{{base}}/schemas/neurosciencegraph/commons/collection/v0.1.0/shapes/CollectionShape"
     }
   ]
 }
