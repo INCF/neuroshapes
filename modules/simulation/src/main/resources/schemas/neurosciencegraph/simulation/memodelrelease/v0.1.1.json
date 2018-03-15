@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/simulation/morphology/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/simulation/morphology/v0.1.1"
   ],
   "shapes": [
     {
@@ -34,7 +34,7 @@
               "path": "nsg:morphologyRelease",
               "name": "Morphology release",
               "description": "Morphology release shape.",
-              "editorialNote": "A node constraint should be added when it is supported: {{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.0/shapes/MorphologyReleaseShape",
+              "editorialNote": "A node constraint should be added when it is supported: {{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.1/shapes/MorphologyReleaseShape",
               "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.1/shapes/MorphologyReleaseShape",
               "class": "nsg:MorphologyRelease"
             },
