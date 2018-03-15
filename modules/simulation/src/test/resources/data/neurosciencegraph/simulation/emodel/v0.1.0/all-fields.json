@@ -14,8 +14,8 @@
     "name": "a name"
   },
   "modelScript": {
-    "@id": "{{base}}/data/neurosciencegraph/simulation/modelscript/v0.1.0/b627f305-fab1-4fbe-b3e5-25de5f617496",
-    "@type": "nsg:ModelScript",
+    "@id": "{{base}}/data/neurosciencegraph/simulation/emodelscript/v0.1.0/b627f305-fab1-4fbe-b3e5-25de5f617496",
+    "@type": "nsg:EModelScript",
     "name": "cADpyr_L5TPC",
     "distribution": [
       {

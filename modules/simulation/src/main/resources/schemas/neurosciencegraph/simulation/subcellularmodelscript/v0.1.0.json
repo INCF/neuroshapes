@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/synapserelease/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/subcellularmodelscript/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
@@ -12,11 +12,11 @@
   ],
   "shapes": [
     {
-      "@id": "this:SynapseReleaseShape",
+      "@id": "this:SubCellularModelScriptShape",
       "@type": "sh:NodeShape",
       "label": "This shape is for...",
-      "targetClass": "nsg:SynapseRelease",
       "nodekind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:SubCellularModelScript",
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
@@ -24,17 +24,17 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
-              "name": "Synapse release data location",
-              "description": "Synapse release data location.",
-              "node": "this:SynapseReleaseDistributionShape"
+              "path": "schema:distribution",
+              "name": "Distribution",
+              "description": "SubCellular modelScript distribution.",
+              "node": "this:SubCellularModelScriptDistributionShape"
             }
           ]
         }
       ]
     },
     {
-      "@id": "this:SynapseReleaseDistributionShape",
+      "@id": "this:SubCellularModelScriptDistributionShape",
       "@type": "sh:NodeShape",
       "label": "This shape is for...",
       "nodekind": "sh:BlankNodeOrIRI",
@@ -47,9 +47,9 @@
             {
               "path": "schema:mediaType",
               "name": "Media type",
-              "description": "",
+              "description": "Subcellular model script media type(s)",
               "in": [
-                "application/mod"
+                "application/neuron-mod"
               ]
             }
           ]

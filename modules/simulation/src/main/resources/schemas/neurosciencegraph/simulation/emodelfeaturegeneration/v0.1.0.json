@@ -6,6 +6,9 @@
     }
   ],
   "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/nexus/provsh/generation/v1.0.0"
+  ],
   "shapes": [
     {
       "@id": "this:EmodelFeatureGenerationShape",
