@@ -83,11 +83,6 @@
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape"
-        },
-        {
-          "property": [
-
-          ]
         }
       ]
     },

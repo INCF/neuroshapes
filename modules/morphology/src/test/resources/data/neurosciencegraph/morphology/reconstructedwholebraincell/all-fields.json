@@ -10,7 +10,7 @@
   "providerId": "04392-04406-X11579-Y24237",
   "brainLocation": {
     "brainRegion": {
-      "@id": "http://voxels.nexus.apps.bbp.epfl.ch/api/analytics/atlas/releases/1192CEAC-17C5-4A74-B88C-48065C048678/filters/brain_region/262",
+      "@id": "http://api.brain-map.org/api/v2/data/Structure/262",
       "label": "Reticular nucleus of the thalamus"
     },
     "atlasSpatialReferenceSystem" : {
