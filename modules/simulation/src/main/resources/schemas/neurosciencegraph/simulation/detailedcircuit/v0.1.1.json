@@ -27,14 +27,14 @@
               "description": "Node collection entity.",
               "class": "nsg:NodeCollection",
               "minCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/nodecollection/v0.1.0/shapes/NodeCollectionShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/nodecollection/v0.1.1/shapes/NodeCollectionShape"
             },
             {
               "path": "nsg:edgeCollection",
               "name": "nrnPath",
               "description": "Location of nrn synapse file and additional circuit description files: start.ncs and start.target",
               "class": "nsg:EdgeCollection",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/edgecollection/v0.1.0/shapes/EdgeCollectionShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/edgecollection/v0.1.1/shapes/EdgeCollectionShape"
             },
             {
               "path": "nsg:target",
