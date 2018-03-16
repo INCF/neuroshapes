@@ -10,7 +10,7 @@
   "hadMember": [
     {
       "@id": "{{base}}/data/neurosciencegraph/experiment/labeledcell/v0.1.1/8258536c-f010-467b-9c00-3c1df7a7ab11",
-      "@type": "nsg:LabeledCell"
+      "@type": ["nsg:LabeledCell","prov:Entity"]
     }
   ]
 }
