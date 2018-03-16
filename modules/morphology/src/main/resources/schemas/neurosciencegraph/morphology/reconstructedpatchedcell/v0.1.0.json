@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0/shapes/ReconstructedPatchedCellShape"
+          "node": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0/shapes/ReconstructedCellShape"
         },
         {
           "property": [
