@@ -4,3 +4,7 @@ scala:
 script:
   - sbt -javaOptions=.jvmopts compile
   - sbt -javaOptions=.jvmopts test
+branches:
+  only:
+    - master
+    - simulation_schemas
