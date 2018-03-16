@@ -52,7 +52,6 @@
           "property": [
             {
               "path": "schema:mediaType",
-              "minCount": 0,
               "name": "Media type",
               "description": "",
               "in": [

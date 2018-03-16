@@ -2,13 +2,13 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/simplifiedcircuit/v0.0.1/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/simplifiedcircuit/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.1"
+    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.1"
   ],
   "shapes": [
     {
@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.1/shapes/ModelInstanceShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.1/shapes/ModelInstanceShape"
         },
         {
           "property": [
@@ -121,7 +121,7 @@
               "path": "nsg:synapseRelease",
               "name": "Synapse release",
               "description": "Collection of mod files identified by git hash.",
-              "node": "{{base}}/schemas/neurosciencegraph/simulation/detailedcircuit/v0.1.0/shapes/SynapseReleaseDistributionShape",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/synapserelease/v0.1.0/shapes/SynapseReleaseDistributionShape",
               "minCount": 1,
               "maxCount": 1
             }

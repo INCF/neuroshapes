@@ -7,7 +7,8 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
     {
@@ -18,7 +19,7 @@
       "targetClass": "nsg:SubCellularModelScript",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelscript/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
         },
         {
           "property": [
