@@ -39,9 +39,6 @@ test
 
 The license for all schemas and data is [CC-BY-4.0](https://github.com/INCF/neuroshapes/blob/master/LICENSE).
   
-# Neuroshapes Team
-
-* [Members](https://github.com/orgs/INCF/teams/neuroshapes/members) and [Collaborations](https://github.com/INCF/neuroshapes/settings/collaboration)
 
 # Roadmap
 
