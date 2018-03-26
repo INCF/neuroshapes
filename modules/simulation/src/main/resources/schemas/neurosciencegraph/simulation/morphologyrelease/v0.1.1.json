@@ -34,7 +34,7 @@
               "name": "Morphology release index file",
               "description": "Morphology release index file.",
               "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape",
-              "class": "prov:Entity"
+              "class": "nsg:Entity"
             }
           ]
         }
