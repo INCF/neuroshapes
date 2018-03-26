@@ -243,35 +243,30 @@
         "@id": "nsg:providerId"
       },
       "boundingBox": {
-        "@id": "nsg:boundingBox",
-        "@type": "@id"
+        "@id": "nsg:boundingBox"
       },
       "orientation": {
-        "@id": "nsg:orientation",
-        "@type": "@id"
+        "@id": "nsg:orientation"
       },
       "parcellationVolume": {
         "@id": "nsg:parcellationVolume",
         "@type": "@id"
       },
       "origin": {
-        "@id": "nsg:origin",
-        "@type": "@id"
+        "@id": "nsg:origin"
       },
       "releaseDate": {
         "@id": "nsg:releaseDate"
       },
       "radius": {
-        "@id": "nsg:radius",
-        "@type": "@id"
+        "@id": "nsg:radius"
       },
       "parcellationOntology": {
         "@id": "nsg:parcellationOntology",
         "@type": "@id"
       },
       "center": {
-        "@id": "nsg:center",
-        "@type": "@id"
+        "@id": "nsg:center"
       },
       "valueZ": {
         "@id": "nsg:valueZ"
@@ -285,8 +280,7 @@
         "@type": "@id"
       },
       "distribution": {
-        "@id": "schema:distribution",
-        "@type": "@id"
+        "@id": "schema:distribution"
       },
       "cellPlacement": {
         "@id": "nsg:cellPlacement",
@@ -313,91 +307,70 @@
         "@type": "@id"
       },
       "pipetteNumber": {
-        "@id": "nsg:pipetteNumber",
-        "@type": "@id"
+        "@id": "nsg:pipetteNumber"
       },
       "startMembranePotential": {
-        "@id": "nsg:startMembranePotential",
-        "@type": "@id"
+        "@id": "nsg:startMembranePotential"
       },
       "endMembranePotential": {
-        "@id": "nsg:endMembranePotential",
-        "@type": "@id"
+        "@id": "nsg:endMembranePotential"
       },
       "sealResistance": {
-        "@id": "nsg:sealResistance",
-        "@type": "@id"
+        "@id": "nsg:sealResistance"
       },
       "pipetteResistance": {
-        "@id": "nsg:pipetteResistance",
-        "@type": "@id"
+        "@id": "nsg:pipetteResistance"
       },
       "liquidJunctionPotential": {
-        "@id": "nsg:liquidJunctionPotential",
-        "@type": "@id"
+        "@id": "nsg:liquidJunctionPotential"
       },
       "labelingCompound": {
-        "@id": "nsg:labelingCompound",
-        "@type": "@id"
+        "@id": "nsg:labelingCompound"
       },
       "repetition": {
-        "@id": "nsg:repetition",
-        "@type": "@id"
+        "@id": "nsg:repetition"
       },
       "targetHoldingPotential": {
-        "@id": "nsg:targetHoldingPotential",
-        "@type": "@id"
+        "@id": "nsg:targetHoldingPotential"
       },
       "measuredHoldingPotential": {
-        "@id": "nsg:measuredHoldingPotential",
-        "@type": "@id"
+        "@id": "nsg:measuredHoldingPotential"
       },
       "inputResistance": {
-        "@id": "nsg:inputResistance",
-        "@type": "@id"
+        "@id": "nsg:inputResistance"
       },
       "seriesResistance": {
-        "@id": "nsg:seriesResistance",
-        "@type": "@id"
+        "@id": "nsg:seriesResistance"
       },
       "compensationCurrent": {
-        "@id": "nsg:compensationCurrent",
-        "@type": "@id"
+        "@id": "nsg:compensationCurrent"
       },
       "digitalToAnalogConverter": {
-        "@id": "nsg:digitalToAnalogConverter",
-        "@type": "@id"
+        "@id": "nsg:digitalToAnalogConverter"
       },
       "numberOfRepetition": {
-        "@id": "nsg:numberOfRepetition",
-        "@type": "@id"
+        "@id": "nsg:numberOfRepetition"
       },
       "retrievalDate": {
         "@id": "nsg:retrievalDate"
       },
       "timeStep": {
-        "@id": "nsg:timeStep",
-        "@type": "@id"
+        "@id": "nsg:timeStep"
       },
       "slicingPlane": {
-        "@id": "nsg:slicingPlane",
-        "@type": "@id"
+        "@id": "nsg:slicingPlane"
       },
       "slicingAngle": {
-        "@id": "nsg:slicingAngle",
-        "@type": "@id"
+        "@id": "nsg:slicingAngle"
       },
       "cuttingThickness": {
-        "@id": "nsg:cuttingThickness",
-        "@type": "@id"
+        "@id": "nsg:cuttingThickness"
       },
       "hemisphere": {
-        "@id": "nsg:hemisphere",
-        "@type": "@id"
+        "@id": "nsg:hemisphere"
       },
       "solution": {
-        "@id": "nsg:solution",
-        "@type": "@id"
+        "@id": "nsg:solution"
       },
       "materials": {
         "@id": "nsg:materials",
@@ -408,20 +381,16 @@
         "@type": "@id"
       },
       "steps": {
-        "@id": "nsg:steps",
-        "@type": "@id"
+        "@id": "nsg:steps"
       },
       "warning": {
-        "@id": "nsg:warning",
-        "@type": "@id"
+        "@id": "nsg:warning"
       },
       "reagentName": {
-        "@id": "nsg:reagentName",
-        "@type": "@id"
+        "@id": "nsg:reagentName"
       },
       "reagentLinearFormula": {
-        "@id": "nsg:reagentLinearFormula",
-        "@type": "@id"
+        "@id": "nsg:reagentLinearFormula"
       },
       "reagentVendor": {
         "@id": "nsg:reagentVendor",
@@ -538,7 +507,8 @@
         "@id": "nsg:emodelIndex"
       },
       "subCellularMechanism": {
-        "@id": "nsg:subCellularMechanism"
+        "@id": "nsg:subCellularMechanism",
+        "@type": "@id"
       },
       "morphologyIndex": {
         "@id": "nsg:morphologyIndex"
@@ -566,6 +536,10 @@
       },
       "morphology": {
         "@id": "nsg:morphology"
+      },
+      "isPartOf": {
+        "@id": "dcterms:isPartOf",
+        "@type": "@id"
       }
     }
   ]
