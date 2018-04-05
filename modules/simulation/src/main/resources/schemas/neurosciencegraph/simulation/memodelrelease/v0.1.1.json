@@ -7,7 +7,8 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.1"
   ],
   "shapes": [
     {
@@ -18,7 +19,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.1/shapes/ModelReleaseShape"
         },
         {
           "property": [
@@ -43,7 +44,8 @@
               "name": "Memodel index",
               "description": "Memodel release index file.",
               "editorialNote": "Check the files to attach to this entity .The following node constraint can be add later: {{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape.",
-              "class": "nsg:Entity"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelindex/v0.1.1/shapes/ModelIndexShape",
+              "class": "nsg:ModelReleaseIndex"
             }
           ]
         }

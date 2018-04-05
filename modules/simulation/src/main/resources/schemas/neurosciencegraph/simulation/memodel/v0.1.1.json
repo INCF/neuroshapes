@@ -42,6 +42,12 @@
               "path": "nsg:modelScript",
               "name": "EModel script",
               "class": "nsg:EModelScript"
+            },
+            {
+              "path": "dcterms:isPartOf",
+              "name": "Part of",
+              "description": "The memodel release this memodel is part of.",
+              "class": "nsg:MEModelRelease"
             }
           ]
         }
