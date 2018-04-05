@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.2.0",
+    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1"
   ],
   "@type": "nxv:Schema",
