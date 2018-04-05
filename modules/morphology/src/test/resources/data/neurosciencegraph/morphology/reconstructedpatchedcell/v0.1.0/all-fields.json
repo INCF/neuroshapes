@@ -25,7 +25,7 @@
     "axon": false,
     "soma": true
   },
-  "somaType": {
+  "somaReconstructionType": {
     "@id": "nsg:2DContour",
     "label": "2D contour"
   }
