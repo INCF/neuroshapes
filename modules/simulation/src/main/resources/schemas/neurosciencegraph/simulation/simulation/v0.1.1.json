@@ -2,13 +2,13 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/simulation/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/simulation/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.1",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
   "shapes": [
     {
@@ -20,7 +20,7 @@
       "targetClass": "nsg:Simulation",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.1/ActivityShape"
         },
         {
           "property": [
@@ -58,7 +58,7 @@
               "description": "Simulation status.",
               "datatype": "nsg:SimulationStatus",
               "minCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/ModelSimulationStatusOntologyTermShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/ModelSimulationStatusOntologyTermShape"
             },
             {
               "path": "prov:generated",

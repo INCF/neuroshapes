@@ -7,7 +7,8 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
   "shapes": [
     {
@@ -31,7 +32,7 @@
               "path": "nsg:brainRegion",
               "name": "Brain region",
               "description": "Brain region",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/BrainRegionOntologyTermShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/BrainRegionOntologyTermShape"
             },
             {
               "path": "nsg:species",
