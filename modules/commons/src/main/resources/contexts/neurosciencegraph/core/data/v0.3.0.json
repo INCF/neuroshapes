@@ -537,6 +537,9 @@
       "morphology": {
         "@id": "nsg:morphology"
       },
+      "mainScript": {
+        "@id": "nsg:mainScript"
+      },
       "isPartOf": {
         "@id": "dcterms:isPartOf",
         "@type": "@id"
