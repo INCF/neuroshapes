@@ -43,7 +43,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:mainScript",
+              "path": "nsg:mainModelScript",
               "name": "EModel script",
               "description": "EModel script which should be used to instantiante single cell model. Should reference one of the scripts in EModel.",
               "class": "nsg:EModelScript",

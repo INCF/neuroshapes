@@ -537,6 +537,15 @@
       "morphology": {
         "@id": "nsg:morphology"
       },
+      "mainModelScript": {
+        "@id": "nsg:mainModelScript"
+      },
+      "name": {
+        "@id": "schema:name"
+      },
+      "version": {
+        "@id": "schema:version"
+      },
       "isPartOf": {
         "@id": "dcterms:isPartOf",
         "@type": "@id"

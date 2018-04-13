@@ -26,14 +26,6 @@
         {
           "property": [
             {
-              "path": "nsg:version",
-              "name": "Version",
-              "description": "Version of the generated emodel.",
-              "datatype": "xsd:string",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
               "path": "nsg:bestScore",
               "name": "Best score",
               "description": "Best score.",
