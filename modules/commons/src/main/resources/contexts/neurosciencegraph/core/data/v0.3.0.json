@@ -540,6 +540,9 @@
       "mainScript": {
         "@id": "nsg:mainScript"
       },
+      "version": {
+        "@id": "nsg:version"
+      },
       "isPartOf": {
         "@id": "dcterms:isPartOf",
         "@type": "@id"

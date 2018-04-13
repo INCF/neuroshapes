@@ -8,8 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.1",
-    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.1"
   ],
   "shapes": [
     {
