@@ -8,6 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.2",
     "{{base}}/schemas/neurosciencegraph/simulation/modelreleaseindex/v0.1.1"
   ],
   "shapes": [
@@ -19,7 +20,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.1/shapes/ModelReleaseShape"
+          "node": "{{base}}/schemas/neurosciencegraph/simulation/modelrelease/v0.1.2/shapes/ModelReleaseShape"
         },
         {
           "property": [
@@ -27,7 +28,7 @@
               "path": "nsg:emodelIndex",
               "name": "EModel release index file",
               "description": "EModel release index file.",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelindex/v0.1.1/shapes/ModelReleaseIndexShape",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/modelreleaseindex/v0.1.1/shapes/ModelReleaseIndexShape",
               "class": "nsg:ModelReleaseIndex"
             }
           ]
