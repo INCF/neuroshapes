@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/brainimaging/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:BrainImagingShape",
+      "@type": "sh:NodeShape",
+      "label": "Brain imaging shape definition",
+      "targetClass": "nsg:BrainImaging",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:xScaling",
+              "name": "X scaling",
+              "description": "X scaling of imaged region.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:yScaling",
+              "name": "Y scaling",
+              "description": "Y scaling of imaged region.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:zScaling",
+              "name": "Z scaling",
+              "description": "Z scaling of imaged region.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
