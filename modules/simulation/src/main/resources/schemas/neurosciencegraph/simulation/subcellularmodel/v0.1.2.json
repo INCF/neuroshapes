@@ -35,10 +35,10 @@
               "description": "The synapse/ion channel release this model is part of.",
               "or": [
                 {
-                  "class": "nsg:IonChannelMechanismReleaseShape"
+                  "class": "nsg:IonChannelMechanismRelease"
                 },
                 {
-                  "class": "nsg:SynapseReleaseShape"
+                  "class": "nsg:SynapseRelease"
                 }
               ]
             }
