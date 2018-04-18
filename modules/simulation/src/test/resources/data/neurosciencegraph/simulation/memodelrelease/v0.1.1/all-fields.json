@@ -26,6 +26,6 @@
       "nsg:MorphologyRelease",
       "nsg:Entity"
     ],
-    "@id": "{{base}}/data/neurosciencegraph/simulation/morphologyrelease/v0.1.0/12e68e2d-47fe-47c1-bc5f-195d914d00ae"
+    "@id": "{{base}}/data/neurosciencegraph/simulation/morphologyrelease/v0.1.1/12e68e2d-47fe-47c1-bc5f-195d914d00ae"
   }
 }
