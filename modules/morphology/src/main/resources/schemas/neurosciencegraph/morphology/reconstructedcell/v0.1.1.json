@@ -2,22 +2,20 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
   "shapes": [
     {
       "@id": "this:ReconstructedCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell shape definition",
-      "owl:deprecated":true,
       "targetClass": "nsg:ReconstructedCell",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
@@ -30,7 +28,7 @@
               "path": "nsg:axonProjection",
               "name": "Axon projection",
               "description": "Axon projection of the reconstructed cell.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/BrainRegionOntologyTermShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/BrainRegionOntologyTermShape"
             },
             {
               "path": "nsg:brainLocation",

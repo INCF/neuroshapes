@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.1/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/"
     }
   ],
   "imports": [
@@ -10,15 +10,13 @@
     "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1"
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:QuantitativeValueShape",
-      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
-          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.2.0/shapes/QuantitativeValueShape"
+          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape"
         },
         {
           "xone": [
@@ -59,7 +57,6 @@
     },
     {
       "@id": "this:RepeatedQuantitativeValueShape",
-      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -88,7 +85,6 @@
     },
     {
       "@id": "this:PositiveQuantitativeValueShape",
-      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -106,7 +102,6 @@
     },
     {
       "@id": "this:NegativeQuantitativeValueShape",
-      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -124,11 +119,10 @@
     },
     {
       "@id": "this:RangeQuantitativeValueShape",
-      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
-          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.2.0/shapes/QuantitativeValueShape"
+          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape"
         },
         {
           "property": [
@@ -138,7 +132,7 @@
               "description": "The minimum value of the quantitative value.",
               "minCount": 1,
               "maxCount": 1,
-              "lessThan": "schema:value"
+              "lessThan": "schema:maxValue"
             },
             {
               "path": "schema:maxValue",

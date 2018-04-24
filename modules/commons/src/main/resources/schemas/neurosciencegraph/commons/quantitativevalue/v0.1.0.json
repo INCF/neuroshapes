@@ -10,9 +10,11 @@
     "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:QuantitativeValueShape",
+      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -56,6 +58,7 @@
     },
     {
       "@id": "this:RepeatedQuantitativeValueShape",
+      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -84,6 +87,7 @@
     },
     {
       "@id": "this:PositiveQuantitativeValueShape",
+      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
@@ -101,6 +105,7 @@
     },
     {
       "@id": "this:NegativeQuantitativeValueShape",
+      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "and": [
         {
