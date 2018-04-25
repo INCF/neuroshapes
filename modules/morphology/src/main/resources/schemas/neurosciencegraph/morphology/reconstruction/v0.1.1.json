@@ -2,27 +2,24 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstruction/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstruction/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
   "shapes": [
     {
       "@id": "this:ReconstructionShape",
       "@type": "sh:NodeShape",
       "label": "Reconstruction activities description.",
-      "owl:deprecated":true,
       "targetClass": "nsg:Reconstruction",
       "nodeKind": "sh:BlankNodeOrIRI",
-
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2/shapes/ActivityShape"
         },
         {
           "property": [
@@ -30,7 +27,7 @@
               "path": "nsg:objectiveType",
               "name": "Objective type",
               "description": "Type of objective that was used for the reconstruction such as dry, oil or water.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/ObjectiveTypeOntologyTermShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/ObjectiveTypeOntologyTermShape",
               "maxCount": 1
             },
             {

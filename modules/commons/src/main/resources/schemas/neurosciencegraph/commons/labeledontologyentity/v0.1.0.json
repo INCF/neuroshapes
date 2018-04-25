@@ -6,9 +6,11 @@
     }
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:LabeledOntologyEntityShape",
+      "owl:deprecated":true,
       "@type": "sh:NodeShape",
       "nodeKind": "sh:IRI",
       "property": [

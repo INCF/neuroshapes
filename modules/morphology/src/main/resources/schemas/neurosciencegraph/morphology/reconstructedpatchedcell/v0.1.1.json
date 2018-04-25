@@ -2,25 +2,23 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedpatchedcell/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedpatchedcell/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "imports": [
-      "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0"
+      "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.1"
   ],
   "shapes": [
     {
       "@id": "this:ReconstructedPatchedCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell shape definition",
-      "owl:deprecated":true,
       "targetClass": "nsg:ReconstructedPatchedCell",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0/shapes/ReconstructedCellShape"
+          "node": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.1/shapes/ReconstructedCellShape"
         },
         {
           "property": [
@@ -28,7 +26,7 @@
               "path": "nsg:mSubType",
               "name": "Morphology sub-type",
               "description": "The morphology sub-type of the reconstructed cell.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/CellTypeOntologyTermShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },
             {
@@ -45,7 +43,6 @@
     {
       "@id": "this:ReconstructedCellIntegrityShape",
       "@type": "sh:NodeShape",
-      "owl:deprecated":true,
       "property": [
         {
           "path": "nsg:apicalDendrite",

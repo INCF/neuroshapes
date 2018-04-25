@@ -2,21 +2,19 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "@base": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.1/shapes/"
+      "@base": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2/shapes/"
     }
   ],
   "imports": [
     "{{base}}/schemas/nexus/provsh/activity/v1.0.0",
-    "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.1"
+    "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.2"
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "ActivityShape",
       "@type": "sh:NodeShape",
       "label": "Activity description.",
-      "owl:deprecated":true,
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
@@ -25,7 +23,7 @@
         {
           "property": [
             {
-              "@id": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.1/shapes/HadProtocolValueShape"
+              "@id": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.2/shapes/HadProtocolValueShape"
             },
             {
               "path": "prov:used",

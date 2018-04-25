@@ -7,7 +7,7 @@
   ],
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.1",
+    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2",
     "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1"
   ],
   "@type": "nxv:Schema",
@@ -139,7 +139,7 @@
           "path": "schema:distance",
           "name": "Distance",
           "description": "Distance",
-          "class": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.1/shapes/QuantitativeValueShape",
+          "class": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
           "minCount": 1,
           "maxCount": 1
         }
