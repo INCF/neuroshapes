@@ -20,17 +20,5 @@
       "prov:Entity"
     ]
   },
-  "xScaling": {
-    "value": "0.3",
-    "unitCode": "µm/pixel"
-  },
-  "yScaling": {
-    "value": "0.3",
-    "unitCode": "µm/pixel"
-  },
-  "zScaling": {
-    "value": "1",
-    "unitCode": "µm"
-  }
-
+  "imagingMethod": "F most"
 }

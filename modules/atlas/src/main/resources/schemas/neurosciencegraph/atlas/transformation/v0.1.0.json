@@ -24,9 +24,29 @@
           "property": [
             {
               "path": "prov:used",
-              "class": "nsg:ReconstructedWholeBrainCell",
-              "minCount": 1,
-              "maxCount": 1
+              "minCount": 2
+            },
+            {
+              "path": "prov:used",
+              "name": "Reconstructed whole brain cell",
+              "description": "Reconstructed whole brain cell used.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:ReconstructedWholeBrainCell"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1
+            },
+            {
+              "path": "prov:used",
+              "name": "Transform",
+              "description": "Transform used.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:Transform"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1
             },
             {
               "path": "prov:generated",

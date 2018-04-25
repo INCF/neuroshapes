@@ -24,24 +24,10 @@
         {
           "property": [
             {
-              "path": "nsg:xScaling",
-              "name": "X scaling",
-              "description": "X scaling of imaged region.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:yScaling",
-              "name": "Y scaling",
-              "description": "Y scaling of imaged region.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:zScaling",
-              "name": "Z scaling",
-              "description": "Z scaling of imaged region.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "path": "nsg:imagingMethod",
+              "name": "Imaging method",
+              "description": "Method used for brain imaging.",
+              "datatype": "xsd:string",
               "maxCount": 1
             }
           ]
