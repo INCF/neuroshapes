@@ -6,6 +6,7 @@
     }
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "imports": [
       "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.0"
   ],
@@ -14,6 +15,7 @@
       "@id": "this:ReconstructedPatchedCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell shape definition",
+      "owl:deprecated":true,
       "targetClass": "nsg:ReconstructedPatchedCell",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
@@ -43,6 +45,7 @@
     {
       "@id": "this:ReconstructedCellIntegrityShape",
       "@type": "sh:NodeShape",
+      "owl:deprecated":true,
       "property": [
         {
           "path": "nsg:apicalDendrite",

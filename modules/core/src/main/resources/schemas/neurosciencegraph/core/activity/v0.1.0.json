@@ -9,11 +9,13 @@
     "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "ActivityShape",
       "@type": "sh:NodeShape",
       "label": "Activity description.",
+      "owl:deprecated":true,
       "nodeKind": "sh:BlankNodeOrIRI",
       "targetClass": "nsg:Activity",
       "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"

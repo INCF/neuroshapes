@@ -7,7 +7,6 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/simulation/modelinstance/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
   ],
   "shapes": [

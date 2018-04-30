@@ -35,7 +35,7 @@
               "name": "Morphology release",
               "description": "Morphology release shape.",
               "editorialNote": "A node constraint should be added when it is supported: {{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.0/shapes/MorphologyReleaseShape",
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.0/shapes/MorphologyReleaseShape",
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.1/shapes/MorphologyReleaseShape",
               "class": "nsg:MorphologyRelease"
             },
             {
@@ -43,7 +43,7 @@
               "name": "Memodel index",
               "description": "Memodel release index file.",
               "editorialNote": "Check the files to attach to this entity .The following node constraint can be add later: {{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape.",
-              "class": "nsg:Index"
+              "class": "nsg:Entity"
             }
           ]
         }

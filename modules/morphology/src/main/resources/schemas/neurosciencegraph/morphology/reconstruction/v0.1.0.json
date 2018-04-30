@@ -6,6 +6,7 @@
     }
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
@@ -15,8 +16,10 @@
       "@id": "this:ReconstructionShape",
       "@type": "sh:NodeShape",
       "label": "Reconstruction activities description.",
+      "owl:deprecated":true,
       "targetClass": "nsg:Reconstruction",
       "nodeKind": "sh:BlankNodeOrIRI",
+
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
