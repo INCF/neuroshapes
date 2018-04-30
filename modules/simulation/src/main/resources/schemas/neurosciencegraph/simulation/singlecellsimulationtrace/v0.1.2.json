@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/singlecellsimulationtrace/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/singlecellsimulationtrace/v0.1.2/shapes/"
     }
   ],
   "@type": "nxv:Schema",
