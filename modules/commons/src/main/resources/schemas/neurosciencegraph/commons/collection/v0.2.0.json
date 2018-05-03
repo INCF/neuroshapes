@@ -1,0 +1,41 @@
+{
+  "@context" : [
+    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/collection/v0.1.0/shapes/"
+    }
+  ],
+  "@type" : "nxv:Schema",
+  "imports" : [
+    "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "https://bbp-nexus.epfl.ch/staging/v0/schemas/nexus/provsh/collection/v1.1.0"
+  ],
+  "shapes" : [
+    {
+      "@id" : "this:CollectionShape",
+      "@type" : "sh:NodeShape",
+      "label" : "A collection shape.",
+      "nodeKind" : "sh:BlankNodeOrIRI",
+      "and" : [
+        {
+          "node" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/nexus/provsh/collection/v1.1.0/shapes/CollectionShape"
+        },
+        {
+          "node" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property" : [
+            {
+              "path" : "schema:size",
+              "name" : "Size",
+              "description" : "Collection size. The collection can be empty with size 0.",
+              "datatype" : "xsd:integer",
+              "minInclusive" : 0,
+              "maxCount" : 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
