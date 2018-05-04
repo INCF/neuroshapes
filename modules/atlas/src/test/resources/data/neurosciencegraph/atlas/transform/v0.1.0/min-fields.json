@@ -6,7 +6,7 @@
   "@id": "{{base}}/data/neurosciencegraph/atlas/transform/v0.1.0/4315069b-9e89-4473-a965-940c7d54d7c5",
   "name": "",
   "distribution": {
-    "accessURL": "file:///projectpath/210254/transformation/affine.h5"
+    "downloadURL": "http://projectpath/210254/transformation/affine.h5"
   }
 }
 

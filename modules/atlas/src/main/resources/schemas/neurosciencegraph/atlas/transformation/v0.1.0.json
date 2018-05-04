@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -18,7 +18,7 @@
       "targetClass": "nsg:Transformation",
       "and": [
         {
-          "@id": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3/shapes/ActivityShape"
         },
         {
           "property": [
@@ -31,7 +31,7 @@
               "name": "Reconstructed whole brain cell",
               "description": "Reconstructed whole brain cell used.",
               "sh:qualifiedValueShape": {
-                "class": "nsg:ReconstructedWholeBrainCell"
+                "class": "prov:Entity"
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,
@@ -50,7 +50,7 @@
             },
             {
               "path": "prov:generated",
-              "class": "nsg:ReconstructedWholeBrainCell",
+              "class": "prov:Entity",
               "minCount": 1,
               "maxCount": 1
             }

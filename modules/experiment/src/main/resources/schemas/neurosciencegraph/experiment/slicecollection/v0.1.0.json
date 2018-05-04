@@ -18,7 +18,7 @@
       "targetClass": "nsg:Collection",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/emptycollection/v0.1.0/shapes/EmptyCollectionShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/slicecollection/v0.1.0/shapes/SliceCollectionShape"
         },
         {
           "property": [

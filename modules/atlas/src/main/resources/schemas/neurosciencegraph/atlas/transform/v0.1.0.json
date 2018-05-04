@@ -27,7 +27,8 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Where the data attached to the entity is published.",
-              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0/shapes/DistributionShape",
+              "minCount": 1
             }
           ]
         }

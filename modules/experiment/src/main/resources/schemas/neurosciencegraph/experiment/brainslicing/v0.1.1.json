@@ -6,9 +6,8 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2",
-    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3",
+    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -20,7 +19,7 @@
       "targetClass": "nsg:BrainSlicing",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3/shapes/ActivityShape"
         },
         {
           "property": [
@@ -34,21 +33,14 @@
             {
               "path": "prov:generated",
               "description": "The slice or slice collection generated",
-              "xone": [
-                {
-                  "class": "nsg:Slice"
-                },
-                {
-                  "class": "nsg:Collection"
-                }
-              ],
+              "class": "nsg:SliceCollection",
               "minCount": 1
             },
             {
               "path": "nsg:brainLocation",
               "name": "Brain location",
               "description": "Brain location information",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0/shapes/BrainLocationShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape"
             },
             {
               "path": "nsg:slicingPlane",
@@ -77,7 +69,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:hemisphere",
+              "path": "nsg:brainHemisphere",
               "name": "Hemisphere",
               "description": "Brain hemisphere that was sliced",
               "in": [
