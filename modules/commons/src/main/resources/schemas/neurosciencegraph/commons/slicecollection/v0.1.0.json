@@ -1,14 +1,14 @@
 {
   "@context" : [
-    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0",
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/slicecollection/v0.1.0/shapes/"
+      "this" : "{{base}}/schemas/neurosciencegraph/commons/slicecollection/v0.1.0/shapes/"
     }
   ],
   "@type" : "nxv:Schema",
   "imports" : [
-    "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/collection/v0.2.0",
-    "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
+    "{{base}}/schemas/neurosciencegraph/commons/collection/v0.2.0",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
   "shapes" : [
     {
@@ -18,7 +18,7 @@
       "comment" : "All subjects in the collection should be of the same species.",
       "and" : [
         {
-          "node" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/collection/v0.2.0/shapes/CollectionShape"
+          "node" : "{{base}}/schemas/neurosciencegraph/commons/collection/v0.2.0/shapes/CollectionShape"
         },
         {
           "property" : [
@@ -27,7 +27,7 @@
               "name" : "Member",
               "description" : "The subject (s) that are member of the collection.",
               "class" : "nsg:Slice",
-              "seeAlso" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/core/slice/v0.1.0/shapes/SliceShape"
+              "seeAlso" : "{{base}}/schemas/neurosciencegraph/core/slice/v0.1.0/shapes/SliceShape"
             }
           ]
         }
