@@ -1,14 +1,14 @@
 {
   "@context" : [
-    "https://bbp-nexus.epfl.ch/staging/v0/contexts/neurosciencegraph/core/schema/v0.1.0",
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/collection/v0.1.0/shapes/"
+      "this" : "{{base}}/schemas/neurosciencegraph/commons/collection/v0.1.0/shapes/"
     }
   ],
   "@type" : "nxv:Schema",
   "imports" : [
-    "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "https://bbp-nexus.epfl.ch/staging/v0/schemas/nexus/provsh/collection/v1.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/nexus/provsh/collection/v1.1.0"
   ],
   "shapes" : [
     {
@@ -18,10 +18,10 @@
       "nodeKind" : "sh:BlankNodeOrIRI",
       "and" : [
         {
-          "node" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/nexus/provsh/collection/v1.1.0/shapes/CollectionShape"
+          "node" : "{{base}}/schemas/nexus/provsh/collection/v1.1.0/shapes/CollectionShape"
         },
         {
-          "node" : "https://bbp-nexus.epfl.ch/staging/v0/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "node" : "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
         },
         {
           "property" : [
