@@ -14,8 +14,8 @@
     {
       "@id" : "this:SliceCollectionShape",
       "@type" : "sh:NodeShape",
-      "label" : "Subject Collection",
-      "comment" : "All subjects in the collection should be of the same species.",
+      "label" : "Slice Collection",
+      "comment" : "All slices in the collection should be from the same subject.",
       "and" : [
         {
           "node" : "{{base}}/schemas/neurosciencegraph/commons/collection/v0.2.0/shapes/CollectionShape"
@@ -25,7 +25,7 @@
             {
               "path" : "prov:hadMember",
               "name" : "Member",
-              "description" : "The subject (s) that are member of the collection.",
+              "description" : "The slices that are member of the collection.",
               "class" : "nsg:Slice",
               "seeAlso" : "{{base}}/schemas/neurosciencegraph/core/slice/v0.1.0/shapes/SliceShape"
             }
