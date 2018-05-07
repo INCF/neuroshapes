@@ -45,14 +45,14 @@
             },
             {
               "path": "prov:used",
-              "description": "The patched slice used",
+              "description": "The collection of patched slices used",
               "class": "nsg:SliceCollection",
               "minCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/patchedslice/v0.1.0/shapes/PatchedSliceShape"
             },
             {
               "path": "prov:generated",
-              "description": "The fixed and stained slice used",
+              "description": "The collection of fixed and stained slices generated",
               "class": "nsg:SliceCollection",
               "minCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/fixedstainedslice/v0.1.0/shapes/FixedStainedSliceShape"

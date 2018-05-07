@@ -26,8 +26,7 @@
               "path": "prov:hasPart",
               "name": "Has part",
               "description": "Labeled cell",
-              "class": "nsg:LabeledCell",
-              "minCount": 1
+              "class": "nsg:LabeledCell"
             }
           ]
         }
