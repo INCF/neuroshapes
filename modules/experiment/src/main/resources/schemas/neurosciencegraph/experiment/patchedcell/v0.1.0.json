@@ -93,6 +93,13 @@
               "description": "The compound used in the pipette to label the cell",
               "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/LabelingCompoundOntologyTermShape",
               "maxCount": 1
+            },
+            {
+              "path": "nsg:chlorideReversalPotential",
+              "name": "Chloride reversal potential",
+              "description": "The chloride reversal potential calculated from the intracellular solution of the pipette",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "maxCount": 1
             }
           ]
         }
