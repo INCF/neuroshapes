@@ -7,7 +7,7 @@ The goal of Neuroshapes is the development of open, use case driven and shared v
 The data models developed thus far entities for electrophysiology, neuron morphology, brain atlases, in vitro electrophysiology and computational modeling.
 Future developments could include brain imaging, transcriptomic and clinical form data, as determined by community interests.
 
-# Goals
+# Goal
 The main goal is to  promote:
 
 * the use of standard semantic markups and [linked data principles](https://www.w3.org/standards/semanticweb/data) as ways to structure metadata and related data: the [W3C RDF format](https://www.w3.org/RDF/) is leveraged, specifically its developer friendly [JSON-LD](https://json-ld.org/) serialization. The adoption of linked data principles and JSON-LD will ease federated access and discoverability of distributed neuroscience (meta)data over the web.
