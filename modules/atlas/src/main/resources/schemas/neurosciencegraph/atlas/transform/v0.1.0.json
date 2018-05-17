@@ -8,7 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0"
   ],
   "shapes": [
     {
@@ -26,7 +26,7 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Where the data attached to the entity is published.",
-              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0/shapes/DistributionShape"
             }
           ]
         }
