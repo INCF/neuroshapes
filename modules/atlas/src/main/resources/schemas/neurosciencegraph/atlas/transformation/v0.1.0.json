@@ -50,7 +50,7 @@
             {
               "path": "prov:generated",
               "description": "A transformed object, which should be the same type of the input object",
-              "class": "nsg:GeometricalObject",
+              "class": "nsg:TransformableObject",
               "minCount": 1,
               "maxCount": 1
             }
