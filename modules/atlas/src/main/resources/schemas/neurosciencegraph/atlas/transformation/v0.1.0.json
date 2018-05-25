@@ -27,10 +27,10 @@
             },
             {
               "path": "prov:used",
-              "name": "Geometrical object",
-              "description": "A geometrical object (an image or a reconstructed cell) used to be transformed.",
+              "name": "Transformable object",
+              "description": "A transformable object (an image or a reconstructed cell) used to be transformed.",
               "sh:qualifiedValueShape": {
-                "class": "nsg:GeometricalObject"
+                "class": "nsg:TransformableObject"
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,
@@ -49,7 +49,7 @@
             },
             {
               "path": "prov:generated",
-              "description": "A transformed geometrical object, which should be the same type of the input object",
+              "description": "A transformed object, which should be the same type of the input object",
               "class": "nsg:GeometricalObject",
               "minCount": 1,
               "maxCount": 1
