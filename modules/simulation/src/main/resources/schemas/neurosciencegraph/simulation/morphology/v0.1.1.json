@@ -34,6 +34,18 @@
               "description": "The morphology release (s) this morphology is part of.",
               "editorialNote": "Can a morphology belongs to multiple release ?",
               "class": "nsg:MorphologyRelease"
+            },
+            {
+              "path": "nsg:view2d",
+              "name": "view2d",
+              "description": "Morphology view in 2D",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+            },
+            {
+              "path": "nsg:view3d",
+              "name": "view3d",
+              "description": "Morphology view in 3D",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
             }
           ]
         }
