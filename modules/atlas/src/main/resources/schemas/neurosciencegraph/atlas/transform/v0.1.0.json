@@ -8,15 +8,14 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0"
   ],
   "shapes": [
     {
       "@id": "this:TransformShape",
       "@type": "sh:NodeShape",
-      "description": "Transform description.",
+      "description": "Transform can be either linear or non-linear(deformable).",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:Transform",
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
@@ -27,8 +26,7 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Where the data attached to the entity is published.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0/shapes/DistributionShape",
-              "minCount": 1
+              "node": "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0/shapes/DistributionShape"
             }
           ]
         }

@@ -15,7 +15,6 @@
       "@type": "sh:NodeShape",
       "description": "Transformation activity shape description.",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:Transformation",
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3/shapes/ActivityShape"
@@ -28,10 +27,10 @@
             },
             {
               "path": "prov:used",
-              "name": "Reconstructed whole brain cell",
-              "description": "Reconstructed whole brain cell used.",
+              "name": "Transformable object",
+              "description": "A transformable object (an image or a reconstructed cell) used to be transformed.",
               "sh:qualifiedValueShape": {
-                "class": "prov:Entity"
+                "class": "nsg:TransformableObject"
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,
@@ -50,7 +49,8 @@
             },
             {
               "path": "prov:generated",
-              "class": "prov:Entity",
+              "description": "A transformed object, which should be the same type of the input object",
+              "class": "nsg:TransformableObject",
               "minCount": 1,
               "maxCount": 1
             }
