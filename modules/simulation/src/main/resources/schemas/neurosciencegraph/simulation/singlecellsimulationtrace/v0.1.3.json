@@ -22,16 +22,10 @@
         {
           "property": [
             {
-              "path": "nsg:preview",
-              "name": "preview",
+              "path": "schema:image",
+              "name": "image",
               "description": "Preview of the simulation trace as an image",
               "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
-            },
-            {
-              "path": "nsg:protocolDescription",
-              "name": "protocolDescription",
-              "description": "Short description of the current protocol which was applied to the cell",
-              "node": "xsd:string"
             }
           ]
         }

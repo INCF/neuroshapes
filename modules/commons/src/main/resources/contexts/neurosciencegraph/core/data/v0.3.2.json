@@ -549,6 +549,15 @@
       "isPartOf": {
         "@id": "dcterms:isPartOf",
         "@type": "@id"
+      },
+      "view2d": {
+        "@id": "nsg:view2d"
+      },
+      "view3d": {
+        "@id": "nsg:view3d"
+      },
+      "protocolDescription": {
+        "@id": "nsg:protocolDescription"
       }
     }
   ]
