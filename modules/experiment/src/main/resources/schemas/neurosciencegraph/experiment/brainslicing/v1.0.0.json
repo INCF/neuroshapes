@@ -81,7 +81,7 @@
             {
               "path": "nsg:solution",
               "name": "Solution",
-              "description": "Solution in which the brain was sliced",
+              "description": "Solution in which the brain was sliced (e.g. Ringer's solution)",
               "datatype": "xsd:string",
               "maxCount": 1
             }
