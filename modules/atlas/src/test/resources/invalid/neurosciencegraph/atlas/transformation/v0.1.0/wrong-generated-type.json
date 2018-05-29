@@ -5,13 +5,13 @@
   "@type": "nsg:Transformation",
   "@id": "{{base}}/data/neurosciencegraph/atlas/transformation/v0.1.0/4315069b-9e89-4473-a965-940c7d54d7c5",
   "generated":
-    {
-      "@type": [
-        "nsg:ReconstructedCell",
-        "prov:Entity"
-      ],
-      "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.0/fd80b57a-9333-4aa2-9d59-7f7dd3a25a92"
-    },
+  {
+    "@type": [
+      "nsg:TransformableObject",
+      "prov:Entity"
+    ],
+    "@id": "{{base}}/data/neurosciencegraph/morphology/transformableobject/v0.1.0/fd80b57a-9333-4aa2-9d59-7f7dd3a25a92"
+  },
   "used": [
     {
       "@type": [

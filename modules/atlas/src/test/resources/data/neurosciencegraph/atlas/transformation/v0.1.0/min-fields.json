@@ -7,10 +7,10 @@
   "generated":
     {
       "@type": [
-        "nsg:ReconstructedWholeBrainCell",
+        "nsg:TransformableObject",
         "prov:Entity"
       ],
-      "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.0/fd80b57a-9333-4aa2-9d59-7f7dd3a25a92"
+      "@id": "{{base}}/data/neurosciencegraph/morphology/transformableobject/v0.1.0/fd80b57a-9333-4aa2-9d59-7f7dd3a25a92"
     },
   "used": [
     {

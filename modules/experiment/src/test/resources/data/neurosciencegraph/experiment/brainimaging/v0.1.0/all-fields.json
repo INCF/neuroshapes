@@ -10,7 +10,7 @@
   "generated": {
     "@id": "{{base}}/data/neurosciencegraph/atlas/imagestack/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
     "@type": [
-      "nsg:Slice",
+      "nsg:ImageStack",
       "prov:Entity"
     ]
   },
