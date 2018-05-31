@@ -6,9 +6,8 @@
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated": true,
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "shapes": [
     {
@@ -17,21 +16,7 @@
       "label": "Trace generation shape definition",
       "targetClass": "nsg:SingleCellTraceGeneration",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "and": [
-        {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3/ActivityShape"
-        },
-        {
-          "property": [
-            {
-              "path": "nsg:protocolDescription",
-              "name": "protocolDescription",
-              "description": "Short description of the current protocol which was applied to the cell",
-              "node": "xsd:string"
-            }
-          ]
-        }
-      ]
+      "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/ActivityShape"
     }
   ]
 }

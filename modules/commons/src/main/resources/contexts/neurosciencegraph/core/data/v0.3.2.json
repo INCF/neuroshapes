@@ -555,9 +555,6 @@
       },
       "view3d": {
         "@id": "nsg:view3d"
-      },
-      "protocolDescription": {
-        "@id": "nsg:protocolDescription"
       }
     }
   ]
