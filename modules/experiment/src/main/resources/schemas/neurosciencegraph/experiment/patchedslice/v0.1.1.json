@@ -48,7 +48,7 @@
               "seeAlso": "{{base}}/schemas/neurosciencegraph/core/slice/v0.1.0/shapes/SliceShape"
             },
             {
-              "path": "nsg:solution",
+              "path": "nsg:bathSolution",
               "name": "Bath solution",
               "description": "Solution used in the bath while recording",
               "datatype": "xsd:string",
