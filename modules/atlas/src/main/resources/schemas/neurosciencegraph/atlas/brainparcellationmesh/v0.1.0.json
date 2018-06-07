@@ -6,16 +6,15 @@
     }
   ],
   "@type": "nxv:Schema",
-  "import": [
+  "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/atlas/brainparcellationmesh/v0.1.0",
     "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
     {
       "@id": "this:BrainParcellationMeshShape",
       "@type": "sh:NodeShape",
-      "label": "This shape is for describing morphology release.",
+      "label": "This shape is for describing brain parcellation mesh.",
       "targetClass": "nsg:BrainParcellationMesh",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
@@ -29,7 +28,14 @@
               "name": "Distribution",
               "description": "Brain parcellation mesh location.",
               "node": "this:BrainParcellationMeshDistributionShape",
-              "minCount": 1
+            },
+            {
+              "path": "nsg:brainLocation",
+              "name": "Soma brain location",
+              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell soma.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0/shapes/BrainLocationShape",
+              "minCount": 1,
+              "maxCount": 1
             }
           ]
         }
