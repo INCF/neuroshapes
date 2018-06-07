@@ -46,6 +46,7 @@
             {
               "path": "prov:used",
               "description": "The patched slice used",
+<<<<<<< HEAD
               "xone": [
                 {
                   "class": "nsg:PatchedSlice"
@@ -54,6 +55,9 @@
                   "class": "nsg:Collection"
                 }
               ],
+=======
+              "class": "nsg:SliceCollection",
+>>>>>>> parent of ce4db91... Created brainslicing v0.1.1 and fixationstainingmounting v0.1.1 schemas
               "minCount": 1,
               "maxCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/patchedslice/v0.1.0/shapes/PatchedSliceShape"
@@ -61,6 +65,7 @@
             {
               "path": "prov:generated",
               "description": "The fixed and stained slice used",
+<<<<<<< HEAD
               "xone": [
                 {
                   "class": "nsg:FixedStainedSlice"
@@ -69,6 +74,9 @@
                   "class": "nsg:Collection"
                 }
               ],
+=======
+              "class": "nsg:SliceCollection",
+>>>>>>> parent of ce4db91... Created brainslicing v0.1.1 and fixationstainingmounting v0.1.1 schemas
               "minCount": 1,
               "maxCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/fixedstainedslice/v0.1.0/shapes/FixedStainedSliceShape"
