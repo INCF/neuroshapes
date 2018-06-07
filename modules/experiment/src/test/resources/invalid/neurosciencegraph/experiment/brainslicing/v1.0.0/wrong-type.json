@@ -6,7 +6,7 @@
     "nsg:WrongType"
   ],
   "generated": {
-    "@id": "{{base}}/data/neurosciencegraph/core/slicecollection/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
+    "@id": "{{base}}/data/neurosciencegraph/core/slicecollection/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
     "@type": [
       "nsg:SliceCollection",
       "prov:Entity"

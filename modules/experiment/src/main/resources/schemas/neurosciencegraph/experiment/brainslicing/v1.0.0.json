@@ -6,9 +6,9 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2",
-    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4",
+    "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2",
+    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -20,7 +20,7 @@
       "targetClass": "nsg:BrainSlicing",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.2/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
         },
         {
           "property": [
@@ -34,21 +34,14 @@
             {
               "path": "prov:generated",
               "description": "The slice or slice collection generated",
-              "xone": [
-                {
-                  "class": "nsg:Slice"
-                },
-                {
-                  "class": "nsg:Collection"
-                }
-              ],
+              "class": "nsg:SliceCollection",
               "minCount": 1
             },
             {
               "path": "nsg:brainLocation",
               "name": "Brain location",
               "description": "Brain location information",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0/shapes/BrainLocationShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape"
             },
             {
               "path": "nsg:slicingPlane",
@@ -73,7 +66,7 @@
               "path": "nsg:cuttingThickness",
               "name": "Cutting thickness",
               "description": "Cutting thickness of brain slice",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
               "maxCount": 1
             },
             {
