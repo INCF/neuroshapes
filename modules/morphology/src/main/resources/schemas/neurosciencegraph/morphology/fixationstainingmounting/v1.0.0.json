@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/morphology/fixationstainingmounting/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/fixationstainingmounting/v1.0.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
@@ -48,7 +48,7 @@
               "description": "The collection of patched slices used",
               "class": "nsg:SliceCollection",
               "minCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/patchedslice/v0.1.0/shapes/PatchedSliceShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/core/slicecollection/v0.1.0/shapes/SliceCollectionShape"
             },
             {
               "path": "prov:generated",

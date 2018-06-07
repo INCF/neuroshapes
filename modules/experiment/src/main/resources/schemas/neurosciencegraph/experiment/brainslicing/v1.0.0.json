@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/experiment/brainslicing/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/experiment/brainslicing/v1.0.0/shapes/"
     }
   ],
   "imports": [
