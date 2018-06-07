@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/emptycollection/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/slicecollection/v0.1.0"
   ],
   "shapes": [
     {
@@ -18,14 +18,14 @@
       "targetClass": "nsg:Collection",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/emptycollection/v0.1.0/shapes/EmptyCollectionShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/slicecollection/v0.1.0/shapes/SliceCollectionShape"
         },
         {
           "property": [
             {
               "path": "prov:hasPart",
               "name": "Has part",
-              "description": "Labeled cell",
+              "description": "Labeled cell which is contained within the collection of slices. Through the cutting of the brain into slices, the labeled cell gets cut as well and different parts are contained within different slices.",
               "class": "nsg:LabeledCell"
             }
           ]

@@ -8,8 +8,8 @@
   "providerId": "A provider id",
   "hasPart": [
     {
-      "@type": ["prov:Entity", "nsg:Slice"],
-      "@id": "{{base}}/schemas/neurosciencegraph/experiment/slice/v0.1.0/027622e3-5ea6-499a-a434-e38ba70ac82c"
+      "@type": ["prov:Entity", "nsg:LabeledCell"],
+      "@id": "{{base}}/schemas/neurosciencegraph/morphology/labeledcell/v0.1.0/027622e3-5ea6-499a-a434-e38ba70ac82c"
     }
   ]
 }
