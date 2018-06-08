@@ -30,11 +30,8 @@
               "name": "Transformable object",
               "description": "A transformable object (an image or a reconstructed cell) used to be transformed.",
               "sh:qualifiedValueShape": {
-<<<<<<< HEAD
                 "class": "nsg:TransformableObject"
-=======
-                "class": "nsg:ReconstructedWholeBrainCell"
->>>>>>> parent of f762467... Changed brain slicing schema to generate slice collection
+
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,
