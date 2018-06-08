@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/"
     }
   ],
   "imports": [
@@ -41,7 +41,7 @@
       ]
     },
     {
-      "@id": "this:CellOntologyTermShape",
+      "@id": "this:CellTypeOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a cell type",
       "and": [
