@@ -46,15 +46,31 @@
             {
               "path": "prov:used",
               "description": "The patched slice used",
-              "class": "nsg:SliceCollection",
+              "xone": [
+                {
+                  "class": "nsg:PatchedSlice"
+                },
+                {
+                  "class": "nsg:Collection"
+                }
+              ],
               "minCount": 1,
+              "maxCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/experiment/patchedslice/v0.1.0/shapes/PatchedSliceShape"
             },
             {
               "path": "prov:generated",
               "description": "The fixed and stained slice used",
-              "class": "nsg:SliceCollection",
+              "xone": [
+                {
+                  "class": "nsg:FixedStainedSlice"
+                },
+                {
+                  "class": "nsg:Collection"
+                }
+              ],
               "minCount": 1,
+              "maxCount": 1,
               "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/fixedstainedslice/v0.1.0/shapes/FixedStainedSliceShape"
             }
           ]
