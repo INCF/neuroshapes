@@ -26,7 +26,11 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Where the data attached to the entity is published.",
+<<<<<<< HEAD
               "node": "{{base}}/schemas/neurosciencegraph/commons/distribution/v0.1.0/shapes/DistributionShape"
+=======
+              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape"
+>>>>>>> parent of f762467... Changed brain slicing schema to generate slice collection
             }
           ]
         }

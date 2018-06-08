@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -17,7 +17,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3/shapes/ActivityShape"
+          "@id": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
         },
         {
           "property": [
@@ -30,7 +30,11 @@
               "name": "Transformable object",
               "description": "A transformable object (an image or a reconstructed cell) used to be transformed.",
               "sh:qualifiedValueShape": {
+<<<<<<< HEAD
                 "class": "nsg:TransformableObject"
+=======
+                "class": "nsg:ReconstructedWholeBrainCell"
+>>>>>>> parent of f762467... Changed brain slicing schema to generate slice collection
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,
@@ -49,8 +53,12 @@
             },
             {
               "path": "prov:generated",
+<<<<<<< HEAD
               "description": "A transformed object, which should be the same type of the input object",
               "class": "nsg:TransformableObject",
+=======
+              "class": "nsg:ReconstructedWholeBrainCell",
+>>>>>>> parent of f762467... Changed brain slicing schema to generate slice collection
               "minCount": 1,
               "maxCount": 1
             }
