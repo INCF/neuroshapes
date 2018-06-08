@@ -9,7 +9,7 @@
     {
       "@id": "{{base}}/data/neurosciencegraph/experiment/patchedslice/v0.1.1/657e3fc4-3163-43f4-99fb-766574193a2a",
       "@type": [
-        "nsg:SliceCollection",
+        "nsg:PatchedSlice",
         "prov:Entity"
       ]
     }
@@ -18,7 +18,7 @@
     {
       "@id": "{{base}}/data/neurosciencegraph/morphology/fixedstainedslice/v0.1.1/abdcd005-e302-49c4-9874-18d1ff11c141",
       "@type": [
-        "nsg:SliceCollection",
+        "nsg:FixedStainedSlice",
         "prov:Entity"
       ]
     }
