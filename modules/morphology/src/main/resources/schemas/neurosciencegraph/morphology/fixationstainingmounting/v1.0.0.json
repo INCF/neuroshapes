@@ -55,7 +55,7 @@
               "description": "The collection of fixed and stained slices generated",
               "class": "nsg:SliceCollection",
               "minCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/fixedstainedslice/v0.1.0/shapes/FixedStainedSliceShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/core/slicecollection/v0.1.0/shapes/SliceCollectionShape"
             }
           ]
         }

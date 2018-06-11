@@ -23,7 +23,7 @@
         {
           "property": [
             {
-              "path": "nsg:hasPart",
+              "path": "dcterms:hasPart",
               "name": "Has part",
               "description": "Labeled cell which is contained within the collection of slices. Through the cutting of the brain into slices, the labeled cell gets cut as well and different parts are contained within different slices.",
               "class": "nsg:LabeledCell"
