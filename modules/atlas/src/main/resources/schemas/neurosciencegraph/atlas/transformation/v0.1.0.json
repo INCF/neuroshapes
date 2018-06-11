@@ -50,12 +50,8 @@
             },
             {
               "path": "prov:generated",
-<<<<<<< HEAD
               "description": "A transformed object, which should be the same type of the input object",
               "class": "nsg:TransformableObject",
-=======
-              "class": "nsg:ReconstructedWholeBrainCell",
->>>>>>> parent of f762467... Changed brain slicing schema to generate slice collection
               "minCount": 1,
               "maxCount": 1
             }
