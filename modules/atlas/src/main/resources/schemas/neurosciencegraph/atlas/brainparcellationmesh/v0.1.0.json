@@ -27,7 +27,7 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Brain parcellation mesh location.",
-              "node": "this:BrainParcellationMeshDistributionShape",
+              "node": "this:BrainParcellationMeshDistributionShape"
             },
             {
               "path": "nsg:brainLocation",
