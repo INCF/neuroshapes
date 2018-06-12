@@ -11,14 +11,14 @@
   "@type": "nxv:Schema",
   "shapes": [
     {
-      "node": "this:ParcellationMeshGenerationShape",
+      "@id": "this:ParcellationMeshGenerationShape",
       "@type": "sh:NodeShape",
       "label": "Parcellation mesh generation activity description.",
       "nodeKind": "sh:BlankNodeOrIRI",
       "targetClass": "nsg:ParcellationMeshGeneration",
       "and": [
         {
-          "@id": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
         },
         {
           "property": [
