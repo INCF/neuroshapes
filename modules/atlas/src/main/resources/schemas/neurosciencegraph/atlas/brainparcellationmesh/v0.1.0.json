@@ -8,6 +8,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1",
     "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
@@ -27,7 +28,7 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Brain parcellation mesh location.",
-              "node": "this:BrainParcellationMeshDistributionShape",
+              "node": "this:BrainParcellationMeshDistributionShape"
             },
             {
               "path": "nsg:brainLocation",
