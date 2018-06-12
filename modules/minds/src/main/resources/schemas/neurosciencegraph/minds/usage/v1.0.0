@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "@base": "{{base}}/schemas/nexus/provsh/usage/v1.0.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "UsageShape",
+      "@type": "sh:NodeShape",
+      "label": "Usage shape",
+      "comment": "Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "prov:atTime",
+          "name": "At time",
+          "description": "The time at which the entity was used.",
+          "datatype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "prov:hadRole",
+          "name": "Role",
+          "description": "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "prov:entity",
+          "name": "Used entity",
+          "description": "The used entity.",
+          "nodeKind": "sh:IRI",
+          "class": "prov:Entity",
+          "maxCount": 1,
+          "minCount": 1
+        }
+      ]
+    }
+  ]
+}
+
+
+

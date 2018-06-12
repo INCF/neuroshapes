@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/minds/contribution/v1.0.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/minds/labeledontologyentity/v0.1.1"
+  ],
+  "shapes": [
+    {
+      "@id": "AssociationShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:IRI",
+      "property": [
+        {
+          "path": "prov:hadPlan",
+          "class": "prov:Plan",
+          "node": "{{base}}/schemas/neurosciencegraph/minds/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+        },
+        {
+          "path": "prov:hadRole",
+          "node": "{{base}}/schemas/neurosciencegraph/minds/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+        },
+        {
+          "path": "prov:agent",
+          "class": "prov:Agent",
+          "nodeKind": "sh:IRI",
+          "maxCount": 1,
+          "minCount": 1
+        }
+      ]
+    }
+  ]
+}

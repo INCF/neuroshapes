@@ -1,0 +1,96 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "{{base}}/schemas/nexus/schemaorgsh/quantitativevalue/v0.1.0/shapes/QuantitativeValueShape"
+        },
+        {
+          "xone": [
+            {
+              "path": "schema:unitText",
+              "name": "Unit text",
+              "datatype": "xsd:string",
+              "minCount": 1
+            },
+            {
+              "path": "schema:unitCode",
+              "name": "Unit",
+              "or": [
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+                },
+                {
+                  "datatype": "xsd:string"
+                }
+              ],
+              "minCount": 1
+            }
+          ]
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "name": "Value",
+              "description": "The value of the quantitative value is required.",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "label": "A point value or interval for product characteristics and other purposes.",
+      "property": [
+        {
+          "path": "schema:unitCode",
+          "name": "Unit Code",
+          "description": "The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.",
+          "or": [
+            {
+              "node": "{{base}}/schemas/neurosciencegraph/core/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+            },
+            {
+              "datatype": "xsd:string"
+            }
+          ]
+        },
+        {
+          "path": "schema:value",
+          "name": "Value",
+          "description": "The value of the quantitative value or property value node.",
+          "or": [
+            {
+              "datatype": "xsd:float"
+            },
+            {
+              "datatype": "xsd:decimal"
+            },
+            {
+              "datatype": "xsd:double"
+            }
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

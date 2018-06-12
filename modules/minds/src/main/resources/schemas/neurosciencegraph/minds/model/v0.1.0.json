@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/nexus/core/datadownload/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/minds/brainlocation/v0.1.1",
+    "{{base}}/schemas/neurosciencegraph/minds/propertyvalue/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DatasetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "schema:Dataset",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0/shapes/DatasetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:species",
+              "name": "species",
+              "description": "The subject of the study.",
+              "node": "{{base}}/schemas/neurosciencegraph/minds/labeledontologyentity/v0.1.1/shapes/SpeciesOntologyTermShape",
+              "maxCount": 1
+            },{
+              "path": "nsg:brainLocation",
+              "name": "Brain Location",
+              "description": "The Brain Region of study.",
+              "node": "{{base}}/schemas/neurosciencegraph/minds/brainlocation/v0.1.1/shapes/BrainLocationShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:modelOf",
+              "name": "modelOf",
+              "description": "The Brain Region of study.",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

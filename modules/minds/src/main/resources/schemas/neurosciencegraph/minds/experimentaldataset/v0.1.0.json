@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0",
+    "{{base}}/schemas/nexus/schemaorg/propertyvalue/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DatasetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0/shapes/DatasetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:subject",
+              "name": "Subject",
+              "description": "The subject of the study.",
+              "node": "{{base}}/schemas/bbp/experiment/subject/v0.1.0/shapes/SubjectShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain Location",
+              "description": "The Brain Region of study.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:classification",
+              "name": "Brain Location",
+              "description": "Classification",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

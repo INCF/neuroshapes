@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/minds/derivation/v1.0.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "DerivationShape",
+      "@type": "sh:NodeShape",
+      "label": "Entity derivation shape",
+      "comment": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "prov:entity",
+          "name": "Entity",
+          "description": "An entity from which the current one derived from.",
+          "class": "prov:Entity",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "prov:hadActivity",
+          "name": "Activity",
+          "description": "The optional activity that used the entity from which the current one derived from.",
+          "class": "prov:Activity",
+          "maxCount": 1
+        },
+        {
+          "path": "prov:hadUsage",
+          "name": "Usage",
+          "description": "The description of how some entities are involved in the generation of a dataset.",
+          "class":"prov:Usage",
+          "node":"{{base}}/schemas/neurosciencegraph/minds/usage/v1.0.0/UsageShape",
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

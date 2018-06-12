@@ -1,0 +1,150 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/core/schema/v0.2.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/minds/dataset/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/minds/derivation/v1.0.0",
+    "{{base}}/schemas/neurosciencegraph/minds/propertyvalue/v0.1.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DatasetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:IRI",
+      "property": [
+        {
+          "path": "schema:identifier",
+          "name": "Identifier",
+          "description": "A landing page describing the dataset.",
+          "xone": [
+            {
+              "datatype": "xsd:anyURI"
+            },
+            {
+              "datatype": "xsd:string"
+            },
+            {
+              "node": "{{base}}/schemas/neurosciencegraph/minds/propertyvalue/v0.1.0/shapes/PropertyValueShape"
+            }
+          ]
+        },
+        {
+          "path": "schema:includedInDataCatalog",
+          "name": "includedInDataCatalog",
+          "description": "A data catalog which contains this dataset..",
+          "class":"schema:DataCatalog"
+        },
+        {
+          "path": "nsg:doi",
+          "name": "DOI",
+          "description": "A data catalog which contains this dataset..",
+          "datatype":"xsd:string"
+        },
+        {
+          "path": "schema:url",
+          "name": "URL",
+          "description": "A landing page describing the dataset.",
+          "datatype": "xsd:anyURI"
+        },
+        {
+          "path": "schema:language",
+          "name": "Language",
+          "description": "The dataset language.",
+          "node": "{{base}}/schemas/nexus/schemaorg/language/v0.1.0/shapes/LanguageShape",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:dateModified",
+          "name": "Update date",
+          "description": "The date of the last update of this dataset.",
+          "datetype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:dateReleased",
+          "name": "Release date",
+          "description": "The dataset release date.",
+          "datetype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:sameAs",
+          "name": "Same as",
+          "description": "Other URLs leading to resources describing the dataset.",
+          "datatype": "xsd:anyURI"
+        },
+        {
+          "path": "schema:license",
+          "name": "License",
+          "description": "A Link towards the dataset license.",
+          "nodekind": "sh:IRI"
+        },
+        {
+          "path": "schema:citation",
+          "name": "Citation",
+          "description": "Citation (s) of publication (s) that describe the dataset.",
+          "xone": [
+            {
+              "datatype": "xsd:anyURI"
+            },
+            {
+              "datatype": "xsd:string"
+            }
+          ]
+        },
+        {
+          "path": "schema:image",
+          "name": "Preview",
+          "description": "Dataset preview.",
+          "datatype": "xsd:anyURI"
+        },
+        {
+          "path": "schema:keywords",
+          "name": "Keywords",
+          "description": "Keywords describing the dataset.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:distribution",
+          "name": "Distribution",
+          "description": "Details about the dataset download such as access and format information.",
+          "class":"schema:DataDownload",
+          "node": "{{base}}/schemas/nexus/core/datadownload/v0.1.0/shapes/DataDownloadShape"
+        },
+        {
+          "path": "schema:publisher",
+          "name": "publisher",
+          "description": "The Brain Region of study.",
+          "nodekind": "sh:IRI",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:contribution",
+          "name": "contribution",
+          "description": "Information about the contribution of an agent during the generation of this dataset.",
+          "class": "nsg:Contribution",
+          "node": "{{base}}/schemas/neurosciencegraph/minds/contribution/v1.0.0/ContributionShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:derivation",
+          "name": "Derivation",
+          "description": "A qualification of how the current dataset was derived from other (s) dataset (s) (e.g. the details of the activity that generated the current dataset).",
+          "class":"prov:Derivation",
+          "node":"{{base}}/schemas/neurosciencegraph/minds/derivation/v1.0.0/DerivationShape"
+        },
+        {
+          "path": "nsg:generation",
+          "name": "Generation",
+          "description": "A qualification of how the current dataset was generated (e.g. the activity that generated it, at which time, ...).",
+          "class":"prov:Generation",
+          "node":"{{base}}/schemas/neurosciencegraph/minds/generation/v1.0.0/GenerationShape"
+        }
+      ]
+    }
+  ]
+}
