@@ -6,12 +6,12 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.3"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "@type": "nxv:Schema",
   "shapes": [
     {
-      "@id": "this:ParcellationMeshGenerationShape",
+      "node": "this:ParcellationMeshGenerationShape",
       "@type": "sh:NodeShape",
       "label": "Parcellation mesh generation activity description.",
       "nodeKind": "sh:BlankNodeOrIRI",

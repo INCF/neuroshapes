@@ -33,7 +33,7 @@
               "path": "nsg:brainLocation",
               "name": "Soma brain location",
               "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell soma.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0/shapes/BrainLocationShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape",
               "minCount": 1,
               "maxCount": 1
             }
