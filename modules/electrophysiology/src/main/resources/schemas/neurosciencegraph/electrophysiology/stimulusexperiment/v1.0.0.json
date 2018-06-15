@@ -2,15 +2,14 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/electrophysiology/stimulusexperiment/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/electrophysiology/stimulusexperiment/v1.0.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/experimentalactivity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
   ],
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:StimulusExperimentShape",
@@ -20,7 +19,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/experimentalactivity/v0.1.0/shapes/ExperimentalActivityShape"
         },
         {
           "property": [
@@ -49,16 +48,16 @@
       "label": "Stimulus shape definition",
       "property": [
         {
-          "path": "nsg:stimulusType",
+          "path": "rdf:type",
           "name": "Stimulus type",
-          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/StimulusTypeOntologyTermShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/StimulusTypeOntologyTermShape",
           "minCount": 1,
           "maxCount": 1
         },
         {
           "path": "nsg:eCode",
           "name": "eCode",
-          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/EcodeOntologyTermShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/EcodeOntologyTermShape",
           "maxCount": 1
         },
         {
