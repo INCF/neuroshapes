@@ -9,6 +9,7 @@
     "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:SpeciesOntologyTermShape",
