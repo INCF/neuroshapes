@@ -18,7 +18,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.1/shapes/ModelInstanceShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.2/shapes/ModelInstanceShape"
         },
         {
           "property": [
