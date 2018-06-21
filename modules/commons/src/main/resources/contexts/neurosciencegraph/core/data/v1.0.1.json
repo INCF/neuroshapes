@@ -1,9 +1,9 @@
-{
-  "@context": [
+{"@context": [
     "{{base}}/contexts/nexus/core/provo20130430/v1.0.0",
     "{{base}}/contexts/nexus/core/schemaorg/v3.3.0",
     "{{base}}/contexts/nexus/core/standards/v0.1.0",
     {
+      "@vocab": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
       "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
       "schema": "http://schema.org/",
       "brainRegion": {
@@ -39,6 +39,9 @@
       },
       "projectName": {
         "@id": "nsg:projectName"
+      },
+      "waveNumberRange": {
+        "@id": "nsg:waveNumberRange"
       },
       "spatialCellName": {
         "@id": "nsg:spatialCellName"
@@ -220,9 +223,6 @@
       "providerExperimentName": {
         "@id": "nsg:providerExperimentName"
       },
-      "waveNumberRange": {
-        "@id": "nsg:waveNumberRange"
-      },
       "eCode": {
         "@id": "nsg:eCode"
       },
@@ -276,6 +276,10 @@
       },
       "modelOf": {
         "@id": "nsg:modelOf",
+        "@type": "@id"
+      },
+      "subCellularMechanism": {
+        "@id": "nsg:subCellularMechanism",
         "@type": "@id"
       },
       "distribution": {
@@ -504,10 +508,6 @@
       },
       "emodelIndex": {
         "@id": "nsg:emodelIndex"
-      },
-      "subCellularMechanism": {
-        "@id": "nsg:subCellularMechanism",
-        "@type": "@id"
       },
       "morphologyIndex": {
         "@id": "nsg:morphologyIndex"
