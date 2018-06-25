@@ -6,15 +6,16 @@
     }
   ],
   "@type": "nxv:Schema",
-  "imports": [
+  "import": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/atlas/morphologymesh/v0.1.0",
     "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
     {
       "@id": "this:MorphologyMeshShape",
       "@type": "sh:NodeShape",
-      "label": "Morphology mesh Shape.",
+      "label": "This shape is for describing morphology release.",
       "targetClass": "nsg:MorphologyMesh",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
