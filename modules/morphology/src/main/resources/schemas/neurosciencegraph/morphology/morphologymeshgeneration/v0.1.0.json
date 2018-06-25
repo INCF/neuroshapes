@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "@type": "nxv:Schema",
   "shapes": [
