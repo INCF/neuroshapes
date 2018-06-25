@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcellformatconversion/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.2"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ReconstructedCellFormatConversionShape",
+      "@type": "sh:NodeShape",
+      "label": "Reconstructed cell format conversion activities description.",
+      "targetClass": "nsg:ReconstructedCellFormatConversion",
+      "nodeKind": "sh:BlankNodeOrIRI",
+
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The original reconstructed cell to convert",
+              "class": "nsg:LabeledCell",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "prov:generated",
+              "description": "The converted reconstructed cell",
+              "class": "nsg:ReconstructedCell",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
