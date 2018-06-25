@@ -48,9 +48,9 @@
               "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/MorphologicalCellTypeOntologyTermShape"
             },
             {
-              "path": "nsg:experimentalCellList",
+              "path": "nsg:experimentalCell",
               "description": "Optional list of experimental cells for this cell type",
-              "node": "this:ExpeirmentalCellListShape"
+              "node": "this:ExpeirmentalCellShape"
             },
             {
               "path": "nsg:experimentalTraceLocation",
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "@id": "this:ExpeirmentalCellListShape",
+      "@id": "this:ExpeirmentalCellShape",
       "@type": "sh:NodeShape",
       "label": "Shape specifies cell list ",
       "nodekind": "sh:BlankNodeOrIRI",
