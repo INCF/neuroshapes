@@ -16,9 +16,8 @@
       "@id": "this:ReconstructedCellFormatConversionShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell format conversion activities description.",
-      "targetClass": "nsg:ReconstructedCellFormatConversion",
+      "targetClass": "nsg:DataFormatConversion",
       "nodeKind": "sh:BlankNodeOrIRI",
-
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
