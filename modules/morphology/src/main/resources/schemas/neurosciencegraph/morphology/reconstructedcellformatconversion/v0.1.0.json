@@ -28,14 +28,16 @@
               "description": "The original reconstructed cell to convert",
               "class": "nsg:LabeledCell",
               "minCount": 1,
-              "maxCount": 1
+              "maxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.2/shapes/ReconstructedCellShape"
             },
             {
               "path": "prov:generated",
               "description": "The converted reconstructed cell",
               "class": "nsg:ReconstructedCell",
               "minCount": 1,
-              "maxCount": 1
+              "maxCount": 1,
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.2/shapes/ReconstructedCellShape"
             }
           ]
         }
