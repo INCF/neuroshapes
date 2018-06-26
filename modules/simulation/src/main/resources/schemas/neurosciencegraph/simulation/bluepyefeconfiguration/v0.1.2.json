@@ -50,11 +50,11 @@
             {
               "path": "nsg:experimentalCell",
               "description": "Optional list of experimental cells for this cell type",
-              "node": "this:ExpeirmentalCellShape"
+              "node": "this:ExperimentalCellShape"
             },
             {
               "path": "nsg:experimentalTraceLocation",
-              "description": "Access url to locate experimental traces",
+              "description": "Access url in the linked entity distribution to locate experimental traces",
               "class": "nsg:Entity",
               "minCount": 1,
               "maxCount": 1
@@ -83,7 +83,7 @@
       ]
     },
     {
-      "@id": "this:ExpeirmentalCellShape",
+      "@id": "this:ExperimentalCellShape",
       "@type": "sh:NodeShape",
       "label": "Shape specifies cell list ",
       "nodekind": "sh:BlankNodeOrIRI",
