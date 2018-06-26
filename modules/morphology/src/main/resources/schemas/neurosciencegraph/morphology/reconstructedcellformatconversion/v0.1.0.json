@@ -7,9 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.2"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "shapes": [
     {
@@ -21,7 +19,7 @@
 
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
         },
         {
           "property": [
