@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "shapes": [
     {
@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
         },
         {
           "property": [
@@ -28,7 +28,7 @@
               "class": "nsg:ReconstructedWholeBrainCell",
               "minCount": 1,
               "maxCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.0/shapes/ReconstructedWholeBrainCellShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.1/shapes/ReconstructedWholeBrainCellShape"
             },
             {
               "path": "prov:generated",
@@ -36,7 +36,7 @@
               "class": "nsg:ReconstructedWholeBrainCell",
               "minCount": 1,
               "maxCount": 1,
-              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.0/shapes/ReconstructedWholeBrainCellShape"
+              "seeAlso": "{{base}}/schemas/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.1/shapes/ReconstructedWholeBrainCellShape"
             }
           ]
         }
