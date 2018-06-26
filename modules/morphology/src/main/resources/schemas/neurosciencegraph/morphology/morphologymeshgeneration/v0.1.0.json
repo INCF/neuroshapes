@@ -18,7 +18,7 @@
       "targetClass": "nsg:MorphologyMeshGeneration",
       "and": [
         {
-          "@id": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
         },
         {
           "property": [
