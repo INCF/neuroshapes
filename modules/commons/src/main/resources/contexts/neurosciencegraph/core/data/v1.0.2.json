@@ -580,9 +580,6 @@
       "features": {
         "@id": "nsg:features"
       },
-      "protocols": {
-        "@id": "nsg:protocols"
-      },
       "hypampThreshold": {
         "@id": "nsg:hypampThreshold"
       }

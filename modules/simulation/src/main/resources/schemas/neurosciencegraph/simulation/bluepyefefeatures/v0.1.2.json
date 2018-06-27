@@ -24,13 +24,6 @@
         {
           "property": [
             {
-              "path": "nsg:configurationUsed",
-              "description": "Direct link to the EFE configuration which was used to produce these features",
-              "class": "nsg:BluePyEfeConfiguration",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
               "path": "nsg:features",
               "description": "Extracted features(features.json)",
               "class": "nsg:Entity",
@@ -38,7 +31,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:protocols",
+              "path": "nsg:hadProtocol",
               "description": "Experimental protocols which produced traces having extracted features(protocols.json)",
               "class": "nsg:Entity",
               "minCount": 1,

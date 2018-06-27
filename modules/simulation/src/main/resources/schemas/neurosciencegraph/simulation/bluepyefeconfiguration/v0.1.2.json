@@ -16,7 +16,7 @@
       "@type": "sh:NodeShape",
       "label": "BluePyEfe configuration shape",
       "comment": "BluePyEfe features extraction configuration shape.",
-      "targetClass": "nsg:BluePyEfeConfiguration",
+      "targetClass": "nsg:Configuration",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
