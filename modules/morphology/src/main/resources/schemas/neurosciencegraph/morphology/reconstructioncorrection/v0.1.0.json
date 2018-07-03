@@ -7,8 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
   ],
   "shapes": [
     {
@@ -19,19 +18,19 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.0/shapes/ActivityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
         },
         {
           "property": [
             {
               "path": "prov:used",
-              "class": "nsg:ReconstructedWholeBrainCell",
+              "class": "nsg:ReconstructedCell",
               "minCount": 1,
               "maxCount": 1
             },
             {
               "path": "prov:generated",
-              "class": "nsg:ReconstructedWholeBrainCell",
+              "class": "nsg:ReconstructedCell",
               "minCount": 1,
               "maxCount": 1
             }
