@@ -9,9 +9,9 @@
   ],
   "used": [
     {
-      "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedwholebraincell/v0.1.0/8258536c-f010-467b-9c00-3c1df7a7ab11",
+      "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedcell/v0.1.0/8258536c-f010-467b-9c00-3c1df7a7ab11",
       "@type": [
-        "nsg:ReconstructedWholeBrainCell",
+        "nsg:ReconstructedCell",
         "prov:Entity"
       ]
     }
