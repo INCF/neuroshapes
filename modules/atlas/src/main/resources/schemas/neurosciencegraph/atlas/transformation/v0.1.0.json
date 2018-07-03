@@ -15,6 +15,7 @@
       "@type": "sh:NodeShape",
       "description": "Transformation activity shape description.",
       "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:Transformation",
       "and": [
         {
           "@id": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
