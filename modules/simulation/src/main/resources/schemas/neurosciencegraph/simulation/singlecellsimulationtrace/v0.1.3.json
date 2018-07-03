@@ -15,7 +15,21 @@
       "@type": "sh:NodeShape",
       "targetClass": "nsg:SingleCellSimulationTrace",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:image",
+              "name": "image",
+              "description": "Preview of the simulation trace as an image",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

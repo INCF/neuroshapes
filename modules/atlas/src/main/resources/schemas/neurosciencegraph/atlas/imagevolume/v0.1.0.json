@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "import": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/atlas/rotationalmatrix/v0.1.0"
   ],
   "shapes": [
@@ -19,7 +19,7 @@
       "targetClass": "nsg:ImageVolume",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v0.1.0/shapes/EntityShape"
         },
         {
           "property": [
