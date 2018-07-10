@@ -1,15 +1,14 @@
 {
   "@context": [
-    "{{base}}/contexts/nexus/core/schema/v0.1.0",
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/"
     }
   ],
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1"
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:SpeciesOntologyTermShape",
@@ -17,7 +16,7 @@
       "label": "The shape of an ontology term representing a species",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -27,7 +26,7 @@
       "label": "The shape of an ontology term representing a model simulation status",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -37,17 +36,17 @@
       "label": "The shape of an ontology term representing a sex",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
     {
-      "@id": "this:CellOntologyTermShape",
+      "@id": "this:CellTypeOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a cell type",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -57,7 +56,7 @@
       "label": "The shape of an ontology term representing a microscope objective type",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -67,7 +66,7 @@
       "label": "The shape of an ontology term representing a brain region",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -77,7 +76,7 @@
       "label": "The shape of an ontology term representing a stimulus type",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -87,7 +86,7 @@
       "label": "The shape of an ontology term representing an eCode",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -97,7 +96,7 @@
       "label": "The shape of an ontology term representing a role",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -107,7 +106,7 @@
       "label": "The shape of an ontology term representing a license",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -117,7 +116,7 @@
       "label": "The shape of an ontology term representing the types of somas of the reconstructed cell",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -127,7 +126,7 @@
       "label": "The shape of an ontology term representing a unit code",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     },
@@ -137,7 +136,27 @@
       "label": "The shape of an ontology term representing a labeling compound",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.0/shapes/LabeledOntologyEntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+        }
+      ]
+    },
+    {
+      "@id": "this:MorphologicalCellTypeOntologyTermShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of an ontology term representing a morphological cell type",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
+        }
+      ]
+    },
+    {
+      "@id": "this:ElectricalCellTypeOntologyTermShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of an ontology term representing an electrical cell type",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1/shapes/LabeledOntologyEntityShape"
         }
       ]
     }

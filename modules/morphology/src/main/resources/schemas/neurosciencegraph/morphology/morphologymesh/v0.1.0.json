@@ -14,7 +14,7 @@
     {
       "@id": "this:MorphologyMeshShape",
       "@type": "sh:NodeShape",
-      "label": "This shape is for describing morphology release.",
+      "label": "Morphology mesh Shape.",
       "targetClass": "nsg:MorphologyMesh",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [

@@ -2,12 +2,12 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/common/transformableobject/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v0.1.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/common/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
   ],
   "@type": "nxv:Schema",
   "shapes": [
@@ -18,7 +18,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/common/entity/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
         }
       ]
     }
