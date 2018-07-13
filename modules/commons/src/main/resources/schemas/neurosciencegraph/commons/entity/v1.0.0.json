@@ -82,6 +82,11 @@
           "name": "Attributed to",
           "description": "The agent to which this entity was attributed to.",
           "nodeKind": "sh:IRI"
+        },{
+          "path": "schema:image",
+          "name": "Preview",
+          "description": "A reference to an entity representing an image that can be used as preview.",
+          "nodeKind": "sh:IRI"
         },
         {
           "path": "schema:distribution",
