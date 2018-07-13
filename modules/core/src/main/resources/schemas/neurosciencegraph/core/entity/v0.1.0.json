@@ -9,10 +9,12 @@
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
   ],
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:EntityShape",
       "@type": "sh:NodeShape",
+      "owl:deprecated":true,
       "targetClass": "nsg:Entity",
       "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
     }
