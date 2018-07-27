@@ -48,23 +48,19 @@
           "path": "nsg:positionInLayer",
           "name": "Position in layer",
           "description": "Position in layer (deep / superficial)",
-          "sh:in": {
-            "@list": [
-              "Deep",
-              "Superficial"
-            ]
-          },
+          "in": [
+            "Deep",
+            "Superficial"
+          ],
           "maxCount": 1
         },
         {
           "path": "nsg:longitudinalAxis",
           "name": "Longitudinal axis (dorsal / ventral)",
-          "sh:in": {
-            "@list": [
-              "Dorsal",
-              "Ventral"
-            ]
-          },
+          "in": [
+            "Dorsal",
+            "Ventral"
+          ],
           "maxCount": 1
         },
         {

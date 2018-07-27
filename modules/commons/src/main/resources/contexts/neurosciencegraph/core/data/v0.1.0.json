@@ -197,7 +197,12 @@
         "@id": "nsg:reconstructionRequester"
       },
       "reconstructionSentDate": {
-        "@id": "nsg:reconstructionSentDate"
+        "@id": "nsg:reconstructionSentDate",
+        "@type": "xsd:dateTime"
+      },
+      "atTime": {
+        "@id": "prov:atTime",
+        "@type": "xsd:dateTime"
       },
       "reconstructionDate": {
         "@id": "nsg:reconstructionDate"
@@ -259,7 +264,8 @@
         "@type": "@id"
       },
       "releaseDate": {
-        "@id": "nsg:releaseDate"
+        "@id": "nsg:releaseDate",
+        "@type": "xsd:date"
       },
       "radius": {
         "@id": "nsg:radius",
@@ -373,7 +379,8 @@
         "@type": "@id"
       },
       "retrievalDate": {
-        "@id": "nsg:retrievalDate"
+        "@id": "nsg:retrievalDate",
+        "@type": "xsd:dateTime"
       },
       "timeStep": {
         "@id": "nsg:timeStep",

@@ -1,3 +1,29 @@
+/*
+scalafmt: {
+  style = defaultWithAlign
+  maxColumn = 150
+  align.tokens = [
+    { code = "=>", owner = "Case" }
+    { code = "?", owner = "Case" }
+    { code = "extends", owner = "Defn.(Class|Trait|Object)" }
+    { code = "//", owner = ".*" }
+    { code = "{", owner = "Template" }
+    { code = "}", owner = "Template" }
+    { code = ":=", owner = "Term.ApplyInfix" }
+    { code = "++=", owner = "Term.ApplyInfix" }
+    { code = "+=", owner = "Term.ApplyInfix" }
+    { code = "%", owner = "Term.ApplyInfix" }
+    { code = "%%", owner = "Term.ApplyInfix" }
+    { code = "%%%", owner = "Term.ApplyInfix" }
+    { code = "->", owner = "Term.ApplyInfix" }
+    { code = "?", owner = "Term.ApplyInfix" }
+    { code = "<-", owner = "Enumerator.Generator" }
+    { code = "?", owner = "Enumerator.Generator" }
+    { code = "=", owner = "(Enumerator.Val|Defn.(Va(l|r)|Def|Type))" }
+  ]
+}
+ */
+
 val commonsVersion = "0.7.6"
 val provVersion    = "1.1.1"
 val kgVersion      = "0.9.4"
@@ -13,8 +39,8 @@ lazy val core = project
   .dependsOn(nsgcommons)
   .settings(common)
   .settings(
-    name                := "nsg-core-schemas",
-    moduleName          := "nsg-core-schemas"
+    name       := "nsg-core-schemas",
+    moduleName := "nsg-core-schemas"
   )
 
 lazy val nexusschema = project
@@ -51,8 +77,8 @@ lazy val nsgcommons = project
   .dependsOn(nexusschema)
   .settings(common)
   .settings(
-    name       := "nsg-commons-schemas",
-    moduleName := "nsg-commons-schemas",
+    name                := "nsg-commons-schemas",
+    moduleName          := "nsg-commons-schemas",
     libraryDependencies += prov
   )
 
@@ -100,27 +126,34 @@ lazy val simulation = project
     moduleName := "nsg-simulation-schemas"
   )
 
-
 lazy val root = project
   .in(file("."))
   .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
   .settings(common, noPublish)
-  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons)
+  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema, nsgcommons)
 
 lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
-  autoScalaLibrary   := false,
-  workbenchVersion   := "0.3.2",
-  bintrayOmitLicense := true,
-  homepage           := Some(url("https://github.com/INCF/neuroshapes")),
-  licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
-  scmInfo := Some(
-    ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
+  autoScalaLibrary := false,
+  workbenchVersion   := "0.3.2"
 )
 
+inThisBuild(
+  Seq(
+    homepage           := Some(new URL("https://github.com/INCF/neuroshapes")),
+    licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
+    scmInfo            := Some(ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git")),
+    bintrayOmitLicense := true,
+    developers := List(
+      Developer("MFSY", "Mohameth François SY", "noreply@epfl.ch", url("https://bluebrain.epfl.ch/")),
+      Developer("annakristinkaufmann", "anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://bluebrain.epfl.ch/")),
+      Developer("huanxiang", "Huanxiang", "noreply@epfl.ch", url("https://bluebrain.epfl.ch/"))
+    )
+  )
+)
 
-
-lazy val noPublish = Seq(publishLocal := {}, publish := {})
+lazy val noPublish =
+  Seq(publishLocal := {}, publish := {}, publishArtifact := false)
 
 addCommandAlias("review", ";clean;test")
 addCommandAlias("rel", ";release with-defaults skip-tests")

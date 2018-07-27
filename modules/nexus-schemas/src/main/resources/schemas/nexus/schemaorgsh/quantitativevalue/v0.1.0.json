@@ -44,6 +44,9 @@
             },
             {
               "datatype": "xsd:double"
+            },
+            {
+              "datatype": "xsd:integer"
             }
           ]
         }

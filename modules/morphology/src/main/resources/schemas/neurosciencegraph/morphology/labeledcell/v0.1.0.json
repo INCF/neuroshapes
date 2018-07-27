@@ -70,7 +70,7 @@
               "path": "nsg:reconstructable",
               "name": "Reconstructable",
               "description": "Indicates if the cell can be reconstructed or not",
-              "datatype": "xsd:string",
+              "datatype": "xsd:boolean",
               "maxCount": 1
             },
             {

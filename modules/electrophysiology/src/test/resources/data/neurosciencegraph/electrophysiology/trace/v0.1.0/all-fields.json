@@ -10,14 +10,14 @@
   "name": "654363",
   "providerId": "654363",
   "description": "Stimulation trace",
-  "channel": "0",
+  "channel": 0,
   "citation": "https://doi.org/10.1093/cercor/bhh092",
   "projectName": "Somatosensory cortex project",
   "retrievalDate": "2016-10-15T00:00:00",
   "dataUnit": "pA",
   "timeStep": {
     "unitText": "seconds",
-    "value": "0.00005"
+    "value": 0.00005
   },
   "qualifiedGeneration": {
     "@id": "{{base}}/data/neurosciencegraph/experiment/tracegeneration/v0.1.0/cc4ed155-fb9c-4611-815f-cfe304cba128",

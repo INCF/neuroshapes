@@ -9,8 +9,8 @@
   "@id": "{{base}}/data/neurosciencegraph/simulation/validation/v0.0.1/9a5ddf06-4af3-4291-af2e-d287b8c92205",
   "name": "validation",
   "description": "validation description",
-  "score": "0.1",
-  "normalizedScore": "0.1",
+  "score": 0.1,
+  "normalizedScore": 0.1,
   "distribution": [
     {
       "@context": "{{base}}/contexts/nexus/core/distribution/v0.1.0",

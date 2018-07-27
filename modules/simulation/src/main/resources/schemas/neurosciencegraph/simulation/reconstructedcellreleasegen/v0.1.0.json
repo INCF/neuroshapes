@@ -34,7 +34,7 @@
               "path": "prov:atTime",
               "name": "At time",
               "description": "At time.",
-              "nodeType": "xsd:datetime",
+              "nodeType": "xsd:dateTime",
               "minCount": 1,
               "maxCount": 1
             },
