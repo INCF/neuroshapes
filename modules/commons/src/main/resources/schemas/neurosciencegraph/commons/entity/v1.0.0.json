@@ -2,19 +2,18 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/core/entity/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
+    "{{base}}/schemas/nexus/core/distribution/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0"
   ],
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:EntityShape",
       "@type": "sh:NodeShape",
-      "owl:deprecated":true,
       "property": [
         {
           "path": "schema:name",
@@ -37,15 +36,14 @@
           "description": "The identifier of the entity as given by a team/laboratory that used it in an experiment. This identifier is local to the team or laboratory.",
           "datatype": "xsd:string",
           "maxCount": 1
+        },{
+          "@id":"{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0/shapes/WithIdentifierPropertyShape"
         },
         {
           "path": "schema:citation",
           "name": "Citation",
           "description": "Citation (s) of publication (s) that describe the entity.",
           "xone": [
-            {
-              "datatype": "xsd:anyURI"
-            },
             {
               "datatype": "xsd:string"
             },
@@ -71,9 +69,24 @@
         {
           "path": "prov:wasRevisionOf",
           "name": "Revision of",
-          "description": "The entity for which this entity is a revision of.",
-          "nodeKind": "xsd:dateTime",
+          "description": "The entity for which this entity is a revision of. An entity revision is a specific type of derivation.",
+          "nodeKind": "sh:IRI",
           "maxCount": 1
+        },{
+          "path": "prov:wasDerivedFrom",
+          "name": "Derived from",
+          "description": "The entity from which this entity was derived from.",
+          "nodeKind": "sh:IRI"
+        },{
+          "path": "prov:wasAttributedTo",
+          "name": "Attributed to",
+          "description": "The agent to which this entity was attributed to.",
+          "nodeKind": "sh:IRI"
+        },{
+          "path": "schema:image",
+          "name": "Preview",
+          "description": "A reference to an entity representing an image that can be used as preview.",
+          "nodeKind": "sh:IRI"
         },
         {
           "path": "schema:distribution",
