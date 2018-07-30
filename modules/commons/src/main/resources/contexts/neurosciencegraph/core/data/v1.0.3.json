@@ -584,6 +584,7 @@
       "@id": "nsg:hypampThreshold"
       },
       "storageType": {
+        "@type": "@id",
         "@id": "nsg:storageType"
       },
       "gpfs": {
