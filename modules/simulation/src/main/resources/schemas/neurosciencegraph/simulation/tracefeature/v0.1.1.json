@@ -2,24 +2,24 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/etypefeatureprotocol/v0.1.1/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/tracefeature/v0.1.1/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.2"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0"
   ],
   "shapes": [
     {
-      "@id": "this:ETypeFeatureProtocolShape",
+      "@id": "this:TraceFeatureShape",
       "@type": "sh:NodeShape",
-      "label": "This shape is for e-type extracted features and protocols",
-      "comment": "When stimulus starts?",
-      "targetClass": "nsg:ETypeFeatureProtocol",
+      "label": "Trace feature shape",
+      "comment": "Trace feature extracted from a trace feature extraction activity.",
+      "targetClass": "nsg:TraceFeature",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.2/shapes/ModelInstanceShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
         },
         {
           "property": [
