@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+          "this": "{{base}}/schemas/neurosciencegraph/literature/publicationvolume/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+        {
+            "@id": "this:PublicationVolumeShape",
+            "@type": "sh:NodeShape",
+            "label": "schema.org publication volume shape definition.",
+            "targetClass": "schema:PublicationVolume",
+            "nodekind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                   "node": "{{base}}/templates/core/entity/v0.1.0/shapes/EntityShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "schema:volumeNumber",
+                            "name": "volumeNumber",
+                            "description": "Identifies the volume of publication or multi-part work; for example, 'iii' or '2'",
+                            "or": [
+                                {"datatype": "xsd:string"},
+                                {"datatype": "xsd:integer"}
+                            ]
+                        },
+                        {
+                            "path": "schema:isPartOf",
+                            "name": "periodical",
+                            "description": "The periodical of which this is a volume.",
+                            "class": "schema:Periodical",
+                            "node": "{{base}}/schemas/neurosciencegraph/literature/periodical/v0.1.0/shapes/PeriodicalShape",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:url",
+                            "name": "url",
+                            "description": "URL at which the list of issues or table of contents of the publication volume can be obtained.",
+                            "nodeKind": "sh:IRI"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

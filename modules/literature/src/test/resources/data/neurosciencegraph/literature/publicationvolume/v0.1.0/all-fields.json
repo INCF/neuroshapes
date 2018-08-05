@@ -1,0 +1,15 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "schema:PublicationVolume"
+    ],
+    "schema:isPartOf": {
+        "@id": "{{base}}/data/neurosciencegraph/literature/periodical/v0.1.0/b0880a5e-3096-4527-bbf8-05d797b8c431",
+        "@type": "schema:Periodical"
+    },
+    "schema:volumeNumber": 38,
+    "schema:url": {"@id": "http://www.jneurosci.org/content/by/volume/38"}
+}

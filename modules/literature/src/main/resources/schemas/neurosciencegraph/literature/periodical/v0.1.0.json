@@ -1,0 +1,77 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+          "this": "{{base}}/schemas/neurosciencegraph/literature/periodical/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+        {
+            "@id": "this:PeriodicalShape",                        
+            "@type": "sh:NodeShape",
+            "label": "schema.org periodical shape definition.",
+            "targetClass": "schema:Periodical",
+            "nodekind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                   "node": "{{base}}/templates/core/entity/v0.1.0/shapes/EntityShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "schema:issn",
+                            "name": "ISSN",
+                            "description": "The International Standard Serial Number (ISSN) that identifies this serial publication",
+                            "datatype": "xsd:string"
+                        },
+                        {
+                            "path": "schema:publisher",
+                            "name": "publisher",
+                            "description": "The publisher of the periodical.",
+                            "or": [
+                                {
+                                    "class": "schema:Person",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                                },
+                                {
+                                    "class": "schema:Organization",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/organization/v0.1.0/shapes/OrganizationShape"
+                                }
+                            ],
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:description",
+                            "name": "description",
+                            "description": "A description of the periodical.",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:name",
+                            "name": "title",
+                            "description": "The title of the periodical.",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:alternateName",
+                            "name": "shortTitle",
+                            "description": "An abbreviated form of the title of the periodical.",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },                        
+                        {
+                            "path": "schema:url",
+                            "name": "url",
+                            "description": "URL at which the list of volumes of the periodical can be obtained.",
+                            "nodeKind": "sh:IRI"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

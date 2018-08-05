@@ -1,0 +1,18 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "schema:Periodical"
+    ],
+    "schema:issn": ["0270-6474", "1529-2401"],
+    "schema:publisher": {
+        "@id": "{{base}}/data/nexus/schemaorg/organization/v0.1.0/a9880a5e-3096-4527-bbf8-05d797b8c437",
+        "@type": "schema:Organization"
+    },
+    "schema:name": "The Journal of Neuroscience",
+    "schema:alternateName": "J. Neurosci.",
+    "schema:description": "An official journal of the Society for Neuroscience",
+    "schema:url": {"@id": "http://www.jneurosci.org"}
+}

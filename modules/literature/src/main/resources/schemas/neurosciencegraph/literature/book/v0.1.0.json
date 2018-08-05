@@ -1,0 +1,124 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+          "this": "{{base}}/schemas/neurosciencegraph/literature/book/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+        {
+            "@id": "this:BookShape",                        
+            "@type": "sh:NodeShape",
+            "label": "schema.org book shape definition.",
+            "targetClass": "schema:Book",
+            "nodekind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                   "node": "{{base}}/templates/core/entity/v0.1.0/shapes/EntityShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "schema:bookEdition",
+                            "name": "edition",
+                            "description": "The edition of the book",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:isbn",
+                            "name": "ISBN",
+                            "description": "The ISBN of the book",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:author",
+                            "name": "author(s)",
+                            "description": "The author(s) of this book",
+                            "or": [
+                                {
+                                    "class": "schema:Person",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                                },
+                                {
+                                    "class": "schema:Organization",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/organization/v0.1.0/shapes/OrganizationShape"
+                                }
+                            ],
+                            "comment": "We should specify that a Book must have either at least one author *or* at least one editor"
+                        },
+                        {
+                            "path": "schema:datePublished",
+                            "name": "publicationDate",
+                            "description": "Date of first publication",
+                            "datatype": "xsd:date",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:editor",
+                            "name": "editor(s)",
+                            "description": "The editor(s) of this book",
+                            "class": "schema:Person",
+                            "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                        },
+                        {
+                            "path": "schema:keywords",
+                            "name": "keywords",
+                            "description": "Keywords or tags used to describe this book. Multiple entries in a keywords list are typically delimited by commas.",
+                            "datatype": "xsd:string"
+                        },
+                        {
+                            "path": "schema:license",
+                            "name": "license",
+                            "description": "A license document that applies to this book, typically indicated by URL.",
+                            "nodeKind": "sh:IRI"
+                        },
+                        {
+                            "path": "schema:publisher",
+                            "name": "publisher",
+                            "description": "The publisher of the book.",
+                            "or": [
+                                {
+                                    "class": "schema:Person",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+                                },
+                                {
+                                    "class": "schema:Organization",
+                                    "node": "{{base}}/schemas/nexus/schemaorg/organization/v0.1.0/shapes/OrganizationShape"
+                                }
+                            ],
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:description",
+                            "name": "description",
+                            "description": "A description of the book.",
+                            "datatype": "xsd:string",
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:name",
+                            "name": "title",
+                            "description": "The title of the book.",
+                            "datatype": "xsd:string",
+                            "minCount": 1,
+                            "maxCount": 1
+                        },
+                        {
+                            "path": "schema:url",
+                            "name": "url",
+                            "description": "URL at which the book can be downloaded or ordered.",
+                            "nodeKind": "sh:IRI"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
