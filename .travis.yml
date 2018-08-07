@@ -3,12 +3,10 @@ scala:
    - 2.12.2
 
 stages:
-  - test
-    if: branch = master
-    if: branch = simulation_schemas
+  - test 
+    if: (branch = master OR branch = simulation_schemas)
   - collect
-    if: branch = master
-    if: type = push
+    if: (branch = master AND type = push)
 
 jobs:
   include:
