@@ -6,6 +6,22 @@ lazy val prov           = "ch.epfl.bluebrain.nexus" %% "nexus-prov"      % provV
 lazy val commonsSchemas = "ch.epfl.bluebrain.nexus" %% "commons-schemas" % commonsVersion
 lazy val kgSchemas      = "ch.epfl.bluebrain.nexus" %% "kg-schemas"      % kgVersion
 
+lazy val docs = project
+  .in(file("docs"))
+  .enablePlugins(ParadoxPlugin)
+  .settings(
+    name := "nsg-docs",
+    moduleName := "nsg-docs",
+    paradoxTheme := Some(builtinParadoxTheme("generic")),
+    paradoxProperties in Compile ++= Map("extref.service.base_url" -> "../"),
+    target in(Compile, paradox) := (resourceManaged in Compile).value / "docs",
+    resourceGenerators in Compile += {
+      (paradox in Compile).map { parent =>
+        (parent ** "*").get
+      }.taskValue
+    }
+  )
+
 
 lazy val core = project
   .in(file("modules/core"))
@@ -101,6 +117,20 @@ lazy val simulation = project
     moduleName := "nsg-simulation-schemas"
   )
 
+
+lazy val minds = project
+  .in(file("modules/minds"))
+  .enablePlugins(WorkbenchPlugin)
+  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
+  .dependsOn(nexusschema)
+  .settings(common)
+  .settings(
+    name := "nsg-minds-schemas",
+    moduleName := "nsg-minds-schemas"
+  )
+
+
+
 lazy val root = project
   .in(file("."))
   .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
@@ -110,7 +140,7 @@ lazy val root = project
 lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
   autoScalaLibrary   := false,
-  workbenchVersion   := "0.2.2",
+  workbenchVersion   := "0.3.2",
   bintrayOmitLicense := true,
   homepage           := Some(url("https://github.com/INCF/neuroshapes")),
   licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
