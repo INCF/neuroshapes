@@ -3,9 +3,9 @@ scala:
    - 2.12.2
 
 stages:
-  - test 
+  - name: test 
     if: (branch = master OR branch = simulation_schemas)
-  - collect
+  - name: collect
     if: (branch = master AND type = push)
 
 jobs:
@@ -15,5 +15,4 @@ jobs:
         - sbt -javaOptions=.jvmopts compile
         - sbt -javaOptions=.jvmopts test
     - stage: collect
-      script:
-        - sbt collectResources https://bbp.epfl.ch/nexus/v0 ./schemas all
+      script: sbt collectResources https://bbp.epfl.ch/nexus/v0 ./schemas all
