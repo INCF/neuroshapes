@@ -1,10 +1,21 @@
 language: scala
 scala:
    - 2.12.2
-script:
-  - sbt -javaOptions=.jvmopts compile
-  - sbt -javaOptions=.jvmopts test
-branches:
-  only:
-    - master
-    - simulation_schemas
+
+stages:
+  - test
+    if: branch = master
+    if: branch = simulation_schemas
+  - collect
+    if: branch = master
+    if: type = push
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - sbt -javaOptions=.jvmopts compile
+        - sbt -javaOptions=.jvmopts test
+    - stage: collect
+      script:
+        - sbt collectResources https://bbp.epfl.ch/nexus/v0 ./schemas all
