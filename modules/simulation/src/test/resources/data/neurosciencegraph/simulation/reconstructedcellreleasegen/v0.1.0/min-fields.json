@@ -15,6 +15,6 @@
       "prov:Activity"
     ]
   },
-  "atTime": "2018-02-27T00:00:00",
+  "prov:atTime": "2018-02-27T00:00:00",
   "description": "Context for the generation"
 }

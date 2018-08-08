@@ -27,10 +27,12 @@ scalafmt: {
 val commonsVersion = "0.7.6"
 val provVersion    = "1.1.1"
 val kgVersion      = "0.9.4"
+val jenaVersion    = "3.8.0"
 
 lazy val prov           = "ch.epfl.bluebrain.nexus" %% "nexus-prov"      % provVersion
 lazy val commonsSchemas = "ch.epfl.bluebrain.nexus" %% "commons-schemas" % commonsVersion
 lazy val kgSchemas      = "ch.epfl.bluebrain.nexus" %% "kg-schemas"      % kgVersion
+lazy val jena           = "org.apache.jena"         % "jena-arq"         % jenaVersion
 
 lazy val core = project
   .in(file("modules/core"))
@@ -50,13 +52,10 @@ lazy val nexusschema = project
   .settings(common, noPublish)
   .settings(
     noPublish,
-    name       := "kg-nsg-schemas",
-    moduleName := "kg-nsg-schemas",
-    resolvers  += Resolver.bintrayRepo("bogdanromanx", "maven"),
-    libraryDependencies ++= Seq(
-      commonsSchemas,
-      kgSchemas
-    )
+    name                := "kg-nsg-schemas",
+    moduleName          := "kg-nsg-schemas",
+    resolvers           += Resolver.bintrayRepo("bogdanromanx", "maven"),
+    libraryDependencies ++= Seq(commonsSchemas, kgSchemas, jena)
   )
 
 lazy val experiment = project
@@ -134,8 +133,9 @@ lazy val root = project
 
 lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
-  autoScalaLibrary := false,
-  workbenchVersion   := "0.3.2"
+  autoScalaLibrary   := false,
+  workbenchVersion   := "0.3.2",
+  bintrayOmitLicense := true
 )
 
 inThisBuild(

@@ -100,14 +100,7 @@
               "path": "nsg:widthResolution",
               "name": "Width resolution",
               "description": "Slice resolution in width",
-              "or" : [
-                {
-                  "datatype": "xsd:float"
-                },
-                {
-                  "datatype": "xsd:double"
-                }
-              ],
+              "datatype": "xsd:double",
               "minCount": 1,
               "maxCount": 1
             },
@@ -115,14 +108,7 @@
               "path": "nsg:heightResolution",
               "name": "Height resolution",
               "description": "Slice height",
-              "or" : [
-                {
-                  "datatype": "xsd:float"
-                },
-                {
-                  "datatype": "xsd:double"
-                }
-              ],
+              "datatype": "xsd:double",
               "minCount": 1,
               "maxCount": 1
             }
@@ -143,14 +129,7 @@
               "path": "nsg:sliceIntervalValue",
               "name": "Slice interval value",
               "description": "Slice interval value",
-              "or" : [
-                {
-                  "datatype": "xsd:float"
-                },
-                {
-                  "datatype": "xsd:double"
-                }
-              ],
+              "datatype": "xsd:double",
               "minCount": 1,
               "maxCount": 1
             }
