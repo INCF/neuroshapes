@@ -30,27 +30,27 @@
           "node": "{{base}}/schemas/nexus/schemaorg/propertyvalue/v0.1.0/shapes/PropertyValueShape"
         },
         {
-          "property": [
+          "or": [
             {
-              "or": [
-                {
-                  "path": "schema:propertyID",
-                  "name": "Orcid ID",
-                  "description": "The property name.",
-                  "datatype": "xsd:string",
-                  "hasValue": "http//orcid.org",
-                  "maxCount": 1
-                },
-                {
-                  "path": "schema:name",
-                  "name": "Orcid ID",
-                  "description": "The property name.",
-                  "datatype": "xsd:string",
-                  "hasValue": "orcid",
-                  "maxCount": 1
-                }
-              ]
+              "path": "schema:propertyID",
+              "name": "Orcid ID",
+              "description": "The property name.",
+              "datatype": "xsd:string",
+              "hasValue": "http//orcid.org",
+              "maxCount": 1
             },
+            {
+              "path": "schema:name",
+              "name": "Orcid ID",
+              "description": "The property name.",
+              "datatype": "xsd:string",
+              "hasValue": "orcid",
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "property": [
             {
               "path": "schema:value",
               "name": "Orcid",
@@ -75,27 +75,27 @@
           "node": "{{base}}/schemas/nexus/schemaorgsh/propertyvalue/v0.1.0/shapes/PropertyValueShape"
         },
         {
-          "property": [
+          "or": [
             {
-              "or": [
-                {
-                  "path": "schema:propertyID",
-                  "name": "GRID ID property",
-                  "description": "The GRID property identifier.",
-                  "datatype": "xsd:string",
-                  "hasValue": "http//orcid.org",
-                  "maxCount": 1
-                },
-                {
-                  "path": "schema:name",
-                  "name": "Orcid ID",
-                  "description": "The property name.",
-                  "datatype": "xsd:string",
-                  "hasValue": "grid",
-                  "maxCount": 1
-                }
-              ]
+              "path": "schema:propertyID",
+              "name": "GRID ID property",
+              "description": "The GRID property identifier.",
+              "datatype": "xsd:string",
+              "hasValue": "http//orcid.org",
+              "maxCount": 1
             },
+            {
+              "path": "schema:name",
+              "name": "Orcid ID",
+              "description": "The property name.",
+              "datatype": "xsd:string",
+              "hasValue": "grid",
+              "maxCount": 1
+            }
+          ]
+        },
+        {
+          "property": [
             {
               "path": "schema:value",
               "name": "GRID ID",

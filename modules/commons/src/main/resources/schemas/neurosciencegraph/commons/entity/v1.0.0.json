@@ -63,7 +63,7 @@
           "path": "schema:dateCreated",
           "name": "Creation date",
           "description": "Date at which this entity created.",
-          "nodeKind": "xsd:dateTime",
+          "datatype": "xsd:dateTime",
           "maxCount": 1
         },
         {

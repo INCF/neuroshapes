@@ -51,9 +51,6 @@
       "@type": "@id",
       "@id": "schema:affiliation"
     },
-    "size": {
-      "@type": "@id",
-      "@id": "schema:size"
-    }
+    "size": "schema:size"
   }
 }

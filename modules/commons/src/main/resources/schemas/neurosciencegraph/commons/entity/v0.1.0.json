@@ -65,14 +65,14 @@
           "path": "schema:dateCreated",
           "name": "Creation date",
           "description": "Date at which this entity created.",
-          "nodeKind": "xsd:dateTime",
+          "datatype": "xsd:dateTime",
           "maxCount": 1
         },
         {
           "path": "prov:wasRevisionOf",
           "name": "Revision of",
           "description": "The entity for which this entity is a revision of.",
-          "nodeKind": "xsd:dateTime",
+          "datatype": "xsd:dateTime",
           "maxCount": 1
         },
         {
