@@ -1,0 +1,374 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/standards/v0.1.0",
+		"{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+            "nidm": "http://purl.org/nidash/nidm#",
+            "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+            "this": "{{base}}/schemas/neurosciencegraph/neuroimaging/nidm/v0.2.0/shapes"
+        }
+    ],
+    "@type": "owl:Ontology",
+	"authors": ["Taylor MacMillan", "David Rotenberg"],
+    "shapes": [
+        {
+            "@id": "this:NIDMShape",
+            "@type": "sh:NodeShape",
+            "targetClass": "prov:Entity",
+            "and": [
+                {
+                    "node": "this:T1WeightedScanShape"
+                },
+                {
+                    "node": "this:T2WeightedScanShape"
+                },
+                {
+                    "node": "this:DiffusionWeightedScanShape"
+                },
+                {
+                    "node": "this:FlowWeightedScanShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "prov:wasGeneratedBy",
+                            "name": "WasGeneratedBy",
+                            "description": "Reference to the activity that generated the scan entity",
+                            "minCount": 1,
+                            "class": "prov:Activity",
+                            "node": "{{base}}/schemas/nexus/provsh/activity/v1.0.0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:T1WeightedScanShape",
+            "label": "T1WeightedScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageContrastType",
+                                    "name": "ImageContrastType",
+                                    "hasValue": {
+                                        "@id": "nidm:T1Weighted"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageUsageType",
+                            "name": "ImageUsageType",
+                            "hasValue": {
+                                "@id": "nidm:Anatomical"
+                            }
+                        },
+                        {
+                            "path": "dicom:EchoTime",
+                            "name": "EchoTime",
+                            "minInclusive": {
+                                "@value": 0.001
+                            },
+                            "maxInclusive": {
+                                "@value": 0.005
+                            }
+                        },
+                        {
+                            "path": "dicom:FlipAngle",
+                            "name": "FlipAngle",
+                            "minInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "1"
+                            },
+                            "maxInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "45"
+                            }
+                        },
+                        {
+                            "path": "dicom:InversionTime",
+                            "name": "InversionTime",
+                            "minInclusive": {
+                                "@value": 0.1
+                            },
+                            "maxInclusive": {
+                                "@value": 1.0
+                            }
+                        },
+                        {
+                            "path": "dicom:RepetitionTime",
+                            "name": "RepetitionTime",
+                            "minInclusive": {
+                                "@value": 0.001
+                            },
+                            "maxInclusive": {
+                                "@value": 0.1
+                            }
+                        },
+                        {
+                            "path": "dicom:MagneticFieldStrength",
+                            "name": "MagneticFieldStrength",
+                            "hasValue": {
+                                "datatype": "xsd:int",
+                                "@value": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:T2WeightedScanShape",
+            "label": "T2WeightedScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageContrastType",
+                                    "name": "ImageContrastType",
+                                    "hasValue": {
+                                        "@id": "nidm:T2Weighted"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageUsageType",
+                            "name": "ImageUsageType",
+                            "hasValue": {
+                                "@id": "nidm:Anatomical"
+                            }
+                        },
+                        {
+                            "path": "dicom:EchoTime",
+                            "name": "EchoTime",
+                            "minInclusive": {
+                                "@value": 0.01
+                            },
+                            "maxInclusive": {
+                                "@value": 0.2
+                            }
+                        },
+                        {
+                            "path": "dicom:EchoTrainLength",
+                            "name": "EchoTrainLength",
+                            "minInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "1"
+                            },
+                            "maxInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "32"
+                            }
+                        },
+                        {
+                            "path": "dicom:FlipAngle",
+                            "name": "FlipAngle",
+                            "minInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "90"
+                            },
+                            "maxInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "135"
+                            }
+                        },
+                        {
+                            "path": "dicom:InversionTime",
+                            "name": "InversionTime",
+                            "minInclusive": {
+                                "@value": 1.0
+                            },
+                            "maxInclusive": {
+                                "@value": 5.0
+                            }
+                        },
+                        {
+                            "path": "dicom:RepetitionTime",
+                            "name": "RepetitionTime",
+                            "minInclusive": {
+                                "@value": 1.0
+                            },
+                            "maxInclusive": {
+                                "@value": 10.0
+                            }
+                        },
+                        {
+                            "path": "dicom:MagneticFieldStrength",
+                            "name": "MagneticFieldStrength",
+                            "hasValue": {
+                                "datatype": "xsd:int",
+                                "@value": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:DiffusionWeightedScanShape",
+            "label": "DiffusionWeightedScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageContrastType",
+                                    "name": "ImageContrastType",
+                                    "hasValue": {
+                                        "@id": "nidm:DiffusionWeighted"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageUsageType",
+                            "name": "ImageUsageType",
+                            "hasValue": {
+                                "@id": "nidm:DiffusionTensor"
+                            }
+                        },
+                        {
+                            "path": "dicom:EchoTime",
+                            "name": "EchoTime",
+                            "minInclusive": {
+                                "@value": 0.05
+                            },
+                            "maxInclusive": {
+                                "@value": 0.1
+                            }
+                        },
+                        {
+                            "path": "dicom:FlipAngle",
+                            "name": "FlipAngle",
+                            "minInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "90"
+                            },
+                            "maxInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "135"
+                            }
+                        },
+                        {
+                            "path": "dicom:RepetitionTime",
+                            "name": "RepetitionTime",
+                            "minInclusive": {
+                                "@value": 5.0
+                            },
+                            "maxInclusive": {
+                                "@value": 10.0
+                            }
+                        },
+                        {
+                            "path": "dicom:MagneticFieldStrength",
+                            "name": "MagneticFieldStrength",
+                            "hasValue": {
+                                "datatype": "xsd:int",
+                                "@value": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:FlowWeightedScanShape",
+            "label": "FlowWeightedScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageContrastType",
+                                    "name": "ImageContrastType",
+                                    "hasValue": {
+                                        "@id": "nidm:FlowWeighted"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageUsageType",
+                            "name": "ImageUsageType",
+                            "hasValue": {
+                                "@id": "nidm:Functional"
+                            }
+                        },
+                        {
+                            "path": "dicom:EchoTime",
+                            "name": "EchoTime",
+                            "minInclusive": {
+                                "@value": 0.01
+                            },
+                            "maxInclusive": {
+                                "@value": 0.1
+                            }
+                        },
+                        {
+                            "path": "dicom:FlipAngle",
+                            "name": "FlipAngle",
+                            "minInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "45"
+                            },
+                            "maxInclusive": {
+                                "datatype": "xsd:int",
+                                "@value": "90"
+                            }
+                        },
+                        {
+                            "path": "dicom:RepetitionTime",
+                            "name": "RepetitionTime",
+                            "minInclusive": {
+                                "@value": 1.0
+                            },
+                            "maxInclusive": {
+                                "@value": 5.0
+                            }
+                        },
+                        {
+                            "path": "dicom:MagneticFieldStrength",
+                            "name": "MagneticFieldStrength",
+                            "hasValue": {
+                                "datatype": "xsd:int",
+                                "@value": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
