@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="nsg-docs">
+<meta name="generator" content="Paradox, paradox-material-theme=0.3.0, mkdocs-material=1.11.0">
+
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.languages" content="">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="nsg-docs">
+<link rel="shortcut icon" href="../../../assets/images/favicon.png">
+<title>JSON for Linking Data · Neuroshapes</title>
+<script src="../../../lib/modernizr/modernizr.min.js"></script>
+<link rel="stylesheet" href="../../../assets/stylesheets/application-0741cbeb94.css">
+<link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
+<link rel="stylesheet" href="../../../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../../../lib/prettify/prettify.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../../assets/stylesheets/paradox-material-theme.css">
+</head>
+<body
+data-md-color-primary="blue"
+data-md-color-accent="light blue">
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+<label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../../../index.html" title="Neuroshapes" class="md-header-nav__button md-logo">
+<i class="md-icon">cloud</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<span class="md-flex__ellipsis md-header-nav__title">
+JSON for Linking Data
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="search"></label>
+<div class="md-search__inner">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+<label class="md-icon md-search__icon" for="search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/INCF/neuroshapes"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+INCF/neuroshapes
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<div class="md-nav__button md-logo">
+<i class="md-icon">cloud</i>
+</div>
+<a href="../../../index.html" title="Neuroshapes">
+Neuroshapes
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/INCF/neuroshapes"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+INCF/neuroshapes
+</div>
+</a>
+
+</div>
+<ul>
+  <li><a href="../../../gettingstarted/index.html" class="page">Getting Started</a>
+  <ul>
+    <li><a href="../../../gettingstarted/overview.html" class="page">Overview</a></li>
+  </ul></li>
+  <li><a href="../../../datamodeling/index.html" class="page">Modeling Your Data</a>
+  <ul>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html" class="active page">JSON for Linking Data</a></li>
+  </ul></li>
+  <li><a href="../../../shacl-tutorial/overview/index.html" class="page">SHACL in a Nutshell</a>
+  <ul>
+    <li><a href="../../../shacl-tutorial/overview/overview.html" class="page">Overview</a></li>
+    <li><a href="../../../shacl-tutorial/overview/data-modeling-approach.html" class="page">Data modeling approach</a></li>
+    <li><a href="../../../shacl-tutorial/overview/validation-flow.html" class="page">Validation flow</a></li>
+    <li><a href="../../../shacl-tutorial/overview/shape-target.html" class="page">Target declaration</a></li>
+    <li><a href="../../../shacl-tutorial/overview/constraints.html" class="page">Constraints</a></li>
+    <li><a href="../../../shacl-tutorial/overview/shape-best-practices.html" class="page">Best Practices</a></li>
+  </ul></li>
+  <li><a href="../../../data-models/index.html" class="page">Data models and Formats</a>
+  <ul>
+    <li><a href="../../../data-models/minds/minds.html" class="page">MINDS</a></li>
+    <li><a href="../../../data-models/brainatlas/brain-atlas.html" class="page">Brain Atlas</a></li>
+    <li><a href="../../../data-models/electrophysiology/wholecellpatchclamp-recording.html" class="page">Whole-cell patch-clamp recording</a></li>
+    <li><a href="../../../data-models/morphology/morphology.html" class="page">Morphology</a></li>
+    <li><a href="../../../data-models/literature/literature.html" class="page">Literature</a></li>
+  </ul></li>
+  <li><a href="../../../tools/index.html" class="page">Software and Tools</a></li>
+  <li><a href="../../../community/index.html" class="page">User Community</a></li>
+  <li><a href="../../../publication/index.html" class="page">Publications</a></li>
+  <li><a href="../../../license.html" class="page">License</a></li>
+  <li><a href="../../../contribution.html" class="page">How to contribute</a></li>
+  <li><a href="../../../contact.html" class="page">Contact</a></li>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../../../datamodeling/linkeddata/rdf/index.html#json-for-linking-data" class="header">JSON for Linking Data</a>
+  <ul>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#why-json-ld-" class="header">Why JSON-LD ?</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#json-ld-data-model" class="header">JSON-LD data model</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#cool-uris-dont-change" class="header">Cool URIs don&rsquo;t change</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#further-reading" class="header">Further reading</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+<div class="md-nav__title--site md-version" title="Version">
+<i class="md-icon">label_outline</i> 0.1.0+46-ae0d5827+20180821-1224
+</div>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="toc">Table of contents</label>
+<ul>
+  <li><a href="../../../datamodeling/linkeddata/rdf/index.html#json-for-linking-data" class="header">JSON for Linking Data</a>
+  <ul>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#why-json-ld-" class="header">Why JSON-LD ?</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#json-ld-data-model" class="header">JSON-LD data model</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#cool-uris-dont-change" class="header">Cool URIs don&rsquo;t change</a></li>
+    <li><a href="../../../datamodeling/linkeddata/rdf/index.html#further-reading" class="header">Further reading</a></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#json-for-linking-data" name="json-for-linking-data" class="anchor"><span class="anchor-link"></span></a>JSON for Linking Data</h1><div class="callout note "><div class="callout-title">Note</div>
+<p>This section introduces basic concepts of JSON for Linked Data (JSON-LD). The reader should look at the <a href="https://json-ld.org">JSON-LD specification</a> for in-depth documentation.</p></div>
+<p>JSON-LD is a very flexible format allowing multiple json representation for the same content as shown in the following example:</p>
+<h2><a href="#why-json-ld-" name="why-json-ld-" class="anchor"><span class="anchor-link"></span></a>Why JSON-LD ?</h2>
+<p>First of all a json-ld document is a json document. So what is the difference ? To help answer the question, let consider the following json document:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;identifier&quot; : &quot;0e3b328c-c18f-4e64-9a0e-f6e4f32b36da&quot;,
+  &quot;python&quot;:&quot;fast&quot;,
+  &quot;java&quot; : &quot;&quot;
+}
+</code></pre>
+<p>What this document is about ? Python and Java as programming languages or as snake and the indonesia island respectively ? The json document is ambiguous. With just the payload, human and software agents can&rsquo;t confidently infer the document topic without knowing from which endpoint it was obtained. </p>
+<p>semantic preserving data exchange</p>
+<p>Json-ld specification was created to solve the above ambiguity issue among other features it brings to the way web resources are exchanged through API. To enable semantic preserving data exchange, it adds a context object to the json document within which each json keys and/or values can be mapped to a unique identifier as shown in the following document:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;@context&quot;:{
+   &quot;python&quot;:&quot;http://programminglanguages.org/python&quot;,
+   &quot;java&quot;:&quot;http://programminglanguages.org/java&quot;,
+   &quot;identifier&quot;:&quot;@id&quot;
+  },
+  &quot;identifier&quot; : &quot;0e3b328c-c18f-4e64-9a0e-f6e4f32b36da&quot;,
+  &quot;python&quot;:&quot;fast&quot;,
+  &quot;java&quot; : &quot;&quot;
+}
+</code></pre>
+<p>A JSON-LD context is simply a mapping:</p>
+<ul>
+  <li>from a key often called <strong>prefix</strong> and sometimes <strong>aliases</strong>: <em>python</em>, <em>java</em> as well as <em>identifier</em> are prefixes</li>
+  <li>to a value often called <strong>namespace</strong>: *<a href="http://programminglanguages.org/python*">http://programminglanguages.org/python*</a> is a namespace
+</li>
+</ul><div class="callout note "><div class="callout-title">Note</div>
+<p>The JSON-LD document can be seen within the <a href="https://json-ld.org/playground/">json-ld playground</a>.</p></div>
+<p>When written with a context object, a JSON-LD document is said to be compacted. On the opposite, the json-ld context is said expanded when its context is applied, i.e all prefixes as well as aliases are replaced by their corresponding namespaces. Find below the expanded form of the json-ld document example above:</p>
+<pre class="prettyprint"><code class="language-json">{
+  &quot;@id&quot; : &quot;0e3b328c-c18f-4e64-9a0e-f6e4f32b36da&quot;,
+  &quot;http://programminglanguages.org/python&quot;:&quot;fast&quot;,
+  &quot;http://programminglanguages.org/java&quot; : &quot;&quot;
+}
+</code></pre>
+<h2><a href="#json-ld-data-model" name="json-ld-data-model" class="anchor"><span class="anchor-link"></span></a>JSON-LD data model</h2>
+<p>A <strong>JSON-LD</strong> document can be seen a json tree or as a RDF document (Resource description Framework).</p><div class="callout note "><div class="callout-title">Note</div>
+<p>The reader can checkout the full RDF recommendation <a href="https://www.w3.org/TR/rdf11-concepts/">here</a>.</p></div>
+<p>As one of the multiple RDF document serialization format, a <strong>JSON-LD</strong> document can be seen as a <strong>directed graph</strong> where every of piece of knowledge about a <strong>thing</strong> always comes in <strong>three</strong> and is broken down in (**subject, predicate, object**):</p>
+<p><img src="../../../assets/images/spo.svg" alt="Knowledge comes in three" /></p>
+<p><strong>(subject, predicate, object)</strong> is often called a statement, an assertion, a fact or more technically a <strong>triple</strong> just like in most programming languages (python, java,&hellip;). So a JSON-LD document can be seen as a <strong>collection of triples</strong>.</p>
+<p>The graph vocabulary is often used when naming elements of a triple:</p>
+<ul>
+  <li>the subject and the object are called <strong>nodes</strong></li>
+  <li>while the predicate is called <strong>property or arc</strong></li>
+</ul>
+<p>Here is the set of triples corresponding to the json-ld document above:</p>
+<p><img src="../../../assets/images/circuit_1instance_target.svg" alt="Knowledge comes in three" /></p>
+<p>&hellip;</p>
+<h2><a href="#cool-uris-dont-change" name="cool-uris-dont-change" class="anchor"><span class="anchor-link"></span></a>Cool URIs don&rsquo;t change</h2>
+<p>Elements of a JSON-LD document have URIs as identifiers. For example, the URI of the Allen human brain atlas ontology (as integrated in NIP) is <a href="http://api.brainmap.org/api/v2/data/Structure">http://api.brainmap.org/api/v2/data/Structure</a>, while the URI of the specific term &ldquo;gray matter&rdquo; is <a href="http://api.brainmap">http://api.brainmap</a>. org/api/v2/data/Structure/4006 . The previous two URIs can have a short form which is called prefix (a stable string) for the ontology and CURIE for the ontology entities. Let take again the previous example. The prefix name of (the short form of) &ldquo; <a href="http://api.brainmap">http://api.brainmap</a>. org/api/v2/data/Structure &rdquo; can be &lsquo;HBA&rsquo; while the curie of the term &rsquo;&rsquo;grey matter&quot; is &lsquo;HBA:4006&rsquo;. Given the curie &lsquo;HBA:4006&rsquo;, &lsquo;HBA&rsquo; is the prefix name and &lsquo;4006&rsquo; is the fragment.</p>
+<h2><a href="#further-reading" name="further-reading" class="anchor"><span class="anchor-link"></span></a>Further reading</h2>
+<p><a href="https://json-ld.org/spec/latest/json-ld-api-best-practices/">JSON-LD Best Practices</a></p>
+<p><a href="https://json-ld.org">JSON-LD</a></p>
+</div>
+<div>
+<a href="https://github.com/INCF/neuroshapes/tree/master/docs/src/main/paradox/datamodeling/linkeddata/rdf/index.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.1.0+46-ae0d5827+20180821-1224
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-nav">
+<nav class="md-footer-nav__inner md-grid">
+<a href="../../../datamodeling/index.html" title="Modeling Your Data" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Previous
+</span>
+Modeling Your Data
+</span>
+</div>
+</a>
+<a href="../../../datamodeling/linkeddata/rdf/uris.html" title="Cool URIs dont change" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+<span class="md-flex__ellipsis">
+<span class="md-footer-nav__direction">
+Next
+</span>
+Cool URIs dont change
+</span>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+</div>
+</a>
+</nav>
+</div>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+Copyleft © Jonas Fonseca
+</div>
+Powered by
+<a href="https://github.com/lightbend/paradox" title="Paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/" title="Paradox Material Theme">Paradox Material Theme</a>
+
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/INCF/neuroshapes" class="md-footer-social__link fa fa-github"></a><a href="https://gitter.im/INCF/neuroshapes" class="md-footer-social__link fa fa-globe"></a><a href="https://twitter.com/search?q=%23Neuroshapes" class="md-footer-social__link fa fa-twitter"></a>
+</div>
+
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../../../assets/javascripts/application-268d62d82d.js"></script>
+<script src="../../../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({url:{base:"../../.././"}})</script>
+<script type="text/javascript" src="../../../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../../../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+</body>
+</html>
