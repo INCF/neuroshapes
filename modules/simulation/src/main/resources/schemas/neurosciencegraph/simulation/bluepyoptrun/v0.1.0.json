@@ -1,0 +1,68 @@
+{
+    "@context": [
+        "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+        {
+            "this": "{{base}}/schemas/thalamusproject/simulation/bluepyoptrun/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "imports": [
+        "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0"
+    ],
+    "shapes": [
+        {
+            "@id": "this:BluePyOptRunShape",
+            "@type": "sh:NodeShape",
+            "label": "BluePyOpt run shape",
+            "comment": "This entity tracks a run of the BluePyOpt software. It registers can be used to register all input and outputs of the run.",
+             "targetClass": "nsg:BluePyOptRun",
+             "nodeKind": "sh:BlankNodeOrIRI",
+            "and": [
+                {
+                    "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
+                },
+                {
+                    "path": "nsg:gitHash",
+                    "description": "The git hash of the thalamus repository in which BluePyOpt is being run",
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "class": "nsg:IonChannelMechanismRelease",
+                    "path": "nsg:inputMechanisms",
+                    "description": "The .mod files that were compiled and used by Neuron during this run."
+                },
+                {
+                    "class": "nsg:Configuration",
+                    "path": "nsg:modelParameters",
+                    "description": "JSON file that describes parameters of the ion mechanism models. It describes which parameters have to be optimized and on which range and which have a fixed value and the said value."
+                },
+                {
+                    "class": "nsg:Configuration",
+                    "path": "nsg:experimentalProtocol",
+                    "description": "JSON file that describes the experimental protocol to be modeled (ie. voltage applied, duration, shape, etc.)"
+},
+                {
+                    "description": "The recipe",
+                    "path": "nsg:recipe",
+                    "description": "JSON file that maps every etype to its protocol file, parameters file, morphology and feature. It can be seen as the pre-Nexus BluePyOptRun entity equivalent."
+                },
+                {
+                    "class": "nsg:BluePyEfeFeatures",
+                    "path": "nsg:experimentalFeatures",
+                    "description": "The features of the experimental trace that will be used to constrain the model."
+                },
+                {
+                    "class": "prov:Entity",
+                    "description": "The experimental morphology from which the features have been extracted.",
+                    "path": "nsg:morphology"
+                },
+                {
+                    "class": "nsg:EModelRelease",
+                    "description": "The EModelRelease of .hoc files that correspond to the input mechanism model whose parameters have been set to the value found by the BluePyOpt optimization.",
+                    "path": "nsg:hasOutput"
+                }
+            ]
+        }
+    ]
+}
