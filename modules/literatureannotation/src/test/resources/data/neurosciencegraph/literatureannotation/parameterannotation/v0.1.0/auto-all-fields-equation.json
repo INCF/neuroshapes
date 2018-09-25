@@ -1,0 +1,47 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.4",
+  "@type": "nsg:ParameterAnnotation",
+  "name": "a-equation-c3af1a82",
+  "providerId": "c3af1a82-c5a7-11e5-b8a7-3417ebb8f5ca",
+  "contribution": {
+    "agent": [
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/575c0c49-3203-4dc7-813b-2903680b6b8a",
+        "@type": "prov:Agent"
+      },
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/124d1066-41cd-4d1b-b0ad-eed2672cf927",
+        "@type": "prov:Agent"
+      }
+    ]
+  },
+  "hasTarget": {
+    "@type": "nsg:EquationTarget",
+    "hasSource": "https://doi.org/10.1152/jn.00647.2013",
+    "hasSelector": {
+      "@type": "nsg:EquationSelector",
+      "index": "(7) and (8) and (9)"
+    }
+  },
+  "hasBody": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.1.0/b6ea1f34-0a31-4b3d-af7c-99cc9eee7e13",
+      "@type": "nsg:Parameter"
+    },
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.1.0/1eff4a5b-4b80-42c7-bfdd-ed500d4470a8",
+      "@type": "nsg:Parameter"
+    }
+  ],
+  "keywords": [
+    {
+      "@id": "nlx_151691",
+      "label": "Thalamus ventroposterior nucleus principal neuron"
+    },
+    {
+      "@id": "NIFORG:birnlex_167",
+      "label": "Mouse"
+    }
+  ],
+  "comment": "Sodium persistend current, from mesencephalic tregeminal sensory neurons rats. (m*h). Q_10 = 3"
+}

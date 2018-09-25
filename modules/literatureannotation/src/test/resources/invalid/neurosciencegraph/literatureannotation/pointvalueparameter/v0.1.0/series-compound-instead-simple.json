@@ -1,0 +1,27 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.4",
+  "@type": "nsg:PointValueParameter",
+  "name": "p-cell_area-870f0288",
+  "providerId": "870f0288-061b-11e6-9d1c-c869cd917532",
+  "dependentVariable": {
+    "@type": "nsg:SimpleNumericalVariable",
+    "quantityType": "nsg:BBP-121003",
+    "series": [
+      {
+        "statistic": "mean",
+        "unitCode": "mV",
+        "value": -74.4
+      },
+      {
+        "statistic": "sem",
+        "unitCode": "mV",
+        "value": 1.0
+      },
+      {
+        "statistic": "N",
+        "unitCode": "dimensionless",
+        "value": 29.0
+      }
+    ]
+  }
+}
