@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/core/variables/v0.1.0/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "AlgebraicValueShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:AlgebraicValue",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/AlgebraicValueShape"
+    },
+    {
+      "@id": "ValueShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:Value",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/ValueShape"
+    },
+    {
+      "@id": "VariableShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:Variable",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/VariableShape"
+    },
+    {
+      "@id": "NumericalVariableShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:NumericalVariable",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/NumericalVariableShape"
+    },
+    {
+      "@id": "SimpleNumericalVariableShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:SimpleNumericalVariable",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/SimpleNumericalVariableShape"
+    },
+    {
+      "@id": "CompoundNumericalVariableShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:CompoundNumericalVariable",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/CompoundNumericalVariableShape"
+    },
+    {
+      "@id": "AlgebraicVariableShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:AlgebraicVariable",
+      "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.1.0/shapes/AlgebraicVariableShape"
+    }
+  ]
+}

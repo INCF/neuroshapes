@@ -1,0 +1,53 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.4",
+  "@type": "nsg:ParameterAnnotation",
+  "name": "a-table-5ffe9b02",
+  "providerId": "5ffe9b02-ecf3-11e5-b708-64006a4c56ef",
+  "contribution": {
+    "agent": [
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/124d1066-41cd-4d1b-b0ad-eed2672cf927",
+        "@type": "prov:Agent"
+      }
+    ]
+  },
+  "hasTarget": {
+    "@type": "nsg:TableTarget",
+    "hasSource": "https://doi.org/10.1152/jn.00926.2014",
+    "hasSelector": {
+      "@type": "nsg:TableSelector",
+      "index": "2",
+      "row": "11",
+      "column": "2"
+    }
+  },
+  "hasBody": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.1.0/f9ee8fe4-7aa4-49b9-b34a-224c5886c12a",
+      "@type": "nsg:Parameter"
+    }
+  ],
+  "keywords": [
+    {
+      "@id": "nlx_52865",
+      "label": "Modelling"
+    },
+    {
+      "@id": "NIFINV:birnlex_2300",
+      "label": "Computational model"
+    },
+    {
+      "@id": "NIFCELL:nifext_45",
+      "label": "Thalamic reticular nucleus cell"
+    },
+    {
+      "@id": "NIFINV:birnlex_2313",
+      "label": "Neural circuit model"
+    },
+    {
+      "@id": "NIFORG:birnlex_167",
+      "label": "Mouse"
+    }
+  ],
+  "comment": "Leak conductance of a mouse TRN cell."
+}

@@ -1,0 +1,13 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.4",
+  "@type": "nsg:PointValueParameter",
+  "name": "p-cell_area-870f0288",
+  "providerId": "870f0288-061b-11e6-9d1c-c869cd917532",
+  "dependentVariable": {
+    "@type": "nsg:SimpleNumericalVariable",
+    "series": {
+      "unitCode": "um^2",
+      "value": 9864.0
+    }
+  }
+}
