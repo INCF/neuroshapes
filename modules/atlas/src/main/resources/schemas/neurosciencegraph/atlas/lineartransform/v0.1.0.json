@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "import": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0"
   ],
   "shapes": [
@@ -19,12 +19,12 @@
       "targetClass": "nsg:LinearTransform",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v1.0.0/shapes/TransformShape"
         },
         {
           "property": [
             {
-              "path": "nsg:LinearTransformType",
+              "path": "nsg:linearTransformType",
               "in": [
                 "rigid",
                 "affine"
