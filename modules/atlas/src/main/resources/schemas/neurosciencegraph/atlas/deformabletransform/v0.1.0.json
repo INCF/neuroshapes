@@ -24,7 +24,7 @@
         {
           "property": [
             {
-              "path": "nsg:DeformableTransformType",
+              "path": "nsg:deformableTransformType",
               "class": "xsd:string",
               "maxCount": 1
             }
