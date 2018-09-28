@@ -19,7 +19,7 @@
       "targetClass": "nsg:DeformableTransform",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/TransformShape"
         },
         {
           "property": [
