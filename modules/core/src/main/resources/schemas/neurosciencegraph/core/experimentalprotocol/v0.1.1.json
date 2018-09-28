@@ -12,6 +12,7 @@
   "shapes": [
     {
       "@id": "this:ExperimentalProtocolShape",
+      "@type": "sh:NodeShape",
       "label": "A shape for describing a nsg:ExperimentalProtocol instance",
       "comments": "This shape is for an experimental protocol.",
       "targetClass": "nsg:ExperimentalProtocol",

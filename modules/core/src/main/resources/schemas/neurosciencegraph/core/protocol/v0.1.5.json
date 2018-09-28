@@ -12,6 +12,7 @@
   "shapes": [
     {
       "@id": "this:ProtocolShape",
+      "@type": "sh:NodeShape",
       "label": "A shape for describing a nsg:Protocol instance",
       "comments": "This shape is for a generic protocol.",
       "targetClass": "nsg:Protocol",

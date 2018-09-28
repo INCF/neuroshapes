@@ -2,13 +2,13 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.4/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.5/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/nexus/schemaorgsh/identifier/v0.1.0",
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
+    "{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0",
     "{{base}}/schemas/neurosciencegraph/commons/organization/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/person/v0.1.0"
   ],
@@ -20,13 +20,13 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
         },
         {
           "path": "schema:identifier",
           "name": "Identifier",
           "description": "The identifier of protocol such as a DOI, ISBN,...",
-          "node": "{{base}}/schemas/nexus/schemaorgsh/identifier/v0.1.0/shapes/IdentifierShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0/shapes/IdentifierShape"
         },
         {
           "path": "schema:datePublished",
@@ -39,12 +39,13 @@
           "path": "schema:author",
           "name": "Author",
           "description": "Author of the protocol",
+          "nodeKind": "sh:IRI",
           "xone": [
             {
-              "node": "{{base}}/schemas/neurosciencegraph/commons/person/v0.1.0/shapes/PersonShape"
+              "class": "nsg:Person"
             },
             {
-              "node": "{{base}}/schemas/neurosciencegraph/commons/organization/v0.1.0/shapes/OrganizationShape"
+              "class": "nsg:Organization"
             }
           ]
         },
@@ -52,7 +53,7 @@
           "path": "dcterms:hasPart",
           "name": "Has part",
           "description": "Sub-protocols of the protocol.",
-          "class": "nsg:Protocol"
+          "seeAlso": "nsg:Protocol"
         }
        ]
     },
@@ -63,7 +64,7 @@
       "name": "Protocol",
       "description": "The value of nsg:hadProtocol should be of type nsg:Protocol.",
       "class": "nsg:Protocol",
-      "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.4/shapes/ProtocolShape"
+      "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.5/shapes/ProtocolShape"
     }
   ]
 }

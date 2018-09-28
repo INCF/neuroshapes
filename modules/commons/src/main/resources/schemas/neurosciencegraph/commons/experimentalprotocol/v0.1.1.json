@@ -8,7 +8,8 @@
   "@type": "nxv:Schema",
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2",
-    "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.5"
+    "{{base}}/schemas/neurosciencegraph/commons/protocol/v0.1.5",
+    "{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0"
   ],
   "shapes": [
     {
@@ -84,7 +85,7 @@
           "path": "schema:identifier",
           "name": "Reagent URL",
           "description": "URL of reagent/material",
-          "node": "{{base}}/schemas/nexus/schemaorgsh/identifier/v0.1.0/shapes/IdentifierShape",
+          "node": "{{base}}/schemas/neurosciencegraph/commons/identifier/v0.2.0/shapes/IdentifierShape",
           "maxCount": 1
         },
         {
@@ -102,7 +103,7 @@
       "name": "Experimental protocol",
       "description": "The value of nsg:hadProtocol should be of type nsg:ExperimentalProtocol.",
       "class": "nsg:ExperimentalProtocol",
-      "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/experimentalprotocol/v0.1.0/shapes/ProtocolShape"
+      "seeAlso": "{{base}}/schemas/neurosciencegraph/commons/experimentalprotocol/v0.1.1/shapes/ProtocolShape"
     }
   ]
 }
