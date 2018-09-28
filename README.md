@@ -10,11 +10,13 @@ Future developments could include brain imaging, transcriptomic and clinical for
 Table of contents:
 
 * [Goal](#goal)
+* [Tutorials (WIP)](#tutorials)
 * [Adoption](#adoption)
 * [Formats and standards](#formats-and-standards)
 * [License](#License)
 * [Testing the schemas](#testing-the-schemas)
 * [Roadmap](#roadmap)
+
 
 # Goal
 
@@ -36,6 +38,12 @@ The main goal is to  promote:
 
 
 Also, Neuroshapes aims at creating a community for an open and use case driven development of not only data models (schemas and vocabularies) and tools around them but also guidelines for FAIR neuroscience (meta)data. 
+
+# Tutorials
+
+Please check out our tutorials:
+ - [Nexus KG Schema Format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#nexus-kg-schemas)
+ - [Jupyter notebook with basic operations using Nexus](https://github.com/BlueBrain/nexus/blob/master/tutorial/basic_operations_nexus_v0.ipynb)
 
 
 # Adoption

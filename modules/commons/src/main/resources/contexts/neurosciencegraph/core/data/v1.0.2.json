@@ -9,7 +9,7 @@
       "schema": "http://schema.org/",
       "brainRegion": {
         "@id": "nsg:brainRegion",
-        "type": "@id"
+        "@type": "@id"
       },
       "geometry": {
         "@id": "nsg:geometry"

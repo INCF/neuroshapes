@@ -589,6 +589,24 @@
       },
       "gpfs": {
         "@id": "http://bbp.epfl.ch/neurosciencegraph/taxonomies/storagetypes/gpfs"
+      },
+      "cellLine": {
+        "@id": "nsg:cellLine"
+      },
+      "ionChannelGene": {
+        "@id": "nsg:ionChannelGene"
+      },
+      "atlasSpatialReferenceSystem": {
+        "@id": "nsg:atlasSpatialReferenceSystem"
+      },
+      "repository": {
+        "@id": "nsg:repository"
+      },
+      "image": {
+        "@id": "schema:image"
+      },
+      "mTypeAnnotation": {
+        "@id": "nsg:mTypeAnnotation"
       }
     }
   ]
