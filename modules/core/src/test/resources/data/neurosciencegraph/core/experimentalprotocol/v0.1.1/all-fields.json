@@ -30,7 +30,7 @@
     "reagentName": "Dopamine hydrochloride",
     "reagentMolecularWeight": {
       "value": "189.64",
-      "unitCode": ""
+      "unitCode": "amu"
     },
     "reagentLinearFormula": "(HO)2C6H3CH2CH2NH2·HCl",
     "sku": "H8502",
