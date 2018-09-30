@@ -1,0 +1,105 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/optophysiology/twophotonimaging/v0.1.0/shapes/"
+      }
+    ],
+    "@type": "nxv:Schema",
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/experimentalactivity/v0.1.0",
+      "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1"
+    ],
+    "shapes": [
+      {
+        "@id": "this:TwoPhotonImagingShape",
+        "@type": "sh:NodeShape",
+        "label": "Two-photon-excited fluorescence laser-scanning microscopy experiment shape definition",
+        "targetClass": "nsg:TwoPhotonImaging",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/experimentalactivity/v0.1.0/shapes/ActivityShape"
+          },
+          {
+            "property": [
+              {
+                "path": "prov:used",
+                "name": "Cranial window",
+                "description": "Cranial window used for two-photon imaging",
+                "node": "{{base}}/schemas/neurosciencegraph/optophysiology/cranialwindow/v0.1.0/shapes/CranialWindowShape",
+                "class": "nsg:CranialWindow",
+                "minCount": 1
+              },
+              {
+                "path": "prov:generated",
+                "name": "Image sequence",
+                "description": "The image sequence recorded",
+                "class": "nsg:ImageSequence",
+                "minCount": 1
+              },
+              {
+                "path": "nsg:microscope",
+                "name": "Microscope",
+                "description": "Microscope used for two-photon imaging",
+                "datatype": "xsd:string",
+                "minCount": 1
+              },
+              {
+                "path": "nsg:brainState",
+                "name": "Brain state",
+                "in": [
+                  "awake",
+                  "anesthetized"
+                ],
+                "description": "The state of consciousness of the subject during the procedure.",
+                "datatype": "xsd:string"
+              },
+              {
+                "path": "nsg:anesthesia",
+                "name": "Anesthesia",
+                "description": "Anaesthesia used during the procedure, if any.",
+                "datatype": "xsd:string"
+              },
+              {
+                "path": "nsg:laser",
+                "name": "Laser",
+                "datatype": "xsd:string",
+                "description": "Laser used for two-photon imaging."
+              },
+              {
+                "path": "nsg:excitationWavelength",
+                "name": "Excitation wavelength",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+                "description": "Wavelength produced by the laser."
+              },
+              {
+                "path": "nsg:laserpower",
+                "name": "Power at objective",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+                "description": "Laser power at microscope objective."
+              },
+              {
+                "path": "nsg:collectionWavelength",
+                "name": "Collection wavelength",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+                "description": "Wavelength detected by photomultiplier tube."
+              },
+              {
+                "path": "nsg:imagingDepth",
+                "name": "Imaging depth",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+                "description": "Depth of imaging plane below brain surface."
+              },
+              {
+                "path": "nsg:Stimulus",
+                "description": "The stimulus",
+                "node": "{{base}}/schemas/neurosciencegraph/stimulation/stimulus/v0.1.2/shapes/StimulusShape",
+                "class": "nsg:Stimulus"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,149 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/optophysiology/regionofinterest/v0.1.0/shapes/"
+      }
+    ],
+    "@type": "nxv:Schema",
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+      "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.0",
+      "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0"
+    ],
+    "shapes": [
+      {
+        "@id": "this:RegionOfInterestShape",
+        "@type": "sh:NodeShape",
+        "label": "A region of interest within an image sequence.",
+        "targetClass": "nsg:RegionOfInterest",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "seeAlso": "{{base}}/schemas/neurosciencegraph/atlas/regionofinterest/v0.1.0/shapes/RegionOfInterestShape",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          },
+          {
+            "property": [
+                {
+                    "path": "nsg:position",
+                    "name": "Position",
+                    "node": "this:PositionShape",
+                    "description": "Position of the origin of the ROI within the image sequence (pixels). Origin is bottom-left corner for square and rectangle, centre for circles and ellipses.",
+                    "minCount": 1,
+                    "maxCount": 1
+                },
+                {
+                    "path": "nsg:geometry",
+                    "name": "Shape",
+                    "in": [
+                        "circle",
+                        "square",
+                        "rectangle",
+                        "ellipse"
+                    ],
+                    "description": "Shape of the ROI."
+                },
+                {
+                    "path": "nsg:size",
+                    "name": "Size",
+                    "or": [
+                        {
+                            "node": "this:RectangleSizeShape"
+                        },
+                        {
+                            "datatype": "xsd:double",
+                            "comment": "if shape is circle"
+                        },
+                        {
+                            "node": "this:EllipseSizeShape"
+                        }
+                    ],
+                    "description": "Size of the ROI in pixels."
+                },
+                {
+                    "path": "nsg:classification",
+                    "name": "Classification",
+                    "datatype": "xsd:string",
+                    "description": "What is represented or captured by the ROI, e.g. “cell body”"
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "@id": "this:PositionShape",
+        "@type": "sh:NodeShape",
+        "label": "Position shape definition",
+        "property": [
+          {
+            "path": "nsg:origin",
+            "name": "Origin of the coordinate system",
+            "in": [
+                "centre",
+                "bottom-left",
+                "top-right"
+            ],
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "path": "nsg:x",
+            "name": "x-coordinate",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "path": "nsg:y",
+            "name": "y-coordinate",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      },
+      {
+        "@id": "this:RectangleSizeShape",
+        "@type": "sh:NodeShape",
+        "label": "Rectangle size shape definition",
+        "property": [
+          {
+            "path": "nsg:width",
+            "name": "Width",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "path": "nsg:height",
+            "name": "Height",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      },
+      {
+        "@id": "this:EllipseSizeShape",
+        "@type": "sh:NodeShape",
+        "label": "Ellipse size shape definition",
+        "property": [
+          {
+            "path": "nsg:semiMajorAxis",
+            "name": "Semi-major axis",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          },
+          {
+            "path": "nsg:semiMinorAxis",
+            "name": "Semi-minor axis",
+            "datatype": "xsd:double",
+            "minCount": 1,
+            "maxCount": 1
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,50 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/experiment/craniotomy/v0.1.0/shapes/"
+      }
+    ],
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+      {
+        "@id": "this:CraniotomyShape",
+        "@type": "sh:NodeShape",
+        "label": "Craniotomy shape definition",
+        "description": "Surgical procedure to give optical access through the skull to the brain (dura).",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "targetClass": "nsg:Craniotomy",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
+          },
+          {
+            "property": [
+              {
+                "path": "prov:used",
+                "description": "The subject used",
+                "class": "nsg:Subject",
+                "minCount": 1,
+                "maxCount": 1
+              },
+              {
+                "path": "prov:generated",
+                "description": "The cranial window(s) generated",
+                "class": "nsg:CranialWindow",
+                "minCount": 1
+              },
+              {
+                "path": "nsg:anesthesia",
+                "name": "Anesthesia",
+                "description": "Anaesthesia used during the procedure.",
+                "datatype": "xsd:string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
