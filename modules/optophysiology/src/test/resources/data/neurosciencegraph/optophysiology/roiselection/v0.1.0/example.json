@@ -1,0 +1,23 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "nsg:RegionOfInterestSelection",
+      "prov:Activity"
+    ],
+    "generated": {
+      "@id": "{{base}}/data/neurosciencegraph/optophysiology/regionofinterest/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
+      "@type": [
+        "nsg:RegionOfInterest",
+        "prov:Entity"
+      ]
+    },
+    "used": {
+      "@id": "{{base}}/data/neurosciencegraph/optophysiology/imagesequence/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
+      "@type": [
+        "nsg:ImageSequence",
+        "prov:Entity"
+      ]
+    }
+}

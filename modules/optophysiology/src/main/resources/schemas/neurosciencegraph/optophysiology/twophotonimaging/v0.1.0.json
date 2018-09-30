@@ -27,7 +27,7 @@
                 "path": "prov:used",
                 "name": "Cranial window",
                 "description": "Cranial window used for two-photon imaging",
-                "node": "{{base}}/schemas/neurosciencegraph/optophysiology/cranialwindow/v0.1.0/shapes/CranialWindowShape",
+                "node": "{{base}}/schemas/neurosciencegraph/experiment/cranialwindow/v0.1.0/shapes/CranialWindowShape",
                 "class": "nsg:CranialWindow",
                 "minCount": 1
               },
