@@ -7,7 +7,6 @@
   ],
   "@type": "nxv:Schema",
   "import": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0"
   ],
   "shapes": [
@@ -19,16 +18,7 @@
       "targetClass": "nsg:DeformableTransform",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/EntityShape"
-        },
-        {
-          "property": [
-            {
-              "path": "nsg:DeformableTransformType",
-              "class": "xsd:string",
-              "maxCount": 1
-            }
-          ]
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/TransformShape"
         }
       ]
     }

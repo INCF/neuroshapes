@@ -7,8 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "import": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/atlas/transform/v1.0.0"
   ],
   "shapes": [
     {
@@ -16,22 +15,14 @@
       "@type": "sh:NodeShape",
       "description": "Linear transform including rigid and affine transform, described by a 3x4 matrix",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:LinearTransform",
+      "targetClass": [
+        "nsg:LinearTransform",
+        "nsg:RigidLinearTransform",
+        "nsg:AffineLinearTransform"
+      ],
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v0.1.0/shapes/EntityShape"
-        },
-        {
-          "property": [
-            {
-              "path": "nsg:LinearTransformType",
-              "in": [
-                "rigid",
-                "affine"
-              ],
-              "maxCount": 1
-            }
-          ]
+          "node": "{{base}}/schemas/neurosciencegraph/atlas/transform/v1.0.0/shapes/TransformShape"
         }
       ]
     }
