@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+   {
+     "this": "{{base}}/schemas/neurosciencegraph/morphology/morphologyvalidclassification/v0.1.2/shapes/"
+   }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/morphology/morphologyclassificationresult/v0.1.2"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MorphologyValidClassificationResultShape",
+      "@type": "sh:NodeShape",
+      "label": "Morphology Classification Result",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:MorphologyValidClassification",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/morphology/morphologyclassificationresult/v0.1.2/shapes/MorphologyClassificationResultShape"
+        }
+      ]
+    }
+  ]
+}

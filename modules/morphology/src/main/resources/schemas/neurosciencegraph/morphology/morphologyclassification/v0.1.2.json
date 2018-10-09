@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/morphologyclassification/v0.1.2/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MorphologyClassificationShape",
+      "@type": "sh:NodeShape",
+      "label": "Morphology classification activity description.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:MorphologyClassification",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "class": "nsg:ReconstructedCell",
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "prov:generated",
+              "or": [
+                {
+                  "class": "nsg:MorphologyValidClassification"
+                },
+                {
+                  "class": "nsg:MorphologyClassificationResult"
+                }
+              ],
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "nsg:agent",
+              "node": "{{base}}/schemas/neurosciencegraph/core/agent/v0.1.0/shapes/AgentShape",
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "nsg:date",
+              "name": "Classification date",
+              "description": "Date when the classification was performed",
+              "datatype": "xsd:dateTime",
+              "maxCount": 1,
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
