@@ -16,7 +16,6 @@
       "@id": "this:EModelBuildingShape",
       "@type": "sh:NodeShape",
       "label": "Emodel building shape",
-      "comment": "Get all optimizations for PC CA1",
       "targetClass": "nsg:EModelBuilding",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
