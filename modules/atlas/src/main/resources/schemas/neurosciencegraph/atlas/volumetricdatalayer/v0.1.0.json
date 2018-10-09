@@ -9,7 +9,8 @@
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4"
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4",
+    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
     {
