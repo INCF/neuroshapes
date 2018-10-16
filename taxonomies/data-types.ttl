@@ -1,0 +1,213 @@
+@prefix : <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dt: <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix nsg: <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+@prefix nsh: <https://neuroshapes.org/schemas/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> .
+
+<http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> rdf:type owl:Ontology ;
+                                                              dc:publisher "Blue Brain Project, EPFL" ;
+                                                              dc:contributor "Lu Huanxiang <huanxiang.lu@epfl.ch>" ;
+                                                              owl:versionInfo "0.1.0" ;
+                                                              dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                              dc:rights "This work is distributed under a Creative Commons Attribution 4.0 (CC-BY-4.0) Public License <https://creativecommons.org/licenses/by/4.0/>"@en ;
+                                                              dc:contributor "Hill Sean <sean.hill@epfl.ch>" ;
+                                                              dc:creator "Sy Mohameth Francois <mohameth.sy@epfl.ch>" ;
+                                                              rdfs:label "Categorization of data types"@en ;
+                                                              dc:contributor "Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>" ;
+                                                              vann:preferredNamespacePrefix "dt" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#preflabel
+skos:preflabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#node
+sh:node rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/BrainAtlasRelease
+dt:BrainAtlasRelease rdf:type owl:Class ;
+                     rdfs:subClassOf nsg:BrainAtlas .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/CoordinateSystem
+dt:CoordinateSystem rdf:type owl:Class .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroIonChannelWholeCellPatchClampElectrophysiologyTraceCollection
+dt:InVitroIonChannelWholeCellPatchClampElectrophysiologyTraceCollection rdf:type owl:Class ;
+                                                                        rdfs:subClassOf nsg:ElectricalSeries ;
+                                                                        rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                                                                        rdfs:label "In Vitro Ion Channel Whole Cell Patch Clamp Electrophysiology Trace Collection"@en ;
+                                                                        skos:definition "Ion Channel Patch Clamp Electrophysiology Trace"@en ;
+                                                                        skos:preflabel "Ion Channel Patch Clamp Electrophysiology Trace"@en ;
+                                                                        sh:node <nsh:/tracecollection/shapes/ElectrophysiologyTraceCollectionShape> .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroSliceReconstructedPatchedNeuron
+dt:InVitroSliceReconstructedPatchedNeuron rdf:type owl:Class ;
+                                          rdfs:subClassOf nsg:NeuronMorphology .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroSliceWholeCellPatchClampElectrophysiologyTrace
+dt:InVitroSliceWholeCellPatchClampElectrophysiologyTrace rdf:type owl:Class ;
+                                                         rdfs:subClassOf nsg:ElectricalSeries .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroWholeBrainReconstructedNeuronMorphology
+dt:InVitroWholeBrainReconstructedNeuronMorphology rdf:type owl:Class ;
+                                                  rdfs:subClassOf nsg:NeuronMorphology ;
+                                                  rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                                                  rdfs:label "In Vitro  Whole Brain Reconstructed Neuron Morphology"@en ;
+                                                  skos:definition "In Vivo  Whole Brain Reconstructed Neuron"@en ;
+                                                  skos:preflabel "In Vivo  Whole Brain Reconstructed Neuron Morphology"@en ;
+                                                  sh:node <nsh:/reconstructedwholebraincell/shapes/ReconstructedWholeBrainCellShape> .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/Morphology
+dt:Morphology rdf:type owl:Class .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/ParcellationLabel
+dt:ParcellationLabel rdf:type owl:Class .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/SpatialReferenceSystem
+dt:SpatialReferenceSystem rdf:type owl:Class ;
+                          rdfs:subClassOf dt:CoordinateSystem .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/TimeSeries
+dt:TimeSeries rdf:type owl:Class .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/Volume
+dt:Volume rdf:type owl:Class .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/VolumeDataLayer
+dt:VolumeDataLayer rdf:type owl:Class ;
+                   rdfs:subClassOf dt:Volume .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/VolumeParcellation
+dt:VolumeParcellation rdf:type owl:Class ;
+                      rdfs:subClassOf dt:Volume .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/WholeBrainImageStack
+dt:WholeBrainImageStack rdf:type owl:Class ;
+                        rdfs:subClassOf nsg:VolumeImageStack ;
+                        rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                        rdfs:label "Brain Image Stack"@en ;
+                        skos:definition "Brain Image Stack"@en ;
+                        skos:preflabel "Brain Image Stack"@en ;
+                        sh:node <nsh:/imagestack/shapes/ImageStackShape> .
+
+
+###  http://www.w3.org/ns/shacl#NodeShape
+sh:NodeShape rdf:type owl:Class .
+
+
+###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainAtlas
+nsg:BrainAtlas rdf:type owl:Class .
+
+
+###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ElectricalSeries
+nsg:ElectricalSeries rdf:type owl:Class ;
+                     rdfs:subClassOf dt:TimeSeries .
+
+
+###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NeuronMorphology
+nsg:NeuronMorphology rdf:type owl:Class ;
+                     rdfs:subClassOf dt:Morphology .
+
+
+###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumeImageStack
+nsg:VolumeImageStack rdf:type owl:Class ;
+                     rdfs:subClassOf dt:Volume .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/BrainAtlasRelease
+dt:BrainAtlasRelease rdf:type owl:NamedIndividual ,
+                              sh:NodeShape .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/BrainImageStack
+dt:BrainImageStack rdf:type owl:NamedIndividual ,
+                            sh:NodeShape .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroSliceReconstructedPatchedNeuron
+dt:InVitroSliceReconstructedPatchedNeuron rdf:type owl:NamedIndividual ,
+                                                   sh:NodeShape .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVitroSliceWholeCellPatchClampElectrophysiologyTrace
+dt:InVitroSliceWholeCellPatchClampElectrophysiologyTrace rdf:type owl:NamedIndividual ,
+                                                                  sh:NodeShape .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/InVivoWholeBrainReconstructedNeuron
+dt:InVivoWholeBrainReconstructedNeuron rdf:type owl:NamedIndividual ,
+                                                sh:NodeShape .
+
+
+###  http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/IonChannelPatchClampElectrophysiologyTraceCollection
+dt:IonChannelPatchClampElectrophysiologyTraceCollection rdf:type owl:NamedIndividual ,
+                                                                 sh:NodeShape .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+dt:BrainAtlasRelease rdfs:label "Brain Atlas Release"@en ;
+                     sh:node <nsh:/atlasrelease/shapes/AtlasReleaseShape> ;
+                     skos:preflabel "Brain Atlas Release"@en ;
+                     rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                     skos:definition "Brain Atlas Release"@en .
+
+
+dt:InVitroSliceReconstructedPatchedNeuron skos:preflabel "In Vitro Slice Reconstructed Neuron Morphology"@en ;
+                                          skos:definition "In Vitro Slice Reconstructed Neuron"@en ;
+                                          rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                                          sh:node <nsh:/reconstructedpatchedcell/shapes/ReconstructedPatchedCellShape> ;
+                                          rdfs:label "In Vitro Slice Reconstructed Neuron Morphology"@en .
+
+
+dt:InVitroSliceWholeCellPatchClampElectrophysiologyTrace rdfs:isDefinedBy <http://bbp.epfl.ch/neurosciencegraph/ontologies/datatypes/> ;
+                                                         skos:preflabel "In Vitro Slice Whole Cell Patch Clamp Electrophysiology Trace"@en ;
+                                                         rdfs:label "In Vitro Slice Whole Cell Patch Clamp Electrophysiology Trace"@en ;
+                                                         sh:node <nsh:/trace/shapes/TraceShape> ;
+                                                         skos:definition "In Vitro Slice Whole Cell Patch Clamp Electrophysiology Trace"@en .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
