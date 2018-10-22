@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/commons/softwarerevision/v0.1.0/shapes/"
+    }
+  ],
+  "imports": [
+     "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "SoftwareRevisionShape",
+      "@type": "sh:NodeShape",
+      "label": "Activity description.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
+        },
+        {
+            "path": "vcs",
+            "description": "The version control system: git, svn, cvs...",
+            "minCount": 1,
+            "maxCount": 1
+        },
+        {
+            "path": "repositoryUrl",
+            "description": "The repository URL",
+            "minCount": 1
+        },
+        {
+            "path": "commitId",
+            "description": "The commit Id",
+            "minCount": 1,
+            "maxCount": 1
+        }
+        {
+            "path": "revision",
+            "description": "The revision number"
+            "maxCount": 1
+        }
+      ]
+    }
+  ]
+}
