@@ -1,0 +1,39 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:ParameterAnnotation",
+    "oa:Annotation"
+  ],
+  "schema:name": "a-figure-1132613e",
+  "nsg:providerId": "1132613e-31b1-11e8-b594-64006a67e5d0",
+  "nsg:contribution": {
+    "prov:agent": [
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/124d1066-41cd-4d1b-b0ad-eed2672cf927",
+        "@type": [
+          "prov:Agent"
+        ]
+      }
+    ]
+  },
+  "oa:hasTarget": {
+    "@type": [
+      "nsg:FigureTarget"
+    ],
+    "oa:hasSource": "https://doi.org/10.1097/nen.0b013e31815f3899",
+    "oa:hasSelector": {
+      "@type": [
+        "nsg:FigureSelector"
+      ],
+      "nsg:index": "1.B"
+    }
+  },
+  "oa:hasBody": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/7475ddad-800b-4ae2-b97e-ef7c77f01859",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    }
+  ]
+}

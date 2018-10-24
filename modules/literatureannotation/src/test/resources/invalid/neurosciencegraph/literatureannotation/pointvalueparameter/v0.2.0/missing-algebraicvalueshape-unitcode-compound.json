@@ -1,0 +1,30 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:PointValueParameter"
+  ],
+  "schema:name": "p-resting_membrane_potential-7516d66e",
+  "nsg:providerId": "7516d66e-0bb4-11e6-843d-64006a4c56ef",
+  "nsg:dependentVariable": {
+    "@type": [
+      "nsg:CompoundNumericalVariable"
+    ],
+    "nsg:quantityType": "BBP-010002",
+    "nsg:series": [
+      {
+        "nsg:statistic": "mean",
+        "schema:unitCode": "mV",
+        "schema:value": -74.4
+      },
+      {
+        "nsg:statistic": "sem",
+        "schema:value": 1.0
+      },
+      {
+        "nsg:statistic": "N",
+        "schema:unitCode": "dimensionless",
+        "schema:value": 29.0
+      }
+    ]
+  }
+}

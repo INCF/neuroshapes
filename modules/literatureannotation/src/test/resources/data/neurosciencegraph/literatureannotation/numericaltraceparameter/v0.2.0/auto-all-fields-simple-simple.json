@@ -1,0 +1,57 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:NumericalTraceParameter"
+  ],
+  "schema:name": "p-neuron_density-0ebdc338",
+  "nsg:providerId": "0ebdc338-6d38-11e6-b432-64006a4c56ef",
+  "nsg:dependentVariable": {
+    "@type": [
+      "nsg:SimpleNumericalVariable"
+    ],
+    "nsg:quantityType": "BBP-131001",
+    "nsg:series": {
+      "nsg:statistic": "mean",
+      "schema:unitCode": "mm^-3",
+      "schema:value": [
+        278146.0,
+        170264.0,
+        88874.4,
+        51258.8,
+        50132.7,
+        27815.8
+      ]
+    }
+  },
+  "nsg:independentVariable": [
+    {
+      "@type": [
+        "nsg:SimpleNumericalVariable"
+      ],
+      "nsg:quantityType": "BBP-002001",
+      "nsg:series": {
+        "schema:unitCode": "day",
+        "schema:value": [
+          0.0,
+          3.0,
+          6.0,
+          12.0,
+          21.0,
+          30.0
+        ]
+      }
+    }
+  ],
+  "nsg:requiredTag": [
+    {
+      "nsg:rootId": "NIFGA:birnlex_1167",
+      "@id": "NIFGA:birnlex_1116",
+      "rdfs:label": "Ventral posterior nucleus"
+    },
+    {
+      "nsg:rootId": "NIFCELL:sao1813327414",
+      "@id": "NIFCELL:nlx_cell_20081203",
+      "rdfs:label": "Thalamus relay cell"
+    }
+  ]
+}

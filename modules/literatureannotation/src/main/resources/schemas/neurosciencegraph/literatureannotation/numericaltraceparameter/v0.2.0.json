@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.2.0",
+    {
+      "@base": "{{base}}/schemas/neurosciencegraph/literatureannotation/numericaltraceparameter/v0.2.0/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/parameter/v0.2.0",
+    "{{base}}/schemas/neurosciencegraph/core/variables/v0.2.0"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "NumericalTraceParameterShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:NumericalTraceParameter",
+      "comment": "Parameter shape for the values of (an) independent variable(s) associated with the values of (a) dependent variable(s).",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/parameter/v0.2.0/shapes/ParameterShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:dependentVariable",
+              "name": "Dependent variable",
+              "sh:xone": [
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.2.0/shapes/SimpleNumericalVariableShape",
+                  "class": "nsg:SimpleNumericalVariable"
+                },
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.2.0/shapes/CompoundNumericalVariableShape",
+                  "class": "nsg:CompoundNumericalVariable"
+                }
+              ],
+              "minCount": 1
+            },
+            {
+              "path": "nsg:independentVariable",
+              "name": "Independent variable",
+              "sh:xone": [
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.2.0/shapes/SimpleNumericalVariableShape",
+                  "class": "nsg:SimpleNumericalVariable"
+                },
+                {
+                  "node": "{{base}}/schemas/neurosciencegraph/commons/variables/v0.2.0/shapes/CompoundNumericalVariableShape",
+                  "class": "nsg:CompoundNumericalVariable"
+                }
+              ],
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

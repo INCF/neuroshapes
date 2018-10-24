@@ -1,0 +1,45 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:ParameterAnnotation",
+    "oa:Annotation"
+  ],
+  "schema:name": "a-text-e6914b74",
+  "nsg:providerId": "e6914b74-ed2a-11e5-b291-3417ebb8f5ca",
+  "nsg:contribution": {
+    "prov:agent": [
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/575c0c49-3203-4dc7-813b-2903680b6b8a",
+        "@type": [
+          "prov:Agent"
+        ]
+      },
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/124d1066-41cd-4d1b-b0ad-eed2672cf927",
+        "@type": [
+          "prov:Agent"
+        ]
+      }
+    ]
+  },
+  "oa:hasTarget": {
+    "@type": [
+      "nsg:TextPositionTarget"
+    ],
+    "oa:hasSource": "https://doi.org/10.1523/JNEUROSCI.2740-15.2015"
+  },
+  "oa:hasBody": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/8e8f95b0-68f6-4fbf-9a98-9e81b272b845",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    },
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/bf803fb5-7d56-4e83-947a-e89dd6cbb327",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:ParameterAnnotation",
+    "oa:Annotation"
+  ],
+  "schema:name": "a-position-52afbf40",
+  "nsg:providerId": "52afbf40-04bc-11e6-b795-64006a4c56ef",
+  "nsg:contribution": {
+    "prov:agent": [
+      {
+        "@id": "{{base}}/data/neurosciencegraph/contributor/agent/v0.1.0/124d1066-41cd-4d1b-b0ad-eed2672cf927",
+        "@type": [
+          "prov:Agent"
+        ]
+      }
+    ]
+  },
+  "oa:hasTarget": {
+    "@type": [
+      "nsg:AreaTarget"
+    ],
+    "oa:hasSource": "https://doi.org/10.1038/367069a0",
+    "oa:hasSelector": {
+      "@type": [
+        "nsg:AreaSelector"
+      ],
+      "rdf:value": "page=1&viewrect=0.23699421965317918,0.8180169286577993,0.14285714285714285,0.012091898428053138",
+      "dcterms:conformsTo": "http://tools.ietf.org/rfc/rfc3778"
+    }
+  },
+  "oa:hasBody": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/041ba2d5-b2f8-4fe3-9bbb-30412a93ad60",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    }
+  ],
+  "nsg:keyword": [
+    {
+      "@id": "NIFORG:birnlex_254",
+      "rdfs:label": "Wistar Rat"
+    }
+  ]
+}

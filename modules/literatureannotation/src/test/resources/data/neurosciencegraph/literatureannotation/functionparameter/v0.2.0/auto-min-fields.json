@@ -1,0 +1,25 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:FunctionParameter"
+  ],
+  "schema:name": "p-prop_inact_ion_curr-71233092",
+  "nsg:providerId": "71233092-eb80-11e5-a9b7-64006a4c56ef",
+  "nsg:dependentVariable": {
+    "@type": [
+      "nsg:AlgebraicVariable"
+    ],
+    "nsg:quantityType": "BBP-050002",
+    "schema:unitCode": "dimensionless"
+  },
+  "nsg:independentVariable": [
+    {
+      "@type": [
+        "nsg:AlgebraicVariable"
+      ],
+      "nsg:quantityType": "BBP-010001",
+      "schema:unitCode": "mV"
+    }
+  ],
+  "nsg:equation": "prop_inact_ion_curr = 1/(1+exp((potential_membrane - mid_amp_inact)/slope_factor_inact))"
+}

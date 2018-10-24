@@ -1,0 +1,51 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@type": [
+    "nsg:FunctionParameter"
+  ],
+  "schema:name": "p-prop_inact_ion_curr-71233092",
+  "nsg:providerId": "71233092-eb80-11e5-a9b7-64006a4c56ef",
+  "nsg:dependentVariable": {
+    "@type": [
+      "nsg:AlgebraicVariable"
+    ],
+    "nsg:quantityType": "BBP-050002",
+    "schema:unitCode": "dimensionless"
+  },
+  "nsg:independentVariable": [
+    {
+      "@type": [
+        "nsg:AlgebraicVariable"
+      ],
+      "nsg:quantityType": "BBP-010001",
+      "schema:unitCode": "mV"
+    }
+  ],
+  "nsg:equation": "prop_inact_ion_curr = 1/(1+exp((potential_membrane - mid_amp_inact)/slope_factor_inact))",
+  "nsg:equationParameter": [
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/762f45f0-eade-11e5-94e2-64006a4c56ef",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    },
+    {
+      "@id": "{{base}}/data/neurosciencegraph/literatureannotation/pointvalueparameter/v0.2.0/7f3542e0-eb82-11e5-ac32-64006a4c56ef",
+      "@type": [
+        "nsg:Parameter"
+      ]
+    }
+  ],
+  "nsg:requiredTag": [
+    {
+      "nsg:rootId": "nifext_8054",
+      "@id": "NIFMOL:nifext_8054",
+      "rdfs:label": "Transmembrane ionic current"
+    },
+    {
+      "nsg:rootId": "sao1813327414",
+      "@id": "NIFCELL:sao1813327414",
+      "rdfs:label": "Cell"
+    }
+  ]
+}
