@@ -1,10 +1,19 @@
 language: scala
 scala:
-   - 2.12.2
-script:
-  - sbt -javaOptions=.jvmopts compile
-  - sbt -javaOptions=.jvmopts test
-branches:
-  only:
-    - master
-    - simulation_schemas
+- 2.12.2
+stages:
+- name: test
+  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND type = pull_request"
+- name: collect
+  if: "(tag IS present)"
+jobs:
+  include:
+  - stage: test
+    script:
+    - sbt -javaOptions=.jvmopts compile
+    - sbt -javaOptions=.jvmopts test
+  - stage: collect
+    script: sbt collectResources https://bbp.epfl.ch/nexus/v0 /home/travis/build/INCF/neuroshapes/schemas all
+env:
+  global:
+    secure: OndaMUPg5NStXKZk0Rv8UdV6TJXrkVePM2AzaQvAT0Dw7Myk0bsDaedoh9OFJ85C5DcjywRQk/G+AXEPyWOiNjRMPAwII+S1q+T0JnXlZ0gPIT56jEYENhvJG5ZuWtvWq0PO7NYQYI1RfjEdjx/S0nDV+h580a2ZEXy51aqOesriV/dap+E78VEmHRDte30x5KTEhFiXseNkll7MK8eohXRPLCM/xMTg7PPQLGPd53loQMGy8FObG2oBY44apnJ1lKXDnG/HpiFOf+oqrV/6DFg3kDnfBb7VEB71G/czUGQqt6JOmteFkNTsX19OQc7W9bHO9hs614Ls492sBRIOxGT/g5kmLtWohgF4hndeb3r2XEtxJdab7YSPypo0D85x++c8E0s4eDC8Dib7Rl0ZWcWxfJWpbbprPbnketRSAyftLwb/xLy+ZqAz/MfGwG6Hs8bXix3mp+EMHxLFZJ7NFhCwkxM9o5u+Cf2loI7rFJyAAOpgpPftGnsLW2wqJP66JL0Km/d88nA4tQHzbSk65+wyu98k9m4QM/9awNulCGh9kZC+4oiauO7vkHyMyVt8VA9gvNed/j2jfMxazd51uYy3f0inS3QsAoRXmZ6s9HII4iZQOHmEVtbYtKJnAXQjU25NidtaclNPKmRqJbS6xL2nOBvvYnaCQ93nOlskIGQ=
