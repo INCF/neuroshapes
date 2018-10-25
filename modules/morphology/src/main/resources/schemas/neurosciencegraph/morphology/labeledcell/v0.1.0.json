@@ -11,6 +11,7 @@
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0"
   ],
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:LabeledCellShape",
