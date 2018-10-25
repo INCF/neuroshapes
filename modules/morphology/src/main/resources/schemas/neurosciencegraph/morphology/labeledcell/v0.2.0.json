@@ -49,7 +49,7 @@
               "path": "nsg:locationInSlice",
               "name": "Coordinates of location in slice",
               "description": "Specifies the coordinates of the location of the cell in the slice",
-              "class": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
               "maxCount": 1
             },
             {
