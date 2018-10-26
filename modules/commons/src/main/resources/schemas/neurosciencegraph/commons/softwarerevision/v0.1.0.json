@@ -38,7 +38,7 @@
         }
         {
             "path": "revision",
-            "description": "The revision number"
+            "description": "The revision number",
             "maxCount": 1
         }
       ]
