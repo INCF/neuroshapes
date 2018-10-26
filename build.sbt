@@ -30,6 +30,7 @@ lazy val root = project
   .settings(
     name       := "nsg-docs",
     moduleName := "nsg-docs",
+    sourceDirectory in Paradox := sourceDirectory.value / "main" / "paradox",
     paradoxProperties in Compile ++= Map(
       "project.name"    -> "Paradox Material Theme",
       "github.base_url" -> "https://github.com/INCF/neuroshapes"
