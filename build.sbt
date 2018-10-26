@@ -48,7 +48,7 @@ lazy val root = project
     paradoxMaterialTheme in Compile ~= {
       _.withColor("light-blue", "cyan")
         .withLogoIcon("cloud")
-        .withCopyright("Copyleft © Jonas Fonseca")
+        .withCopyright("Copyleft © BBP")
     },
     paradoxMaterialTheme in Compile ~= {
       _.withCustomStylesheet("assets/css/docs.css")
