@@ -3,12 +3,11 @@ scala:
 - 2.12.2
 stages:
 - name: test
-  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
-    type = pull_request"
+  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND type = pull_request"
 - name: gensite
-    if: "(branch = docs AND type = pull_request)"
+    if: "branch = docs AND type = pull_request"
 - name: ghpages
-    if: "(branch = docs AND type = push)"
+    if: "branch = docs AND type = push"
 jobs:
   include:
   - stage: test
