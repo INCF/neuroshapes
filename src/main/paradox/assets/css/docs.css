@@ -1,0 +1,64 @@
+/* https://github.com/lonekorean/gist-syntax-themes */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+a.md-logo {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 8px;
+}
+
+.md-header {
+    background: #2275B8 !important;
+}
+
+.md-footer-nav {
+    background: #2d2f38f0 radial-gradient(ellipse at center -70%, #18334f 0, #18334f 18%, #192532 57%, #2d2f38f0 100%);
+}
+
+.md-version {
+    display: none !important;
+}
+
+pre {
+  background-color:#eee;
+  overflow:auto;
+  margin:0 0 1em;
+  padding:.5em 1em;
+}
+
+pre code,
+pre .line-number {
+  /* Ukuran line-height antara teks di dalam tag <code> dan <span class="line-number"> harus sama! */
+  font:normal normal 12px/14px "Courier New",Courier,Monospace;
+  color:black;
+  display:block;
+}
+
+pre .line-number {
+  float:left;
+  margin:0 1em 0 -1em;
+  text-align:right;
+  padding-top: 0.2rem;
+  line-height: 1.59em;
+  width: 4%;
+}
+
+pre .line-number span {
+  display:block;
+  padding:0 .5em 0 1em;
+}
+
+
+pre .cl {
+  display:block;
+  clear:both;
+}
+
+
+.md-typeset pre>code {
+  padding: 0.18rem 0.0rem;
+  line-height: 1.4em;
+}
