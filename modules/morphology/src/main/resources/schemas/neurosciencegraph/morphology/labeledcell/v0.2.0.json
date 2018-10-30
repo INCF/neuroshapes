@@ -2,16 +2,15 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/morphology/labeledcell/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/labeledcell/v0.2.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0",
-    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4",
+    "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1"
   ],
-  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:LabeledCellShape",
@@ -21,7 +20,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
         },
         {
           "property": [
@@ -35,28 +34,28 @@
             {
               "path": "nsg:brainLocation",
               "description": "Brain location",
-              "name": "Brain location where the labeled cell is found",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.0/shapes/BrainLocationShape",
+              "name": "Brain location of the labeled cell.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape",
               "maxCount": 1
             },
             {
               "path": "nsg:putativeMType",
               "name": "Putative morphology type",
-              "description": "Indicates the putative morphology type of the labeled cell, may have an mtype as well",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.0/shapes/CellTypeOntologyTermShape",
+              "description": "Indicates the putative morphology type of the labeled cell.",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },
             {
               "path": "nsg:locationInSlice",
               "name": "Coordinates of location in slice",
               "description": "Specifies the coordinates of the location of the cell in the slice",
-              "class": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/vector3d/v0.1.0/shapes/Vector3DShape",
               "maxCount": 1
             },
             {
               "path": "nsg:spatialCellName",
               "name": "Spatial cell name",
-              "description": "Spacial cell name given during the annotation process, slice name may be included in it",
+              "description": "Spatial cell name given during the annotation process.",
               "datatype": "xsd:string",
               "maxCount": 1
             },
@@ -77,8 +76,8 @@
             {
               "path": "prov:wasRevisionOf",
               "name": "Patched cell",
-              "description": "The patchedCell this labeledCell is a revision of",
-              "class": "nsg:patchedCell",
+              "description": "The patched cell this labeled cell is a revision of",
+              "class": "nsg:PatchedCell",
               "maxCount": 1
             }
           ]
