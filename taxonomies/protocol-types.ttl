@@ -1,24 +1,35 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix nsg: <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
+
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix protocoltypes: <http://bbp.epfl.ch/neurosciencegraph/taxonomies/protocoltypes/> .
+@prefix protocol-types: <http://bbp.epfl.ch/neurosciencegraph/taxonomies/protocoltypes> .
 
-protocoltypes: a skos:ConceptScheme ;
-    rdfs:label "Categorization of protocol types by activity types"@en ;
-    dc:creator "Sy Mohameth Francois <mohameth.sy@epfl.ch>" ;
-    dc:contributor "Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>" ;
-    dc:contributor "Lu Huanxiang <huanxiang.lu@epfl.ch>" ;
-    dc:publisher "Blue Brain Project, EPFL" ;
-    dc:rights "This work is distributed under a Creative Commons Attribution 4.0 (CC-BY-4.0) Public License <https://creativecommons.org/licenses/by/4.0/>"@en ;
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    owl:versionInfo "0.1.0" .
+
+protocol-types: a skos:ConceptScheme ;
+    skos:hasTopConcept protocol-types:activity.
+
+protocol-types:acquisitionannotation a skos:Concept ;
+    skos:broader protocol-types:activity;
+    skos:inScheme protocol-types: .
+
+protocol-types:reconstruction a skos:Concept ;
+    skos:broader protocol-types:activity;
+    skos:inScheme protocol-types: .
+
+protocol-types:brainslicing a skos:Concept ;
+    skos:broader protocol-types:activity;
+    skos:inScheme protocol-types: .
+
+protocol-types:stimulusexperiment a skos:Concept, nsg:ProtocolType;
+    skos:broader protocol-types:activity;
+    skos:inScheme protocol-types: .
+
+protocol-types:fixationstainingmounting a skos:Concept ;
+    skos:broader protocol-types:activity;
+    skos:inScheme protocol-types: .
+
+protocol-types:activity a skos:Concept, nsg:ProtocolType ;
+    skos:topConceptOf protocol-types: ;
+    skos:inScheme protocol-types: .
