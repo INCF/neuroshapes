@@ -1,6 +1,5 @@
 @@@ index
 
-* [MINDS](minds/minds.md)
 * [Brain Atlas](brainatlas/brain-atlas.md)
 * [Electrophysiology](electrophysiology/index.md)
 * [Morphology](morphology/morphology.md)

@@ -18,7 +18,7 @@ The following points describe a subset of questions the provenance pattern above
 
 ## Data Provenance pattern
 
-![Whole-cell patch-clamp-recording](../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg)
+![Whole-cell patch-clamp-recording](../../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg)
 
 
 ## Entities

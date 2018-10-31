@@ -39,7 +39,7 @@ Since writing a SHACL shape almost always required using a domain vocabulary, th
 In all cases, the context below will be refer to http://example.org/shaclcontext from now on.
 
 Prefix mappings
-: @@snip [standard prefix mappings](../../assets/contexts/nexus/core/shacl20170720/prefixmapings.md)
+: @@snip [standard prefix mappings](../../../assets/contexts/nexus/core/shacl20170720/prefixmapings.md)
 
 SHACL JSON-LD context
-: @@snip [shacl context](../../assets/contexts/nexus/core/shacl20170720/v0.1.0.json)
+: @@snip [shacl context](../../../assets/contexts/nexus/core/shacl20170720/v0.1.0.json)

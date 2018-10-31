@@ -1,21 +1,36 @@
-# Whole Brain Neuron Morphology Reconstruction
+# In Vitro Slice Neuron Morphology Reconstruction
 
 ## Use case
 
 ### Description
+
+This specification describes metadata collected for in vitro morphology reconstruction using a slice. The process of obtaining a 
+reconstructed cell typically begins with the injection of a dye during the electrophysiology recording. Some of the activities
+and entities shown here are shared with the electrophysiology whole-cell patch-clamp recording. The metadata is collected
+starting with the specimen, the slice, the patched cell. The stained neuron is most commonly visualized with a histological procedure
+ following the fixation of the tissue where the cells can be identified and annotated to proceed then with the reconstruction
+ of the cell. Metadata from all these procedures is captured as well as the protocols used and the persons, software and 
  organizations involved in each of the steps. The reconstructed cell has the link towards the binary file with the actual 
  morphology reconstruction.
  
  
 ### Supported Data Queries
 
-* Queries
+* Retrieve all morphologies reconstructions
+    - from brain region X.
+    - in layer X and that are pyramidal cells.
+    - from experimentalist X or from Lab Y.
+    - that contain information about where the axon projects to.
+    - a specimen under treatment x.
+    - a specimen of age X, gender Z.
+    - that have a 3D soma type.
+    - from 2015 onwards.
 
 
 
 ## Data Provenance pattern
 
-![Whole Brain Neuron Morphology Reconstruction](../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
+![Morphology reconstruction](../../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
 
 
 
