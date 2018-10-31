@@ -1,0 +1,25 @@
+{
+  "name": "neuroshapes-product-page",
+  "version": "0.0.1",
+  "description": "Product page of Neuroshapes",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build index.html -d ../ --public-url ./",
+    "start": "parcel -p 8000 watch index.html",
+    "test": "true"
+  },
+  "author": "kenneth.pirman@epfl.ch",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.1",
+    "parcel-bundler": "^1.10.3"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "jquery-ui-dist": "^1.12.1",
+    "paper": "^0.11.5"
+  }
+}

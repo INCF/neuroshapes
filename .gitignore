@@ -19,7 +19,6 @@ target/
 **/logs/
 **/nbactions.xml
 
-
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source
@@ -32,6 +31,14 @@ target/
 *.rar
 *.tar
 *.zip
+
+# For Product Page #
+####################
+# javascript dependencies
+src/main/paradox/product-page-src/node_modules
+# development output
+src/main/paradox/product-page-src/dist
+src/main/paradox/product-page-src/.cache
 
 # Logs and databases #
 ######################
