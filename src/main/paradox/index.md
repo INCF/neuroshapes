@@ -17,9 +17,7 @@
 
 #Neuroshapes
 
-
-
-##Motivation
+##Why Neuropshapes ?
 
 The goal of Neuroshapes is the development of open, use case driven and shared validatable data models (schemas, vocabularies) to enable the FAIR principles (Findable, Accessible, Interoperable and Reusable) for basic, computational and clinical neuroscience (meta)data. The data models developed thus far entities for electrophysiology, neuron morphology, brain atlases, in vitro electrophysiology and computational modeling. Future developments could include brain imaging, transcriptomic and clinical form data, as determined by community interests.
 
@@ -31,7 +29,7 @@ Potential changes can be discussed on [Github](https://github.com/BlueBrain/nexu
 @@@
 
 
-##Goals
+##Neuropshapes Goals
 
 * the use of standard semantic markups and linked data principles as ways to structure metadata and related data: the W3C RDF format is leveraged, specifically its developer-friendly JSON-LD serialization. The adoption of linked data principles and JSON-LD will ease federated access and discoverability of distributed neuroscience (meta)data over the web.
 
@@ -41,7 +39,5 @@ Potential changes can be discussed on [Github](https://github.com/BlueBrain/nexu
 
 * the use of the W3C PROV-O recommendation as a format to record (meta)data provenance: a SHACL version of the W3C PROV-O is created.
 
+## Get involved
 
-## Join the INCF Neuroshape SIG
-
-The special interest group can be joined by following instructions available [here](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open).
