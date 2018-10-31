@@ -109,4 +109,3 @@ from the main (upstream) repository:
     ```
     
 ## Joining the INCF Neuroshape SIG
-TBD
