@@ -5,7 +5,7 @@ A draft for a standardized description of data provenance for the following doma
 
 * [Data models](../data-models/index.html)
 * [Brain Atlas](../data-models/brainatlas/brain-atlas.html)
-* [Electrophysiology](../data-models/electrophysiology/s.html)
+* [Electrophysiology](../data-models/electrophysiology/electrophysiology.html)
 * [Morphology](../data-models/morphology/morphology.html)
 
 
