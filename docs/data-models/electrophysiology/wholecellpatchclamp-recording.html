@@ -193,7 +193,7 @@ INCF/neuroshapes
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 0.2.0+24-bdb1a46b
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+25-f9edb325
 </label>
 </li>
 </ul>
@@ -231,19 +231,19 @@ INCF/neuroshapes
 <h1><a href="#in-vitro-whole-cell-patch-clamp-recording" name="in-vitro-whole-cell-patch-clamp-recording" class="anchor"><span class="anchor-link"></span></a>In Vitro Whole Cell Patch Clamp Recording</h1>
 <h2><a href="#use-case" name="use-case" class="anchor"><span class="anchor-link"></span></a>Use case</h2>
 <h3><a href="#description" name="description" class="anchor"><span class="anchor-link"></span></a>Description</h3>
-<p>This specification describes the metadata collected for in vitro intracellular electrophysiology recordings using the whole-cell patch-clamp configuration. Metadata is collected on the subject used in the experiment, the slice, the patched cell which was recorded as well as the recording traces and protocols. Additionally, metadata for the brain slicing, the whole-cell patch-clamp and the stimulus used to generate traces are captured.</p>
+<p>This specification describes the metadata collected for in vitro intracellular electrophysiology recordings using the whole cell patch clamp configuration. Whole cell patch clamp is a type of electrophysiological recording used to measure ionic currents over the membrane of an entire cell. Suction is applied to rupture the cell membrane which provides access to the intracellular space of the patched cell. Metadata is collected on the subject used in the experiment, the slice, the patched cell which was recorded as well as the recording traces and protocols. Additionally, metadata for the brain slicing, the whole cell patch clamp and the stimulus (including protocols and agents) involved in the generation of the recording traces are captured.</p>
 <h3><a href="#supported-data-queries" name="supported-data-queries" class="anchor"><span class="anchor-link"></span></a>Supported Data Queries</h3>
-<p>The following points describe a subset of questions the provenance pattern above can support:</p>
+<p>The following points describe an example subset of questions supported by the data provenance pattern:</p>
 <ul>
-  <li>Retrieve all electrophysiology traces generated from rat somatosensory cortex using selected stimuli</li>
-  <li>Retrieve electrophysiology traces by recording day</li>
-  <li>For a given stimulus / sweep / repetition, get a specific voltage and/or current trace.</li>
-  <li>Get the liquid junction potential for an individual trace.</li>
+  <li>Retrieve all recording traces generated from rat somatosensory cortex using selected stimuli.</li>
+  <li>Retrieve recording traces by recording day and experimenter.</li>
+  <li>Retrieve all response traces from a specific patched cell.</li>
+  <li>Get the holding potential for an individual recording trace.</li>
 </ul>
 <h2><a href="#data-provenance-pattern" name="data-provenance-pattern" class="anchor"><span class="anchor-link"></span></a>Data Provenance pattern</h2>
-<p><img src="../../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg" alt="Whole-cell patch-clamp-recording" /></p>
+<p><img src="../../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg" alt="In Vitro Whole Cell Patch Clamp Recording" /></p>
 <h2><a href="#entities" name="entities" class="anchor"><span class="anchor-link"></span></a>Entities</h2>
-<p>The different entity types involved are described below.</p>
+<p>The different entity types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -254,19 +254,19 @@ INCF/neuroshapes
   <tbody>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html">Subject</a> </td>
-      <td>Specimen that was used for the experimental analysis </td>
+      <td>Subject that was used in the experiment </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgslice.html">Slice</a> </td>
-      <td>Brain slice obtained from the specimen </td>
+      <td>Brain slice obtained from the subject </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedslicev011shapespatchedsliceshape.html">PatchedSlice</a> </td>
-      <td>Brain slice with patched cells </td>
+      <td>Brain slice containing patched cells </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellcollectionv010shapespatchedcellcollectionshape.html">PatchedCellCollection</a></td>
-      <td>Collection of patched cells in a single slice </td>
+      <td>Collection of patched cells in a single slice (e.g. for multi-patch recordings) </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellv021shapespatchedcellshape.html">PatchedCell</a> </td>
@@ -274,16 +274,16 @@ INCF/neuroshapes
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphelectrophysiologytracev100shapestraceshape.html">Trace</a> </td>
-      <td>Individual recording trace of the patched cell (StimulationTrace and ResponseTrace) </td>
+      <td>Individual recording trace of the patched cell (stimulation/input and response/output trace) </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html">Protocol</a> </td>
-      <td>Document that describes the method used in the design and implementation of an experiment </td>
+      <td>Protocol that describes the method used in the design and execution of the experiment </td>
     </tr>
   </tbody>
 </table>
 <h2><a href="#activities" name="activities" class="anchor"><span class="anchor-link"></span></a>Activities</h2>
-<p>The different type of activities involved in the experiment are listed below.</p>
+<p>The different activity types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -294,20 +294,20 @@ INCF/neuroshapes
   <tbody>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainslicingv100shapesbrainslicingshape.html">BrainSlicing</a> </td>
-      <td>Technique used to obtain a slice of brain tissue for patching </td>
+      <td>Technique used to obtain a brain slice for patching </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentwholecellpatchclampv010shapeswholecellpatchclampshape.html">WholeCellPatchClamp</a> </td>
-      <td>Technique used to study ionic currents of individual living cells </td>
+      <td>Technique used to study electrical activity of individual living cells </td>
     </tr>
     <tr>
       <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphelectrophysiologystimulusexperimentv100shapesstimulusexperimentshape.html">StimulusExperiment</a> </td>
-      <td>Technique used to obtain the electrical signature of cells through injection of a defined current patternuio </td>
+      <td>Technique used to obtain the electrical signature of cells through injection of a defined current pattern </td>
     </tr>
   </tbody>
 </table>
 <h2><a href="#agents" name="agents" class="anchor"><span class="anchor-link"></span></a>Agents</h2>
-<p>The different agent types involved are described below.</p>
+<p>The different agent types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -331,6 +331,7 @@ INCF/neuroshapes
   </tbody>
 </table>
 <h2><a href="#contributors" name="contributors" class="anchor"><span class="anchor-link"></span></a>Contributors</h2>
+<p>Anna-Kristin Kaufmann <a href="mailto:a&#x6e;&#x6e;&#x61;&#45;kr&#x69;s&#116;&#105;n.&#107;&#x61;&#x75;&#x66;&#x6d;&#97;&#110;&#x6e;&#x40;&#x65;&#x70;&#x66;l&#46;&#x63;&#x68;">a&#x6e;&#x6e;&#x61;&#45;kr&#x69;s&#116;&#105;n.&#107;&#x61;&#x75;&#x66;&#x6d;&#97;&#110;&#x6e;&#x40;&#x65;&#x70;&#x66;l&#46;&#x63;&#x68;</a> Lu Huanxiang <a href="mailto:&#104;&#117;&#x61;&#110;xi&#97;&#x6e;g&#46;&#x6c;&#117;&#x40;&#x65;&#x70;&#102;l&#46;&#x63;&#x68;">&#104;&#117;&#x61;&#110;xi&#97;&#x6e;g&#46;&#x6c;&#117;&#x40;&#x65;&#x70;&#102;l&#46;&#x63;&#x68;</a> Sy Mohameth Francois <a href="mailto:&#109;&#x6f;ha&#109;e&#x74;&#104;&#x2e;&#x73;&#x79;@&#101;p&#x66;&#x6c;&#46;&#x63;&#104;">&#109;&#x6f;ha&#109;e&#x74;&#104;&#x2e;&#x73;&#x79;@&#101;p&#x66;&#x6c;&#46;&#x63;&#104;</a> Sean Hill <a href="mailto:&#x73;&#x65;&#x61;&#110;.&#104;&#x69;&#108;&#x6c;&#64;e&#x70;&#x66;l&#46;&#99;&#x68;">&#x73;&#x65;&#x61;&#110;.&#104;&#x69;&#108;&#x6c;&#64;e&#x70;&#x66;l&#46;&#99;&#x68;</a></p>
 </div>
 <div>
 <a href="https://github.com/INCF/neuroshapes/tree/master/src/main/paradox/docs/data-models/electrophysiology/wholecellpatchclamp-recording.md" title="Edit this page" class="md-source-file md-edit">
@@ -339,7 +340,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.2.0+24-bdb1a46b
+0.2.0+25-f9edb325
 </span>
 </div>
 </article>

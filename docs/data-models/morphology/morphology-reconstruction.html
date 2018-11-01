@@ -184,6 +184,7 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#entities" class="header">Entities</a></li>
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#activities" class="header">Activities</a></li>
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -192,7 +193,7 @@ INCF/neuroshapes
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 0.2.0+24-bdb1a46b
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+25-f9edb325
 </label>
 </li>
 </ul>
@@ -216,6 +217,7 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#entities" class="header">Entities</a></li>
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#activities" class="header">Activities</a></li>
     <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -229,26 +231,20 @@ INCF/neuroshapes
 <h1><a href="#in-vitro-slice-neuron-morphology-reconstruction" name="in-vitro-slice-neuron-morphology-reconstruction" class="anchor"><span class="anchor-link"></span></a>In Vitro Slice Neuron Morphology Reconstruction</h1>
 <h2><a href="#use-case" name="use-case" class="anchor"><span class="anchor-link"></span></a>Use case</h2>
 <h3><a href="#description" name="description" class="anchor"><span class="anchor-link"></span></a>Description</h3>
-<p>This specification describes metadata collected for in vitro morphology reconstruction using a slice. The process of obtaining a reconstructed cell typically begins with the injection of a dye during the electrophysiology recording. Some of the activities and entities shown here are shared with the electrophysiology whole-cell patch-clamp recording. The metadata is collected starting with the specimen, the slice, the patched cell. The stained neuron is most commonly visualized with a histological procedure  following the fixation of the tissue where the cells can be identified and annotated to proceed then with the reconstruction  of the cell. Metadata from all these procedures is captured as well as the protocols used and the persons, software and  organizations involved in each of the steps. The reconstructed cell has the link towards the binary file with the actual  morphology reconstruction.</p>
+<p>This specification describes metadata collected for morphology reconstructions from brain slices. Reconstruction of a neuron morphology from slice typically follows the injection of a dye during a whole cell patch clamp recording. Some of the activities and entities shown here are hence shared with the in vitro whole cell patch clamp recording. Metadata is collected on the subject used in the experiment, the slice containing the cell, the labeled cell and the reconstructed neuron morphology. The dye-filled neuron is most commonly visualized using a histological technique following the fixation of the brain tissue. The stained cells are annotated and then reconstructed. Metadata from all these procedures is captured as well as the protocols used and the persons, software and organizations involved in each of the steps.</p>
 <h3><a href="#supported-data-queries" name="supported-data-queries" class="anchor"><span class="anchor-link"></span></a>Supported Data Queries</h3>
+<p>The following points describe an example subset of questions supported by the data provenance pattern:</p>
 <ul>
-  <li>Retrieve all morphologies reconstructions
-    <ul>
-      <li>from brain region X.</li>
-      <li>in layer X and that are pyramidal cells.</li>
-      <li>from experimentalist X or from Lab Y.</li>
-      <li>that contain information about where the axon projects to.</li>
-      <li>a specimen under treatment x.</li>
-      <li>a specimen of age X, gender Z.</li>
-      <li>that have a 3D soma type.</li>
-      <li>from 2015 onwards.</li>
-    </ul>
-  </li>
+  <li>Retrieve morphology reconstructions from a given brain region.</li>
+  <li>Retrieve pyramidal cell reconstructions.</li>
+  <li>Retrieve morphology reconstructions from a specific experimenter.</li>
+  <li>Retrieve morphology reconstructions from a subject of a given age and sex.</li>
+  <li>Retrieve morphology reconstructions which were reconstructed in a given year</li>
 </ul>
 <h2><a href="#data-provenance-pattern" name="data-provenance-pattern" class="anchor"><span class="anchor-link"></span></a>Data Provenance pattern</h2>
-<p><img src="../../../assets/provtemplates/morphology-reconstruction-prov-template.svg" alt="Morphology reconstruction" /></p>
+<p><img src="../../../assets/provtemplates/morphology-reconstruction-prov-template.svg" alt="In Vitro Slice Neuron Morphology Reconstruction" /></p>
 <h2><a href="#entities" name="entities" class="anchor"><span class="anchor-link"></span></a>Entities</h2>
-<p>The different entity types involved are described below.</p>
+<p>The different entity types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -258,52 +254,53 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td><a href="../entities/experiment/subject.html">Subject</a> </td>
-      <td>Specimen that was used for the experimental analysis </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html">Subject</a> </td>
+      <td>Subject that was used in the experiment </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/slice.html">Slice</a> </td>
-      <td>Brain slice obtained from the specimen </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgslice.html">Slice</a> </td>
+      <td>Brain slice obtained from the subject </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/patchedslice.html">PatchedSlice</a> </td>
-      <td>Brain slice with patched cells </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedslicev011shapespatchedsliceshape.html">PatchedSlice</a> </td>
+      <td>Brain slice containing patched cells </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/patchedcellcollection.html">PatchedCellCollection</a> </td>
-      <td>Collection of patched cells in a single slice </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellcollectionv010shapespatchedcellcollectionshape.html">PatchedCellCollection</a></td>
+      <td>Collection of patched cells in a single slice (e.g. for multi-patch recordings) </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/patchedcell.html">PatchedCell</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellv021shapespatchedcellshape.html">PatchedCell</a> </td>
       <td>Cell that was patched in the slice </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/fixedstainedslice.html">FixedStainedSlice</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyfixedstainedslicev010shapesfixedstainedsliceshape.html">FixedStainedSlice</a> </td>
       <td>Brain slice after fixation and staining </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/annotatedslice.html">AnnotatedSlice</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyannotatedslicev010shapesannotatedsliceshape.html">AnnotatedSlice</a> </td>
       <td>Brain slice containing the identified and annotated stained cells </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/labeledcellcollection.html">LabeledCellCollection</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologylabeledcellcollectionv010shapeslabeledcellcollectionshape.html">LabeledCellCollection</a> </td>
       <td>Collection of labeled cells in a single slice </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/labeledcell.html">LabeledCell</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologylabeledcellv020shapeslabeledcellshape.html">LabeledCell</a> </td>
       <td>Cell that was labeled in the slice </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/reconstructedcell.html">ReconstructedCell</a> </td>
-      <td>Digitally reconstructed cell </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html">ReconstructedCell</a> </td>
+      <td>Reconstructed cell </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/protocol.html">Protocol</a> </td>
-      <td>Document that describes the method used in the design and implementation of an experiment </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html">Protocol</a> </td>
+      <td>Protocol that describes the method used in the design and execution of the experiment </td>
     </tr>
   </tbody>
 </table>
 <h2><a href="#activities" name="activities" class="anchor"><span class="anchor-link"></span></a>Activities</h2>
+<p>The different activity types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -313,28 +310,29 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td><a href="../entities/experiment/brainslicing.html">BrainSlicing</a> </td>
-      <td>Technique used to obtain a slice of brain tissue for patching </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainslicingv100shapesbrainslicingshape.html">BrainSlicing</a> </td>
+      <td>Technique used to obtain a brain slice for patching </td>
     </tr>
     <tr>
-      <td><a href="../entities/experiment/wholecellpatchclamp.html">WholeCellPatchClamp</a> </td>
-      <td>Technique used to study ionic currents of individual living cells </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentwholecellpatchclampv010shapeswholecellpatchclampshape.html">WholeCellPatchClamp</a> </td>
+      <td>Technique used to study electrical activity of individual living cells </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/fixationstainingmounting.html">FixationStainingMounting</a> </td>
-      <td>Process of fixation and staining of the slice and mounting it on a slide </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyfixationstainingmountingv100shapesfixationstainingmountingshape.html">FixationStainingMounting</a> </td>
+      <td>Technique used to fix and stain the slice </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/acquisitionannotation.html">AcquisitionAnnotation</a> </td>
-      <td>Process of acquiring the image of the slice and annotating the stained cells </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyacquisitionannotationv010shapesacquisitionannotationshape.html">AcquisitionAnnotation</a> </td>
+      <td>Technique used to acquire an image of the slice and annotate the stained cells </td>
     </tr>
     <tr>
-      <td><a href="../entities/morphology/reconstruction.html">Reconstruction</a> </td>
-      <td>Process of obtaining a reconstructed cell </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionv011shapesreconstructionshape.html">Reconstruction</a> </td>
+      <td>Technique used to reconstruct the stained cell </td>
     </tr>
   </tbody>
 </table>
 <h2><a href="#agents" name="agents" class="anchor"><span class="anchor-link"></span></a>Agents</h2>
+<p>The different agent types involved in the experiment are listed below.</p>
 <table>
   <thead>
     <tr>
@@ -344,19 +342,21 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td><a href="../entities/core/person.html">Person</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html">Person</a> </td>
       <td>Person associated with an activity </td>
     </tr>
     <tr>
-      <td><a href="../entities/core/softwareagent.html">SoftwareAgent</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html">SoftwareAgent</a> </td>
       <td>Software associated with an activity </td>
     </tr>
     <tr>
-      <td><a href="../entities/core/organization.html">Organization</a> </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html">Organization</a> </td>
       <td>Organization associated with an activity </td>
     </tr>
   </tbody>
 </table>
+<h2><a href="#contributors" name="contributors" class="anchor"><span class="anchor-link"></span></a>Contributors</h2>
+<p>Anna-Kristin Kaufmann <a href="mailto:&#97;nn&#x61;-k&#x72;&#x69;&#115;&#116;i&#110;&#46;k&#x61;u&#x66;&#x6d;&#97;&#x6e;&#x6e;&#x40;e&#x70;&#x66;&#108;&#x2e;c&#104;">&#97;nn&#x61;-k&#x72;&#x69;&#115;&#116;i&#110;&#46;k&#x61;u&#x66;&#x6d;&#97;&#x6e;&#x6e;&#x40;e&#x70;&#x66;&#108;&#x2e;c&#104;</a> Lu Huanxiang <a href="mailto:&#104;&#117;&#97;&#x6e;&#120;&#105;&#x61;&#x6e;&#x67;.&#x6c;&#117;&#64;&#101;&#112;&#x66;&#108;.&#x63;&#x68;">&#104;&#117;&#97;&#x6e;&#120;&#105;&#x61;&#x6e;&#x67;.&#x6c;&#117;&#64;&#101;&#112;&#x66;&#108;.&#x63;&#x68;</a> Sy Mohameth Francois <a href="mailto:mo&#x68;&#x61;m&#x65;&#x74;h&#46;&#115;&#121;&#64;&#101;&#x70;&#102;&#108;&#46;&#99;&#104;">mo&#x68;&#x61;m&#x65;&#x74;h&#46;&#115;&#121;&#64;&#101;&#x70;&#102;&#108;&#46;&#99;&#104;</a> Sean Hill <a href="mailto:&#x73;&#101;&#x61;&#110;&#46;&#104;i&#x6c;&#x6c;&#64;&#x65;&#x70;&#102;&#108;&#x2e;&#x63;h">&#x73;&#101;&#x61;&#110;&#46;&#104;i&#x6c;&#x6c;&#64;&#x65;&#x70;&#102;&#108;&#x2e;&#x63;h</a></p>
 </div>
 <div>
 <a href="https://github.com/INCF/neuroshapes/tree/master/src/main/paradox/docs/data-models/morphology/morphology-reconstruction.md" title="Edit this page" class="md-source-file md-edit">
@@ -365,7 +365,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.2.0+24-bdb1a46b
+0.2.0+25-f9edb325
 </span>
 </div>
 </article>
