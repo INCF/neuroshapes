@@ -3,57 +3,62 @@
 ## Use case
 
 ### Description
- organizations involved in each of the steps. The reconstructed cell has the link towards the binary file with the actual 
- morphology reconstruction.
- 
+
+This specification describes metadata collected for whole brain morphology reconstructions from a continuous whole brain image stack. Reconstruction of a neuron morphology from an image stack
+is typically enabled through sparse neuronal labeling following e.g. viral delivery of a fluorescent protein. Metadata is collected on the subject used in the experiment, 
+the image stack containing the labeled cells and the reconstructed neuron morphology. 
+Additionally, metadata for the brain imaging and the reconstruction from image (including protocols and agents) are captured. 
  
 ### Supported Data Queries
 
-* Queries
+The following points describe an example subset of questions supported by the data provenance pattern:
 
+* Retrieve morphology reconstructions from a given brain region.
+* Retrieve pyramidal cell reconstructions.
+* Retrieve morphology reconstructions projecting to a given brain region.
+* Retrieve morphology reconstructions from a subject of a given age and sex.
+* Retrieve morphology reconstructions which were reconstructed by a specific person.
 
 
 ## Data Provenance pattern
 
-![Whole Brain Neuron Morphology Reconstruction](../../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
-
-
+![Whole Brain Neuron Morphology Reconstruction](../../../assets/provtemplates/wholebrain-neuron-morphology-reconstruction.svg)
 
 
 ## Entities
 
-The different entity types involved are described below.
+The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](../entities/experiment/subject.html)    |     Specimen that was used for the experimental analysis     |
-| [Slice](../entities/experiment/slice.html)    |     Brain slice obtained from the specimen      |
-| [PatchedSlice](../entities/experiment/patchedslice.html)    |    Brain slice with patched cells      |
-| [PatchedCellCollection](../entities/experiment/patchedcellcollection.html)    |    Collection of patched cells in a single slice     |
-| [PatchedCell](../entities/experiment/patchedcell.html)    |    Cell that was patched in the slice    |
-| [FixedStainedSlice](../entities/morphology/fixedstainedslice.html)    |     Brain slice after fixation and staining     |
-| [AnnotatedSlice](../entities/morphology/annotatedslice.html)    |    Brain slice containing the identified and annotated stained cells      |
-| [LabeledCellCollection](../entities/morphology/labeledcellcollection.html)    |     Collection of labeled cells in a single slice     |
-| [LabeledCell](../entities/morphology/labeledcell.html)    |     Cell that was labeled in the slice     |
-| [ReconstructedCell](../entities/morphology/reconstructedcell.html)    |     Digitally reconstructed cell      |
-| [Protocol](../entities/experiment/protocol.html)    |     Document that describes the method used in the design and implementation of an experiment     |
+| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html)                            |     Subject that was used in the experiment     |
+| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasimagestackv021shapesimagestackshape.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html)    |     Reconstructed cell      |
+| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 ## Activities
 
+The different activity types involved in the experiment are listed below.
+
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](../entities/experiment/brainslicing.html)    |     Technique used to obtain a slice of brain tissue for patching       |
-| [WholeCellPatchClamp](../entities/experiment/wholecellpatchclamp.html)    |     Technique used to study ionic currents of individual living cells      |
-| [FixationStainingMounting](../entities/morphology/fixationstainingmounting.html)    |     Process of fixation and staining of the slice and mounting it on a slide      |
-| [AcquisitionAnnotation](../entities/morphology/acquisitionannotation.html)    |     Process of acquiring the image of the slice and annotating the stained cells     |
-| [Reconstruction](../entities/morphology/reconstruction.html)   |     Process of obtaining a reconstructed cell      |
+| [BrainImaging](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainimagingv010shapesbrainimagingshape.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
+| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html)   |     Technique used to reconstruct the stained cell     |
 
 
 ## Agents
 
+The different agent types involved in the experiment are listed below.
+
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](../entities/core/person.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](../entities/core/softwareagent.html)                          |    Software associated with an activity      |
-| [Organization](../entities/core/organization.html)                          |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html)                            |    Organization associated with an activity      |
 
+## Contributors
+
+Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>
+Lu Huanxiang <huanxiang.lu@epfl.ch>
+Sy Mohameth Francois <mohameth.sy@epfl.ch>
+Sean Hill <sean.hill@epfl.ch>
