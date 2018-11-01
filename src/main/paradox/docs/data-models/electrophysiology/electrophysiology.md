@@ -1,7 +1,15 @@
+@@@ index
+
+* [In Vitro Whole Cell Patch Clamp Recording](./wholecellpatchclamp-recording.md)
+
+@@@
 
 # Electrophysiology
 
-## Use cases
+In Neuroscience, electrophysiology refers to the study of the electrical activity of neurons, e.g. by measuring action potential activity.
+In this section, we describe data models that represent the generation context of the following neuroscience data types:
 
-List of use cases: TBD
-dsdsd
+## Intracellular Recording
+
+* [In Vitro Whole Cell Patch Clamp Recording](./wholecellpatchclamp-recording.html)
+

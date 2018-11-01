@@ -4,71 +4,74 @@
 
 ### Description
 
-This specification describes metadata collected for in vitro morphology reconstruction using a slice. The process of obtaining a 
-reconstructed cell typically begins with the injection of a dye during the electrophysiology recording. Some of the activities
-and entities shown here are shared with the electrophysiology whole-cell patch-clamp recording. The metadata is collected
-starting with the specimen, the slice, the patched cell. The stained neuron is most commonly visualized with a histological procedure
- following the fixation of the tissue where the cells can be identified and annotated to proceed then with the reconstruction
- of the cell. Metadata from all these procedures is captured as well as the protocols used and the persons, software and 
- organizations involved in each of the steps. The reconstructed cell has the link towards the binary file with the actual 
- morphology reconstruction.
+This specification describes metadata collected for morphology reconstructions from brain slices. Reconstruction of a neuron morphology from slice typically
+follows the injection of a dye during a whole cell patch clamp recording. Some of the activities
+and entities shown here are hence shared with the in vitro whole cell patch clamp recording. Metadata is collected on the subject used in the experiment, 
+the slice containing the cell, the labeled cell and the reconstructed neuron morphology. The dye-filled neuron is most commonly visualized using a 
+histological technique following the fixation of the brain tissue. The stained cells are annotated and then reconstructed.
+Metadata from all these procedures is captured as well as the protocols used and the persons, software and organizations involved in each of the steps.
  
  
 ### Supported Data Queries
 
-* Retrieve all morphologies reconstructions
-    - from brain region X.
-    - in layer X and that are pyramidal cells.
-    - from experimentalist X or from Lab Y.
-    - that contain information about where the axon projects to.
-    - a specimen under treatment x.
-    - a specimen of age X, gender Z.
-    - that have a 3D soma type.
-    - from 2015 onwards.
+The following points describe an example subset of questions supported by the data provenance pattern:
 
+* Retrieve morphology reconstructions from a given brain region.
+* Retrieve pyramidal cell reconstructions.
+* Retrieve morphology reconstructions from a specific experimenter.
+* Retrieve morphology reconstructions from a subject of a given age and sex.
+* Retrieve morphology reconstructions which were reconstructed in a given year
 
 
 ## Data Provenance pattern
 
-![Morphology reconstruction](../../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
-
-
+![In Vitro Slice Neuron Morphology Reconstruction](../../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
 
 
 ## Entities
 
-The different entity types involved are described below.
+The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](../entities/experiment/subject.html)    |     Specimen that was used for the experimental analysis     |
-| [Slice](../entities/experiment/slice.html)    |     Brain slice obtained from the specimen      |
-| [PatchedSlice](../entities/experiment/patchedslice.html)    |    Brain slice with patched cells      |
-| [PatchedCellCollection](../entities/experiment/patchedcellcollection.html)    |    Collection of patched cells in a single slice     |
-| [PatchedCell](../entities/experiment/patchedcell.html)    |    Cell that was patched in the slice    |
-| [FixedStainedSlice](../entities/morphology/fixedstainedslice.html)    |     Brain slice after fixation and staining     |
-| [AnnotatedSlice](../entities/morphology/annotatedslice.html)    |    Brain slice containing the identified and annotated stained cells      |
-| [LabeledCellCollection](../entities/morphology/labeledcellcollection.html)    |     Collection of labeled cells in a single slice     |
-| [LabeledCell](../entities/morphology/labeledcell.html)    |     Cell that was labeled in the slice     |
-| [ReconstructedCell](../entities/morphology/reconstructedcell.html)    |     Digitally reconstructed cell      |
-| [Protocol](../entities/experiment/protocol.html)    |     Document that describes the method used in the design and implementation of an experiment     |
+[Subject](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html)                            |     Subject that was used in the experiment     |
+| [Slice](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
+| [PatchedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedslicev011shapespatchedsliceshape.html)                  |     Brain slice containing patched cells      |
+| [PatchedCellCollection](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellcollectionv010shapespatchedcellcollectionshape.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
+| [PatchedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellv021shapespatchedcellshape.html)                    |     Cell that was patched in the slice      |
+| [FixedStainedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyfixedstainedslicev010shapesfixedstainedsliceshape.html)    |     Brain slice after fixation and staining     |
+| [AnnotatedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyannotatedslicev010shapesannotatedsliceshape.html)    |    Brain slice containing the identified and annotated stained cells      |
+| [LabeledCellCollection](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologylabeledcellcollectionv010shapeslabeledcellcollectionshape.html)    |     Collection of labeled cells in a single slice     |
+| [LabeledCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologylabeledcellv020shapeslabeledcellshape.html)    |     Cell that was labeled in the slice     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html)    |     Reconstructed cell      |
+| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 ## Activities
 
+The different activity types involved in the experiment are listed below.
+
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](../entities/experiment/brainslicing.html)    |     Technique used to obtain a slice of brain tissue for patching       |
-| [WholeCellPatchClamp](../entities/experiment/wholecellpatchclamp.html)    |     Technique used to study ionic currents of individual living cells      |
-| [FixationStainingMounting](../entities/morphology/fixationstainingmounting.html)    |     Process of fixation and staining of the slice and mounting it on a slide      |
-| [AcquisitionAnnotation](../entities/morphology/acquisitionannotation.html)    |     Process of acquiring the image of the slice and annotating the stained cells     |
-| [Reconstruction](../entities/morphology/reconstruction.html)   |     Process of obtaining a reconstructed cell      |
+| [BrainSlicing](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainslicingv100shapesbrainslicingshape.html)                      |     Technique used to obtain a brain slice for patching      |
+| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentwholecellpatchclampv010shapeswholecellpatchclampshape.html)        |     Technique used to study electrical activity of individual living cells    |
+| [FixationStainingMounting](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyfixationstainingmountingv100shapesfixationstainingmountingshape.html)    |     Technique used to fix and stain the slice      |
+| [AcquisitionAnnotation](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyacquisitionannotationv010shapesacquisitionannotationshape.html)    |     Technique used to acquire an image of the slice and annotate the stained cells     |
+| [Reconstruction](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionv011shapesreconstructionshape.html)   |     Technique used to reconstruct the stained cell     |
 
 
 ## Agents
 
+The different agent types involved in the experiment are listed below.
+
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](../entities/core/person.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](../entities/core/softwareagent.html)                          |    Software associated with an activity      |
-| [Organization](../entities/core/organization.html)                          |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html)                            |    Organization associated with an activity      |
 
+## Contributors
+
+Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>
+Lu Huanxiang <huanxiang.lu@epfl.ch>
+Sy Mohameth Francois <mohameth.sy@epfl.ch>
+Sean Hill <sean.hill@epfl.ch>
