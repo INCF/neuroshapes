@@ -6,11 +6,14 @@
 
 @@@
 
-# Morphology
+# Neuron Morphology
 
-## Use cases
+@@@ note 
 
-List of use cases:
+In this section we describe data models that represent the generation context of the following neuron morphology data types:
 
 * [In Vitro Slice Neuron Morphology Reconstruction](./morphology-reconstruction.html)
 * [Whole Brain Neuron Morphology Reconstruction](./whole-brain-neuron-morphology-reconstruction.html)
+
+
+@@@

@@ -5,12 +5,8 @@
 * [Modeling Your Data](datamodeling/index.md)
 * [SHACL In a Nutshell](shacl-tutorial/overview/index.md)
 * [Data Models and Formats](data-models/index.md)
-* [Software and Tools](tools/index.md)
-* [Adoption](adoption.md)
-* [Meetings](meetings.md)
-* [Publications](publication/index.md)
+* [Meetings and Workshops](meetings.md)
 * [License](license.md)
-* [How to contribute](contribution.md)
 * [Contact](contact.md)
 
 @@@
@@ -41,3 +37,5 @@ Potential changes can be discussed on [Github](https://github.com/BlueBrain/nexu
 
 ## Get involved
 
+* Join the [INCF Special Interest Group on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open)
+* Read the [How to contribute](./gettingstarted/contribution.html) section
