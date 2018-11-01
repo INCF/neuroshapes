@@ -22,7 +22,7 @@ The following points describe an example subset of questions supported by the da
 
 ## Data Provenance pattern
 
-![Whole Brain Neuron Morphology Reconstruction](../../assets/provtemplates/wholebrain-neuron-morphology-reconstruction.svg)
+![Whole Brain Neuron Morphology Reconstruction](../../../assets/provtemplates/wholebrain-neuron-morphology-reconstruction.svg)
 
 
 ## Entities
