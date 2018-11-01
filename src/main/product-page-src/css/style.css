@@ -1,9 +1,15 @@
+:root {
+  --light-green: #b9e9d4;
+  --light-blue: #44c7f4;
+  --light-grey: #FAFBFC;
+}
+
 html {
   height: auto;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  background-color: #FAFBFC;
+  background-color: var(--light-grey);
 }
 *::selection {
   color: white;
@@ -25,6 +31,9 @@ body {
   background: linear-gradient(#c5dfeb 10%, #e2e7ea);
   line-height: 1;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+a {
+  color: var(--light-green);
 }
 p {
   line-height: 24px;
@@ -164,6 +173,7 @@ audio, canvas, iframe, img, svg, video {
   border-radius: 2px;
   display: flex;
   justify-content: space-between;
+  color: #333;
 }
 .bordered-box {
   position: relative;
@@ -265,8 +275,6 @@ section {
 }
 
 .hero {
-  /* background-color: #f8ceec; */
-  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
   background-image: radial-gradient(ellipse at center -50%, #18334f 0%,#18334f 18%,#192532 57%,#000000f0 100%);
   padding-bottom: 8rem;
   padding-top: 8rem;
