@@ -25,7 +25,7 @@ The following points describe an example subset of questions supported by the da
 
 ## Data Provenance pattern
 
-![In Vitro Slice Neuron Morphology Reconstruction](../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
+![In Vitro Slice Neuron Morphology Reconstruction](../../../assets/provtemplates/morphology-reconstruction-prov-template.svg)
 
 
 ## Entities
