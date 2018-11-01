@@ -5,7 +5,6 @@
 * [Modeling Your Data](datamodeling/index.md)
 * [SHACL In a Nutshell](shacl-tutorial/overview/index.md)
 * [Data Models and Formats](data-models/index.md)
-* [Adoption](adoption.md)
 * [Meetings and Workshops](meetings.md)
 * [License](license.md)
 * [Contact](contact.md)
