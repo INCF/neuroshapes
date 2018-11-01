@@ -10,4 +10,7 @@
 
 ## Use cases
 
-List of use cases: TBD
+List of use cases:
+
+* [In Vitro Slice Neuron Morphology Reconstruction](./morphology-reconstruction.html)
+* [Whole Brain Neuron Morphology Reconstruction](./whole-brain-neuron-morphology-reconstruction.html)
