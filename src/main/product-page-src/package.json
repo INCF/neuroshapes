@@ -4,7 +4,7 @@
   "description": "Product page of Neuroshapes",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html -d ../ --public-url ./",
+    "build": "parcel build index.html -d ../paradox --public-url ./",
     "start": "parcel -p 8000 watch index.html",
     "test": "true"
   },
