@@ -16,7 +16,7 @@ You can *request* them by [submitting an issue](#submit-issue) to our GitHub
 Repository. If you would like to *implement* a new feature or *propose* a new data model specification, please submit an issue with a proposal for your work first, to be sure it can be implemented and most importantly, to trigger discussions and enable collaborations with interested people.
 Please consider what kind of change it is:
 
-* For **a Data Model Specification Proposal or Extension**, first open an issue and outline your proposal so that it can be discussed. Please follow the data model specification [template]().
+* For **a Data Model Specification Proposal or Extension**, first open an issue and outline your proposal so that it can be discussed.
 
 * **Data examples implementing/illustrating an existing Data Model** can be directly [submitted as a Pull Request](#submit-pr). For example different atlas releases conformant to the 
 [atlas registration prov pattern](https://github.com/INCF/neuroshapes/blob/master/provpatterns/assets/atlas-registration-prov-template.svg) can be submitted.
@@ -39,12 +39,11 @@ be in touch with you to gather information.
 ### Submitting a Data Model Specification
 Before you submit your proposal consider the following guidelines:
 
-* Please join the [INCF Special Interest Group (SIG) on Neuroshapes]() before sending pull requests.
+* Please join the [INCF Special Interest Group (SIG) on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open) before sending pull requests.
   Proposals are managed and reviewed by members of that INCF SIG.
  
-* Make sure you've read the [vocabulary]() and [schemas]() best practices and that your Data Model Specification conform to them.
+* Open an issue and outline your proposal so that it can be discussed.
 
-* Make sure your submission conform to the data model specification [template]().
 
 
 
@@ -54,27 +53,53 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 * Please join the [INCF SIG on Neuroshapes]() before sending Pull requests.
   Proposals are managed and reviewed by members of that INCF SIG.
 
-* Make sure you've read the [vocabulary]() and [schemas]() best practices and that your Pull Request conform to them.
 
+* Clone the Neuroshapes github repository:
+
+```shell
+    # Go to home
+    cd  ~
+    
+    # Clone the repository
+    git clone https://github.com/INCF/neuroshapes.git
+    
+    cd neuroshapes
+    
+```
+    
 * Make your changes in a new git branch:
+
      ```shell
      git checkout -b my-fix-branch master
      ```
-* Create your patch, **including appropriate test cases**. See the [how to write a test for a schema]() section
+* Create your patch, **including appropriate test cases**.
 
 * Run the full test suite, and ensure that all tests pass.
 
+    ```shell
+    # Run 'sbt'
+    sbt
+    
+    # Run 'test'
+    test
+    
+    # Exit
+    exit
+    
+    ```
 * Commit your changes using a descriptive commit message.
+
      ```shell
      git commit -a
      ```
   Note: the optional commit `-a` command line option will automatically “add” and “rm” edited files.
 
 * Push your branch to GitHub:
+
     ```shell
     git push origin my-fix-branch
     ```
-* In GitHub, send a pull request to the `master` branch of the relevant component.
+* In GitHub, send a pull request to the `master` branch.
 
 * If we suggest changes then:
   * Make the required updates.
@@ -94,6 +119,7 @@ from the main (upstream) repository:
     ```
 
 * Check out the master branch:
+
     ```shell
     git checkout master -f
     ```
@@ -108,4 +134,6 @@ from the main (upstream) repository:
     git pull --ff upstream master
     ```
     
-## Joining the INCF Neuroshape SIG
+## Join the INCF Neuroshape SIG
+
+Join the [INCF Special Interest Group on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open).

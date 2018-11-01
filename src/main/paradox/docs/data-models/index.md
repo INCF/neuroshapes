@@ -1,8 +1,8 @@
 @@@ index
 
 * [Brain Atlas](brainatlas/brain-atlas.md)
-* [Electrophysiology](electrophysiology/index.md)
-* [Morphology](morphology/morphology.md)
+* [Electrophysiology](electrophysiology/electrophysiology.md)
+* [Neuron Morphology](morphology/morphology.md)
 
 @@@
 
@@ -11,8 +11,6 @@
 
 ## Overview
 
-## Anatomy of a data model Specification
-Each data model is documented along the following lines:
-
-* Use case: What is the data generation scenario the data model is trying to represent ? What queries w.r.t 
+This section describes key scientific and technical activities and agents involved in the generation of 
+various neuroscience data types (basic, computational and clinical neuroscience data). For each data types, the generation context is described by mean of a data provenance pattern which is implemented as a set of W3C SHACL based validatable schemas. 
 
