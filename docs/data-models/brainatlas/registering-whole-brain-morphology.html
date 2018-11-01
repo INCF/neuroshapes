@@ -20,7 +20,7 @@
 
 <meta name="description" content="nsg-docs">
 <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-<title>Morphology · Neuroshapes</title>
+<title>Registering a Whole Brain Morphology in an Atlas · Neuroshapes</title>
 <link rel="stylesheet" href="../../../assets/stylesheets/application.451f80e5.css">
 <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.22915126.css">
 <meta name="theme-color" content="#03a9f4" />
@@ -61,7 +61,7 @@ data-md-color-accent="cyan"
 Neuroshapes
 </span>
 <span class="md-header-nav__topic">
-Morphology
+Registering a Whole Brain Morphology in an Atlas
 </span>
 </div>
 </div>
@@ -151,13 +151,13 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/brainatlas/brain-atlas.html" class="page">Brain Atlas</a>
     <ul>
       <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html" class="page">Registering a Brain Atlas</a></li>
-      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html" class="page">Registering a Whole Brain Morphology in an Atlas</a></li>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html" class="active page">Registering a Whole Brain Morphology in an Atlas</a></li>
     </ul></li>
     <li><a href="../../../docs/data-models/electrophysiology/index.html" class="page">Electrophysiology</a>
     <ul>
       <li><a href="../../../docs/data-models/electrophysiology/wholecellpatchclamp-recording.html" class="page">In Vitro Whole Cell Patch Clamp Recording</a></li>
     </ul></li>
-    <li><a href="../../../docs/data-models/morphology/morphology.html" class="active page">Morphology</a>
+    <li><a href="../../../docs/data-models/morphology/morphology.html" class="page">Morphology</a>
     <ul>
       <li><a href="../../../docs/data-models/morphology/morphology-reconstruction.html" class="page">In Vitro Slice Neuron Morphology Reconstruction</a></li>
       <li><a href="../../../docs/data-models/morphology/whole-brain-neuron-morphology-reconstruction.html" class="page">Whole Brain Neuron Morphology Reconstruction</a></li>
@@ -174,9 +174,18 @@ INCF/neuroshapes
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
-  <li><a href="../../../docs/data-models/morphology/morphology.html#morphology" class="header">Morphology</a>
+  <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#registering-a-whole-brain-morphology-in-an-atlas" class="header">Registering a Whole Brain Morphology in an Atlas</a>
   <ul>
-    <li><a href="../../../docs/data-models/morphology/morphology.html#use-cases" class="header">Use cases</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#use-case" class="header">Use case</a>
+    <ul>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#description" class="header">Description</a></li>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#supported-data-queries" class="header">Supported Data Queries</a></li>
+    </ul></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#data-provenance-pattern" class="header">Data Provenance pattern</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#entities" class="header">Entities</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#activities" class="header">Activities</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -198,9 +207,18 @@ INCF/neuroshapes
 <nav class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">Table of contents</label>
 <ul>
-  <li><a href="../../../docs/data-models/morphology/morphology.html#morphology" class="header">Morphology</a>
+  <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#registering-a-whole-brain-morphology-in-an-atlas" class="header">Registering a Whole Brain Morphology in an Atlas</a>
   <ul>
-    <li><a href="../../../docs/data-models/morphology/morphology.html#use-cases" class="header">Use cases</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#use-case" class="header">Use case</a>
+    <ul>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#description" class="header">Description</a></li>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#supported-data-queries" class="header">Supported Data Queries</a></li>
+    </ul></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#data-provenance-pattern" class="header">Data Provenance pattern</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#entities" class="header">Entities</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#activities" class="header">Activities</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -211,16 +229,108 @@ INCF/neuroshapes
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#morphology" name="morphology" class="anchor"><span class="anchor-link"></span></a>Morphology</h1>
-<h2><a href="#use-cases" name="use-cases" class="anchor"><span class="anchor-link"></span></a>Use cases</h2>
-<p>List of use cases:</p>
+<h1><a href="#registering-a-whole-brain-morphology-in-an-atlas" name="registering-a-whole-brain-morphology-in-an-atlas" class="anchor"><span class="anchor-link"></span></a>Registering a Whole Brain Morphology in an Atlas</h1>
+<h2><a href="#use-case" name="use-case" class="anchor"><span class="anchor-link"></span></a>Use case</h2>
+<h3><a href="#description" name="description" class="anchor"><span class="anchor-link"></span></a>Description</h3>
+<p>This specification describes the process of register a whole brain morphology into an atlas. The process starts with reconstruction the whole brain morphologies from image stack. The image stack is used to register to the reference atlas, resulting in a transformation. This transformation is then used to transform the reconstructed whole brain cell into the reference atlas space.</p>
+<h3><a href="#supported-data-queries" name="supported-data-queries" class="anchor"><span class="anchor-link"></span></a>Supported Data Queries</h3>
 <ul>
-  <li><a href="./morphology-reconstruction.html">In Vitro Slice Neuron Morphology Reconstruction</a></li>
-  <li><a href="./whole-brain-neuron-morphology-reconstruction.html">Whole Brain Neuron Morphology Reconstruction</a></li>
+  <li>Get the whole brain morphology from a given atlas spatial reference system.</li>
+  <li>Get the whole brain morphologies derived from a image stack</li>
 </ul>
+<h2><a href="#data-provenance-pattern" name="data-provenance-pattern" class="anchor"><span class="anchor-link"></span></a>Data Provenance pattern</h2>
+<p><img src="../../../assets/provtemplates/whole-brain-cell-transform.svg" alt="Registering a brain atlas" /></p>
+<h2><a href="#entities" name="entities" class="anchor"><span class="anchor-link"></span></a>Entities</h2>
+<p>The different entity types involved are described below.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Type </th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html">Subject</a> </td>
+      <td>Subject that was used in the experiment </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastemplatevolume.html">TemplateVolume</a> </td>
+      <td>Template volume generated from the template image data </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasatlasspatialreferencesystem.html">AtlasSpatialReferenceSystem</a> </td>
+      <td>The spatial coordinate system of the atlas space </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasimagestackv021shapesimagestackshape.html">ImageStack</a> </td>
+      <td>Image stack obtained from the brain tissue of the subject </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html">ReconstructedCell</a> </td>
+      <td>Reconstructed cell </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastransform.html">Transform</a> </td>
+      <td>A linear or non-linear transform </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html">Protocol</a> </td>
+      <td>Protocol that describes the method used in the design and execution of the experiment </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#activities" name="activities" class="anchor"><span class="anchor-link"></span></a>Activities</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Type </th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainimagingv010shapesbrainimagingshape.html">BrainImaging</a> </td>
+      <td>Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html">ReconstructionFromImage</a> </td>
+      <td>Technique used to reconstruct the stained cell </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastransformation.html">Transformation</a> </td>
+      <td>Transform a geometric object </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#agents" name="agents" class="anchor"><span class="anchor-link"></span></a>Agents</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Type </th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html">Person</a> </td>
+      <td>Person associated with an activity </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html">SoftwareAgent</a> </td>
+      <td>Software associated with an activity </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html">Organization</a> </td>
+      <td>Organization associated with an activity </td>
+    </tr>
+  </tbody>
+</table>
+<h2><a href="#contributors" name="contributors" class="anchor"><span class="anchor-link"></span></a>Contributors</h2>
+<p>Huanxiang Lu <a href="mailto:&#104;u&#97;&#x6e;x&#x69;&#97;n&#x67;&#x2e;&#108;&#117;&#x40;&#x65;&#x70;f&#108;&#46;&#99;h">&#104;u&#97;&#x6e;x&#x69;&#97;n&#x67;&#x2e;&#108;&#117;&#x40;&#x65;&#x70;f&#108;&#46;&#99;h</a> Anna-Kristin Kaufmann <a href="mailto:&#x61;&#110;&#x6e;&#97;&#45;&#x6b;&#x72;&#105;&#115;&#x74;&#105;&#110;&#x2e;&#107;&#97;&#x75;f&#109;&#97;n&#x6e;@&#101;&#112;&#x66;&#x6c;&#46;&#99;&#x68;">&#x61;&#110;&#x6e;&#97;&#45;&#x6b;&#x72;&#105;&#115;&#x74;&#105;&#110;&#x2e;&#107;&#97;&#x75;f&#109;&#97;n&#x6e;@&#101;&#112;&#x66;&#x6c;&#46;&#99;&#x68;</a> Sy Mohameth Francois <a href="mailto:&#109;&#x6f;&#x68;&#x61;&#x6d;&#101;&#116;&#x68;&#x2e;s&#x79;&#64;&#101;&#x70;&#102;&#108;.&#99;&#x68;">&#109;&#x6f;&#x68;&#x61;&#x6d;&#101;&#116;&#x68;&#x2e;s&#x79;&#64;&#101;&#x70;&#102;&#108;.&#99;&#x68;</a> Sean Hill <a href="mailto:&#115;&#x65;&#97;&#x6e;.&#x68;&#x69;&#108;&#x6c;&#x40;&#x65;&#112;&#x66;&#x6c;&#46;&#x63;&#104;">&#115;&#x65;&#97;&#x6e;.&#x68;&#x69;&#108;&#x6c;&#x40;&#x65;&#112;&#x66;&#x6c;&#46;&#x63;&#104;</a></p>
 </div>
 <div>
-<a href="https://github.com/INCF/neuroshapes/tree/master/src/main/paradox/docs/data-models/morphology/morphology.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/INCF/neuroshapes/tree/master/src/main/paradox/docs/data-models/brainatlas/registering-whole-brain-morphology.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -236,7 +346,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../../../docs/data-models/electrophysiology/wholecellpatchclamp-recording.html" title="In Vitro Whole Cell Patch Clamp Recording" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html" title="Registering a Brain Atlas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -245,17 +355,17 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-In Vitro Whole Cell Patch Clamp Recording
+Registering a Brain Atlas
 </span>
 </div>
 </a>
-<a href="../../../docs/data-models/morphology/morphology-reconstruction.html" title="In Vitro Slice Neuron Morphology Reconstruction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../../../docs/data-models/electrophysiology/index.html" title="Electrophysiology" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-In Vitro Slice Neuron Morphology Reconstruction
+Electrophysiology
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">

@@ -151,6 +151,7 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/brainatlas/brain-atlas.html" class="page">Brain Atlas</a>
     <ul>
       <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html" class="active page">Registering a Brain Atlas</a></li>
+      <li><a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html" class="page">Registering a Whole Brain Morphology in an Atlas</a></li>
     </ul></li>
     <li><a href="../../../docs/data-models/electrophysiology/index.html" class="page">Electrophysiology</a>
     <ul>
@@ -184,6 +185,7 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#entities" class="header">Entities</a></li>
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#activities" class="header">Activities</a></li>
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -192,7 +194,7 @@ INCF/neuroshapes
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 0.2.0+27-03fee160
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+28-87079187
 </label>
 </li>
 </ul>
@@ -216,6 +218,7 @@ INCF/neuroshapes
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#entities" class="header">Entities</a></li>
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#activities" class="header">Activities</a></li>
     <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#agents" class="header">Agents</a></li>
+    <li><a href="../../../docs/data-models/brainatlas/registering-brain-atlas.html#contributors" class="header">Contributors</a></li>
   </ul></li>
 </ul>
 </nav>
@@ -229,7 +232,7 @@ INCF/neuroshapes
 <h1><a href="#registering-a-brain-atlas" name="registering-a-brain-atlas" class="anchor"><span class="anchor-link"></span></a>Registering a Brain Atlas</h1>
 <h2><a href="#use-case" name="use-case" class="anchor"><span class="anchor-link"></span></a>Use case</h2>
 <h3><a href="#description" name="description" class="anchor"><span class="anchor-link"></span></a>Description</h3>
-<p>TBD</p>
+<p>This specification describes the process of register a brain atlas. The process starts with a subject collection which are imaged and processed to generate 3 derived entities: a template image data, a parcellation image data, as well as brain parcellation labels. The first 2 entities are further transformed into volumetric representation, from which an atlas spatial reference system is derived. The parcellation labels are converted into ontology. The final template volume, parcellation volume, parcellation ontology as well as the atlas spatial reference system are used to form an atlas release.</p>
 <h3><a href="#supported-data-queries" name="supported-data-queries" class="anchor"><span class="anchor-link"></span></a>Supported Data Queries</h3>
 <p>From a specific version of a brain atlas:</p>
 <ul>
@@ -239,7 +242,7 @@ INCF/neuroshapes
   <li>Get the coordinate system of the atlas spatial reference system</li>
 </ul>
 <h2><a href="#data-provenance-pattern" name="data-provenance-pattern" class="anchor"><span class="anchor-link"></span></a>Data Provenance pattern</h2>
-<p>Link towards the provenance pattern: TBD</p>
+<p><img src="../../../assets/provtemplates/atlas-registration-prov-template.svg" alt="Registering a brain atlas" /></p>
 <h2><a href="#entities" name="entities" class="anchor"><span class="anchor-link"></span></a>Entities</h2>
 <p>The different entity types involved are described below.</p>
 <table>
@@ -251,8 +254,44 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td>SubjectCollection </td>
-      <td>A description </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/schema-neurosciencegraphcommonssubjectcollectionv011.html">SubjectCollection</a> </td>
+      <td>A collection of subject to be used in the experiment </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastemplateimagedata.html">TemplateImageData</a> </td>
+      <td>Template image data acquired and processed from the subject collection </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasparcellationimagedata.html">ParcellationImageData</a> </td>
+      <td>Parcellation image data generated from the template image data </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasparcellationlabel.html">ParcellationLabel</a> </td>
+      <td>Parcellation labels correspond to the annotations in the parcellation image </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastemplatevolume.html">TemplateVolume</a> </td>
+      <td>Template volume generated from the template image data </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasparcellationvolume.html">ParcellationVolume</a> </td>
+      <td>Parcellation volume generated from the parcellation image data </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasparcellationontology.html">ParcellationOntology</a> </td>
+      <td>Parcellation ontology converted from the parcellation label </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasatlasspatialreferencesystem.html">AtlasSpatialReferenceSystem</a> </td>
+      <td>The spatial coordinate system of the atlas space </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasatlasrelease.html">AtlasRelease</a> </td>
+      <td>An atlas release comprises template volume, parcellation volume, parcellation ontology as well as the atlas spatial reference system </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html">Protocol</a> </td>
+      <td>Protocol that describes the method used in the design and execution of the experiment </td>
     </tr>
   </tbody>
 </table>
@@ -266,8 +305,20 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td>Atlas Construction </td>
-      <td>A description </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasatlasrelease.html">Atlas Construction</a> </td>
+      <td>Process to construct a brain atlas </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastemplatereconstruction.html">Template Reconstruction</a> </td>
+      <td>Reconstruct the template image data into volumetric representation </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasparcellationreconstruction.html">Parcellation Reconstruction</a> </td>
+      <td>Reconstruct the parcellation image data into volumetric representation </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasontologyconversion.html">Ontology Conversion</a> </td>
+      <td>Convert the parcellation label into ontological representation </td>
     </tr>
   </tbody>
 </table>
@@ -281,11 +332,21 @@ INCF/neuroshapes
   </thead>
   <tbody>
     <tr>
-      <td>Person </td>
-      <td>A description </td>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html">Person</a> </td>
+      <td>Person associated with an activity </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html">SoftwareAgent</a> </td>
+      <td>Software associated with an activity </td>
+    </tr>
+    <tr>
+      <td><a href="https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html">Organization</a> </td>
+      <td>Organization associated with an activity </td>
     </tr>
   </tbody>
 </table>
+<h2><a href="#contributors" name="contributors" class="anchor"><span class="anchor-link"></span></a>Contributors</h2>
+<p>Huanxiang Lu <a href="mailto:h&#x75;&#x61;n&#x78;&#105;&#x61;n&#103;&#46;&#108;&#x75;&#64;&#101;p&#x66;&#x6c;.&#99;&#104;">h&#x75;&#x61;n&#x78;&#105;&#x61;n&#103;&#46;&#108;&#x75;&#64;&#101;p&#x66;&#x6c;.&#99;&#104;</a> Anna-Kristin Kaufmann <a href="mailto:a&#110;n&#97;&#x2d;&#107;&#x72;&#105;&#x73;&#116;&#105;&#110;&#x2e;&#x6b;&#97;u&#x66;&#109;&#x61;&#x6e;&#x6e;&#64;&#x65;&#112;&#102;&#108;&#x2e;&#99;h">a&#110;n&#97;&#x2d;&#107;&#x72;&#105;&#x73;&#116;&#105;&#110;&#x2e;&#x6b;&#97;u&#x66;&#109;&#x61;&#x6e;&#x6e;&#64;&#x65;&#112;&#102;&#108;&#x2e;&#99;h</a> Sy Mohameth Francois <a href="mailto:&#x6d;&#111;&#x68;&#x61;&#x6d;&#x65;t&#x68;&#46;s&#121;&#64;&#x65;&#112;f&#x6c;&#x2e;&#99;&#x68;">&#x6d;&#111;&#x68;&#x61;&#x6d;&#x65;t&#x68;&#46;s&#121;&#64;&#x65;&#112;f&#x6c;&#x2e;&#99;&#x68;</a> Sean Hill <a href="mailto:&#115;&#x65;an&#x2e;&#104;&#x69;&#108;l&#x40;&#101;&#x70;&#x66;&#108;&#x2e;c&#104;">&#115;&#x65;an&#x2e;&#104;&#x69;&#108;l&#x40;&#101;&#x70;&#x66;&#108;&#x2e;c&#104;</a></p>
 </div>
 <div>
 <a href="https://github.com/INCF/neuroshapes/tree/master/src/main/paradox/docs/data-models/brainatlas/registering-brain-atlas.md" title="Edit this page" class="md-source-file md-edit">
@@ -294,7 +355,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.2.0+27-03fee160
+0.2.0+28-87079187
 </span>
 </div>
 </article>
@@ -317,13 +378,13 @@ Brain Atlas
 </span>
 </div>
 </a>
-<a href="../../../docs/data-models/electrophysiology/index.html" title="Electrophysiology" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+<a href="../../../docs/data-models/brainatlas/registering-whole-brain-morphology.html" title="Registering a Whole Brain Morphology in an Atlas" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
 <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
 <span class="md-flex__ellipsis">
 <span class="md-footer-nav__direction">
 Next
 </span>
-Electrophysiology
+Registering a Whole Brain Morphology in an Atlas
 </span>
 </div>
 <div class="md-flex__cell md-flex__cell--shrink">
