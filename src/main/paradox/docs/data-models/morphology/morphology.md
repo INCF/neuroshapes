@@ -17,5 +17,3 @@ In this section we describe data models that represent the generation context of
 
 
 @@@
-
-
