@@ -35,10 +35,10 @@ target/
 # For Product Page #
 ####################
 # javascript dependencies
-src/main/paradox/product-page-src/node_modules
+src/main/product-page-src/node_modules
 # development output
-src/main/paradox/product-page-src/dist
-src/main/paradox/product-page-src/.cache
+src/main/product-page-src/dist
+src/main/product-page-src/.cache
 
 # Logs and databases #
 ######################
