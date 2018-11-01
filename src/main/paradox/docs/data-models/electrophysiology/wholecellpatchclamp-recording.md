@@ -24,7 +24,7 @@ The following points describe an example subset of questions supported by the da
 
 ## Data Provenance pattern
 
-![In Vitro Whole Cell Patch Clamp Recording](../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg)
+![In Vitro Whole Cell Patch Clamp Recording](../../../assets/provtemplates/wholecellpatchclamp-recording-prov-template.svg)
 
 
 ## Entities
