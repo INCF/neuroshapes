@@ -170,43 +170,16 @@ INCF/neuroshapes
   <li><a href="../../../docs/contact.html" class="page">Contact</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul>
-  <li><a href="../../../docs/shacl-tutorial/overview/index.html#shacl-in-a-nutshell" class="header">SHACL In a Nutshell</a>
-  <ul>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#what-is-shacl-" class="header">What is SHACL ?</a></li>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#json-ld-serialization" class="header">JSON-LD serialization</a></li>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#namespaces-and-context" class="header">Namespaces and Context</a></li>
-  </ul></li>
-</ul>
 </nav>
 
 </nav>
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 0.2.0+29-c7a82d47
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+30-0b9eaff2
 </label>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">Table of contents</label>
-<ul>
-  <li><a href="../../../docs/shacl-tutorial/overview/index.html#shacl-in-a-nutshell" class="header">SHACL In a Nutshell</a>
-  <ul>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#what-is-shacl-" class="header">What is SHACL ?</a></li>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#json-ld-serialization" class="header">JSON-LD serialization</a></li>
-    <li><a href="../../../docs/shacl-tutorial/overview/index.html#namespaces-and-context" class="header">Namespaces and Context</a></li>
-  </ul></li>
-</ul>
-</nav>
-
 </div>
 </div>
 </div>
@@ -214,266 +187,34 @@ INCF/neuroshapes
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
 <h1><a href="#shacl-in-a-nutshell" name="shacl-in-a-nutshell" class="anchor"><span class="anchor-link"></span></a>SHACL In a Nutshell</h1>
-<p>This document presents an example-driven overview of the W3C SHACL recommendation for RDF data validation.</p><div class="callout note "><div class="callout-title">Note</div>
-<p>The overview only introduces the W3C SHACL specification in the context of its usage within Neuroshapes.  For an in-depth description, the user should read the <a href="https://www.w3.org/TR/shacl/">W3C SHACL recommendation</a> but also the excellent  set of learning resources available at the <a href="http://www.validatingrdf.com/">Validating RDF website</a>.</p></div>
-<p>It is highly recommended to read the following section before continuing to read this document:</p>
+<p>Please find below some resources as well as useful links for building data models involving SHACL shapes:</p>
 <ul>
-  <li><a href="">JSON for Linking Data</a></li>
+  <li>The <a href="https://www.w3.org/TR/shacl/">W3C SHACL specification</a></li>
+  <li>Useful resources when learning SHACL
+    <ul>
+      <li>SHACL reference book, tutorials and playground <a href="http://www.validatingrdf.com/">http://www.validatingrdf.com/</a></li>
+      <li>SHACL playground: <a href="http://shacl.org/playground/">http://shacl.org/playground/</a></li>
+      <li><a href="https://www.topquadrant.com/technology/shacl/tutorial/">Topquadrant SHACL tutorial</a></li>
+    </ul>
+  </li>
+  <li>Useful resources when learning JSON-LD
+    <ul>
+      <li><a href="https://json-ld.org/">https://json-ld.org</a></li>
+      <li><a href="https://json-ld.org/spec/latest/json-ld-api-best-practices/">Json-ld API best practicies</a></li>
+    </ul>
+  </li>
+  <li>Ontology/SHACL editor
+    <ul>
+      <li><a href="https://www.topquadrant.com/downloads/topbraid-composer-install/">TopBraid Composer Free Edition</a></li>
+    </ul>
+  </li>
+  <li>SHACL validator
+    <ul>
+      <li><a href="https://github.com/labra/shaclex">SHACLEX</a>: scala based</li>
+      <li><a href="https://github.com/TopQuadrant/shacl">TopQuadrant/shacl</a>: JAVA based</li>
+    </ul>
+  </li>
 </ul>
-<h2><a href="#what-is-shacl-" name="what-is-shacl-" class="anchor"><span class="anchor-link"></span></a>What is SHACL ?</h2>
-<p>The <strong>SHA</strong>pes <strong>C</strong>onstraint <strong>L</strong>anguage (**SHACL**) is a W3C recommendation allowing to validate a RDF graph against a set of constraints defined in so-called shapes.</p>
-<h2><a href="#json-ld-serialization" name="json-ld-serialization" class="anchor"><span class="anchor-link"></span></a>JSON-LD serialization</h2>
-<p>All examples (both shapes and data) in this document are serialized using the <a href="">JSON-LD</a> format unlike the <a href="https://www.w3.org/TR/shacl/">W3C SHACL recommendation</a> document where <a href="https://www.w3.org/TR/turtle/">TURTLE</a> is preferred. While Turtle is more compact, JSON-LD is more suitable for exchange in the context of the web through already popular json APIs which is an important aspect for adoption purpose specially by developers. Nevertheless, it is possible to convert from one format to the other using many converters available online. <a href="http://www.easyrdf.org/converter">EASYRDF</a> is one example. </p>
-<h2><a href="#namespaces-and-context" name="namespaces-and-context" class="anchor"><span class="anchor-link"></span></a>Namespaces and Context</h2>
-<p>JSON-LD can be very verbose if a context is not provided. To improve readability and to simplify both shapes and data examples, a SHACL context as well a prefix mappings was created as shown below. This context is only related to the SHACL vocabulary (i.e. the set of terms defined in the SHACL specification) and <strong>it is highly recommended</strong> to use it. Since writing a SHACL shape almost always required using a domain vocabulary, the SHACL context can be updated with domain specific prefix mappings or aliases when needed. In all cases, the context below will be refer to <a href="http://example.org/shaclcontext">http://example.org/shaclcontext</a> from now on.</p>
-<dl>
-  <dt>Prefix mappings</dt>
-  <dd>
-  <pre class="prettyprint"><code class="language-md">Prefix Name | Namespace
--------------- | --------------
-sh | http://www.w3.org/ns/shacl#
-shsh | http://www.w3.org/ns/shacl-shacl#
-rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns#
-rdfs | http://www.w3.org/2000/01/rdf-schema#
-owl | http://www.w3.org/2002/07/owl#
-xsd | http://www.w3.org/2001/XMLSchema#
-prov | http://www.w3.org/ns/prov#
-skos | http://www.w3.org/2004/02/skos/core#
-schema | http://schema.org/
-nxv | https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/
-nsg | https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/
-ex | http://example.org/</code></pre><a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/assets/contexts/nexus/core/shacl20170720/prefixmapings.md" class="snippet-full-source github">Full source at GitHub</a></dd>
-  <dt>SHACL JSON-LD context
-  </dt>
-  <dd>
-  <pre class="prettyprint"><code class="language-json">{
-  &quot;@context&quot;: [
-    {
-      &quot;owl&quot;: &quot;http://www.w3.org/2002/07/owl#&quot;,
-      &quot;rdf&quot;: &quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;,
-      &quot;rdfs&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#&quot;,
-      &quot;xsd&quot;: &quot;http://www.w3.org/2001/XMLSchema#&quot;,
-      &quot;skos&quot;: &quot;http://www.w3.org/2004/02/skos/core#&quot;,
-      &quot;prov&quot;: &quot;http://www.w3.org/ns/prov#&quot;,
-      &quot;sh&quot;: &quot;http://www.w3.org/ns/shacl#&quot;,
-      &quot;shsh&quot;: &quot;http://www.w3.org/ns/shacl-shacl#&quot;,
-      &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;,
-      &quot;schema&quot;: &quot;http://schema.org/&quot;,
-      &quot;nxv&quot;: &quot;https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/&quot;,
-      &quot;nsg&quot;: &quot;https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/&quot;,
-      &quot;class&quot;: {
-        &quot;@id&quot;: &quot;sh:class&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;path&quot;: {
-        &quot;@id&quot;: &quot;sh:path&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;qualifiedValueShape&quot;: {
-        &quot;@id&quot;: &quot;sh:qualifiedValueShape&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;qualifiedValueShapesDisjoint&quot;: {
-        &quot;@id&quot;: &quot;sh:qualifiedValueShapesDisjoint&quot;,
-        &quot;@type&quot;: &quot;xsd:boolean&quot;
-      },
-      &quot;qualifiedMinCount&quot;: {
-        &quot;@id&quot;: &quot;sh:qualifiedMinCount&quot;,
-        &quot;@type&quot;: &quot;xsd:integer&quot;
-      },
-      &quot;qualifiedMaxCount&quot;: {
-        &quot;@id&quot;: &quot;sh:qualifiedMaxCount&quot;,
-        &quot;@type&quot;: &quot;xsd:integer&quot;
-      },
-      &quot;maxCount&quot;: {
-        &quot;@id&quot;: &quot;sh:maxCount&quot;,
-        &quot;@type&quot;: &quot;xsd:integer&quot;
-      },
-      &quot;minCount&quot;: {
-        &quot;@id&quot;: &quot;sh:minCount&quot;,
-        &quot;@type&quot;: &quot;xsd:integer&quot;
-      },
-      &quot;minInclusive&quot;: {
-        &quot;@id&quot;: &quot;sh:minInclusive&quot;
-      },
-      &quot;maxInclusive&quot;: {
-        &quot;@id&quot;: &quot;sh:maxInclusive&quot;
-      },
-      &quot;maxExclusive&quot;: {
-        &quot;@id&quot;: &quot;sh:maxExclusive&quot;
-      },
-      &quot;minExclusive&quot;: {
-        &quot;@id&quot;: &quot;sh:minExclusive&quot;
-      },
-      &quot;in&quot;: {
-        &quot;@id&quot;: &quot;sh:in&quot;,
-        &quot;@container&quot;: &quot;@list&quot;
-      },
-      &quot;imports&quot;: {
-        &quot;@id&quot;: &quot;owl:imports&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@set&quot;
-      },
-      &quot;datatype&quot;: {
-        &quot;@id&quot;: &quot;sh:datatype&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;description&quot;: {
-        &quot;@id&quot;: &quot;sh:description&quot;
-      },
-      &quot;name&quot;: {
-        &quot;@id&quot;: &quot;sh:name&quot;
-      },
-      &quot;severity&quot;: {
-        &quot;@id&quot;: &quot;sh:severity&quot;
-      },
-      &quot;nodeKind&quot;: {
-        &quot;@id&quot;: &quot;sh:nodeKind&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;BlankNode&quot;: {
-        &quot;@id&quot;: &quot;sh:BlankNode&quot;
-      },
-      &quot;BlankNodeOrIRI&quot;: {
-        &quot;@id&quot;: &quot;sh:BlankNodeOrIRI&quot;
-      },
-      &quot;BlankNodeOrLiteral&quot;: {
-        &quot;@id&quot;: &quot;sh:BlankNodeOrLiteral&quot;
-      },
-      &quot;IRI&quot;: {
-        &quot;@id&quot;: &quot;sh:IRI&quot;
-      },
-      &quot;IRIOrLiteral&quot;: {
-        &quot;@id&quot;: &quot;sh:IRIOrLiteral&quot;
-      },
-      &quot;Literal&quot;: {
-        &quot;@id&quot;: &quot;sh:Literal&quot;
-      },
-      &quot;prefix&quot;: {
-        &quot;@id&quot;: &quot;sh:prefix&quot;,
-        &quot;@type&quot;: &quot;xsd:string&quot;
-      },
-      &quot;declare&quot;: {
-        &quot;@id&quot;: &quot;sh:declare&quot;
-      },
-      &quot;namespace&quot;: {
-        &quot;@id&quot;: &quot;sh:namespace&quot;,
-        &quot;@type&quot;: &quot;xsd:anyURI&quot;
-      },
-      &quot;Violation&quot;: {
-        &quot;@id&quot;: &quot;sh:Violation&quot;
-      },
-      &quot;suggestedShapesGraph&quot;: {
-        &quot;@id&quot;: &quot;sh:suggestedShapesGraph&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;shapesGraph&quot;: {
-        &quot;@id&quot;: &quot;sh:shapesGraph&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;node&quot;: {
-        &quot;@id&quot;: &quot;sh:node&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;property&quot;: {
-        &quot;@id&quot;: &quot;sh:property&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@set&quot;
-      },
-      &quot;targetClass&quot;: {
-        &quot;@id&quot;: &quot;sh:targetClass&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;targetObjectsOf&quot;: {
-        &quot;@id&quot;: &quot;sh:targetObjectsOf&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;targetSubjectsOf&quot;: {
-        &quot;@id&quot;: &quot;sh:targetSubjectsOf&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;targetNode&quot;: {
-        &quot;@id&quot;: &quot;sh:targetNode&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;target&quot;: {
-        &quot;@id&quot;: &quot;sh:target&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;isDefinedBy&quot;: {
-        &quot;@id&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#isDefinedBy&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;shapes&quot;: {
-        &quot;@reverse&quot;: &quot;http://www.w3.org/2000/01/rdf-schema#isDefinedBy&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@set&quot;
-      },
-      &quot;Shape&quot;: {
-        &quot;@id&quot;: &quot;sh:Shape&quot;
-      },
-      &quot;NodeShape&quot;: {
-        &quot;@id&quot;: &quot;sh:NodeShape&quot;
-      },
-      &quot;PropertyShape&quot;: {
-        &quot;@id&quot;: &quot;sh:PropertyShape&quot;
-      },
-      &quot;or&quot;: {
-        &quot;@id&quot;: &quot;sh:or&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@list&quot;
-      },
-      &quot;and&quot;: {
-        &quot;@id&quot;: &quot;sh:and&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@list&quot;
-      },
-      &quot;xone&quot;: {
-        &quot;@id&quot;: &quot;sh:xone&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@list&quot;
-      },
-      &quot;not&quot;: {
-        &quot;@id&quot;: &quot;sh:not&quot;,
-        &quot;@type&quot;: &quot;@id&quot;,
-        &quot;@container&quot;: &quot;@list&quot;
-      },
-      &quot;lessThan&quot;: {
-        &quot;@id&quot;: &quot;sh:lessThan&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      },
-      &quot;hasValue&quot;: {
-        &quot;@id&quot;: &quot;sh:hasValue&quot;
-      },
-      &quot;resultMessage&quot;: {
-        &quot;@id&quot;: &quot;sh:message&quot;
-      },
-      &quot;deactivated&quot;: {
-        &quot;@id&quot;: &quot;sh:deactivated&quot;
-      },
-      &quot;pattern&quot;: {
-        &quot;@id&quot;: &quot;sh:pattern&quot;
-      },
-      &quot;label&quot;: {
-        &quot;@id&quot;: &quot;rdfs:label&quot;,
-        &quot;@type&quot;: &quot;xsd:string&quot;
-      },
-      &quot;comment&quot;: {
-        &quot;@id&quot;: &quot;rdfs:comment&quot;,
-        &quot;@type&quot;: &quot;xsd:string&quot;
-      },
-      &quot;editorialNote&quot;: {
-        &quot;@id&quot;: &quot;skos:editorialNote&quot;,
-        &quot;@type&quot;: &quot;xsd:string&quot;
-      },
-      &quot;seeAlso&quot;: {
-        &quot;@id&quot;: &quot;rdfs:seeAlso&quot;,
-        &quot;@type&quot;: &quot;@id&quot;
-      }
-    }
-  ]
-}</code></pre><a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/assets/contexts/nexus/core/shacl20170720/v0.1.0.json" class="snippet-full-source github">Full source at GitHub</a></dd>
-</dl>
 </div>
 <div>
 <a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/docs/shacl-tutorial/overview/index.md" title="Edit this page" class="md-source-file md-edit">
@@ -482,7 +223,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.2.0+29-c7a82d47
+0.2.0+30-0b9eaff2
 </span>
 </div>
 </article>
