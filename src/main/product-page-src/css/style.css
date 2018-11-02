@@ -178,9 +178,12 @@ audio, canvas, iframe, img, svg, video {
   background: #f7f9fa;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
+  color: #333;
+}
+.hero .regular-box h2 {
   color: #333;
 }
 .bordered-box {
@@ -197,6 +200,7 @@ p {
 
 article {
   margin: 2em auto;
+  margin-bottom: 100px;
 }
 
 header {
@@ -315,11 +319,11 @@ canvas.lines {
 .hero h1, .hero h2 {
   color: white;
   line-height: 1.5em;
-  text-shadow: 0 2px 5px rgb(49,49,93);
+  /* text-shadow: 0 2px 5px rgb(49,49,93); */
 }
 
 .hero h2 {
-  color: rgba(247,249,250,0.75);
+  color: #64ffbb;
   margin-bottom: 4em;
 }
 
@@ -784,12 +788,10 @@ footer form {
 
 .bg-gradient {
   background-color: #89d8d3;
-  background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-
+  background-image: linear-gradient(315deg, #79e2e7 0%, #7cd7ab 74%);
   background-repeat: round;
   color: white;
 }
-
 .adoption {
   transition-duration: 86ms;
   transition-property: box-shadow,-webkit-transform;
@@ -968,6 +970,11 @@ ul.menu {
 
 .feature-description h2 {
   border-bottom: 1px solid #DBE3E7;
+  margin-bottom: 1em;
+}
+
+.description-content {
+  padding: 0 1em;
 }
 
 .slide-in {
@@ -979,6 +986,29 @@ ul.menu {
   animation-delay: 0.2s;
   animation-duration: .7s;
   animation-fill-mode: forwards;
+}
+
+ul {
+  margin: 0;
+}
+li {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 100;
+  word-spacing: 0.05em;
+  list-style: none;
+  margin-bottom: 1em;
+}
+li:before {
+  background-image: url("../img/check-circle.svg");
+  content: '';
+  background-position: center;
+  height: 1em;
+  width: 1em;
+  margin-left: -28px;
+  position: absolute;
+  background-size: 1em;
+  background-repeat: no-repeat;
 }
 
 .slide-in.first{

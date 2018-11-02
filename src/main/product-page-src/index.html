@@ -10,7 +10,8 @@
   <meta name="theme-color" content="#18334f">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/code.scss" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 </head>
 
 <body>
@@ -83,91 +84,88 @@
         <div class="container contained column">
           <div class="section-title">
             <h2>Why Neuroshapes?</h2>
-            <!-- <h3>Data specialists get fine-grained control they need, while programmers and scientists are enabled with tools they'll love to work with</h3> -->
           </div>
           <div class="container column">
-            <div class="feature-container container row" id="data-consumption">
+            <div class="feature-container container row" style="justify-content: space-around;">
               <div class="container column feature-description regular-box">
                 <h2>
                   <div class="tick bg-gradient"></div>
                   Motivation
                 </h2>
-                <p>
-                  Modern scientific data management requires comprehensive support for the <em>FAIR</em> (Findable,
-                  Accessible,
-                  Interoperable, Reusable) principles. Here we demonstrate a general approach, or design pattern, to
-                  supporting FAIR principles for diverse neuroscience data.
-                </p>
-                <p>
-                  The design pattern ensures that the key
-                  scientific and technical activities and agents of the data generation process are expressed in a
-                  validatable provenance-based data model.
+                <div class="description-content">
 
-                  Thus, the data models capture contextual information necessary
-                  to interpret the scientific meaning of the data, infer the resulting data types, evaluate trust and
-                  quality, ensure attribution of all contributors, and support data reuse, integration,
-                  interoperability
-                  and longevity.
-                </p>
-                <p>
-                  We describe the principles of the design pattern and demonstrate its generality using
-                  multiple data types including neuron morphologies, electrophysiological data, brain atlases and
-                  computational models. These data models are currently used to support search, discovery, provenance
-                  tracking, publishing and data-driven modeling workflows in the Blue Brain Project and the EU Human
-                  Brain Project.
-                </p>
-                <p>
-                  A <a href="http://github.com/INCF/neuroshapes">public repository</a> and an <a href="https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open">INCF
-                    Special Interest
-                    Group</a>
-                  have been established to disseminate and foster collaboration on these data models.
-                </p>
-                <p>
-                  This design pattern may be valuable for supporting FAIR data principles in other domains.
-                </p>
+                  <p>
+                    Modern scientific data management requires comprehensive support for the FAIR (Findable,
+                    Accessible,
+                    Interoperable, Reusable) principles.
+                    Neuroshapes is a general approach, or design pattern, for supporting FAIR principles for diverse
+                    neuroscience data with the following benefits:
+                  </p>
+                  <p>
+                    <ul>
+                      <li>
+                        Neuroshapes ensures that the key scientific and technical activities and agents of the data
+                        generation process are expressed in a validatable provenance-based data model.
+                      </li>
+                    </ul>
+                  </p>
+                  <p>
+                    Neuroshapes captures the contextual information necessary to:
+                    <ul>
+
+                      <li>
+                        Interpret the scientific meaning of the data.
+                      </li>
+                      <li>
+                        Infer the resulting data types.
+                      </li>
+                      <li>
+                        Evaluate trust and quality.
+                      </li>
+                      <li>
+                        Ensure attribution of all contributors.
+                      </li>
+                      <li>
+                        Support data reuse, integration, interoperability and longevity.
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+
               </div>
-              <div class="container column feature-description">
+              <div class="container column feature-description regular-box">
                 <h2>
                   <div class="tick bg-gradient"></div>
                   Goals
                 </h2>
+                <div class="description-content">
                 <p>
-                  The main goal is to promote:
+                  The main goal is to provide design patterns, best practices as well as tools to promote:
                   <ul>
+
                     <li>
-                      <p>
-                        The use of standard semantic markups and linked data principles as ways to structure metadata
-                        and related data: the W3C RDF format is leveraged, specifically its
-                        developer-friendly JSON-LD serialization. The adoption of linked data principles and JSON-LD
-                        will ease federated access and discoverability of distributed neuroscience (meta)data over the
-                        web.
-                      </p>
+                      The use of standard semantic markups and linked data principles as ways to structure metadata and
+                      related data.
                     </li>
                     <li>
-                      <p>
-                        The use of the W3C SHACL (Shapes Constraint Language) recommendation as a rich metadata schema
-                        language which is formal and expressive; interoperable; machine-readable; and domain-agnostic.
-                        With SHACL, (meta)data quality can be enforced based on schemas and vocabularies (easily
-                        discoverable and searchable) rather than being fully encoded in procedural codes. SHACL also
-                        provides key interoperability capabilities to ensure the evolution of standard data models and
-                        data longevity. It allows to incrementally build standard data models in terms of semantics and
-                        sophistication.
-                      </p>
+                      The use of the <a href="https://www.w3.org/TR/shacl/"> W3C SHACL (Shapes Constraint Language)</a>
+                      recommendation as a rich metadata schema language which is formal and expressive; interoperable;
+                      machine-readable; and domain-agnostic.
                     </li>
                     <li>
-                      <p>
-                        The reuse of existing schemas and semantic markups (like schema.org ) and existing ontologies
-                        and controlled vocabularies (including NIFSTD - NIF Standard Ontologies)
-                      </p>
+                      The reuse of existing schemas and semantic markups (<a href="https://schema.org/"> schema.org </a>,
+                      <a href="https://www.w3.org/TR/prov-o/"> W3C PROV-O </a>) and existing ontologies and controlled
+                      vocabularies (including <a href="https://github.com/SciCrunch/NIF-Ontology"> NIFSTD</a> -
+                      Neuroscience Information Framework Standard Ontologies).
                     </li>
                     <li>
-                      <p>
-                        The use of the W3C PROV-O recommendation as a format to record (meta)data provenance:
-                        a SHACL version of the W3C PROV-O is created.
-                      </p>
+                      The use of the <a href="https://www.w3.org/TR/prov-o/"> W3C PROV-O </a> recommendation as a
+                      format to record (meta)data provenance.
                     </li>
+
                   </ul>
                 </p>
+                </div>
               </div>
             </div>
           </div>
@@ -208,32 +206,40 @@
         <div class="container contained column">
           <div class="section-title">
             <h2>Adoption</h2>
-            <p>Utilizing <a href="https://bluebrain.github.io/nexus/">BBP
-              Nexus</a></p>
+            <p>Utilizing Neuroshapes in conjuction with <a href="https://bluebrain.github.io/nexus/">BBP
+                Nexus</a></p>
           </div>
           <div class="container contained row" style="
             max-width: 980px;
             width: 100%;
           ">
+            <a href="https://www.humanbrainproject.eu/en/" target="_blank" style="display:flex;">
               <div class="container column adoption">
                 <img src="./img/hbp-logo.png" alt="Human Brain Project" style="margin-top: -1em;">
                 <p class="tag">
-                    <i class="far fa-heart"></i> Manage single-cell model data
+                  <i class="far fa-heart"></i> Manage single-cell model data
                 </p>
               </div>
+            </a>
+            <a href="https://www.camh.ca/en/science-and-research/institutes-and-centres/krembil-centre-for-neuroinformatics"
+              target="_blank" style="display:flex;">
               <div class="container column adoption">
-                <img src="./img/krembil.png" alt="Krembile Centre for Neuroinformatics" style="margin-top: 2em;">
+                <img src="./img/krembil.png" alt="Krembile Centre for Neuroinformatics" style="margin-top: 2.5em;">
                 <p class="tag">
-                    <i class="far fa-heart"></i> Neuro-imaging data
+                  <i class="far fa-heart"></i> Neuro-imaging data
                 </p>
               </div>
+            </a>
+            <a href="https://bluebrain.epfl.ch/" target="_blank" style="display:flex;">
               <div class="container column adoption">
                 <img src="./img/BBP_logo.png" alt="Blue Brain Project">
                 <p class="tag">
-                    <i class="far fa-heart"></i> Manage data used and generated across the entire reconstruction and simulation cycle 
+                  <i class="far fa-heart"></i> Manage data used and generated across the entire reconstruction and
+                  simulation cycle 
                 </p>
               </div>
-            </div>
+            </a>
+          </div>
         </div>
       </article>
 
