@@ -1,9 +1,15 @@
+:root {
+  --light-green: #b9e9d4;
+  --light-blue: #44c7f4;
+  --light-grey: #FAFBFC;
+}
+
 html {
   height: auto;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  background-color: #FAFBFC;
+  background-color: var(--light-grey);
 }
 *::selection {
   color: white;
@@ -25,6 +31,14 @@ body {
   background: linear-gradient(#c5dfeb 10%, #e2e7ea);
   line-height: 1;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--light-green);
+}
+a:hover {
+  text-decoration: none;
 }
 p {
   line-height: 24px;
@@ -122,6 +136,9 @@ a, a:active, a:focus {
 .container.column {
   flex-direction: column;
 }
+.container.row {
+  flex-direction: row;
+}
 .container.justify-start {
   justify-content: flex-start;
 }
@@ -161,9 +178,13 @@ audio, canvas, iframe, img, svg, video {
   background: #f7f9fa;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.1);
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-between;
+  color: #333;
+}
+.hero .regular-box h2 {
+  color: #333;
 }
 .bordered-box {
   position: relative;
@@ -179,6 +200,7 @@ p {
 
 article {
   margin: 2em auto;
+  margin-bottom: 100px;
 }
 
 header {
@@ -265,8 +287,6 @@ section {
 }
 
 .hero {
-  /* background-color: #f8ceec; */
-  background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
   background-image: radial-gradient(ellipse at center -50%, #18334f 0%,#18334f 18%,#192532 57%,#000000f0 100%);
   padding-bottom: 8rem;
   padding-top: 8rem;
@@ -299,11 +319,11 @@ canvas.lines {
 .hero h1, .hero h2 {
   color: white;
   line-height: 1.5em;
-  text-shadow: 0 2px 5px rgb(49,49,93);
+  /* text-shadow: 0 2px 5px rgb(49,49,93); */
 }
 
 .hero h2 {
-  color: rgba(247,249,250,0.75);
+  color: #64ffbb;
   margin-bottom: 4em;
 }
 
@@ -766,19 +786,77 @@ footer form {
   background-color: #8de2ff57;
 }
 
+.bg-gradient {
+  background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #79e2e7 0%, #7cd7ab 74%);
+  background-repeat: round;
+  color: white;
+}
+.participants {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.participant {
+  display:flex;
+  background-color: white;
+  color: #333;
+  margin: 1em;
+  border-radius: 4px;
+  padding: 1em;
+}
+.participant em {
+  font-weight: bold;
+  color:#ff6666c7;
+}
+.adoption {
+  transition-duration: 86ms;
+  transition-property: box-shadow,-webkit-transform;
+  transition-property: box-shadow,transform;
+  transition-property: box-shadow,transform,-webkit-transform;
+  will-change: box-shadow,transform;
+  text-align: center;
+  /* background-color: #fff; */
+  border-radius: 6px;
+  box-shadow: 0 1.5rem 1.5rem -1.25rem rgba(10,10,10,.05);
+  padding: 2em;
+  background: #f7f9fa;
+  justify-content: space-between;
+    display: flex;
+}
+.adoption img {
+  width: 200px;
+}
+
+.adoption .tag {
+  max-width: 200px;
+  color: #333;
+}
+
+.adoption:hover {
+  box-shadow: 0 3rem 3rem -1.25rem rgba(10,10,10,.1);
+  -webkit-transform: translateY(-.5rem);
+  transform: translateY(-.5rem);
+}
+.adoption i {
+  transition: all 86ms;
+}
+.adoption:hover i {
+  color: #ff6666;
+  font-size: 1em;
+}
+
 button {
+  white-space: nowrap;
   cursor: pointer;
   padding: 1em;
   -webkit-appearance: none;
   border: none;
   border-radius: 2px;
-  color: grey;
   transition: all 300ms ease-in;
-  background-color: #44c7f4;
-  background-image: linear-gradient(45deg, #1b75ba 0%, #44c7f4 74%);
   background-size: 1px 50px;
-  color: white;
   margin-top: 0;
+  font-size: 1rem;
+  border-radius: 4px;
 }
 
 button:active, button:focus {
@@ -903,12 +981,16 @@ ul.menu {
 .tick {
   height: 1em; width: 1em;
   display: inline-block;
-  background-image: linear-gradient(45deg, #1b75ba 0%, #44c7f4 74%);
   clip-path: polygon(0 0, 30% 0, 100% 100%, 70% 100%);
 }
 
 .feature-description h2 {
   border-bottom: 1px solid #DBE3E7;
+  margin-bottom: 1em;
+}
+
+.description-content {
+  padding: 0 1em;
 }
 
 .slide-in {
@@ -920,6 +1002,29 @@ ul.menu {
   animation-delay: 0.2s;
   animation-duration: .7s;
   animation-fill-mode: forwards;
+}
+
+ul {
+  margin: 0;
+}
+li {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 100;
+  word-spacing: 0.05em;
+  list-style: none;
+  margin-bottom: 1em;
+}
+li:before {
+  background-image: url("../img/check-circle.svg");
+  content: '';
+  background-position: center;
+  height: 1em;
+  width: 1em;
+  margin-left: -28px;
+  position: absolute;
+  background-size: 1em;
+  background-repeat: no-repeat;
 }
 
 .slide-in.first{
@@ -1020,6 +1125,7 @@ ul.menu {
 }
 .section-title h2 {
   font-size: 34px;
+  margin-bottom: 1em;
 
 }
 .section-title h3 {
