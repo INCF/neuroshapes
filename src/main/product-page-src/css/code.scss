@@ -12,7 +12,7 @@ pre {
   border-radius: 4px;
   color: #fff;
   display: block;
-  line-height: 1em;
+  line-height: 0.5em;
   position: relative;
   font-size: 0.875em;
   overflow-x: auto;
@@ -20,7 +20,7 @@ pre {
   white-space: pre;
   word-wrap: normal;
   text-align: left;
-  div {
-
+  .comment {
+    color: #fea;
   }
 }

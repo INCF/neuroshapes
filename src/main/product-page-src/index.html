@@ -10,8 +10,7 @@
   <meta name="theme-color" content="#18334f">
   <link href="./css/style.css" rel="stylesheet">
   <link href="./css/code.scss" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
 
 <body>
@@ -40,30 +39,44 @@
       </div>
 
       <article class="container" id="get-started">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <!-- <h2>Get Started</h2> -->
-              <pre data-lang='terminal' class='prettyprint'>
-                  <div>$ Git clone ………</div>
-                  <div>$ Sbt test ………</div>
-                  <div>$ Sbt collect ………</div>
+        <!-- <div class="fold"></div> -->
+        <div class="container contained column">
+          <div class="section-title">
+            <!-- <h2>Get Started</h2> -->
+            <pre data-lang='terminal' class='prettyprint'>
+                  <div class="comment"># Get Started! </div>
+                  <div class="comment"># Clone the repository</div><br/>
+                  <div>$ git clone https://github.com/INCF/neuroshapes.git</div>
+                  <div>$ cd neuroshapes</div><br/>
+                  <div class="comment"># Run 'sbt'</div><br/>
+                  <div>$ sbt</div><br/>
+                  <div class="comment"># Run 'test'</div><br/>
+                  <div>$ test</div><br/>
+                  <div class="comment"># Export all the schemas to the dir /tmp/my-schemas </div>
+                  <div class="comment"># using http://localhost:8080/v0 as base uri </div><br/>
+                  <div>$ exportSchemas http://localhost:8080/v0 /tmp/my-schemas</div>
               </pre>
+            <div class="container column row">
               <div class="container column">
-                  <div class="container column">
-                      <Button>Documentation</Button>
-                  </div>
-                  <div class="container column">
-                      <p>
-                          Tools: <i class="fas fa-wrench"></i>
+                <a href="https://incf.github.io/neuroshapes/docs">
+                  <Button class="bg-gradient"><span><i class="fas fa-book"></i> Documentation</span></Button>
+                </a>
+              </div>
+              <div class="container column">
+                <div style="
+                        text-align: left;
+                        padding-left: 1em;">
+                  Tools: <i class="fas fa-wrench"></i>
 
-                          Ipython Notebook to create data using SHACL shapes to create and manage data using BB Nexus: https://github.com/BlueBrain/nexus/tree/v0/tutorial
+                  <a href="https://github.com/BlueBrain/nexus/tree/v0/tutorial">iPython Notebook</a> to create data
+                  using SHACL shapes to create and manage data using <a href="https://bluebrain.github.io/nexus/">BBP
+                    Nexus</a>
 
-                      </p>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
       </article>
 
       <article class="container column tab-container" id="why-neuroshapes">
@@ -76,7 +89,7 @@
             <div class="feature-container container row" id="data-consumption">
               <div class="container column feature-description regular-box">
                 <h2>
-                  <div class="tick"></div>
+                  <div class="tick bg-gradient"></div>
                   Motivation
                 </h2>
                 <p>
@@ -115,7 +128,7 @@
               </div>
               <div class="container column feature-description">
                 <h2>
-                  <div class="tick"></div>
+                  <div class="tick bg-gradient"></div>
                   Goals
                 </h2>
                 <p>
@@ -162,50 +175,74 @@
       </article>
 
       <article class="container" id="specifications">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <h2>Specifications</h2>
-              <p>IMAGE HERE</p>
-            </div>
+        <!-- <div class="fold"></div> -->
+        <div class="container contained column">
+          <div class="section-title">
+            <h2>Specifications</h2>
+            <p>IMAGE HERE</p>
           </div>
+        </div>
       </article>
 
       <article class="container" id="get-involved">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <h2>Get Involved</h2>
-            </div>
+        <!-- <div class="fold"></div> -->
+        <div class="container contained column">
+          <div class="section-title">
+            <h2>Get Involved</h2>
           </div>
+        </div>
       </article>
 
       <article class="container" id="incf-sig">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <h2>INCF/Neuroshapes SIG</h2>
-              <h3>Participants</h3>
-            </div>
+        <!-- <div class="fold"></div> -->
+        <div class="container contained column">
+          <div class="section-title">
+            <h2>INCF/Neuroshapes SIG</h2>
+            <h3>Participants</h3>
           </div>
+        </div>
       </article>
 
       <article class="container" id="adoption">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <h2>Adoption</h2>
-            </div>
+        <!-- <div class="fold"></div> -->
+        <div class="container contained column">
+          <div class="section-title">
+            <h2>Adoption</h2>
+            <p>Utilizing <a href="https://bluebrain.github.io/nexus/">BBP
+              Nexus</a></p>
           </div>
+          <div class="container contained row" style="
+            max-width: 980px;
+            width: 100%;
+          ">
+              <div class="container column adoption">
+                <img src="./img/hbp-logo.png" alt="Human Brain Project" style="margin-top: -1em;">
+                <p class="tag">
+                    <i class="far fa-heart"></i> Manage single-cell model data
+                </p>
+              </div>
+              <div class="container column adoption">
+                <img src="./img/krembil.png" alt="Krembile Centre for Neuroinformatics" style="margin-top: 2em;">
+                <p class="tag">
+                    <i class="far fa-heart"></i> Neuro-imaging data
+                </p>
+              </div>
+              <div class="container column adoption">
+                <img src="./img/BBP_logo.png" alt="Blue Brain Project">
+                <p class="tag">
+                    <i class="far fa-heart"></i> Manage data used and generated across the entire reconstruction and simulation cycle 
+                </p>
+              </div>
+            </div>
+        </div>
       </article>
 
       <article class="container" id="acknowledgements">
-          <!-- <div class="fold"></div> -->
-          <div class="container contained column">
-            <div class="section-title">
-              <h2>Acknowledgements</h2>
-            </div>
+        <div class="container contained column">
+          <div class="section-title">
+            <h2>Acknowledgements</h2>
           </div>
+        </div>
       </article>
     </section>
 
