@@ -27,11 +27,11 @@ The different entity types involved are described below.
 | Type  | Description|
 | ------------- | ------------- |
 | [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html)                            |     Subject that was used in the experiment     |
-| [TemplateVolume](https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastemplatevolume.html)  |  Template volume generated from the template image data  |
-| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlasatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
-| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasimagestackv021shapesimagestackshape.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [TemplateVolume](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastemplatevolumev010shapestemplatevolumeshape.html)  |  Template volume generated from the template image data  |
+| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasatlasspatialreferencesystemv010shapesatlasspatialreferencesystemshape.html)  |  The spatial coordinate system of the atlas space  |
+| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasimagestackv020shapesimagestackshape.html)                            |     Image stack obtained from the brain tissue of the subject     |
 | [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html)    |     Reconstructed cell      |
-| [Transform](https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastransform.html)    |     A linear or non-linear transform      |
+| [Transform](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastransformv010shapestransformshape.html)    |     A linear or non-linear transform      |
 | [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
@@ -41,7 +41,7 @@ The different entity types involved are described below.
 | ------------- | ------------- |
 | [BrainImaging](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainimagingv010shapesbrainimagingshape.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
 | [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html)   |     Technique used to reconstruct the stained cell     |
-| [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/concept-neurosciencegraphatlastransformation.html)   |     Transform a geometric object     |
+| [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastransformationv010shapestransformationshape.html)   |     Transform a geometric object     |
 
 ## Agents
 
@@ -54,7 +54,8 @@ The different entity types involved are described below.
 
 ## Contributors
 
-Huanxiang Lu <huanxiang.lu@epfl.ch>
-Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>
-Sy Mohameth Francois <mohameth.sy@epfl.ch>
-Sean Hill <sean.hill@epfl.ch>
+* [Huanxiang Lu](mailto:huanxiang.lu@epfl.ch)
+* [Anna-Kristin Kaufmann](mailto:anna-kristin.kaufmann@epfl.ch)
+* [Silvia Jimenez](mailto:silvia.jimenez@epfl.ch)
+* [Sy Mohameth Francois](mohameth.sy@epfl.ch)
+* [Sean Hill](sean.hill@epfl.ch)

@@ -58,7 +58,9 @@ The different agent types involved in the experiment are listed below.
 
 ## Contributors
 
-Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>
-Lu Huanxiang <huanxiang.lu@epfl.ch>
-Sy Mohameth Francois <mohameth.sy@epfl.ch>
-Sean Hill <sean.hill@epfl.ch>
+* [Anna-Kristin Kaufmann](mailto:anna-kristin.kaufmann@epfl.ch)
+* [Huanxiang Lu](mailto:huanxiang.lu@epfl.ch)
+* [Silvia Jimenez](mailto:silvia.jimenez@epfl.ch)
+* [Rodrigo Perin](mailto:rodrigo.perin@epfl.ch)
+* [Sy Mohameth Francois](mohameth.sy@epfl.ch)
+* [Sean Hill](sean.hill@epfl.ch)
