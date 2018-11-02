@@ -10,7 +10,7 @@ const numPaths = 25;
 const colors = [
   '#8de2ff',
   '#f8ceec',
-  '#E7EDF3'
+  '#b9e9d4'
 ];
 
 function getCanvasBounds() {
