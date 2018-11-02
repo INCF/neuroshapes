@@ -57,5 +57,6 @@ The different entity types involved are described below.
 * [Huanxiang Lu](mailto:huanxiang.lu@epfl.ch)
 * [Anna-Kristin Kaufmann](mailto:anna-kristin.kaufmann@epfl.ch)
 * [Silvia Jimenez](mailto:silvia.jimenez@epfl.ch)
-* [Sy Mohameth Francois](mohameth.sy@epfl.ch)
-* [Sean Hill](sean.hill@epfl.ch)
+* [Sy Mohameth Francois](mailto:mohameth.sy@epfl.ch)
+* [Samuel Kerrien](mailto:samuel.kerrien@epfl.ch)
+* [Sean Hill](mailto:sean.hill@epfl.ch)
