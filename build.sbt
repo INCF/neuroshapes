@@ -50,7 +50,7 @@ lazy val root = project
     paradoxNavigationDepth in Paradox := 3,
     paradoxProperties in Paradox ++= Map(
       "project.name"    -> "Paradox Material Theme",
-      "github.base_url" -> "https://github.com/INCF/neuroshapes"
+      "github.base_url" -> "https://github.com/INCF/neuroshapes/tree/docs"
     ),
     git.remoteRepo  := s"git@github.com:INCF/neuroshapes.git",
     ghpagesNoJekyll := true,
