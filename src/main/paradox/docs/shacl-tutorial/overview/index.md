@@ -15,4 +15,5 @@ Please find below some resources as well as useful links for building data model
     * [TopBraid Composer Free Edition](https://www.topquadrant.com/downloads/topbraid-composer-install/)
 * SHACL validator
     * [SHACLEX](https://github.com/labra/shaclex): scala based
+    * [pySHACL] (https://github.com/RDFLib/pySHACL): python based
     * [TopQuadrant/shacl](https://github.com/TopQuadrant/shacl): JAVA based 
