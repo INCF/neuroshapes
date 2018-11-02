@@ -1,6 +1,6 @@
 {
   "name": "neuroshapes-product-page",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Product page of Neuroshapes",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,8 @@
     "sass": "^1.14.3"
   },
   "dependencies": {
+    "event-emitter": "^0.3.5",
+    "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "jquery-ui-dist": "^1.12.1",
     "paper": "^0.11.5"

@@ -35,7 +35,8 @@ body {
 a {
   font-weight: bold;
   text-decoration: underline;
-  color: var(--light-green);
+  color: #ff6666;
+  text-shadow: 1px 1px 1px #00000029;
 }
 a:hover {
   text-decoration: none;
@@ -142,6 +143,65 @@ a, a:active, a:focus {
 .container.justify-start {
   justify-content: flex-start;
 }
+.bubble-container {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  margin-top: 100px
+}
+.bubble {
+  width: 300px; height: 300px;
+  background-color: blue;
+  padding: 2em;
+  border-radius: 50%;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+.bubble h3 {
+  text-align: center;
+  color: #333333bf;
+  text-shadow: 1px 1px 1px #00000026;
+}
+
+.bubble.sub-bubble {
+  width: 100px; height: 100px;
+  text-align: center;
+}
+.bubble-link {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+.bubble-container .bubble-link:nth-child(1) {
+  left: 0;
+  top: -20%;
+  animation-delay: 0.4s;
+}
+
+.bubble-container .bubble-link:nth-child(2) {
+  right: 0;
+  top: -20%;
+  animation-delay: 0.6s;
+}
+
+.bubble-container .bubble-link:nth-child(4) {
+  right: 0;
+  bottom: -20%;
+  animation-delay: 0s;
+}
+
+.bubble-container .bubble-link:nth-child(5) {
+  left: 0;
+  bottom: -20%;
+  animation-delay: 0.8s;
+}
+
+
+.bubble-content {
+  align-self: center;
+}
+
 .pattern {
   height: 100%;
   z-index: -1;
@@ -324,7 +384,6 @@ canvas.lines {
 
 .hero h2 {
   color: #64ffbb;
-  margin-bottom: 4em;
 }
 
 .hero .center {
@@ -1015,6 +1074,10 @@ li {
   list-style: none;
   margin-bottom: 1em;
 }
+a li {
+  font-weight: bold;
+  color: white;
+}
 li:before {
   background-image: url("../img/check-circle.svg");
   content: '';
@@ -1130,6 +1193,23 @@ li:before {
 }
 .section-title h3 {
   font-weight: 400;
+  color: white;
+}
+#get-involved ul {
+  list-style: none;
+  padding: 0;
+}
+
+#get-involved li button {
+  color: #555;
+}
+#get-involved ul li:before {
+  display:none;
+}
+
+#get-involved ul li {
+  display: inline-block;
+  margin: 1em;
 }
 
 #features .section-title h2 {
@@ -1187,4 +1267,16 @@ li:before {
       -webkit-transform: translateY(0);
       transform: translateY(0) rotateY(0deg);
   }
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-7px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
