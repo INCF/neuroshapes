@@ -792,6 +792,22 @@ footer form {
   background-repeat: round;
   color: white;
 }
+.participants {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.participant {
+  display:flex;
+  background-color: white;
+  color: #333;
+  margin: 1em;
+  border-radius: 4px;
+  padding: 1em;
+}
+.participant em {
+  font-weight: bold;
+  color:#ff6666c7;
+}
 .adoption {
   transition-duration: 86ms;
   transition-property: box-shadow,-webkit-transform;
