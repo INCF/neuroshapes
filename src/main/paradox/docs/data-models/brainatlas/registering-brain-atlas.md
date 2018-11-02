@@ -26,7 +26,9 @@ From a specific version of a brain atlas:
 ![Registering a brain atlas](../../../assets/provtemplates/atlas-registration-prov-template.svg)
 
 
-## Entities
+## Schemas
+
+### Entities
 
 The different entity types involved are described below.
 
@@ -44,7 +46,7 @@ The different entity types involved are described below.
 | [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
-## Activities
+### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
@@ -53,7 +55,7 @@ The different entity types involved are described below.
 | [Parcellation Reconstruction](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasparcellationreconstructionv010shapesparcellationreconstructionshape.html)   |  Reconstruct the parcellation image data into volumetric representation  |
 | [Ontology Conversion](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasontologyconversionv010shapesontologyconversionshape.html)   |  Convert the parcellation label into ontological representation  |
 
-## Agents
+### Agents
 
 | Type  | Description|
 | ------------- | ------------- |

@@ -19,8 +19,9 @@ reference atlas space.
 
 ![Registering a brain atlas](../../../assets/provtemplates/whole-brain-cell-transform.svg)
 
+## Schemas
 
-## Entities
+### Entities
 
 The different entity types involved are described below.
 
@@ -35,7 +36,7 @@ The different entity types involved are described below.
 | [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
-## Activities
+### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
@@ -43,7 +44,7 @@ The different entity types involved are described below.
 | [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html)   |     Technique used to reconstruct the stained cell     |
 | [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastransformationv010shapestransformationshape.html)   |     Transform a geometric object     |
 
-## Agents
+### Agents
 
 | Type  | Description|
 | ------------- | ------------- |
