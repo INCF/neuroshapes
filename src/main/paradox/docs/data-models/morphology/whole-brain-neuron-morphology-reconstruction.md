@@ -24,8 +24,9 @@ The following points describe an example subset of questions supported by the da
 
 ![Whole Brain Neuron Morphology Reconstruction](../../../assets/provtemplates/wholebrain-neuron-morphology-reconstruction.svg)
 
+## Schemas
 
-## Entities
+### Entities
 
 The different entity types involved in the experiment are listed below.
 
@@ -36,7 +37,7 @@ The different entity types involved in the experiment are listed below.
 | [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html)    |     Reconstructed cell      |
 | [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
-## Activities
+### Activities
 
 The different activity types involved in the experiment are listed below.
 
@@ -46,7 +47,7 @@ The different activity types involved in the experiment are listed below.
 | [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html)   |     Technique used to reconstruct the stained cell     |
 
 
-## Agents
+### Agents
 
 The different agent types involved in the experiment are listed below.
 
@@ -58,7 +59,10 @@ The different agent types involved in the experiment are listed below.
 
 ## Contributors
 
-Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>
-Lu Huanxiang <huanxiang.lu@epfl.ch>
-Sy Mohameth Francois <mohameth.sy@epfl.ch>
-Sean Hill <sean.hill@epfl.ch>
+* [Anna-Kristin Kaufmann](mailto:anna-kristin.kaufmann@epfl.ch)
+* [Huanxiang Lu](mailto:huanxiang.lu@epfl.ch)
+* [Silvia Jimenez](mailto:silvia.jimenez@epfl.ch)
+* [Rodrigo Perin](mailto:rodrigo.perin@epfl.ch)
+* [Sy Mohameth Francois](mailto:mohameth.sy@epfl.ch)
+* [Samuel Kerrien](mailto:samuel.kerrien@epfl.ch)
+* [Sean Hill](mailto:sean.hill@epfl.ch)
