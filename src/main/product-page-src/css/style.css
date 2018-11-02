@@ -35,7 +35,8 @@ body {
 a {
   font-weight: bold;
   text-decoration: underline;
-  color: var(--light-green);
+  color: #ff6666;
+  text-shadow: 1px 1px 1px #00000029;
 }
 a:hover {
   text-decoration: none;
@@ -372,7 +373,7 @@ canvas.lines {
 
 .hero h1 {
   font-size: 5em;
-  margin-top: 0;
+  margin-top: 2em;
 }
 
 .hero h1, .hero h2 {
@@ -1072,6 +1073,10 @@ li {
   word-spacing: 0.05em;
   list-style: none;
   margin-bottom: 1em;
+}
+a li {
+  font-weight: bold;
+  color: white;
 }
 li:before {
   background-image: url("../img/check-circle.svg");
