@@ -14,5 +14,6 @@ In this section, we describe data models that represent the generation context o
 @@@ note
 
 * [In Vitro Whole Cell Patch Clamp Recording](./wholecellpatchclamp-recording.html)
+* [In Vitro IntraCellular Sharp Electrode Recording](./intracellularsharpelectrode-recording.html)
 
 @@@
