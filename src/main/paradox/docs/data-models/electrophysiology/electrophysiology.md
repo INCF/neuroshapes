@@ -1,6 +1,7 @@
 @@@ index
 
 * [In Vitro Whole Cell Patch Clamp Recording](./wholecellpatchclamp-recording.md)
+* [In Vitro IntraCellular Sharp Electrode Recording](./intracellularsharpelectrode-recording.md)
 
 @@@
 
