@@ -4,7 +4,7 @@ We would love for you to contribute to the Neuroshapes familly of data models an
 As a contributor, find in the next sections the guidelines we would like you to follow.
 
 ## Got a Question or a Problem?
-Please do not hesitate to contact the INCF neuroshapes SIG at [neuroshapesSIG@incf.org](neuroshapesSIG@incf.org).
+Please do not hesitate to open an issue [here](https://github.com/INCF/neuroshapes/issues) and join the INCF neuroshapes SIG at [INCF Special Interest Group on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open).
 
 ## Found a Bug?
 If you find a bug in the source code of any tools, in any schema or vocabulary in this repository, you can help us fix it by
