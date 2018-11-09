@@ -1,0 +1,195 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nsg: <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix stimt: <http://bbp.epfl.ch/neurosciencegraph/taxonomies/stimulustypes/> .
+
+stimt: a skos:ConceptScheme, owl:Ontology ;
+    rdfs:label "Label"@en ;
+    dc:creator "Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>"";
+    dc:contributor "Sy Mohameth Francois <mohameth.sy@epfl.ch>,"Lu Huanxiang <huanxiang.lu@epfl.ch>" ;
+    dc:rights "This work is distributed under a Creative Commons Attribution 4.0 (CC-BY-4.0) Public License <https://creativecommons.org/licenses/by/4.0/>"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "stimt" ;
+    owl:versionInfo "0.1.0" .
+
+stimt:IDthresh a skos:Concept, nsg:Stimulus;
+    rdfs:label "IDthresh"@en;
+    skos:preflabel "IDthresh"@en;
+    skos:definition "For the IDthresh (IDthreshold) stimulus, a sequence of square pulses close to the spiking threshold of the cell is being injected, typically evoking no or only few action potentials. The IDthresh stimulus is used to determine the cell's spiking threshold and to evaluate its firing pattern close to threshold"@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IDRest a skos:Concept, nsg:Stimulus;
+    rdfs:label "IDRest"@en;
+    skos:preflabel "IDRest"@en;
+    skos:definition "For the IDrest stimulus, a sequence of depolarizing square pulses is injected, typically making the cell fire up to saturation. The IDrest stimulus is used to define firing properties of the cell which are used to help determine the cell type.
+"@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:APWaveform a skos:Concept, nsg:Stimulus;
+    rdfs:label "APWaveform"@en;
+    skos:preflabel "APWaveform"@en;
+    skos:definition "For the APWaveform (action potential waveform) stimulus, a sequence of square pulses of different current intensities is injected, typically evoking two or more action potentials for higher current intensities. The APWaveform stimulus is used to measure action potential properties such as amplitude, shape, rise-time and fall-time."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:SpikeRec a skos:Concept, nsg:Stimulus;
+    rdfs:label "SpikeRec"@en;
+    skos:preflabel "SpikeRec"@en;
+    skos:definition "For the SpikeRec stimulus, a sequence of brief depolarizing currents with increasing interval is being injected, typically evoking first one and then two action potentials. The SpikeRec stimulus is used to assess the action potential recovery."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IV a skos:Concept, nsg:Stimulus;
+    rdfs:label "IV"@en;
+    skos:preflabel "IV"@en;
+    skos:definition "For the IV (current-voltage relationship) stimulus, a sequence of current steps ranging from hyperpolarizing to depolarizing intensities is injected without evoking action potentials. The IV stimulus is used to measure the input resistance.
+"@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:APThreshold a skos:Concept, nsg:Stimulus;
+    rdfs:label "APThreshold"@en;
+    skos:preflabel "APThreshold"@en;
+    skos:definition "For the APThreshold (action potential threshold) stimulus, a ramp current is injected with the goal to evoke at least one action potential. The APThreshold stimulus is used to measure threshold voltage and current for eliciting one action potential."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IRrest a skos:Concept, nsg:Stimulus;
+    rdfs:label "IRrest"@en;
+    skos:preflabel "IRrest"@en;
+    skos:definition "The IRrest (input resistance at rest) stimulus is used to measure the input resistance and time constant of the cell at rest by injecting hyperpolarizing step currents to evoke multiple action potentials.
+"@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IRhyperpol a skos:Concept, nsg:Stimulus;
+    rdfs:label "IRhyperpol"@en;
+    skos:preflabel "IRhyperpol"@en;
+    skos:definition "The IRhyperpol (input resistance at hyperpolarization) stimulus is used to measure the input resistance and time constant of the cell at hyperpolarization through a small hyperpolarization following pre-hyperpolarization.
+"@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IRdepol a skos:Concept, nsg:Stimulus;
+    rdfs:label "IRdepol"@en;
+    skos:preflabel "IRdepol"@en;
+    skos:definition "The IRdepol (input resistance at depolarization) stimulus is used to measure the input resistance and time constant of the cell at depolarization through a small hyperpolarization following pre-depolarization."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:sAHP a skos:Concept, nsg:Stimulus;
+    rdfs:label "sAHP"@en;
+    skos:preflabel "sAHP"@en;
+    skos:definition "The sAHP (small after-hyperpolarization potential) stimulus elicits many action potentials through injection of a sequence of small depolarization currents and is used to measure location and amplitude of the small after-hyperpolarization."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IDdepol a skos:Concept, nsg:Stimulus;
+    rdfs:label "IDdepol"@en;
+    skos:preflabel "IDdepol"@en;
+    skos:definition "For the IDdepol (current discharge at depolarization) stimulus, a sequence of depolarizing square pulses up to cell firing frequency saturation is injected following a depolarizing step. It is used to measure firing frequency as a function of injected current."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:IDhyperpol a skos:Concept, nsg:Stimulus;
+    rdfs:label "IDhyperpol"@en;
+    skos:preflabel "IDhyperpol"@en;
+    skos:definition "The IDhyperpol (current discharge at hyperpolarization) stimulus, a sequence of depolarizing square pulses up to cell firing frequency saturation is injected following a hyperpolarizing step. It is used to measure firing frequency as a function of injected current."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:Spontaneous a skos:Concept, nsg:Stimulus;
+    rdfs:label "Spontaneous"@en;
+    skos:preflabel "Spontaneous"@en;
+    skos:definition "Spontaneous recordings are used to assess input connectivity to other cells. No current is injected."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:HighResThResp a skos:Concept, nsg:Stimulus;
+    rdfs:label "HighResThResp"@en;
+    skos:preflabel "HighResThResp"@en;
+    skos:definition "For the HighResThResp (high resolution threshold response) stimulus, a single square pulse is injected to evoke one action potential. It is used to assess the shape of the after-hyperpolarization potential. The HighResThRespo is synonymous to the TesteCode."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:SpontAPs a skos:Concept, nsg:Stimulus;
+    rdfs:label "SpontAPs"@en;
+    skos:preflabel "SpontAPs"@en;
+    skos:definition "For the SpontAPs (spontaneous action potentials) stimulus, small current pulses close to but below the firing threshold are injected. In the presence of EPSPs, this results in a few action potentials. This stimulus is used to assess the spontaneous activity of the cell."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:Delta a skos:Concept, nsg:Stimulus;
+    rdfs:label "Delta"@en;
+    skos:preflabel "Delta"@en;
+    skos:definition "For the Delta stimulus, a very brief hyperpolarizing current pulse is injected and the DAC scale is adjusted to obtain a -100 to -110 mV voltage response of the cell. The Delta stimulus is used to measure the time constant of the membrane."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:APDrop a skos:Concept, nsg:Stimulus;
+    rdfs:label "APDrop"@en;
+    skos:preflabel "APDrop"@en;
+    skos:definition "For the APDrop (action potential drop) stimulus, a strong depolarizing current pulse is injected to elicit more than 10 action potentials. It is used to compare the amplitude of the first with the amplitude of the second action potential and with respect to the steady-state amplitude."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:NoiseSpiking a skos:Concept, nsg:Stimulus;
+    rdfs:label "NoiseSpiking"@en;
+    skos:preflabel "NoiseSpiking"@en;
+    skos:definition "For the NoiseSpiking stimulus, Gaussian noise low-pass filtered at 1% is injected (10 repetitions) to evoke more than three action potentials to measure the "clock" properties of the cell and to assess response deviations between stimulus repetitions."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:SineSpec a skos:Concept, nsg:Stimulus;
+    rdfs:label "SineSpec"@en;
+    skos:preflabel "SineSpec"@en;
+    skos:definition " For the SineSpec stimulus, current in the shape of a sine wave with increasing frequency is injected below firing threshold to assess how fast the cell can follow the change."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:NoisePP a skos:Concept, nsg:Stimulus;
+    rdfs:label "NoisePP"@en;
+    skos:preflabel "NoisePP"@en;
+    skos:definition "The NoisePP stimulus is identical to the NoiseSpiking stimulus with the difference that it uses a lower amplitude (50%). Typically, one action potential is evoked and it is used to assess passive properties of the cell."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .
+
+stimt:TrueNoise a skos:Concept, nsg:Stimulus;
+    rdfs:label "TrueNoise"@en;
+    skos:preflabel "TrueNoise"@en;
+    skos:definition " For the TrueNoise stimulus, sub-threshold white noise current is injected to determine the filter properties of the cell."@en;
+    skos:inScheme stimuli: ;
+    rdfs:isDefinedBy stimuli:;
+    skos:topConceptOf stimuli: .

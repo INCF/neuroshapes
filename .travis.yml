@@ -3,29 +3,14 @@ scala:
 - 2.12.2
 stages:
 - name: test
-  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND type = pull_request"
-- name: gensite
-    if: "branch = docs AND type = pull_request"
-- name: ghpages
-    if: "branch = docs AND type = push"
+  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
+    type = pull_request"
 jobs:
   include:
   - stage: test
     script:
     - sbt -javaOptions=.jvmopts compile
     - sbt -javaOptions=.jvmopts test
-  - stage: gensite
-      script: sbt clean scalafmtCheck scalafmtSbtCheck paradox
-  - stage: ghpages
-      script: sbt clean makeSite ghpagesPushSite
 env:
   global:
-    - secure: Mw/BpJUUFHbB7MAJIZOWgVjjQkM89Nzt2YVWHU51ErTu2FZMXvrg7etg2+CRXpI442lMJn8N2VLyFSphtDNAQ48kC7ZC0Nl1OrmhCJVDW+jtKwH6oDEUMAvCvdoRElYIoqZgD4rrN0BEOr4C8kxA3BBM+bnn/NCowB0wt+syywnF1uZPaGUttenCAjo4Zk8qrAgkTNuyJZo7kXiwf0em/jTknWA2SUdbMEb+LOV8CxgF5ILvM98Owr2XDzCerFR9uGMjHUwMHpbWWXlTN/ud9clLuohpuxO3yQu7GIibh0mMmvTjRpGUa6TG3xraP5tQ387pu+pYFPuyOJCys4dLHU9xzBkNEgmzdHtrR9GM088P7Sw5VCsZpi+t6WK7JSXRPL7WYsGAXhI71bcgpWeGdiYxbU4WhLuuPdhadorY0mzaNTnFyT9RvTAPGG4S/lMzoJ/+eTuvy3Vh37pAd1SdY9bl4dcg5jZmg91IqhAZqW4lvW4G5HKlhkQCUf6QEtP1Q3BuGcOtTJ5kwZ728JQb/gDvh3zArd16/WDZ10eVpwnx5wWVlcXr9ctdg6kTpAqQVPBlXDwTSPapgvKWV5nF8UmNuh5ikXxrc4xASKsCPsXampwariJ1qZQYsgDfjfrYlIea8RzeWZc675RBDqn1Cn6Hsox3WMYRlbO4KF4N4o8=
-before_install:
-  - openssl aes-256-cbc -K $encrypted_b14561f0d260_key -iv $encrypted_b14561f0d260_iv -in .travis/id_rsa.enc -out ~\/.ssh/id_rsa -d
-
-after_success:
-  - |
-       $(npm bin)/set-up-ssh --key "$encrypted_XXXXXXXXXXXX_key" \
-                             --iv "$encrypted_XXXXXXXXXXXX_iv" \
-                             --path-encrypted-key ".travis/id_rsa.enc"
+  - secure: Mw/BpJUUFHbB7MAJIZOWgVjjQkM89Nzt2YVWHU51ErTu2FZMXvrg7etg2+CRXpI442lMJn8N2VLyFSphtDNAQ48kC7ZC0Nl1OrmhCJVDW+jtKwH6oDEUMAvCvdoRElYIoqZgD4rrN0BEOr4C8kxA3BBM+bnn/NCowB0wt+syywnF1uZPaGUttenCAjo4Zk8qrAgkTNuyJZo7kXiwf0em/jTknWA2SUdbMEb+LOV8CxgF5ILvM98Owr2XDzCerFR9uGMjHUwMHpbWWXlTN/ud9clLuohpuxO3yQu7GIibh0mMmvTjRpGUa6TG3xraP5tQ387pu+pYFPuyOJCys4dLHU9xzBkNEgmzdHtrR9GM088P7Sw5VCsZpi+t6WK7JSXRPL7WYsGAXhI71bcgpWeGdiYxbU4WhLuuPdhadorY0mzaNTnFyT9RvTAPGG4S/lMzoJ/+eTuvy3Vh37pAd1SdY9bl4dcg5jZmg91IqhAZqW4lvW4G5HKlhkQCUf6QEtP1Q3BuGcOtTJ5kwZ728JQb/gDvh3zArd16/WDZ10eVpwnx5wWVlcXr9ctdg6kTpAqQVPBlXDwTSPapgvKWV5nF8UmNuh5ikXxrc4xASKsCPsXampwariJ1qZQYsgDfjfrYlIea8RzeWZc675RBDqn1Cn6Hsox3WMYRlbO4KF4N4o8=
