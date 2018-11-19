@@ -5,7 +5,7 @@ stages:
 - name: test
   if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND type = pull_request"
 - name: bintraypublish
-  if: "(tag =~ ^v) AND (branch = master)"
+  if: "(tag =~ ^v)"
 jobs:
   include:
   - stage: test
