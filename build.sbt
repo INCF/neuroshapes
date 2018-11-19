@@ -113,6 +113,7 @@ lazy val common = Seq(
   workbenchVersion   := "0.3.2",
   releaseEarlyWith              := BintrayPublisher,
   releaseEarlyEnableSyncToMaven := false,
+  releaseEarlyNoGpg             := true,
   bintrayOmitLicense := true,
   homepage           := Some(url("https://github.com/INCF/neuroshapes")),
   licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
