@@ -5,12 +5,24 @@ stages:
 - name: test
   if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
     type = pull_request"
+- name: bintraypublish
+  if: "(tag =~ /v\\d+\\.\\d+\\.\\d+.*/) AND (branch = master)"
 jobs:
   include:
   - stage: test
     script:
     - sbt -javaOptions=.jvmopts compile
     - sbt -javaOptions=.jvmopts test
+  - stage: bintraypublish
+    before_install:
+    - openssl aes-256-cbc -K $encrypted_b14561f0d260_key -iv $encrypted_b14561f0d260_iv
+      -in .travis/secrets.tar.enc -out .travis/local.secrets.tar -d;
+    - tar xv -C .travis -f .travis/secrets.tar;
+    script:
+    - sbt -javaOptions=.jvmopts releaseEarly universal:packageZipTarball
 env:
   global:
   - secure: Mw/BpJUUFHbB7MAJIZOWgVjjQkM89Nzt2YVWHU51ErTu2FZMXvrg7etg2+CRXpI442lMJn8N2VLyFSphtDNAQ48kC7ZC0Nl1OrmhCJVDW+jtKwH6oDEUMAvCvdoRElYIoqZgD4rrN0BEOr4C8kxA3BBM+bnn/NCowB0wt+syywnF1uZPaGUttenCAjo4Zk8qrAgkTNuyJZo7kXiwf0em/jTknWA2SUdbMEb+LOV8CxgF5ILvM98Owr2XDzCerFR9uGMjHUwMHpbWWXlTN/ud9clLuohpuxO3yQu7GIibh0mMmvTjRpGUa6TG3xraP5tQ387pu+pYFPuyOJCys4dLHU9xzBkNEgmzdHtrR9GM088P7Sw5VCsZpi+t6WK7JSXRPL7WYsGAXhI71bcgpWeGdiYxbU4WhLuuPdhadorY0mzaNTnFyT9RvTAPGG4S/lMzoJ/+eTuvy3Vh37pAd1SdY9bl4dcg5jZmg91IqhAZqW4lvW4G5HKlhkQCUf6QEtP1Q3BuGcOtTJ5kwZ728JQb/gDvh3zArd16/WDZ10eVpwnx5wWVlcXr9ctdg6kTpAqQVPBlXDwTSPapgvKWV5nF8UmNuh5ikXxrc4xASKsCPsXampwariJ1qZQYsgDfjfrYlIea8RzeWZc675RBDqn1Cn6Hsox3WMYRlbO4KF4N4o8=
+  - secure: cOsVmB1fmjmlxuYbJeZxiQhP854jn922ZtuAtyByQnuqv2uX0uK40+JZZym3AOE4w0JOOeM6eNBUQb4ezS8DUDB1af3YiFh5ZDHwJC3emFGQ5G8giXDLDE9dMmYRaB2KbARUaH52VXumPtUhYsSQMch0DbDCaA0ZywwG/u6KdW0nvZUWK/2x+3Aqjj8HLbSMxLW6hUw9LJOmebY/mvjIqrpEj/PKGPmGq3kA21wkLfy+dfLwLLcyGdP40KpqLaIOTfzteC/ys0roUNq5O/dMyKzbALnXOXCJM+bedCvqTidDZPDbfHJ6GbEO0l5Zocws7i9nmAlEPo8IoHQ7ezGZabRGFtoWI5yA2H0u7NAlanswkNjImSoq4gfyrPa6FOxmguTz/sykQvlISqe15AdRVmx/2ynIYM2ffdZwS3MhpisKkY+mkfitYGgaoWWgaxsNmLxNG35FzxXFkH7/kGJjkuXNLyj3s/apY0RMc2QxDO37dt/aoA+c1dAgp4QcRpwyR29srHTH4mf+EQulcxfpxKNaptPU2du63A1YRlUGOR6Q/NBcHh+EuZYoN2mzrTQM8jMbYJgy/1dXZ7MqRj8hGbM3ag7TwlH+M9ABm2cEYhMbLuJzOTAL5Y4d6L5xAp2wTLMgr4qxa1fyn++ZpC9JB38pzYSgbfKBimNEq2VgI9M=
+  - secure: qnTEzQuGpY7V1czyKikGv4v9dxcgQp8pbkV5727P0Lf+FO99Xrd7wlcjRcWyyHqVcbGLJFioiE48H2+oJBbAcitR33Jycv52x44IPqLwVdDOs68pMcc0f6Dp6DvyoL5ZvBELZxYnkBmPsVRMoROZJztcekMUypdUKNISBG53y3GRvYUk4TyhKR6k7WiIUCddmCW8wiHrKnLwFDGfsPZQF/cyh92QNTlx0g9v2P4o0HKRUGRJw+oxiF3EvcxvZOcU9U4nfZJFd4hOL1oJFnxyd3A/Yigyqd2F91cenebg9zbZLHtdwjPChTBARAP1dZ9qGEFtkdLO21wupI5hq3lS6ypkzSZEI7pmH7azeUqBJ9xr1r9uy++V59CdwT6FFbdX3Ga6Yqzsngljzttk0YLvoN6IING+fR50FyRC7wK13k9QAODawa3B78LysOLovlK7NaMsTmmyVW1TTwIz8k7cvJL/IZF3MZQw0ABG/THr+8hpzffUXPGEwkSCuYNotahBKFuxlw5Y350oPGF1U22eHtEiPrzl8sJ8Z4p+LCxHFgoOHXNxrMtjPrb/AHepXFZXZdqDFlgQH7IuGcgqq6g8S9odHpjvB/i7pQ7bjFKcb2p75QAiVB3jQsbmrb9On2PDePFXRDtHexYEHkGFq81kQ+gslIxyWYIhGYWBTX61JuQ=
+  - secure: fKga3BWqvwoKdbRHbvPDe+PWpoLrKv0n68Bu58RLkuG7UVxp2LL8OXf4br1Drs/HsU0PH6RNipuSXrDgG6Sidlep80lDOQOqEpp/9Au5FtC7KcWCbB0N0C1T+d0H4TV6nJI0p1mlG+DyeRMHMVxvyk9W9zNFxJqkBlFtGM+Of/SVXCqXWAHAYdOK3vcfpiOFj78q5TXy3VnbUS24yb+EOrLrruiP8pvwQoXBag74Y7yjOpG2I9pD79uLSkp+9smA6dQEURvM/eAtdpVWWMp6sxYjxyb1HYkCYSVbRFvKOZ+/w2RxX/IA2bRfgOsZwGmHRAm7ZB376BvYCIB8pYrLIp75vYS6W0WBDjFV+o/5x8CfeEiNOTR92jRlGcdbDGqaAXtokk+JWHPOT55IXoIMKhRSDDNPlzou4VsUby3jwsxNr3gMMrG3gsH4fJ85SfhVGRCzgY4yrGNGtXRbEiU18XkDlMJ7ukMWzRBL/wdRr0XGEYvhntzJO8ZPIzYfl1Ykpc0jErJv0zWHAhJ4caH4OuKY3M17C0Ats+h6PahhD35gMYvo4oXts+1vm9xyRjW9rUsfGg4W/L9HdNCFeQ2vOUCr3LxwnZeYdJd9hWVVdgdp0DDIOsSjeNiKz2S+GKQnud2HQns3eUt6ep2xPl7otyyKUwybt/vSt/KP0MGI53E=
