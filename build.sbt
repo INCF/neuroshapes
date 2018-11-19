@@ -116,6 +116,13 @@ lazy val common = Seq(
   bintrayOmitLicense := true,
   homepage           := Some(url("https://github.com/INCF/neuroshapes")),
   licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
+  developers := List(
+      Developer("MFSY", "Mohameth François Sy", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("annakristinkaufmann", "Anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("huanxiang", "Lu Huanxiang", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("apdavison", "Andrew Davison", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/"))
+      Developer("genric", "Ivaska Genrich", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/"))
+  ),
   scmInfo := Some(
     ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
 )
