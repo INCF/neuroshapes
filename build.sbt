@@ -120,7 +120,7 @@ lazy val common = Seq(
       Developer("MFSY", "Mohameth François Sy", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
       Developer("annakristinkaufmann", "Anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
       Developer("huanxiang", "Lu Huanxiang", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
-      Developer("apdavison", "Andrew Davison", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/"))
+      Developer("apdavison", "Andrew Davison", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
       Developer("genric", "Ivaska Genrich", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/"))
   ),
   scmInfo := Some(
