@@ -3,10 +3,9 @@ scala:
 - 2.12.2
 stages:
 - name: test
-  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
-    type = pull_request"
+  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND type = pull_request"
 - name: bintraypublish
-  if: "(tag =~ /v\\d+\\.\\d+\\.\\d+.*/) AND (branch = master)"
+  if: "(tag =~ ^v) AND (branch = master)"
 jobs:
   include:
   - stage: test
