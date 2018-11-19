@@ -132,10 +132,9 @@ lazy val buildInfoSettings = Seq(
 
 lazy val publishSettings = Seq(
   releaseEarlyWith              := BintrayPublisher,
-  bintrayOrganization := Some("neuroshapes"),
-  bintrayRepository := "maven",
+  bintrayRepository             := "maven",
   releaseEarlyNoGpg             := true,
-    releaseEarlyEnableSyncToMaven := false
+  releaseEarlyEnableSyncToMaven := false
 )
 
 
