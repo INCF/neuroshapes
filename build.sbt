@@ -8,10 +8,10 @@ lazy val kgSchemas      = "ch.epfl.bluebrain.nexus" %% "kg-schemas"      % kgVer
 
 lazy val core = project
   .in(file("modules/core"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nsgcommons)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name                := "nsg-core-schemas",
     moduleName          := "nsg-core-schemas"
@@ -35,10 +35,10 @@ lazy val nexusschema = project
 
 lazy val experiment = project
   .in(file("modules/experiment"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-experiment-schemas",
     moduleName := "nsg-experiment-schemas"
@@ -46,10 +46,10 @@ lazy val experiment = project
 
 lazy val nsgcommons = project
   .in(file("modules/commons"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nexusschema)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-commons-schemas",
     moduleName := "nsg-commons-schemas",
@@ -58,10 +58,10 @@ lazy val nsgcommons = project
 
 lazy val atlas = project
   .in(file("modules/atlas"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-atlas-schemas",
     moduleName := "nsg-atlas-schemas"
@@ -69,10 +69,10 @@ lazy val atlas = project
 
 lazy val electrophysiology = project
   .in(file("modules/electrophysiology"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-electrophysiology-schemas",
     moduleName := "nsg-electrophysiology-schemas"
@@ -80,10 +80,10 @@ lazy val electrophysiology = project
 
 lazy val morphology = project
   .in(file("modules/morphology"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-morphology-schemas",
     moduleName := "nsg-morphology-schemas"
@@ -91,10 +91,10 @@ lazy val morphology = project
 
 lazy val simulation = project
   .in(file("modules/simulation"))
-  .enablePlugins(WorkbenchPlugin)
+  .enablePlugins(WorkbenchPlugin,BuildInfoPlugin, ServicePackagingPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
-  .settings(common)
+  .settings(common,publishSettings,buildInfoSettings)
   .settings(
     name       := "nsg-simulation-schemas",
     moduleName := "nsg-simulation-schemas"
@@ -111,11 +111,6 @@ lazy val common = Seq(
   scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
   autoScalaLibrary   := false,
   workbenchVersion   := "0.3.2",
-  releaseEarlyWith              := BintrayPublisher,
-  bintrayRepository := "maven",
-  bintrayOrganization := Some("neuroshapes"),
-  releaseEarlyEnableSyncToMaven := false,
-  releaseEarlyNoGpg             := true,
   bintrayOmitLicense := true,
   homepage           := Some(url("https://github.com/INCF/neuroshapes")),
   licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
@@ -128,6 +123,19 @@ lazy val common = Seq(
   ),
   scmInfo := Some(
     ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
+)
+
+lazy val buildInfoSettings = Seq(
+  buildInfoKeys    := Seq[BuildInfoKey](version),
+  buildInfoPackage := s"$name-${version}"
+)
+
+lazy val publishSettings = Seq(
+  releaseEarlyWith              := BintrayPublisher,
+  bintrayOrganization := Some("neuroshapes"),
+  bintrayRepository := "maven",
+  releaseEarlyNoGpg             := true,
+    releaseEarlyEnableSyncToMaven := false
 )
 
 
