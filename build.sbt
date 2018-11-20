@@ -76,6 +76,7 @@ lazy val nsgcommons = project
   .settings(
     name       := "nsg-commons-schemas",
     moduleName := "nsg-commons-schemas",
+    resolvers += Resolver.bintrayRepo("bbp", "nexus-releases"),
     libraryDependencies += prov
   )
 
