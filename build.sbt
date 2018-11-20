@@ -37,6 +37,7 @@ lazy val core = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nsgcommons)
+  .settings(publishSettings)
   .settings(
     name                := "nsg-core-schemas",
     moduleName          := "nsg-core-schemas"
@@ -63,6 +64,7 @@ lazy val experiment = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-experiment-schemas",
     moduleName := "nsg-experiment-schemas"
@@ -73,6 +75,7 @@ lazy val nsgcommons = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nexusschema)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-commons-schemas",
     moduleName := "nsg-commons-schemas",
@@ -84,6 +87,7 @@ lazy val atlas = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-atlas-schemas",
     moduleName := "nsg-atlas-schemas"
@@ -94,6 +98,7 @@ lazy val electrophysiology = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-electrophysiology-schemas",
     moduleName := "nsg-electrophysiology-schemas"
@@ -104,6 +109,7 @@ lazy val morphology = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-morphology-schemas",
     moduleName := "nsg-morphology-schemas"
@@ -114,6 +120,7 @@ lazy val simulation = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-simulation-schemas",
     moduleName := "nsg-simulation-schemas"
@@ -154,6 +161,11 @@ lazy val noPublish = Seq(
   publishLocal    := {},
   publish         := {},
   publishArtifact := false,
+)
+
+lazy val publishSettings = Seq(
+  bintrayOrganization := Some("neuroshapes"),
+  bintrayRepository := "maven"
 )
 
 addCommandAlias("review", ";clean;test")
