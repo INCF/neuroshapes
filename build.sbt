@@ -142,6 +142,7 @@ inThisBuild(
     scmInfo := Some(ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git")),
     // These are the sbt-release-early settings to configure
     releaseEarlyWith              := BintrayPublisher,
+    bintrayOrganization           := Some("neuroshapes"),
     bintrayRepository             := "maven",
     releaseEarlyNoGpg             := true,
     releaseEarlyEnableSyncToMaven := false,
