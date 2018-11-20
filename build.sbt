@@ -51,6 +51,7 @@ lazy val nexusschema = project
     noPublish,
     name       := "kg-nsg-schemas",
     moduleName := "kg-nsg-schemas",
+    resolvers          += Resolver.bintrayRepo("bogdanromanx", "maven"),
     libraryDependencies ++= Seq(
       commonsSchemas,
       kgSchemas
@@ -131,8 +132,6 @@ inThisBuild(
     bintrayOmitLicense := true,
     homepage           := Some(url("https://github.com/INCF/neuroshapes")),
     licenses           := Seq("Attribution" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
-    resolvers          += Resolver.bintrayRepo("bogdanromanx", "maven"),
-    resolvers          += Resolver.bintrayRepo("bbp", "nexus-releases"),
     developers := List(
       Developer("MFSY", "Mohameth François Sy", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
       Developer("annakristinkaufmann", "Anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
