@@ -131,7 +131,7 @@ inThisBuild(
     workbenchVersion   := "0.3.2",
     bintrayOmitLicense := true,
     homepage           := Some(url("https://github.com/INCF/neuroshapes")),
-    licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
+    licenses           := Seq("Attribution" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
     developers := List(
       Developer("MFSY", "Mohameth François Sy", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
       Developer("annakristinkaufmann", "Anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
