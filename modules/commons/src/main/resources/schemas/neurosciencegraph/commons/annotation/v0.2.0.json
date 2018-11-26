@@ -2,20 +2,21 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.2.0",
     {
-      "@base": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/"
     }
   ],
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
-    "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0"
+    "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0"
   ],
   "@type": "nxv:Schema",
   "shapes": [
     {
-      "@id": "AnnotationShape",
+      "@id": "this:AnnotationShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "class": "oa:Annotation",
+      "seeAlso":"https://www.w3.org/TR/annotation-model/#introduction",
+      "editorialNote":"The higher level vocabulary (hasTarget, hasBody, hasSource,hasSelector, Annotation) are mapped to the nsg namespace (instead of using oa namespace) for consistency and ease of use purpose. The selector",
       "and": [
         {
           "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
@@ -23,75 +24,73 @@
         {
           "property": [
             {
-              "path": "nsg:contribution",
-              "name": "Contribution",
-              "description": "Information about the agent involved in the creation of this Annotation.",
-              "node": "ContributionShape",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
-              "path": "oa:hasTarget",
+              "path": "nsg:hasTarget",
               "name": "Target",
-              "description": "The relationship between an Annotation and its Target.",
-              "node": "TargetShape",
+              "description": "The target of an Annotation: the entity being annotated.",
+              "node": "this:TargetShape",
               "minCount": 1
             },
             {
-              "path": "oa:hasBody",
+              "path": "nsg:hasBody",
               "name": "Body",
-              "description": "The relationship between an Annotation and its Body.",
-              "node": "BodyShape"
+              "description": "The entity or value that the target entity is being annotated with.",
+              "node": "this:BodyShape"
             }
           ]
         }
       ]
     },
     {
-      "@id": "TargetShape",
+      "@id": "this:TargetShape",
+      "label":"The target of an annotation is always an external resource.",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI"
     },
     {
-      "@id": "SelectorTargetShape",
+      "@id": "this:BodyShape",
+      "label":"The body of an annotation can be an external or internal resource.",
       "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI",
+      "nodeKind": "sh:BlankNodeOrIRI"
+    },
+    {
+      "@id": "this:SelectorTargetShape",
+      "@type": "sh:NodeShape",
       "and": [
         {
-          "node": "TargetShape"
+          "node": "this:TargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSource",
+              "path": "nsg:hasSource",
               "name": "Source",
               "description": "The relationship between a Specific Resource and the resource that it is a more specific representation of.",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "oa:hasSelector",
+              "path": "nsg:hasSelector",
               "name": "Selector",
               "description": "The relationship between a Specific Resource and a Selector.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/SelectorShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/SelectorShape"
             }
           ]
         }
       ]
     },
     {
-      "@id": "TextPositionTargetShape",
+      "@id": "this:TextPositionTargetShape",
       "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI",
+      "class":"nsg:TextPositionTarget",
       "and": [
         {
-          "node": "SelectorTargetShape"
+          "node": "this:SelectorTargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSelector",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/TextPositionSelectorShape",
+              "path": "nsg:hasSelector",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/TextPositionSelectorShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -100,18 +99,19 @@
       ]
     },
     {
-      "@id": "FigureTargetShape",
+      "@id": "this:FigureTargetShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "SelectorTargetShape"
+          "node": "this:SelectorTargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSelector",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/FigureSelectorShape",
+              "path": "nsg:hasSelector",
+              "class": "nsg:FigureSelector",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/DocumentIndexSelectorShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -120,18 +120,19 @@
       ]
     },
     {
-      "@id": "EquationTargetShape",
+      "@id": "this:EquationTargetShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "SelectorTargetShape"
+          "node": "this:SelectorTargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSelector",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/EquationSelectorShape",
+              "path": "nsg:hasSelector",
+              "class": "nsg:EquationSelector",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/DocumentIndexSelectorShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -140,18 +141,19 @@
       ]
     },
     {
-      "@id": "TableTargetShape",
+      "@id": "this:TableTargetShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "SelectorTargetShape"
+          "node": "this:SelectorTargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSelector",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/TableSelectorShape",
+              "path": "nsg:hasSelector",
+              "class": "nsg:TableSelector",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/TableSelectorShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -160,43 +162,25 @@
       ]
     },
     {
-      "@id": "AreaTargetShape",
+      "@id": "this:AreaTargetShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "SelectorTargetShape"
+          "node": "this:SelectorTargetShape"
         },
         {
           "property": [
             {
-              "path": "oa:hasSelector",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/selectors/v0.2.0/shapes/AreaSelectorShape",
+              "path": "nsg:hasSelector",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/DocumentAreaSelectorShape",
               "minCount": 1,
               "maxCount": 1
             }
           ]
-        }
-      ]
-    },
-    {
-      "@id": "BodyShape",
-      "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI"
-    },
-    {
-      "@id": "ContributionShape",
-      "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI",
-      "property": [
-        {
-          "path": "prov:agent",
-          "name": "Agent",
-          "nodeKind": "sh:IRI",
-          "class": "prov:Agent",
-          "minCount": 1
         }
       ]
     }
+
   ]
 }

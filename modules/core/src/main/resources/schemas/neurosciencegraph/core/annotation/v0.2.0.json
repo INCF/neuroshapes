@@ -13,50 +13,8 @@
     {
       "@id": "AnnotationShape",
       "@type": "sh:NodeShape",
-      "targetClass": "oa:Annotation",
+      "targetClass": "nsg:Annotation",
       "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/AnnotationShape"
-    },
-    {
-      "@id": "SelectorTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:SelectorTargetShape",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/SelectorTarget"
-    },
-    {
-      "@id": "TextPositionTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:TextPositionTarget",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/TextPositionTargetShape"
-    },
-    {
-      "@id": "FigureTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:FigureTarget",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/FigureTargetShape"
-    },
-    {
-      "@id": "EquationTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:EquationTarget",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/EquationTargetShape"
-    },
-    {
-      "@id": "TableTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:TableTarget",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/TableTargetShape"
-    },
-    {
-      "@id": "AreaTargetShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:AreaTarget",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/AreaTargetShape"
-    },
-    {
-      "@id": "ContributionShape",
-      "@type": "sh:NodeShape",
-      "targetClass": "nsg:Contribution",
-      "node": "{{base}}/schemas/neurosciencegraph/commons/annotation/v0.2.0/shapes/ContributionShape"
     }
   ]
 }
