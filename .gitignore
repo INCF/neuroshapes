@@ -48,3 +48,6 @@ target/
 ehthumbs.db
 Thumbs.db
 
+# travis #
+######################
+local.*

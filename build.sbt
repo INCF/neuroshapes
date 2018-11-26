@@ -1,3 +1,29 @@
+/*
+scalafmt: {
+  style = defaultWithAlign
+  maxColumn = 150
+  align.tokens = [
+    { code = "=>", owner = "Case" }
+    { code = "?", owner = "Case" }
+    { code = "extends", owner = "Defn.(Class|Trait|Object)" }
+    { code = "//", owner = ".*" }
+    { code = "{", owner = "Template" }
+    { code = "}", owner = "Template" }
+    { code = ":=", owner = "Term.ApplyInfix" }
+    { code = "++=", owner = "Term.ApplyInfix" }
+    { code = "+=", owner = "Term.ApplyInfix" }
+    { code = "%", owner = "Term.ApplyInfix" }
+    { code = "%%", owner = "Term.ApplyInfix" }
+    { code = "%%%", owner = "Term.ApplyInfix" }
+    { code = "->", owner = "Term.ApplyInfix" }
+    { code = "?", owner = "Term.ApplyInfix" }
+    { code = "<-", owner = "Enumerator.Generator" }
+    { code = "?", owner = "Enumerator.Generator" }
+    { code = "=", owner = "(Enumerator.Val|Defn.(Va(l|r)|Def|Type))" }
+  ]
+}
+ */
+
 val commonsVersion = "0.7.6"
 val provVersion    = "1.1.1"
 val kgVersion      = "0.9.4"
@@ -11,7 +37,7 @@ lazy val core = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nsgcommons)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name                := "nsg-core-schemas",
     moduleName          := "nsg-core-schemas"
@@ -21,12 +47,12 @@ lazy val nexusschema = project
   .in(file("modules/nexus-schemas"))
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .settings(common, noPublish)
+  .settings(noPublish)
   .settings(
     noPublish,
     name       := "kg-nsg-schemas",
     moduleName := "kg-nsg-schemas",
-    resolvers  += Resolver.bintrayRepo("bogdanromanx", "maven"),
+    resolvers          += Resolver.bintrayRepo("bogdanromanx", "maven"),
     libraryDependencies ++= Seq(
       commonsSchemas,
       kgSchemas
@@ -38,7 +64,7 @@ lazy val experiment = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-experiment-schemas",
     moduleName := "nsg-experiment-schemas"
@@ -49,7 +75,7 @@ lazy val nsgcommons = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(nexusschema)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-commons-schemas",
     moduleName := "nsg-commons-schemas",
@@ -61,7 +87,7 @@ lazy val atlas = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-atlas-schemas",
     moduleName := "nsg-atlas-schemas"
@@ -72,7 +98,7 @@ lazy val electrophysiology = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-electrophysiology-schemas",
     moduleName := "nsg-electrophysiology-schemas"
@@ -83,7 +109,7 @@ lazy val morphology = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(experiment)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-morphology-schemas",
     moduleName := "nsg-morphology-schemas"
@@ -94,7 +120,7 @@ lazy val simulation = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-simulation-schemas",
     moduleName := "nsg-simulation-schemas"
@@ -115,23 +141,43 @@ lazy val literatureannotation = project
 lazy val root = project
   .in(file("."))
   .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
-  .settings(common, noPublish)
-  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema, nsgcommons, literatureannotation)
+  .settings(noPublish)
+  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons, literatureannotation)
 
-lazy val common = Seq(
-  scalacOptions in (Compile, console) ~= (_ filterNot (_ == "-Xfatal-warnings")),
-  autoScalaLibrary   := false,
-  workbenchVersion   := "0.3.2",
-  bintrayOmitLicense := true,
-  homepage           := Some(url("https://github.com/INCF/neuroshapes")),
-  licenses           := Seq("CC-4.0" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
-  scmInfo := Some(
-    ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git"))
+inThisBuild(
+  List(
+    workbenchVersion   := "0.3.2",
+    bintrayOmitLicense := true,
+    homepage           := Some(url("https://github.com/INCF/neuroshapes")),
+    licenses           := Seq("Attribution" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),
+    developers := List(
+      Developer("MFSY", "Mohameth François Sy", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("annakristinkaufmann", "Anna-Kristin Kaufmann", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("huanxiang", "Lu Huanxiang", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("apdavison", "Andrew Davison", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/")),
+      Developer("genric", "Ivaska Genrich", "noreply@epfl.ch", url("https://incf.github.io/neuroshapes/"))
+    ),
+    scmInfo := Some(ScmInfo(url("https://github.com/INCF/neuroshapes"), "scm:git:git@https://github.com/INCF/neuroshapes.git")),
+    // These are the sbt-release-early settings to configure
+    releaseEarlyWith              := BintrayPublisher,
+    bintrayOrganization           := Some("neuroshapes"),
+    bintrayRepository             := "maven",
+    releaseEarlyNoGpg             := true,
+    releaseEarlyEnableSyncToMaven := false,
+  ))
+
+
+
+lazy val noPublish = Seq(
+  publishLocal    := {},
+  publish         := {},
+  publishArtifact := false,
 )
 
-
-
-lazy val noPublish = Seq(publishLocal := {}, publish := {})
+lazy val publishSettings = Seq(
+  bintrayOrganization := Some("neuroshapes"),
+  bintrayRepository := "maven"
+)
 
 addCommandAlias("review", ";clean;test")
 addCommandAlias("rel", ";release with-defaults skip-tests")
