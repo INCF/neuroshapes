@@ -47,9 +47,8 @@ lazy val nexusschema = project
   .in(file("modules/nexus-schemas"))
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .settings(noPublish)
+  .settings(publishSettings)
   .settings(
-    noPublish,
     name       := "kg-nsg-schemas",
     moduleName := "kg-nsg-schemas",
     resolvers          += Resolver.bintrayRepo("bogdanromanx", "maven"),
