@@ -131,7 +131,7 @@ lazy val literatureannotation = project
   .enablePlugins(WorkbenchPlugin)
   .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
   .dependsOn(core)
-  .settings(common)
+  .settings(publishSettings)
   .settings(
     name       := "nsg-literatureannotation-schemas",
     moduleName := "nsg-literatureannotation-schemas"
