@@ -126,23 +126,13 @@ lazy val simulation = project
     moduleName := "nsg-simulation-schemas"
   )
 
-lazy val literatureannotation = project
-  .in(file("modules/literatureannotation"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(core)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-literatureannotation-schemas",
-    moduleName := "nsg-literatureannotation-schemas"
-  )
 
 
 lazy val root = project
   .in(file("."))
   .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
   .settings(noPublish)
-  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons, literatureannotation)
+  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons)
 
 inThisBuild(
   List(
