@@ -21,8 +21,17 @@ sbt
 # Run 'test'
 test
 
-# Export all the schemas to the dir /tmp/my-schemas using <http://localhost:8080/v0> as base uri 
+# Export all the locally defined schemas to the dir /tmp/my-schemas using <http://localhost:8080/v0> as base uri 
 exportSchemas http://localhost:8080/v0 /tmp/my-schemas
+
+# Schemas can be defined in modules that are imported by local modules. The collectResources command can be run to collect all schemas and contexts defined in this project classpath
+
+## Collect schemas
+collectResources http://localhost:8080/v1 /tmp/my-schemas schemas
+
+## Collect everything defined
+collectResources http://localhost:8080/v1 /tmp/my-schemas all
+
 
 
 ```
