@@ -1,0 +1,156 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.2.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/commons/annotationselector/v0.2.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:SelectorShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "seeAlso": "https://www.w3.org/TR/annotation-model/#selectors"
+    },
+    {
+      "@id": "this:TextPositionSelectorShape",
+      "@type": "sh:NodeShape",
+      "class": "oa:TextPositionSelector",
+      "and": [
+        {
+          "node": "this:SelectorShape"
+        },
+        {
+          "property": [
+            {
+              "path": "oa:start",
+              "name": "Start offset",
+              "description": "The starting position of the segment of text. The first character in the full text is character position 0, and the character is included within the segment.",
+              "datatype": "xsd:integer",
+              "minInclusive": 0,
+              "lessThan": "oa:end",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "oa:end",
+              "name": "End offset",
+              "description": "The end position of the segment of text. The character is not included within the segment.",
+              "datatype": "xsd:integer",
+              "minInclusive": 0,
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:value",
+              "name": "Value",
+              "description": "The selected segment of text.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:DocumentIndexSelectorShape",
+      "@type": "sh:NodeShape",
+      "class": "nsg:DocumentIndexSelector",
+      "and": [
+        {
+          "node": "this:SelectorShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:index",
+              "name": "Index",
+              "description": "The index of a document media (figure) or item (equation, table,...) (e.g. '1', '2.a', 'III').",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TableSelectorShape",
+      "@type": "sh:NodeShape",
+      "class": "nsg:TableSelector",
+      "seeAlso":"https://www.w3.org/TR/csv2rdf/",
+      "and": [
+        {
+          "node": "this:DocumentIndexSelectorShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:row",
+              "name": "Row number",
+              "description": "The number of the row of a table (e.g. '1', '1, 3')."
+            },
+            {
+              "path": "nsg:column",
+              "name": "Column index",
+              "description": "The index(es) in the table of the columns(s) (e.g. '1', '1, 3')."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:FragmentSelectorShape",
+      "@type": "sh:NodeShape",
+      "class": "oa:FragmentSelector",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "this:SelectorShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "name": "Fragment value",
+              "description": "The contents of the fragment component of an IRI that describes the Segment.",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:conformsTo",
+              "name": "Fragment specification",
+              "description": "Specification of the fragment syntax.",
+              "nodeKind": "sh:IRI",
+              "seeAlso": "https://www.w3.org/TR/annotation-model/#fragment-selector",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:DocumentAreaSelectorShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "class": "nsg:PDFAreaSelector",
+      "and": [
+        {
+          "node": "this:FragmentSelectorShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:conformsTo",
+              "name": "Specification",
+              "comment": "Used format is page=<pagenum>&viewrect=<left>,<top>,<wd>,<ht>. <left>, and <top> are measured from the top left corner of the page.",
+              "hasValue": "http://tools.ietf.org/rfc/rfc3778"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

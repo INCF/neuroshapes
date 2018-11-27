@@ -1,0 +1,15 @@
+{
+  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v1.0.6",
+  "@id": "{{base}}/schemas/neurosciencegraph/core/entity/v1.0.0/057622e3-5ea6-499a-a434-e38ba70ac83b",
+  "@type": "nsg:Annotation",
+  "schema:name": "Annotation example with all fields",
+  "prov:wasAttributedTo":{
+    "@id": "{{base}}/schemas/neurosciencegraph/core/person/v0.1.0/03b67cb6-db1a-4acd-a628-8dd3e5f3ee12",
+    "@type": "nsg:Person"
+  },
+  "nsg:providerId": "db201d2e-e185-11e6-a0b3-c869cd917532",
+  "nsg:hasBody": {
+    "@id": "{{base}}/schemas/neurosciencegraph/core/entity/v1.0.0/027622e3-5ea6-499a-a434-e38ba70ac82c",
+    "@type": "prov:Entity"
+  }
+}
