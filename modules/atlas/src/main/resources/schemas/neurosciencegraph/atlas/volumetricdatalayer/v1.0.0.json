@@ -2,11 +2,10 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/atlas/volumetricdatalayer/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/atlas/volumetricdatalayer/v1.0.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1",
@@ -39,7 +38,7 @@
               "name": "Morphology type",
               "description": "The morphology type of the reconstructed cell.",
               "editorialNote": "Need the cell type for class restriction.",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.1/shapes/CellTypeOntologyTermShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },
             {
@@ -129,7 +128,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and" : [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/QuantitativeValueShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape"
         },
         {
           "property": [

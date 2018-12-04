@@ -2,13 +2,13 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/configuration/v0.1.0/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/configuration/v1.0.0/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated":true,
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
+    "{{base}}/schemas/nexus/core/distribution/v0.1.0"
   ],
   "shapes": [
     {
@@ -19,7 +19,7 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
         },
         {
           "property": [
@@ -27,7 +27,7 @@
               "path": "schema:distribution",
               "name": "Configuration file (s)",
               "description": "Link to the configuration neurondb.xml file.",
-              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0",
+              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }

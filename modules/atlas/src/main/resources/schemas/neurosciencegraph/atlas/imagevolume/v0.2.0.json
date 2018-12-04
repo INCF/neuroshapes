@@ -6,6 +6,7 @@
     }
   ],
   "@type": "nxv:Schema",
+  "owl:deprecated":true,
   "import": [
     "{{base}}/schemas/neurosciencegraph/commons/transformableobject/v0.1.0",
     "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2",
