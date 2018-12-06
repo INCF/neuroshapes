@@ -2,11 +2,10 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/bluepyefeconfiguration/v0.1.4/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/bluepyefeconfiguration/v0.1.6/shapes/"
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated": true,
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2"
@@ -29,7 +28,7 @@
               "path": "nsg:species",
               "name": "Species",
               "description": "Species",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/SpeciesOntologyTermShape",
               "minCount": 1,
               "maxCount": 1
             },
@@ -37,7 +36,7 @@
               "path": "nsg:brainRegion",
               "name": "Brain region",
               "description": "Brain region",
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/BrainRegionOntologyTermShape",
               "minCount": 1,
               "maxCount": 1
             },
@@ -46,7 +45,15 @@
               "description": "Morphological cell type",
               "minCount": 1,
               "maxCount": 1,
-              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/MorphologicalCellTypeOntologyTermShape"
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/MorphologicalCellTypeOntologyTermShape"
+            },
+            {
+              "path": "nsg:eType",
+              "description": "Electrical cell type",
+              "datatype": "xsd:string",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/ElectricalCellTypeOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
             },
             {
               "path": "nsg:experimentalCell",
@@ -64,12 +71,6 @@
               "path": "nsg:stimuliToExperimentMap",
               "description": "Stimuli to experiment mapping",
               "nodeKind": "sh:BlankNode",
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:masterListConfiguration",
-              "description": "Master list configuration file providing details about the experiments",
-              "class": "nsg:Entity",
               "maxCount": 1
             }
           ]
