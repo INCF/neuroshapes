@@ -2,7 +2,7 @@
   "@context": [
     "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
     {
-      "this": "{{base}}/schemas/neurosciencegraph/simulation/bluepyefeconfiguration/v0.1.6/shapes/"
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/bluepyefeconfiguration/v0.1.7/shapes/"
     }
   ],
   "@type": "nxv:Schema",
