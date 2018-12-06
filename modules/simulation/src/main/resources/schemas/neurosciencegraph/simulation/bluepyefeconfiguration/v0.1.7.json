@@ -6,7 +6,6 @@
     }
   ],
   "@type": "nxv:Schema",
-  "owl:deprecated": true,
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
     "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2"
@@ -51,7 +50,6 @@
             {
               "path": "nsg:eType",
               "description": "Electrical cell type",
-              "datatype": "xsd:string",
               "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.4/shapes/ElectricalCellTypeOntologyTermShape",
               "minCount": 1,
               "maxCount": 1
