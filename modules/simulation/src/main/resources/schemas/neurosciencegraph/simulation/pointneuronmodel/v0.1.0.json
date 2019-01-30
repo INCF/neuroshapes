@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/pointneuronmodel/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.3"
+  ],
+  "shapes": [
+    {
+      "@id": "this:PointNeuronModelShape",
+      "@type": "sh:NodeShape",
+      "label": "Point neuron model.",
+      "targetClass": "nsg:PointNeuronModel",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.3/shapes/ModelInstanceShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:name",
+              "name": "Name",
+              "description": "Point neuron model name.",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:description",
+              "name": "Description",
+              "description": "Point neuron model.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/atlas/cellpositioning/v0.1.0/shapes/"
+    }
+  ],
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
+  ],
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:CellPositioningShape",
+      "@type": "sh:NodeShape",
+      "label": "Generic cell positioning activity.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:CellPositioning",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "minCount": 1,
+              "maxCount": 1,
+              "class": "nsg:VoxelAtlas"
+            },
+            {
+              "path": "prov:generated",
+              "minCount": 1,
+              "maxCount": 1,
+              "class": "nsg:CellAtlas"
+            },
+            {
+              "path": "nsg:algorithm",
+              "datatype": "xsd:string",
+              "description": "Positioning algorithm."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
