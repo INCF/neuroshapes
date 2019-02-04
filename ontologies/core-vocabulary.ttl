@@ -1,0 +1,780 @@
+@prefix commonshapes: <https://neuroshapes.org/commons/> .
+@prefix context: <https://incf.github.io/neuroshapes/contexts/> .
+@prefix datashapes: <https://neuroshapes.org/dash/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nsg: <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+@prefix nxv: <https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix provcommonshapes: <https://provshapes.org/commons/> .
+@prefix provdatashapes: <https://provshapes.org/datashapes/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Identifier a owl:Class ;
+    rdfs:label "Identifier"@en .
+
+schema:Organization a owl:Class ;
+    rdfs:label "Organization"@en .
+
+schema:Person a owl:Class ;
+    rdfs:label "Person"@en .
+
+schema:PropertyValue a owl:Class ;
+    rdfs:label "Property Value"@en .
+
+schema:additionalName a owl:ObjectProperty ;
+    rdfs:label "additional Name"@en .
+
+schema:address a owl:ObjectProperty ;
+    rdfs:label "address"@en .
+
+schema:addressCountry a owl:ObjectProperty ;
+    rdfs:label "address Country"@en .
+
+schema:addressLocality a owl:ObjectProperty ;
+    rdfs:label "address Locality"@en .
+
+schema:affiliation a owl:ObjectProperty ;
+    rdfs:label "affiliation"@en .
+
+schema:algorithm a owl:ObjectProperty ;
+    rdfs:label "algorithm"@en .
+
+schema:citation a owl:ObjectProperty ;
+    rdfs:label "citation"@en .
+
+schema:dateCreated a owl:ObjectProperty ;
+    rdfs:label "date Created"@en .
+
+schema:dateModified a owl:ObjectProperty ;
+    rdfs:label "date Modified"@en .
+
+schema:dateReleased a owl:ObjectProperty ;
+    rdfs:label "date Released"@en .
+
+schema:description a owl:ObjectProperty ;
+    rdfs:label "description"@en .
+
+schema:distance a owl:ObjectProperty ;
+    rdfs:label "distance"@en .
+
+schema:distribution a owl:ObjectProperty ;
+    rdfs:label "distribution"@en .
+
+schema:email a owl:ObjectProperty ;
+    rdfs:label "email"@en .
+
+schema:familyName a owl:ObjectProperty ;
+    rdfs:label "family Name"@en .
+
+schema:faxNumber a owl:ObjectProperty ;
+    rdfs:label "fax Number"@en .
+
+schema:givenName a owl:ObjectProperty ;
+    rdfs:label "given Name"@en .
+
+schema:identifier a owl:ObjectProperty ;
+    rdfs:label "identifier"@en .
+
+schema:image a owl:ObjectProperty ;
+    rdfs:label "image"@en .
+
+schema:keywords a owl:ObjectProperty ;
+    rdfs:label "keywords"@en .
+
+schema:language a owl:ObjectProperty ;
+    rdfs:label "language"@en .
+
+schema:license a owl:ObjectProperty ;
+    rdfs:label "license"@en .
+
+schema:name a owl:ObjectProperty ;
+    rdfs:label "name"@en .
+
+schema:parentOrganization a owl:ObjectProperty ;
+    rdfs:label "parent Organization"@en .
+
+schema:postalCode a owl:ObjectProperty ;
+    rdfs:label "postal Code"@en .
+
+schema:propertyID a owl:ObjectProperty ;
+    rdfs:label "property"@en .
+
+schema:sameAs a owl:ObjectProperty ;
+    rdfs:label "same As"@en .
+
+schema:sku a owl:ObjectProperty ;
+    rdfs:label "sku"@en .
+
+schema:streetAddress a owl:ObjectProperty ;
+    rdfs:label "street Address"@en .
+
+schema:telephone a owl:ObjectProperty ;
+    rdfs:label "telephone"@en .
+
+schema:title a owl:ObjectProperty ;
+    rdfs:label "title"@en .
+
+schema:unitCode a owl:ObjectProperty ;
+    rdfs:label "unit Code"@en .
+
+schema:unitText a owl:ObjectProperty ;
+    rdfs:label "unit Text"@en .
+
+schema:url a owl:ObjectProperty ;
+    rdfs:label "url"@en .
+
+schema:value a owl:ObjectProperty ;
+    rdfs:label "value"@en .
+
+schema:version a owl:ObjectProperty ;
+    rdfs:label "version"@en .
+
+rdf:type a owl:ObjectProperty ;
+    rdfs:label "type"@en .
+
+rdfs:commnent a owl:ObjectProperty ;
+    rdfs:label "commnent"@en .
+
+rdfs:isDefinedBy a owl:ObjectProperty ;
+    rdfs:label "is Defined By"@en .
+
+rdfs:label a owl:ObjectProperty ;
+    rdfs:label "label"@en .
+
+rdfs:seeAlso a owl:ObjectProperty ;
+    rdfs:label "see Also"@en .
+
+owl:deprecated a owl:ObjectProperty ;
+    rdfs:label "deprecated"@en .
+
+owl:sameAs a owl:ObjectProperty ;
+    rdfs:label "same As"@en .
+
+prov:Activity a owl:Class ;
+    rdfs:label "Activity"@en .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent"@en .
+
+prov:Collection a owl:Class ;
+    rdfs:label "Collection"@en .
+
+prov:Derivation a owl:Class ;
+    rdfs:label "Derivation"@en .
+
+prov:EmptyCollection a owl:Class ;
+    rdfs:label "Empty Collection"@en .
+
+prov:Entity a owl:Class ;
+    rdfs:label "Entity"@en .
+
+prov:Generation a owl:Class ;
+    rdfs:label "Generation"@en .
+
+prov:Organization a owl:Class ;
+    rdfs:label "Organization"@en .
+
+prov:Person a owl:Class ;
+    rdfs:label "Person"@en .
+
+prov:SoftwareAgent a owl:Class ;
+    rdfs:label "Software Agent"@en .
+
+prov:activity a owl:ObjectProperty ;
+    rdfs:label "activity"@en .
+
+prov:agent a owl:ObjectProperty ;
+    rdfs:label "agent"@en .
+
+prov:alternateOf a owl:ObjectProperty ;
+    rdfs:label "alternate Of"@en .
+
+prov:atTime a owl:ObjectProperty ;
+    rdfs:label "at Time"@en .
+
+prov:endedAtTime a owl:ObjectProperty ;
+    rdfs:label "ended At Time"@en .
+
+prov:entity a owl:ObjectProperty ;
+    rdfs:label "entity"@en .
+
+prov:generated a owl:ObjectProperty ;
+    rdfs:label "generated"@en .
+
+prov:hadActivity a owl:ObjectProperty ;
+    rdfs:label "had Activity"@en .
+
+prov:hadMember a owl:ObjectProperty ;
+    rdfs:label "had Member"@en .
+
+prov:hadPlan a owl:ObjectProperty ;
+    rdfs:label "had Plan"@en .
+
+prov:hadRole a owl:ObjectProperty ;
+    rdfs:label "had Role"@en .
+
+prov:qualifiedAssociation a owl:ObjectProperty ;
+    rdfs:label "qualified Association"@en .
+
+prov:qualifiedUsage a owl:ObjectProperty ;
+    rdfs:label "qualified Usage"@en .
+
+prov:specializationOf a owl:ObjectProperty ;
+    rdfs:label "specialization Of"@en .
+
+prov:startedAtTime a owl:ObjectProperty ;
+    rdfs:label "started At Time"@en .
+
+prov:used a owl:ObjectProperty ;
+    rdfs:label "used"@en .
+
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:label "was Associated With"@en .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "was Attributed To"@en .
+
+prov:wasDerivedFrom a owl:ObjectProperty ;
+    rdfs:label "was Derived From"@en .
+
+prov:wasGeneratedBy a owl:ObjectProperty ;
+    rdfs:label "was Generated By"@en .
+
+prov:wasInvalidatedBy a owl:ObjectProperty ;
+    rdfs:label "was Invalidated By"@en .
+
+prov:wasRevisionOf a owl:ObjectProperty ;
+    rdfs:label "was Revision Of"@en .
+
+prov:wasStartedBy a owl:ObjectProperty ;
+    rdfs:label "was Started By"@en .
+
+nsg: a owl:Ontology ;
+    rdfs:label "Neuroscience Graph Core Vocabulary"@en ;
+    dc:contributor "Anna-Kristin Kaufmann <anna-kristin.kaufmann@epfl.ch>",
+        "Lu Huanxiang <huanxiang.lu@epfl.ch>",
+        "Silvia Jimenez <silvia.jimenez@epfl.ch>" ;
+    dc:creator "Sy Mohameth Francois <mohameth.sy@epfl.ch>" ;
+    dc:publisher "Blue Brain Project, EPFL" ;
+    dc:rights "This work is distributed under a Creative Commons Attribution 4.0 (CC-BY-4.0) Public License <https://creativecommons.org/licenses/by/4.0/>"@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    vann:preferredNamespacePrefix "nsg" ;
+    owl:versionInfo "0.1.0" .
+
+nsg:AcquisitionAnnotation a owl:Class ;
+    rdfs:label "Acquisition Annotation"@en .
+
+nsg:Activity a owl:Class ;
+    rdfs:label "Activity"@en .
+
+nsg:AffineLinearTransform a owl:Class ;
+    rdfs:label "Affine Linear Transform"@en ;
+    rdfs:subClassOf nsg:Transform .
+
+nsg:Agent a owl:Class ;
+    rdfs:label "Agent"@en .
+
+nsg:Analysis a owl:Class ;
+    rdfs:label "Analysis"@en .
+
+nsg:AnalysisResult a owl:Class ;
+    rdfs:label "Analysis Result"@en .
+
+nsg:AnnotatedSlice a owl:Class ;
+    rdfs:label "Annotated Slice"@en .
+
+nsg:Annotation a owl:Class ;
+    rdfs:label "Annotation"@en .
+
+nsg:ApicalAnnotation a owl:Class ;
+    rdfs:label "Apical Annotation"@en .
+
+nsg:AtlasConstruction a owl:Class ;
+    rdfs:label "Atlas Construction"@en .
+
+nsg:AtlasRelease a owl:Class ;
+    rdfs:label "Atlas Release"@en .
+
+nsg:AtlasSpatialReferenceSystem a owl:Class ;
+    rdfs:label "Atlas Spatial Reference System"@en .
+
+nsg:BluePyEfeFeatures a owl:Class ;
+    rdfs:label "Blue Py Efe Features"@en .
+
+nsg:BoundingBox a owl:Class ;
+    rdfs:label "Bounding Box"@en .
+
+nsg:BrainImaging a owl:Class ;
+    rdfs:label "Brain Imaging"@en .
+
+nsg:BrainParcellationDataLayer a owl:Class ;
+    rdfs:label "Brain Parcellation Data Layer"@en .
+
+nsg:BrainParcellationMesh a owl:Class ;
+    rdfs:label "Brain Parcellation Mesh"@en .
+
+nsg:BrainSlicing a owl:Class ;
+    rdfs:label "Brain Slicing"@en .
+
+nsg:Cell a owl:Class ;
+    rdfs:label "Cell"@en .
+
+nsg:CellDensityDataLayer a owl:Class ;
+    rdfs:label "Cell Density Data Layer"@en .
+
+nsg:CellPlacement a owl:Class ;
+    rdfs:label "Cell Placement"@en .
+
+nsg:CircuitCellProperties a owl:Class ;
+    rdfs:label "Circuit Cell Properties"@en .
+
+nsg:Configuration a owl:Class ;
+    rdfs:label "Configuration"@en .
+
+nsg:DeformableTransform a owl:Class ;
+    rdfs:label "Deformable Transform"@en ;
+    rdfs:subClassOf nsg:Transform .
+
+nsg:DetailedCircuit a owl:Class ;
+    rdfs:label "Detailed Circuit"@en ;
+    rdfs:subClassOf nsg:Model .
+
+nsg:EModel a owl:Class ;
+    rdfs:label "EModel"@en ;
+    rdfs:subClassOf nsg:Model .
+
+nsg:EModelBuilding a owl:Class ;
+    rdfs:label "EModel Building"@en .
+
+nsg:EModelRelease a owl:Class ;
+    rdfs:label "EModel Release"@en ;
+    rdfs:subClassOf nsg:ModelRelease .
+
+nsg:EModelScript a owl:Class ;
+    rdfs:label "EModel Script"@en .
+
+nsg:ETypeFeatureProtocol a owl:Class ;
+    rdfs:label "EType Feature Protocol"@en ;
+    rdfs:subClassOf nsg:Model .
+
+nsg:EdgeCollection a owl:Class ;
+    rdfs:label "Edge Collection"@en .
+
+nsg:EmodelFeatureGeneration a owl:Class ;
+    rdfs:label "Emodel Feature Generation"@en .
+
+nsg:EmptyCollection a owl:Class ;
+    rdfs:label "Empty Collection"@en .
+
+nsg:Entity a owl:Class ;
+    rdfs:label "Entity"@en .
+
+nsg:ExperimentalActivity a owl:Class ;
+    rdfs:label "Experimental Activity"@en .
+
+nsg:ExperimentalProtocol a owl:Class ;
+    rdfs:label "Experimental Protocol"@en .
+
+nsg:FixationStainingMounting a owl:Class ;
+    rdfs:label "Fixation Staining Mounting"@en .
+
+nsg:FixedStainedSlice a owl:Class ;
+    rdfs:label "Fixed Stained Slice"@en .
+
+nsg:HostCell a owl:Class ;
+    rdfs:label "Host Cell"@en .
+
+nsg:ImageStack a owl:Class ;
+    rdfs:label "Image Stack"@en .
+
+nsg:ImageVolume a owl:Class ;
+    rdfs:label "Image Volume"@en .
+
+nsg:IntraCellularSharpElectrode a owl:Class ;
+    rdfs:label "Intra Cellular Sharp Electrode"@en .
+
+nsg:IntraCellularSharpElectrodeRecordedCell a owl:Class ;
+    rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en .
+
+nsg:IntraCellularSharpElectrodeRecordedSlice a owl:Class ;
+    rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en .
+
+nsg:IonChannelGene a owl:Class ;
+    rdfs:label "Ion Channel Gene"@en .
+
+nsg:IonChannelMechanismRelease a owl:Class ;
+    rdfs:label "Ion Channel Mechanism Release"@en ;
+    rdfs:subClassOf nsg:ModelRelease .
+
+nsg:LabeledCell a owl:Class ;
+    rdfs:label "Labeled Cell"@en .
+
+nsg:LinearTransform a owl:Class ;
+    rdfs:label "Linear Transform"@en ;
+    rdfs:subClassOf nsg:Transform .
+
+nsg:MEModel a owl:Class ;
+    rdfs:label "MEModel"@en ;
+    rdfs:subClassOf nsg:Model .
+
+nsg:MEModelRelease a owl:Class ;
+    rdfs:label "MEModel Release"@en ;
+    rdfs:subClassOf nsg:ModelRelease .
+
+nsg:ModelInstance a owl:Class ;
+    rdfs:label "Model Instance"@en .
+
+nsg:ModelReleaseIndex a owl:Class ;
+    rdfs:label "Model Release Index"@en .
+
+nsg:ModelValidation a owl:Class ;
+    rdfs:label "Model Validation"@en .
+
+nsg:Morphology a owl:Class ;
+    rdfs:label "Morphology"@en .
+
+nsg:MorphologyDiversification a owl:Class ;
+    rdfs:label "Morphology Diversification"@en .
+
+nsg:MorphologyMesh a owl:Class ;
+    rdfs:label "Morphology Mesh"@en .
+
+nsg:MorphologyMeshGeneration a owl:Class ;
+    rdfs:label "Morphology Mesh Generation"@en .
+
+nsg:MorphologyOrientationDataLayer a owl:Class ;
+    rdfs:label "Morphology Orientation Data Layer"@en .
+
+nsg:MorphologyRelease a owl:Class ;
+    rdfs:label "Morphology Release"@en ;
+    rdfs:subClassOf nsg:ModelRelease .
+
+nsg:NISSLImageDataLayer a owl:Class ;
+    rdfs:label "NISSLImage Data Layer"@en .
+
+nsg:NodeCollection a owl:Class ;
+    rdfs:label "Node Collection"@en .
+
+nsg:OntologyConversion a owl:Class ;
+    rdfs:label "Ontology Conversion"@en .
+
+nsg:Organization a owl:Class ;
+    rdfs:label "Organization"@en .
+
+nsg:PHDataLayer a owl:Class ;
+    rdfs:label "PHData Layer"@en .
+
+nsg:ParcellationImageData a owl:Class ;
+    rdfs:label "Parcellation Image Data"@en .
+
+nsg:ParcellationLabel a owl:Class ;
+    rdfs:label "Parcellation Label"@en .
+
+nsg:ParcellationMeshGeneration a owl:Class ;
+    rdfs:label "Parcellation Mesh Generation"@en .
+
+nsg:ParcellationOntology a owl:Class ;
+    rdfs:label "Parcellation Ontology"@en .
+
+nsg:ParcellationReconstruction a owl:Class ;
+    rdfs:label "Parcellation Reconstruction"@en .
+
+nsg:ParcellationVolume a owl:Class ;
+    rdfs:label "Parcellation Volume"@en .
+
+nsg:PatchClamp a owl:Class ;
+    rdfs:label "Patch Clamp"@en .
+
+nsg:PatchedCell a owl:Class ;
+    rdfs:label "Patched Cell"@en .
+
+nsg:PatchedSlice a owl:Class ;
+    rdfs:label "Patched Slice"@en .
+
+nsg:Person a owl:Class ;
+    rdfs:label "Person"@en .
+
+nsg:Protocol a owl:Class ;
+    rdfs:label "Protocol"@en .
+
+nsg:ReconstructedCellFormatConversion a owl:Class ;
+    rdfs:label "Reconstructed Cell Format Conversion"@en .
+
+nsg:ReconstructedCellRelease a owl:Class ;
+    rdfs:label "Reconstructed Cell Release"@en .
+
+nsg:ReconstructedCellReleaseGeneration a owl:Class ;
+    rdfs:label "Reconstructed Cell Release Generation"@en .
+
+nsg:ReconstructedCellReleaseProcess a owl:Class ;
+    rdfs:label "Reconstructed Cell Release Process"@en .
+
+nsg:ReconstructedPatchedCell a owl:Class ;
+    rdfs:label "Reconstructed Patched Cell"@en ;
+    rdfs:subClassOf nsg:ReconstructedCell .
+
+nsg:ReconstructedWholeBrainCell a owl:Class ;
+    rdfs:label "Reconstructed Whole Brain Cell"@en ;
+    rdfs:subClassOf nsg:ReconstructedCell .
+
+nsg:Reconstruction a owl:Class ;
+    rdfs:label "Reconstruction"@en .
+
+nsg:ReconstructionCorrection a owl:Class ;
+    rdfs:label "Reconstruction Correction"@en .
+
+nsg:ReconstructionFromImage a owl:Class ;
+    rdfs:label "Reconstruction From Image"@en .
+
+nsg:RegionOfInterest a owl:Class ;
+    rdfs:label "Region Of Interest"@en .
+
+nsg:RigidLinearTransform a owl:Class ;
+    rdfs:label "Rigid Linear Transform"@en ;
+    rdfs:subClassOf nsg:Transform .
+
+nsg:RotationalMatrix a owl:Class ;
+    rdfs:label "Rotational Matrix"@en .
+
+nsg:SimplifiedCircuit a owl:Class ;
+    rdfs:label "Simplified Circuit"@en .
+
+nsg:Simulation a owl:Class ;
+    rdfs:label "Simulation"@en .
+
+nsg:SingleCellSimulationTrace a owl:Class ;
+    rdfs:label "Single Cell Simulation Trace"@en .
+
+nsg:SingleCellTraceGeneration a owl:Class ;
+    rdfs:label "Single Cell Trace Generation"@en .
+
+nsg:Slice a owl:Class ;
+    rdfs:label "Slice"@en .
+
+nsg:SoftwareAgent a owl:Class ;
+    rdfs:label "Software Agent"@en .
+
+nsg:SpatialIndex a owl:Class ;
+    rdfs:label "Spatial Index"@en .
+
+nsg:SpatialIndexDerivation a owl:Class ;
+    rdfs:label "Spatial Index Derivation"@en .
+
+nsg:StimulusExperiment a owl:Class ;
+    rdfs:label "Stimulus Experiment"@en .
+
+nsg:SubCellularModel a owl:Class ;
+    rdfs:label "Sub Cellular Model"@en ;
+    rdfs:subClassOf nsg:Model .
+
+nsg:SubCellularModelScript a owl:Class ;
+    rdfs:label "Sub Cellular Model Script"@en .
+
+nsg:Subject a owl:Class ;
+    rdfs:label "Subject"@en .
+
+nsg:SynapseRelease a owl:Class ;
+    rdfs:label "Synapse Release"@en ;
+    rdfs:subClassOf nsg:ModelRelease .
+
+nsg:Target a owl:Class ;
+    rdfs:label "Target"@en .
+
+nsg:TemplateImageData a owl:Class ;
+    rdfs:label "Template Image Data"@en .
+
+nsg:TemplateReconstruction a owl:Class ;
+    rdfs:label "Template Reconstruction"@en .
+
+nsg:TemplateVolume a owl:Class ;
+    rdfs:label "Template Volume"@en .
+
+nsg:Threshold a owl:Class ;
+    rdfs:label "Threshold"@en .
+
+nsg:Trace a owl:Class ;
+    rdfs:label "Trace"@en .
+
+nsg:TraceCollection a owl:Class ;
+    rdfs:label "Trace Collection"@en .
+
+nsg:TraceFeature a owl:Class ;
+    rdfs:label "Trace Feature"@en .
+
+nsg:TraceFeatureExtraction a owl:Class ;
+    rdfs:label "Trace Feature Extraction"@en .
+
+nsg:TraceGeneration a owl:Class ;
+    rdfs:label "Trace Generation"@en .
+
+nsg:Transfection a owl:Class ;
+    rdfs:label "Transfection"@en .
+
+nsg:Transformation a owl:Class ;
+    rdfs:label "Transformation"@en .
+
+nsg:TwoPhotonImageDataLayer a owl:Class ;
+    rdfs:label "Two Photon Image Data Layer"@en .
+
+nsg:ValidationResult a owl:Class ;
+    rdfs:label "Validation Result"@en .
+
+nsg:VariableReportShape a owl:Class ;
+    rdfs:label "Variable Report Shape"@en .
+
+nsg:VolumetricDataLayer a owl:Class ;
+    rdfs:label "Volumetric Data Layer"@en .
+
+nsg:WholeCellPatchClamp a owl:Class ;
+    rdfs:label "Whole Cell Patch Clamp"@en .
+
+nsg:apicalDendrite a owl:ObjectProperty ;
+    rdfs:label "apical Dendrite"@en .
+
+nsg:atlasSpatialReferenceSystem a owl:ObjectProperty ;
+    rdfs:label "atlas Spatial Reference System"@en .
+
+nsg:axon a owl:ObjectProperty ;
+    rdfs:label "axon"@en .
+
+nsg:basalDendrite a owl:ObjectProperty ;
+    rdfs:label "basal Dendrite"@en .
+
+nsg:boundary a owl:ObjectProperty ;
+    rdfs:label "boundary"@en .
+
+nsg:brainRegion a owl:ObjectProperty ;
+    rdfs:label "brain Region"@en .
+
+nsg:center a owl:ObjectProperty ;
+    rdfs:label "center"@en .
+
+nsg:channel a owl:ObjectProperty ;
+    rdfs:label "channel"@en .
+
+nsg:coordinatesInBrainAtlas a owl:ObjectProperty ;
+    rdfs:label "coordinates In Brain Atlas"@en .
+
+nsg:coordinatesInSlice a owl:ObjectProperty ;
+    rdfs:label "coordinates In Slice"@en .
+
+nsg:distanceToBoundary a owl:ObjectProperty ;
+    rdfs:label "distance To Boundary"@en .
+
+nsg:eCode a owl:ObjectProperty ;
+    rdfs:label "eCode"@en .
+
+nsg:firstRow a owl:ObjectProperty ;
+    rdfs:label "first Row"@en .
+
+nsg:gain a owl:ObjectProperty ;
+    rdfs:label "gain"@en .
+
+nsg:geometry a owl:ObjectProperty ;
+    rdfs:label "geometry"@en .
+
+nsg:geometryParameter a owl:ObjectProperty ;
+    rdfs:label "geometry Parameter"@en .
+
+nsg:longitudinalAxis a owl:ObjectProperty ;
+    rdfs:label "longitudinal Axis"@en .
+
+nsg:period a owl:ObjectProperty ;
+    rdfs:label "period"@en .
+
+nsg:positionInLayer a owl:ObjectProperty ;
+    rdfs:label "position In Layer"@en .
+
+nsg:providerId a owl:ObjectProperty ;
+    rdfs:label "provider Id"@en .
+
+nsg:radius a owl:ObjectProperty ;
+    rdfs:label "radius"@en .
+
+nsg:reagentLinearFormula a owl:ObjectProperty ;
+    rdfs:label "reagent Linear Formula"@en .
+
+nsg:reagentMolarWeight a owl:ObjectProperty ;
+    rdfs:label "reagent Molar Weight"@en .
+
+nsg:reagentName a owl:ObjectProperty ;
+    rdfs:label "reagent Name"@en .
+
+nsg:reagentVendor a owl:ObjectProperty ;
+    rdfs:label "reagent Vendor"@en .
+
+nsg:secondRow a owl:ObjectProperty ;
+    rdfs:label "second Row"@en .
+
+nsg:soma a owl:ObjectProperty ;
+    rdfs:label "soma"@en .
+
+nsg:spatialReferenceSystem a owl:ObjectProperty ;
+    rdfs:label "spatial Reference System"@en .
+
+nsg:thirdRow a owl:ObjectProperty ;
+    rdfs:label "third Row"@en .
+
+nsg:valueX a owl:ObjectProperty ;
+    rdfs:label "value"@en .
+
+nsg:valueY a owl:ObjectProperty ;
+    rdfs:label "value"@en .
+
+nsg:valueZ a owl:ObjectProperty ;
+    rdfs:label "value"@en .
+
+nsg:voxelResolution a owl:ObjectProperty ;
+    rdfs:label "voxel Resolution"@en .
+
+nxv:Instance a owl:Class ;
+    rdfs:label "Instance"@en .
+
+nxv:deprecated a owl:ObjectProperty ;
+    rdfs:label "deprecated"@en .
+
+nxv:links a owl:ObjectProperty ;
+    rdfs:label "links"@en .
+
+nxv:rev a owl:ObjectProperty ;
+    rdfs:label "rev"@en .
+
+nxv:self a owl:ObjectProperty ;
+    rdfs:label "self"@en .
+
+<nsg:Dataset> a owl:Class ;
+    rdfs:label "Dataset"@en .
+
+dcterms:FileFormat a owl:Class ;
+    rdfs:label "File Format"@en ;
+    rdfs:subClassOf dcterms:FileFormat .
+
+owl:Ontology a owl:Class ;
+    rdfs:label "Ontology"@en .
+
+nsg:Collection a owl:Class ;
+    rdfs:label "Collection"@en ;
+    rdfs:subClassOf nsg:Collection .
+
+nsg:ReconstructedCell a owl:Class ;
+    rdfs:label "Reconstructed Cell"@en .
+
+nsg:Model a owl:Class ;
+    rdfs:label "Model"@en .
+
+nsg:ModelRelease a owl:Class ;
+    rdfs:label "Model Release"@en .
+
+nsg:Transform a owl:Class ;
+    rdfs:label "Transform"@en ;
+    rdfs:subClassOf nsg:Transform .
+
