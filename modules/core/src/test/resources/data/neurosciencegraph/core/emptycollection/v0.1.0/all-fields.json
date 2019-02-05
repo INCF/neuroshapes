@@ -1,8 +1,0 @@
-{
-  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
-  "@type": "nsg:EmptyCollection",
-  "name": "Empty collection name",
-  "description": "A description",
-  "providerId": "A provider id",
-  "schema:size": 2
-}

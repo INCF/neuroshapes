@@ -1,7 +1,0 @@
-{
-  "@context": "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0",
-  "@type": "nsg:Person",
-  "@id": "{{base}}/schemas/neurosciencegraph/core/person/v0.1.0/03b67cb6-db1a-4acd-a628-8dd3e5f3ee12",
-  "familyName": "Shi",
-  "email": "ying.shi@epfl.ch"
-}
