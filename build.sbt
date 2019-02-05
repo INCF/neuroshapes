@@ -56,8 +56,8 @@ inThisBuild(
     releaseEarlyEnableSyncToMaven := false,
   ))
 
-unmanagedResourceDirectories in Compile += baseDirectory.value / "shapes"
-packageSrc / mappings in Compile ++= (baseDirectory.value / "shapes" * "*" get) map
+unmanagedResourceDirectories in Compile += baseDirectory.value / "."
+packageSrc / mappings in Compile ++= (baseDirectory.value / "." * "*" get) map
   (x => x -> ("shapes/" + x.getName))
 
 
