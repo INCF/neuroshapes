@@ -8,7 +8,7 @@
   "@id": "https://neuroshapes.org/commons/entity",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/dash/distribution",
+    "https://neuroshapes.org/commons/distribution",
     "https://neuroshapes.org/commons/identifier"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/entity/v1.0.0.json",
@@ -66,7 +66,7 @@
           "path": "schema:dateCreated",
           "name": "Creation date",
           "description": "Date at which this entity created.",
-          "nodeKind": "xsd:dateTime",
+          "datatype": "xsd:dateTime",
           "maxCount": 1
         },
         {
