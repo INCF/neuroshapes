@@ -51,6 +51,7 @@ inThisBuild(
     releaseEarlyWith              := BintrayPublisher,
     bintrayOrganization           := Some("neuroshapes"),
     bintrayRepository             := "maven",
+    organization                  := "org.neuroshapes",
     releaseEarlyNoGpg             := true,
     releaseEarlyEnableSyncToMaven := false,
   ))
