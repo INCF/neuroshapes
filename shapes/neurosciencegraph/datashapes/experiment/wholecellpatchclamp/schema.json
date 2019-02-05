@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/wholecellpatchclamp/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/wholecellpatchclamp",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/wholecellpatchclamp/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:WholeCellPatchClampShape",
+      "@type": "sh:NodeShape",
+      "label": "Whole cell patch clamp",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:WholeCellPatchClamp",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The slice used",
+              "class": "nsg:Slice",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+            },
+            {
+              "path": "prov:generated",
+              "description": "The patched slice generated",
+              "class": "nsg:PatchedSlice",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/PatchedSliceShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

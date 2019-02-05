@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/regionofinterest/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/regionofinterest",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/regionofinterest/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:RegionOfInterestShape",
+      "@type": "sh:NodeShape",
+      "label": "Region of interest.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:RegionOfInterest",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:geometry",
+              "name": "Geometry",
+              "description": "The geometric shape of the region of interest.",
+              "node": "this:GeometricShapeShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:location",
+              "name": "Location",
+              "description": "The location of the region of interest.",
+              "node": "this:BrainLocationShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:GeometricShapeShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of a  geometry node.",
+      "targetObjectsOf": "nsg:geometry",
+      "class": "nsg:GeometricShape",
+      "property": [
+        {
+          "path": "nsg:geometryParameter",
+          "name": "Parameters",
+          "node": "this:GeometryParameterShape",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "this:GeometryParameterShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of a geometry parameter.",
+      "targetObjectsOf": "nsg:geometryParameter",
+      "property": [
+        {
+          "path": "nsg:spatialReferenceSystem",
+          "name": "Spatial Reference System",
+          "class": "nsg:SpatialReferenceSystem",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "this:BrainLocationShape",
+      "@type": "sh:NodeShape",
+      "label": "A brain location shape.",
+      "property": [
+        {
+          "path": "nsg:brainRegion",
+          "name": "Brain region",
+          "description": "Brain region",
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
+          "minCount": 1
+        }
+      ]
+    }
+  ]
+}

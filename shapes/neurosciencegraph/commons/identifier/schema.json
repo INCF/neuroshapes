@@ -1,0 +1,143 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/identifier/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/identifier",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/propertyvalue"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/identifier/v0.2.1.json",
+  "shapes": [
+    {
+      "@id": "this:IdentifierShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "schema:identifier",
+          "name": "Identifier",
+          "description": "A landing page describing the dataset.",
+          "xone": [
+            {
+              "nodeKind": "sh:IRI"
+            },
+            {
+              "datatype": "xsd:string"
+            },
+            {
+              "node": "https://neuroshapes.org/commons/propertyvalue/shapes/PropertyValueShape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:WithIdentifierPropertyShape",
+      "@type": "sh:PropertyShape",
+      "label": "Schema.org identifier shape.",
+      "path": "schema:identifier",
+      "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape"
+    },
+    {
+      "@id": "this:WithStructuredIdentifierShape",
+      "@type": "sh:PropertyShape",
+      "label": "Key value type of identifier.",
+      "path": "schema:identifier",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/propertyvalue/shapes/PropertyValueShape"
+    },
+    {
+      "@id": "this:WithOrcidIdentifierPropertyShape",
+      "@type": "sh:PropertyShape",
+      "label": "A shape for an ORCID based researcher identifier.",
+      "seeAlso": "https://support.orcid.org/knowledgebase/articles/116780-structure-of-the-orcid-identifier",
+      "path": "schema:identifier",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/propertyvalue/shapes/PropertyValueShape"
+        },
+        {
+          "property": [
+            {
+              "or": [
+                {
+                  "path": "schema:propertyID",
+                  "name": "Orcid ID",
+                  "description": "The property name.",
+                  "datatype": "xsd:string",
+                  "hasValue": "http//orcid.org",
+                  "maxCount": 1
+                },
+                {
+                  "path": "schema:name",
+                  "name": "Orcid ID",
+                  "description": "The property name.",
+                  "datatype": "xsd:string",
+                  "hasValue": "orcid",
+                  "maxCount": 1
+                }
+              ]
+            },
+            {
+              "path": "schema:value",
+              "name": "Orcid",
+              "description": "The orcid identifier",
+              "nodeKind": "sh:IRI",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:WithGridIdentifierPropertyShape",
+      "@type": "sh:PropertyShape",
+      "label": "A shape for GRID (https://www.grid.ac) based organization identifier.",
+      "seeAlso": "https://www.grid.ac",
+      "path": "schema:identifier",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/propertyvalue/shapes/PropertyValueShape"
+        },
+        {
+          "property": [
+            {
+              "or": [
+                {
+                  "path": "schema:propertyID",
+                  "name": "GRID ID property",
+                  "description": "The GRID property identifier.",
+                  "datatype": "xsd:string",
+                  "hasValue": "http//orcid.org",
+                  "maxCount": 1
+                },
+                {
+                  "path": "schema:name",
+                  "name": "Orcid ID",
+                  "description": "The property name.",
+                  "datatype": "xsd:string",
+                  "hasValue": "grid",
+                  "maxCount": 1
+                }
+              ]
+            },
+            {
+              "path": "schema:value",
+              "name": "GRID ID",
+              "description": "The GRID identifier",
+              "nodeKind": "sh:IRI",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

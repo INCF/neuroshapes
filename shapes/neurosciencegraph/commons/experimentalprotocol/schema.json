@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/experimentalprotocol/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/experimentalprotocol",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/protocol",
+    "https://neuroshapes.org/commons/identifier"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/experimentalprotocol/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:ExperimentalProtocolShape",
+      "@type": "sh:NodeShape",
+      "label": "Protocol shape definition based on protocols.io json schema. The identifier of a protocol should be a valid IRI.",
+      "seeAlso": "http://apidoc.protocols.io/v3/#reagent-object",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/protocol/shapes/ProtocolShape"
+        },
+        {
+          "path": "nsg:materials",
+          "name": "Materials",
+          "description": "Materials used in protocol",
+          "node": "this:MaterialsShape"
+        },
+        {
+          "path": "nsg:vendor",
+          "name": "Vendor",
+          "description": "Name of vendor of protocol",
+          "class": "schema:Organization"
+        },
+        {
+          "path": "nsg:steps",
+          "name": "Steps",
+          "description": "Steps of protocol",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "nsg:warning",
+          "name": "Warning",
+          "description": "Warning for protocol",
+          "datatype": "xsd:string"
+        }
+      ]
+    },
+    {
+      "@id": "this:MaterialsShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:reagentName",
+          "name": "Reagent name",
+          "description": "Name of reagent/material used",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:reagentMolarWeight",
+          "name": "Reagent molar weight",
+          "description": "Molar weight of reagent",
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:reagentLinearFormula",
+          "name": "Reagent linear formula",
+          "description": "Linear formula of reagent",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:sku",
+          "name": "Reagent SKU",
+          "description": "Stock keeping unit of reagent/material",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:identifier",
+          "name": "Reagent URL",
+          "description": "URL of reagent/material",
+          "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:reagentVendor",
+          "name": "Reagent vendor",
+          "description": "Name of vendor of reagent",
+          "class": "schema:Organization"
+        }
+      ]
+    },
+    {
+      "@id": "this:HadProtocolValueShape",
+      "@type": "sh:PropertyShape",
+      "path": "nsg:hadProtocol",
+      "name": "Experimental protocol",
+      "description": "The value of nsg:hadProtocol should be of type nsg:ExperimentalProtocol.",
+      "class": "nsg:ExperimentalProtocol",
+      "seeAlso": "https://neuroshapes.org/commons/experimentalprotocol/shapes/ProtocolShape"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/cellplacement/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/cellplacement",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/cellplacement/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:CellPlacementShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:CellPlacement",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+    }
+  ]
+}

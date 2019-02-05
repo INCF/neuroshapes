@@ -24,118 +24,18 @@ scalafmt: {
 }
  */
 
-val commonsVersion = "0.7.6"
-val provVersion    = "1.1.1"
-val kgVersion      = "0.9.4"
-
-lazy val prov           = "ch.epfl.bluebrain.nexus" %% "nexus-prov"      % provVersion
-lazy val commonsSchemas = "ch.epfl.bluebrain.nexus" %% "commons-schemas" % commonsVersion
-lazy val kgSchemas      = "ch.epfl.bluebrain.nexus" %% "kg-schemas"      % kgVersion
-
-lazy val core = project
-  .in(file("modules/core"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(nsgcommons)
-  .settings(publishSettings)
-  .settings(
-    name                := "nsg-core-schemas",
-    moduleName          := "nsg-core-schemas"
-  )
-
-lazy val nexusschema = project
-  .in(file("modules/nexus-schemas"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .settings(publishSettings)
-  .settings(
-    name       := "kg-nsg-schemas",
-    moduleName := "kg-nsg-schemas",
-    resolvers          += Resolver.bintrayRepo("bogdanromanx", "maven"),
-    libraryDependencies ++= Seq(
-      commonsSchemas,
-      kgSchemas
-    )
-  )
-
-lazy val experiment = project
-  .in(file("modules/experiment"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(core)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-experiment-schemas",
-    moduleName := "nsg-experiment-schemas"
-  )
-
-lazy val nsgcommons = project
-  .in(file("modules/commons"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(nexusschema)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-commons-schemas",
-    moduleName := "nsg-commons-schemas",
-    libraryDependencies += prov
-  )
-
-lazy val atlas = project
-  .in(file("modules/atlas"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(experiment)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-atlas-schemas",
-    moduleName := "nsg-atlas-schemas"
-  )
-
-lazy val electrophysiology = project
-  .in(file("modules/electrophysiology"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(experiment)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-electrophysiology-schemas",
-    moduleName := "nsg-electrophysiology-schemas"
-  )
-
-lazy val morphology = project
-  .in(file("modules/morphology"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(experiment)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-morphology-schemas",
-    moduleName := "nsg-morphology-schemas"
-  )
-
-lazy val simulation = project
-  .in(file("modules/simulation"))
-  .enablePlugins(WorkbenchPlugin)
-  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
-  .dependsOn(core)
-  .settings(publishSettings)
-  .settings(
-    name       := "nsg-simulation-schemas",
-    moduleName := "nsg-simulation-schemas"
-  )
-
-
-
-lazy val root = project
+lazy val neuroshapes = project
   .in(file("."))
-  .settings(name := "nsg-schemas", moduleName := "nsg-schemas")
-  .settings(noPublish)
-  .aggregate(core, experiment, atlas, morphology, electrophysiology, simulation, nexusschema,nsgcommons)
+  .settings(
+    name := "neuroshapes",
+    moduleName := "neuroshapes"
+  )
+  .disablePlugins(ScapegoatSbtPlugin, DocumentationPlugin)
+  .settings(publishSettings)
+
 
 inThisBuild(
   List(
-    workbenchVersion   := "0.3.2",
     bintrayOmitLicense := true,
     homepage           := Some(url("https://github.com/INCF/neuroshapes")),
     licenses           := Seq("Attribution" -> url("https://github.com/INCF/neuroshapes/blob/master/LICENSE")),

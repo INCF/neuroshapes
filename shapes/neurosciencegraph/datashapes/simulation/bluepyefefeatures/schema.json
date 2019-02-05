@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/bluepyefefeatures/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/bluepyefefeatures",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/bluepyefefeatures/v0.1.4.json",
+  "shapes": [
+    {
+      "@id": "this:BluePyEfeFeaturesShape",
+      "@type": "sh:NodeShape",
+      "label": "BluePyEfe output shape",
+      "comment": "BluePyEfe extracted features.",
+      "targetClass": "nsg:BluePyEfeFeatures",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:features",
+              "description": "Extracted features(features.json)",
+              "class": "nsg:Entity",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:hadProtocol",
+              "description": "Experimental protocols which produced traces having extracted features(protocols.json)",
+              "class": "nsg:Entity",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:hypampThreshold",
+              "description": "Holding currents and thresholds per cell from experimental traces(hypamp_threshold.json)",
+              "class": "nsg:Entity",
+              "maxCount": 1
+            },
+            {
+              "path": "dcterms:isPartOf",
+              "name": "Part of",
+              "description": "The emodel release for which features were extracted.",
+              "class": "nsg:EModelRelease"
+            },
+            {
+              "path": "nsg:eType",
+              "description": "Electrical cell type for which features were extracted",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

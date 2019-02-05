@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/emodel/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/emodel",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/modelinstance"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/emodel/v0.1.3.json",
+  "shapes": [
+    {
+      "@id": "this:EModelShape",
+      "@type": "sh:NodeShape",
+      "label": "Emodel shape",
+      "comment": [
+        "An emodel can be queried by what is being modeled (values of modelOf). Values of modelOf: cell type which encapsulates the following info:brain region, etype,mtype, functional type, species"
+      ],
+      "targetClass": "nsg:EModel",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/modelinstance/shapes/ModelInstanceShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:subCellularMechanism",
+              "name": "SubCellular mechanism",
+              "description": "SubCellular mechanism",
+              "seeAlso": "https://neuroshapes.org/dash/subcellularmodel/shapes/SubCellularModelShape",
+              "class": "nsg:SubCellularModel"
+            },
+            {
+              "path": "nsg:modelScript",
+              "name": "Model script",
+              "description": "Script defining neuron model, e.g. a Hoc file, or a zip file containing multiple Hoc files.",
+              "seeAlso": "https://neuroshapes.org/dash/emodelscript/shapes/EModelScriptShape",
+              "class": "nsg:EModelScript"
+            },
+            {
+              "path": "dcterms:isPartOf",
+              "name": "Part of",
+              "description": "The emodel release (s) this emodel is part of.",
+              "editorialNote": "Can an emodel belongs to multiple release ?",
+              "class": "nsg:EModelRelease"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

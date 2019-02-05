@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/rotationalmatrix/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/rotationalmatrix",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/vector3d"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/rotationalmatrix/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:RotationalMatrixShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:RotationalMatrix",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "nsg:firstRow",
+          "name": "First Row",
+          "description": "The first row in the matrix",
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:secondRow",
+          "name": "Second Row",
+          "description": "The second row in the matrix",
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:thirdRow",
+          "name": "Third Row",
+          "description": "The third row in the matrix",
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/slicecollection/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/slicecollection",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/collection",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/slicecollection/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:SliceCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "Slice Collection",
+      "comment": "All slices in the collection should be from the same subject.",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/collection/shapes/CollectionShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:hadMember",
+              "name": "Member",
+              "description": "The slices that are member of the collection.",
+              "class": "nsg:Slice",
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/intrasharprecordedcell/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/intrasharprecordedcell",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/intrasharprecordedcell/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:IntraCellularSharpElectrodeRecordedCellShape",
+      "@type": "sh:NodeShape",
+      "label": "Intracellular sharp electrode-recorded cell shape definition",
+      "targetClass": "nsg:IntraCellularSharpElectrodeRecordedCell",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information of the recorded cell",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:putativeEtype",
+              "name": "Putative e-type",
+              "description": "The putative e-type of the recorded cell",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:eType",
+              "name": "E-type",
+              "description": "The e-type of the recorded cell",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:electrodeNumber",
+              "name": "Electrode number",
+              "description": "Number of electrode used",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:startMembranePotential",
+              "name": "Start membrane potential",
+              "description": "Membrane potential of recorded cell at beginning",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:endMembranePotential",
+              "name": "End membrane potential",
+              "description": "Membrane potential of recorded cell at the end",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:electrodeResistance",
+              "name": "Electrode resistance",
+              "description": "Resistance of electrode used",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:liquidJunctionPotential",
+              "name": "Liquid junction potential",
+              "description": "Liquid junction potential of electrode",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

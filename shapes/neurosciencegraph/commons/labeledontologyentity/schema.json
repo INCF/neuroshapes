@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/labeledontologyentity/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/labeledontologyentity",
+  "@type": "nxv:Schema",
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/labeledontologyentity/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:LabeledOntologyEntityShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:IRI",
+      "property": [
+        {
+          "path": "rdfs:label",
+          "name": "Label",
+          "description": "Human readable label.",
+          "datatype": "xsd:string",
+          "minCount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/patchclamp/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/patchclamp",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/patchclamp/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:PatchClampShape",
+      "@type": "sh:NodeShape",
+      "label": "Patch clamp shape definition",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:PatchClamp",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        }
+      ]
+    }
+  ]
+}

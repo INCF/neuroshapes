@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/intrasharpelectrode/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/intrasharpelectrode",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/intrasharpelectrode/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:IntraCellularSharpElectrodeShape",
+      "@type": "sh:NodeShape",
+      "label": "Intracellular sharp electrode experiment",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:IntraCellularSharpElectrode",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The slice used",
+              "class": "nsg:Slice",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+            },
+            {
+              "path": "prov:generated",
+              "description": "The recorded slice generated",
+              "class": "nsg:IntraCellularSharpElectrodeRecordedSlice",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/intrasharprecordedslice/shapes/IntraCellularSharpElectrodeRecordedSliceShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

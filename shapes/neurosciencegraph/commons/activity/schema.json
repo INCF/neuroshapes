@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://neuroshapes.org/commons/activity/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/activity",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://provshapes.org/commons/activity",
+    "https://neuroshapes.org/commons/protocol"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/activity/v0.1.4.json",
+  "shapes": [
+    {
+      "@id": "ActivityShape",
+      "@type": "sh:NodeShape",
+      "label": "Activity description.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://provshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "@id": "https://neuroshapes.org/commons/protocol/shapes/HadProtocolValueShape"
+            },
+            {
+              "path": "prov:used",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

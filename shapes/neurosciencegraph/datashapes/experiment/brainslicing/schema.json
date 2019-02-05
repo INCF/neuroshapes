@@ -1,0 +1,96 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/brainslicing/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/brainslicing",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity",
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/brainslicing/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:BrainSlicingShape",
+      "@type": "sh:NodeShape",
+      "label": "Brain slicing shape definition",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:BrainSlicing",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The subject used",
+              "class": "nsg:Subject",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "prov:generated",
+              "description": "The slice or slice collection generated",
+              "class": "nsg:SliceCollection",
+              "minCount": 1
+            },
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:slicingPlane",
+              "name": "Slicing plane",
+              "description": "Slicing plane of the brain",
+              "in": [
+                "Sagittal",
+                "Para-sagittal",
+                "Coronal",
+                "Horizontal"
+              ],
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:slicingAngle",
+              "name": "Slicing angle",
+              "description": "Slicing angle of brain",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:cuttingThickness",
+              "name": "Cutting thickness",
+              "description": "Cutting thickness of brain slice",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:hemisphere",
+              "name": "Hemisphere",
+              "description": "Brain hemisphere that was sliced",
+              "in": [
+                "Left",
+                "Right"
+              ],
+              "maxCount": 2
+            },
+            {
+              "path": "nsg:solution",
+              "name": "Solution",
+              "description": "Solution in which the brain was sliced (e.g. Ringer's solution)",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

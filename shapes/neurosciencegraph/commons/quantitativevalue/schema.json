@@ -1,0 +1,142 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/quantitativevalue/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/quantitativevalue",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/labeledontologyentity",
+    "https://neuroshapes.org/commons/unit"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2.json",
+  "shapes": [
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "name": "Value",
+              "description": "The value of the quantitative value or property value node.",
+              "or": [
+                {
+                  "datatype": "xsd:float"
+                },
+                {
+                  "datatype": "xsd:decimal"
+                },
+                {
+                  "datatype": "xsd:double"
+                }
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:RepeatedQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:repetitions",
+              "name": "Repetitions",
+              "description": "Number of repetitions of an activity (a measurement for example).",
+              "xone": [
+                {
+                  "datatype": "xsd:integer"
+                },
+                {
+                  "node": "this:QuantitativeValueShape"
+                }
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:PositiveQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "minInclusive": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:NegativeQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "maxExclusive": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:RangeQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:minValue",
+              "name": "Minimum value",
+              "description": "The minimum value of the quantitative value.",
+              "minCount": 1,
+              "maxCount": 1,
+              "lessThan": "schema:maxValue"
+            },
+            {
+              "path": "schema:maxValue",
+              "name": "Maximum value",
+              "description": "The maximum value of the quantitative value.",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:value",
+              "minCount": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

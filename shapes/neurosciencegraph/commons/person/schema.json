@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/person/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/person",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/organization",
+    "https://neuroshapes.org/commons/identifier"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/person/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:PersonShape",
+      "@type": "sh:NodeShape",
+      "label": "Schema.org person specification is used as a vocabulary to describe a person.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "schema:email",
+          "name": "Email",
+          "datatype": "xsd:string",
+          "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+        },
+        {
+          "path": "schema:affiliation",
+          "name": "Person's affiliation",
+          "class": "nsg:Organization",
+          "node": "https://neuroshapes.org/commons/organization/shapes/OrganizationShape"
+        },
+        {
+          "path": "schema:givenName",
+          "name": "givenName",
+          "description": "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:familyName",
+          "name": "familyName",
+          "description": "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the name property.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:additionalName",
+          "name": "additionalName",
+          "description": "An additional name for a Person, can be used for a middle name.",
+          "datatype": "xsd:string"
+        },
+        {
+          "@id": "https://neuroshapes.org/commons/identifier/shapes/WithOrcidIdentifierPropertyShape"
+        },
+        {
+          "path": "schema:identifier",
+          "name": "Person identifiers",
+          "description": "Person identifiers (e.g orcid)",
+          "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape"
+        }
+      ]
+    }
+  ]
+}

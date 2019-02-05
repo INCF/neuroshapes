@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/commons/collection/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/commons/collection",
+  "@type": "nxv:Schema",
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/provsh/collection/v1.1.0.json",
+  "shapes": [
+    {
+      "@id": "CollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "Entity collection shape",
+      "comment": "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collection.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "prov:hadMember",
+          "name": "Members",
+          "description": "The (prov) entities that are member of the collection.",
+          "class": "prov:Entity",
+          "nodeKind": "sh:IRI"
+        }
+      ]
+    }
+  ]
+}
