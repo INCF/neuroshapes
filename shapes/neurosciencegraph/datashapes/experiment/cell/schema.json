@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/cell/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/cell",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/cell/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:CellShape",
+      "@type": "sh:NodeShape",
+      "label": "Cell shape definition",
+      "targetClass": "nsg:Cell",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        }
+      ]
+    }
+  ]
+}

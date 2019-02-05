@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/dash/derivation/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/dash/derivation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://provshapes.org/commons/derivation"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/prov/derivation/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "DerivationShape",
+      "@type": "sh:NodeShape",
+      "label": "Entity derivation shape",
+      "comment": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
+      "targetClass": "prov:Derivation",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://provshapes.org/commons/derivation/shapes/DerivationShape"
+    }
+  ]
+}

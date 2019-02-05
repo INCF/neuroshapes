@@ -1,0 +1,334 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/simplifiedcircuit/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/simplifiedcircuit",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/modelinstance"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/simplifiedcircuit/v0.1.2.json",
+  "shapes": [
+    {
+      "@id": "this:SimplifiedCircuitShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:SimplifiedCircuit",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/modelinstance/shapes/ModelInstanceShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainRegion",
+              "name": "Brain Region",
+              "description": "Term representing a brain region",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:species",
+              "name": "Species",
+              "description": "Term representing a species",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/SpeciesOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:synapse",
+              "name": "",
+              "description": "",
+              "node": "this:NodeCollectionShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:edgeCollection",
+              "name": "nrnPath",
+              "description": "Location of nrn synapse file and additional circuit description files: start.ncs and start.target",
+              "node": "this:EdgeCollectionShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:target",
+              "name": "TargetFile",
+              "description": "Optional parameter giving location of custom user targets stored in the named file",
+              "node": "this:TargetFileDetailsShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:CircuitDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "Location of circuit file containing general circuit geometry",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:cellLibraryFile",
+              "name": "Cells file name",
+              "description": "Name of the cells file",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:EdgeCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": " Elements of the collection defined like Location of nrn synapse file and additional circuit description files: start.ncs and start.target",
+      "comments": " Elements of the collection defined like Location of nrn synapse file and additional circuit description files: start.ncs and start.target",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:properties",
+              "name": "Properties",
+              "description": "Location of the data file defining properties of the synapses.",
+              "editorialNote": "",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:synapseRelease",
+              "name": "Synapse release",
+              "description": "Collection of mod files identified by git hash.",
+              "seeAlso": "https://neuroshapes.org/dash/synapserelease/shapes/SynapseReleaseDistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:SynapseReleaseDistributionShape",
+      "@type": "sh:NodeShape",
+      "label": "This shape is for...",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:mediaType",
+              "name": "Media type",
+              "description": "",
+              "in": [
+                "application/mod"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:MorphologyDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "Location of morphology files. Note that there should be two subdirectories, ascii and h5",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:EModelDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "Location of metypes or CCells, the files defining morphological and electrical combinations used by the simulation",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:MEComboDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "File containing info about me-combos, such as emodel used, threshold currents, etc",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TargetFileDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "Optional parameter giving location of custom user targets stored in the named file",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:BuilderRecipeDetailsShape",
+      "@type": "sh:NodeShape",
+      "label": "Location of builder recipe",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the data",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:NodeCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "elements of the collection defined like this: ",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:memodelRelease",
+              "name": "",
+              "description": "",
+              "node": "this:MEModelReleaseShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:distribution",
+              "name": "Distribution",
+              "description": "Location of the mvd3 file  mvd3 mediaType",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:EdgeCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:source",
+              "name": "Source",
+              "description": "Optional. Provides new gids if the connection sources are external to the main circuit",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:distribution",
+              "name": "Path",
+              "description": "Location of data files with additional connectivity info",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

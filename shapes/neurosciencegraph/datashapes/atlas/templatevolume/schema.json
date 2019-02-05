@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/templatevolume/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/templatevolume",
+  "@type": "nxv:Schema",
+  "import": [
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/imagevolume/v0.1.0"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/templatevolume/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:TemplateVolumeShape",
+      "@type": "sh:NodeShape",
+      "description": "Template volume",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:TemplateVolume",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:imageVolume",
+              "name": "Image Volume",
+              "description": "Image volume",
+              "node": "https://neuroshapes.org/dash/imagevolume/shapes/ImageVolumeShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:isRegisteredIn",
+              "class": "nsg:AtlasSpatialReferenceSystem",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

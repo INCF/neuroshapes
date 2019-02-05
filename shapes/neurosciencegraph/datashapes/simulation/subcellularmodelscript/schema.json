@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/subcellularmodelscript/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/subcellularmodelscript",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/dash/distribution"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/subcellularmodelscript/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:SubCellularModelScriptShape",
+      "@type": "sh:NodeShape",
+      "label": "This shape is for...",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:SubCellularModelScript",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:distribution",
+              "name": "Distribution",
+              "description": "SubCellular modelScript distribution.",
+              "node": "this:SubCellularModelScriptDistributionShape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:SubCellularModelScriptDistributionShape",
+      "@type": "sh:NodeShape",
+      "label": "This shape is for...",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:mediaType",
+              "name": "Media type",
+              "description": "Subcellular model script media type(s)",
+              "in": [
+                "application/neuron-mod"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

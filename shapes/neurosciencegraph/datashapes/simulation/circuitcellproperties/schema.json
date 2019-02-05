@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/circuitcellproperties/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/circuitcellproperties",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/circuitcellproperties/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:CircuitCellPropertiesShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:CircuitCellProperties",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+    }
+  ]
+}

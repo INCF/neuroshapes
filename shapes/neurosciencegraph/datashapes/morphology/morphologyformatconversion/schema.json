@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/morphologyformatconversion/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/morphologyformatconversion",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/morphology/src/main/resources/schemas/neurosciencegraph/morphology/morphologyformatconversion/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:ReconstructedCellFormatConversionShape",
+      "@type": "sh:NodeShape",
+      "label": "Reconstructed cell format conversion activities description.",
+      "targetClass": "nsg:ReconstructedCellFormatConversion",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The original reconstructed cell to convert",
+              "class": "nsg:ReconstructedCell",
+              "minCount": 1,
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/reconstructedcell/shapes/ReconstructedCellShape"
+            },
+            {
+              "path": "prov:generated",
+              "description": "The converted reconstructed cell",
+              "class": "nsg:ReconstructedCell",
+              "minCount": 1,
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/reconstructedcell/shapes/ReconstructedCellShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

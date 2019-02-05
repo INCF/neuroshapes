@@ -1,9 +1,0 @@
-{
-  "@context": [
-    "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
-  ],
-  "@type": "nsg:SoftwareAgent",
-  "@id": "{{base}}/data/neurosciencegraph/core/softwareagent/v0.1.0/28e4034b-034e-4f53-9bc5-8cfe628b481d",
-  "name": "some.py",
-  "version": "v1.0.0"
-}

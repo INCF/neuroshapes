@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/emodelgeneration/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/emodelgeneration",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://provshapes.org/commons/generation",
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "owl:deprecated": true,
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/emodelgeneration/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:EModelGenerationShape",
+      "@type": "sh:NodeShape",
+      "label": "Trace generation shape definition",
+      "targetClass": "nsg:TraceGeneration",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://provshapes.org/commons/generation/shapes/GenerationShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:activity",
+              "name": "Activity",
+              "description": "The emodel building activity.",
+              "class": "nsg:EModelBuilding",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:bestScore",
+              "name": "Best score",
+              "description": "Best score.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

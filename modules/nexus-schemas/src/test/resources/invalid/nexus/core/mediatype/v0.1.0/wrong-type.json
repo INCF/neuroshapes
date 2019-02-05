@@ -1,5 +1,0 @@
-{
-  "@context": "{{base}}/contexts/nexus/core/mediatype/v0.1.0",
-  "@type": "nxv:WrongType",
-  "name": "application/pdf"
-}

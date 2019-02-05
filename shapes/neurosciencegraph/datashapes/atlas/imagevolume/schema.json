@@ -1,0 +1,103 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/imagevolume/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/imagevolume",
+  "@type": "nxv:Schema",
+  "import": [
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/transformableobject/v0.1.0",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/rotationalmatrix/v0.1.0"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/imagevolume/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:ImageVolumeShape",
+      "@type": "sh:NodeShape",
+      "label": "Image volume",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:ImageVolume",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/transformableobject/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:imageModality",
+              "name": "Image modality",
+              "description": "Modality of the image stack",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:voxelType",
+              "name": "Volume type",
+              "description": "Type of the voxel",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:volumeDimension",
+              "name": "Volume Dimension",
+              "description": "Dimension of the 3D volume in voxel",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:voxelResolution",
+              "name": "Voxel resolution",
+              "description": "Resolution of the voxel",
+              "node": "this:VoxelResolutionShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:imageOrigin",
+              "name": "Image Origin",
+              "description": "Origin of the image volume",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:imageDirection",
+              "name": "Image direction",
+              "description": "Direction of the image volume represented as a rotational matrix",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/RotationalMatrixShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:VoxelResolutionShape",
+      "@type": "sh:NodeShape",
+      "targetObjectsOf": "nsg:voxelResolution",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:value",
+              "name": "Voxel resolution value",
+              "description": "Voxel resolution value",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

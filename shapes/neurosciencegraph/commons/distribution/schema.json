@@ -1,0 +1,91 @@
+{
+  "@context" : [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this" : "https://neuroshapes.org/commons/distribution/shapes/"
+    }
+  ],
+  "@id" : "https://neuroshapes.org/commons/distribution",
+  "@type" : "nxv:Schema",
+  "imports" : [
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "shapes" : [
+    {
+      "@id" : "this:DistributionShape",
+      "@type" : "sh:NodeShape",
+      "and" : [
+        {
+          "or" : [
+            {
+              "path" : "dcat:downloadURL",
+              "name" : "Download URL",
+              "description" : "When followed this link leads to the actual data.",
+              "nodeKind" : "sh:IRI",
+              "minCount" : 1,
+              "maxCount" : 1
+            },
+            {
+              "path" : "dcat:accessURL",
+              "name" : "Access URL",
+              "description" : "When followed this link leads to a resource providing further description on how to download the attached data.",
+              "nodeKind" : "sh:IRI",
+              "minCount" : 1,
+              "maxCount" : 1
+            }
+          ]
+        },
+        {
+          "property" : [
+            {
+              "path" : "schema:contentSize",
+              "node" : "https://neuroshapes.org/commons/quantitativevalue/shapes/PositiveQuantitativeValueShape",
+              "maxCount" : 1
+            },
+            {
+              "path" : "nxv:digest",
+              "node" : "this:DigestShape"
+            },
+            {
+              "path" : "schema:license",
+              "name" : "License",
+              "description" : "A Link towards the distribution license.",
+              "nodekind" : "sh:IRI"
+            },
+            {
+              "path" : "dcat:mediaType",
+              "name" : "Media type",
+              "description" : "The media value should start with one of the following application|audio|font|image|message|model|multipart|text|video followed by / and then any Alphanumeric characters.",
+              "comment" : "The pattern used here is temporary and not complete. The media type values need to be taken from a controlled vocabulary: to be handled in a next iteration.",
+              "datatype" : "xsd:string",
+              "sh:pattern" : "^(application|audio|font|image|message|model|multipart|text|video)/[A-Za-z0-9]+",
+              "maxCount" : 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id" : "this:DigestShape",
+      "@type" : "sh:NodeShape",
+      "property" : [
+        {
+          "path" : "schema:value",
+          "name" : "Digest",
+          "description" : "The digest value.",
+          "datatype" : "xsd:string",
+          "maxCount" : 1,
+          "minCount" : 1
+        },
+        {
+          "path" : "schema:algorithm",
+          "name" : "Algorithm",
+          "description" : "The digest algorithm.",
+          "datatype" : "xsd:string",
+          "maxCount" : 1,
+          "minCount" : 1
+        }
+      ]
+    }
+  ]
+}

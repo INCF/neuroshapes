@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/lineartransform/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/lineartransform",
+  "@type": "nxv:Schema",
+  "import": [
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/transform/v0.2.0"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/lineartransform/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:LinearTransformShape",
+      "@type": "sh:NodeShape",
+      "description": "Linear transform including rigid and affine transform, described by a 3x4 matrix",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": [
+        "nsg:LinearTransform",
+        "nsg:RigidLinearTransform",
+        "nsg:AffineLinearTransform",
+        "nsg:Transform"
+      ],
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/transform/shapes/TransformShape"
+        }
+      ]
+    }
+  ]
+}

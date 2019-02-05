@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/patchedslice/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/patchedslice",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/brainlocation",
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/patchedslice/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:PatchedSliceShape",
+      "@type": "sh:NodeShape",
+      "label": "Patched slice shape definition",
+      "targetClass": "nsg:PatchedSlice",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information of the patchedcell",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:hasPart",
+              "name": "Patched cells collection",
+              "description": "The collection of patched cells.",
+              "class": "nsg:Collection",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/patchedcellcollection/shapes/PatchedCellCollectionShape"
+            },
+            {
+              "path": "prov:wasRevisionOf",
+              "name": "Slice",
+              "description": "The slice this patchedSlice is a revision of.",
+              "class": "nsg:Slice",
+              "minCount": 1,
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+            },
+            {
+              "path": "nsg:bathSolution",
+              "name": "Bath solution",
+              "description": "Solution used in the bath while recording",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:temperature",
+              "name": "Temperature",
+              "description": "Recording temperature",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

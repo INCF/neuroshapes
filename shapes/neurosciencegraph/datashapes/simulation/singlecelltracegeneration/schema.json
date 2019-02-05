@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/singlecelltracegeneration/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/singlecelltracegeneration",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/singlecelltracegeneration/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:SingleCellTraceGenerationShape",
+      "@type": "sh:NodeShape",
+      "label": "Trace generation shape definition",
+      "targetClass": "nsg:SingleCellTraceGeneration",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+    }
+  ]
+}

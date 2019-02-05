@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/configuration/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/configuration",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/dash/distribution"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/configuration/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:ConfigurationShape",
+      "@type": "sh:NodeShape",
+      "label": "Configuration shape",
+      "targetClass": "nsg:Configuration",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:distribution",
+              "name": "Configuration file (s)",
+              "description": "Link to the configuration neurondb.xml file.",
+              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

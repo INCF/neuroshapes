@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/entity/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/entity",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/distribution",
+    "https://neuroshapes.org/commons/identifier"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/entity/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:EntityShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "The entity name.",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "schema:description",
+          "name": "Description",
+          "description": "The entity description",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:providerId",
+          "name": "ProviderId",
+          "description": "The identifier of the entity as given by a team/laboratory that used it in an experiment. This identifier is local to the team or laboratory.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "@id": "https://neuroshapes.org/commons/identifier/shapes/WithIdentifierPropertyShape"
+        },
+        {
+          "path": "schema:citation",
+          "name": "Citation",
+          "description": "Citation (s) of publication (s) that describe the entity.",
+          "xone": [
+            {
+              "datatype": "xsd:string"
+            },
+            {
+              "nodeKind": "sh:IRI"
+            }
+          ]
+        },
+        {
+          "path": "schema:license",
+          "name": "License",
+          "description": "License.",
+          "nodeKind": "sh:IRI",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:dateCreated",
+          "name": "Creation date",
+          "description": "Date at which this entity created.",
+          "nodeKind": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "prov:wasRevisionOf",
+          "name": "Revision of",
+          "description": "The entity for which this entity is a revision of. An entity revision is a specific type of derivation.",
+          "nodeKind": "sh:IRI",
+          "maxCount": 1
+        },
+        {
+          "path": "prov:wasDerivedFrom",
+          "name": "Derived from",
+          "description": "The entity from which this entity was derived from.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "prov:wasAttributedTo",
+          "name": "Attributed to",
+          "description": "The agent to which this entity was attributed to.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:image",
+          "name": "Preview",
+          "description": "A reference to an entity representing an image that can be used as preview.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:distribution",
+          "name": "Distribution",
+          "description": "Where the data attached to the entity is published.",
+          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+        }
+      ]
+    }
+  ]
+}

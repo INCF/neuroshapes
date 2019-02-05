@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/spatialindex/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/spatialindex",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/spatialindex/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:SpatialIndexShape",
+      "@type": "sh:NodeShape",
+      "targetClass": "nsg:SpatialIndex",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        }
+      ]
+    }
+  ]
+}

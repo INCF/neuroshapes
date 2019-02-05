@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/atlasspatialreferencesystem/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/atlasspatialreferencesystem",
+  "@type": "nxv:Schema",
+  "import": [
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/vector3d/v0.1.0",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/boundingbox/v0.1.0",
+    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/rotationalmatrix/v0.1.0"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:AtlasSpatialReferenceSystemShape",
+      "@type": "sh:NodeShape",
+      "label": "Atlas spatial reference system",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:AtlasSpatialReferenceSystem",
+      "and": [
+        {
+          "@id": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:origin",
+              "name": "Origin",
+              "description": "Origin of the reference system",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:orientation",
+              "name": "Roatational matrix",
+              "description": "3x3 rotational matrix",
+              "node": "https://neuroshapes.org/dash/rotationalmatrix/shapes/RotationalMatrixShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:boundingBox",
+              "name": "Bounding box",
+              "description": "Bounding box of the image data",
+              "node": "https://neuroshapes.org/commons/boundingbox/shapes/BoundingBoxShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:unitText",
+              "name": "Unit",
+              "description": "Space dimension unit",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

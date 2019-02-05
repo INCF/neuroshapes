@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/reconstructedpatchedcell/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/reconstructedpatchedcell",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/reconstructedcell"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/morphology/src/main/resources/schemas/neurosciencegraph/morphology/reconstructedpatchedcell/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:ReconstructedPatchedCellShape",
+      "@type": "sh:NodeShape",
+      "label": "Reconstructed cell shape definition",
+      "targetClass": "nsg:ReconstructedPatchedCell",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/reconstructedcell/shapes/ReconstructedCellShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:mSubType",
+              "name": "Morphology sub-type",
+              "description": "The morphology sub-type of the reconstructed cell.",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:reconstructedCellIntegrity",
+              "name": "Reconstructed cell ntegrity",
+              "description": "Gives information on the integrity of the reconstructed cell.",
+              "node": "this:ReconstructedCellIntegrityShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ReconstructedCellIntegrityShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:apicalDendrite",
+          "name": "Apical dendrite integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:basalDendrite",
+          "name": "Basal dendrite integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:axon",
+          "name": "Axon integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:soma",
+          "name": "Soma integrity",
+          "datatype": "xsd:boolean",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

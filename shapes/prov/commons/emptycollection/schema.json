@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/commons/emptycollection/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/commons/emptycollection",
+  "@type": "nxv:Schema",
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/provsh/emptycollection/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "EmptyCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "Empty collection shape",
+      "comment": "An empty collection is a collection without members.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "prov:hadMember",
+          "description": "No member is allowed in an EmptyCollection.",
+          "name": "Members",
+          "maxCount": 0
+        }
+      ]
+    }
+  ]
+}
