@@ -51,10 +51,14 @@ inThisBuild(
     releaseEarlyWith              := BintrayPublisher,
     bintrayOrganization           := Some("neuroshapes"),
     bintrayRepository             := "maven",
-    organization                  := "org.neuroshapes",
+    organizationName              := "org.neuroshapes",
     releaseEarlyNoGpg             := true,
     releaseEarlyEnableSyncToMaven := false,
   ))
+
+unmanagedResourceDirectories in Compile += baseDirectory.value / "shapes"
+packageSrc / mappings in Compile ++= (baseDirectory.value / "shapes" * "*" get) map
+  (x => x -> ("shapes/" + x.getName))
 
 
 
