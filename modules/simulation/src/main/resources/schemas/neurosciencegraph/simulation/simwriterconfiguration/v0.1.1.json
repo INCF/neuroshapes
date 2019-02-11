@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/simulation/simwriterconfiguration/v0.1.0/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0"
+  ],
+  "shapes": [
+    {
+      "@id": "this:SimWriterConfigurationShape",
+      "@type": "sh:NodeShape",
+      "label": "SimWriter configuration shape",
+      "comment": "SimWriter configuration shape.",
+      "targetClass": "nsg:Configuration",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:configuration",
+              "description": "Configuration dictionary for the SimWriter.",
+              "nodeKind": "sh:BlankNode",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:template",
+              "description": "Template for the SimWriter.",
+              "nodeKind": "sh:IRI",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
