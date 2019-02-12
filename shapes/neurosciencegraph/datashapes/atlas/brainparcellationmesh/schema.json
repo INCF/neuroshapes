@@ -10,7 +10,7 @@
   "imports": [
     "https://neuroshapes.org/commons/entity",
     "https://neuroshapes.org/commons/brainlocation",
-    "https://neuroshapes.org/dash/distribution"
+    "https://neuroshapes.org/commons/distribution"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/brainparcellationmesh/v0.1.0.json",
   "shapes": [
@@ -51,12 +51,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "dcat:mediaType",
               "name": "Media type",
               "description": "Brain parcellation mesh allowed media types",
               "in": [
