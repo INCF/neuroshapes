@@ -4,7 +4,7 @@
   "description": "Product page of Neuroshapes",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build index.html -d ../paradox --public-url ./",
+    "build": "parcel build index.html --no-source-maps -d ../paradox --public-url ./",
     "start": "parcel -p 8000 watch index.html",
     "test": "true"
   },
@@ -23,6 +23,6 @@
     "gsap": "^2.0.2",
     "jquery": "^3.3.1",
     "jquery-ui-dist": "^1.12.1",
-    "paper": "^0.11.5"
+    "paper": "^0.12.0"
   }
 }

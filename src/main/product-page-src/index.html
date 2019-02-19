@@ -12,6 +12,75 @@
   <link href="./css/code.scss" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
     crossorigin="anonymous">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134702595-2"></script>
+  <script>
+    disableTracking();
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    function enableTracking(){
+      window['ga-disable-UA-134702595-2'] = false;
+      gtag('js', new Date());
+      gtag('config', 'UA-134702595-2', { 'anonymize_ip': true });
+    };
+    function disableTracking(){
+      window['ga-disable-UA-134702595-2'] = true;
+    };
+  </script>
+  <!-- End Google Analytics -->
+  <!-- Cookie consent snippet from https://cookieconsent.insites.com for GDPR compliance, similar to epfl.ch one -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#252e39"
+      },
+      "button": {
+        "background": "#14a7d0"
+      }
+    },
+    "position": "top",
+    "static": true,
+    "type": "opt-out",
+    "content": {
+      "message": "By continuing your browsing on this site, you agree to the use of cookies to improve your user experience and to make statistics of visits.",
+      "dismiss": "OK",
+      "link": "Read the legal notice",
+      "href": "https://www.epfl.ch/about/overview/overview/regulations-and-guidelines/"
+    },
+    "onInitialise": function (status) {
+      var didConsent = this.hasConsented();
+      if (didConsent) {
+        enableTracking();
+      }
+      if (!didConsent) {
+        disableTracking();
+      }
+    },
+    "onStatusChange": function(status, chosenBefore) {
+      var didConsent = this.hasConsented();
+      if (didConsent) {
+        enableTracking();
+      }
+      if (!didConsent) {
+        disableTracking();
+      }
+    },
+    "onRevokeChoice": function() {
+      var type = this.options.type;
+      if (type == 'opt-in') {
+        disableTracking();
+      }
+      if (type == 'opt-out') {
+        enableTracking();
+      }
+    }
+  })});
+  </script>
+  <!-- End Cookie Consent -->
 </head>
 
 <body>
