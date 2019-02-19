@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/patchedcellcollection/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/patchedcellcollection",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/collection"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/patchedcellcollection/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:PatchedCellCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "Patched cell collection shape",
+      "targetClass": "nsg:Collection",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/collection/shapes/CollectionShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:hadMember",
+              "name": "Member",
+              "description": "The patchedCell member(s) of the collection",
+              "class": "nsg:PatchedCell",
+              "seeAlso": "https://neuroshapes.org/dash/patchedcell/shapes/PatchedCellShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

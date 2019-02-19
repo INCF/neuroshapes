@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/annotatedslice/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/annotatedslice",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/morphology/src/main/resources/schemas/neurosciencegraph/morphology/annotatedslice/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:AnnotatedSliceShape",
+      "@type": "sh:NodeShape",
+      "label": "Annotated slice shape definition",
+      "targetClass": "nsg:AnnotatedSlice",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:annotationAngle",
+              "name": "Annotation angle",
+              "description": "Angle at which the slice is as defined during the annotation process.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:annotatorComment",
+              "name": "Annotator comment",
+              "description": "Comments added by the annotator during the annotation process.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:hasPart",
+              "name": "Patched cell collection",
+              "description": "The collections of labeled cells.",
+              "class": "nsg:LabeledCellCollection",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/labeledcellcollection/shapes/LabeledCellCollectionShape"
+            },
+            {
+              "path": "prov:wasRevisionOf",
+              "name": "Fixed stained slice",
+              "description": "The FixedStainedSlice this AnnotatedSlice is a revision of.",
+              "class": "nsg:FixedStainedSlice",
+              "minCount": 1,
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/fixedstainedslice/shapes/FixedStainedSliceShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

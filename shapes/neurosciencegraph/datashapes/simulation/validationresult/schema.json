@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/validationresult/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/validationresult",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/validationresult/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:ValidationResultShape",
+      "@type": "sh:NodeShape",
+      "label": "Model or simulation report analysis result shape",
+      "comment": "The model or simulation report analysis result shape.",
+      "targetClass": "nsg:ValidationResult",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:score",
+              "name": "Score",
+              "description": "Validation score.",
+              "editorialNote": "Is this a QuantitativeValue (with unit) ?",
+              "or": [
+                {
+                  "datatype": "xsd:float"
+                },
+                {
+                  "datatype": "xsd:decimal"
+                },
+                {
+                  "datatype": "xsd:double"
+                }
+              ],
+              "minCount": 1
+            },
+            {
+              "path": "nsg:normalizedScore",
+              "name": "Normalized score",
+              "description": "Validation normalized score (e.g. in [0, 1]).",
+              "editorialNote": "Is this a QuantitativeValue (with unit) ?",
+              "or": [
+                {
+                  "datatype": "xsd:float"
+                },
+                {
+                  "datatype": "xsd:decimal"
+                },
+                {
+                  "datatype": "xsd:double"
+                }
+              ],
+              "minCount": 1
+            },
+            {
+              "path": "prov:hadMember",
+              "name": "Member",
+              "description": "Additional data produced like figures.",
+              "seeAlso": "https://neuroshapes.org/commons/entity/shapes/EntityShape",
+              "class": "nsg:Entity"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

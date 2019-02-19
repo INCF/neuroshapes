@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/reconstructionfromimage/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/reconstructionfromimage",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/morphology/src/main/resources/schemas/neurosciencegraph/morphology/reconstructionfromimage/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:ReconstructionFromImageShape",
+      "@type": "sh:NodeShape",
+      "label": "Reconstruction from image activities description.",
+      "targetClass": "nsg:ReconstructionFromImage",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "description": "The image stack used for the reconstruction activity",
+              "class": "nsg:ImageStack",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "prov:generated",
+              "description": "The reconstructed cell generated",
+              "class": "nsg:ReconstructedCell",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

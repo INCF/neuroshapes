@@ -1,0 +1,89 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/morphology/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/morphology",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/modelinstance"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/morphology/v0.1.4.json",
+  "shapes": [
+    {
+      "@id": "this:MorphologyShape",
+      "@type": "sh:NodeShape",
+      "label": "This shape is for...",
+      "targetClass": "nsg:Morphology",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/modelinstance/shapes/ModelInstanceShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:distribution",
+              "name": "Distribution",
+              "description": "",
+              "node": "this:MorphologyDistributionShape"
+            },
+            {
+              "path": "dcterms:isPartOf",
+              "name": "Part of",
+              "description": "The morphology release (s) this morphology is part of.",
+              "editorialNote": "Can a morphology belongs to multiple release ?",
+              "class": "nsg:MorphologyRelease"
+            },
+            {
+              "path": "nsg:mType",
+              "name": "mType",
+              "description": "Morphological cell type",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/MorphologicalCellTypeOntologyTermShape"
+            },
+            {
+              "path": "nsg:view2d",
+              "name": "view2d",
+              "description": "Morphology view in 2D",
+              "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+            },
+            {
+              "path": "nsg:view3d",
+              "name": "view3d",
+              "description": "Morphology view in 3D",
+              "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:MorphologyDistributionShape",
+      "@type": "sh:NodeShape",
+      "label": "This shape is for...",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:mediaType",
+              "name": "Media type",
+              "description": "",
+              "in": [
+                "application/swc",
+                "application/neurolucida",
+                "application/h5",
+                "application/neuroml"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/nodecollection/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/nodecollection",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/nodecollection/v0.1.2.json",
+  "shapes": [
+    {
+      "@id": "this:NodeCollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "elements of the collection defined like this: ",
+      "targetClass": "nsg:NodeCollection",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:memodelRelease",
+              "name": "MEModel release",
+              "description": "MEModel release.",
+              "seeAlso": "https://neuroshapes.org/dash/memodelrelease/shapes/MEModelReleaseShape",
+              "class": "nsg:MEModelRelease",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:circuitCellProperties",
+              "name": "Properties",
+              "description": "Location of circuit file containing general circuit geometry: cell placement, orientation, mvd3.",
+              "editorialNote": "BluePyOpt needs to deal with the cell placement mvd3 file.",
+              "seeAlso": "https://neuroshapes.org/dash/circuitcellproperties/shapes/CircuitCellPropertiesShape",
+              "class": "nsg:CircuitCellProperties",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

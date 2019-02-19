@@ -1,9 +1,0 @@
-{
-  "@context": [
-    "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
-  ],
-  "@type": "nsg:Vector3D",
-  "valueX": 409.0,
-  "valueY": 608.0,
-  "valueZ": 286.0
-}

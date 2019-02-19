@@ -1,7 +1,0 @@
-{
-  "@context": [
-    "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
-  ],
-  "@type": "nsg:Entity",
-  "name": "Entity Name"
-}

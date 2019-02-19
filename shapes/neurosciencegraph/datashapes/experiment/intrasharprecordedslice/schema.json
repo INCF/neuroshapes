@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/intrasharprecordedslice/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/intrasharprecordedslice",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/experiment/src/main/resources/schemas/neurosciencegraph/experiment/intrasharprecordedslice/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:IntraCellularSharpElectrodeRecordedSliceShape",
+      "@type": "sh:NodeShape",
+      "label": "Intracellular sharp electrode-recorded slice shape definition",
+      "targetClass": "nsg:IntraCellularSharpElectrodeRecordedSlice",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information of the recorded cell",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:hasPart",
+              "name": "Recorded cells collection",
+              "description": "The collections of recorded cells.",
+              "class": "nsg:Collection",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/intrasharprecordedcellcollection/shapes/IntraCellularSharpElectrodeRecordedCellCollectionShape"
+            },
+            {
+              "path": "prov:wasRevisionOf",
+              "name": "Slice",
+              "description": "The slice this recorded slice is a revision of.",
+              "class": "nsg:Slice",
+              "minCount": 1,
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

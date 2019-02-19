@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/reconstructedcellrelease/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/reconstructedcellrelease",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/reconstructedcellrelease/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:ReconstructedCellReleaseShape",
+      "@type": "sh:NodeShape",
+      "label": "Model or simulation report analysis result shape",
+      "comment": "The model or simulation report analysis result shape.",
+      "targetClass": "nsg:ReconstructedCellRelease",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasPart",
+              "name": "Reconstructed cell",
+              "description": "Reconstructed cells part of the release.",
+              "class": "nsg:ReconstructedCell",
+              "minCount": 1
+            },
+            {
+              "path": "prov:wasRevisionOf",
+              "name": "Reconstructed cell release",
+              "description": "Reconstructed cell release this release is a revision of.",
+              "class": "nsg:ReconstructedCellRelease",
+              "maxCount": 1
+            },
+            {
+              "path": "prov:qualifiedGeneration",
+              "name": "Reconstructed cell release generation",
+              "description": "Reconstructed cell release generation.",
+              "class": "nsg:ReconstructedCellReleaseGeneration",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

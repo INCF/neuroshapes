@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/collection/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/collection",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/collection"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/core/src/main/resources/schemas/neurosciencegraph/core/collection/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:CollectionShape",
+      "@type": "sh:NodeShape",
+      "label": "A collection shape.",
+      "targetClass": "nsg:Collection",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/collection/shapes/CollectionShape"
+    }
+  ]
+}

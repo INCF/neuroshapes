@@ -1,0 +1,151 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/brainlocation/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/brainlocation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/vector3d",
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/labeledontologyentity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/brainlocation/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:BrainLocationShape",
+      "@type": "sh:NodeShape",
+      "label": "Brain location shape definition",
+      "property": [
+        {
+          "path": "nsg:brainRegion",
+          "name": "Brain region",
+          "description": "Brain region",
+          "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape",
+          "minCount": 1
+        },
+        {
+          "path": "nsg:coordinatesInBrainAtlas",
+          "name": "Coordinates in brain atlas",
+          "description": "Coordinates in brain atlas",
+          "node": "this:CoordinatesInBrainAtlasShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:coordinatesInSlice",
+          "name": "Coordinates in slice",
+          "description": "Coordinates in slice",
+          "node": "this:CoordinatesInSliceShape",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:atlasSpatialReferenceSystem",
+          "name": "Atlas Spatial Reference System",
+          "class": "nsg:AtlasSpatialReferenceSystem",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:positionInLayer",
+          "name": "Position in layer",
+          "description": "Position in layer (deep / superficial)",
+          "sh:in": {
+            "@list": [
+              "Deep",
+              "Superficial"
+            ]
+          },
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:longitudinalAxis",
+          "name": "Longitudinal axis (dorsal / ventral)",
+          "sh:in": {
+            "@list": [
+              "Dorsal",
+              "Ventral"
+            ]
+          },
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:distanceToBoundary",
+          "name": "Distance to boundary",
+          "description": "Distance to boundary",
+          "node": "this:DistanceToBoundaryShape",
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "this:CoordinatesInBrainAtlasShape",
+      "@type": "sh:NodeShape",
+      "label": "Coordinates in brain atlas shape definition",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+        }
+      ]
+    },
+    {
+      "@id": "this:CoordinatesInSliceShape",
+      "@type": "sh:NodeShape",
+      "label": "Coordinates in slice shape definition",
+      "property": [
+        {
+          "path": "nsg:valueX",
+          "name": "X value",
+          "description": "Vector value of X",
+          "datatype": "xsd:float",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:valueY",
+          "name": "Y value",
+          "description": "Vector value of Y",
+          "datatype": "xsd:float",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:valueZ",
+          "name": "Z value",
+          "description": "Vector value of Z",
+          "datatype": "xsd:float",
+          "maxCount": 1
+        },
+        {
+          "path": "nsg:spatialReferenceSystem",
+          "name": "Spatial Reference System",
+          "class": "nsg:SpatialReferenceSystem",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "this:DistanceToBoundaryShape",
+      "@type": "sh:NodeShape",
+      "label": "Distance to boundary shape definition",
+      "property": [
+        {
+          "path": "nsg:boundary",
+          "name": "Boundary",
+          "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "schema:distance",
+          "name": "Distance",
+          "description": "Distance",
+          "class": "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

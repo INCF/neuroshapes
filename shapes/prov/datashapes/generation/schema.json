@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/dash/generation/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/dash/generation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://provshapes.org/commons/generation"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/prov/generation/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "GenerationShape",
+      "@type": "sh:NodeShape",
+      "label": "Entity generation shape",
+      "comment": "An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ]. Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "prov:Generation",
+      "node": "https://provshapes.org/commons/generation/shapes/GenerationShape"
+    }
+  ]
+}

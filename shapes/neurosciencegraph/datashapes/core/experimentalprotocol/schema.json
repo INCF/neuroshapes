@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/experimentalprotocol/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/experimentalprotocol",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/experimentalprotocol"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/core/src/main/resources/schemas/neurosciencegraph/core/experimentalprotocol/v0.1.1.json",
+  "shapes": [
+    {
+      "@id": "this:ExperimentalProtocolShape",
+      "@type": "sh:NodeShape",
+      "label": "A shape for describing a nsg:ExperimentalProtocol instance",
+      "comments": "This shape is for an experimental protocol.",
+      "targetClass": "nsg:ExperimentalProtocol",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "node": "https://neuroshapes.org/commons/experimentalprotocol/shapes/ExperimentalProtocolShape"
+    }
+  ]
+}

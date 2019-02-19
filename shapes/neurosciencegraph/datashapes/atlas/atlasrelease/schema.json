@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/atlasrelease/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/atlasrelease",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/atlasrelease/v0.1.0.json",
+  "shapes": [
+    {
+      "@id": "this:AtlasReleaseShape",
+      "@type": "sh:NodeShape",
+      "description": "Atlas release description.",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:AtlasRelease",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:releaseDate",
+              "name": "Release Date",
+              "description": "atlas release date.",
+              "datatype": "xsd:date",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:templateVolume",
+              "class": "nsg:TemplateVolume"
+            },
+            {
+              "path": "nsg:parcellationVolume",
+              "class": "nsg:ParcellationVolume",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:parcellationOntology",
+              "class": "nsg:ParcellationOntology",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:spatialReferenceSystem",
+              "class": "nsg:AtlasSpatialReferenceSystem",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/annotation/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/annotation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/annotationselector"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/annotation/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:AnnotationShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "seeAlso": "https://www.w3.org/TR/annotation-model/#introduction",
+      "editorialNote": "The higher level vocabulary (hasTarget, hasBody, hasSource,hasSelector, Annotation) are mapped to the nsg namespace (instead of using oa namespace) for consistency and ease of use purpose. The selector",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasTarget",
+              "name": "Target",
+              "description": "The target of an Annotation: the entity being annotated.",
+              "node": "this:TargetShape",
+              "minCount": 1
+            },
+            {
+              "path": "nsg:hasBody",
+              "name": "Body",
+              "description": "The entity or value that the target entity is being annotated with.",
+              "node": "this:BodyShape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TargetShape",
+      "label": "The target of an annotation is always an external resource.",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI"
+    },
+    {
+      "@id": "this:BodyShape",
+      "label": "The body of an annotation can be an external or internal resource.",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI"
+    },
+    {
+      "@id": "this:SelectorTargetShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:TargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSource",
+              "name": "Source",
+              "description": "The relationship between a Specific Resource and the resource that it is a more specific representation of.",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:hasSelector",
+              "name": "Selector",
+              "description": "The relationship between a Specific Resource and a Selector.",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/SelectorShape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TextPositionTargetShape",
+      "@type": "sh:NodeShape",
+      "class": "nsg:TextPositionTarget",
+      "and": [
+        {
+          "node": "this:SelectorTargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSelector",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/TextPositionSelectorShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:FigureTargetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "this:SelectorTargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSelector",
+              "class": "nsg:FigureSelector",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/DocumentIndexSelectorShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:EquationTargetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "this:SelectorTargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSelector",
+              "class": "nsg:EquationSelector",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/DocumentIndexSelectorShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:TableTargetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "this:SelectorTargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSelector",
+              "class": "nsg:TableSelector",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/TableSelectorShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:AreaTargetShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "this:SelectorTargetShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hasSelector",
+              "node": "https://neuroshapes.org/commons/annotationselector/shapes/DocumentAreaSelectorShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

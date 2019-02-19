@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/dash/organization/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/dash/organization",
+  "@type": "nxv:Schema",
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/prov/organization/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "Organization",
+      "@type": "sh:NodeShape",
+      "label": "Organization shape",
+      "comment": "An organization is a social or legal institution such as a company, society, etc.",
+      "targetClass": "prov:Organization",
+      "nodeKind": "sh:BlankNodeOrIRI"
+    }
+  ]
+}

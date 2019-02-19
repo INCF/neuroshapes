@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/subject/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/subject",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/core/src/main/resources/schemas/neurosciencegraph/core/subject/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:SubjectShape",
+      "@type": "sh:NodeShape",
+      "label": "Subject shape definition",
+      "comment": "Subject used in experiment",
+      "targetClass": "nsg:Subject",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:species",
+              "name": "Species",
+              "description": "The species of the subject",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/SpeciesOntologyTermShape",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:strain",
+              "name": "Strain",
+              "description": "Subject strain",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/StrainOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:transgenic",
+              "name": "Transgenic",
+              "description": "Transgenic modification of subject",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/TransgenicOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:sex",
+              "name": "Sex",
+              "description": "The sex of the subject",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/SexOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:age",
+              "name": "Age",
+              "description": "The age of the subject.",
+              "node": "this:AgeShape",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:birthDate",
+              "name": "Date of birth",
+              "description": "Date of birth of subject.",
+              "datatype": "xsd:dateTime",
+              "lessThan": "schema:deathDate",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:deathDate",
+              "name": "Date of sacrifice",
+              "description": "Date of sacrifice of subject.",
+              "datatype": "xsd:dateTime",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:dateOfSurgery",
+              "name": "Date of surgery",
+              "description": "Date of surgery of subject.",
+              "datatype": "xsd:dateTime",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:diseaseModel",
+              "name": "Disease",
+              "description": "Disease modeled in subject.",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DiseaseModelOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:disease",
+              "name": "Disease",
+              "description": "Disease of subject.",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DiseaseOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:treatment",
+              "name": "Treatment",
+              "description": "Treatment of the subject.",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/TreatmentOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:weight",
+              "name": "Weight",
+              "description": "Weight of the subject.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:AgeShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:period",
+          "name": "Period",
+          "in": [
+            "Pre-natal",
+            "Post-natal"
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "path": "schema:value",
+          "name": "Age value",
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  ]
+}

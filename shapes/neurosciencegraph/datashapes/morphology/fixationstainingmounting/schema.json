@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/fixationstainingmounting/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/fixationstainingmounting",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/morphology/src/main/resources/schemas/neurosciencegraph/morphology/fixationstainingmounting/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "this:FixationStainingMountingShape",
+      "@type": "sh:NodeShape",
+      "label": "Fixing, Staining and Mounting activities description",
+      "targetClass": "nsg:FixationStainingMounting",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:fixationMethod",
+              "name": "Fixation method",
+              "description": "Method used for the fixation of the slice after electrophysiology such as PFA.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:stain",
+              "name": "Stain",
+              "description": "Stain used for the detection of the cell labeling compound such as the chromogen DAB.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:mountingMedia",
+              "name": "Mounting Media",
+              "description": "Mounting media is the medium that the sample is in while it is being imaged on the microscope such as Xylene or Mowiol.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "prov:used",
+              "description": "The collection of patched slices used",
+              "class": "nsg:SliceCollection",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slicecollection/shapes/SliceCollectionShape"
+            },
+            {
+              "path": "prov:generated",
+              "description": "The collection of fixed and stained slices generated",
+              "class": "nsg:SliceCollection",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/slicecollection/shapes/SliceCollectionShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

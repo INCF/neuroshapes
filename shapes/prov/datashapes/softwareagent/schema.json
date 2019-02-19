@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "@base": "https://provshapes.org/dash/softwareagent/shapes/"
+    }
+  ],
+  "@id": "https://provshapes.org/dash/softwareagent",
+  "@type": "nxv:Schema",
+  "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/prov/softwareagent/v1.0.0.json",
+  "shapes": [
+    {
+      "@id": "SoftwareAgentShape",
+      "@type": "sh:NodeShape",
+      "label": "Software agent shape",
+      "comment": "A software agent is a running software.",
+      "targetClass": "prov:SoftwareAgent",
+      "nodeKind": "sh:BlankNodeOrIRI"
+    }
+  ]
+}

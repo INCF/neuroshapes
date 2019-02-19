@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/simulation/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/simulation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/simulation/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:SimulationShape",
+      "@type": "sh:NodeShape",
+      "label": "Model simulation activity shape",
+      "comment": "Query: Get all simulation that generates a voltage trace layer 5",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:Simulation",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "minCount": 2
+            },
+            {
+              "path": "prov:used",
+              "name": "Model",
+              "description": "Used model.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:ModelInstance"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/modelinstance/shapes/ModelInstanceShape"
+            },
+            {
+              "path": "prov:used",
+              "name": "Configuration",
+              "description": "Used configuration.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:Configuration"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+            },
+            {
+              "path": "nsg:status",
+              "name": "Status",
+              "description": "Simulation status.",
+              "datatype": "nsg:SimulationStatus",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/ModelSimulationStatusOntologyTermShape"
+            },
+            {
+              "path": "prov:generated",
+              "name": "Generated report",
+              "description": "Generated variable report (file attached (bbp, h5, nwb), variable name, target taken from (to be controlled) [compartment, soma, summation, extra cellular recording])),",
+              "class": "nsg:VariableReport",
+              "minCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/variablereport/shapes/VariableReportShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/modelvalidation/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/modelvalidation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity"
+  ],
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/modelvalidation/v0.2.0.json",
+  "shapes": [
+    {
+      "@id": "this:ModelValidationShape",
+      "@type": "sh:NodeShape",
+      "label": "Model or simulation report analysis shape",
+      "comment": "The analysis strategy/protocol is defined in a protocol.",
+      "targetClass": "nsg:ModelValidation",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "prov:used",
+              "minCount": 2
+            },
+            {
+              "path": "prov:used",
+              "name": "Model",
+              "description": "Used model (to be validated).",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:ModelInstance"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/modelinstance/shapes/ModelInstanceShape"
+            },
+            {
+              "path": "prov:used",
+              "name": "Reference data",
+              "description": "Data (entities) used as reference for validation.",
+              "sh:qualifiedValueShape": {
+                "class": "nsg:Collection"
+              },
+              "qualifiedValueShapesDisjoint": true,
+              "qualifiedMinCount": 1,
+              "qualifiedMaxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/collection/shapes/CollectionShape"
+            },
+            {
+              "path": "prov:generated",
+              "name": "Result",
+              "description": "Generated validation result.",
+              "seeAlso": "https://neuroshapes.org/dash/validationresult/shapes/ValidationResultShape",
+              "class": "nsg:ValidationResult",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
