@@ -9,6 +9,7 @@
   "imports": [
     "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0"
   ],
+  "owl:deprecated":true,
   "shapes": [
     {
       "@id": "this:VariableReportShape",
