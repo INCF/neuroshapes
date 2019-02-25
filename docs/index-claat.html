@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="nsg-docs">
+<meta name="generator" content="Paradox, paradox-material-theme=0.5.1, mkdocs-material=3.0.3">
+
+<meta name="lang:clipboard.copy" content="Copy to clipboard">
+<meta name="lang:clipboard.copied" content="Copied to clipboard">
+<meta name="lang:search.language" content="">
+<meta name="lang:search.pipeline.stopwords" content="true">
+<meta name="lang:search.pipeline.trimmer" content="true">
+<meta name="lang:search.result.none" content="No matching documents">
+<meta name="lang:search.result.one" content="1 matching document">
+<meta name="lang:search.result.other" content="# matching documents">
+<meta name="lang:search.tokenizer" content="[\s\-]+">
+
+
+<meta name="description" content="nsg-docs">
+<meta name="author" content="petele">
+<link rel="shortcut icon" href="../assets/images/favicon.png">
+<title>Your First Progressive Web App</title>
+<link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+<link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+<meta name="theme-color" content="#03a9f4" />
+<link rel="stylesheet" href="../lib/material__tabs/dist/mdc.tabs.min.css">
+<link rel="stylesheet" href="../lib/prettify/prettify.css">
+<script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+<style>
+body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}
+code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}
+</style>
+<link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+<link rel="stylesheet" href="../assets/fonts/material-icons.css">
+<link rel="stylesheet" href="../assets/stylesheets/paradox-material-theme.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+</head>
+<body
+data-md-color-primary="light-blue"
+data-md-color-accent="cyan"
+>
+<input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+<input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+<label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+<header class="md-header" data-md-component="header">
+<nav class="md-header-nav md-grid">
+<div class="md-flex">
+<div class="md-flex__cell md-flex__cell--shrink">
+<a href="../docs/index-claat.html" title="Your First Progressive Web App" class="md-header-nav__button md-logo">
+<i class="md-icon">cloud</i>
+</a>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+</div>
+<div class="md-flex__cell md-flex__cell--stretch">
+<div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+Your First Progressive Web App
+</div>
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+<label class="md-icon md-search__icon" for="__search"></label>
+<button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">&#xE5CD;</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix>
+<div class="md-search-result" data-md-component="result">
+<div class="md-search-result__meta">
+Type to start searching
+</div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="md-flex__cell md-flex__cell--shrink">
+<div class="md-header-nav__source">
+<a href="https://github.com/INCF/neuroshapes"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+INCF/neuroshapes
+</div>
+</a>
+
+</div>
+</div>
+</div>
+</nav>
+</header>
+
+<div class="md-container">
+<main class="md-main">
+<div class="md-main__inner md-grid" data-md-component="container">
+<div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--primary" data-md-level="0" style="visibility: hidden">
+<label class="md-nav__title md-nav__title--site" for="drawer">
+<a href="../docs/index-claat.html" title="Your First Progressive Web App" class="md-nav__button md-logo">
+<span class="md-nav__button md-logo">
+<i class="md-icon">cloud</i>
+</a>
+<a href="../docs/index-claat.html" title="Your First Progressive Web App">
+Your First Progressive Web App
+</a>
+</label>
+<div class="md-nav__source">
+<a href="https://github.com/INCF/neuroshapes"
+title="Go to repository"
+class="md-source"
+data-md-source="github">
+<div class="md-source__icon">
+<i class="fa fa-github"></i>
+</div>
+<div class="md-source__repository">
+INCF/neuroshapes
+</div>
+</a>
+
+</div>
+<ul>
+</ul>
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../docs/index-claat.html#your-first-progressive-web-app" class="header">Your First Progressive Web App</a>
+  <ul>
+    <li><a href="../docs/index-claat.html#introduction" class="header">Introduction</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What is a Progressive Web App?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you will build</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you&rsquo;ll learn</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you&rsquo;ll need</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#getting-set-up" class="header">Getting set up</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Download the Code</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Install and verify web server</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#architect-your-app-shell" class="header">Architect your App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What is the app shell?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Why use the App Shell architecture?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header">**Design the App Shell **</a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#implement-your-app-shell" class="header">Implement your App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Create the HTML for the App Shell</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Check out the key JavaScript app code</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#start-with-a-fast-first-load" class="header">Start with a fast first load</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Inject the weather forecast data</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Differentiating the first run</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Save the selected cities</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#use-service-workers-to-pre-cache-the-app-shell" class="header">Use service workers to pre-cache the App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Register the service worker if it&rsquo;s available</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Cache the site assets</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Serve the app shell from the cache</strong></a></li>
+      <li><a href="../docs/index-claat.html#test-it-out" class="header">Test it out</a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Beware of the edge cases</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Tips for testing live service workers</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#use-service-workers-to-cache-the-forecast-data" class="header">Use service workers to cache the forecast data</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Intercept the network request and cache the response</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Making the requests</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#support-native-integration" class="header">Support native integration</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Web App Install Banners and Add to Homescreen for Chrome on Android</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Add to Homescreen elements for Safari on iOS</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Tile Icon for Windows</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#deploy-to-a-secure-host-and-celebrate" class="header">Deploy to a secure host and celebrate</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Extra credit: minify and inline CSS</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Deploy to Firebase</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+  </ul></li>
+</ul>
+</nav>
+
+</nav>
+<ul style="display: none">
+<li class="md-nav__item md-version" id="project.version">
+<label class="md-nav__link" for="__version">
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+50-06b793b7
+</label>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../docs/index-claat.html#your-first-progressive-web-app" class="header">Your First Progressive Web App</a>
+  <ul>
+    <li><a href="../docs/index-claat.html#introduction" class="header">Introduction</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What is a Progressive Web App?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you will build</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you&rsquo;ll learn</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What you&rsquo;ll need</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#getting-set-up" class="header">Getting set up</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Download the Code</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Install and verify web server</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#architect-your-app-shell" class="header">Architect your App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>What is the app shell?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Why use the App Shell architecture?</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header">**Design the App Shell **</a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#implement-your-app-shell" class="header">Implement your App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Create the HTML for the App Shell</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Check out the key JavaScript app code</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#start-with-a-fast-first-load" class="header">Start with a fast first load</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Inject the weather forecast data</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Differentiating the first run</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Save the selected cities</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#use-service-workers-to-pre-cache-the-app-shell" class="header">Use service workers to pre-cache the App Shell</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Register the service worker if it&rsquo;s available</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Cache the site assets</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Serve the app shell from the cache</strong></a></li>
+      <li><a href="../docs/index-claat.html#test-it-out" class="header">Test it out</a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Beware of the edge cases</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Tips for testing live service workers</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#use-service-workers-to-cache-the-forecast-data" class="header">Use service workers to cache the forecast data</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Intercept the network request and cache the response</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Making the requests</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#support-native-integration" class="header">Support native integration</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Web App Install Banners and Add to Homescreen for Chrome on Android</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Add to Homescreen elements for Safari on iOS</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Tile Icon for Windows</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+    <li><a href="../docs/index-claat.html#deploy-to-a-secure-host-and-celebrate" class="header">Deploy to a secure host and celebrate</a>
+    <ul>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Extra credit: minify and inline CSS</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Deploy to Firebase</strong></a></li>
+      <li><a href="../docs/index-claat.html#" class="header"><strong>Test it out</strong></a></li>
+    </ul></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+<div class="md-content">
+<article class="md-content__inner md-typeset">
+<div class="md-content__searchable">
+<h1><a href="#your-first-progressive-web-app" name="your-first-progressive-web-app" class="anchor"><span class="anchor-link"></span></a>Your First Progressive Web App</h1>
+<p><a href="https://github.com/googlecodelabs/your-first-pwapp/issues">Codelab Feedback</a></p>
+<h2><a href="#introduction" name="introduction" class="anchor"><span class="anchor-link"></span></a>Introduction</h2>
+<p><a href="https://developers.google.com/web/progressive-web-apps">Progressive Web Apps</a> are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required. As the user progressively builds a relationship with the app over time, it becomes more and more powerful. It loads quickly, even on flaky networks, sends relevant push notifications, has an icon on the home screen, and loads as a top-level, full screen experience.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>What is a Progressive Web App?</strong></h3>
+<p>A Progressive Web App is:</p>
+<ul>
+  <li><strong>Progressive</strong> - Works for every user, regardless of browser choice because it&rsquo;s built with progressive enhancement as a core tenet.</li>
+  <li><strong>Responsive</strong> - Fits any form factor: desktop, mobile, tablet, or whatever is next.</li>
+  <li><strong>Connectivity independent</strong> - Enhanced with service workers to work offline or on low-quality networks.</li>
+  <li><strong>App-like</strong> - Feels like an app, because the app shell model separates the application <em>functionality</em> from application <em>content</em> .</li>
+  <li><strong>Fresh</strong> - Always up-to-date thanks to the <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service worker</a> update process.</li>
+  <li><strong>Safe</strong> - Served via HTTPS to prevent snooping and to ensure content hasn&rsquo;t been tampered with.</li>
+  <li><strong>Discoverable</strong> - Is identifiable as an &ldquo;application&rdquo; thanks to <a href="https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">W3C manifest</a> and <a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/registration">service worker registration</a> scope, allowing search engines to find it.</li>
+  <li><strong>Re-engageable</strong> - Makes re-engagement easy through features like push notifications.</li>
+  <li><strong>Installable</strong> - Allows users to add apps they find most useful to their home screen without the hassle of an app store.</li>
+  <li><strong>Linkable</strong> - Easily share the application via URL, does not require complex installation.</li>
+</ul>
+<p>This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details, to ensure that your app meets the above key principles of a Progressive Web App.</p>
+<aside class="special">
+
+Looking for more? Check out the talks from the  [2016 Progressive Web App Summit](https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb).
+</aside>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>What you will build</strong></h3>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>What you&rsquo;ll learn</strong></h3>
+<ul>
+  <li>How to design and construct an app using the &ldquo;app shell&rdquo; method</li>
+  <li>How to make your app work offline</li>
+  <li>How to store data for later offline use</li>
+</ul>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>What you&rsquo;ll need</strong></h3>
+<ul>
+  <li>A recent version of <a href="https://www.google.com/chrome/">Chrome</a>. Note, this works in other browsers as well, but we&rsquo;ll be using a few features of the Chrome DevTools to better understand what&rsquo;s happening at the browser level.</li>
+  <li><a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb">Web Server for Chrome</a>, or your own web server of choice</li>
+  <li><a href="https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip">The sample code</a></li>
+  <li>A text editor</li>
+  <li>Basic knowledge of HTML, CSS, JavaScript, and <a href="https://developer.chrome.com/devtools">Chrome DevTools</a></li>
+</ul>
+<p>This codelab is focused on Progressive Web Apps. Non-relevant concepts and code blocks are glossed over and are provided for you to simply copy and paste.</p>
+<h2><a href="#getting-set-up" name="getting-set-up" class="anchor"><span class="anchor-link"></span></a>Getting set up</h2>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Download the Code</strong></h3>
+<p>Click the following link to download all the code for this codelab:</p>
+<p>[](<a href="https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip">https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip</a>)</p>
+<p>Unpack the downloaded zip file. This will unpack a root folder (<code>your-first-pwapp-master</code>), which contains one folder for each step of this codelab, along with all of the resources you will need.</p>
+<p>The <code>step-NN</code> folders contain the desired end state of each step of this codelab. They are there for reference. We&rsquo;ll be doing all our coding work in a directory called <code>work</code>.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Install and verify web server</strong></h3>
+<p>While you&rsquo;re free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don&rsquo;t have that app installed yet, you can install it from the Chrome Web Store.</p>
+<p>[](<a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb">https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb</a>)</p>
+<p>After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: </p>
+<img src="img/9efdf0d1258b78e4.png" alt="Screen Shot 2016-04-11 at 4.01.20 PM.png"  width="124.00" />
+<aside class="special">
+
+More help:  [Add and open Chrome apps](https://support.google.com/chrome_webstore/answer/3060053)
+</aside>
+<p>In the ensuing window, click on the Web Server icon: </p>
+<img src="img/dc07bbc9fcfe7c5b.png" alt="Screen Shot 2016-02-18 at 11.45.19 AM.png"  width="72.88" />
+<p>You&rsquo;ll see this dialog next, which allows you to configure your local web server:</p>
+<p>&lt;img src=&ldquo;img/433870360ad308d4.png&rdquo; alt=&ldquo;Screen Shot 2016-02-18 at 11.48.14 AM.png&rdquo; title=&quot;&ldquo;Web Server for Chrome Screenshot&rdquo;&ldquo; width=&rdquo;513.64&quot; /&gt;</p>
+<p>Click the <strong>choose folder</strong> button, and select the <code>work</code> folder. This will enable you to serve your work in progress via the URL highlighted in the web server dialog (in the <strong>Web Server URL(s)</strong> section).</p>
+<p>Under Options, check the box next to &ldquo;Automatically show index.html&rdquo;, as shown below:</p>
+<img src="img/39b4e0371e9703e6.png" alt="39b4e0371e9703e6.png"  width="233.00" />
+<p>Then stop and restart the server by sliding the toggle labeled &ldquo;Web Server: STARTED&rdquo; to the left and then back to the right.</p>
+<img src="img/daefd30e8a290df5.png" alt="Screen Shot 2016-02-18 at 12.22.18 PM.png"  width="194.50" />
+<p>Now visit your work site in your web browser (by clicking on the highlighted Web Server URL) and you should see a page that looks like this:</p>
+<img src="img/aa64e93e8151b642.png" alt="aa64e93e8151b642.png"  width="251.22" />
+<p>This app is not yet doing anything interesting - so far, it&rsquo;s just a minimal skeleton with a spinner we&rsquo;re using to verify your web server functionality. We&rsquo;ll add functionality and UI features in subsequent steps. </p>
+<aside class="special">
+
+From this point forward, all testing/verification (e.g. the** Test It Out** sections in subsequent steps) should be performed using this web server setup.
+</aside>
+<h2><a href="#architect-your-app-shell" name="architect-your-app-shell" class="anchor"><span class="anchor-link"></span></a>Architect your App Shell</h2>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>What is the app shell?</strong></h3>
+<p>The app&rsquo;s shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. &ldquo;Cached&rdquo; means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device&rsquo;s cache, which results in blazing-fast startup times. </p>
+<p>App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service worker</a> so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.</p>
+<p>A <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service worker</a> is a script that your browser runs in the background, separate from a web page, opening the door to features that don&rsquo;t need a web page or user interaction.</p>
+<img src="img/156b5e3cc8373d55.png" alt="appshell-1.jpg"  width="624.00" />
+<p>Put another way, the app shell is similar to the bundle of code that you&rsquo;d publish to an app store when building a native app. It is the core components necessary to get your app off the ground, but likely does not contain the data.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Why use the App Shell architecture?</strong></h3>
+<p>Using the app shell architecture allows you to focus on speed, giving your Progressive Web App similar properties to native apps: instant loading and regular updates, all without the need of an app store.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a>**Design the App Shell **</h3>
+<p>The first step is to break the design down into its core components.</p>
+<p>Ask yourself:</p>
+<ul>
+  <li>What needs to be on screen immediately?</li>
+  <li>What other UI components are key to our app?</li>
+  <li>What supporting resources are needed for the app shell? For example images, JavaScript, styles, etc.</li>
+</ul>
+<p>We&rsquo;re going to create a Weather app as our first Progressive Web App. The key components will consist of:</p>
+<p>When designing a more complex app, content that isn&rsquo;t needed for the initial load can be requested later and then cached for future use. For example, we could defer the loading of the New City dialog until after we&rsquo;ve rendered the first run experience and have some idle cycles available.</p>
+<h2><a href="#implement-your-app-shell" name="implement-your-app-shell" class="anchor"><span class="anchor-link"></span></a>Implement your App Shell</h2>
+<p>There are multiple ways to get started with any project, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we&rsquo;ve provided you with all of the resources you&rsquo;ll need.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Create the HTML for the App Shell</strong></h3>
+<p>Now we&rsquo;ll add the core components we discussed in <a href="https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp#architect_your_app_shell">Architect the App Shell</a>.</p>
+<p>Remember, the key components will consist of:</p>
+<ul>
+  <li>Header with a title, and add/refresh buttons</li>
+  <li>Container for forecast cards</li>
+  <li>A forecast card template</li>
+  <li>A dialog for adding new cities</li>
+  <li>A loading indicator</li>
+</ul>
+<p>The <code>index.html</code> file that is already in your <code>work</code> directory should look something like this (this is a subset of the actual contents, don&rsquo;t copy this code into your file):</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Weather PWA&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles/inline.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header class=&quot;header&quot;&gt;
+    &lt;h1 class=&quot;header__title&quot;&gt;Weather PWA&lt;/h1&gt;
+    &lt;button id=&quot;butRefresh&quot; class=&quot;headerButton&quot;&gt;&lt;/button&gt;
+    &lt;button id=&quot;butAdd&quot; class=&quot;headerButton&quot;&gt;&lt;/button&gt;
+  &lt;/header&gt;
+
+  &lt;main class=&quot;main&quot;&gt;
+    &lt;div class=&quot;card cardTemplate weather-forecast&quot; hidden&gt;
+    . . .
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;div class=&quot;dialog-container&quot;&gt;
+  . . .
+  &lt;/div&gt;
+
+  &lt;div class=&quot;loader&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 32 32&quot; width=&quot;32&quot; height=&quot;32&quot;&gt;
+      &lt;circle id=&quot;spinner&quot; cx=&quot;16&quot; cy=&quot;16&quot; r=&quot;14&quot; fill=&quot;none&quot;&gt;&lt;/circle&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Insert link to app.js here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Notice the loader is visible by default. This ensures that the user sees the loader immediately as the page loads, giving them a clear indication that the content is loading.</p>
+<p>To save time, we&rsquo;ve also already created the stylesheet for you to use.</p>
+<aside class="special">
+
+We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.
+</aside>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Check out the key JavaScript app code</strong></h3>
+<p>Now that we have most of the UI ready, it&rsquo;s time to start hooking up the code to make everything work. Like the rest of the app shell, be conscious about what code is necessary as part of the key experience and what can be loaded later.</p>
+<p>Your work directory also already includes the app code (<code>scripts/app.js</code>), in it you&rsquo;ll find:</p>
+<ul>
+  <li>An <code>app</code> object that contains some of the key information necessary for the app.</li>
+  <li>The event listeners for all of the buttons in the header (<code>add/refresh</code>) and in the add city dialog (<code>add/cancel</code>).</li>
+  <li>A method to add or update forecast cards (<code>app.updateForecastCard</code>).</li>
+  <li>A method to get the latest weather forecast data from the Firebase Public Weather API (<code>app.getForecast</code>).</li>
+  <li>A method to iterate the current cards and call <code>app.getForecast</code> to get the latest forecast data (<code>app.updateForecasts</code>).</li>
+  <li>Some fake data (<code>initialWeatherForecast</code>) you can use to quickly test how things render.</li>
+</ul>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Test it out</strong></h3>
+<p>Now that you&rsquo;ve got the core HTML, styles and JavaScript, it&rsquo;s time to test the app.</p>
+<p>To see how the fake weather data is rendered, uncomment the following line at the bottom of your <code>index.html</code> file:</p>
+<pre><code>&lt;!--&lt;script src=&quot;scripts/app.js&quot; async&gt;&lt;/script&gt;--&gt;
+</code></pre>
+<p>Next, uncomment the following line at the bottom of your <code>app.js</code> file:</p>
+<pre><code>// app.updateForecastCard(initialWeatherForecast);
+</code></pre>
+<p>Reload your app. The result should be a nicely formatted (though fake, as you can tell by the date) forecast card with the spinner disabled, like this:</p>
+<img src="img/166c3b4982e4a0ad.png" alt="166c3b4982e4a0ad.png"  width="243.85" />
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/step-04/">https://weather-pwa-sample.firebaseapp.com/step-04/</a>)</p>
+<p>Once you&rsquo;ve tried it and verified it works as expected, you can remove the call to <code>app.updateForecastCard</code> with the fake data again. We only needed it to ensure that everything worked as expected.</p>
+<h2><a href="#start-with-a-fast-first-load" name="start-with-a-fast-first-load" class="anchor"><span class="anchor-link"></span></a>Start with a fast first load</h2>
+<p>Progressive Web Apps should start fast and be usable immediately. In its current state, our Weather App starts quickly, but it&rsquo;s not useable. There&rsquo;s no data. We could make an AJAX request to get that data, but that results in an extra request and makes the initial load longer. Instead, provide real data in the first load.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Inject the weather forecast data</strong></h3>
+<p>For this code lab, we&rsquo;ll simulate the server injecting the weather forecast directly into the JavaScript, but in a production app, the latest weather forecast data would be injected by the server based on the IP address geo-location of the user.</p>
+<p>The code already contains the data that we&rsquo;re going to inject. It&rsquo;s the <code>initialWeatherForecast</code> that we used in the previous step.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Differentiating the first run</strong></h3>
+<p>But, how do we know when to display this information, which may not be relevant on future loads when the weather app is pulled from the cache? When the user loads the app on subsequent visits, they may have changed cities, so we need to load the information for those cities, not necessarily the first city they ever looked up.</p>
+<p>User preferences, like the list of cities a user has subscribed to, should be stored locally using IndexedDB or another fast storage mechanism. To simplify this code lab as much as possible, we&rsquo;ve used <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>, which is not ideal for production apps because it is a blocking, synchronous storage mechanism that is potentially very slow on some devices.</p>
+<aside class="special">
+
+**Extra Credit**: Replace `localStorage` implementation with  [idb](https://www.npmjs.com/package/idb), check out  [localForage](https://github.com/localForage/localForage) as a simple wrapper to idb.
+</aside>
+<p>First, let&rsquo;s add the code required to save user preferences. Find the following TODO comment in your code.</p>
+<pre><code>  // TODO add saveSelectedCities function here
+</code></pre>
+<p>And add the following code below the comment.</p>
+<pre><code>  // Save list of cities to localStorage.
+  app.saveSelectedCities = function() {
+    var selectedCities = JSON.stringify(app.selectedCities);
+    localStorage.selectedCities = selectedCities;
+  };
+</code></pre>
+<p>Next, let&rsquo;s add the startup code to check if the user has any saved cities and render those, or use the injected data. Find the following comment:</p>
+<pre><code>  // TODO add startup code here
+</code></pre>
+<p>And add the following code below this comment:</p>
+<pre><code>/************************************************************************
+   *
+   * Code required to start the app
+   *
+   * NOTE: To simplify this codelab, we&#39;ve used localStorage.
+   *   localStorage is a synchronous API and has serious performance
+   *   implications. It should not be used in production applications!
+   *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
+   *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
+   ************************************************************************/
+
+  app.selectedCities = localStorage.selectedCities;
+  if (app.selectedCities) {
+    app.selectedCities = JSON.parse(app.selectedCities);
+    app.selectedCities.forEach(function(city) {
+      app.getForecast(city.key, city.label);
+    });
+  } else {
+    /* The user is using the app for the first time, or the user has not
+     * saved any cities, so show the user some fake data. A real app in this
+     * scenario could guess the user&#39;s location via IP lookup and then inject
+     * that data into the page.
+     */
+    app.updateForecastCard(initialWeatherForecast);
+    app.selectedCities = [
+      {key: initialWeatherForecast.key, label: initialWeatherForecast.label}
+    ];
+    app.saveSelectedCities();
+  }
+</code></pre>
+<p>The startup code checks if there are any cities saved in local storage. If so, then it parses the local storage data and then displays a forecast card for each of the saved cities. Else, the startup code just uses the fake forecast data and saves that as the default city.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Save the selected cities</strong></h3>
+<p>Finally, you need to modify the &ldquo;add city&rdquo; button handler to save the selected city to local storage.</p>
+<p>Update your <code>butAddCity</code> click handler so that it matches the following code:</p>
+<pre><code>document.getElementById(&#39;butAddCity&#39;).addEventListener(&#39;click&#39;, function() {
+    // Add the newly selected city
+    var select = document.getElementById(&#39;selectCityToAdd&#39;);
+    var selected = select.options[select.selectedIndex];
+    var key = selected.value;
+    var label = selected.textContent;
+    if (!app.selectedCities) {
+      app.selectedCities = [];
+    }
+    app.getForecast(key, label);
+    app.selectedCities.push({key: key, label: label});
+    app.saveSelectedCities();
+    app.toggleAddDialog(false);
+  });
+</code></pre>
+<p>The new additions are the initialization of <code>app.selectedCities</code> if it doesn&rsquo;t exist, and the calls to <code>app.selectedCities.push()</code> and <code>app.saveSelectedCities()</code>.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Test it out</strong></h3>
+<ul>
+  <li>When first run, your app should immediately show the user the forecast from <code>initialWeatherForecast</code>.</li>
+  <li>Add a new city (by clicking the + icon on the upper right) and verify that two cards are shown.</li>
+  <li>Refresh the browser and verify that the app loads both forecasts and shows the latest information.</li>
+</ul>
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/step-05/">https://weather-pwa-sample.firebaseapp.com/step-05/</a>)</p>
+<h2><a href="#use-service-workers-to-pre-cache-the-app-shell" name="use-service-workers-to-pre-cache-the-app-shell" class="anchor"><span class="anchor-link"></span></a>Use service workers to pre-cache the App Shell</h2>
+<p>Progressive Web Apps have to be fast, and installable, which means that they work online, offline, and on intermittent, slow connections. To achieve this, we need to cache our app shell using service worker, so that it&rsquo;s always available quickly and reliably.</p>
+<p>If you&rsquo;re unfamiliar with service workers, you can get a basic understanding by reading <a href="https://developers.google.com/web/fundamentals/primers/service-worker/">Introduction To Service Workers</a> about what they can do, how their lifecycle works and more. Once you&rsquo;ve completed this code lab, be sure to check out the <a href="http://goo.gl/jhXCBy">Debugging Service Workers code lab</a> for a more in-depth look at how to work with service workers.</p>
+<p>Features provided via service workers should be considered a progressive enhancement, and added only if supported by the browser. For example, with service workers you can cache the app shell and data for your app, so that it&rsquo;s available even when the network isn&rsquo;t. When service workers aren&rsquo;t supported, the offline code isn&rsquo;t called, and the user gets a basic experience. Using feature detection to provide progressive enhancement has little overhead and it won&rsquo;t break in older browsers that don&rsquo;t support that feature.</p>
+<aside class="special">
+
+**Remember**: Service worker functionality is only available on pages that are accessed via HTTPS (http://localhost and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out  [Prefer Secure Origins For Powerful New Features](http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features) from the Chromium team.
+</aside>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Register the service worker if it&rsquo;s available</strong></h3>
+<p>The first step to making the app work offline is to register a service worker, a script that allows background functionality without the need for an open web page or user interaction.</p>
+<p>This takes two simple steps:</p>
+<ol>
+  <li>Tell the browser to register the JavaScript file as the service worker.</li>
+  <li>Create a JavaScript file containing the service worker.</li>
+</ol>
+<p>First, we need to check if the browser supports service workers, and if it does, register the service worker. Add the following code to <code>app.js</code> (after the <code>// TODO add service worker code here</code> comment):</p>
+<pre><code>  if (&#39;serviceWorker&#39; in navigator) {
+    navigator.serviceWorker
+             .register(&#39;../service-worker.js&#39;)
+             .then(function() { console.log(&#39;Service Worker Registered&#39;); });
+  }
+</code></pre>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Cache the site assets</strong></h3>
+<p>When the service worker is registered, an install event is triggered the first time the user visits the page. In this event handler, we will cache all the assets that are needed for the application.</p>
+<aside class="warning">
+
+The code below must NOT be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.
+</aside>
+<p>When the service worker is fired, it should open the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Cache">caches</a> object and populate it with the assets necessary to load the App Shell. Create a file called <code>service-worker.js</code> in your application root folder (which should be <code>your-first-pwapp-master/work</code> directory). This file must live in the application root because the scope for service workers is defined by the directory in which the file resides. Add this code to your new <code>service-worker.js</code> file:</p>
+<pre><code>var cacheName = &#39;weatherPWA-step-6-1&#39;;
+var filesToCache = [];
+
+self.addEventListener(&#39;install&#39;, function(e) {
+  console.log(&#39;[ServiceWorker] Install&#39;);
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log(&#39;[ServiceWorker] Caching app shell&#39;);
+      return cache.addAll(filesToCache);
+    })
+  );
+});
+</code></pre>
+<p>First, we need to open the cache with <code>caches.open()</code> and provide a cache name. Providing a cache name allows us to version files, or separate data from the app shell so that we can easily update one but not affect the other.</p>
+<p>Once the cache is open, we can then call <code>cache.addAll()</code>, which takes a list of URLs, then fetches them from the server and adds the response to the cache. Unfortunately, <code>cache.addAll()</code> is atomic, if any of the files fail, the entire cache step fails!</p>
+<p>Alright, let&rsquo;s start getting familiar with how you can use DevTools to understand and debug service workers. Before reloading your page, open up DevTools, go the <strong>Service Worker</strong> pane on the <strong>Application</strong> panel. It should look like this.</p>
+<img src="img/ed4633f91ec1389f.png" alt="ed4633f91ec1389f.png"  width="624.00" />
+<p>When you see a blank page like this, it means that the currently open page does not have any registered service workers.</p>
+<p>Now, reload your page. The Service Worker pane should now look like this.</p>
+<img src="img/bf15c2f18d7f945c.png" alt="bf15c2f18d7f945c.png"  width="624.00" />
+<p>When you see information like this, it means the page has a service worker running.</p>
+<p>OK, now we&rsquo;re are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let&rsquo;s add an <code>activate</code> event listener below the <code>install</code> event listener in your <code>service-worker.js</code> file. </p>
+<pre><code>self.addEventListener(&#39;activate&#39;, function(e) {
+  console.log(&#39;[ServiceWorker] Activate&#39;);
+});
+</code></pre>
+<p>The <code>activate</code> event is fired when the service worker starts up.</p>
+<p>Open up the DevTools Console and reload the page, switch to the Service Worker pane in the Application panel and click inspect on the activated service worker. You expect to see the <code>[ServiceWorker] Activate</code> message logged to the console, but it didn&rsquo;t happen. Check out your Service Worker pane and you can see that the new service worker (that includes the activate event listener) appears to be in a &ldquo;waiting&rdquo; state.</p>
+<img src="img/1f454b6807700695.png" alt="1f454b6807700695.png"  width="487.00" />
+<p>Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you <strong>could</strong> close and re-open the page or press the <strong>skipWaiting</strong> button, but a longer-term solution is to just enable the <strong>Update on Reload</strong> checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.</p>
+<p>Enable the <strong>Update on Reload</strong> checkbox now and reload the page to confirm that the new service worker gets activated.</p>
+<p><strong>Note:</strong> You may see an error in the Service Worker pane of the Application panel similar to the one below, it&rsquo;s <strong>safe</strong> to ignore this error.</p>
+<img src="img/b1728ef310c444f5.png" alt="b1728ef310c444f5.png"  width="424.00" />
+<p>That&rsquo;s all for now regarding inspecting and debugging service workers in DevTools. We&rsquo;ll show you some more tricks later. Let&rsquo;s get back to building your app.</p>
+<p>Let&rsquo;s expand on the <code>activate</code> event listener to include some logic to update the cache. Update your code to match the code below.</p>
+<pre><code>self.addEventListener(&#39;activate&#39;, function(e) {
+  console.log(&#39;[ServiceWorker] Activate&#39;);
+  e.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (key !== cacheName) {
+          console.log(&#39;[ServiceWorker] Removing old cache&#39;, key);
+          return caches.delete(key);
+        }
+      }));
+    })
+  );
+  return self.clients.claim();
+});
+</code></pre>
+<p>This code ensures that your service worker updates its cache whenever any of the app shell files change. In order for this to work, you&rsquo;d need to increment the <code>cacheName</code> variable at the top of your service worker file.</p>
+<p>The last statement fixes a corner-case which you can read about in the (optional) information box below.</p>
+<aside class="special">
+
+When the app is complete, `self.clients.claim()` fixes a corner case in which the app wasn't returning the latest data. You can reproduce the corner case by commenting out the line below and then doing the following steps: 1) load app for first time so that the initial New York City data is shown 2) press the refresh button on the app 3) go offline 4) reload the app. You expect to see the newer NYC data, but you actually see the initial data. This happens because the service worker is not yet activated. `self.clients.claim()` essentially lets you activate the service worker faster.
+</aside>
+<p>Finally, let&rsquo;s update the list of files required for the app shell. In the array, we need to include all of the files our app needs, including images, JavaScript, stylesheets, etc. Near the top of your <code>service-worker.js</code> file, replace <code>var filesToCache = [];</code> with the code below:</p>
+<pre><code>var filesToCache = [
+  &#39;/&#39;,
+  &#39;/index.html&#39;,
+  &#39;/scripts/app.js&#39;,
+  &#39;/styles/inline.css&#39;,
+  &#39;/images/clear.png&#39;,
+  &#39;/images/cloudy-scattered-showers.png&#39;,
+  &#39;/images/cloudy.png&#39;,
+  &#39;/images/fog.png&#39;,
+  &#39;/images/ic_add_white_24px.svg&#39;,
+  &#39;/images/ic_refresh_white_24px.svg&#39;,
+  &#39;/images/partly-cloudy.png&#39;,
+  &#39;/images/rain.png&#39;,
+  &#39;/images/scattered-showers.png&#39;,
+  &#39;/images/sleet.png&#39;,
+  &#39;/images/snow.png&#39;,
+  &#39;/images/thunderstorm.png&#39;,
+  &#39;/images/wind.png&#39;
+];
+</code></pre>
+<aside class="special">
+
+Be sure to include all permutations of file names, for example our app is served from `index.html`, but it may also be requested as `/` since the server sends `index.html` when a root folder is requested. You could deal with this in the `fetch` method, but it would require special casing which may become complex.
+</aside>
+<p>Our app doesn&rsquo;t work offline quite yet. We&rsquo;ve cached the app shell components, but we still need to load them from the local cache.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Serve the app shell from the cache</strong></h3>
+<p>Service workers provide the ability to intercept requests made from our Progressive Web App and handle them within the service worker. That means we can determine how we want to handle the request and potentially serve our own cached response.</p>
+<p>For example:</p>
+<pre><code>self.addEventListener(&#39;fetch&#39;, function(e) {
+  // Do something interesting with the fetch here
+});
+</code></pre>
+<p>Let&rsquo;s now serve the app shell from the cache. Add the following code to the bottom of your <code>service-worker.js</code> file:</p>
+<pre><code>self.addEventListener(&#39;fetch&#39;, function(e) {
+  console.log(&#39;[ServiceWorker] Fetch&#39;, e.request.url);
+  e.respondWith(
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
+</code></pre>
+<p>Stepping from inside, out, <code>caches.match()</code> evaluates the web request that triggered the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a> event, and checks to see if it&rsquo;s available in the cache. It then either responds with the cached version, or uses <code>fetch</code> to get a copy from the network. The <code>response</code> is passed back to the web page with <code>e.respondWith()</code>.</p>
+<aside class="warning">
+
+If you're not seeing the `[ServiceWorker]` logging in the console, be sure you've changed the `cacheName` variable and that you're inspecting the right service worker by opening the Service Worker pane in the Applications panel and clicking **inspect** on the running service worker. If that doesn't work, see the section on Tips for testing live service workers.
+</aside>
+<h3><a href="#test-it-out" name="test-it-out" class="anchor"><span class="anchor-link"></span></a>Test it out</h3>
+<p>Your app is now offline-capable! Let&rsquo;s try it out.</p>
+<p>Reload your page and then go to the <strong>Cache Storage</strong> pane on the <strong>Application</strong> panel of DevTools. Right click <strong>Cache Storage</strong>, pick <strong>Refresh Caches</strong>, expand the section and you should see the name of your app shell cache listed on the left-hand side. When you click on your app shell cache you can see all of the resources that it has currently cached.</p>
+<img src="img/ab9c361527825fac.png" alt="ab9c361527825fac.png"  width="624.00" />
+<p>Now, let&rsquo;s test out offline mode. Go back to the <strong>Service Worker</strong> pane of DevTools and enable the <strong>Offline</strong> checkbox. After enabling it, you should see a little yellow warning icon next to the <strong>Network</strong> panel tab. This indicates that you&rsquo;re offline.</p>
+<img src="img/7656372ff6c6a0f7.png" alt="7656372ff6c6a0f7.png"  width="624.00" />
+<p>Reload your page and&hellip; it works! Kind of, at least. Notice how it loads the initial (fake) weather data.</p>
+<img src="img/8a959b48e233bc93.png" alt="8a959b48e233bc93.png"  width="396.00" />
+<p>Check out the <code>else</code> clause in <code>app.getForecast()</code> to understand why the app is able to load the fake data.</p>
+<p>The next step is to modify the app and service worker logic to be able to cache weather data, and return the most recent data from the cache when the app is offline.</p>
+<p><strong>Tip:</strong> To start fresh and clear all saved data (<code>localStorage</code>, <code>indexedDB</code> data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.</p>
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/step-06/">https://weather-pwa-sample.firebaseapp.com/step-06/</a>)</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Beware of the edge cases</strong></h3>
+<p>As previously mentioned, this code <strong>must not be used in production</strong> because of the many unhandled edge cases.</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Cache depends on updating the cache key for every change</strong></h4>
+<p>For example this caching method requires you to update the cache key every time content is changed, otherwise, the cache will not be updated, and the old content will be served. So be sure to change the cache key with every change as you&rsquo;re working on your project!</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Requires everything to be redownloaded for every change</strong></h4>
+<p>Another downside is that the entire cache is invalidated and needs to be re-downloaded every time a file changes. That means fixing a simple single character spelling mistake will invalidate the cache and require everything to be downloaded again. Not exactly efficient.</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Browser cache may prevent the service worker cache from updating</strong></h4>
+<p>There&rsquo;s another important caveat here. It&rsquo;s crucial that the HTTPS request made during the install handler goes directly to the network and doesn&rsquo;t return a response from the browser&rsquo;s cache. Otherwise the browser may return the old, cached version, resulting in the service worker cache never actually updating!</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Beware of cache-first strategies in production</strong></h4>
+<p>Our app uses a cache-first strategy, which results in a copy of any cached content being returned without consulting the network. While a cache-first strategy is easy to implement, it can cause challenges in the future. Once the copy of the host page and service worker registration is cached, it can be extremely difficult to change the configuration of the service worker (since the configuration depends on where it was defined), and you could find yourself deploying sites that are extremely difficult to update!</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>How do I avoid these edge cases?</strong></h4>
+<p>So how do we avoid these edge cases? Use a library like <a href="https://workboxjs.org/">Workbox</a>, which provides fine control over what gets expired, ensures requests go directly to the network and handles all of the hard work for you.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Tips for testing live service workers</strong></h3>
+<p>Debugging service workers can be a challenge, and when it involves caching, things can become even more of a nightmare if the cache isn&rsquo;t updated when you expect it. Between the typical service worker life cycle and bug in your code, you may become quickly frustrated. But don&rsquo;t. There are some tools you can use to make your life easier.</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Start Fresh</strong></h4>
+<p>In some cases, you may find yourself loading cached data or that things aren&rsquo;t updated as you expect. To clear all saved data (localStorage, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.</p>
+<p>Some other tips:</p>
+<ul>
+  <li>Once a service worker has been unregistered, it may remain listed until its containing browser window is closed.</li>
+  <li>If multiple windows to your app are open, the new service worker will not take effect until they&rsquo;ve all been reloaded and updated to the latest service worker.</li>
+  <li>Unregistering a service worker does not clear the cache, so it may be possible you&rsquo;ll still get old data if the cache name hasn&rsquo;t changed.</li>
+  <li>If a service worker exists and a new service worker is registered, the new service worker won&rsquo;t take control until the page is reloaded, unless you take <a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control">immediate control</a>.</li>
+</ul>
+<h2><a href="#use-service-workers-to-cache-the-forecast-data" name="use-service-workers-to-cache-the-forecast-data" class="anchor"><span class="anchor-link"></span></a>Use service workers to cache the forecast data</h2>
+<p>Choosing the right <a href="https://jakearchibald.com/2014/offline-cookbook/">caching strategy</a> for your data is vital and depends on the type of data your app presents. For example, time-sensitive data like weather or stock quotes should be as fresh as possible, while avatar images or article content can be updated less frequently.</p>
+<p>The <a href="https://jakearchibald.com/2014/offline-cookbook/#cache-network-race">cache-first-then-network</a> strategy is ideal for our app. It gets data on screen as quickly as possible, then updates that once the network has returned the latest data. In comparison to network-first-then-cache, the user does not have to wait until the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a> times out to get the cached data.</p>
+<p>Cache-first-then-network means we need to kick off two asynchronous requests, one to the cache and one to the network. Our network request with the app doesn&rsquo;t need to change much, but we need to modify the service worker to cache the response before returning it.</p>
+<p>Under normal circumstances, the cached data will be returned almost immediately providing the app with recent data it can use. Then, when the network request returns, the app will be updated using the latest data from the network.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Intercept the network request and cache the response</strong></h3>
+<p>We need to modify the service worker to intercept requests to the weather API and store their responses in the cache, so we can easily access them later. In the cache-then-network strategy, we expect the network response to be the ‘source of truth&rsquo;, always providing us with the most recent information. If it can&rsquo;t, it&rsquo;s OK to fail because we&rsquo;ve already retrieved the latest cached data in our app.</p>
+<p>In the service worker, let&rsquo;s add a <code>dataCacheName</code> so that we can separate our applications data from the app shell. When the app shell is updated and older caches are purged, our data will remain untouched, ready for a super fast load. Keep in mind, if your data format changes in the future, you&rsquo;ll need a way to handle that and ensure the app shell and content stay in sync.</p>
+<p>Add the following line to the top of your <code>service-worker.js</code> file:</p>
+<pre><code>var dataCacheName = &#39;weatherData-v1&#39;;
+</code></pre>
+<p>Next, update the <code>activate</code> event handler so that it doesn&rsquo;t delete the data cache when it cleans up the app shell cache.</p>
+<pre><code>if (key !== cacheName &amp;&amp; key !== dataCacheName) {
+</code></pre>
+<p>Finally, update the <code>fetch</code> event handler to handle requests to the data API separately from other requests.</p>
+<pre><code>self.addEventListener(&#39;fetch&#39;, function(e) {
+  console.log(&#39;[Service Worker] Fetch&#39;, e.request.url);
+  var dataUrl = &#39;https://query.yahooapis.com/v1/public/yql&#39;;
+  if (e.request.url.indexOf(dataUrl) &gt; -1) {
+    /*
+     * When the request URL contains dataUrl, the app is asking for fresh
+     * weather data. In this case, the service worker always goes to the
+     * network and then caches the response. This is called the &quot;Cache then
+     * network&quot; strategy:
+     * https://jakearchibald.com/2014/offline-cookbook/#cache-then-network
+     */
+    e.respondWith(
+      caches.open(dataCacheName).then(function(cache) {
+        return fetch(e.request).then(function(response){
+          cache.put(e.request.url, response.clone());
+          return response;
+        });
+      })
+    );
+  } else {
+    /*
+     * The app is asking for app shell files. In this scenario the app uses the
+     * &quot;Cache, falling back to the network&quot; offline strategy:
+     * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
+     */
+    e.respondWith(
+      caches.match(e.request).then(function(response) {
+        return response || fetch(e.request);
+      })
+    );
+  }
+});
+</code></pre>
+<p>The code intercepts the request and checks if the URL starts with the address of the weather API. If it does we&rsquo;ll use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a> to make the request. Once the response is returned, our code opens the cache, clones the response, stores it in the cache, and finally returns the response to the original requestor.</p>
+<p>Our app won&rsquo;t work offline quite yet. We&rsquo;ve implemented caching and retrieval for the app shell, but even though we&rsquo;re caching the data, the app doesn&rsquo;t yet check the cache to see if it has any weather data. </p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Making the requests</strong></h3>
+<p>As mentioned previously, the app needs to kick off two asynchronous requests, one to the cache and one to the network. The app uses the <code>caches</code> object available in <code>window</code> to access the cache and retrieve the latest data. This is an excellent example of progressive enhancement as the <code>caches</code> object may not be available in all browsers, and if it&rsquo;s not the network request should still work.</p>
+<p>To do this, we need to:</p>
+<ol>
+  <li>Check if the <code>caches</code> object is available in the global <code>window</code> object.</li>
+  <li>Request data from the cache.</li>
+</ol>
+<ul>
+  <li>If the server request is still outstanding, update the app with the cached data.</li>
+</ul>
+<ol>
+  <li>Request data from the server.</li>
+</ol>
+<ul>
+  <li>Save the data for quick access later.</li>
+  <li>Update the app with the fresh data from the server.</li>
+</ul>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Get data from the cache</strong></h4>
+<p>Next, we need to check if the <code>caches</code> object exists and request the latest data from it. Find the <code>TODO add cache logic here</code> comment in <code>app.getForecast()</code>, and then add the code below under the comment.</p>
+<pre><code>    if (&#39;caches&#39; in window) {
+      /*
+       * Check if the service worker has already cached this city&#39;s weather
+       * data. If the service worker has the data, then display the cached
+       * data while the app fetches the latest data.
+       */
+      caches.match(url).then(function(response) {
+        if (response) {
+          response.json().then(function updateFromCache(json) {
+            var results = json.query.results;
+            results.key = key;
+            results.label = label;
+            results.created = json.query.created;
+            app.updateForecastCard(results);
+          });
+        }
+      });
+    }
+</code></pre>
+<p>Our weather app now makes two asynchronous requests for data, one from the <code>cache</code> and one via an XHR. If there&rsquo;s data in the cache, it&rsquo;ll be returned and rendered extremely quickly (tens of milliseconds) and update the card only if the XHR is still outstanding. Then, when the XHR responds, the card will be updated with the freshest data direct from the weather API.</p>
+<p>Notice how the cache request and the XHR request both end with a call to update the forecast card. How does the app know whether it&rsquo;s displaying the latest data? This is handled in the following code from <code>app.updateForecastCard</code>:</p>
+<pre><code>    var cardLastUpdatedElem = card.querySelector(&#39;.card-last-updated&#39;);
+    var cardLastUpdated = cardLastUpdatedElem.textContent;
+    if (cardLastUpdated) {
+      cardLastUpdated = new Date(cardLastUpdated);
+      // Bail if the card has more recent data then the data
+      if (dataLastUpdated.getTime() &lt; cardLastUpdated.getTime()) {
+        return;
+      }
+    }
+</code></pre>
+<p>Every time that a card is updated, the app stores the timestamp of the data on a hidden attribute on the card. The app just bails if the timestamp that already exists on the card is newer than the data that was passed to the function.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Test it out</strong></h3>
+<p>The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. </p>
+<p>Then go to the <strong>Cache Storage</strong> pane on the <strong>Application</strong> panel of DevTools. Expand the section and you should see the name of your app shell and data cache listed on the left-hand side. Opening the data cache should should the data stored for each city.</p>
+<img src="img/cf095c2153306fa7.png" alt="cf095c2153306fa7.png"  width="624.00" />
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/step-07/">https://weather-pwa-sample.firebaseapp.com/step-07/</a>)</p>
+<h2><a href="#support-native-integration" name="support-native-integration" class="anchor"><span class="anchor-link"></span></a>Support native integration</h2>
+<p>Nobody likes to have to type in long URLs on a mobile keyboard if they don&rsquo;t need to. With the Add To home screen feature, your users can choose to add a shortcut link to their device just as they would install a native app from a store, but with a lot less friction.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Web App Install Banners and Add to Homescreen for Chrome on Android</strong></h3>
+<p>Web app install banners give you the ability to let your users quickly and seamlessly add your web app to their home screen, making it easy to launch and return to your app. Adding app install banners is easy, and Chrome handles most of the heavy lifting for you. We simply need to include a web app manifest file with details about the app.</p>
+<p>Chrome then uses a set of criteria including the use of a service worker, SSL status and visit frequency heuristics to determine when to show the banner. In addition a user can manually add it via the &ldquo;Add to Home Screen&rdquo; menu button in Chrome.</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Declare an app manifest with a <code>manifest.json</code> file</strong></h4>
+<p>The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.</p>
+<p>Using the web app manifest, your web app can:</p>
+<ul>
+  <li>Have a rich presence on the user&rsquo;s Android home screen</li>
+  <li>Be launched in full-screen mode on Android with no URL bar</li>
+  <li>Control the screen orientation for optimal viewing</li>
+  <li>Define a &ldquo;splash screen&rdquo; launch experience and theme color for the site</li>
+  <li>Track whether you&rsquo;re launched from the home screen or URL bar</li>
+</ul>
+<p>Create a file named <code>manifest.json</code> in your <code>work</code> folder and copy/paste the following contents:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;Weather&quot;,
+  &quot;short_name&quot;: &quot;Weather&quot;,
+  &quot;icons&quot;: [{
+    &quot;src&quot;: &quot;images/icons/icon-128x128.png&quot;,
+      &quot;sizes&quot;: &quot;128x128&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }, {
+      &quot;src&quot;: &quot;images/icons/icon-144x144.png&quot;,
+      &quot;sizes&quot;: &quot;144x144&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }, {
+      &quot;src&quot;: &quot;images/icons/icon-152x152.png&quot;,
+      &quot;sizes&quot;: &quot;152x152&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }, {
+      &quot;src&quot;: &quot;images/icons/icon-192x192.png&quot;,
+      &quot;sizes&quot;: &quot;192x192&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }, {
+      &quot;src&quot;: &quot;images/icons/icon-256x256.png&quot;,
+      &quot;sizes&quot;: &quot;256x256&quot;,
+      &quot;type&quot;: &quot;image/png&quot;
+    }],
+  &quot;start_url&quot;: &quot;/index.html&quot;,
+  &quot;display&quot;: &quot;standalone&quot;,
+  &quot;background_color&quot;: &quot;#3E4EB8&quot;,
+  &quot;theme_color&quot;: &quot;#2F3BA2&quot;
+}
+</code></pre>
+<p>The manifest supports an array of icons, intended for different screen sizes. At the time of this writing, Chrome and Opera Mobile, the only browsers that support web app manifests, won&rsquo;t use anything smaller than 192px.</p>
+<p>An easy way to track how the app is launched is to add a query string to the <code>start_url</code> parameter and then use an analytics suite to track the query string. If you use this method, remember to update the list of files cached by the App Shell to ensure that the file with the query string is cached.</p>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Tell the browser about your manifest file</strong></h4>
+<p>Now add the following line to the bottom of the <code>&lt;head&gt;</code> element in your <code>index.html</code> file: </p>
+<pre><code>&lt;link rel=&quot;manifest&quot; href=&quot;/manifest.json&quot;&gt;
+</code></pre>
+<h4><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Best Practices</strong></h4>
+<ul>
+  <li>Place the manifest link on all your site&rsquo;s pages, so it will be retrieved by Chrome right when the user first visits, no matter what page they land on.</li>
+  <li>The <code>short_name</code> is preferred on Chrome and will be used if present over the name field.</li>
+  <li>Define icon sets for different density screens. Chrome will attempt to use the icon closest to 48dp, for example, 96px on a 2x device or 144px for a 3x device.</li>
+  <li>Remember to include an icon with a size that is sensible for a splash screen and don&rsquo;t forget to set the <code>background_color</code>.</li>
+</ul>
+<p>Further Reading:</p>
+<p><a href="https://developers.google.com/web/fundamentals/engage-and-retain/simplified-app-installs/">Using app install banners</a></p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Add to Homescreen elements for Safari on iOS</strong></h3>
+<p>In your <code>index.html</code>, add the following to the bottom of the <code>&lt;head&gt;</code> element:</p>
+<pre><code>  &lt;!-- Add to home screen for Safari on iOS --&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Weather PWA&quot;&gt;
+  &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;images/icons/icon-152x152.png&quot;&gt;
+</code></pre>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Tile Icon for Windows</strong></h3>
+<p>In your <code>index.html</code>, add the following to the bottom of the <code>&lt;head&gt;</code> element:</p>
+<pre><code>  &lt;meta name=&quot;msapplication-TileImage&quot; content=&quot;images/icons/icon-144x144.png&quot;&gt;
+  &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#2F3BA2&quot;&gt;
+</code></pre>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Test it out</strong></h3>
+<p>In this section we&rsquo;ll show you a couple of ways to test your web app manifest.</p>
+<p>The first way is DevTools. Open up the <strong>Manifest</strong> pane on the <strong>Application</strong> panel. If you&rsquo;ve added the manifest information correctly, you&rsquo;ll be able to see it parsed and displayed in a human-friendly format on this pane.</p>
+<p>You can also test the add to homescreen feature from this pane. Click on the <strong>Add to homescreen</strong> button. You should see a &ldquo;add this site to your shelf&rdquo; message below your URL bar, like in the screenshot below.</p>
+<img src="img/cbfdd0302b611ab0.png" alt="cbfdd0302b611ab0.png"  width="624.00" />
+<p>This is the desktop equivalent of mobile&rsquo;s add to homescreen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices.</p>
+<p>The second way to test is via Web Server for Chrome. With this approach, you expose your local development server (on your desktop or laptop) to other computers, and then you just access your progressive web app from a real mobile device.</p>
+<aside class="warning">
+
+Opening up a port for remote access is handy for testing this step but may be blocked by your computer's firewall rules or network administrator. Opening ports for remote access is generally not a good thing to leave running on your computer. So, for security reasons, when you've completed testing this step, disable the `Accessible on local network` option and restart your web server.
+</aside>
+<p>On Web Server for Chrome configuration dialog, select the <code>Accessible on local network</code> option:</p>
+<img src="img/81347b12f83e4291.png" alt="Screen Shot 2016-05-12 at 5.42.40 PM.png"  width="371.56" />
+<p>Toggle the Web Server to <code>STOPPED</code> and back to <code>STARTED</code>. You&rsquo;ll see a new URL which can be used to access your app remotely.</p>
+<p>Now, access your site from a mobile device, using the new URL.</p>
+<p>You will see service worker errors in the console when testing this way because the service worker is not being served over HTTPS.</p>
+<p>Using Chrome from an Android device, try adding the app to the homescreen and verifying that the launch screen appears properly and the right icons are used.</p>
+<p>On Safari and Internet Explorer, you can also manually add the app to your homescreen.</p>
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/step-08/">https://weather-pwa-sample.firebaseapp.com/step-08/</a>)</p>
+<h2><a href="#deploy-to-a-secure-host-and-celebrate" name="deploy-to-a-secure-host-and-celebrate" class="anchor"><span class="anchor-link"></span></a>Deploy to a secure host and celebrate</h2>
+<p>The final step is to deploy our weather app to a server that supports HTTPS. If you don&rsquo;t already have one, the absolute easiest (and free) approach is to use the static content hosting from Firebase. It&rsquo;s super easy to use, serves content over HTTPS and is backed by a global CDN.</p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Extra credit: minify and inline CSS</strong></h3>
+<p>There&rsquo;s one more thing that you should consider, minifying the key styles and inlining them directly into <code>index.html</code>. <a href="https://developers.google.com/speed">Page Speed Insights</a> recommends serving the above the fold content in the first 15k bytes of the request.</p>
+<p>See how small you can get the initial request with everything inlined.</p>
+<p>Further Reading: <a href="https://developers.google.com/speed/docs/insights/rules">PageSpeed Insight Rules</a></p>
+<aside class="special">
+
+This step requires you to have  [Node & NPM](https://docs.npmjs.com/getting-started/installing-node) installed on your system. If it's not, you can use any other hosting provider that supports HTTP**S**. We've used Firebase because it automatically redirects users from HTTP to HTTP**S**. If you use a different provider, be sure they're always redirects to HTTP**S**.
+</aside>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Deploy to Firebase</strong></h3>
+<p>If you&rsquo;re new to Firebase, you&rsquo;ll need to create your account and install some tools first.</p>
+<ol>
+  <li>Create a Firebase account at <a href="https://firebase.google.com/console/">https://firebase.google.com/console/</a></li>
+  <li>Install the Firebase tools via npm: <code>npm install -g firebase-tools</code></li>
+</ol>
+<p>Once your account has been created and you&rsquo;ve signed in, you&rsquo;re ready to deploy!</p>
+<ol>
+  <li>Create a new app at <a href="https://firebase.google.com/console/">https://firebase.google.com/console/</a></li>
+  <li>If you haven&rsquo;t recently signed in to the Firebase tools, update your credentials: <code>firebase login</code></li>
+  <li>Initialize your app, and provide the directory (likely <code>work</code>) where your completed app lives: <code>firebase init</code></li>
+  <li>Finally, deploy the app to Firebase: <code>firebase deploy</code></li>
+  <li>Celebrate. You&rsquo;re done! Your app will be deployed to the domain: <code>https://YOUR-FIREBASE-APP.firebaseapp.com</code></li>
+</ol>
+<p>Further reading: <a href="https://firebase.google.com/docs/hosting/">Firebase Hosting Guide</a></p>
+<h3><a href="#" name="" class="anchor"><span class="anchor-link"></span></a><strong>Test it out</strong></h3>
+<ul>
+  <li>Try adding the app to your home screen then disconnect the network and verify the app works offline as expected.</li>
+</ul>
+<p>[](<a href="https://weather-pwa-sample.firebaseapp.com/final/">https://weather-pwa-sample.firebaseapp.com/final/</a>)</p>
+</div>
+<div>
+<a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/docs/index-claat.md" title="Edit this page" class="md-source-file md-edit">
+Edit this page
+</a>
+</div>
+<div class="print-only">
+<span class="md-source-file md-version">
+0.2.0+50-06b793b7
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+Neuroshapes is Open Source and available under the CC-BY-4.0 License.<br/>|
+</div>
+Powered by
+<a href="https://github.com/lightbend/paradox">Paradox</a>
+and
+<a href="https://jonas.github.io/paradox-material-theme/">Paradox Material Theme</a>
+
+</div>
+<div class="md-footer-social">
+<a href="https://github.com/INCF/neuroshapes" class="md-footer-social__link fa fa-github"></a><a href="https://gitter.im/INCF/neuroshapes" class="md-footer-social__link fa fa-globe"></a><a href="https://twitter.com/search?q=%23Neuroshapes" class="md-footer-social__link fa fa-twitter"></a>
+</div>
+
+</div>
+</div>
+</footer>
+
+</div>
+<script src="../assets/javascripts/application.583bbe55.js"></script>
+<script src="../assets/javascripts/paradox-material-theme.js"></script>
+<script>app.initialize({version:"0.17",url:{base:"../."}})</script>
+<script type="text/javascript" src="../lib/prettify/prettify.js"></script>
+<script type="text/javascript" src="../lib/prettify/lang-scala.js"></script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+window.prettyPrint && prettyPrint();
+});
+</script>
+<script src="../assets/js/index.js"></script>
+</body>
+</html>
