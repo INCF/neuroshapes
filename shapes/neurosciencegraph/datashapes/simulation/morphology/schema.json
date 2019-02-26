@@ -31,7 +31,7 @@
               "node": "this:MorphologyDistributionShape"
             },
             {
-              "path": "dcterms:isPartOf",
+              "path": "schema:isPartOf",
               "name": "Part of",
               "description": "The morphology release (s) this morphology is part of.",
               "editorialNote": "Can a morphology belongs to multiple release ?",
@@ -66,12 +66,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "",
               "in": [

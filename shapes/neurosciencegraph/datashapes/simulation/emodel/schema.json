@@ -42,7 +42,7 @@
               "class": "nsg:EModelScript"
             },
             {
-              "path": "dcterms:isPartOf",
+              "path": "schema:isPartOf",
               "name": "Part of",
               "description": "The emodel release (s) this emodel is part of.",
               "editorialNote": "Can an emodel belongs to multiple release ?",

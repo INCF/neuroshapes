@@ -56,7 +56,7 @@
         {
           "property": [
             {
-              "path": "dcat:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "Brain parcellation mesh allowed media types",
               "in": [

@@ -1,0 +1,39 @@
+{
+  "@context" : [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this" : "https://neuroshapes.org/commons/contribution/shapes/"
+    }
+  ],
+  "@id" : "https://neuroshapes.org/commons/contribution",
+  "@type" : "nxv:Schema",
+  "imports" : [
+    "https://neuroshapes.org/commons/labeledontologyentity"
+  ],
+  "shapes" : [
+    {
+      "@id" : "this:ContributionShape",
+      "@type" : "sh:NodeShape",
+      "nodeKind" : "sh:BlankNodeOrIRI",
+      "property" : [
+        {
+          "path" : "prov:hadPlan",
+          "class" : "prov:Plan",
+          "node" : "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+        },
+        {
+          "path" : "prov:hadRole",
+          "node" : "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+        },
+        {
+          "path" : "prov:agent",
+          "comment" : "Required",
+          "class" : "prov:Agent",
+          "nodeKind" : "sh:IRI",
+          "maxCount" : 1,
+          "minCount" : 1
+        }
+      ]
+    }
+  ]
+}

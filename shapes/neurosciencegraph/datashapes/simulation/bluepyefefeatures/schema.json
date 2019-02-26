@@ -46,7 +46,7 @@
               "maxCount": 1
             },
             {
-              "path": "dcterms:isPartOf",
+              "path": "schema:isPartOf",
               "name": "Part of",
               "description": "The emodel release for which features were extracted.",
               "class": "nsg:EModelRelease"

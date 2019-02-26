@@ -33,7 +33,7 @@
               "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
             },
             {
-              "path": "nsg:hasPart",
+              "path": "schema:hasPart",
               "name": "Patched cells collection",
               "description": "The collection of patched cells.",
               "class": "nsg:Collection",

@@ -8,6 +8,7 @@
   "@id": "https://provshapes.org/commons/derivation",
   "@type": "nxv:Schema",
   "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/provsh/derivation/v1.0.0.json",
+  "seeAlso":"",
   "shapes": [
     {
       "@id": "DerivationShape",
@@ -30,8 +31,18 @@
           "description": "The optional activity that used the entity from which the current one derived from.",
           "class": "prov:Activity",
           "maxCount": 1
+        },
+        {
+          "path": "prov:hadUsage",
+          "name": "Usage",
+          "description": "Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity..",
+          "class": "prov:Usage",
+          "maxCount": 1
         }
       ]
     }
   ]
 }
+
+
+

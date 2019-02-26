@@ -32,7 +32,7 @@
               "class": "nsg:SubCellularModelScript"
             },
             {
-              "path": "dcterms:isPartOf",
+              "path": "schema:isPartOf",
               "name": "Part of",
               "description": "The synapse/ion channel release this model is part of.",
               "or": [

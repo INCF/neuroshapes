@@ -9,7 +9,7 @@
   "@type": "nxv:Schema",
   "imports": [
     "https://neuroshapes.org/commons/entity",
-    "https://neuroshapes.org/dash/distribution"
+    "https://neuroshapes.org/commons/distribution"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/simulation/src/main/resources/schemas/neurosciencegraph/simulation/configuration/v1.0.0.json",
   "shapes": [
@@ -29,7 +29,7 @@
               "path": "schema:distribution",
               "name": "Configuration file (s)",
               "description": "Link to the configuration neurondb.xml file.",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }

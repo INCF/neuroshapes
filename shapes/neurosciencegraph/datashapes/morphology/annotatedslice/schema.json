@@ -40,7 +40,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:hasPart",
+              "path": "schema:hasPart",
               "name": "Patched cell collection",
               "description": "The collections of labeled cells.",
               "class": "nsg:LabeledCellCollection",

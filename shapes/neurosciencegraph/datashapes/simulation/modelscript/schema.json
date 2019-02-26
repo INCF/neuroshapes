@@ -40,12 +40,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "Emodel script media types",
               "in": [
@@ -85,12 +85,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "Subcellular model script media type(s)",
               "in": [

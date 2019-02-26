@@ -1,0 +1,210 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/minds/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/minds",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/subject",
+    "https://neuroshapes.org/commons/brainlocation",
+    "https://neuroshapes.org/commons/contribution",
+    "https://neuroshapes.org/commons/distribution",
+    "https://neuroshapes.org/commons/annotation",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/license",
+    "https://neuroshapes.org/commons/language",
+    "https://provshapes.org/commons/generation",
+    "https://provshapes.org/commons/invalidation",
+    "https://provshapes.org/commons/derivation"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MINDSShape",
+      "@type": "sh:NodeShape",
+      "label": "Minimum Information about a Neuroscience DataSet",
+      "nodeKind": "sh:IRI",
+      "seeAlso": [
+        "https://www.w3.org/TR/vocab-dcat",
+        "https://schema.org",
+        "https://www.w3.org/TR/prov-o"
+      ],
+      "property": [
+        {
+          "path": "schema:title",
+          "name": "Title",
+          "description": "The dataset title.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "The dataset name.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:description",
+          "name": "Description",
+          "description": "The dataset description.",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:identifier",
+          "name": "Identifier",
+          "description": "The dataset identifier.",
+          "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape"
+        },
+        {
+          "path": "schema:url",
+          "name": "URL",
+          "description": "A landing page describing the dataset.",
+          "datatype": "xsd:anyURI"
+        },
+        {
+          "path": "schema:language",
+          "name": "Language",
+          "description": "The dataset language.",
+          "node": "https://neuroshapes.org/commons/language/shapes/LanguageShape",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:dateModified",
+          "name": "Update date",
+          "description": "The date of the last update of this dataset.",
+          "datetype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:dateReleased",
+          "name": "Release date",
+          "description": "The dataset release date.",
+          "datetype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:sameAs",
+          "name": "Same as",
+          "description": "Other URLs leading to resources describing the dataset.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:citation",
+          "name": "Citation",
+          "description": "Citation (s) of publication (s) that describe the dataset.",
+          "xone": [
+            {
+              "nodeKind": "sh:IRI"
+            },
+            {
+              "datatype": "xsd:string"
+            }
+          ]
+        },
+        {
+          "path": "schema:image",
+          "name": "Image",
+          "description": "Dataset image (e.g. dataset preview).",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:keywords",
+          "name": "Keywords",
+          "description": "Keywords describing the dataset.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "nsg:annotation",
+          "name": "Annotation",
+          "description": "Annotations of the dataset.",
+          "node": "https://neuroshapes.org/commons/annotation/shapes/AnnotationShape"
+        },
+        {
+          "path": "rdf:type",
+          "name": "Type",
+          "description": "The dataset type.",
+          "minCount": 1,
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DataTypeOntologyTermShape"
+        },
+        {
+          "path": "schema:license",
+          "name": "License",
+          "description": "A Link towards the dataset license.",
+          "class": "nsg:License",
+          "node": "https://neuroshapes.org/commons/license/shapes/LicenseShape",
+          "seeAlso": "https://github.com/creativecommons/cc.licenserdf"
+        },
+        {
+          "path": "nsg:subject",
+          "name": "Subject",
+          "description": "The subject of the study. This data represent an observation of this subject.",
+          "class": "nsg:Subject",
+          "minCount": 1,
+          "seeAlso": "https://neuroshapes.org/commons/subject/shapes/SubjectShape",
+          "editorialNote": "Asserted subject entity. It may differ from the subject from the provenance."
+        },
+        {
+          "path": "nsg:brainLocation",
+          "name": "Brain Location",
+          "description": "The Brain location object.",
+          "class": "nsg:BrainLocation",
+          "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
+          "minCount": 1
+        },
+        {
+          "path": "nsg:objectOfStudy",
+          "name": "Object of Study",
+          "description": "Object of Study",
+          "editorialNote": "The object of study ",
+          "class": "nsg:ObjectOfStudy",
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/ObjectOfStudyOntologyTermShape"
+        },
+        {
+          "path": "nsg:contribution",
+          "name": "Qualified Contribution",
+          "description": "Information about the contribution of an agent during the generation of this dataset.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "nsg:Contribution",
+          "seeAlso": "https://neuroshapes.org/commons/contribution/shapes/ContributionShape",
+          "minCount": 1
+        },
+        {
+          "path": "schema:distribution",
+          "name": "Distribution",
+          "description": "Details about the dataset download such as access and format information.",
+          "minCount": 1,
+          "class": "schema:DataDownload",
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
+        },
+        {
+          "path": "nsg:derivation",
+          "name": "Qualified Derivation",
+          "description": "Derivation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Derivation",
+          "seeAlso": "https://provshapes.org/commons/derivation/shapes/DerivationShape"
+        },
+        {
+          "path": "nsg:generation",
+          "name": "Qualified Generation",
+          "description": "Generation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Generation",
+          "seeAlso": "https://provshapes.org/commons/generation/shapes/GenerationShape"
+        },
+        {
+          "path": "nsg:invalidation",
+          "name": "Qualified Invalidation",
+          "description": "Invalidation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Invalidation",
+          "seeAlso": "https://provshapes.org/commons/invalidation/shapes/InvalidationShape"
+        }
+      ]
+    }
+  ]
+}

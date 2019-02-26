@@ -87,10 +87,10 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -115,7 +115,7 @@
               "name": "Properties",
               "description": "Location of the data file defining properties of the synapses.",
               "editorialNote": "",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             },
@@ -138,12 +138,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "",
               "in": [
@@ -166,10 +166,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -189,10 +189,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -212,10 +212,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -235,10 +235,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -258,10 +258,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the data",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -289,10 +289,10 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Distribution",
               "description": "Location of the mvd3 file  mvd3 mediaType",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -319,10 +319,10 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Path",
               "description": "Location of data files with additional connectivity info",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape",
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1,
               "maxCount": 1
             }
