@@ -98,7 +98,7 @@
           "path": "schema:distribution",
           "name": "Distribution",
           "description": "Where the data attached to the entity is published.",
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         }
       ]
     }
