@@ -26,7 +26,7 @@
         {
           "property": [
             {
-              "path": "nsg:hasPart",
+              "path": "schema:hasPart",
               "name": "Reconstructed cell",
               "description": "Reconstructed cells part of the release.",
               "class": "nsg:ReconstructedCell",

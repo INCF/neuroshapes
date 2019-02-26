@@ -11,7 +11,7 @@
     "https://neuroshapes.org/commons/transformableobject",
     "https://neuroshapes.org/commons/brainlocation",
     "https://neuroshapes.org/commons/typedlabeledontologyterm",
-    "https://neuroshapes.org/dash/distribution"
+    "https://neuroshapes.org/commons/distribution"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/volumetricdatalayer/v1.0.0.json",
   "shapes": [
@@ -57,7 +57,7 @@
               "node": "this:VolumetricDataLayerDistributionShape"
             },
             {
-              "path": "this:brainLocation",
+              "path": "nsg:brainLocation",
               "name": "brain location",
               "description": "Brain Location (brain region, atlas space).",
               "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
@@ -83,12 +83,12 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         },
         {
           "property": [
             {
-              "path": "schema:mediaType",
+              "path": "schema:encodingFormat",
               "name": "Media type",
               "description": "Volumetric data layer allowed media types",
               "in": [

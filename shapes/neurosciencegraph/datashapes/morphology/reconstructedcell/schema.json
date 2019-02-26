@@ -22,7 +22,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/commons/transformableobject/shapes/EntityShape"
+          "node": "https://neuroshapes.org/commons/transformableobject/shapes/TransformableObjectShape"
         },
         {
           "property": [

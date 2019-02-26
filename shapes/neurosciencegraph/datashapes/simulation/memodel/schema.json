@@ -53,7 +53,7 @@
               "maxCount": 1
             },
             {
-              "path": "dcterms:isPartOf",
+              "path": "schema:isPartOf",
               "name": "Part of",
               "description": "The memodel release this memodel is part of.",
               "class": "nsg:MEModelRelease"

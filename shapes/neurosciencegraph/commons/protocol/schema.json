@@ -52,7 +52,7 @@
           ]
         },
         {
-          "path": "dcterms:hasPart",
+          "path": "schema:hasPart",
           "name": "Has part",
           "description": "Sub-protocols of the protocol.",
           "seeAlso": "nsg:Protocol"

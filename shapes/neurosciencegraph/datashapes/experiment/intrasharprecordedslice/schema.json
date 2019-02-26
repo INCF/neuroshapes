@@ -32,7 +32,7 @@
               "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
             },
             {
-              "path": "nsg:hasPart",
+              "path": "schema:hasPart",
               "name": "Recorded cells collection",
               "description": "The collections of recorded cells.",
               "class": "nsg:Collection",

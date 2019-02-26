@@ -8,7 +8,7 @@
   "@id": "https://neuroshapes.org/dash/ionchannelmechanismrelease",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/dash/distribution",
+    "https://neuroshapes.org/commons/distribution",
     "https://neuroshapes.org/dash/modelrelease",
     "https://neuroshapes.org/dash/subcellularmodel"
   ],
@@ -27,10 +27,10 @@
         {
           "property": [
             {
-              "path": "nsg:distribution",
+              "path": "schema:distribution",
               "name": "Ion channel release data location",
               "description": "Ion channel release data location.",
-              "node": "https://neuroshapes.org/dash/distribution/shapes/DistributionShape"
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
             },
             {
               "path": "nsg:subCellularModel",
