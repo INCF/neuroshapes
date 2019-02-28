@@ -7,7 +7,7 @@
   ],
   "@type": "nxv:Schema",
   "imports": [
-    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0"
+    "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.3"
   ],
   "shapes": [
     {
@@ -18,44 +18,30 @@
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
+          "node": "{{base}}/schemas/neurosciencegraph/commons/modelinstance/v0.1.3/shapes/ModelInstanceShape"
         },
         {
           "property": [
             {
-              "path": "schema:name",
-              "name": "Name",
-              "description": "Point neuron network name.",
-              "datatype": "xsd:string",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
-              "path": "schema:description",
-              "name": "Description",
-              "description": "Point neuron network description.",
+              "path": "schema:version",
+              "name": "version",
+              "description": "Point neuron network version.",
               "datatype": "xsd:string",
               "maxCount": 1
             },
             {
-              "path": "nsg:neuronModels",
-              "name": "Neuron Models",
-              "description": "Collection of point neuron models used in the network.",
-              "class": "nsg:PointNeuronModel",
-              "minCount": 1
+              "path": "nsg:neuronCount",
+              "name": "neuron count",
+              "description": "Number of neurons in the point neuron network.",
+              "datatype": "xsd:integer",
+              "maxCount": 1
             },
             {
-              "path": "nsg:synapseModels",
-              "name": "Synapse Models",
-              "description": "Collection of point neuron synapse models used in the network.",
-              "class": "nsg:PointNeuronSynapseModel",
-              "minCount": 1
-            },
-            {
-              "path": "schema:distribution",
-              "name": "Distribution",
-              "description": "Serialized representation of the network(ex. Sonata).",
-              "node": "{{base}}/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape"
+              "path": "nsg:synapseCount",
+              "name": "synapse count",
+              "description": "Number of synapses in the point neuron network.",
+              "datatype": "xsd:integer",
+              "maxCount": 1
             }
           ]
         }
