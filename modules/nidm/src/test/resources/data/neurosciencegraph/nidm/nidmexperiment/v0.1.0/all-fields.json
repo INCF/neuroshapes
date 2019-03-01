@@ -1,0 +1,113 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/standards/v0.1.0",
+        {
+            "nidm": "http://purl.org/nidash/nidm#",
+            "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+            "sio": "http://semanticscience.org/ontology/sio.owl#",
+            "ndar": "https://ndar.nih.gov/api/datadictionary/v2/dataelement/"
+        }
+    ],
+    "@type": "owl:Ontology",
+    "dcterms:hasPart": [
+        {
+            "@id": "nidm:_7b5d7734-96s5-14w7-a248-90516c123057",
+            "@type": [
+                "prov:Agent",
+                "prov:Person"
+            ],
+            "ndar:src_subject_id": [
+                {
+                    "@value": "sub-00xx"
+                }
+            ]
+        },
+        {
+            "@id": "nidm:_7bg9pr12-96s5-14w7-a248-90516c123057",
+            "@type": [
+                "prov:Activity",
+                "nidm:Acquisition"
+            ],
+            "prov:qualifiedAssociation": [
+                {
+                    "@id": "_:ua2fY3673D42"
+                }
+            ],
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "nidm:_7b5d7734-96s5-14w7-a248-90516c123057"
+                }
+            ]
+        },
+        {
+            "@id": "_:ua2fY3673D42",
+            "@type": [
+                "prov:Association"
+            ],
+            "prov:agent": [
+                {
+                    "@id": "nidm:_7b5d7734-96s5-14w7-a248-90516c123057"
+                }
+            ],
+            "prov:hadRole": [
+                {
+                    "@id": "sio:Subject"
+                }
+            ]
+        },
+        {
+            "@id": "nidm:_7b2c51a7-96s5-14w7-a248-90516c123057",
+            "@type": [
+                "prov:Entity",
+                "nidm:AcquisitionObject"
+            ],
+            "dicom:EchoTime": [
+                {
+                    "@value": 0.003
+                }
+            ],
+            "dicom:FlipAngle": [
+                {
+                    "@type": "xsd:int",
+                    "@value": "15"
+                }
+            ],
+            "dicom:InversionTime": [
+                {
+                    "@value": 0.45
+                }
+            ],
+            "dicom:MagneticFieldStrength": [
+                {
+                    "@type": "xsd:int",
+                    "@value": "3"
+                }
+            ],
+            "dicom:RepetitionTime": [
+                {
+                    "@value": 0.0055
+                }
+            ],
+            "nidm:AcquisitionModality": [
+                {
+                    "@id": "nidm:MagneticResonanceImaging"
+                }
+            ],
+            "nidm:hasImageContrastType": [
+                {
+                    "@id": "nidm:T1Weighted"
+                }
+            ],
+            "nidm:hasImageUsageType": [
+                {
+                    "@id": "nidm:Anatomical"
+                }
+            ],
+            "prov:wasGeneratedBy": [
+                {
+                    "@id": "nidm:_7bg9pr12-96s5-14w7-a248-90516c123057"
+                }
+            ]
+        }     
+    ]
+}

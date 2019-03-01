@@ -1,0 +1,146 @@
+{
+    "@context": [
+		"{{base}}/contexts/nexus/core/standards/v0.1.0",
+		"{{base}}/contexts/nexus/core/schema/v0.2.0",
+        {
+            "nidm": "http://purl.org/nidash/nidm#",
+            "dicom": "http://neurolex.org/wiki/Category:DICOM_term/",
+            "this": "{{base}}}/schemas/neurosciencegraph/neuroimaging/nidm/v0.1.0/shapes"
+        }
+    ],
+    "@type": "owl:Ontology",
+	"authors": ["Taylor MacMillan", "David Rotenberg"],
+    "shapes": [
+        {
+            "@id": "this:NIDMShape",
+            "@type": "sh:NodeShape",
+            "targetClass": "prov:Entity",
+            "and": [
+                {
+                    "node": "this:AnatomicalScanShape"
+                },
+                {
+                    "node": "this:DiffusionTensorScanShape"
+                },
+                {
+                    "node": "this:FunctionalScanShape"
+                },
+                {
+                    "property": [
+                        {
+                            "path": "prov:wasGeneratedBy",
+                            "name": "WasGeneratedBy",
+                            "description": "Reference to the activity that generated the scan entity",
+                            "minCount": 1,
+                            "class": "prov:Activity",
+                            "node": "{{base}}/schemas/nexus/provsh/activity/v1.0.0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:AnatomicalScanShape",
+            "label": "AnatomicalScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageUsageType",
+                                    "name": "ImageUsageType",
+                                    "hasValue": {
+                                        "@id": "nidm:Anatomical"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageContrastType",
+                            "name": "ImageContrastType",
+                            "in": [
+                                {"@id": "nidm:T1Weighted"},
+                                {"@id": "nidm:T2Weighted"}
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:DiffusionTensorScanShape",
+            "label": "DiffusionTensorScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageUsageType",
+                                    "name": "ImageUsageType",
+                                    "hasValue": {
+                                        "@id": "nidm:DiffusionTensor"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageContrastType",
+                            "name": "ImageContrastType",
+                            "hasValue": {
+                                "@id": "nidm:DiffusionWeighted"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "this:FunctionalScanShape",
+            "label": "FunctionalScan",
+            "comment": "IF A then B is equivalent to NOT A OR B",
+            "@type": "sh:nodeShape",
+            "or": [
+                {
+                    "not": [
+                        {
+                            "property": [
+                                {
+                                    "path": "nidm:hasImageUsageType",
+                                    "name": "ImageUsageType",
+                                    "hasValue": {
+                                        "@id": "nidm:Functional"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "property": [
+                        {
+                            "path": "nidm:hasImageContrastType",
+                            "name": "ImageContrastType",
+                            "hasValue": {
+                                "@id": "nidm:FlowWeighted"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
