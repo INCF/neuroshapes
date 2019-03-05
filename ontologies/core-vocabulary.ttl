@@ -733,12 +733,14 @@ nsg:BrainImaging rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationDataLayer
 nsg:BrainParcellationDataLayer rdf:type owl:Class ;
-                               rdfs:label "Brain Parcellation Data Layer"@en .
+                               rdfs:label "Brain Parcellation Data Layer"@en ;
+                               skos:definition "The Brain Parcellation Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the brain parcellation, i.e. the demarcations of individual brain regions in the context of a specific brain atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationMesh
 nsg:BrainParcellationMesh rdf:type owl:Class ;
-                          rdfs:label "Brain Parcellation Mesh"@en .
+                          rdfs:label "Brain Parcellation Mesh"@en ;
+                          skos:definition "The Brain Parcellation Mesh is an entity containing the meshing information for brain parcels. A mesh in the context of brain parcels describes the 'surface' of the individual brain parcels." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainSlicing
@@ -749,22 +751,26 @@ nsg:BrainSlicing rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Cell
 nsg:Cell rdf:type owl:Class ;
-         rdfs:label "Cell"@en .
+         rdfs:label "Cell"@en ;
+         skos:definition "The Cell is an entity describing any kind of biological cell. Biological cells consist of biomolecules and cytoplasm enclosed within a membrane. Examples of more speciliased biological cells in the brain include e.g. neurons and astrocytes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellDensityDataLayer
 nsg:CellDensityDataLayer rdf:type owl:Class ;
-                         rdfs:label "Cell Density Data Layer"@en .
+                         rdfs:label "Cell Density Data Layer"@en ;
+                         skos:definition "The Cell Density Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the density of cell types." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellPlacement
 nsg:CellPlacement rdf:type owl:Class ;
-                  rdfs:label "Cell Placement"@en .
+                  rdfs:label "Cell Placement"@en ;
+                  skos:definition "The Cell Placement is an entity describing how the cells of a circuit are placed in 3D space, e.g. the placement of neurons with a specific morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CircuitCellProperties
 nsg:CircuitCellProperties rdf:type owl:Class ;
-                          rdfs:label "Circuit Cell Properties"@en .
+                          rdfs:label "Circuit Cell Properties"@en ;
+                          skos:definition "The Circuit Cell Properties is an entity about the cell properties of cells in a digitally reconstructed circuit of brain cells. These can include e.g. the cell placement or cell orientation." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Collection
@@ -787,19 +793,22 @@ nsg:DeformableTransform rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DetailedCircuit
 nsg:DetailedCircuit rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Model ;
-                    rdfs:label "Detailed Circuit"@en .
+                    rdfs:label "Detailed Circuit"@en ;
+                    skos:definition "The Detailed Circuit is a model instance describing a digital representation of a neural circuit comprising a collection of edges (representing the connections between neurons) and nodes (representing the neurons)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModel
 nsg:EModel rdf:type owl:Class ;
            rdfs:subClassOf nsg:Model ;
-           rdfs:label "EModel"@en .
+           rdfs:label "EModel"@en ;
+           skos:definition "The E-Model is a model instance describing the characteristic electrical behaviour of an electrical type of a neuron. At the Blue Brain Project, electrical types of neurons were classified based on an extended version of the Petilla convention (https://doi.org/10.1038/nrn2402)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelBuilding
 nsg:EModelBuilding rdf:type owl:Class ;
-                   rdfs:label "EModel Building"@en .
 
+                   rdfs:label "EModel Building"@en ;
+                   skos:definition "The E-Model Building is an activity of generating an e-model by using a neuron morphology to fit model parameters." .
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelRelease
 nsg:EModelRelease rdf:type owl:Class ;
@@ -809,18 +818,24 @@ nsg:EModelRelease rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelScript
 nsg:EModelScript rdf:type owl:Class ;
-                 rdfs:label "EModel Script"@en .
+
+                 rdfs:label "EModel Script"@en ;
+                 skos:definition "The E-Model Script is an entity describing the script (typically a .mod file) used for a particular electrical model of a single cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ETypeFeatureProtocol
 nsg:ETypeFeatureProtocol rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Model ;
-                         rdfs:label "EType Feature Protocol"@en .
+
+                         rdfs:label "EType Feature Protocol"@en ;
+                         skos:definition "The E-Type Feature Protocol is a model instance describing the extracted electrical features for an electrical type and the corresponding protocols." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EdgeCollection
 nsg:EdgeCollection rdf:type owl:Class ;
-                   rdfs:label "Edge Collection"@en .
+
+                   rdfs:label "Edge Collection"@en ;
+                   skos:definition "The Edge Collection is an entity representing a collection of connections between neurons in a network of neurons represented as a graph. In this graph representation, nodes represent neurons and edges the connections between neurons. More detailed information can be found on the SONATA data format guide: https://github.com/AllenInstitute/sonata/blob/master/docs/SONATA_DEVELOPER_GUIDE.md#representing-edges." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EmodelFeatureGeneration
@@ -840,12 +855,16 @@ nsg:Entity rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalActivity
 nsg:ExperimentalActivity rdf:type owl:Class ;
-                         rdfs:label "Experimental Activity"@en .
+
+                         rdfs:label "Experimental Activity"@en ;
+                         skos:definition "The Experimental Activity is an activity in a scientific experiment. Examples for experimental activities include e.g. brain slicing, whole cell patch clamp or reconstruction of a neuron morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalProtocol
 nsg:ExperimentalProtocol rdf:type owl:Class ;
-                         rdfs:label "Experimental Protocol"@en .
+
+                         rdfs:label "Experimental Protocol"@en ;
+                         skos:definition "The Experimental Protocol is an entity describing a protocol used in a scientific experiment. Examples for experimental protocols include e.g. the protocol used to perform the reconstruction of a neuron morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixationStainingMounting
@@ -856,42 +875,59 @@ nsg:FixationStainingMounting rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixedStainedSlice
 nsg:FixedStainedSlice rdf:type owl:Class ;
-                      rdfs:label "Fixed Stained Slice"@en .
+
+                      rdfs:label "Fixed Stained Slice"@en ;
+                      skos:definition "The Fixed Stained Slice is an entity which describes a brain slice which was fixed (using e.g. paraformaldehyde fixative) and stained (using e.g. the DAB-reaction to  highlight biocytin-filled neurons in the brain slice). The fixed stained slice is a revision of a brain slice." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/HostCell
 nsg:HostCell rdf:type owl:Class ;
-             rdfs:label "Host Cell"@en .
+
+             rdfs:label "Host Cell"@en ;
+             skos:definition "The Host Cell is an entity describing a biological cell which serves as a host for the expression of a specific gene of interest. This is e.g. used to study individual ion channels. A common example for a host cell line is the Chinese Hamster Ovary cell line." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageStack
 nsg:ImageStack rdf:type owl:Class ;
-               rdfs:label "Image Stack"@en .
+
+               rdfs:label "Image Stack"@en ;
+               skos:definition "The Image Stack is an entity describing an acquired stack of images of e.g. brain tissue. The stack of images is a series of 2D images which are stacked together to form volumetric data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageVolume
 nsg:ImageVolume rdf:type owl:Class ;
-                rdfs:label "Image Volume"@en .
+
+                rdfs:label "Image Volume"@en ;
+                skos:definition "The Image Volume is an entity describing volumetric image data of e.g. brain tissue. An image volume is composed of voxels, the 3D equivalent to pixels in a 2D image." .
+
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrode
 nsg:IntraCellularSharpElectrode rdf:type owl:Class ;
-                                rdfs:label "Intra Cellular Sharp Electrode"@en .
+
+                                rdfs:label "Intra Cellular Sharp Electrode"@en ;
+                                skos:definition "The Intracellular Sharp Electrode is an activity in which single cells in a brain slice are recorded intracellularly using sharp electrodes. The micropipette (i.e. electrode) used for intracellular sharp electrode recordings are similar to the ones used for patch clamp recordings but have a much smaller opening at the tip." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedCell
 nsg:IntraCellularSharpElectrodeRecordedCell rdf:type owl:Class ;
-                                            rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en .
+
+                                            rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en ;
+                                            skos:definition "The Intracellular Sharp Electrode Recorded Cell is an entity describing a cell which was recorded using the intracellular sharp electrode technique. Typically, the recorded cell is a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedSlice
 nsg:IntraCellularSharpElectrodeRecordedSlice rdf:type owl:Class ;
-                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en .
+
+                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en ;
+                                             skos:definition "The Intracellular Sharp Electrode Recorded Slice is a brain slice entity which was used in an intracellular sharp electrode recording. The intracellular sharp electrode recorded slice contains cells which were recorded using sharp electrodes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelGene
 nsg:IonChannelGene rdf:type owl:Class ;
-                   rdfs:label "Ion Channel Gene"@en .
+
+                   rdfs:label "Ion Channel Gene"@en ;
+                   skos:definition "The Ion Channel Gene is an entity describing the gene encoding a particular ion channel. Ion channels are proteins which allow ions to pass through the membrane of cells by forming a pore-like structure." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelMechanismRelease
@@ -902,7 +938,10 @@ nsg:IonChannelMechanismRelease rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LabeledCell
 nsg:LabeledCell rdf:type owl:Class ;
-                rdfs:label "Labeled Cell"@en .
+
+                rdfs:label "Labeled Cell"@en ;
+                skos:definition "The Labeled Cell is an entity describing a biological cell which was labeled using a particular dye (e.g. lucifer yellow) or chemical reaction (e.g. DAB-reaction) to make this particular cell 'visible'. In patch-clamp recordings, individual cells are typically filled with biocytin which is then visualised through the DAB-reaction or binding to a streptavidin-fluorophore conjugate." .
+
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LinearTransform
@@ -914,7 +953,10 @@ nsg:LinearTransform rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModel
 nsg:MEModel rdf:type owl:Class ;
             rdfs:subClassOf nsg:Model ;
-            rdfs:label "MEModel"@en .
+
+            rdfs:label "MEModel"@en ;
+            skos:definition "The ME-Model is a model instance describing the morpho-electrical type of a neuron. At the Blue Brain Project, electrical types of neurons were classified based on an extended version of the Petilla convention (https://doi.org/10.1038/nrn2402). Naming of morphological types was based on most commonly used names (https://doi.org/10.1016/j.cell.2015.09.029)." .
+
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModelRelease
@@ -925,7 +967,9 @@ nsg:MEModelRelease rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Model
 nsg:Model rdf:type owl:Class ;
-          rdfs:label "Model"@en .
+
+          rdfs:label "Model"@en ;
+          skos:definition "The Model is an entity describing a digital representation of mostly non-digital entities. Within the context of simulation neuroscience, this can e.g. be a model of a neural circuit, a model of the electrical behaviour of a neuron or a model of the subcellular mechanisms impacting the electrical behaviour of a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelInstance
@@ -1175,7 +1219,10 @@ nsg:StimulusExperiment rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModel
 nsg:SubCellularModel rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Model ;
-                     rdfs:label "Sub Cellular Model"@en .
+
+                     rdfs:label "Sub Cellular Model"@en ;
+                     skos:definition "" ,
+                                     "The Subcellualr Model is a model instance describing the subcellular mechanisms of a model neuron, such as ion channel mechanisms." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModelScript
