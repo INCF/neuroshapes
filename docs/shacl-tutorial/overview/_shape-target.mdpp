@@ -1,0 +1,34 @@
+## Target declarations ?
+
+A shape can define the nodes it will selects in a given data graph and validate. It does so by declaring a target.
+
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/Entity",
+    "@type" : "sh:NodeShape",
+    "description" : "A node shape.",
+    "targetClass" : "prov:Entity"
+  } ]
+}
+```
+
+
+
+### Shape
+
+How  a shape works?
+SHACL Validation flow
+
+
+Given an input data graph (a json-ld document):
+
+* Node to be focused on for validation are selected using targets:
+    * list the different targets
+
+* Filters can be used to eliminate some focused nodes
+
+* Validate focused nodes using constraints

@@ -1,0 +1,15 @@
+{
+  "@context": "...",
+  "id": "http://example.org/f5d23d2c-ef33-11e5-aea6-c869cd917532",
+  "type": ["nsg:MtypeGeneration","prov:Generation"],
+  "body": [
+    {
+      "@id": "http://mtype",
+      "@type":"mtype",
+      "label": "the mtype label"
+    }
+  ],
+  "target": {
+    "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedcell/v0.1.2/8258536c-f010-467b-9c00-3c1df7a7ab11"
+  }
+}

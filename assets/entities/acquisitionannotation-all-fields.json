@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/nexus/core/standards/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Activity",
+    "nsg:AcquisitionAnnotation"
+  ],
+  "used": [{
+    "@id": "{{base}}/data/bbp/experiment/fixedstainedslice/v0.1.1/f5659fba-c0a9-4646-8b72-8219f3574d73",
+    "@type": [
+      "nsg:FixedStainedSlice",
+      "prov:Entity"
+    ]
+  }],
+  "generated": [{
+    "@id": "{{base}}/data/bbp/experiment/annotatedslice/v0.1.3/3a49c1e4-7077-4559-8a5e-d05474dabba4",
+    "@type": [
+      "nsg:AnnotatedSlice",
+      "prov:Entity"
+    ]
+  }],
+  "objectiveMagnification":"100X",
+  "startedAtTime": "2000-06-06T00:00:00+02:00",
+  "wasStartedBy": [
+    {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/data/bbp/core/person/v0.1.0/cfa680b3-9027-441f-95e4-b868c03ab3f0"
+    }],
+  "qualifiedAssociation": [{
+    "@type": "prov:Association",
+    "agent": {
+      "@type":"prov:Agent",
+      "@id":  "{{base}}/data/bbp/core/person/v0.1.0/cfa680b3-9027-441f-95e4-b868c03ab3f0"
+    },
+    "hadRole": {
+      "@type": "prov:Role",
+      "@id": "http://www.fixme.com/role_ontology/ROLE:0000047"
+    }
+  }],
+  "hadProtocol": {
+    "@type": "nsg:Protocol",
+    "@id": "{{base}}/data/bbp/experiment/protocol/v0.1.0/e49ecf79-5d4f-454c-884f-99a17a3123e8"
+  }
+}

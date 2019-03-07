@@ -1,0 +1,25 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+        "{{base}}/contexts/bbp/core/instance/v0.1.0",
+        "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+    ],
+
+    "@type": [
+        "prov:Entity",
+        "nsg:Trace",
+        "nsg:StimulationTrace"
+    ],
+    "name": "654363",
+    "channel": "0",
+    "qualifiedGeneration":
+    {
+        "@id": "{{base}}/data/bbp/experiment/tracegeneration/v0.1.0/cc4ed155-fb9c-4611-815f-cfe304cba128",
+        "@type": "nsg:TraceGeneration"
+    },
+    "wasGeneratedBy":
+    {
+        "@id": "{{base}}/data/bbp/experiment/stimulusexperiment/v0.1.0/fcdab649-7ed9-4bf6-a413-41ab8827e896",
+        "@type": "nsg:StimulusExperiment"
+    }
+}

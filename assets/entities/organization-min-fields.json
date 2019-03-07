@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "{{base}}/contexts/bbp/schemaorg/release-3-3/v0.1.0"
+  ],
+  "@type": "schema:Organization",
+  "name": "Blue Brain Project",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Chemin des Mines 9",
+    "postalCode": "1202",
+    "addressLocality": "Campus Biotech, Geneva",
+    "addressCountry": "Switzerland",
+    "telephone": "+41216937660"
+  }
+}

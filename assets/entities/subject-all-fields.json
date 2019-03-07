@@ -1,0 +1,54 @@
+{
+    "@context": [
+        "{{base}}/contexts/bbp/core/instance/v0.1.0",
+        "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+    ],
+    "@type": [
+        "prov:Entity",
+        "nsg:Subject"
+    ],
+    "name": "Rat 2",
+    "description": "Rat number 2 used for in vitro slice recordings.",
+    "providerId": "2",
+    "species": {
+        "@id": "http://purl.obolibrary.org/obo/NCBITaxon_10116",
+        "label": "Rattus norvegicus"
+    },
+    "strain": {
+        "@id": "http://www.FIXME.org/taxonomy_ontology/0000000",
+        "label": "Long evans"
+    },
+    "transgenic": {
+        "@id": "http://www.FIXME.org/trasngenic_ontology/0000000",
+        "label": "LE-Tg(ChAT-cre)5.1Deis"
+    },
+    "sex": {
+        "@id": "http://www.FIXME.org/sex_ontology/0000000",
+        "label": "Female"
+    },
+    "age": {
+        "period": "Post-natal",
+        "value": {
+            "unitText": "days",
+            "value": "14"
+        }
+    },
+    "birthDate": "2016-10-01T00:00:00",
+    "deathDate": "2016-10-15T00:00:00",
+    "diseaseModel": {
+        "@id": "http://www.FIXME.org/diseasemodel_ontology/0000000",
+        "label": "Parkinson's disease"
+    },
+    "treatment": {
+        "@id": "http://www.FIXME.org/treatment_ontology/0000000",
+        "label": "MPTP"
+    },
+    "weight": {
+        "unitText": "gram",
+        "value": "110"
+    },
+    "publication": "https://doi.org/10.1016/j.neuron.2011.10.028"
+}
+
+
+

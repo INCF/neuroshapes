@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/nexus/core/standards/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Activity",
+    "nsg:FixationStainingMounting"
+  ],
+  "used": [{
+    "@id": "{{base}}/data/bbp/experiment/patchedslice/v0.1.1/657e3fc4-3163-43f4-99fb-766574193a2a",
+    "@type": [
+      "nsg:PatchedSlice",
+      "prov:Entity"
+    ]
+  }
+  ],
+  "generated": [{
+    "@id": "{{base}}/data/bbp/morphology/fixedstainedslice/v0.1.1/abdcd005-e302-49c4-9874-18d1ff11c141",
+    "@type": [
+      "nsg:FixedStainedSlice",
+      "prov:Entity"
+    ]
+  }],
+  "startedAtTime":"2016-08-23T00:00:00+02:00",
+  "wasStartedBy": [
+    {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/data/bbp/core/person/v0.1.0/152db58a-fe71-4972-95c2-2214e32a0b15"
+    }],
+  "qualifiedAssociation": [{
+    "@type": "prov:Association",
+    "agent": {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/data/bbp/core/person/v0.1.0/152db58a-fe71-4972-95c2-2214e32a0b15"
+    },
+    "hadRole": {
+      "@type": "prov:Role",
+      "@id": "http://www.fixme.com/role_ontology/ROLE:0000047"
+    }
+  }],
+  "hadProtocol": {
+    "@type": "nsg:Protocol",
+    "@id": "{{base}}/data/bbp/experiment/protocol/v0.1.0/e49ecf79-5d4f-454c-884f-99a17a3123e8"
+  },
+  "fixationMethod": "paraformaldehyde 2%",
+  "stain": "3,3′-diaminobenzidine",
+  "mountingMedia": "Mowiol"
+}

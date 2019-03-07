@@ -1,0 +1,23 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+        "{{base}}/contexts/bbp/core/instance/v0.1.0",
+        "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+    ],
+
+    "@type": [
+        "prov:Entity",
+        "nsg:PatchedSlice"
+    ],
+    "name": "C010600A",
+    "hasPart": [
+        {
+        "@id": "https://bbp-nexus.epfl.ch/dev/v0/data/bbp/experiment/patchedcellcollection/v0.1.0/a5cbe9e9-2ca9-4f55-8ed2-c7f45b4945fc",
+        "@type": "nsg:PatchedCellCollection"
+        }
+    ],
+    "wasRevisionOf": {
+        "@id": "https://bbp-nexus.epfl.ch/dev/v0/data/bbp/experiment/slice/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
+        "@type": "nsg:Slice"
+    }
+}

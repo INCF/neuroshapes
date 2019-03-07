@@ -1,0 +1,11 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/schema/v0.2.0",
+  "imports":["{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"],
+  "shapes": [
+    {
+      "@id": ":ResearcherShape",
+      "@type": "sh:NodeShape",
+      "label": "Researcher shape importing a Person shape."
+    }
+  ]
+}

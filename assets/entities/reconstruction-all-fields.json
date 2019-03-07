@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/shacl/rec-shacl-20170720/v0.1.0",
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/nexus/core/standards/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Activity",
+    "nsg:Reconstruction"
+  ],
+  "used": [{
+    "@id": "{{base}}/data/bbp/experiment/labeledcell/v0.1.1/8258536c-f010-467b-9c00-3c1df7a7ab11",
+    "@type": [
+      "nsg:LabeledCell",
+      "prov:Entity"
+    ]
+  }],
+  "generated": [{
+    "@id": "{{base}}/data/bbp/experiment/reconstructedcell/v0.1.0/90525f35-a666-47ce-962f-1d9aedf239cf",
+    "@type": [
+      "nsg:ReconstructedCell",
+      "prov:Entity"
+    ]
+  }],
+  "startedAtTime": "2016-08-23T00:00:00+02:00",
+  "wasStartedBy": [
+    {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/data/bbp/core/person/v0.1.0/92801f69-0db3-4945-a746-bb6abaf510e0"
+    }
+  ],
+  "qualifiedAssociation": [{
+    "@type": "prov:Association",
+    "agent": {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/v0/data/bbp/core/person/v0.1.0/92801f69-0db3-4945-a746-bb6abaf510e0"
+    },
+    "hadRole": {
+      "@type": "prov:Role",
+      "@id": "http://www.fixme.com/role_ontology/ROLE:0000041"
+    }
+  }],
+  "hadProtocol": {
+    "@type": "nsg:Protocol",
+    "@id": "{{base}}/data/bbp/experiment/protocol/v0.1.0/e49ecf79-5d4f-454c-884f-99a17a3123e8"
+  },
+  "objectiveType": {
+    "@id": "http://www.bioassayontology.org/bao#BAO_0150019",
+    "label": "oil immersion lens"
+  },
+  "orientationOfReconstruction": "XY-rotated",
+  "reconstructionCompressionCorrected": "x1.25 in Z",
+  "reconstructionCompleted": true,
+  "reconstructionCorrected": false,
+  "clusterReconstructionRequested": false,
+  "reconstructionRequester": [
+    {
+      "@type": "prov:Agent",
+      "@id": "{{base}}/data/bbp/core/person/v0.1.0/92801f69-0db3-4945-a746-bb6abaf510e0"
+    }
+  ],
+  "reconstructionSentDate": "2016-07-30T00:00:00+02:00",
+  "reconstructionReceivedDate": "2016-08-30T00:00:00+02:00",
+  "reconstructionLocation":"LNMC"
+}

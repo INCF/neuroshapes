@@ -1,0 +1,9 @@
+{
+  "@context": [
+    "{{base}}/contexts/bbp/schemaorg/release-3-3/v0.1.0"
+  ],
+  "@type": "schema:Person",
+  "@id": "{{base}}/schemas/bbp/core/person/v0.1.0/03b67cb6-db1a-4acd-a628-8dd3e5f3ee12",
+  "familyName": "Surname",
+  "email": "givenname.surname@epfl.ch"
+}

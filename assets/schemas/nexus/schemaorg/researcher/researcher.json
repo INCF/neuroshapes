@@ -1,0 +1,32 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/schema/v0.2.0",
+  "imports": [
+    "{{base}}/schemas/nexus/schemaorg/person/v0.1.0/shapes/PersonShape"
+  ],
+  "shapes": [
+    {
+      "@id": ":ResearcherShape",
+      "@type": "sh:NodeShape",
+      "label": "Researcher shape based on schema.org's markups.",
+      "and": [
+        {
+          "node": ":PersonShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:affiliation",
+              "class": "schema:Organization",
+              "minCount": 1
+            },
+            {
+              "path": "schema:email",
+              "datatype": "xsd:string",
+              "pattern": "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+## What is SHACL ?
+
+
+
+
+### Shape
+
+How  a shape works?
+SHACL Validation flow
+
+
+Given an input data graph (a json-ld document):
+
+* Node to be focused on for validation are selected using targets:
+    * list the different targets
+
+* Filters can be used to eliminate some focused nodes
+
+* Validate focused nodes using constraints

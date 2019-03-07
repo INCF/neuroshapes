@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/nexus/core/standards/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Activity",
+    "nsg:AcquisitionAnnotation"
+  ],
+  "used": [
+    {
+      "@id": "{{base}}/data/bbp/experiment/fixedstainedslice/v0.1.1/f5659fba-c0a9-4646-8b72-8219f3574d73",
+      "@type": [
+        "nsg:FixedStainedSlice",
+        "prov:Entity"
+      ]
+    }
+  ],
+  "generated": [
+    {
+      "@id": "{{base}}/data/bbp/experiment/annotatedslice/v0.1.3/3a49c1e4-7077-4559-8a5e-d05474dabba4",
+      "@type": [
+        "nsg:AnnotatedSlice",
+        "prov:Entity"
+      ]
+    }
+  ]
+}

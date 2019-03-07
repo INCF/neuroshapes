@@ -1,0 +1,131 @@
+## Node shapes identifiers
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/shapes/CircuitShape",
+    "@type" : "sh:NodeShape",
+    "targetClass" : "bbp:Circuit",
+    "property":[{
+        "@id":"{endpoint}/schemas/bbp/core/entity/v1.0.0/shapes/ConnectomeShape",
+        "path": "bbpprodprop:connectome"
+        "name": "Connectome",
+        "description": "Connectome",
+        "datatype": "xsd:string",
+        "maxCount": 1,
+        "minCount": 0
+     }
+    ]
+   }
+  ]
+}
+```
+
+It is strongly recommended to provide identifiers (value for @id) for the node shapes (things of type sh:NodeShape)
+so that they can be reused and discovered through the Nexus Rest API.
+
+Both node shapes and property shapes can have identifiers.
+
+A property shape needs to have an identifier only if there is a need to reuse it.
+
+
+
+## Nexus schema annotations
+
+Schemas are often designed with reuse in mind. Good annotations is key in order to enable schema discoverability and reuse.
+The following list presents a set of recommended annotations that one can use to describe a schema:
+
+...WIP
+
+## SHAPE annotations
+
+### Node shape annotations
+
+Node shapes are shapes with type sh:NodeShape. It is recommended that a node shape is annotated with the following properties:
+
+Key | Description
+-------------- | --------------
+label | A human readable label for the node shape. This property is a short form for rdfs:label.
+comment | A human readable description of the node shape.This property is a short form for rdfs:comment.
+
+### Property shape annotations
+
+Property shapes are shapes with type sh:PropertyShape. It is recommended that a property shape is annotated with the following properties:
+
+Key | Description
+-------------- | --------------
+name | A human readable name for the shape. The name is usually displayed when a form is generated from the shape
+description | A human readable description of the shape. Also used in form generation
+
+<aside class="notice">
+Annotation properties are not taken into accoiunt during validation.
+</aside>
+
+
+## SHAPE keys ordering
+
+To improve the SHACL schema readability, it is recommended to adopt the following ordering when defining:
+
+* **a Node Shape**
+
+
+Order | Key | Description
+-------------- | -------------- | --------------
+1 |@id | Always start with the node shape identifier if any
+2 |@type | The node shape type
+3 |label | A human readable description of the node shape.
+4 |comment | A description of the node shape.
+5 |target(Class-Node-ObjectsOf-SubjectsOf)| The node shape target
+6 |nodeKind| The node shape node kind
+7 |property| The node shape properties
+
+
+
+* **a Property Shape**
+
+
+Order | Key | Description
+-------------- | -------------- | --------------
+1 |@id | Always start with the property shape identifier if any. Most of the time, there is no need to have an identifier for a property shape
+2 |@type | The property shape type. Most of the time, there is no need to add a type to a property shape
+3 |path| The property targeted by the property shape.
+4 |name | A human readable name for the property shape.
+5 |description | A human readable description of the property shape.
+6 |nodeKind| The property shape node kind. Cannot be present when datatype is present.
+7 |class or datatype| These two keys are mutually exclusive. THus they can occurs in the same property shape at the same time. Every value of the targeted property (defined in path) should have the value of class or datatype as type
+8 |node| Always has a node shape as value. Every value of the targeted property (defined in path) should conform to the referenced node shape.
+9 |minCount or maxCount| Cardinality constraints.
+
+
+## Naming conventions
+
+### Class name as single noun
+
+In schemas, classes (values of targetClass, of @type) are named using camel case notation:
+
+* class name should start with a capital letter
+* class name should be singular
+* no space is allowed
+* good examples: "bbp:Circuit", bbp:RawMorphology
+* bad examples: "bbp:Circuits", "bbp:circuit" but also "bbp:Raw_Morphology"
+
+### Instance name as single noun
+
+Instances naming follows the same conventions as class naming. In a schemas, instances are things that
+have a type (@type): mainly the shapes (node and property shapes).
+
+
+
+### Property name as verb sense or single noun
+
+In schemas, properties (mainly values of sh:path) are named using the following convention:
+
+* property name should start with lower case and be capitalized thereafter
+* property name should be singular
+* no space is allowed
+* good example: "bbp:morphology", "bbp:hasFileExtension" or "bbp:fileExtension"
+* bad examples: "bbp:morphologies" but also "bbp:segment_index"
+
+

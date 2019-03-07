@@ -1,0 +1,349 @@
+## What is SHACL ?
+
+
+### Reference documentation
+
+
+### Context and Namespaces
+
+
+### Validation flow
+
+How  a shape works?
+
+
+Given an input RDF data graph (a json-ld document):
+
+* Node to be focused on for validation are selected using targets
+
+* Filters can be used to eliminate some focused nodes
+
+* Validate focused using constraints
+
+
+### Target declaration
+
+A shape can define the nodes it will select and validate in a given data graph. It does so by declaring a target.
+Four different target declarations exist in SHACL as described in the following sections:
+
+* Node target using the key **targetNode**
+* Class target using the key **targetClass**
+* Property Subject target using the key **targetSubjectsOf**
+* Property Object target using the key **targetObjectsOf**
+
+<aside class="notice">
+Note that selected nodes for every target below are identified by a green line color.
+</aside>
+
+
+
+#### Node target
+
+A shape can target very specific instances (nodes) by specifying their URIs through a **targetNode**:
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/shapes/Circuit_1_2",
+    "@type" : "sh:NodeShape",
+    "targetNode" : ["bbp:Circuit_1","bbp:Circuit_2"]
+  } ]
+}
+```
+
+
+![Instance target](../../../images/circuit_2instances.svg)
+
+The instances identified by **bbp:Circuit_1** and **bbp:Circuit_2** are targeted in the figure above.
+
+
+#### Class target
+
+The following schema defines one node shape which targets all instances of the class **bbp:Entity**.
+So only nodes that has **bbp:Entity** as direct type (**bb:Entity_1**) or indirect type (**bbp:Circuit_1** and **bbp:Circuit_2**) will be validated while all the other nodes are ignored.
+
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/core/entity/v1.0.0/shapes/Entity",
+    "@type" : "sh:NodeShape",
+    "targetClass" : "bbp:Entity"
+  } ]
+}
+```
+
+![Instance target](../../../images/circuit_type_target.svg)
+
+#### Property Object target
+
+A shape can target nodes that are objects of a specific property through **targetObjectsOf**.
+
+This target will select any node that participate to the following triple as object: (subject, property, **SelectedNode**).
+In the figure below, there are two selected nodes (**bbp:Morphology_1** and **bbp:Morphology_2**) which respectively participate
+to the following two triples:
+
+*(bbp:Circuit_1, bbp:morphology, **bbp:Morphology_1**)
+*(bbp:Circuit_2, bbp:morphology, **bbp:Morphology_2**)
+
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/MorphologyPropertyObject",
+    "@type" : "sh:NodeShape",
+    "targetObjectsOf" : "bbp:morphology"
+  } ]
+}
+```
+
+![Instance target](../../../images/circuit_objectproperty_target.svg)
+
+
+
+#### Property Subject target
+
+This target is the subject counterpart of the previous one.
+A shape can target nodes that are subjects of a specific property through **targetSubjectsOf**.
+So any nodes that are subjects of a triple with the target property as predicate will be selected:
+(**SelectedNode**, property, object).
+
+In the figure below, there are two selected nodes (**bbp:Circuit_1** and **bbp:Circuit_2**) which respectively participate
+to the following two triples:
+
+* (**bbp:Circuit_1**, bbp:morphology, bbp:Morphology_1)
+* (**bbp:Circuit_2**, bbp:morphology, bbp:Morphology_2)
+
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/MorphologyPropertySubject",
+    "@type" : "sh:NodeShape",
+    "targetSubjectsOf" : "bbp:morphology"
+  } ]
+}
+```
+
+![Instance target](../../../images/circuit_subjectproperty_target.svg)
+
+### Constraints
+
+A shape can defined a set of constraints to be checked against selected nodes. The set of possible constraints can
+be divided into two categories:
+
+* NodeKind constraint: about selected nodes themselves
+* Property constraints: about outgoing or incoming properties of each selected node
+
+
+#### NodeKind Constraint
+
+The nodeKind constraint allows to choose if a selected need to be identified by an IRI eventually consistent with a specific pattern or if it can unidentified.
+**At most one nodeKind** constraint can be defined for a given NodeShape.
+
+The following schema states that all values of the property **bbp:morphology** have to be nodes identified
+by IRIs.
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/MorphologyPropertyObject",
+    "@type" : "sh:NodeShape",
+    "targetObjectsOf" : "bbp:morphology",
+    "nodeKind": "sh:IRI"
+  } ]
+}
+```
+
+![Instance target](../../../images/circuit_nodekind_iri.svg)
+
+In the previous example, the node **"Morphology_1"** (red border) is an object of the property **bbp:morphology** which is a Literal (precisely a string literal).
+So it's not identifier by an IRI which makes it invalid.
+The node **bbp:Morphology_2** (green border) on the other hand is valid because it is an object property of the property **bbp:morphology** and is identified by an IRI.
+All values of the **nodeKind** constraint are listed in the table below:
+
+Value | Description
+-------------- | --------------
+sh:IRI | The selected nodes have to be identified by a valid [IRI](http://www.ietf.org/rfc/rfc3987.txt).
+sh:BlankNode | The selected nodes should not be identified by an IRI nor be a Literal.
+sh:Literal | The selected nodes should be a Literal.
+sh:BlankNodeOrIRI | Disjunctive combination of sh:BlankNode and sh:IRI.
+sh:BlankNodeOrLiteral | Disjunctive combination of sh:BlankNode and sh:Literal.
+sh:IRIOrLiteral | Disjunctive combination of sh:IRI and sh:Literal.
+
+
+
+#### Property Constraints
+
+
+> Definition of **bbp:morphology** as an outgoing property of any instance of **bbp:Circuit**:
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/Circuit",
+    "@type" : "sh:NodeShape",
+    "targetClass" : "bbp:Circuit",
+    "nodeKind": "sh:IRI",
+    "property" : [ {
+          "path" : "bbp:morphology",
+          "name" : "morphologies",
+          "description" : "Collection of morphologies used in the circuit building."
+        }
+    } ]
+  ]
+}
+```
+
+
+Given a selected node, a shape defines a set of outgoing and/or incoming properties as well as a set of constraints for each of them.
+By doing so, a shape enforce a vocabulary (a set of properties) to be used for describing the selected nodes (instances of bbp:Circuit in the schema for example)
+and how that vocabulary should be used (constraints).
+
+To define a set of incoming and/or outgoing properties, the **property key** is used. It is an array and each of its item is an instance of a **PropertyShape**.
+The following tables describe the minimal keys to use in order to define a property:
+
+
+key | Description
+-------------- | --------------
+path | MAandatory. Refers to the property IRI ("bbp:morphology" in the schema example) in case of outgoing property. For an incoming one, the following syntax is used: **"path" : [ "sh:inversePath prov:generated" ]**.
+name | Optional. A human readable name of the property. The name can be used in generated forms for example.
+description | Optional. Description of the property.
+
+Once the property shape is defined, a set of constraints can be attached to it.
+
+* Cardinality Constraints
+
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/Circuit",
+    "@type" : "sh:NodeShape",
+    "targetClass" : "bbp:Circuit",
+    "nodeKind": "sh:IRI",
+    "property" : [ {
+          "path" : "bbp:morphology",
+          "name" : "morphologies",
+          "description" : "Collection of morphologies used in the circuit building.",
+          "minCount":"1",
+          "maxCount":"3"
+        },
+        {
+          "path" : "bbp:dataSpace",
+          "name" : "Data Space",
+          "description" : "Data Space.",
+          "minCount":"1"
+        }
+    ]
+  }
+  ]
+}
+```
+
+How many outgoing "bbp:morphology" properties a specific bbp:Circuit instance can have ? A question that can be reformulated as:
+how many triples following the pattern **(bbp:Circuit_*, bbp:morphology, object)** can exist in the data graph ?
+The answers can be: **zero or more**, **exactly one**, **at most one**. To enforce one of these answers a cardinality constraint can be defined and attached to a property shape as shown in the schema example.
+The default value for minCount and maxCount is 0.
+
+The example schema states that all instances of bbp:Circuit should have at least one value for **bbp:morphology** property and at most 3 values.
+They should have at least one value for  **bbp:dataSpace** property as well.
+In the example data graph below, **bbp:Circuit_1** is valid because it has one value for bbp:morphology property and one value for bbp:dataSpace.
+On the other hand, **bbp:Circuit_2** is not valid because it has not a value for bbp:dataSpace property.
+
+![Instance target](../../../images/circuit_1valid_1invalid.svg)
+
+
+* Property Value Type Constraints
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/",
+  "shapes" : [ {
+    "@id" : "{endpoint}/schemas/bbp/simulation/circuit/v1.0.0/shapes/Circuit",
+    "@type" : "sh:NodeShape",
+    "targetClass" : "bbp:Circuit",
+    "nodeKind": "sh:IRI",
+    "property" : [ {
+          "path" : "bbp:morphology",
+          "name" : "morphologies",
+          "description" : "Collection of morphologies used in the circuit building.",
+          "class": "bbp:Morphology",
+          "minCount":"1",
+          "maxCount":"3"
+        },
+        {
+          "path" : "bbp:dataSpace",
+          "name" : "Data Space",
+          "description" : "Data Space.",
+          "minCount":"1"
+        },
+        {
+          "path" : "bbp:brainRegion",
+          "name" : "Brain region",
+          "description" : "Brain region.",
+          "minCount":"1",
+          "maxCount":"3",
+          "node": "circuitshape:LabeledOntologyTermShape"
+        },
+        {
+          "path" : "schema:name",
+          "name" : "Name",
+          "description" : "Circuit name",
+          "datatype": "xsd:string",
+          "minCount":"1",
+          "maxCount":"1"
+        }
+    ]
+  },
+  {
+        "@id" : "circuitshape:LabeledOntologyTermShape",
+        "@type" : "sh:NodeShape",
+        "nodeKind": "sh:IRI",
+        "property" : [ {
+          "path" : "rdfs:label",
+          "name" : "label",
+          "description" : "Human readable label",
+          "datatype": "xsd:string",
+          "maxCount" : 1,
+          "minCount" : 1
+
+        }
+   }
+  ]
+}
+```
+
+The type of a property value can be restricted. In the schema example, all instances of **bbp:circuit** should have exactly one
+name which should be of type **string**. How to express such type restriction in a shacl schema ?
+
+**Primitive type as property value**
+
+A property value can be of a primitive type: string, integer, double, anyURI, ... and **datatype** key is used to define such primitive expected types as shown in the
+ shacl schema example.
+The namespace of all primitive types is **xsd** and for a complete list of those types please check [here](https://www.w3.org/TR/2001/REC-xmlschema-2-20010502/#built-in-primitive-datatypes).
+
+Property values are not always primitive and two other typical situations may occurs.
+
+**Reference as property value**
+
+The type of a property value can be restricted to be an instance of a specific class. For example, it may be useful to enforce all values of the bbp:morphology property of a given circuit to be of type bbp:Morphology.
+To express this type of constraint the key **class** is used as shown in the schema example. The ability to constraint
+types is important to ensure the quality and reliability of the data being submitted into the Nexus platform and SHACL allows to do that without writing a single line of validation code.
+
+**Node as property value**
+
+Sometimes it may be useful to enforce that a property value has a particular shape instead of being of a specific type. For example, we may want to enforce all brain region values of a all circuits (instances of bbp:Circuit)
+to have at least an IRI as identifier ("nodeKind": "sh:IRI") and a label as human readable description. The key **node** is used to express a shape constraint.
+

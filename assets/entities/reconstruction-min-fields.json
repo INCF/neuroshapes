@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "{{base}}/contexts/nexus/shacl/rec-shacl-20170720/v0.1.0",
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/nexus/core/standards/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Activity",
+    "nsg:Reconstruction"
+  ],
+  "used": [{
+    "@id": "{{base}}/data/bbp/experiment/labeledcell/v0.1.1/8258536c-f010-467b-9c00-3c1df7a7ab11",
+    "@type": [
+      "nsg:LabeledCell",
+      "prov:Entity"
+    ]
+  }],
+  "generated": [{
+    "@id": "{{base}}/data/bbp/experiment/reconstructedcell/v0.1.0/90525f35-a666-47ce-962f-1d9aedf239cf",
+    "@type": [
+      "nsg:ReconstructedCell",
+      "prov:Entity"
+    ]
+  }]
+}

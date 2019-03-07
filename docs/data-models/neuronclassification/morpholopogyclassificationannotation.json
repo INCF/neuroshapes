@@ -1,0 +1,21 @@
+{
+  "@context": "...",
+  "id": "http://example.org/f5d23d2c-ef33-11e5-aea6-c869cd917532",
+  "type": [
+    "nsg:Annotation",
+    "nsg:MorphologyClassificationResult",
+    "prov:Entity"
+  ],
+  "body": [
+    {
+      "@id": "http://mtype",
+      "@type": "nsg:MtypeAnnotation",
+      "label": "the mtype label"
+    }
+  ],
+  "target": {
+    "@id": "{{base}}/data/neurosciencegraph/morphology/reconstructedcell/v0.1.2/8258536c-f010-467b-9c00-3c1df7a7ab11",
+    "@type": "nsg:ReconstructedCell"
+  }
+}
+

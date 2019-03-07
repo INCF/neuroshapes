@@ -1,0 +1,28 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/schema/v0.2.0",
+  "@type": "nxv:Schema",
+  "label":"A template for expanding a NodeShape",
+  "shapes": [
+    {
+      "@id": ":extender_shape",
+      "@type": "sh:NodeShape",
+      "label": "Shape.",
+      "and": [
+        {
+          "node": ":{{nodeshape_to_be_extended_uri}}"
+        },
+        {
+          "property": [
+            {
+              "path": "nxv:aProperty",
+              "name": "property name",
+              "description": "property description.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

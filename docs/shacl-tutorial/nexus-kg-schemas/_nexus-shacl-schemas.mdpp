@@ -1,0 +1,203 @@
+## Namespaces and Context
+
+```json--schemas
+    "@context" : {
+      "class" : {
+        "@id" : "sh:class",
+        "@type" : "@id"
+      },
+      "rootClass" : {
+          "@id" : "shext:rootClass",
+          "@type" : "@id"
+      },
+      "path" : {
+        "@id" : "sh:path",
+        "@type" : "@id"
+      },
+      "qualifiedValueShape" : {
+        "@id" : "sh:qualifiedValueShape",
+        "@type" : "@id",
+        "@container" : "@list"
+      },
+      "qualifiedValueShapesDisjoint" : {
+        "@id" : "sh:qualifiedValueShapesDisjoint",
+        "@type" : "xsd:boolean"
+     },
+     "qualifiedMinCount" : {
+          "@id" : "sh:qualifiedMinCount",
+          "@type" : "xsd:integer"
+      },
+      "qualifiedMaxCount" : {
+          "@id" : "sh:qualifiedMaxCount",
+          "@type" : "xsd:integer"
+      },
+      "maxCount" : {
+        "@id" : "sh:maxCount",
+        "@type" : "xsd:integer"
+      },
+      "minCount" : {
+        "@id" : "sh:minCount",
+        "@type" : "xsd:integer"
+      },
+      "minInclusive" :"sh:minInclusive",
+      "maxInclusive" :"sh:maxInclusive",
+      "maxExclusive" :"sh:maxExclusive",
+      "minExclusive" :"sh:minExclusive",
+      "in" : {
+        "@id" : "sh:in",
+        "@container" : "@list"
+      },
+      "imports" : {
+        "@id" : "owl:imports",
+        "@type" : "@id",
+        "@container" : "@set"
+      },
+      "datatype" : {
+        "@id" : "sh:datatype",
+        "@type" : "@id"
+      },
+      "description" : "sh:description",
+      "name" : "sh:name",
+      "nodeKind" : {
+        "@id" : "sh:nodeKind",
+        "@type" : "@id"
+      },
+      "node" : {
+        "@id" : "sh:node",
+        "@type" : "@id"
+      },
+      "property" : {
+        "@id" : "sh:property",
+        "@type" : "@id",
+        "@container" : "@set"
+      },
+      "targetClass" : {
+        "@id" : "sh:targetClass",
+        "@type" : "@id"
+      },
+      "targetObjectsOf" : {
+        "@id" : "sh:targetObjectsOf",
+        "@type" : "@id"
+      },
+      "targetSubjectsOf" : {
+        "@id" : "sh:targetSubjectsOf",
+        "@type" : "@id"
+      },
+      "isDefinedBy" : {
+        "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+        "@type" : "@id"
+      },
+      "shapes" : {
+        "@reverse" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+        "@type" : "@id",
+        "@container" : "@set"
+      },
+      "or" : {
+        "@id" : "sh:or",
+        "@type" : "@id",
+        "@container" : "@list"
+      },
+      "and" : {
+        "@id" : "sh:and",
+        "@type" : "@id",
+        "@container" : "@list"
+      },
+      "xone" : {
+        "@id" : "sh:xone",
+        "@type" : "@id",
+        "@container" : "@list"
+      },
+      "not" : {
+       "@id" : "sh:not",
+       "@type" : "@id",
+       "@container" : "@list"
+      },
+      "lessThan": {
+          "@id" : "sh:lessThan",
+          "@type" : "@id"
+      },
+      "hasValue" :"sh:hasValue",
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "sh" : "http://www.w3.org/ns/shacl#",
+      "shext" : "http://www.w3.org/ns/shacl/ext#",
+      "schema" : "http://schema.org/",
+
+    }
+```
+
+
+Within this document, the following prefix mappings are used:
+
+Prefix Name | Namespace
+-------------- | --------------
+sh | http://www.w3.org/ns/shacl#
+rdf | http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs | http://www.w3.org/2000/01/rdf-schema#
+owl | http://www.w3.org/2002/07/owl#
+xsd | http://www.w3.org/2001/XMLSchema#
+prov | http://www.w3.org/ns/prov#
+shext | http://www.w3.org/ns/shacl/ext#
+schema | http://schema.org/
+bbp | https://bbp-nexus.epfl.ch/ns#
+
+
+<aside class="notice">
+Note that the 'bbp' namespace is used in this document as an example namespace.
+</aside>
+
+By convention all shapes defined in a SHACL schema are prefixed by **this**.
+
+Prefix Name | Namespace
+-------------- | --------------
+**this** | {endpoint}/schemas/{org}/{domain}/{schema_name}/{version}/shapes/
+
+
+
+To improve readability and to simplify the examples, the SHACL context described in the right is used for all the SHACL JSON-LD serialization presented in this document.
+This default context is only related to the SHACL vocabulary and **should be used** in all schemas. Since writing a SHACL schema almost always required to use a domain vocabulary,
+domain context can be added when needed.
+In all cases, the context object is omitted in the examples below. It needs to be added to make the examples work.
+
+
+## SHACL schemas
+
+```json--schemas
+{
+  "@id" : "{endpoint}/schemas/{org}/{domain}/{schema_name}/{version}/",
+  "@type":"owl:Ontology",
+  "shapes" : [{
+        "@id" : "this:{shapeName}",
+        "@type":"sh:Shape"
+  },{
+        "@id" : "this:{anotherShapeName}",
+        "@type":"sh:Shape"
+  }]
+}
+```
+
+
+In Nexus Knowledge Graph (KG), a schema:
+
+* is identified by a URI consistent with the following pattern: **{endpoint}/schemas/{org}/{domain}/{schema_name}/{version}/**,
+* is an ontology: it has **owl:Ontology** as type
+* defines a collection of a **collection of shapes**; the objects in the **shapes** array. The **'shapes' key** is defined as a reverse property of **rdfs:isDefinedBy**
+
+<aside class="notice">
+ Note that the W3C SHACL recommendation only defines SHACL shapes and doesn't define particular ways of wrapping them together.
+</aside>
+
+From this point, a Nexus KG schema will be indifferently referred to as a **SHACL schema** or just **schema**.
+
+Wrapping shapes together in a schema allows us to (among other things):
+
+* give an identifier to a collection of shapes
+* attach annotations to the schema
+* import vocabularies and/or ontologies
+* import other schemas for reuse purpose
+
+
+A schema can then be seen here as an envelop for shapes exchange.
+

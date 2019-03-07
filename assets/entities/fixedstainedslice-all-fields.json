@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "{{base}}/contexts/bbp/core/instance/v0.1.0",
+    "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+    "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+  ],
+  "@type": [
+    "prov:Entity",
+    "nsg:FixedStainedSlice"
+  ],
+  "name": "JY160810_A",
+  "providerId": "SLI_00000056",
+  "wasRevisionOf": {
+    "@id": "{{base}}/data/bbp/experiment/patchedslice/v0.1.0/657e3fc4-3163-43f4-99fb-766574193a2a",
+    "@type": "nsg:PatchedSlice"
+  }
+}
+

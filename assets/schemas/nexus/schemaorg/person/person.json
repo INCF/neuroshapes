@@ -1,0 +1,22 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/schema/v0.2.0",
+  "shapes": [
+    {
+      "@id": ":PersonShape",
+      "@type": "sh:NodeShape",
+      "label": "Person shape based on schema.org's markups.",
+      "property": [
+        {
+          "path": "schema:givenName",
+          "description": "Given name.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:familyName",
+          "description": "Family name.",
+          "datatype": "xsd:string"
+        }
+      ]
+    }
+  ]
+}

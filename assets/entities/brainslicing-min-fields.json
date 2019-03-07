@@ -1,0 +1,29 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/core/standards/v0.1.0",
+        "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0",
+        {
+            "@vocab": "http://www.w3.org/ns/prov#"
+        }
+    ],
+    "@type": [
+        "nsg:BrainSlicing",
+        "prov:Activity"
+    ],
+    "generated":
+    {
+        "@id": "https://bbp-nexus.epfl.ch/dev/v0/data/bbp/experiment/slice/v0.1.1/87a00313-e95b-4282-8a84-94afc639d47e",
+        "@type": [
+            "nsg:Slice",
+            "prov:Entity"
+            ]
+    },
+    "used":
+    {
+        "@id": "https://bbp-nexus.epfl.ch/dev/v0/data/bbp/experiment/subject/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
+        "@type": [
+            "nsg:Subject",
+            "prov:Entity"
+            ]
+    }
+}

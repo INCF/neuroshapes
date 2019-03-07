@@ -1,0 +1,13 @@
+{
+    "@context": [
+        "{{base}}/contexts/nexus/prov/rec-prov-o-20130430/v0.1.0",
+        "{{base}}/contexts/bbp/core/instance/v0.1.0",
+        "{{base}}/contexts/bbp/neurosciencegraph/core/v0.1.0"
+    ],
+
+    "@type": [
+        "prov:Entity",
+        "nsg:Slice"
+    ],
+    "name": "C010600A"
+}

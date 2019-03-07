@@ -1,0 +1,10 @@
+{
+  "@context": "{{base}}/contexts/nexus/core/schema/v0.2.0",
+  "imports":["{{base}}/schemas/org/dom/schema_to_be_imported/vX.Y.Z"],
+  "shapes": [
+    {
+      "@id": "{{base}}/schemas/org/dom/schema_name/vX.Y.Z/shapes/LocallyDefinedShape",
+      "label": "..."
+    }
+  ]
+}

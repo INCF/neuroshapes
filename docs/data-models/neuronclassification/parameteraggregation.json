@@ -1,0 +1,148 @@
+{
+  "@context": "http://www.w3.org/ns/anno.jsonld",
+  "id": "http://example.org/f5d23d2c-ef33-11e5-aea6-c869cd917532",
+  "type": "Annotation",
+  "comment": "Eq potential Ca2+ = 120 mV",
+  "experimentalProperty":[
+    {
+      "@id":"http://parameter.org",
+      "@type":"ExperimentalProperty"
+    }
+  ],
+  "contribution": {
+    "agent":{
+      "@id":"http://person-id.org",
+      "@type":"Person"
+    },
+    "hadRole":{
+      "@id":"http://role",
+      "label":"a role"
+    }
+  },
+  "keywords": [
+    {
+      "@id": "NIFINV:birnlex_2300",
+      "label": "Computational model"
+    }
+  ],
+  "body": [
+    {
+      "@id": "http://example.org/e47c81f4-ffdc-11e5-8b78-64006a4c56ef",
+      "@type": ["schema:PointValue","ExperimentalProperty"],
+      "requiredTags": [
+        {
+          "id": "BBP_nlx_0011",
+          "name": "Low threshold calcium T-current",
+          "rootId": "nifext_8054"
+        },
+        {
+          "id": "NIFCELL:nifext_41",
+          "name": "Thalamocortical cell",
+          "rootId": "sao1813327414"
+        }
+      ],
+      "dependantVariable": {
+        "@type": [
+          "Simple",
+          "BBP-011001"
+        ],
+        "series": [
+          {
+            "statistic": "raw",
+            "label": "Other types are : Compound (membrane potential is 11.9 +- 1.1 (N=6)). Other statistics value are (sem, N,mean)",
+            "unitCode": "mV",
+            "value": [
+              120.0
+            ]
+          }
+        ]
+      },
+      "label": "other types are : Function, NumericalTrace"
+    },
+    {
+      "@id": "http://example.org/e47c81f4-ffdc-11e5-8b78-64006a4c56ef",
+      "@type": ["schema:Function"],
+      "equation":"",
+      "equationParameter":[],
+      "dependantVariable": [{
+        "@type": [
+          "AlgebraicVariable",
+          "BBP-05002"
+        ],
+
+        "statistic": "raw",
+        "unitCode": "dimensionless"
+      }],
+      "independantVariable":[
+        {
+          "@type": [
+            "AlgebraicVariable",
+            "BBP-010001"
+          ],
+          "statistic": "raw",
+          "unitCode": "mV"
+        }
+      ],
+      "label": "other types are : Function, NumericalTrace"
+    },
+    {
+      "@id": "http://example.org/1ae86a9a-fff2-11e5-b628-64006a4c56ef",
+      "@type": "schema:PointValue",
+      "dependantVariable": {
+        "@type": [
+          "CompoundStatistic",
+          "BBP-131005"
+        ],
+        "series": [
+          {
+            "statistic": "mean",
+            "unitCode": "mm^3",
+            "value": [
+              11.9
+            ]
+          },
+          {
+            "statistic": "sem",
+            "unitCode": "mm^3",
+            "value": [
+              1.1
+            ]
+          },
+          {
+            "statistic": "N",
+            "unitCode": "dimensionless",
+            "value": [
+              6.0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "target": {
+    "source": "https://doi.org/10.1523/JNEUROSCI.2740-15.2015",
+    "selector": {
+      "@type": "TextPositionSelector",
+      "start": 26247,
+      "end":26247,
+      "text": "were modeled with a reversal potential of 120 mV and a permeability of 0.7 \udbff\udc10m/s. \n\n\u0000"
+    }
+  },
+  "subject":{
+    "species":{
+      "@id": "NIFORG:birnlex_160",
+      "label": "Rattus Norvegicus"
+    },
+    "objectOfStudy":{
+      "@id":"SingleCell",
+      "label":"brain region, ion channel, Synapse, Axon"
+    }
+  },
+  "license":"",
+  "brainLocation":{
+    "brainRegion":{
+      "id": "NIFCELL:nifext_41",
+      "name": "Thalamocortical cell"
+    }
+  }
+}
