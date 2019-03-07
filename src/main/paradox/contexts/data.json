@@ -1,720 +1,1197 @@
 {
-  "@context": [
-    {
-      "nxv": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/",
-      "type": "@type",
-      "id": "@id",
-      "links": {
-        "@id": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/links"
-      },
-      "prov": "http://www.w3.org/ns/prov#",
-      "generated": {
-        "@id": "prov:generated"
-      },
-      "used": {
-        "@id": "prov:used"
-      },
-      "qualifiedGeneration": {
-        "@id": "prov:qualifiedGeneration"
-      },
-      "wasRevisionOf": {
-        "@id": "prov:wasRevisionOf"
-      },
-      "hadMember": {
-        "@id": "prov:hadMember"
-      },
-      "wasGeneratedBy": {
-        "@id": "prov:wasGeneratedBy"
-      },
-      "wasStartedBy": {
-        "@id": "prov:wasStartedBy"
-      },
-      "wasAssociatedWith": {
-        "@id": "prov:wasAssociatedWith"
-      },
-      "qualifiedAssociation": {
-        "@id": "prov:qualifiedAssociation"
-      },
-      "qualifiedUsage": {
-        "@id": "prov:qualifiedUsage"
-      },
-      "hadRole": {
-        "@id": "prov:hadRole"
-      },
-      "activity": {
-        "@id": "prov:activity"
-      },
-      "hadActivity": {
-        "@id": "prov:hadActivity"
-      },
-      "entity": {
-        "@id": "prov:entity"
-      },
-      "agent": {
-        "@id": "prov:agent"
-      },
-      "Derivation": {
-        "@id": "prov:Derivation"
-      },
-      "Generation": {
-        "@id": "prov:Generation"
-      },
-      "address": {
-        "@id": "schema:address"
-      },
-      "PostalAddress": {
-        "@id": "schema:PostalAddress"
-      },
-      "parentOrganization": {
-        "@type": "@id",
-        "@id": "schema:parentOrganization"
-      },
-      "telephone": {
-        "@type": "xsd:string",
-        "@id": "schema:telephone"
-      },
-      "addressCountry": {
-        "@type": "xsd:string",
-        "@id": "schema:addressCountry"
-      },
-      "addressLocality": {
-        "@type": "xsd:string",
-        "@id": "schema:addressLocality"
-      },
-      "postalCode": {
-        "@type": "xsd:string",
-        "@id": "schema:postalCode"
-      },
-      "streetAddress": {
-        "@type": "xsd:string",
-        "@id": "schema:streetAddress"
-      },
-      "name": {
-        "@type": "xsd:string",
-        "@id": "schema:name"
-      },
-      "givenName": {
-        "@type": "xsd:string",
-        "@id": "schema:givenName"
-      },
-      "familyName": {
-        "@id": "schema:familyName",
-        "@type": "xsd:string"
-      },
-      "email": {
-        "@type": "xsd:string",
-        "@id": "schema:email"
-      },
-      "affiliation": {
-        "@type": "@id",
-        "@id": "schema:affiliation"
-      },
-      "size": {
-        "@type": "@id",
-        "@id": "schema:size"
-      },
-      "owl": "http://www.w3.org/2002/07/owl#",
-      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-      "xsd": "http://www.w3.org/2001/XMLSchema#",
-      "skos": "http://www.w3.org/2004/02/skos/core#",
-      "prov": "http://www.w3.org/ns/prov#",
-      "sh": "http://www.w3.org/ns/shacl#",
-      "shsh": "http://www.w3.org/ns/shacl-shacl#",
-      "dcterms": "http://purl.org/dc/terms/",
-      "nxv": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/",
-      "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
-      "schema": "http://schema.org/",
-      "dcat": "http://www.w3.org/ns/dcat#",
-      "brainRegion": {
-        "@id": "nsg:brainRegion",
-        "@type": "@id"
-      },
-      "geometry": {
-        "@id": "nsg:geometry"
-      },
-      "location": {
-        "@id": "nsg:location"
-      },
-      "geometryParameter": {
-        "@id": "nsg:geometryParameter"
-      },
-      "spatialReferenceSystem": {
-        "@id": "nsg:spatialReferenceSystem"
-      },
-      "hadProtocol": {
-        "@id": "nsg:hadProtocol"
-      },
-      "atlasVersion": {
-        "@id": "nsg:atlasVersion"
-      },
-      "sweep": {
-        "@id": "nsg:sweep"
-      },
-      "channel": {
-        "@id": "nsg:channel"
-      },
-      "putativeMType": {
-        "@id": "nsg:putativeMType"
-      },
-      "projectName": {
-        "@id": "nsg:projectName"
-      },
-      "waveNumberRange": {
-        "@id": "nsg:waveNumberRange"
-      },
-      "spatialCellName": {
-        "@id": "nsg:spatialCellName"
-      },
-      "reconstructionRequested": {
-        "@id": "nsg:reconstructionRequested"
-      },
-      "reconstructable": {
-        "@id": "nsg:reconstructable"
-      },
-      "labeledCell": {
-        "@id": "nsg:labeledCell"
-      },
-      "objectiveMagnification": {
-        "@id": "nsg:objectiveMagnification"
-      },
-      "objectiveType": {
-        "@id": "nsg:objectiveType"
-      },
-      "brainLocationCoordinates": {
-        "@id": "nsg:brainLocationCoordinates"
-      },
-      "sliceLocationCoordinates": {
-        "@id": "nsg:sliceLocationCoordinates"
-      },
-      "valueX": {
-        "@id": "nsg:valueX"
-      },
-      "valueY": {
-        "@id": "nsg:valueY"
-      },
-      "valueZ ": {
-        "@id": "nsg:valueZ"
-      },
-      "species": {
-        "@id": "nsg:species"
-      },
-      "strain": {
-        "@id": "nsg:strain"
-      },
-      "transgenic": {
-        "@id": "nsg:transgenic"
-      },
-      "sex": {
-        "@id": "nsg:sex"
-      },
-      "age": {
-        "@id": "nsg:age"
-      },
-      "dateOfSurgery": {
-        "@id": "nsg:dateOfSurgery"
-      },
-      "diseaseModel": {
-        "@id": "nsg:diseaseModel"
-      },
-      "disease": {
-        "@id": "nsg:disease"
-      },
-      "treatment": {
-        "@id": "nsg:treatment"
-      },
-      "period": {
-        "@id": "nsg:period"
-      },
-      "2DContour": {
-        "@id": "nsg:2DContour"
-      },
-      "3DContour": {
-        "@id": "nsg:3DContour"
-      },
-      "1Point": {
-        "@id": "nsg:1Point"
-      },
-      "3Point": {
-        "@id": "nsg:3Point"
-      },
-      "brainLocation": {
-        "@id": "nsg:brainLocation"
-      },
-      "fixationMethod": {
-        "@id": "nsg:fixationMethod"
-      },
-      "stain": {
-        "@id": "nsg:stain"
-      },
-      "mountingMedia": {
-        "@id": "nsg:mountingMedia"
-      },
-      "annotationAngle": {
-        "@id": "nsg:annotationAngle"
-      },
-      "annotatorComment": {
-        "@id": "nsg:annotatorComment"
-      },
-      "axonProjection": {
-        "@id": "nsg:axonProjection"
-      },
-      "distanceToBoundary": {
-        "@id": "nsg:distanceToBoundary"
-      },
-      "mType": {
-        "@id": "nsg:mType"
-      },
-      "mSubType": {
-        "@id": "nsg:mSubType"
-      },
-      "subRegion": {
-        "@id": "nsg:subRegion"
-      },
-      "positionInLayer": {
-        "@id": "nsg:positionInLayer"
-      },
-      "longitudinalAxis": {
-        "@id": "nsg:longitudinalAxis"
-      },
-      "layer": {
-        "@id": "nsg:layer"
-      },
-      "integrity": {
-        "@id": "nsg:integrity"
-      },
-      "somaType": {
-        "@id": "nsg:somaType"
-      },
-      "apicalDendrite": {
-        "@id": "nsg:apicalDendrite"
-      },
-      "basalDendrite": {
-        "@id": "nsg:basalDendrite"
-      },
-      "axon": {
-        "@id": "nsg:axon"
-      },
-      "soma": {
-        "@id": "nsg:soma"
-      },
-      "orientationOfReconstruction": {
-        "@id": "nsg:orientationOfReconstruction"
-      },
-      "reconstructionCompressionCorrected": {
-        "@id": "nsg:reconstructionCompressionCorrected"
-      },
-      "reconstructionCompleted": {
-        "@id": "nsg:reconstructionCompleted"
-      },
-      "reconstructionCorrected": {
-        "@id": "nsg:reconstructionCorrected"
-      },
-      "reconstructionComment": {
-        "@id": "nsg:reconstructionComment"
-      },
-      "clusterReconstructionRequested": {
-        "@id": "nsg:clusterReconstructionRequested"
-      },
-      "reconstructionRequester": {
-        "@id": "nsg:reconstructionRequester"
-      },
-      "reconstructionSentDate": {
-        "@id": "nsg:reconstructionSentDate"
-      },
-      "reconstructionDate": {
-        "@id": "nsg:reconstructionDate"
-      },
-      "reconstructionLocation": {
-        "@id": "nsg:reconstructionLocation"
-      },
-      "comment": {
-        "@id": "nsg:comment"
-      },
-      "stimulus": {
-        "@id": "nsg:stimulus"
-      },
-      "stimulusType": {
-        "@id": "nsg:stimulusType"
-      },
-      "providerExperimentId": {
-        "@id": "nsg:providerExperimentId"
-      },
-      "providerExperimentName": {
-        "@id": "nsg:providerExperimentName"
-      },
-      "eCode": {
-        "@id": "nsg:eCode"
-      },
-      "weight": {
-        "@id": "schema:weight"
-      },
-      "birthDate": {
-        "@id": "schema:birthDate"
-      },
-      "deathDate": {
-        "@id": "schema:deathDate"
-      },
-      "dataUnit": {
-        "@id": "nsg:dataUnit"
-      },
-      "modelScript": {
-        "@id": "nsg:modelScript",
-        "@type": "@id"
-      },
-      "providerId": {
-        "@id": "nsg:providerId"
-      },
-      "boundingBox": {
-        "@id": "nsg:boundingBox"
-      },
-      "orientation": {
-        "@id": "nsg:orientation"
-      },
-      "parcellationVolume": {
-        "@id": "nsg:parcellationVolume",
-        "@type": "@id"
-      },
-      "origin": {
-        "@id": "nsg:origin"
-      },
-      "releaseDate": {
-        "@id": "nsg:releaseDate"
-      },
-      "radius": {
-        "@id": "nsg:radius"
-      },
-      "parcellationOntology": {
-        "@id": "nsg:parcellationOntology",
-        "@type": "@id"
-      },
-      "center": {
-        "@id": "nsg:center"
-      },
-      "valueZ": {
-        "@id": "nsg:valueZ"
-      },
-      "modelOf": {
-        "@id": "nsg:modelOf",
-        "@type": "@id"
-      },
-      "subCellularMechanism": {
-        "@id": "nsg:subCellularMechanism",
-        "@type": "@id"
-      },
-      "distribution": {
-        "@id": "schema:distribution"
-      },
-      "cellPlacement": {
-        "@id": "nsg:cellPlacement",
-        "@type": "@id"
-      },
-      "memodelRelease": {
-        "@id": "nsg:memodelRelease",
-        "@type": "@id"
-      },
-      "synapseRelease": {
-        "@id": "nsg:synapseRelease",
-        "@type": "@id"
-      },
-      "nodeCollection": {
-        "@id": "nsg:nodeCollection",
-        "@type": "@id"
-      },
-      "eType": {
-        "@id": "nsg:eType",
-        "@type": "@id"
-      },
-      "putativeEtype": {
-        "@id": "nsg:putativeEtype",
-        "@type": "@id"
-      },
-      "pipetteNumber": {
-        "@id": "nsg:pipetteNumber"
-      },
-      "startMembranePotential": {
-        "@id": "nsg:startMembranePotential"
-      },
-      "endMembranePotential": {
-        "@id": "nsg:endMembranePotential"
-      },
-      "sealResistance": {
-        "@id": "nsg:sealResistance"
-      },
-      "pipetteResistance": {
-        "@id": "nsg:pipetteResistance"
-      },
-      "liquidJunctionPotential": {
-        "@id": "nsg:liquidJunctionPotential"
-      },
-      "labelingCompound": {
-        "@id": "nsg:labelingCompound"
-      },
-      "repetition": {
-        "@id": "nsg:repetition"
-      },
-      "targetHoldingPotential": {
-        "@id": "nsg:targetHoldingPotential"
-      },
-      "measuredHoldingPotential": {
-        "@id": "nsg:measuredHoldingPotential"
-      },
-      "inputResistance": {
-        "@id": "nsg:inputResistance"
-      },
-      "seriesResistance": {
-        "@id": "nsg:seriesResistance"
-      },
-      "compensationCurrent": {
-        "@id": "nsg:compensationCurrent"
-      },
-      "digitalToAnalogConverter": {
-        "@id": "nsg:digitalToAnalogConverter"
-      },
-      "numberOfRepetition": {
-        "@id": "nsg:numberOfRepetition"
-      },
-      "retrievalDate": {
-        "@id": "nsg:retrievalDate"
-      },
-      "timeStep": {
-        "@id": "nsg:timeStep"
-      },
-      "slicingPlane": {
-        "@id": "nsg:slicingPlane"
-      },
-      "slicingAngle": {
-        "@id": "nsg:slicingAngle"
-      },
-      "cuttingThickness": {
-        "@id": "nsg:cuttingThickness"
-      },
-      "hemisphere": {
-        "@id": "nsg:hemisphere"
-      },
-      "solution": {
-        "@id": "nsg:solution"
-      },
-      "materials": {
-        "@id": "nsg:materials",
-        "@type": "@id"
-      },
-      "vendor": {
-        "@id": "nsg:vendor",
-        "@type": "@id"
-      },
-      "steps": {
-        "@id": "nsg:steps"
-      },
-      "warning": {
-        "@id": "nsg:warning"
-      },
-      "reagentName": {
-        "@id": "nsg:reagentName"
-      },
-      "reagentLinearFormula": {
-        "@id": "nsg:reagentLinearFormula"
-      },
-      "reagentVendor": {
-        "@id": "nsg:reagentVendor",
-        "@type": "@id"
-      },
-      "score": {
-        "@id": "nsg:score"
-      },
-      "normalizedScore": {
-        "@id": "nsg:normalizedScore"
-      },
-      "edgePopulation": {
-        "@id": "nsg:edgePopulation"
-      },
-      "target": {
-        "@id": "nsg:target"
-      },
-      "downloadURL": {
-        "@id": "schema:downloadURL",
-        "@type": "@id"
-      },
-      "accessURL": {
-        "@id": "schema:accessURL",
-        "@type": "@id"
-      },
-      "mediaType": {
-        "@id": "schema:mediaType"
-      },
-      "description": {
-        "@id": "schema:description"
-      },
-      "hasPart": {
-        "@id": "dcterms:hasPart"
-      },
-      "value": {
-        "@id": "schema:value"
-      },
-      "label": {
-        "@id": "rdfs:label"
-      },
-      "unitCode": {
-        "@id": "schema:unitCode"
-      },
-      "unitText": {
-        "@id": "schema:unitText"
-      },
-      "upperPoint": {
-        "@id": "nsg:upperPoint"
-      },
-      "lowerPoint": {
-        "@id": "nsg:lowerPoint"
-      },
-      "imageVolume": {
-        "@id": "nsg:imageVolume"
-      },
-      "voxelType": {
-        "@id": "nsg:voxelType"
-      },
-      "volumeDimension": {
-        "@id": "nsg:volumeDimension"
-      },
-      "imageOrigin": {
-        "@id": "nsg:imageOrigin"
-      },
-      "imageDirection": {
-        "@id": "nsg:imageDirection"
-      },
-      "secondRow": {
-        "@id": "nsg:secondRow"
-      },
-      "thirdRow": {
-        "@id": "nsg:thirdRow"
-      },
-      "voxelResolution": {
-        "@id": "nsg:voxelResolution"
-      },
-      "voxelResolutionValue": {
-        "@id": "nsg:voxelResolutionValue"
-      },
-      "boundingbox": {
-        "@id": "nsg:boundingbox"
-      },
-      "isRegisteredIn": {
-        "@id": "nsg:isRegisteredIn"
-      },
-      "sliceDirection": {
-        "@id": "nsg:sliceDirection"
-      },
-      "sliceWidth": {
-        "@id": "nsg:sliceWidth"
-      },
-      "sliceHeight": {
-        "@id": "nsg:sliceHeight"
-      },
-      "numberOfSlices": {
-        "@id": "nsg:numberOfSlices"
-      },
-      "sliceResolution": {
-        "@id": "nsg:sliceResolution"
-      },
-      "sliceInterval": {
-        "@id": "nsg:sliceInterval"
-      },
-      "widthResolution": {
-        "@id": "nsg:widthResolution"
-      },
-      "heightResolution": {
-        "@id": "nsg:heightResolution"
-      },
-      "sliceIntervalValue": {
-        "@id": "nsg:sliceIntervalValue"
-      },
-      "emodelIndex": {
-        "@id": "nsg:emodelIndex"
-      },
-      "morphologyIndex": {
-        "@id": "nsg:morphologyIndex"
-      },
-      "eModel": {
-        "@id": "nsg:eModel"
-      },
-      "emodelRelease": {
-        "@id": "nsg:emodelRelease"
-      },
-      "morphologyRelease": {
-        "@id": "nsg:morphologyRelease"
-      },
-      "memodelIndex": {
-        "@id": "nsg:memodelIndex"
-      },
-      "circuitCellProperties": {
-        "@id": "nsg:circuitCellProperties"
-      },
-      "property": {
-        "@id": "nsg:property"
-      },
-      "edgeCollection": {
-        "@id": "nsg:edgeCollection"
-      },
-      "morphology": {
-        "@id": "nsg:morphology"
-      },
-      "mainModelScript": {
-        "@id": "nsg:mainModelScript"
-      },
-      "name": {
-        "@id": "schema:name"
-      },
-      "version": {
-        "@id": "schema:version"
-      },
-      "isPartOf": {
-        "@id": "dcterms:isPartOf",
-        "@type": "@id"
-      },
-      "view2d": {
-        "@id": "nsg:view2d"
-      },
-      "view3d": {
-        "@id": "nsg:view3d"
-      },
-      "wasDerivedFrom": {
-        "@id": "prov:wasDerivedFrom"
-      },
-      "experimentalCellList": {
-        "@id": "nsg:experimentalCellList"
-      },
-      "masterListConfiguration": {
-        "@id": "nsg:masterListConfiguration"
-      },
-      "experimentalTraceLocation": {
-        "@id": "nsg:experimentalTraceLocation"
-      },
-      "stimuliToExperimentMap": {
-        "@id": "nsg:stimuliToExperimentMap"
-      },
-      "featureExtractionConfiguration": {
-        "@id": "nsg:featureExtractionConfiguration"
-      },
-      "configurationUsed": {
-        "@id": "nsg:configurationUsed"
-      },
-      "features": {
-        "@id": "nsg:features"
-      },
-      "hypampThreshold": {
+  "@context": {
+    "RegionOfInterest": {
+      "@id": "nsg:RegionOfInterest"
+    },
+    "OntologyConversion": {
+      "@id": "nsg:OntologyConversion"
+    },
+    "Target": {
+      "@id": "nsg:Target"
+    },
+    "ImageStack": {
+      "@id": "nsg:ImageStack"
+    },
+    "SubCellularModel": {
+      "@id": "nsg:SubCellularModel"
+    },
+    "MorphologyOrientationDataLayer": {
+      "@id": "nsg:MorphologyOrientationDataLayer"
+    },
+    "VolumetricDataLayer": {
+      "@id": "nsg:VolumetricDataLayer"
+    },
+    "BrainParcellationDataLayer": {
+      "@id": "nsg:BrainParcellationDataLayer"
+    },
+    "PHDataLayer": {
+      "@id": "nsg:PHDataLayer"
+    },
+    "CellDensityDataLayer": {
+      "@id": "nsg:CellDensityDataLayer"
+    },
+    "NISSLImageDataLayer": {
+      "@id": "nsg:NISSLImageDataLayer"
+    },
+    "TwoPhotonImageDataLayer": {
+      "@id": "nsg:TwoPhotonImageDataLayer"
+    },
+    "AcquisitionAnnotation": {
+      "@id": "nsg:AcquisitionAnnotation"
+    },
+    "IntraCellularSharpElectrodeRecordedSlice": {
+      "@id": "nsg:IntraCellularSharpElectrodeRecordedSlice"
+    },
+    "ReconstructedCell": {
+      "@id": "nsg:ReconstructedCell"
+    },
+    "ETypeFeatureProtocol": {
+      "@id": "nsg:ETypeFeatureProtocol"
+    },
+    "AtlasSpatialReferenceSystem": {
+      "@id": "nsg:AtlasSpatialReferenceSystem"
+    },
+    "VariableReportShape": {
+      "@id": "nsg:VariableReportShape"
+    },
+    "Cell": {
+      "@id": "nsg:Cell"
+    },
+    "MorphologyRelease": {
+      "@id": "nsg:MorphologyRelease"
+    },
+    "TemplateImageData": {
+      "@id": "nsg:TemplateImageData"
+    },
+    "IonChannelGene": {
+      "@id": "nsg:IonChannelGene"
+    },
+    "BluePyEfeFeatures": {
+      "@id": "nsg:BluePyEfeFeatures"
+    },
+    "AnalysisResult": {
+      "@id": "nsg:AnalysisResult"
+    },
+    "IntraCellularSharpElectrode": {
+      "@id": "nsg:IntraCellularSharpElectrode"
+    },
+    "ReconstructionFromImage": {
+      "@id": "nsg:ReconstructionFromImage"
+    },
+    "Ontology": {
+      "@id": "owl:Ontology"
+    },
+    "ConceptScheme": {
+      "@id": "skos:ConceptScheme"
+    },
+    "CellPlacement": {
+      "@id": "nsg:CellPlacement"
+    },
+    "AtlasRelease": {
+      "@id": "nsg:AtlasRelease"
+    },
+    "Subject": {
+      "@id": "nsg:Subject"
+    },
+    "BrainImaging": {
+      "@id": "nsg:BrainImaging"
+    },
+    "Configuration": {
+      "@id": "nsg:Configuration"
+    },
+    "TraceGeneration": {
+      "@id": "nsg:TraceGeneration"
+    },
+    "ReconstructedCellReleaseGeneration": {
+      "@id": "nsg:ReconstructedCellReleaseGeneration"
+    },
+    "TemplateVolume": {
+      "@id": "nsg:TemplateVolume"
+    },
+    "Person": {
+      "@id": "nsg:Person"
+    },
+    "PatchedSlice": {
+      "@id": "nsg:PatchedSlice"
+    },
+    "ReconstructionCorrection": {
+      "@id": "nsg:ReconstructionCorrection"
+    },
+    "Collection": {
+      "@id": "nsg:Collection"
+    },
+    "Protocol": {
+      "@id": "nsg:Protocol"
+    },
+    "Class": {
+      "@id": "owl:Class"
+    },
+    "Concept": {
+      "@id": "skos:Concept"
+    },
+    "Dataset": {
+      "@id": "schema:Dataset"
+    },
+    "ParcellationVolume": {
+      "@id": "nsg:ParcellationVolume"
+    },
+    "Transformation": {
+      "@id": "nsg:Transformation"
+    },
+    "EModelRelease": {
+      "@id": "nsg:EModelRelease"
+    },
+    "ParcellationReconstruction": {
+      "@id": "nsg:ParcellationReconstruction"
+    },
+    "Transform": {
+      "@id": "nsg:Transform"
+    },
+    "EModel": {
+      "@id": "nsg:EModel"
+    },
+    "MEModelRelease": {
+      "@id": "nsg:MEModelRelease"
+    },
+    "ParcellationMeshGeneration": {
+      "@id": "nsg:ParcellationMeshGeneration"
+    },
+    "MorphologyMesh": {
+      "@id": "nsg:MorphologyMesh"
+    },
+    "SingleCellTraceGeneration": {
+      "@id": "nsg:SingleCellTraceGeneration"
+    },
+    "MEModel": {
+      "@id": "nsg:MEModel"
+    },
+    "EModelScript": {
+      "@id": "nsg:EModelScript"
+    },
+    "ImageVolume": {
+      "@id": "nsg:ImageVolume"
+    },
+    "MorphologyMeshGeneration": {
+      "@id": "nsg:MorphologyMeshGeneration"
+    },
+    "SynapseRelease": {
+      "@id": "nsg:SynapseRelease"
+    },
+    "HostCell": {
+      "@id": "nsg:HostCell"
+    },
+    "ModelInstance": {
+      "@id": "nsg:ModelInstance"
+    },
+    "TraceFeatureExtraction": {
+      "@id": "nsg:TraceFeatureExtraction"
+    },
+    "SoftwareAgent": {
+      "@id": "nsg:SoftwareAgent"
+    },
+    "DetailedCircuit": {
+      "@id": "nsg:DetailedCircuit"
+    },
+    "Organization": {
+      "@id": "nsg:Organization"
+    },
+    "ValidationResult": {
+      "@id": "nsg:ValidationResult"
+    },
+    "ReconstructedCellFormatConversion": {
+      "@id": "nsg:ReconstructedCellFormatConversion"
+    },
+    "Analysis": {
+      "@id": "nsg:Analysis"
+    },
+    "RotationalMatrix": {
+      "@id": "nsg:RotationalMatrix"
+    },
+    "geometry": {
+      "@id": "nsg:geometry"
+    },
+    "TraceFeature": {
+      "@id": "nsg:TraceFeature"
+    },
+    "SpatialIndexDerivation": {
+      "@id": "nsg:SpatialIndexDerivation"
+    },
+    "IonChannelMechanismRelease": {
+      "@id": "nsg:IonChannelMechanismRelease"
+    },
+    "ReconstructedCellReleaseProcess": {
+      "@id": "nsg:ReconstructedCellReleaseProcess"
+    },
+    "BrainSlicing": {
+      "@id": "nsg:BrainSlicing"
+    },
+    "EModelBuilding": {
+      "@id": "nsg:EModelBuilding"
+    },
+    "AnnotatedSlice": {
+      "@id": "nsg:AnnotatedSlice"
+    },
+    "EdgeCollection": {
+      "@id": "nsg:EdgeCollection"
+    },
+    "MorphologyDiversification": {
+      "@id": "nsg:MorphologyDiversification"
+    },
+    "ParcellationOntology": {
+      "@id": "nsg:ParcellationOntology"
+    },
+    "Morphology": {
+      "@id": "nsg:Morphology"
+    },
+    "EmodelFeatureGeneration": {
+      "@id": "nsg:EmodelFeatureGeneration"
+    },
+    "WholeCellPatchClamp": {
+      "@id": "nsg:WholeCellPatchClamp"
+    },
+    "TemplateReconstruction": {
+      "@id": "nsg:TemplateReconstruction"
+    },
+    "voxelResolution": {
+      "@id": "nsg:voxelResolution"
+    },
+    "SubCellularModelScript": {
+      "@id": "nsg:SubCellularModelScript"
+    },
+    "DeformableTransform": {
+      "@id": "nsg:DeformableTransform"
+    },
+    "geometryParameter": {
+      "@id": "nsg:geometryParameter"
+    },
+    "TraceCollection": {
+      "@id": "nsg:TraceCollection"
+    },
+    "ModelRelease": {
+      "@id": "nsg:ModelRelease"
+    },
+    "ParcellationImageData": {
+      "@id": "nsg:ParcellationImageData"
+    },
+    "BrainParcellationMesh": {
+      "@id": "nsg:BrainParcellationMesh"
+    },
+    "CircuitCellProperties": {
+      "@id": "nsg:CircuitCellProperties"
+    },
+    "Trace": {
+      "@id": "nsg:Trace"
+    },
+    "AffineLinearTransform": {
+      "@id": "nsg:AffineLinearTransform"
+    },
+    "LinearTransform": {
+      "@id": "nsg:LinearTransform"
+    },
+    "RigidLinearTransform": {
+      "@id": "nsg:RigidLinearTransform"
+    },
+    "EmptyCollection": {
+      "@id": "nsg:EmptyCollection"
+    },
+    "Annotation": {
+      "@id": "nsg:Annotation"
+    },
+    "ReconstructedPatchedCell": {
+      "@id": "nsg:ReconstructedPatchedCell"
+    },
+    "Transfection": {
+      "@id": "nsg:Transfection"
+    },
+    "Entity": {
+      "@id": "nsg:Entity"
+    },
+    "PatchedCell": {
+      "@id": "nsg:PatchedCell"
+    },
+    "ExperimentalProtocol": {
+      "@id": "nsg:ExperimentalProtocol"
+    },
+    "ParcellationLabel": {
+      "@id": "nsg:ParcellationLabel"
+    },
+    "Slice": {
+      "@id": "nsg:Slice"
+    },
+    "ModelValidation": {
+      "@id": "nsg:ModelValidation"
+    },
+    "SingleCellSimulationTrace": {
+      "@id": "nsg:SingleCellSimulationTrace"
+    },
+    "StimulusExperiment": {
+      "@id": "nsg:StimulusExperiment"
+    },
+    "LabeledCell": {
+      "@id": "nsg:LabeledCell"
+    },
+    "FixationStainingMounting": {
+      "@id": "nsg:FixationStainingMounting"
+    },
+    "SimplifiedCircuit": {
+      "@id": "nsg:SimplifiedCircuit"
+    },
+    "SpatialIndex": {
+      "@id": "nsg:SpatialIndex"
+    },
+    "NodeCollection": {
+      "@id": "nsg:NodeCollection"
+    },
+    "ReconstructedCellRelease": {
+      "@id": "nsg:ReconstructedCellRelease"
+    },
+    "ApicalAnnotation": {
+      "@id": "nsg:ApicalAnnotation"
+    },
+    "Simulation": {
+      "@id": "nsg:Simulation"
+    },
+    "ReconstructedWholeBrainCell": {
+      "@id": "nsg:ReconstructedWholeBrainCell"
+    },
+    "AtlasConstruction": {
+      "@id": "nsg:AtlasConstruction"
+    },
+    "ExperimentalActivity": {
+      "@id": "nsg:ExperimentalActivity"
+    },
+    "BoundingBox": {
+      "@id": "nsg:BoundingBox"
+    },
+    "IntraCellularSharpElectrodeRecordedCell": {
+      "@id": "nsg:IntraCellularSharpElectrodeRecordedCell"
+    },
+    "PatchClamp": {
+      "@id": "nsg:PatchClamp"
+    },
+    "Threshold": {
+      "@id": "nsg:Threshold"
+    },
+    "Activity": {
+      "@id": "nsg:Activity"
+    },
+    "ModelReleaseIndex": {
+      "@id": "nsg:ModelReleaseIndex"
+    },
+    "FixedStainedSlice": {
+      "@id": "nsg:FixedStainedSlice"
+    },
+    "Reconstruction": {
+      "@id": "nsg:Reconstruction"
+    },
+    "Agent": {
+      "@id": "nsg:Agent"
+    },
+    "value": {
+      "@id": "schema:value"
+    },
+    "solution": {
+      "@id": "nsg:solution"
+    },
+    "imageVolume": {
+      "@id": "nsg:imageVolume"
+    },
+    "isPartOf": {
+      "@id": "schema:isPartOf"
+    },
+    "distribution": {
+      "@id": "schema:distribution"
+    },
+    "diseaseModel": {
+      "@id": "nsg:diseaseModel"
+    },
+    "spatialIndex": {
+      "@id": "nsg:spatialIndex"
+    },
+    "annotation": {
+      "@id": "nsg:annotation"
+    },
+    "generated": {
+      "@id": "prov:generated"
+    },
+    "used": {
+      "@id": "prov:used"
+    },
+    "imageDirection": {
+      "@id": "nsg:imageDirection"
+    },
+    "algorithm": {
+      "@id": "schema:algorithm"
+    },
+    "mType": {
+      "@id": "nsg:mType"
+    },
+    "compensationCurrent": {
+      "@id": "nsg:compensationCurrent"
+    },
+    "author": {
+      "@id": "schema:author"
+    },
+    "encodingFormat": {
+      "@id": "schema:encodingFormat"
+    },
+    "axonProjection": {
+      "@id": "nsg:axonProjection"
+    },
+    "providerId": {
+      "@id": "nsg:providerId"
+    },
+    "subCellularMechanism": {
+      "@id": "nsg:subCellularMechanism"
+    },
+    "edgeCollection": {
+      "@id": "nsg:edgeCollection"
+    },
+    "bestScore": {
+      "@id": "nsg:bestScore"
+    },
+    "edgePopulation": {
+      "@id": "nsg:edgePopulation"
+    },
+    "derivation": {
+      "@id": "nsg:derivation"
+    },
+    "upperPoint": {
+      "@id": "nsg:upperPoint"
+    },
+    "address": {
+      "@id": "schema:address"
+    },
+    "atlasVersion": {
+      "@id": "nsg:atlasVersion"
+    },
+    "digitalToAnalogConverter": {
+      "@id": "nsg:digitalToAnalogConverter"
+    },
+    "hasPart": {
+      "@id": "schema:hasPart"
+    },
+    "morphology": {
+      "@id": "nsg:morphology"
+    },
+    "reconstructionCorrected": {
+      "@id": "nsg:reconstructionCorrected"
+    },
+    "spatialCellName": {
+      "@id": "nsg:spatialCellName"
+    },
+    "hypampThreshold": {
       "@id": "nsg:hypampThreshold"
-      },
-      "storageType": {
-        "@type": "@id",
-        "@id": "nsg:storageType"
-      },
-      "gpfs": {
-        "@id": "http://bbp.epfl.ch/neurosciencegraph/taxonomies/storagetypes/gpfs"
-      },
-      "cellLine": {
-        "@id": "nsg:cellLine"
-      },
-      "ionChannelGene": {
-        "@id": "nsg:ionChannelGene"
-      }
-    }
-  ]
+    },
+    "memodelIndex": {
+      "@id": "nsg:memodelIndex"
+    },
+    "reagentVendor": {
+      "@id": "nsg:reagentVendor"
+    },
+    "size": {
+      "@id": "schema:size"
+    },
+    "valueY": {
+      "@id": "nsg:valueY"
+    },
+    "projectName": {
+      "@id": "nsg:projectName"
+    },
+    "electrodeResistance": {
+      "@id": "nsg:electrodeResistance"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "mainModelScript": {
+      "@id": "nsg:mainModelScript"
+    },
+    "eType": {
+      "@id": "nsg:eType"
+    },
+    "hemisphere": {
+      "@id": "nsg:hemisphere"
+    },
+    "hadPlan": {
+      "@id": "prov:hadPlan"
+    },
+    "sliceInterval": {
+      "@id": "nsg:sliceInterval"
+    },
+    "pipetteNumber": {
+      "@id": "nsg:pipetteNumber"
+    },
+    "slicingAngle": {
+      "@id": "nsg:slicingAngle"
+    },
+    "endMembranePotential": {
+      "@id": "nsg:endMembranePotential"
+    },
+    "familyName": {
+      "@id": "schema:familyName"
+    },
+    "brainLocation": {
+      "@id": "nsg:brainLocation"
+    },
+    "putativeMType": {
+      "@id": "nsg:putativeMType"
+    },
+    "stimuliToExperimentMap": {
+      "@id": "nsg:stimuliToExperimentMap"
+    },
+    "stain": {
+      "@id": "nsg:stain"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "email": {
+      "@id": "schema:email"
+    },
+    "objectiveType": {
+      "@id": "nsg:objectiveType"
+    },
+    "channel": {
+      "@id": "nsg:channel"
+    },
+    "imagingMethod": {
+      "@id": "nsg:imagingMethod"
+    },
+    "identifier": {
+      "@id": "schema:identifier"
+    },
+    "image": {
+      "@id": "schema:image"
+    },
+    "hasSource": {
+      "@id": "nsg:hasSource"
+    },
+    "url": {
+      "@id": "schema:url"
+    },
+    "weight": {
+      "@id": "schema:weight"
+    },
+    "hadMember": {
+      "@id": "prov:hadMember"
+    },
+    "valueX": {
+      "@id": "nsg:valueX"
+    },
+    "birthDate": {
+      "@id": "schema:birthDate"
+    },
+    "mountingMedia": {
+      "@id": "nsg:mountingMedia"
+    },
+    "minValue": {
+      "@id": "schema:minValue"
+    },
+    "sealResistance": {
+      "@id": "nsg:sealResistance"
+    },
+    "reconstructionCompressionCorrected": {
+      "@id": "nsg:reconstructionCompressionCorrected"
+    },
+    "atlasSpatialReferenceSystem": {
+      "@id": "nsg:atlasSpatialReferenceSystem"
+    },
+    "boundary": {
+      "@id": "nsg:boundary"
+    },
+    "reconstructionDate": {
+      "@id": "nsg:reconstructionDate"
+    },
+    "view3d": {
+      "@id": "nsg:view3d"
+    },
+    "spatialReferenceSystem": {
+      "@id": "nsg:spatialReferenceSystem"
+    },
+    "providerExperimentId": {
+      "@id": "nsg:providerExperimentId"
+    },
+    "wasRevisionOf": {
+      "@id": "prov:wasRevisionOf"
+    },
+    "targetHoldingPotential": {
+      "@id": "nsg:targetHoldingPotential"
+    },
+    "objectiveMagnification": {
+      "@id": "nsg:objectiveMagnification"
+    },
+    "orientationOfReconstruction": {
+      "@id": "nsg:orientationOfReconstruction"
+    },
+    "row": {
+      "@id": "nsg:row"
+    },
+    "imageModality": {
+      "@id": "nsg:imageModality"
+    },
+    "coordinatesInBrainAtlas": {
+      "@id": "nsg:coordinatesInBrainAtlas"
+    },
+    "topConceptOf": {
+      "@id": "skos:topConceptOf"
+    },
+    "label": {
+      "@id": "rdfs:label"
+    },
+    "hadProtocol": {
+      "@id": "nsg:hadProtocol"
+    },
+    "dateOfSurgery": {
+      "@id": "nsg:dateOfSurgery"
+    },
+    "retrievalDate": {
+      "@id": "nsg:retrievalDate"
+    },
+    "source": {
+      "@id": "nsg:source"
+    },
+    "brainRegion": {
+      "@id": "nsg:brainRegion"
+    },
+    "modelScript": {
+      "@id": "nsg:modelScript"
+    },
+    "species": {
+      "@id": "nsg:species"
+    },
+    "index": {
+      "@id": "nsg:index"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom"
+    },
+    "telephone": {
+      "@id": "schema:telephone"
+    },
+    "features": {
+      "@id": "nsg:features"
+    },
+    "releaseDate": {
+      "@id": "schema:releaseDate"
+    },
+    "subCellularModel": {
+      "@id": "nsg:subCellularModel"
+    },
+    "target": {
+      "@id": "nsg:target"
+    },
+    "startMembranePotential": {
+      "@id": "nsg:startMembranePotential"
+    },
+    "putativeEtype": {
+      "@id": "nsg:putativeEtype"
+    },
+    "citation": {
+      "@id": "schema:citation"
+    },
+    "generation": {
+      "@id": "nsg:generation"
+    },
+    "treatment": {
+      "@id": "nsg:treatment"
+    },
+    "voxelType": {
+      "@id": "nsg:voxelType"
+    },
+    "pipetteResistance": {
+      "@id": "nsg:pipetteResistance"
+    },
+    "disease": {
+      "@id": "nsg:disease"
+    },
+    "soma": {
+      "@id": "nsg:soma"
+    },
+    "vendor": {
+      "@id": "nsg:vendor"
+    },
+    "addressLocality": {
+      "@id": "schema:addressLocality"
+    },
+    "givenName": {
+      "@id": "schema:givenName"
+    },
+    "analogToDigitalConverter": {
+      "@id": "nsg:analogToDigitalConverter"
+    },
+    "preflabel": {
+      "@id": "skos:preflabel"
+    },
+    "distanceToBoundary": {
+      "@id": "nsg:distanceToBoundary"
+    },
+    "secondRow": {
+      "@id": "nsg:secondRow"
+    },
+    "cellLine": {
+      "@id": "nsg:cellLine"
+    },
+    "isRegisteredIn": {
+      "@id": "nsg:isRegisteredIn"
+    },
+    "fixationMethod": {
+      "@id": "nsg:fixationMethod"
+    },
+    "morphologyIndex": {
+      "@id": "nsg:morphologyIndex"
+    },
+    "qualifiedGeneration": {
+      "@id": "prov:qualifiedGeneration"
+    },
+    "streetAddress": {
+      "@id": "schema:streetAddress"
+    },
+    "mSubType": {
+      "@id": "nsg:mSubType"
+    },
+    "materials": {
+      "@id": "nsg:materials"
+    },
+    "temperature": {
+      "@id": "nsg:temperature"
+    },
+    "propertyID": {
+      "@id": "schema:propertyID"
+    },
+    "activity": {
+      "@id": "prov:activity"
+    },
+    "slicingPlane": {
+      "@id": "nsg:slicingPlane"
+    },
+    "warning": {
+      "@id": "nsg:warning"
+    },
+    "keywords": {
+      "@id": "schema:keywords"
+    },
+    "imageOrigin": {
+      "@id": "nsg:imageOrigin"
+    },
+    "nodeCollection": {
+      "@id": "nsg:nodeCollection"
+    },
+    "sweep": {
+      "@id": "nsg:sweep"
+    },
+    "axon": {
+      "@id": "nsg:axon"
+    },
+    "cellLibraryFile": {
+      "@id": "nsg:cellLibraryFile"
+    },
+    "parentOrganization": {
+      "@id": "schema:parentOrganization"
+    },
+    "valueZ": {
+      "@id": "nsg:valueZ"
+    },
+    "sameAs": {
+      "@id": "schema:sameAs"
+    },
+    "transgenic": {
+      "@id": "nsg:transgenic"
+    },
+    "reconstructionSentDate": {
+      "@id": "nsg:reconstructionSentDate"
+    },
+    "coordinatesInSlice": {
+      "@id": "nsg:coordinatesInSlice"
+    },
+    "license": {
+      "@id": "schema:license"
+    },
+    "dateModified": {
+      "@id": "schema:dateModified"
+    },
+    "longitudinalAxis": {
+      "@id": "nsg:longitudinalAxis"
+    },
+    "strain": {
+      "@id": "nsg:strain"
+    },
+    "contentUrl": {
+      "@id": "schema:contentUrl"
+    },
+    "hasTarget": {
+      "@id": "nsg:hasTarget"
+    },
+    "electrodeNumber": {
+      "@id": "nsg:electrodeNumber"
+    },
+    "basalDendrite": {
+      "@id": "nsg:basalDendrite"
+    },
+    "wasAttributedTo": {
+      "@id": "prov:wasAttributedTo"
+    },
+    "templateVolume": {
+      "@id": "nsg:templateVolume"
+    },
+    "hasSelector": {
+      "@id": "nsg:hasSelector"
+    },
+    "heightResolution": {
+      "@id": "nsg:heightResolution"
+    },
+    "reconstructable": {
+      "@id": "nsg:reconstructable"
+    },
+    "gain": {
+      "@id": "nsg:gain"
+    },
+    "center": {
+      "@id": "nsg:center"
+    },
+    "affiliation": {
+      "@id": "schema:affiliation"
+    },
+    "properties": {
+      "@id": "nsg:properties"
+    },
+    "parcellationVolume": {
+      "@id": "nsg:parcellationVolume"
+    },
+    "sliceHeight": {
+      "@id": "nsg:sliceHeight"
+    },
+    "apicalDendrite": {
+      "@id": "nsg:apicalDendrite"
+    },
+    "subject": {
+      "@id": "nsg:subject"
+    },
+    "invalidation": {
+      "@id": "nsg:invalidation"
+    },
+    "synapseRelease": {
+      "@id": "nsg:synapseRelease"
+    },
+    "sku": {
+      "@id": "schema:sku"
+    },
+    "sliceWidth": {
+      "@id": "nsg:sliceWidth"
+    },
+    "unitText": {
+      "@id": "schema:unitText"
+    },
+    "stimulus": {
+      "@id": "nsg:stimulus"
+    },
+    "positionInLayer": {
+      "@id": "nsg:positionInLayer"
+    },
+    "liquidJunctionPotential": {
+      "@id": "nsg:liquidJunctionPotential"
+    },
+    "circuitCellProperties": {
+      "@id": "nsg:circuitCellProperties"
+    },
+    "reconstructedCellIntegrity": {
+      "@id": "nsg:reconstructedCellIntegrity"
+    },
+    "faxNumber": {
+      "@id": "schema:faxNumber"
+    },
+    "normalizedScore": {
+      "@id": "nsg:normalizedScore"
+    },
+    "view2d": {
+      "@id": "nsg:view2d"
+    },
+    "timeStep": {
+      "@id": "nsg:timeStep"
+    },
+    "memodelRelease": {
+      "@id": "nsg:memodelRelease"
+    },
+    "reconstructionRequester": {
+      "@id": "nsg:reconstructionRequester"
+    },
+    "reagentLinearFormula": {
+      "@id": "nsg:reagentLinearFormula"
+    },
+    "unitCode": {
+      "@id": "schema:unitCode"
+    },
+    "inputResistance": {
+      "@id": "nsg:inputResistance"
+    },
+    "objectOfStudy": {
+      "@id": "nsg:objectOfStudy"
+    },
+    "featureExtractionConfiguration": {
+      "@id": "nsg:featureExtractionConfiguration"
+    },
+    "scale": {
+      "@id": "nsg:scale"
+    },
+    "locationInSlice": {
+      "@id": "nsg:locationInSlice"
+    },
+    "type": {
+      "@id": "rdf:type"
+    },
+    "orientation": {
+      "@id": "nsg:orientation"
+    },
+    "additionalName": {
+      "@id": "schema:additionalName"
+    },
+    "somaReconstructionType": {
+      "@id": "nsg:somaReconstructionType"
+    },
+    "lowerPoint": {
+      "@id": "nsg:lowerPoint"
+    },
+    "reconstructionCompleted": {
+      "@id": "nsg:reconstructionCompleted"
+    },
+    "age": {
+      "@id": "nsg:age"
+    },
+    "entity": {
+      "@id": "prov:entity"
+    },
+    "labelingCompound": {
+      "@id": "nsg:labelingCompound"
+    },
+    "reconstructionRequested": {
+      "@id": "nsg:reconstructionRequested"
+    },
+    "boundingBox": {
+      "@id": "nsg:boundingBox"
+    },
+    "conformsTo": {
+      "@id": "nsg:conformsTo"
+    },
+    "hasBody": {
+      "@id": "nsg:hasBody"
+    },
+    "sliceIntervalValue": {
+      "@id": "nsg:sliceIntervalValue"
+    },
+    "eCode": {
+      "@id": "nsg:eCode"
+    },
+    "definition": {
+      "@id": "skos:definition"
+    },
+    "morphologyRelease": {
+      "@id": "nsg:morphologyRelease"
+    },
+    "variable": {
+      "@id": "nsg:variable"
+    },
+    "origin": {
+      "@id": "nsg:origin"
+    },
+    "imports": {
+      "@id": "owl:imports"
+    },
+    "language": {
+      "@id": "schema:language"
+    },
+    "maxValue": {
+      "@id": "schema:maxValue"
+    },
+    "hadRole": {
+      "@id": "prov:hadRole"
+    },
+    "numberOfSlices": {
+      "@id": "nsg:numberOfSlices"
+    },
+    "contentSize": {
+      "@id": "schema:contentSize"
+    },
+    "location": {
+      "@id": "nsg:location"
+    },
+    "version": {
+      "@id": "schema:version"
+    },
+    "layer": {
+      "@id": "nsg:layer"
+    },
+    "synapse": {
+      "@id": "nsg:synapse"
+    },
+    "digest": {
+      "@id": "nsg:digest"
+    },
+    "column": {
+      "@id": "nsg:column"
+    },
+    "repetition": {
+      "@id": "nsg:repetition"
+    },
+    "volumeDimension": {
+      "@id": "nsg:volumeDimension"
+    },
+    "steps": {
+      "@id": "nsg:steps"
+    },
+    "score": {
+      "@id": "nsg:score"
+    },
+    "emodelRelease": {
+      "@id": "nsg:emodelRelease"
+    },
+    "distance": {
+      "@id": "schema:distance"
+    },
+    "period": {
+      "@id": "nsg:period"
+    },
+    "status": {
+      "@id": "nsg:status"
+    },
+    "experimentalCell": {
+      "@id": "nsg:experimentalCell"
+    },
+    "parcellationOntology": {
+      "@id": "nsg:parcellationOntology"
+    },
+    "dateCreated": {
+      "@id": "schema:dateCreated"
+    },
+    "contribution": {
+      "@id": "nsg:contribution"
+    },
+    "seriesResistance": {
+      "@id": "nsg:seriesResistance"
+    },
+    "eModel": {
+      "@id": "nsg:eModel"
+    },
+    "sliceResolution": {
+      "@id": "nsg:sliceResolution"
+    },
+    "reconstructionLocation": {
+      "@id": "nsg:reconstructionLocation"
+    },
+    "postalCode": {
+      "@id": "schema:postalCode"
+    },
+    "clusterReconstructionRequested": {
+      "@id": "nsg:clusterReconstructionRequested"
+    },
+    "widthResolution": {
+      "@id": "nsg:widthResolution"
+    },
+    "reagentMolarWeight": {
+      "@id": "nsg:reagentMolarWeight"
+    },
+    "repetitions": {
+      "@id": "schema:repetitions"
+    },
+    "ionChannelGene": {
+      "@id": "nsg:ionChannelGene"
+    },
+    "annotationAngle": {
+      "@id": "nsg:annotationAngle"
+    },
+    "chlorideReversalPotential": {
+      "@id": "nsg:chlorideReversalPotential"
+    },
+    "reconstructionComment": {
+      "@id": "nsg:reconstructionComment"
+    },
+    "altLabel": {
+      "@id": "skos:altLabel"
+    },
+    "cuttingThickness": {
+      "@id": "nsg:cuttingThickness"
+    },
+    "atTime": {
+      "@id": "prov:atTime"
+    },
+    "agent": {
+      "@id": "prov:agent"
+    },
+    "bathSolution": {
+      "@id": "nsg:bathSolution"
+    },
+    "reagentName": {
+      "@id": "nsg:reagentName"
+    },
+    "firstRow": {
+      "@id": "nsg:firstRow"
+    },
+    "providerExperimentName": {
+      "@id": "nsg:providerExperimentName"
+    },
+    "datePublished": {
+      "@id": "schema:datePublished"
+    },
+    "measuredHoldingPotential": {
+      "@id": "nsg:measuredHoldingPotential"
+    },
+    "emodelIndex": {
+      "@id": "nsg:emodelIndex"
+    },
+    "annotatorComment": {
+      "@id": "nsg:annotatorComment"
+    },
+    "dataUnit": {
+      "@id": "nsg:dataUnit"
+    },
+    "alternateName": {
+      "@id": "schema:alternateName"
+    },
+    "thirdRow": {
+      "@id": "nsg:thirdRow"
+    },
+    "modelOf": {
+      "@id": "nsg:modelOf"
+    },
+    "wasGeneratedBy": {
+      "@id": "prov:wasGeneratedBy"
+    },
+    "inScheme": {
+      "@id": "skos:inScheme"
+    },
+    "radius": {
+      "@id": "nsg:radius"
+    },
+    "sex": {
+      "@id": "nsg:sex"
+    },
+    "prefLabel": {
+      "@id": "skos:prefLabel"
+    },
+    "addressCountry": {
+      "@id": "schema:addressCountry"
+    },
+    "title": {
+      "@id": "schema:title"
+    },
+    "deathDate": {
+      "@id": "schema:deathDate"
+    },
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "shsh": "http://www.w3.org/ns/shacl-shacl#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "nxv": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/",
+    "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#"
+  }
 }
