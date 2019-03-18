@@ -988,22 +988,26 @@ nsg:Morphology rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyDiversification
 nsg:MorphologyDiversification rdf:type owl:Class ;
-                              rdfs:label "Morphology Diversification"@en .
+                              rdfs:label "Morphology Diversification"@en ;
+                              skos:definition "The Morphology Diversification is an activity in which a morphology release is generated from a set of neuron morphologies by applying various diversification protocols such as neuron morphology repair, scaling, grafting, cloning or mix-and-matching." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMesh
 nsg:MorphologyMesh rdf:type owl:Class ;
-                   rdfs:label "Morphology Mesh"@en .
+                   rdfs:label "Morphology Mesh"@en ;
+                   skos:definition "The Morphology Mesh is an entity which describes a mesh representation of neuron morphologies." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMeshGeneration
 nsg:MorphologyMeshGeneration rdf:type owl:Class ;
-                             rdfs:label "Morphology Mesh Generation"@en .
+                             rdfs:label "Morphology Mesh Generation"@en ;
+                             skos:definition "The Morphology Mesh Generation is an activity which describes the generation of a mesh representation of a neuron morphology from an experimental reconstructed cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyOrientationDataLayer
 nsg:MorphologyOrientationDataLayer rdf:type owl:Class ;
-                                   rdfs:label "Morphology Orientation Data Layer"@en .
+                                   rdfs:label "Morphology Orientation Data Layer"@en ;
+                                   skos:definition "The Morphology Orientation Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and descirbes the orientation of morphologies. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyRelease
@@ -1015,12 +1019,14 @@ nsg:MorphologyRelease rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NISSLImageDataLayer
 nsg:NISSLImageDataLayer rdf:type owl:Class ;
-                        rdfs:label "NISSLImage Data Layer"@en .
+                        rdfs:label "NISSLImage Data Layer"@en ;
+                        skos:definition "The Nissl Image Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and describes the Nissl-stained image data. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NodeCollection
 nsg:NodeCollection rdf:type owl:Class ;
-                   rdfs:label "Node Collection"@en .
+                   rdfs:label "Node Collection"@en ;
+                   skos:definition "The Node Collection is an entity representing a collection of neurons represented as a graph. In this graph representation, nodes represent neurons and edges the connections between neurons. More detailed information can be found on the SONATA data format guide: https://github.com/AllenInstitute/sonata/blob/master/docs/SONATA_DEVELOPER_GUIDE.md#representing-edges." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/OntologyConversion
