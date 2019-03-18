@@ -113,16 +113,22 @@
                     {
                         "path": "nsg:collabID",
                         "name": "collab id",
-                        "description": "collab id of the model project",
+                        "description": "collab id of the model project.",
+                        "editorialNote": "Note that this is not generic, and should be removed in a future schema version, but is retained here for short-term convenience.",
                         "datatype": "xsd:int"
                     },
                     {
-                        "path": "nsg:PLAComponents",
-                        "name": "PLA components",
-                        "description": "PLA components",
+                        "path": "schema:funder",
+                        "name": "Funding",
+                        "description": "Information about the funding for this project",
+                        "datatype": "xsd:string"
+                    },
+                    {
+                        "path": "nsg:providerId",
+                        "name": "Provider ID",
+                        "description": "An existing, alternative id of the model project",
                         "datatype": "xsd:string"
                     }
-
                 ]
             }
         ]
