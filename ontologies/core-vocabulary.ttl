@@ -806,19 +806,19 @@ nsg:EModel rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelBuilding
 nsg:EModelBuilding rdf:type owl:Class ;
-
                    rdfs:label "EModel Building"@en ;
                    skos:definition "The E-Model Building is an activity of generating an e-model by using a neuron morphology to fit model parameters." .
+
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelRelease
 nsg:EModelRelease rdf:type owl:Class ;
                   rdfs:subClassOf nsg:ModelRelease ;
-                  rdfs:label "EModel Release"@en .
+                  rdfs:label "EModel Release"@en ;
+                  skos:definition "An E-Model Release is a model release which describes the release of a set of e-models (i.e. the output of the software package BluePyOpt (https://github.com/BlueBrain/BluePyOpt)) for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelScript
 nsg:EModelScript rdf:type owl:Class ;
-
                  rdfs:label "EModel Script"@en ;
                  skos:definition "The E-Model Script is an entity describing the script (typically a .mod file) used for a particular electrical model of a single cell." .
 
@@ -826,14 +826,12 @@ nsg:EModelScript rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ETypeFeatureProtocol
 nsg:ETypeFeatureProtocol rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Model ;
-
                          rdfs:label "EType Feature Protocol"@en ;
                          skos:definition "The E-Type Feature Protocol is a model instance describing the extracted electrical features for an electrical type and the corresponding protocols." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EdgeCollection
 nsg:EdgeCollection rdf:type owl:Class ;
-
                    rdfs:label "Edge Collection"@en ;
                    skos:definition "The Edge Collection is an entity representing a collection of connections between neurons in a network of neurons represented as a graph. In this graph representation, nodes represent neurons and edges the connections between neurons. More detailed information can be found on the SONATA data format guide: https://github.com/AllenInstitute/sonata/blob/master/docs/SONATA_DEVELOPER_GUIDE.md#representing-edges." .
 
@@ -855,14 +853,12 @@ nsg:Entity rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalActivity
 nsg:ExperimentalActivity rdf:type owl:Class ;
-
                          rdfs:label "Experimental Activity"@en ;
                          skos:definition "The Experimental Activity is an activity in a scientific experiment. Examples for experimental activities include e.g. brain slicing, whole cell patch clamp or reconstruction of a neuron morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalProtocol
 nsg:ExperimentalProtocol rdf:type owl:Class ;
-
                          rdfs:label "Experimental Protocol"@en ;
                          skos:definition "The Experimental Protocol is an entity describing a protocol used in a scientific experiment. Examples for experimental protocols include e.g. the protocol used to perform the reconstruction of a neuron morphology." .
 
@@ -875,57 +871,48 @@ nsg:FixationStainingMounting rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixedStainedSlice
 nsg:FixedStainedSlice rdf:type owl:Class ;
-
                       rdfs:label "Fixed Stained Slice"@en ;
                       skos:definition "The Fixed Stained Slice is an entity which describes a brain slice which was fixed (using e.g. paraformaldehyde fixative) and stained (using e.g. the DAB-reaction to  highlight biocytin-filled neurons in the brain slice). The fixed stained slice is a revision of a brain slice." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/HostCell
 nsg:HostCell rdf:type owl:Class ;
-
              rdfs:label "Host Cell"@en ;
              skos:definition "The Host Cell is an entity describing a biological cell which serves as a host for the expression of a specific gene of interest. This is e.g. used to study individual ion channels. A common example for a host cell line is the Chinese Hamster Ovary cell line." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageStack
 nsg:ImageStack rdf:type owl:Class ;
-
                rdfs:label "Image Stack"@en ;
                skos:definition "The Image Stack is an entity describing an acquired stack of images of e.g. brain tissue. The stack of images is a series of 2D images which are stacked together to form volumetric data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageVolume
 nsg:ImageVolume rdf:type owl:Class ;
-
                 rdfs:label "Image Volume"@en ;
                 skos:definition "The Image Volume is an entity describing volumetric image data of e.g. brain tissue. An image volume is composed of voxels, the 3D equivalent to pixels in a 2D image." .
 
 
-
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrode
 nsg:IntraCellularSharpElectrode rdf:type owl:Class ;
-
                                 rdfs:label "Intra Cellular Sharp Electrode"@en ;
                                 skos:definition "The Intracellular Sharp Electrode is an activity in which single cells in a brain slice are recorded intracellularly using sharp electrodes. The micropipette (i.e. electrode) used for intracellular sharp electrode recordings are similar to the ones used for patch clamp recordings but have a much smaller opening at the tip." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedCell
 nsg:IntraCellularSharpElectrodeRecordedCell rdf:type owl:Class ;
-
                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en ;
                                             skos:definition "The Intracellular Sharp Electrode Recorded Cell is an entity describing a cell which was recorded using the intracellular sharp electrode technique. Typically, the recorded cell is a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedSlice
 nsg:IntraCellularSharpElectrodeRecordedSlice rdf:type owl:Class ;
-
                                              rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en ;
                                              skos:definition "The Intracellular Sharp Electrode Recorded Slice is a brain slice entity which was used in an intracellular sharp electrode recording. The intracellular sharp electrode recorded slice contains cells which were recorded using sharp electrodes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelGene
 nsg:IonChannelGene rdf:type owl:Class ;
-
                    rdfs:label "Ion Channel Gene"@en ;
                    skos:definition "The Ion Channel Gene is an entity describing the gene encoding a particular ion channel. Ion channels are proteins which allow ions to pass through the membrane of cells by forming a pore-like structure." .
 
@@ -933,15 +920,14 @@ nsg:IonChannelGene rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelMechanismRelease
 nsg:IonChannelMechanismRelease rdf:type owl:Class ;
                                rdfs:subClassOf nsg:ModelRelease ;
-                               rdfs:label "Ion Channel Mechanism Release"@en .
+                               rdfs:label "Ion Channel Mechanism Release"@en ;
+                               skos:definition "An Ion Channel Mechanism Release is a model release which describes the release of a set of subcellular models (such as ion channel mechanisms) for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LabeledCell
 nsg:LabeledCell rdf:type owl:Class ;
-
                 rdfs:label "Labeled Cell"@en ;
                 skos:definition "The Labeled Cell is an entity describing a biological cell which was labeled using a particular dye (e.g. lucifer yellow) or chemical reaction (e.g. DAB-reaction) to make this particular cell 'visible'. In patch-clamp recordings, individual cells are typically filled with biocytin which is then visualised through the DAB-reaction or binding to a streptavidin-fluorophore conjugate." .
-
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LinearTransform
@@ -953,48 +939,51 @@ nsg:LinearTransform rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModel
 nsg:MEModel rdf:type owl:Class ;
             rdfs:subClassOf nsg:Model ;
-
             rdfs:label "MEModel"@en ;
             skos:definition "The ME-Model is a model instance describing the morpho-electrical type of a neuron. At the Blue Brain Project, electrical types of neurons were classified based on an extended version of the Petilla convention (https://doi.org/10.1038/nrn2402). Naming of morphological types was based on most commonly used names (https://doi.org/10.1016/j.cell.2015.09.029)." .
-
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModelRelease
 nsg:MEModelRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
-                   rdfs:label "MEModel Release"@en .
+                   rdfs:label "MEModel Release"@en ;
+                   skos:definition "An ME-Model Release is a model release which combines a specific e-model release and a specific morphology release for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Model
 nsg:Model rdf:type owl:Class ;
-
           rdfs:label "Model"@en ;
           skos:definition "The Model is an entity describing a digital representation of mostly non-digital entities. Within the context of simulation neuroscience, this can e.g. be a model of a neural circuit, a model of the electrical behaviour of a neuron or a model of the subcellular mechanisms impacting the electrical behaviour of a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelInstance
 nsg:ModelInstance rdf:type owl:Class ;
-                  rdfs:label "Model Instance"@en .
+                  rdfs:label "Model Instance"@en ;
+                  skos:definition "The Model Instance is an entity describing details about a digital representation of e.g. neural circuits. In the context of simulation neuroscience, it describes what is being modelled, and to which brain region and species this model applies." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelRelease
 nsg:ModelRelease rdf:type owl:Class ;
-                 rdfs:label "Model Release"@en .
+                 rdfs:label "Model Release"@en ;
+                 skos:definition "The Model Release is an entity describing a particular model instance or a collection thereof which has been agreed on (e.g. based on criteria regarding quality or completeness) to be available for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelReleaseIndex
 nsg:ModelReleaseIndex rdf:type owl:Class ;
-                      rdfs:label "Model Release Index"@en .
+                      rdfs:label "Model Release Index"@en ;
+                      skos:definition "The Model Release Index is en entity describing the indices relevant to a given model release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelValidation
 nsg:ModelValidation rdf:type owl:Class ;
-                    rdfs:label "Model Validation"@en .
+                    rdfs:label "Model Validation"@en ;
+                    skos:definition "The Model Validation is an activity in which a specific model instance is validated against a specific set of data used as reference for the validation. The model validation activity generates a validation result." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Morphology
 nsg:Morphology rdf:type owl:Class ;
-               rdfs:label "Morphology"@en .
+               rdfs:label "Morphology"@en ;
+               skos:definition "A Morphology is a model instance of a neuron morphology, typically described by its m-type and distribution." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyDiversification
@@ -1020,7 +1009,8 @@ nsg:MorphologyOrientationDataLayer rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyRelease
 nsg:MorphologyRelease rdf:type owl:Class ;
                       rdfs:subClassOf nsg:ModelRelease ;
-                      rdfs:label "Morphology Release"@en .
+                      rdfs:label "Morphology Release"@en ;
+                      skos:definition "A Morphology Release is a model release which describes a set of neuron morphologies for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NISSLImageDataLayer
@@ -1219,10 +1209,8 @@ nsg:StimulusExperiment rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModel
 nsg:SubCellularModel rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Model ;
-
                      rdfs:label "Sub Cellular Model"@en ;
-                     skos:definition "" ,
-                                     "The Subcellualr Model is a model instance describing the subcellular mechanisms of a model neuron, such as ion channel mechanisms." .
+                     skos:definition "The Subcellualr Model is a model instance describing the subcellular mechanisms of a model neuron, such as ion channel mechanisms." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModelScript
@@ -1238,7 +1226,8 @@ nsg:Subject rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SynapseRelease
 nsg:SynapseRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
-                   rdfs:label "Synapse Release"@en .
+                   rdfs:label "Synapse Release"@en ;
+                   skos:definition "A Synapse Release is a model release which describes a set of synapse models for further use in the reconstruction and simulation pipeline (in the context of the Blue Brain Project, they are currently identified by a git hash)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Target
