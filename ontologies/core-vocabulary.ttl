@@ -1031,12 +1031,14 @@ nsg:NodeCollection rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/OntologyConversion
 nsg:OntologyConversion rdf:type owl:Class ;
-                       rdfs:label "Ontology Conversion"@en .
+                       rdfs:label "Ontology Conversion"@en ;
+                       skos:definition "The Ontology Conversion is an activty which converts a brain parcellation label into a brain parcellation ontology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Organization
 nsg:Organization rdf:type owl:Class ;
-                 rdfs:label "Organization"@en .
+                 rdfs:label "Organization"@en ;
+                 skos:definition "The Organization is an entity based on the description of http://schema.org/Organization. It can be an organization such as a university, an NGO or a corporation." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PHDataLayer
@@ -1046,32 +1048,38 @@ nsg:PHDataLayer rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationImageData
 nsg:ParcellationImageData rdf:type owl:Class ;
-                          rdfs:label "Parcellation Image Data"@en .
+                          rdfs:label "Parcellation Image Data"@en ;
+                          skos:definition "The Parcellation Image Data is an entity either describing an image stack, an image volume or a document atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationLabel
 nsg:ParcellationLabel rdf:type owl:Class ;
-                      rdfs:label "Parcellation Label"@en .
+                      rdfs:label "Parcellation Label"@en ;
+                      skos:definition "The Parcellation Label is an entity describing a set of human-readable brain parcellation labels and the respective atlas version for which the brain parcellation labels were used." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationMeshGeneration
 nsg:ParcellationMeshGeneration rdf:type owl:Class ;
-                               rdfs:label "Parcellation Mesh Generation"@en .
+                               rdfs:label "Parcellation Mesh Generation"@en ;
+                               skos:definition "The Parcellation Mesh Generation is an activity which uses a brain parcellation volume to generate a brain parcellation mesh." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationOntology
 nsg:ParcellationOntology rdf:type owl:Class ;
-                         rdfs:label "Parcellation Ontology"@en .
+                         rdfs:label "Parcellation Ontology"@en ;
+                         skos:definition "The Parcellation Ontology is an entity which describes the brain parcellation ontology in the context of a specific brain atlas version." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationReconstruction
 nsg:ParcellationReconstruction rdf:type owl:Class ;
-                               rdfs:label "Parcellation Reconstruction"@en .
+                               rdfs:label "Parcellation Reconstruction"@en ;
+                               skos:definition "The Parcellation Reconstruction is an activity which describes the brain parcellation volume reconstruction whereby a brain parcellation volume  is generated from brain parcellation data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationVolume
 nsg:ParcellationVolume rdf:type owl:Class ;
-                       rdfs:label "Parcellation Volume"@en .
+                       rdfs:label "Parcellation Volume"@en ;
+                       skos:definition "The Parcellation Volume is a brain image volume which is registered in an atlas spatial reference system." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchClamp
