@@ -595,17 +595,20 @@ owl:Ontology rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/prov#Activity
 prov:Activity rdf:type owl:Class ;
-              rdfs:label "Activity"@en .
+              rdfs:label "Activity"@en ;
+              skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities (https://www.w3.org/TR/prov-o/#Activity)" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
 prov:Agent rdf:type owl:Class ;
-           rdfs:label "Agent"@en .
+           rdfs:label "Agent"@en ;
+           skos:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity (https://www.w3.org/TR/prov-o/#Agent)." .
 
 
 ###  http://www.w3.org/ns/prov#Collection
 prov:Collection rdf:type owl:Class ;
-                rdfs:label "Collection"@en .
+                rdfs:label "Collection"@en ;
+                skos:definition "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections (https://www.w3.org/TR/prov-o/#Collection)." .
 
 
 ###  http://www.w3.org/ns/prov#Derivation
@@ -615,32 +618,38 @@ prov:Derivation rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/prov#EmptyCollection
 prov:EmptyCollection rdf:type owl:Class ;
-                     rdfs:label "Empty Collection"@en .
+                     rdfs:label "Empty Collection"@en ;
+                     skos:definition "An empty collection is a collection without members (https://www.w3.org/TR/prov-o/#EmptyCollection)." .
 
 
 ###  http://www.w3.org/ns/prov#Entity
 prov:Entity rdf:type owl:Class ;
-            rdfs:label "Entity"@en .
+            rdfs:label "Entity"@en ;
+            skos:definition "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary (https://www.w3.org/TR/prov-o/#Entity)." .
 
 
 ###  http://www.w3.org/ns/prov#Generation
 prov:Generation rdf:type owl:Class ;
-                rdfs:label "Generation"@en .
+                rdfs:label "Generation"@en ;
+                skos:definition "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation (https://www.w3.org/TR/prov-o/#Generation)." .
 
 
 ###  http://www.w3.org/ns/prov#Organization
 prov:Organization rdf:type owl:Class ;
-                  rdfs:label "Organization"@en .
+                  rdfs:label "Organization"@en ;
+                  skos:definition "An organization is a social or legal institution such as a company, society, etc (https://www.w3.org/TR/prov-o/#Organization)." .
 
 
 ###  http://www.w3.org/ns/prov#Person
 prov:Person rdf:type owl:Class ;
-            rdfs:label "Person"@en .
+            rdfs:label "Person"@en ;
+            skos:definition "Person agents are people (https://www.w3.org/TR/prov-o/#Person)." .
 
 
 ###  http://www.w3.org/ns/prov#SoftwareAgent
 prov:SoftwareAgent rdf:type owl:Class ;
-                   rdfs:label "Software Agent"@en .
+                   rdfs:label "Software Agent"@en ;
+                   skos:definition "A software agent is running software (https://www.w3.org/TR/prov-o/#SoftwareAgent)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AcquisitionAnnotation
@@ -734,7 +743,7 @@ nsg:BrainImaging rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationDataLayer
 nsg:BrainParcellationDataLayer rdf:type owl:Class ;
                                rdfs:label "Brain Parcellation Data Layer"@en ;
-                               skos:definition "The Brain Parcellation Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the brain parcellation, i.e. the demarcations of individual brain regions in the context of a specific brain atlas." .
+                               skos:definition "The Brain Parcellation Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the brain parcellation, i.e. the demarcations of individual brain regions in the context of a specific brain atlas. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationMesh
@@ -758,7 +767,7 @@ nsg:Cell rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellDensityDataLayer
 nsg:CellDensityDataLayer rdf:type owl:Class ;
                          rdfs:label "Cell Density Data Layer"@en ;
-                         skos:definition "The Cell Density Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the density of cell types." .
+                         skos:definition "The Cell Density Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the density of cell types. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellPlacement
@@ -1043,7 +1052,8 @@ nsg:Organization rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PHDataLayer
 nsg:PHDataLayer rdf:type owl:Class ;
-                rdfs:label "PHData Layer"@en .
+                rdfs:label "PHData Layer"@en ;
+                skos:definition "The PH Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and describes the PH data. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationImageData
@@ -1084,27 +1094,32 @@ nsg:ParcellationVolume rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchClamp
 nsg:PatchClamp rdf:type owl:Class ;
-               rdfs:label "Patch Clamp"@en .
+               rdfs:label "Patch Clamp"@en ;
+               skos:definition "The Patch Clamp is an activty describing an experimental method used in electrophysiology to study ionic currents across biological membranes. It is primarily used to study excitable cells such as neurons." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedCell
 nsg:PatchedCell rdf:type owl:Class ;
-                rdfs:label "Patched Cell"@en .
+                rdfs:label "Patched Cell"@en ;
+                skos:definition "The Patched Cell is an entity which describes a biological cell that was patched using a patch-clamp technique." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedSlice
 nsg:PatchedSlice rdf:type owl:Class ;
-                 rdfs:label "Patched Slice"@en .
+                 rdfs:label "Patched Slice"@en ;
+                 skos:definition "The Patched Slice is an entity which is a revision of a brain slice entity which was used in a patch-clamp experiment and typically contains a number of patched cells." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Person
 nsg:Person rdf:type owl:Class ;
-           rdfs:label "Person"@en .
+           rdfs:label "Person"@en ;
+           skos:definition "The Person is an agent describing https://schema.org/Person, i.e. a person (either alive, dead, undead or fictional)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Protocol
 nsg:Protocol rdf:type owl:Class ;
-             rdfs:label "Protocol"@en .
+             rdfs:label "Protocol"@en ;
+             skos:definition "The Protocol is an entity which describes a procedural method used in a science context to provide details about design and implementation of e.g. experiments." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCell
