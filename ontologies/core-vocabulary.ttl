@@ -670,7 +670,8 @@ nsg:Activity rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AffineLinearTransform
 nsg:AffineLinearTransform rdf:type owl:Class ;
                           rdfs:subClassOf nsg:Transform ;
-                          rdfs:label "Affine Linear Transform"@en .
+                          rdfs:label "Affine Linear Transform"@en ;
+                          skos:definition "The Affine Linear Transform is a function between affine spaces which preserves points, straight lines and planes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Agent
@@ -800,7 +801,8 @@ nsg:Configuration rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DeformableTransform
 nsg:DeformableTransform rdf:type owl:Class ;
                         rdfs:subClassOf nsg:Transform ;
-                        rdfs:label "Deformable Transform"@en .
+                        rdfs:label "Deformable Transform"@en ;
+                        skos:definition "The Deformable Transform includes parametric and non-parametric functions and is typically described by a displacement vector field." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DetailedCircuit
@@ -946,7 +948,8 @@ nsg:LabeledCell rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LinearTransform
 nsg:LinearTransform rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Transform ;
-                    rdfs:label "Linear Transform"@en .
+                    rdfs:label "Linear Transform"@en ;
+                    skos:definition "The Linear Transform is a function, including rigid and affine functions, described by a 3x4 matrix." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModel
@@ -1197,7 +1200,8 @@ nsg:RegionOfInterest rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RigidLinearTransform
 nsg:RigidLinearTransform rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Transform ;
-                         rdfs:label "Rigid Linear Transform"@en .
+                         rdfs:label "Rigid Linear Transform"@en ;
+                         skos:definition "The Rigid Linear Transform is a linear function described by a 3x4 matrix." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RotationalMatrix
@@ -1355,22 +1359,26 @@ nsg:Transfection rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transform
 nsg:Transform rdf:type owl:Class ;
               rdfs:subClassOf nsg:Transform ;
-              rdfs:label "Transform"@en .
+              rdfs:label "Transform"@en ;
+              skos:definition "The Transform is an entity which describes a mathematical function." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transformation
 nsg:Transformation rdf:type owl:Class ;
-                   rdfs:label "Transformation"@en .
+                   rdfs:label "Transformation"@en ;
+                   skos:definition "The Transformation is an activity describing the transformation of one transformable object into another. Output and input object of the transformation should have the same type. Examples for transformable objects are images or in the context of neuroscience, neuron morphology reconstructions." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TwoPhotonImageDataLayer
 nsg:TwoPhotonImageDataLayer rdf:type owl:Class ;
-                            rdfs:label "Two Photon Image Data Layer"@en .
+                            rdfs:label "Two Photon Image Data Layer"@en ;
+                            skos:definition "The Two Photon Image Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing images acquired using the two-photon imaging method. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ValidationResult
 nsg:ValidationResult rdf:type owl:Class ;
-                     rdfs:label "Validation Result"@en .
+                     rdfs:label "Validation Result"@en ;
+                     skos:definition "The Validation Result is an entity which describes the result of the validation of e.g. a model instance or a simulation. The validation result can comprise validation data such as scores or figures." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VariableReportShape
@@ -1380,12 +1388,14 @@ nsg:VariableReportShape rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumetricDataLayer
 nsg:VolumetricDataLayer rdf:type owl:Class ;
-                        rdfs:label "Volumetric Data Layer"@en .
+                        rdfs:label "Volumetric Data Layer"@en ;
+                        skos:definition "The Volumetric Data Layer is an entity relevant in the context of the representation of volumetric data. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/WholeCellPatchClamp
 nsg:WholeCellPatchClamp rdf:type owl:Class ;
-                        rdfs:label "Whole Cell Patch Clamp"@en .
+                        rdfs:label "Whole Cell Patch Clamp"@en ;
+                        skos:definition "The Whole Cell Patch Clamp is a patch clamp activty describing an experimental method used in electrophysiology to study ionic currents  over the membrane of the entire cell. It is primarily used to study excitable cells such as neurons." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/Instance
