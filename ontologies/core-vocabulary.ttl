@@ -570,22 +570,26 @@ dcterms:FileFormat rdf:type owl:Class ;
 
 ###  http://schema.org/Identifier
 schema:Identifier rdf:type owl:Class ;
-                  rdfs:label "Identifier"@en .
+                  rdfs:label "Identifier"@en ;
+                  skos:definition "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details (https://schema.org/identifier)." .
 
 
 ###  http://schema.org/Organization
 schema:Organization rdf:type owl:Class ;
-                    rdfs:label "Organization"@en .
+                    rdfs:label "Organization"@en ;
+                    skos:definition "An organization such as a school, NGO, corporation, club, etc (https://schema.org/Organization)." .
 
 
 ###  http://schema.org/Person
 schema:Person rdf:type owl:Class ;
-              rdfs:label "Person"@en .
+              rdfs:label "Person"@en ;
+              skos:definition "A person (alive, dead, undead, or fictional) (https://schema.org/Person)." .
 
 
 ###  http://schema.org/PropertyValue
 schema:PropertyValue rdf:type owl:Class ;
-                     rdfs:label "Property Value"@en .
+                     rdfs:label "Property Value"@en ;
+                     skos:definition "A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property. Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property (https://schema.org/PropertyValue)." .
 
 
 ###  http://www.w3.org/2002/07/owl#Ontology
@@ -595,17 +599,20 @@ owl:Ontology rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/prov#Activity
 prov:Activity rdf:type owl:Class ;
-              rdfs:label "Activity"@en .
+              rdfs:label "Activity"@en ;
+              skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities (https://www.w3.org/TR/prov-o/#Activity)" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
 prov:Agent rdf:type owl:Class ;
-           rdfs:label "Agent"@en .
+           rdfs:label "Agent"@en ;
+           skos:definition "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity (https://www.w3.org/TR/prov-o/#Agent)." .
 
 
 ###  http://www.w3.org/ns/prov#Collection
 prov:Collection rdf:type owl:Class ;
-                rdfs:label "Collection"@en .
+                rdfs:label "Collection"@en ;
+                skos:definition "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections (https://www.w3.org/TR/prov-o/#Collection)." .
 
 
 ###  http://www.w3.org/ns/prov#Derivation
@@ -615,32 +622,38 @@ prov:Derivation rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/prov#EmptyCollection
 prov:EmptyCollection rdf:type owl:Class ;
-                     rdfs:label "Empty Collection"@en .
+                     rdfs:label "Empty Collection"@en ;
+                     skos:definition "An empty collection is a collection without members (https://www.w3.org/TR/prov-o/#EmptyCollection)." .
 
 
 ###  http://www.w3.org/ns/prov#Entity
 prov:Entity rdf:type owl:Class ;
-            rdfs:label "Entity"@en .
+            rdfs:label "Entity"@en ;
+            skos:definition "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary (https://www.w3.org/TR/prov-o/#Entity)." .
 
 
 ###  http://www.w3.org/ns/prov#Generation
 prov:Generation rdf:type owl:Class ;
-                rdfs:label "Generation"@en .
+                rdfs:label "Generation"@en ;
+                skos:definition "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation (https://www.w3.org/TR/prov-o/#Generation)." .
 
 
 ###  http://www.w3.org/ns/prov#Organization
 prov:Organization rdf:type owl:Class ;
-                  rdfs:label "Organization"@en .
+                  rdfs:label "Organization"@en ;
+                  skos:definition "An organization is a social or legal institution such as a company, society, etc (https://www.w3.org/TR/prov-o/#Organization)." .
 
 
 ###  http://www.w3.org/ns/prov#Person
 prov:Person rdf:type owl:Class ;
-            rdfs:label "Person"@en .
+            rdfs:label "Person"@en ;
+            skos:definition "Person agents are people (https://www.w3.org/TR/prov-o/#Person)." .
 
 
 ###  http://www.w3.org/ns/prov#SoftwareAgent
 prov:SoftwareAgent rdf:type owl:Class ;
-                   rdfs:label "Software Agent"@en .
+                   rdfs:label "Software Agent"@en ;
+                   skos:definition "A software agent is running software (https://www.w3.org/TR/prov-o/#SoftwareAgent)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AcquisitionAnnotation
@@ -657,7 +670,8 @@ nsg:Activity rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AffineLinearTransform
 nsg:AffineLinearTransform rdf:type owl:Class ;
                           rdfs:subClassOf nsg:Transform ;
-                          rdfs:label "Affine Linear Transform"@en .
+                          rdfs:label "Affine Linear Transform"@en ;
+                          skos:definition "The Affine Linear Transform is a function between affine spaces which preserves points, straight lines and planes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Agent
@@ -733,12 +747,14 @@ nsg:BrainImaging rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationDataLayer
 nsg:BrainParcellationDataLayer rdf:type owl:Class ;
-                               rdfs:label "Brain Parcellation Data Layer"@en .
+                               rdfs:label "Brain Parcellation Data Layer"@en ;
+                               skos:definition "The Brain Parcellation Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the brain parcellation, i.e. the demarcations of individual brain regions in the context of a specific brain atlas. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationMesh
 nsg:BrainParcellationMesh rdf:type owl:Class ;
-                          rdfs:label "Brain Parcellation Mesh"@en .
+                          rdfs:label "Brain Parcellation Mesh"@en ;
+                          skos:definition "The Brain Parcellation Mesh is an entity containing the meshing information for brain parcels. A mesh in the context of brain parcels describes the 'surface' of the individual brain parcels." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainSlicing
@@ -749,22 +765,26 @@ nsg:BrainSlicing rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Cell
 nsg:Cell rdf:type owl:Class ;
-         rdfs:label "Cell"@en .
+         rdfs:label "Cell"@en ;
+         skos:definition "The Cell is an entity describing any kind of biological cell. Biological cells consist of biomolecules and cytoplasm enclosed within a membrane. Examples of more speciliased biological cells in the brain include e.g. neurons and astrocytes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellDensityDataLayer
 nsg:CellDensityDataLayer rdf:type owl:Class ;
-                         rdfs:label "Cell Density Data Layer"@en .
+                         rdfs:label "Cell Density Data Layer"@en ;
+                         skos:definition "The Cell Density Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing information about the density of cell types. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellPlacement
 nsg:CellPlacement rdf:type owl:Class ;
-                  rdfs:label "Cell Placement"@en .
+                  rdfs:label "Cell Placement"@en ;
+                  skos:definition "The Cell Placement is an entity describing how the cells of a circuit are placed in 3D space, e.g. the placement of neurons with a specific morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CircuitCellProperties
 nsg:CircuitCellProperties rdf:type owl:Class ;
-                          rdfs:label "Circuit Cell Properties"@en .
+                          rdfs:label "Circuit Cell Properties"@en ;
+                          skos:definition "The Circuit Cell Properties is an entity about the cell properties of cells in a digitally reconstructed circuit of brain cells. These can include e.g. the cell placement or cell orientation." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Collection
@@ -781,46 +801,54 @@ nsg:Configuration rdf:type owl:Class ;
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DeformableTransform
 nsg:DeformableTransform rdf:type owl:Class ;
                         rdfs:subClassOf nsg:Transform ;
-                        rdfs:label "Deformable Transform"@en .
+                        rdfs:label "Deformable Transform"@en ;
+                        skos:definition "The Deformable Transform includes parametric and non-parametric functions and is typically described by a displacement vector field." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DetailedCircuit
 nsg:DetailedCircuit rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Model ;
-                    rdfs:label "Detailed Circuit"@en .
+                    rdfs:label "Detailed Circuit"@en ;
+                    skos:definition "The Detailed Circuit is a model instance describing a digital representation of a neural circuit comprising a collection of edges (representing the connections between neurons) and nodes (representing the neurons)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModel
 nsg:EModel rdf:type owl:Class ;
            rdfs:subClassOf nsg:Model ;
-           rdfs:label "EModel"@en .
+           rdfs:label "EModel"@en ;
+           skos:definition "The E-Model is a model instance describing the characteristic electrical behaviour of an electrical type of a neuron. At the Blue Brain Project, electrical types of neurons were classified based on an extended version of the Petilla convention (https://doi.org/10.1038/nrn2402)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelBuilding
 nsg:EModelBuilding rdf:type owl:Class ;
-                   rdfs:label "EModel Building"@en .
+                   rdfs:label "EModel Building"@en ;
+                   skos:definition "The E-Model Building is an activity of generating an e-model by using a neuron morphology to fit model parameters." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelRelease
 nsg:EModelRelease rdf:type owl:Class ;
                   rdfs:subClassOf nsg:ModelRelease ;
-                  rdfs:label "EModel Release"@en .
+                  rdfs:label "EModel Release"@en ;
+                  skos:definition "An E-Model Release is a model release which describes the release of a set of e-models (i.e. the output of the software package BluePyOpt (https://github.com/BlueBrain/BluePyOpt)) for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelScript
 nsg:EModelScript rdf:type owl:Class ;
-                 rdfs:label "EModel Script"@en .
+                 rdfs:label "EModel Script"@en ;
+                 skos:definition "The E-Model Script is an entity describing the script (typically a .mod file) used for a particular electrical model of a single cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ETypeFeatureProtocol
 nsg:ETypeFeatureProtocol rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Model ;
-                         rdfs:label "EType Feature Protocol"@en .
+                         rdfs:label "EType Feature Protocol"@en ;
+                         skos:definition "The E-Type Feature Protocol is a model instance describing the extracted electrical features for an electrical type and the corresponding protocols." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EdgeCollection
 nsg:EdgeCollection rdf:type owl:Class ;
-                   rdfs:label "Edge Collection"@en .
+                   rdfs:label "Edge Collection"@en ;
+                   skos:definition "The Edge Collection is an entity representing a collection of connections between neurons in a network of neurons represented as a graph. In this graph representation, nodes represent neurons and edges the connections between neurons. More detailed information can be found on the SONATA data format guide: https://github.com/AllenInstitute/sonata/blob/master/docs/SONATA_DEVELOPER_GUIDE.md#representing-edges." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EmodelFeatureGeneration
@@ -840,12 +868,14 @@ nsg:Entity rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalActivity
 nsg:ExperimentalActivity rdf:type owl:Class ;
-                         rdfs:label "Experimental Activity"@en .
+                         rdfs:label "Experimental Activity"@en ;
+                         skos:definition "The Experimental Activity is an activity in a scientific experiment. Examples for experimental activities include e.g. brain slicing, whole cell patch clamp or reconstruction of a neuron morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalProtocol
 nsg:ExperimentalProtocol rdf:type owl:Class ;
-                         rdfs:label "Experimental Protocol"@en .
+                         rdfs:label "Experimental Protocol"@en ;
+                         skos:definition "The Experimental Protocol is an entity describing a protocol used in a scientific experiment. Examples for experimental protocols include e.g. the protocol used to perform the reconstruction of a neuron morphology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixationStainingMounting
@@ -856,418 +886,499 @@ nsg:FixationStainingMounting rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixedStainedSlice
 nsg:FixedStainedSlice rdf:type owl:Class ;
-                      rdfs:label "Fixed Stained Slice"@en .
+                      rdfs:label "Fixed Stained Slice"@en ;
+                      skos:definition "The Fixed Stained Slice is an entity which describes a brain slice which was fixed (using e.g. paraformaldehyde fixative) and stained (using e.g. the DAB-reaction to  highlight biocytin-filled neurons in the brain slice). The fixed stained slice is a revision of a brain slice." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/HostCell
 nsg:HostCell rdf:type owl:Class ;
-             rdfs:label "Host Cell"@en .
+             rdfs:label "Host Cell"@en ;
+             skos:definition "The Host Cell is an entity describing a biological cell which serves as a host for the expression of a specific gene of interest. This is e.g. used to study individual ion channels. A common example for a host cell line is the Chinese Hamster Ovary cell line." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageStack
 nsg:ImageStack rdf:type owl:Class ;
-               rdfs:label "Image Stack"@en .
+               rdfs:label "Image Stack"@en ;
+               skos:definition "The Image Stack is an entity describing an acquired stack of images of e.g. brain tissue. The stack of images is a series of 2D images which are stacked together to form volumetric data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageVolume
 nsg:ImageVolume rdf:type owl:Class ;
-                rdfs:label "Image Volume"@en .
+                rdfs:label "Image Volume"@en ;
+                skos:definition "The Image Volume is an entity describing volumetric image data of e.g. brain tissue. An image volume is composed of voxels, the 3D equivalent to pixels in a 2D image." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrode
 nsg:IntraCellularSharpElectrode rdf:type owl:Class ;
-                                rdfs:label "Intra Cellular Sharp Electrode"@en .
+                                rdfs:label "Intra Cellular Sharp Electrode"@en ;
+                                skos:definition "The Intracellular Sharp Electrode is an activity in which single cells in a brain slice are recorded intracellularly using sharp electrodes. The micropipette (i.e. electrode) used for intracellular sharp electrode recordings are similar to the ones used for patch clamp recordings but have a much smaller opening at the tip." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedCell
 nsg:IntraCellularSharpElectrodeRecordedCell rdf:type owl:Class ;
-                                            rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en .
+                                            rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en ;
+                                            skos:definition "The Intracellular Sharp Electrode Recorded Cell is an entity describing a cell which was recorded using the intracellular sharp electrode technique. Typically, the recorded cell is a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedSlice
 nsg:IntraCellularSharpElectrodeRecordedSlice rdf:type owl:Class ;
-                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en .
+                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en ;
+                                             skos:definition "The Intracellular Sharp Electrode Recorded Slice is a brain slice entity which was used in an intracellular sharp electrode recording. The intracellular sharp electrode recorded slice contains cells which were recorded using sharp electrodes." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelGene
 nsg:IonChannelGene rdf:type owl:Class ;
-                   rdfs:label "Ion Channel Gene"@en .
+                   rdfs:label "Ion Channel Gene"@en ;
+                   skos:definition "The Ion Channel Gene is an entity describing the gene encoding a particular ion channel. Ion channels are proteins which allow ions to pass through the membrane of cells by forming a pore-like structure." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelMechanismRelease
 nsg:IonChannelMechanismRelease rdf:type owl:Class ;
                                rdfs:subClassOf nsg:ModelRelease ;
-                               rdfs:label "Ion Channel Mechanism Release"@en .
+                               rdfs:label "Ion Channel Mechanism Release"@en ;
+                               skos:definition "An Ion Channel Mechanism Release is a model release which describes the release of a set of subcellular models (such as ion channel mechanisms) for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LabeledCell
 nsg:LabeledCell rdf:type owl:Class ;
-                rdfs:label "Labeled Cell"@en .
+                rdfs:label "Labeled Cell"@en ;
+                skos:definition "The Labeled Cell is an entity describing a biological cell which was labeled using a particular dye (e.g. lucifer yellow) or chemical reaction (e.g. DAB-reaction) to make this particular cell 'visible'. In patch-clamp recordings, individual cells are typically filled with biocytin which is then visualised through the DAB-reaction or binding to a streptavidin-fluorophore conjugate." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LinearTransform
 nsg:LinearTransform rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Transform ;
-                    rdfs:label "Linear Transform"@en .
+                    rdfs:label "Linear Transform"@en ;
+                    skos:definition "The Linear Transform is a function, including rigid and affine functions, described by a 3x4 matrix." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModel
 nsg:MEModel rdf:type owl:Class ;
             rdfs:subClassOf nsg:Model ;
-            rdfs:label "MEModel"@en .
+            rdfs:label "MEModel"@en ;
+            skos:definition "The ME-Model is a model instance describing the morpho-electrical type of a neuron. At the Blue Brain Project, electrical types of neurons were classified based on an extended version of the Petilla convention (https://doi.org/10.1038/nrn2402). Naming of morphological types was based on most commonly used names (https://doi.org/10.1016/j.cell.2015.09.029)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModelRelease
 nsg:MEModelRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
-                   rdfs:label "MEModel Release"@en .
+                   rdfs:label "MEModel Release"@en ;
+                   skos:definition "An ME-Model Release is a model release which combines a specific e-model release and a specific morphology release for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Model
 nsg:Model rdf:type owl:Class ;
-          rdfs:label "Model"@en .
+          rdfs:label "Model"@en ;
+          skos:definition "The Model is an entity describing a digital representation of mostly non-digital entities. Within the context of simulation neuroscience, this can e.g. be a model of a neural circuit, a model of the electrical behaviour of a neuron or a model of the subcellular mechanisms impacting the electrical behaviour of a neuron." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelInstance
 nsg:ModelInstance rdf:type owl:Class ;
-                  rdfs:label "Model Instance"@en .
+                  rdfs:label "Model Instance"@en ;
+                  skos:definition "The Model Instance is an entity describing details about a digital representation of e.g. neural circuits. In the context of simulation neuroscience, it describes what is being modelled, and to which brain region and species this model applies." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelRelease
 nsg:ModelRelease rdf:type owl:Class ;
-                 rdfs:label "Model Release"@en .
+                 rdfs:label "Model Release"@en ;
+                 skos:definition "The Model Release is an entity describing a particular model instance or a collection thereof which has been agreed on (e.g. based on criteria regarding quality or completeness) to be available for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelReleaseIndex
 nsg:ModelReleaseIndex rdf:type owl:Class ;
-                      rdfs:label "Model Release Index"@en .
+                      rdfs:label "Model Release Index"@en ;
+                      skos:definition "The Model Release Index is en entity describing the indices relevant to a given model release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelValidation
 nsg:ModelValidation rdf:type owl:Class ;
-                    rdfs:label "Model Validation"@en .
+                    rdfs:label "Model Validation"@en ;
+                    skos:definition "The Model Validation is an activity in which a specific model instance is validated against a specific set of data used as reference for the validation. The model validation activity generates a validation result." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Morphology
 nsg:Morphology rdf:type owl:Class ;
-               rdfs:label "Morphology"@en .
+               rdfs:label "Morphology"@en ;
+               skos:definition "A Morphology is a model instance of a neuron morphology, typically described by its m-type and distribution." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyDiversification
 nsg:MorphologyDiversification rdf:type owl:Class ;
-                              rdfs:label "Morphology Diversification"@en .
+                              rdfs:label "Morphology Diversification"@en ;
+                              skos:definition "The Morphology Diversification is an activity in which a morphology release is generated from a set of neuron morphologies by applying various diversification protocols such as neuron morphology repair, scaling, grafting, cloning or mix-and-matching." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMesh
 nsg:MorphologyMesh rdf:type owl:Class ;
-                   rdfs:label "Morphology Mesh"@en .
+                   rdfs:label "Morphology Mesh"@en ;
+                   skos:definition "The Morphology Mesh is an entity which describes a mesh representation of neuron morphologies." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMeshGeneration
 nsg:MorphologyMeshGeneration rdf:type owl:Class ;
-                             rdfs:label "Morphology Mesh Generation"@en .
+                             rdfs:label "Morphology Mesh Generation"@en ;
+                             skos:definition "The Morphology Mesh Generation is an activity which describes the generation of a mesh representation of a neuron morphology from an experimental reconstructed cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyOrientationDataLayer
 nsg:MorphologyOrientationDataLayer rdf:type owl:Class ;
-                                   rdfs:label "Morphology Orientation Data Layer"@en .
+                                   rdfs:label "Morphology Orientation Data Layer"@en ;
+                                   skos:definition "The Morphology Orientation Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and descirbes the orientation of morphologies. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyRelease
 nsg:MorphologyRelease rdf:type owl:Class ;
                       rdfs:subClassOf nsg:ModelRelease ;
-                      rdfs:label "Morphology Release"@en .
+                      rdfs:label "Morphology Release"@en ;
+                      skos:definition "A Morphology Release is a model release which describes a set of neuron morphologies for further use in the reconstruction and simulation pipeline." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NISSLImageDataLayer
 nsg:NISSLImageDataLayer rdf:type owl:Class ;
-                        rdfs:label "NISSLImage Data Layer"@en .
+                        rdfs:label "NISSLImage Data Layer"@en ;
+                        skos:definition "The Nissl Image Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and describes the Nissl-stained image data. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NodeCollection
 nsg:NodeCollection rdf:type owl:Class ;
-                   rdfs:label "Node Collection"@en .
+                   rdfs:label "Node Collection"@en ;
+                   skos:definition "The Node Collection is an entity representing a collection of neurons represented as a graph. In this graph representation, nodes represent neurons and edges the connections between neurons. More detailed information can be found on the SONATA data format guide: https://github.com/AllenInstitute/sonata/blob/master/docs/SONATA_DEVELOPER_GUIDE.md#representing-edges." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/OntologyConversion
 nsg:OntologyConversion rdf:type owl:Class ;
-                       rdfs:label "Ontology Conversion"@en .
+                       rdfs:label "Ontology Conversion"@en ;
+                       skos:definition "The Ontology Conversion is an activty which converts a brain parcellation label into a brain parcellation ontology." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Organization
 nsg:Organization rdf:type owl:Class ;
-                 rdfs:label "Organization"@en .
+                 rdfs:label "Organization"@en ;
+                 skos:definition "The Organization is an entity based on the description of http://schema.org/Organization. It can be an organization such as a university, an NGO or a corporation." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PHDataLayer
 nsg:PHDataLayer rdf:type owl:Class ;
-                rdfs:label "PHData Layer"@en .
+                rdfs:label "PHData Layer"@en ;
+                skos:definition "The PH Data Layer is a volumetric data layer entity which belongs to the voxel brain data shape definition and describes the PH data. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationImageData
 nsg:ParcellationImageData rdf:type owl:Class ;
-                          rdfs:label "Parcellation Image Data"@en .
+                          rdfs:label "Parcellation Image Data"@en ;
+                          skos:definition "The Parcellation Image Data is an entity either describing an image stack, an image volume or a document atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationLabel
 nsg:ParcellationLabel rdf:type owl:Class ;
-                      rdfs:label "Parcellation Label"@en .
+                      rdfs:label "Parcellation Label"@en ;
+                      skos:definition "The Parcellation Label is an entity describing a set of human-readable brain parcellation labels and the respective atlas version for which the brain parcellation labels were used." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationMeshGeneration
 nsg:ParcellationMeshGeneration rdf:type owl:Class ;
-                               rdfs:label "Parcellation Mesh Generation"@en .
+                               rdfs:label "Parcellation Mesh Generation"@en ;
+                               skos:definition "The Parcellation Mesh Generation is an activity which uses a brain parcellation volume to generate a brain parcellation mesh." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationOntology
 nsg:ParcellationOntology rdf:type owl:Class ;
-                         rdfs:label "Parcellation Ontology"@en .
+                         rdfs:label "Parcellation Ontology"@en ;
+                         skos:definition "The Parcellation Ontology is an entity which describes the brain parcellation ontology in the context of a specific brain atlas version." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationReconstruction
 nsg:ParcellationReconstruction rdf:type owl:Class ;
-                               rdfs:label "Parcellation Reconstruction"@en .
+                               rdfs:label "Parcellation Reconstruction"@en ;
+                               skos:definition "The Parcellation Reconstruction is an activity which describes the brain parcellation volume reconstruction whereby a brain parcellation volume  is generated from brain parcellation data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationVolume
 nsg:ParcellationVolume rdf:type owl:Class ;
-                       rdfs:label "Parcellation Volume"@en .
+                       rdfs:label "Parcellation Volume"@en ;
+                       skos:definition "The Parcellation Volume is a brain image volume which is registered in an atlas spatial reference system." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchClamp
 nsg:PatchClamp rdf:type owl:Class ;
-               rdfs:label "Patch Clamp"@en .
+               rdfs:label "Patch Clamp"@en ;
+               skos:definition "The Patch Clamp is an activty describing an experimental method used in electrophysiology to study ionic currents across biological membranes. It is primarily used to study excitable cells such as neurons." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedCell
 nsg:PatchedCell rdf:type owl:Class ;
-                rdfs:label "Patched Cell"@en .
+                rdfs:label "Patched Cell"@en ;
+                skos:definition "The Patched Cell is an entity which describes a biological cell that was patched using a patch-clamp technique." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedSlice
 nsg:PatchedSlice rdf:type owl:Class ;
-                 rdfs:label "Patched Slice"@en .
+                 rdfs:label "Patched Slice"@en ;
+                 skos:definition "The Patched Slice is an entity which is a revision of a brain slice entity which was used in a patch-clamp experiment and typically contains a number of patched cells." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Person
 nsg:Person rdf:type owl:Class ;
-           rdfs:label "Person"@en .
+           rdfs:label "Person"@en ;
+           skos:definition "The Person is an agent describing https://schema.org/Person, i.e. a person (either alive, dead, undead or fictional)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Protocol
 nsg:Protocol rdf:type owl:Class ;
-             rdfs:label "Protocol"@en .
+             rdfs:label "Protocol"@en ;
+             skos:definition "The Protocol is an entity which describes a procedural method used in a science context to provide details about design and implementation of e.g. experiments." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCell
 nsg:ReconstructedCell rdf:type owl:Class ;
-                      rdfs:label "Reconstructed Cell"@en .
+                      rdfs:label "Reconstructed Cell"@en ;
+                      skos:definition "The Reconstructed Cell is an entity which describes a morphology reconstruction of a biological cell. Neuron morphology reconstructions are typically performed manually or semi-automatically by using neuron tracing software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellFormatConversion
 nsg:ReconstructedCellFormatConversion rdf:type owl:Class ;
-                                      rdfs:label "Reconstructed Cell Format Conversion"@en .
+                                      rdfs:label "Reconstructed Cell Format Conversion"@en ;
+                                      skos:definition "The Reconstructed Cell Format Conversion is an activity whereby the file format of a given reconstructed cell entity is converted into another. Typically, this concerns conversions from ASC to SWC format or vice versa." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellRelease
 nsg:ReconstructedCellRelease rdf:type owl:Class ;
-                             rdfs:label "Reconstructed Cell Release"@en .
+                             rdfs:label "Reconstructed Cell Release"@en ;
+                             skos:definition "The Reconstructed Cell Release is an entity which describes a set of reconstructed cell entities for further use." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseGeneration
 nsg:ReconstructedCellReleaseGeneration rdf:type owl:Class ;
-                                       rdfs:label "Reconstructed Cell Release Generation"@en .
+                                       rdfs:label "Reconstructed Cell Release Generation"@en ;
+                                       skos:definition "The Reconstructed Cell Release Generation describes the context of the generation of a reconstructed cell release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseProcess
 nsg:ReconstructedCellReleaseProcess rdf:type owl:Class ;
-                                    rdfs:label "Reconstructed Cell Release Process"@en .
+                                    rdfs:label "Reconstructed Cell Release Process"@en ;
+                                    skos:definition "The Reconstructed Cell Release Process is an activity which uses a set of reconstructed cell entites to generate a reconstructed cell release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedPatchedCell
 nsg:ReconstructedPatchedCell rdf:type owl:Class ;
                              rdfs:subClassOf nsg:ReconstructedCell ;
-                             rdfs:label "Reconstructed Patched Cell"@en .
+                             rdfs:label "Reconstructed Patched Cell"@en ;
+                             skos:definition "The Reconstructed Patched Cell is a reconstructed cell entity which was reconstructed from a biological cell used in a patch-clamp experiment." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedWholeBrainCell
 nsg:ReconstructedWholeBrainCell rdf:type owl:Class ;
                                 rdfs:subClassOf nsg:ReconstructedCell ;
-                                rdfs:label "Reconstructed Whole Brain Cell"@en .
+                                rdfs:label "Reconstructed Whole Brain Cell"@en ;
+                                skos:definition "The Reconstructed Whole Brain Cell is a reconstructed cell entity which was reconstructed from a whole brain image stack or volume." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Reconstruction
 nsg:Reconstruction rdf:type owl:Class ;
-                   rdfs:label "Reconstruction"@en .
+                   rdfs:label "Reconstruction"@en ;
+                   skos:definition "The Reconstruction is an activity that describes the reconstruction of e.g. a neuron morphology. Typically, the reconstruction is performed manually or semi-automatically using reconstruction software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionCorrection
 nsg:ReconstructionCorrection rdf:type owl:Class ;
-                             rdfs:label "Reconstruction Correction"@en .
+                             rdfs:label "Reconstruction Correction"@en ;
+                             skos:definition "The Reconstruction Correction is an activity in which errors such as deviations in the Z values of a contour ('z-jumps') of a reconstructed cell entity are corrected and a corrected revision of the reconstructed cell entity is generated." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionFromImage
 nsg:ReconstructionFromImage rdf:type owl:Class ;
-                            rdfs:label "Reconstruction From Image"@en .
+                            rdfs:label "Reconstruction From Image"@en ;
+                            skos:definition "The Reconstruction From Image is a reconstruction activity that describes the reconstruction of e.g. a neuron morphology from an image stack (rather than a 'live' reconstruction directly from the tissue). Typically, the reconstruction is performed manually or semi-automatically using reconstruction software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RegionOfInterest
 nsg:RegionOfInterest rdf:type owl:Class ;
-                     rdfs:label "Region Of Interest"@en .
+                     rdfs:label "Region Of Interest"@en ;
+                     skos:definition "The Region Of Interest is an entity which allows to select an area of interest within a dataset . In the context of brain image volumes, this can e.g. be a sub-volume outlined by contours within the bigger brain image volume." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RigidLinearTransform
 nsg:RigidLinearTransform rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Transform ;
-                         rdfs:label "Rigid Linear Transform"@en .
+                         rdfs:label "Rigid Linear Transform"@en ;
+                         skos:definition "The Rigid Linear Transform is a linear function described by a 3x4 matrix." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RotationalMatrix
 nsg:RotationalMatrix rdf:type owl:Class ;
-                     rdfs:label "Rotational Matrix"@en .
+                     rdfs:label "Rotational Matrix"@en ;
+                     skos:definition "The Rotational Matrix is a matrix which describes a matrix used to e.g. perform a rotation in Euclidean space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SimplifiedCircuit
 nsg:SimplifiedCircuit rdf:type owl:Class ;
-                      rdfs:label "Simplified Circuit"@en .
+                      rdfs:label "Simplified Circuit"@en ;
+                      skos:definition "The Simplified Circuit is a model instance describing a neural circuit composed of a collection of nodes and edges. The simplified circuit applies to a given brain region and species." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Simulation
 nsg:Simulation rdf:type owl:Class ;
-               rdfs:label "Simulation"@en .
+               rdfs:label "Simulation"@en ;
+               skos:definition "The Simulation is an activity which uses a model instance and a provided configuration to generate a variable report indicating the values of the variables which were simulated in the activity. In the context of simulation neuroscience, this can e.g. be the simulation of the eletrical behaviour in simplified neural circuit." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellSimulationTrace
 nsg:SingleCellSimulationTrace rdf:type owl:Class ;
-                              rdfs:label "Single Cell Simulation Trace"@en .
+                              rdfs:label "Single Cell Simulation Trace"@en ;
+                              skos:definition "The Single Cell Simulation Trace is a trace entity describing one simulated electrical trace / recording of a single cell. Typically, a trace describes the voltage or current changes across the cell membrane as a function of time." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellTraceGeneration
 nsg:SingleCellTraceGeneration rdf:type owl:Class ;
-                              rdfs:label "Single Cell Trace Generation"@en .
+                              rdfs:label "Single Cell Trace Generation"@en ;
+                              skos:definition "The Single Cell Trace Generation is an activity describing the generation of a trace of a simulated single cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Slice
 nsg:Slice rdf:type owl:Class ;
-          rdfs:label "Slice"@en .
+          rdfs:label "Slice"@en ;
+          skos:definition "The Slice is an entity describing a brain slice, i.e. a slice of tissue cut from a brain." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SoftwareAgent
 nsg:SoftwareAgent rdf:type owl:Class ;
-                  rdfs:label "Software Agent"@en .
+                  rdfs:label "Software Agent"@en ;
+                  skos:definition "A software agent is running software (https://www.w3.org/TR/prov-o/#SoftwareAgent)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndex
 nsg:SpatialIndex rdf:type owl:Class ;
-                 rdfs:label "Spatial Index"@en .
+                 rdfs:label "Spatial Index"@en ;
+                 skos:definition "The Spatial Index is an entity used to locate elements in a spatial dataset, such as brain image volumes. Spatial indices can be used for spatial queries." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndexDerivation
 nsg:SpatialIndexDerivation rdf:type owl:Class ;
-                           rdfs:label "Spatial Index Derivation"@en .
+                           rdfs:label "Spatial Index Derivation"@en ;
+                           skos:definition "The Spatial Index Derivation is the derivation of a spatial index from an entity, such as a detailed circuit." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/StimulusExperiment
 nsg:StimulusExperiment rdf:type owl:Class ;
-                       rdfs:label "Stimulus Experiment"@en .
+                       rdfs:label "Stimulus Experiment"@en ;
+                       skos:definition "The Stimulus Experiment is an activity describing the experiment in which a particular stimulus, such as a current step, is applied to e.g. a patched cell entity to evoke and record the cell's current or voltage response." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModel
 nsg:SubCellularModel rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Model ;
-                     rdfs:label "Sub Cellular Model"@en .
+                     rdfs:label "Sub Cellular Model"@en ;
+                     skos:definition "The Subcellualr Model is a model instance describing the subcellular mechanisms of a model neuron, such as ion channel mechanisms." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModelScript
 nsg:SubCellularModelScript rdf:type owl:Class ;
-                           rdfs:label "Sub Cellular Model Script"@en .
+                           rdfs:label "Sub Cellular Model Script"@en ;
+                           skos:definition "The Sub-Cellular Model Script is an entity describing scripts used to model sub-cellular mechanisms such as ionic currents across a membrane." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Subject
 nsg:Subject rdf:type owl:Class ;
-            rdfs:label "Subject"@en .
+            rdfs:label "Subject"@en ;
+            skos:definition "The Subject is a biological entity which was used for an experiment or which participated in a scientific study. A subject is typically a person or an animal." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SynapseRelease
 nsg:SynapseRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
-                   rdfs:label "Synapse Release"@en .
+                   rdfs:label "Synapse Release"@en ;
+                   skos:definition "A Synapse Release is a model release which describes a set of synapse models for further use in the reconstruction and simulation pipeline (in the context of the Blue Brain Project, they are currently identified by a git hash)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Target
 nsg:Target rdf:type owl:Class ;
-           rdfs:label "Target"@en .
+           rdfs:label "Target"@en ;
+           skos:definition "The Target is an entity which describes an entity which is aimed at by another entity." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateImageData
 nsg:TemplateImageData rdf:type owl:Class ;
-                      rdfs:label "Template Image Data"@en .
+                      rdfs:label "Template Image Data"@en ;
+                      skos:definition "The Template Image Data is an image stack or image volume which is used as template in the context of e.g. a brain atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateReconstruction
 nsg:TemplateReconstruction rdf:type owl:Class ;
-                           rdfs:label "Template Reconstruction"@en .
+                           rdfs:label "Template Reconstruction"@en ;
+                           skos:definition "The Template Reconstruction is an activity which describes the reconstruction of a brain parcellation template volume from template image data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateVolume
 nsg:TemplateVolume rdf:type owl:Class ;
-                   rdfs:label "Template Volume"@en .
+                   rdfs:label "Template Volume"@en ;
+                   skos:definition "The Template Volume is a brain image volume which is used as template in the context of a brain atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Threshold
 nsg:Threshold rdf:type owl:Class ;
-              rdfs:label "Threshold"@en .
+              rdfs:label "Threshold"@en ;
+              skos:definition "The Threshold is an entity which describes the amount, level or limit on a defined scale. It is used to indicate that something changes when this amount, level or limit is reached. In the context of neuroscience, this can e.g. be the voltage level above which action potentials are evoked in a cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Trace
 nsg:Trace rdf:type owl:Class ;
-          rdfs:label "Trace"@en .
+          rdfs:label "Trace"@en ;
+          skos:definition "The Trace is an entity which describes a variable as a function of time. In the context of neuroscience, this can e.g. be the recorded voltage or current changes across the cell membrane of a patched cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceCollection
 nsg:TraceCollection rdf:type owl:Class ;
-                    rdfs:label "Trace Collection"@en .
+                    rdfs:label "Trace Collection"@en ;
+                    skos:definition "The Trace Collection is a collection of traces which may need to be grouped togetherh for further use based on specific selection criteria." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeature
 nsg:TraceFeature rdf:type owl:Class ;
-                 rdfs:label "Trace Feature"@en .
+                 rdfs:label "Trace Feature"@en ;
+                 skos:definition "The Trace Feature is an entity which describes a particular characteristic of a trace. In the context of neuroscience, this can e.g. be a particular electrical feature extracted from a recorded trace such as the width of a spike at threshold. The eFEL software can be used to extract such electrical trace features: https://github.com/BlueBrain/eFEL." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeatureExtraction
 nsg:TraceFeatureExtraction rdf:type owl:Class ;
-                           rdfs:label "Trace Feature Extraction"@en .
+                           rdfs:label "Trace Feature Extraction"@en ;
+                           skos:definition "The Trace Feature Extraction is an activity which describes the extraction of a trace feature from a defined collection of traces. The feature extraction can be performed using software tools like eFEL: https://github.com/BlueBrain/eFEL." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceGeneration
 nsg:TraceGeneration rdf:type owl:Class ;
-                    rdfs:label "Trace Generation"@en .
+                    rdfs:label "Trace Generation"@en ;
+                    skos:definition "The Trace Generation is an activity describing the generation of a trace." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transfection
 nsg:Transfection rdf:type owl:Class ;
-                 rdfs:label "Transfection"@en .
+                 rdfs:label "Transfection"@en ;
+                 skos:definition "The Transfection is an activity which describes the process of deliberately introducing naked or purified nucleic acids into eukaryotic cells." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transform
 nsg:Transform rdf:type owl:Class ;
               rdfs:subClassOf nsg:Transform ;
-              rdfs:label "Transform"@en .
+              rdfs:label "Transform"@en ;
+              skos:definition "The Transform is an entity which describes a mathematical function." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transformation
 nsg:Transformation rdf:type owl:Class ;
-                   rdfs:label "Transformation"@en .
+                   rdfs:label "Transformation"@en ;
+                   skos:definition "The Transformation is an activity describing the transformation of one transformable object into another. Output and input object of the transformation should have the same type. Examples for transformable objects are images or in the context of neuroscience, neuron morphology reconstructions." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TwoPhotonImageDataLayer
 nsg:TwoPhotonImageDataLayer rdf:type owl:Class ;
-                            rdfs:label "Two Photon Image Data Layer"@en .
+                            rdfs:label "Two Photon Image Data Layer"@en ;
+                            skos:definition "The Two Photon Image Data Layer is an entity relevant in the context of the representation of volumetric data. It describes the data layer containing images acquired using the two-photon imaging method. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ValidationResult
 nsg:ValidationResult rdf:type owl:Class ;
-                     rdfs:label "Validation Result"@en .
+                     rdfs:label "Validation Result"@en ;
+                     skos:definition "The Validation Result is an entity which describes the result of the validation of e.g. a model instance or a simulation. The validation result can comprise validation data such as scores or figures." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VariableReportShape
@@ -1277,12 +1388,14 @@ nsg:VariableReportShape rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumetricDataLayer
 nsg:VolumetricDataLayer rdf:type owl:Class ;
-                        rdfs:label "Volumetric Data Layer"@en .
+                        rdfs:label "Volumetric Data Layer"@en ;
+                        skos:definition "The Volumetric Data Layer is an entity relevant in the context of the representation of volumetric data. It belongs to the voxel brain data shape definition. Voxel Brain is an in-house service of the Blue Brain Project which helps to access data already positioned in a volumetric atlas space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/WholeCellPatchClamp
 nsg:WholeCellPatchClamp rdf:type owl:Class ;
-                        rdfs:label "Whole Cell Patch Clamp"@en .
+                        rdfs:label "Whole Cell Patch Clamp"@en ;
+                        skos:definition "The Whole Cell Patch Clamp is a patch clamp activty describing an experimental method used in electrophysiology to study ionic currents  over the membrane of the entire cell. It is primarily used to study excitable cells such as neurons." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/Instance
