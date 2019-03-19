@@ -20,7 +20,7 @@
 
 <meta name="description" content="nsg-docs">
 <link rel="shortcut icon" href="../assets/images/favicon.png">
-<title>Contact · Neuroshapes</title>
+<title>Release Notes · Neuroshapes</title>
 <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
 <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
 <meta name="theme-color" content="#03a9f4" />
@@ -61,7 +61,7 @@ data-md-color-accent="cyan"
 Neuroshapes
 </span>
 <span class="md-header-nav__topic">
-Contact
+Release Notes
 </span>
 </div>
 </div>
@@ -168,10 +168,23 @@ INCF/neuroshapes
   </ul></li>
   <li><a href="../docs/meetings.html" class="page">Meetings and Workshops</a></li>
   <li><a href="../docs/license.html" class="page">License</a></li>
-  <li><a href="../docs/contact.html" class="active page">Contact</a></li>
-  <li><a href="../docs/releases.html" class="page">Release Notes</a></li>
+  <li><a href="../docs/contact.html" class="page">Contact</a></li>
+  <li><a href="../docs/releases.html" class="active page">Release Notes</a></li>
 </ul>
 <nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../docs/releases.html#release-notes" class="header">Release Notes</a>
+  <ul>
+    <li><a href="../docs/releases.html#neuroshapes-1-0-x" class="header">Neuroshapes 1.0.x</a>
+    <ul>
+      <li><a href="../docs/releases.html#identifiers-and-namespaces" class="header">Identifiers and namespaces</a></li>
+      <li><a href="../docs/releases.html#vocabulary-taxonomy-and-ontology-changes" class="header">Vocabulary, taxonomy and ontology changes</a></li>
+      <li><a href="../docs/releases.html#shapes-changes" class="header">Shapes changes</a></li>
+      <li><a href="../docs/releases.html#technical-and-repository-structure-changes" class="header">Technical and Repository structure changes</a></li>
+    </ul></li>
+  </ul></li>
+</ul>
 </nav>
 
 </nav>
@@ -185,14 +198,85 @@ INCF/neuroshapes
 </div>
 </div>
 </div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">Table of contents</label>
+<ul>
+  <li><a href="../docs/releases.html#release-notes" class="header">Release Notes</a>
+  <ul>
+    <li><a href="../docs/releases.html#neuroshapes-1-0-x" class="header">Neuroshapes 1.0.x</a>
+    <ul>
+      <li><a href="../docs/releases.html#identifiers-and-namespaces" class="header">Identifiers and namespaces</a></li>
+      <li><a href="../docs/releases.html#vocabulary-taxonomy-and-ontology-changes" class="header">Vocabulary, taxonomy and ontology changes</a></li>
+      <li><a href="../docs/releases.html#shapes-changes" class="header">Shapes changes</a></li>
+      <li><a href="../docs/releases.html#technical-and-repository-structure-changes" class="header">Technical and Repository structure changes</a></li>
+    </ul></li>
+  </ul></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <div class="md-content__searchable">
-<h1><a href="#contact" name="contact" class="anchor"><span class="anchor-link"></span></a>Contact</h1><div class="callout note "><div class="callout-title">Note</div>
-<p>Contact the <a href="https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open">INCF Special Interest Group on Neuroshapes</a>.</p></div>
+<h1><a href="#release-notes" name="release-notes" class="anchor"><span class="anchor-link"></span></a>Release Notes</h1>
+<h2><a href="#neuroshapes-1-0-x" name="neuroshapes-1-0-x" class="anchor"><span class="anchor-link"></span></a>Neuroshapes 1.0.x</h2>
+<p>The main goal of Neuroshapes is to provide design patterns, best practices as well as tools to promote:</p>
+<ul>
+  <li>The use of standard semantic markups and linked data principles as ways to structure metadata and related data.</li>
+  <li>The use of the W3C SHACL (Shapes Constraint Language) recommendation as a rich metadata schema language which is formal and expressive; interoperable; machine-readable; and domain-agnostic.</li>
+  <li>The reuse of existing schemas and semantic markups ( schema.org , W3C PROV-O ) and existing ontologies and controlled vocabularies (including NIFSTD - Neuroscience Information Framework Standard Ontologies).</li>
+  <li>The use of the W3C PROV-O recommendation as a format to record (meta)data provenance.</li>
+</ul>
+<p>In Neuroshapes, many neuroscience data types are specified based on the key scientific and technical activities and agents that lead to their generation. The specifications are defined in validatable provenance-based data models and implemented using open and interoperable semantic web technologies.</p>
+<p>Neuroshapes has been used in production within various <a href="https://incf.github.io/neuroshapes/#adoption">organisations</a> for more than a year.</p>
+<p>Find below the notable changes from the previous release.</p>
+<h3><a href="#identifiers-and-namespaces" name="identifiers-and-namespaces" class="anchor"><span class="anchor-link"></span></a>Identifiers and namespaces</h3>
+<p>Previously</p>
+<h3><a href="#vocabulary-taxonomy-and-ontology-changes" name="vocabulary-taxonomy-and-ontology-changes" class="anchor"><span class="anchor-link"></span></a>Vocabulary, taxonomy and ontology changes</h3>
+<p>Neuroshapes main approach has been to build on top of existing initiatives for common vocabulary (<a href="http://schema.org">http://schema.org</a>) and provenance vocabulary (<a href="https://www.w3.org/TR/prov-o/)">https://www.w3.org/TR/prov-o/)</a>. The <code>v1.0.x</code> release includes major alignment in terms of vocabularies with a systematic map to schema.org and W3C PROV-O if relevant and available:</p>
+<ul>
+  <li>nsg:datePublished =&gt; schema:datePublished</li>
+  <li>dcterms:hasPart =&gt; schema:hasPart</li>
+  <li>nsg:hasPart =&gt; schema:hasPart</li>
+  <li>dcterms:isPartOf =&gt; schema:isPartOf</li>
+  <li>dcat:Distribution =&gt; schema:DataDownload</li>
+  <li>nsg:endedAtTime =&gt; prov:endedAtTime</li>
+  <li>nsg:startedAtTime =&gt; prov:startedAtTime</li>
+  <li>schema:mediaType =&gt; schema:encodingFormat</li>
+  <li>dcat:downloadURL =&gt; schema:contentUrl</li>
+  <li>dcat:accessURL =&gt; schema:url</li>
+  <li>nxv:digest =&gt; nsg:digest</li>
+</ul>
+<p>A <a href="https://github.com/INCF/neuroshapes/tree/master/ontologies">core ontology</a> is now introduced. It contains a set of types along their definitions. The neurosciencegraph core data and schema context are also removed to avoid having users to manage them with multiple versions. Instead, the two contexts will only be generated upon Neuroshapes release:</p>
+<ul>
+  <li>data context: this context is identified by and accessible at <a href="https://incf.github.io/neuroshapes/contexts/data.json">https://incf.github.io/neuroshapes/contexts/data.json</a></li>
+  <li>schema context: this context is identified by and accessible at <a href="https://incf.github.io/neuroshapes/contexts/schema.json">https://incf.github.io/neuroshapes/contexts/schema.json</a></li>
+</ul>
+<p>This release represents a commitment to backwards compatibility for contexts, vocabulary and ontologies in all future releases.</p>
+<h3><a href="#shapes-changes" name="shapes-changes" class="anchor"><span class="anchor-link"></span></a>Shapes changes</h3>
+<p>Added: * contribution, license and language shapes * taxonomy and ontology shapes * boundingbox shape * distribution shape</p>
+<p>Removed * mediatype schema</p>
+<h3><a href="#technical-and-repository-structure-changes" name="technical-and-repository-structure-changes" class="anchor"><span class="anchor-link"></span></a>Technical and Repository structure changes</h3>
+<p>Previously, Neuroshapes&rsquo; github repository was made of multiple scala modules with one module for each neuroscience domain: Neuron Morphology, Brain Atlas, Ephys recording,&hellip; A set of schemas representing neuroscienceentities were defined in each module. The Neuroshapes scala modules themselves imported provenance schemas from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a> and some BlueBrain Nexus built-in schemas. This structure was complex and was not easy to understand and relate with the main goals of Neuroshapes as well as its content.</p>
+<p>The <code>v1.0.x</code> release comes with a single scala module and a new simplified Github structure clearly showing:</p>
+<ul>
+  <li>the recommended taxonomies: in <code>taxonomies</code> dir</li>
+  <li>the recommended ontologies: in <code>ontologies</code> dir</li>
+  <li>the defined schemas for provenance description and for neuroscience entities and data types: in <code>shapes</code> dir. The <code>shapes</code> dir contains two categories of schemas: ** the provenance ones in <code>shapes/prov</code>: which are now located in the Neuroshapes Github repository instead of being inherited from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a>. ** the neuroscience ones: in <code>shapes/neurosciencegraph</code></li>
+</ul>
+<p>Schemas are now grouped in two categories:</p>
+<ul>
+  <li>common shapes: these are libraries of useful shapes built mainly for reuse (e.g. QuantitativeValue). They often don&rsquo;t define a target thus preventing them from being used alone to validate data.</li>
+  <li>data shapes: these shapes to be used to validate actual data. They often make use of common shapes and define a target.</li>
+</ul>
 </div>
 <div>
-<a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/docs/contact.md" title="Edit this page" class="md-source-file md-edit">
+<a href="https://github.com/INCF/neuroshapes/tree/docs/src/main/paradox/docs/releases.md" title="Edit this page" class="md-source-file md-edit">
 Edit this page
 </a>
 </div>
@@ -208,7 +292,7 @@ Edit this page
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav class="md-footer-nav__inner md-grid">
-<a href="../docs/license.html" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+<a href="../docs/contact.html" title="Contact" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
 <div class="md-flex__cell md-flex__cell--shrink">
 <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
 </div>
@@ -217,21 +301,8 @@ Edit this page
 <span class="md-footer-nav__direction">
 Previous
 </span>
-License
+Contact
 </span>
-</div>
-</a>
-<a href="../docs/releases.html" title="Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-<div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-<span class="md-flex__ellipsis">
-<span class="md-footer-nav__direction">
-Next
-</span>
-Release Notes
-</span>
-</div>
-<div class="md-flex__cell md-flex__cell--shrink">
-<i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
 </div>
 </a>
 </nav>
