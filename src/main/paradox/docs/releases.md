@@ -18,10 +18,6 @@ Neuroshapes has been used in production within various [organisations](https://i
 Find below the notable changes from the previous release.
 
 
-### Identifiers and namespaces
-
-Previously
-
 ### Vocabulary, taxonomy and ontology changes
 
 Neuroshapes main approach has been to build on top of existing initiatives for common vocabulary (http://schema.org) and provenance vocabulary (https://www.w3.org/TR/prov-o/).
