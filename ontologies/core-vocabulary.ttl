@@ -576,17 +576,20 @@ schema:Identifier rdf:type owl:Class ;
 
 ###  http://schema.org/Organization
 schema:Organization rdf:type owl:Class ;
-                    rdfs:label "Organization"@en .
+                    rdfs:label "Organization"@en ;
+                    skos:definition "An organization such as a school, NGO, corporation, club, etc (https://schema.org/Organization)." .
 
 
 ###  http://schema.org/Person
 schema:Person rdf:type owl:Class ;
-              rdfs:label "Person"@en .
+              rdfs:label "Person"@en ;
+              skos:definition "A person (alive, dead, undead, or fictional) (https://schema.org/Person)." .
 
 
 ###  http://schema.org/PropertyValue
 schema:PropertyValue rdf:type owl:Class ;
-                     rdfs:label "Property Value"@en .
+                     rdfs:label "Property Value"@en ;
+                     skos:definition "A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property. Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property (https://schema.org/PropertyValue)." .
 
 
 ###  http://www.w3.org/2002/07/owl#Ontology
@@ -1205,47 +1208,56 @@ nsg:RotationalMatrix rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SimplifiedCircuit
 nsg:SimplifiedCircuit rdf:type owl:Class ;
-                      rdfs:label "Simplified Circuit"@en .
+                      rdfs:label "Simplified Circuit"@en ;
+                      skos:definition "The Simplified Circuit is a model instance describing a neural circuit composed of a collection of nodes and edges. The simplified circuit applies to a given brain region and species." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Simulation
 nsg:Simulation rdf:type owl:Class ;
-               rdfs:label "Simulation"@en .
+               rdfs:label "Simulation"@en ;
+               skos:definition "The Simulation is an activity which uses a model instance and a provided configuration to generate a variable report indicating the values of the variables which were simulated in the activity. In the context of simulation neuroscience, this can e.g. be the simulation of the eletrical behaviour in simplified neural circuit." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellSimulationTrace
 nsg:SingleCellSimulationTrace rdf:type owl:Class ;
-                              rdfs:label "Single Cell Simulation Trace"@en .
+                              rdfs:label "Single Cell Simulation Trace"@en ;
+                              skos:definition "The Single Cell Simulation Trace is a trace entity describing one simulated electrical trace / recording of a single cell. Typically, a trace describes the voltage or current changes across the cell membrane as a function of time." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellTraceGeneration
 nsg:SingleCellTraceGeneration rdf:type owl:Class ;
-                              rdfs:label "Single Cell Trace Generation"@en .
+                              rdfs:label "Single Cell Trace Generation"@en ;
+                              skos:definition "The Single Cell Trace Generation is an activity describing the generation of a trace of a simulated single cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Slice
 nsg:Slice rdf:type owl:Class ;
-          rdfs:label "Slice"@en .
+          rdfs:label "Slice"@en ;
+          skos:definition "The Slice is an entity describing a brain slice, i.e. a slice of tissue cut from a brain." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SoftwareAgent
 nsg:SoftwareAgent rdf:type owl:Class ;
-                  rdfs:label "Software Agent"@en .
+                  rdfs:label "Software Agent"@en ;
+                  skos:definition "A software agent is running software (https://www.w3.org/TR/prov-o/#SoftwareAgent)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndex
 nsg:SpatialIndex rdf:type owl:Class ;
-                 rdfs:label "Spatial Index"@en .
+                 rdfs:label "Spatial Index"@en ;
+                 skos:definition "The Spatial Index is an entity used to locate elements in a spatial dataset, such as brain image volumes. Spatial indices can be used for spatial queries." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndexDerivation
 nsg:SpatialIndexDerivation rdf:type owl:Class ;
-                           rdfs:label "Spatial Index Derivation"@en .
+                           rdfs:label "Spatial Index Derivation"@en ;
+                           skos:definition "The Spatial Index Derivation is the derivation of a spatial index from an entity, such as a detailed circuit." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/StimulusExperiment
 nsg:StimulusExperiment rdf:type owl:Class ;
-                       rdfs:label "Stimulus Experiment"@en .
+                       rdfs:label "Stimulus Experiment"@en ;
+                       skos:definition "The Stimulus Experiment is an activity describing the experiment in which a particular stimulus, such as a current step, is applied to e.g. a patched cell entity to evoke and record the cell's current or voltage response." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModel
@@ -1257,12 +1269,14 @@ nsg:SubCellularModel rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModelScript
 nsg:SubCellularModelScript rdf:type owl:Class ;
-                           rdfs:label "Sub Cellular Model Script"@en .
+                           rdfs:label "Sub Cellular Model Script"@en ;
+                           skos:definition "The Sub-Cellular Model Script is an entity describing scripts used to model sub-cellular mechanisms such as ionic currents across a membrane." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Subject
 nsg:Subject rdf:type owl:Class ;
-            rdfs:label "Subject"@en .
+            rdfs:label "Subject"@en ;
+            skos:definition "The Subject is a biological entity which was used for an experiment or which participated in a scientific study. A subject is typically a person or an animal." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SynapseRelease
@@ -1274,57 +1288,68 @@ nsg:SynapseRelease rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Target
 nsg:Target rdf:type owl:Class ;
-           rdfs:label "Target"@en .
+           rdfs:label "Target"@en ;
+           skos:definition "The Target is an entity which describes an entity which is aimed at by another entity." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateImageData
 nsg:TemplateImageData rdf:type owl:Class ;
-                      rdfs:label "Template Image Data"@en .
+                      rdfs:label "Template Image Data"@en ;
+                      skos:definition "The Template Image Data is an image stack or image volume which is used as template in the context of e.g. a brain atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateReconstruction
 nsg:TemplateReconstruction rdf:type owl:Class ;
-                           rdfs:label "Template Reconstruction"@en .
+                           rdfs:label "Template Reconstruction"@en ;
+                           skos:definition "The Template Reconstruction is an activity which describes the reconstruction of a brain parcellation template volume from template image data." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateVolume
 nsg:TemplateVolume rdf:type owl:Class ;
-                   rdfs:label "Template Volume"@en .
+                   rdfs:label "Template Volume"@en ;
+                   skos:definition "The Template Volume is a brain image volume which is used as template in the context of a brain atlas." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Threshold
 nsg:Threshold rdf:type owl:Class ;
-              rdfs:label "Threshold"@en .
+              rdfs:label "Threshold"@en ;
+              skos:definition "The Threshold is an entity which describes the amount, level or limit on a defined scale. It is used to indicate that something changes when this amount, level or limit is reached. In the context of neuroscience, this can e.g. be the voltage level above which action potentials are evoked in a cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Trace
 nsg:Trace rdf:type owl:Class ;
-          rdfs:label "Trace"@en .
+          rdfs:label "Trace"@en ;
+          skos:definition "The Trace is an entity which describes a variable as a function of time. In the context of neuroscience, this can e.g. be the recorded voltage or current changes across the cell membrane of a patched cell." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceCollection
 nsg:TraceCollection rdf:type owl:Class ;
-                    rdfs:label "Trace Collection"@en .
+                    rdfs:label "Trace Collection"@en ;
+                    skos:definition "The Trace Collection is a collection of traces which may need to be grouped togetherh for further use based on specific selection criteria." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeature
 nsg:TraceFeature rdf:type owl:Class ;
-                 rdfs:label "Trace Feature"@en .
+                 rdfs:label "Trace Feature"@en ;
+                 skos:definition "The Trace Feature is an entity which describes a particular characteristic of a trace. In the context of neuroscience, this can e.g. be a particular electrical feature extracted from a recorded trace such as the width of a spike at threshold. The eFEL software can be used to extract such electrical trace features: https://github.com/BlueBrain/eFEL." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeatureExtraction
 nsg:TraceFeatureExtraction rdf:type owl:Class ;
-                           rdfs:label "Trace Feature Extraction"@en .
+                           rdfs:label "Trace Feature Extraction"@en ;
+                           skos:definition "The Trace Feature Extraction is an activity which describes the extraction of a trace feature from a defined collection of traces. The feature extraction can be performed using software tools like eFEL: https://github.com/BlueBrain/eFEL." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceGeneration
 nsg:TraceGeneration rdf:type owl:Class ;
-                    rdfs:label "Trace Generation"@en .
+                    rdfs:label "Trace Generation"@en ;
+                    skos:definition "The Trace Generation is an activity describing the generation of a trace." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transfection
 nsg:Transfection rdf:type owl:Class ;
-                 rdfs:label "Transfection"@en .
+                 rdfs:label "Transfection"@en ;
+                 skos:definition "The Transfection is an activity which describes the process of deliberately introducing naked or purified nucleic acids into eukaryotic cells." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transform
