@@ -570,7 +570,8 @@ dcterms:FileFormat rdf:type owl:Class ;
 
 ###  http://schema.org/Identifier
 schema:Identifier rdf:type owl:Class ;
-                  rdfs:label "Identifier"@en .
+                  rdfs:label "Identifier"@en ;
+                  skos:definition "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details (https://schema.org/identifier)." .
 
 
 ###  http://schema.org/Organization
@@ -1124,59 +1125,70 @@ nsg:Protocol rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCell
 nsg:ReconstructedCell rdf:type owl:Class ;
-                      rdfs:label "Reconstructed Cell"@en .
+                      rdfs:label "Reconstructed Cell"@en ;
+                      skos:definition "The Reconstructed Cell is an entity which describes a morphology reconstruction of a biological cell. Neuron morphology reconstructions are typically performed manually or semi-automatically by using neuron tracing software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellFormatConversion
 nsg:ReconstructedCellFormatConversion rdf:type owl:Class ;
-                                      rdfs:label "Reconstructed Cell Format Conversion"@en .
+                                      rdfs:label "Reconstructed Cell Format Conversion"@en ;
+                                      skos:definition "The Reconstructed Cell Format Conversion is an activity whereby the file format of a given reconstructed cell entity is converted into another. Typically, this concerns conversions from ASC to SWC format or vice versa." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellRelease
 nsg:ReconstructedCellRelease rdf:type owl:Class ;
-                             rdfs:label "Reconstructed Cell Release"@en .
+                             rdfs:label "Reconstructed Cell Release"@en ;
+                             skos:definition "The Reconstructed Cell Release is an entity which describes a set of reconstructed cell entities for further use." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseGeneration
 nsg:ReconstructedCellReleaseGeneration rdf:type owl:Class ;
-                                       rdfs:label "Reconstructed Cell Release Generation"@en .
+                                       rdfs:label "Reconstructed Cell Release Generation"@en ;
+                                       skos:definition "The Reconstructed Cell Release Generation describes the context of the generation of a reconstructed cell release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseProcess
 nsg:ReconstructedCellReleaseProcess rdf:type owl:Class ;
-                                    rdfs:label "Reconstructed Cell Release Process"@en .
+                                    rdfs:label "Reconstructed Cell Release Process"@en ;
+                                    skos:definition "The Reconstructed Cell Release Process is an activity which uses a set of reconstructed cell entites to generate a reconstructed cell release." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedPatchedCell
 nsg:ReconstructedPatchedCell rdf:type owl:Class ;
                              rdfs:subClassOf nsg:ReconstructedCell ;
-                             rdfs:label "Reconstructed Patched Cell"@en .
+                             rdfs:label "Reconstructed Patched Cell"@en ;
+                             skos:definition "The Reconstructed Patched Cell is a reconstructed cell entity which was reconstructed from a biological cell used in a patch-clamp experiment." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedWholeBrainCell
 nsg:ReconstructedWholeBrainCell rdf:type owl:Class ;
                                 rdfs:subClassOf nsg:ReconstructedCell ;
-                                rdfs:label "Reconstructed Whole Brain Cell"@en .
+                                rdfs:label "Reconstructed Whole Brain Cell"@en ;
+                                skos:definition "The Reconstructed Whole Brain Cell is a reconstructed cell entity which was reconstructed from a whole brain image stack or volume." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Reconstruction
 nsg:Reconstruction rdf:type owl:Class ;
-                   rdfs:label "Reconstruction"@en .
+                   rdfs:label "Reconstruction"@en ;
+                   skos:definition "The Reconstruction is an activity that describes the reconstruction of e.g. a neuron morphology. Typically, the reconstruction is performed manually or semi-automatically using reconstruction software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionCorrection
 nsg:ReconstructionCorrection rdf:type owl:Class ;
-                             rdfs:label "Reconstruction Correction"@en .
+                             rdfs:label "Reconstruction Correction"@en ;
+                             skos:definition "The Reconstruction Correction is an activity in which errors such as deviations in the Z values of a contour ('z-jumps') of a reconstructed cell entity are corrected and a corrected revision of the reconstructed cell entity is generated." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionFromImage
 nsg:ReconstructionFromImage rdf:type owl:Class ;
-                            rdfs:label "Reconstruction From Image"@en .
+                            rdfs:label "Reconstruction From Image"@en ;
+                            skos:definition "The Reconstruction From Image is a reconstruction activity that describes the reconstruction of e.g. a neuron morphology from an image stack (rather than a 'live' reconstruction directly from the tissue). Typically, the reconstruction is performed manually or semi-automatically using reconstruction software such as Neurolucida (https://www.mbfbioscience.com/neurolucida)." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RegionOfInterest
 nsg:RegionOfInterest rdf:type owl:Class ;
-                     rdfs:label "Region Of Interest"@en .
+                     rdfs:label "Region Of Interest"@en ;
+                     skos:definition "The Region Of Interest is an entity which allows to select an area of interest within a dataset . In the context of brain image volumes, this can e.g. be a sub-volume outlined by contours within the bigger brain image volume." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RigidLinearTransform
@@ -1187,7 +1199,8 @@ nsg:RigidLinearTransform rdf:type owl:Class ;
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RotationalMatrix
 nsg:RotationalMatrix rdf:type owl:Class ;
-                     rdfs:label "Rotational Matrix"@en .
+                     rdfs:label "Rotational Matrix"@en ;
+                     skos:definition "The Rotational Matrix is a matrix which describes a matrix used to e.g. perform a rotation in Euclidean space." .
 
 
 ###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SimplifiedCircuit
