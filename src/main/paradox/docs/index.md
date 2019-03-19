@@ -8,6 +8,7 @@
 * [Meetings and Workshops](meetings.md)
 * [License](license.md)
 * [Contact](contact.md)
+* [Release Notes](releases.md)
 
 @@@
 
