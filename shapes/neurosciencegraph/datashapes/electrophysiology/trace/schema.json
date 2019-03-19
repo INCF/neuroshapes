@@ -10,7 +10,8 @@
   "imports": [
     "https://neuroshapes.org/commons/entity",
     "https://neuroshapes.org/commons/quantitativevalue",
-    "https://neuroshapes.org/commons/typedlabeledontologyterm"
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/unit"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/electrophysiology/src/main/resources/schemas/neurosciencegraph/electrophysiology/trace/v1.0.0.json",
   "shapes": [
@@ -49,18 +50,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:dataUnit",
-              "name": "Data unit",
-              "description": "Unit of the trace data (e.g. mV or pA)",
-              "or": [
-                {
-                  "datatype": "xsd:string"
-                },
-                {
-                  "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/UnitOntologyTermShape"
-                }
-              ],
-              "maxCount": 1
+              "@id": "https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
             },
             {
               "path": "nsg:timeStep",

@@ -29,54 +29,37 @@
               "path": "nsg:hasTarget",
               "name": "Target",
               "description": "The target of an Annotation: the entity being annotated.",
-              "node": "this:TargetShape",
-              "minCount": 1
+              "class": "nsg:AnnotationTarget",
+              "nodeKind": "sh:BlankNodeOrIRI"
             },
             {
               "path": "nsg:hasBody",
               "name": "Body",
               "description": "The entity or value that the target entity is being annotated with.",
-              "node": "this:BodyShape"
+              "class": "nsg:AnnotationBody",
+              "nodeKind": "sh:BlankNodeOrIRI"
             }
           ]
         }
       ]
     },
     {
-      "@id": "this:TargetShape",
-      "label": "The target of an annotation is always an external resource.",
-      "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI"
-    },
-    {
-      "@id": "this:BodyShape",
-      "label": "The body of an annotation can be an external or internal resource.",
-      "@type": "sh:NodeShape",
-      "nodeKind": "sh:BlankNodeOrIRI"
-    },
-    {
       "@id": "this:SelectorTargetShape",
       "@type": "sh:NodeShape",
-      "and": [
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
         {
-          "node": "this:TargetShape"
+          "path": "nsg:hasSource",
+          "name": "Source",
+          "description": "The relationship between a Specific Resource and the resource that it is a more specific representation of.",
+          "minCount": 1,
+          "maxCount": 1
         },
         {
-          "property": [
-            {
-              "path": "nsg:hasSource",
-              "name": "Source",
-              "description": "The relationship between a Specific Resource and the resource that it is a more specific representation of.",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:hasSelector",
-              "name": "Selector",
-              "description": "The relationship between a Specific Resource and a Selector.",
-              "node": "https://neuroshapes.org/commons/annotationselector/shapes/SelectorShape"
-            }
-          ]
+          "path": "nsg:hasSelector",
+          "name": "Selector",
+          "description": "The relationship between a Specific Resource and a Selector.",
+          "node": "https://neuroshapes.org/commons/annotationselector/shapes/SelectorShape"
         }
       ]
     },

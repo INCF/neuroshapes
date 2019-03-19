@@ -17,7 +17,7 @@
       "@type": "sh:NodeShape",
       "targetClass": "schema:Dataset",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "node": "https://neuroshapes.org/commons/minds"
+      "node": "https://neuroshapes.org/commons/minds/shapes/MINDSShape"
     }
   ]
 }

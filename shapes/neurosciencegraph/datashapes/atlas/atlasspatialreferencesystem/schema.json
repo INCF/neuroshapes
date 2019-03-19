@@ -8,10 +8,11 @@
   "@id": "https://neuroshapes.org/dash/atlasspatialreferencesystem",
   "@type": "nxv:Schema",
   "import": [
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/vector3d/v0.1.0",
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/boundingbox/v0.1.0",
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/rotationalmatrix/v0.1.0"
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/vector3d",
+    "https://neuroshapes.org/commons/boundingbox",
+    "https://neuroshapes.org/commons/rotationalmatrix",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/atlasspatialreferencesystem/v0.1.0.json",
   "shapes": [
@@ -47,15 +48,16 @@
               "path": "nsg:boundingBox",
               "name": "Bounding box",
               "description": "Bounding box of the image data",
+              "class":"nsg:BoundingBox",
               "node": "https://neuroshapes.org/commons/boundingbox/shapes/BoundingBoxShape",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "schema:unitText",
+              "path": "schema:unitCode",
               "name": "Unit",
               "description": "Space dimension unit",
-              "datatype": "xsd:string",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/UnitOntologyTermShape",
               "minCount": 1,
               "maxCount": 1
             }

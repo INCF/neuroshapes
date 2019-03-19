@@ -33,7 +33,7 @@
     },
     {
       "@id": "this:WithUnitCodeShape",
-      "@type": "sh:NodeShape",
+      "@type": "sh:PropertyShape",
       "path": "schema:unitCode",
       "name": "Unit code",
       "node": "this:UnitShape",

@@ -80,7 +80,7 @@
           "maxCount": 1
         },
         {
-          "path": "schema:dateReleased",
+          "path": "schema:releaseDate",
           "name": "Release date",
           "description": "The dataset release date.",
           "datetype": "xsd:dateTime",
@@ -127,8 +127,9 @@
           "path": "rdf:type",
           "name": "Type",
           "description": "The dataset type.",
-          "minCount": 1,
-          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DataTypeOntologyTermShape"
+          "nodeKind": "sh:IRI",
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DataTypeOntologyTermShape",
+          "minCount": 1
         },
         {
           "path": "schema:license",

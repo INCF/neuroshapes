@@ -141,7 +141,7 @@
           "path": "schema:distance",
           "name": "Distance",
           "description": "Distance",
-          "class": "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
+          "node": "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape",
           "minCount": 1,
           "maxCount": 1
         }

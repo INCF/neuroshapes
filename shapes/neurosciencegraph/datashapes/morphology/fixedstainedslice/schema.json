@@ -23,12 +23,16 @@
           "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
         },
         {
-          "path": "prov:wasRevisionOf",
-          "name": "patchedSlice",
-          "description": "The patchedSlice this fixedStainedSlice is a revision of",
-          "class": "nsg:PatchedSlice",
-          "maxCount": 1,
-          "seeAlso": "https://neuroshapes.org/dash/patchedslice/shapes/PatchedSliceShape"
+          "property": [
+            {
+              "path": "prov:wasRevisionOf",
+              "name": "patchedSlice",
+              "description": "The patchedSlice this fixedStainedSlice is a revision of",
+              "class": "nsg:PatchedSlice",
+              "maxCount": 1,
+              "seeAlso": "https://neuroshapes.org/dash/patchedslice/shapes/PatchedSliceShape"
+            }
+          ]
         }
       ]
     }

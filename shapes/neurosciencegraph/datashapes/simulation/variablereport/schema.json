@@ -16,7 +16,7 @@
       "@id": "this:VariableReportShape",
       "@type": "sh:NodeShape",
       "label": "Validation report shape",
-      "targetClass": "nsg:VariableReportShape",
+      "targetClass": "nsg:VariableReport",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {
