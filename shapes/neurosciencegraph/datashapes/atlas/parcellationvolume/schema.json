@@ -8,8 +8,7 @@
   "@id": "https://neuroshapes.org/dash/parcellationvolume",
   "@type": "nxv:Schema",
   "import": [
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/entity/v0.1.0",
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/atlas/imagevolume/v0.1.0"
+    "https://neuroshapes.org/dash/imagevolume"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/parcellationvolume/v0.1.0.json",
   "shapes": [
@@ -18,7 +17,7 @@
       "@type": "sh:NodeShape",
       "description": "Parcellation volume. Parcellation is an imagevolume",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:ParcellationVolume",
+      "targetClass": ["nsg:ParcellationVolume","nsg:ImageVolume"],
       "and": [
         {
           "node": "https://neuroshapes.org/dash/imagevolume/shapes/ImageVolumeShape"

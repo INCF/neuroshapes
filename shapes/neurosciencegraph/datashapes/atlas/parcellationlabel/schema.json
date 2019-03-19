@@ -8,7 +8,7 @@
   "@id": "https://neuroshapes.org/dash/parcellationlabel",
   "@type": "nxv:Schema",
   "import": [
-    "https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/commons/entity/v0.1.0"
+    "https://neuroshapes.org/commons/entity"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/parcellationlabel/v0.1.0.json",
   "shapes": [

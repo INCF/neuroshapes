@@ -28,7 +28,6 @@
               "path": "nsg:emodelRelease",
               "name": "EModel release",
               "description": "EModel release shape.",
-              "editorialNote": "A node constraint should be added when it is supported: https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/simulation/emodelrelease/v0.1.3/EModelReleaseShape",
               "seeAlso": "https://neuroshapes.org/dash/emodelrelease/shapes/EModelReleaseShape",
               "class": "nsg:EModelRelease"
             },
@@ -36,7 +35,6 @@
               "path": "nsg:morphologyRelease",
               "name": "Morphology release",
               "description": "Morphology release shape.",
-              "editorialNote": "A node constraint should be added when it is supported: https://bbp.epfl.ch/nexus/v0/schemas/neurosciencegraph/simulation/morphologyrelease/v0.1.2/shapes/MorphologyReleaseShape",
               "seeAlso": "https://neuroshapes.org/dash/morphologyrelease/shapes/MorphologyReleaseShape",
               "class": "nsg:MorphologyRelease"
             },
@@ -44,7 +42,6 @@
               "path": "nsg:memodelIndex",
               "name": "Memodel index",
               "description": "Memodel release index file.",
-              "editorialNote": "Check the files to attach to this entity .The following node constraint can be add later: https://bbp.epfl.ch/nexus/v0/schemas/nexus/core/distribution/v0.1.0/shapes/DistributionShape.",
               "seeAlso": "https://neuroshapes.org/dash/modelreleaseindex/shapes/ModelReleaseIndexShape",
               "class": "nsg:ModelReleaseIndex"
             }
