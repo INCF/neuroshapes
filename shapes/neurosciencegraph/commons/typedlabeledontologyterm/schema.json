@@ -79,8 +79,7 @@
     {
       "@id": "this:BrainRegionOntologyTermShape",
       "@type": "sh:NodeShape",
-      "label": "The shape of an ontology term representing a brain region",
-      "class":"nsg:BrainRegion",
+      "label": "Brain regions",
       "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
     },
     {
