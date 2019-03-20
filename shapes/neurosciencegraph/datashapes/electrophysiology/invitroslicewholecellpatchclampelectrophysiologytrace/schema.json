@@ -8,10 +8,7 @@
   "@id": "https://neuroshapes.org/dash/trace",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/entity",
-    "https://neuroshapes.org/commons/quantitativevalue",
-    "https://neuroshapes.org/commons/typedlabeledontologyterm",
-    "https://neuroshapes.org/commons/unit"
+    "https://neuroshapes.org/dash/trace"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/electrophysiology/src/main/resources/schemas/neurosciencegraph/electrophysiology/trace/v1.0.0.json",
   "shapes": [
@@ -19,29 +16,29 @@
       "@id": "this:TraceShape",
       "@type": "sh:NodeShape",
       "label": "Electrophysiology trace shape definition. A trace should have an IRI as identifier",
-      "targetClass": "nsg:Trace",
+      "targetClass": ["nsg:Trace",
+                      "nsg:InVitroSliceWholeCellPatchClampElectrophysiologyTrace"],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+          "node": "https://neuroshapes.org/dash/trace/shapes/TraceShape"
         },
         {
           "property": [
             {
               "path": "nsg:channel",
               "name": "Channel",
-              "description": "Recording channel of trace",
+              "description": "Channel number of trace",
               "datatype": "xsd:integer",
+              "minCount": 1,
               "maxCount": 1
             },
             {
-              "@id": "https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
-            },
-            {
-              "path": "nsg:timeStep",
-              "name": "Time step",
-              "description": "Time step (inverted sampling frequency) of data",
-              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "path": "prov:qualifiedGeneration",
+              "name": "Qualified generation",
+              "description": "Qualified trace generation",
+              "class": "nsg:TraceGeneration",
+              "minCount": 1,
               "maxCount": 1
             }
           ]

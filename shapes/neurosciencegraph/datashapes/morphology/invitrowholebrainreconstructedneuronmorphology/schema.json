@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/invitrowholebrainreconstructedneuronmorphology/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/invitrowholebrainreconstructedneuronmorphology",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/reconstructedcell"
+  ],
+  "shapes": [
+    {
+      "@id": "this:InVitroWholeBrainReconstructedNeuronMorphologyShape",
+      "@type": "sh:NodeShape",
+      "label": "In Vitro Whole Brain Reconstructed Neuron Morphology shape definition",
+      "targetClass": ["nsg:ReconstructedWholeBrainCell", "nsg:ReconstructedCell", "nsg:ReconstructedNeuronMorphology", "nsg:InVitroWholeBrainReconstructedNeuronMorphology"],
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/reconstructedcell/shapes/ReconstructedCellShape"
+        }
+      ]
+    }
+  ]
+}
