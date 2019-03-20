@@ -10,9 +10,10 @@
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/core/src/main/resources/schemas/neurosciencegraph/core/ontology/v0.1.0.json",
   "shapes": [
     {
-      "@id": "this:OWLOntologyShape",
+      "@id": "this:OntologyShape",
       "@type": "sh:NodeShape",
       "targetClass": "owl:Ontology",
+      "nodeKind": "sh:IRI",
       "property": [
         {
           "path": "rdfs:label",
