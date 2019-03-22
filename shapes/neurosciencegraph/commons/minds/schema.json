@@ -12,7 +12,8 @@
     "https://neuroshapes.org/commons/brainlocation",
     "https://neuroshapes.org/commons/distribution",
     "https://neuroshapes.org/commons/typedlabeledontologyterm",
-    "https://neuroshapes.org/commons/entity"
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/annotation"
 
   ],
   "shapes": [
@@ -88,6 +89,11 @@
               "minCount": 1,
               "class": "schema:DataDownload",
               "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
+            },{
+              "path": "nsg:annotation",
+              "name": "Annotation",
+              "description": "Annotations of the dataset.",
+              "node": "https://neuroshapes.org/commons/annotation/shapes/AnnotationShape"
             }
           ]
         }]
