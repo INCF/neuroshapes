@@ -16,7 +16,7 @@
       "@id": "this:ReconstructedPatchedCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell shape definition",
-      "targetClass": "nsg:ReconstructedPatchedCell",
+      "targetClass": ["nsg:ReconstructedPatchedCell", "nsg:ReconstructedCell", "nsg:ReconstructedNeuronMorphology"],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
@@ -25,17 +25,10 @@
         {
           "property": [
             {
-              "path": "nsg:mSubType",
-              "name": "Morphology sub-type",
-              "description": "The morphology sub-type of the reconstructed cell.",
-              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:reconstructedCellIntegrity",
-              "name": "Reconstructed cell ntegrity",
-              "description": "Gives information on the integrity of the reconstructed cell.",
-              "node": "this:ReconstructedCellIntegrityShape",
+              "path": "nsg:quality",
+              "name": "Reconstructed cell quality",
+              "description": "Gives information on the quality of the reconstructed cell.",
+              "node": "this:NeuronMorphologyQualityShape",
               "maxCount": 1
             }
           ]
@@ -43,32 +36,32 @@
       ]
     },
     {
-      "@id": "this:ReconstructedCellIntegrityShape",
+      "@id": "this:NeuronMorphologyQualityShape",
       "@type": "sh:NodeShape",
       "property": [
         {
-          "path": "nsg:apicalDendrite",
+          "path": "nsg:hasApicalDendrite",
           "name": "Apical dendrite integrity",
           "datatype": "xsd:boolean",
           "minCount": 1,
           "maxCount": 1
         },
         {
-          "path": "nsg:basalDendrite",
+          "path": "nsg:hasBasalDendrite",
           "name": "Basal dendrite integrity",
           "datatype": "xsd:boolean",
           "minCount": 1,
           "maxCount": 1
         },
         {
-          "path": "nsg:axon",
+          "path": "nsg:hasAxon",
           "name": "Axon integrity",
           "datatype": "xsd:boolean",
           "minCount": 1,
           "maxCount": 1
         },
         {
-          "path": "nsg:soma",
+          "path": "nsg:hasSoma",
           "name": "Soma integrity",
           "datatype": "xsd:boolean",
           "minCount": 1,

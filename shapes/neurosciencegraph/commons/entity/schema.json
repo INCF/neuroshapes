@@ -8,8 +8,13 @@
   "@id": "https://neuroshapes.org/commons/entity",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/distribution",
-    "https://neuroshapes.org/commons/identifier"
+    "https://neuroshapes.org/commons/identifier",
+    "https://neuroshapes.org/commons/annotation",
+    "https://neuroshapes.org/commons/license",
+    "https://neuroshapes.org/commons/language",
+    "https://provshapes.org/commons/generation",
+    "https://provshapes.org/commons/invalidation",
+    "https://provshapes.org/commons/derivation"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/entity/v1.0.0.json",
   "shapes": [
@@ -33,20 +38,35 @@
           "maxCount": 1
         },
         {
-          "path": "nsg:providerId",
-          "name": "ProviderId",
-          "description": "The identifier of the entity as given by a team/laboratory that used it in an experiment. This identifier is local to the team or laboratory.",
-          "datatype": "xsd:string",
+          "path": "nsg:annotation",
+          "name": "Annotation",
+          "description": "Annotations of the dataset.",
+          "node": "https://neuroshapes.org/commons/annotation/shapes/AnnotationShape"
+        },
+        {
+          "path": "schema:sameAs",
+          "name": "Same as",
+          "description": "URI of an entity sharing the same identity.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:language",
+          "name": "Language",
+          "description": "The dataset language.",
+          "node": "https://neuroshapes.org/commons/language/shapes/LanguageShape",
           "maxCount": 1
         },
         {
-          "@id": "https://neuroshapes.org/commons/identifier/shapes/WithIdentifierPropertyShape"
+          "name": "Identifier",
+          "description": "Identifier",
+          "path": "schema:identifier",
+          "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape"
         },
         {
           "path": "schema:citation",
           "name": "Citation",
-          "description": "Citation (s) of publication (s) that describe the entity.",
-          "xone": [
+          "description": "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
+          "or": [
             {
               "datatype": "xsd:string"
             },
@@ -58,14 +78,15 @@
         {
           "path": "schema:license",
           "name": "License",
-          "description": "License.",
-          "nodeKind": "sh:IRI",
-          "maxCount": 1
+          "description": "A Link towards the dataset license.",
+          "class": "nsg:License",
+          "node": "https://neuroshapes.org/commons/license/shapes/LicenseShape",
+          "seeAlso": "https://github.com/creativecommons/cc.licenserdf"
         },
         {
           "path": "schema:dateCreated",
           "name": "Creation date",
-          "description": "Date at which this entity created.",
+          "description": "Date at which this entity was created.",
           "datatype": "xsd:dateTime",
           "maxCount": 1
         },
@@ -83,22 +104,67 @@
           "nodeKind": "sh:IRI"
         },
         {
+          "path": "schema:url",
+          "name": "URL",
+          "description": "A landing page describing the entity.",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:dateModified",
+          "name": "Update date",
+          "description": "The date of the last update of this entity.",
+          "datetype": "xsd:dateTime",
+          "maxCount": 1
+        },
+        {
+          "path": "schema:keywords",
+          "name": "Keywords",
+          "description": "Keywords describing the entity.",
+          "datatype": "xsd:string"
+        },
+        {
           "path": "prov:wasAttributedTo",
           "name": "Attributed to",
           "description": "The agent to which this entity was attributed to.",
           "nodeKind": "sh:IRI"
         },
         {
+          "path": "nsg:derivation",
+          "name": "Qualified Derivation",
+          "description": "Derivation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Derivation",
+          "seeAlso": "https://provshapes.org/commons/derivation/shapes/DerivationShape"
+        },
+        {
+          "path": "nsg:contribution",
+          "name": "Qualified Contribution",
+          "description": "Information about the contribution of an agent during the generation of this dataset.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "nsg:Contribution",
+          "seeAlso": "https://neuroshapes.org/commons/contribution/shapes/ContributionShape"
+        },
+        {
+          "path": "nsg:generation",
+          "name": "Qualified Generation",
+          "description": "Generation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Generation",
+          "seeAlso": "https://provshapes.org/commons/generation/shapes/GenerationShape"
+        },
+        {
+          "path": "nsg:invalidation",
+          "name": "Qualified Invalidation",
+          "description": "Invalidation.",
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "class": "prov:Invalidation",
+          "seeAlso": "https://provshapes.org/commons/invalidation/shapes/InvalidationShape"
+        },
+        {
           "path": "schema:image",
           "name": "Preview",
           "description": "A reference to an entity representing an image that can be used as preview.",
           "nodeKind": "sh:IRI"
-        },
-        {
-          "path": "schema:distribution",
-          "name": "Distribution",
-          "description": "Where the data attached to the entity is published.",
-          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         }
       ]
     }

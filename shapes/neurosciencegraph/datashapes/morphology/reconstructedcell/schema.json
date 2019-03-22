@@ -18,7 +18,7 @@
       "@id": "this:ReconstructedCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed cell shape definition",
-      "targetClass": "nsg:ReconstructedCell",
+      "targetClass": ["nsg:ReconstructedCell", "nsg:ReconstructedNeuronMorphology"],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
@@ -44,7 +44,6 @@
               "path": "nsg:mType",
               "name": "Morphology type",
               "description": "The morphology type of the reconstructed cell.",
-              "editorialNote": "Need the cell type for class restriction.",
               "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
               "maxCount": 1
             },

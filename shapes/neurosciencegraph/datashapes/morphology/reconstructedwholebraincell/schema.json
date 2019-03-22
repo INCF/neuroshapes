@@ -16,7 +16,7 @@
       "@id": "this:ReconstructedWholeBrainCellShape",
       "@type": "sh:NodeShape",
       "label": "Reconstructed whole brain cell shape definition",
-      "targetClass": "nsg:ReconstructedWholeBrainCell",
+      "targetClass": ["nsg:ReconstructedWholeBrainCell", "nsg:ReconstructedCell", "nsg:ReconstructedNeuronMorphology"],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
