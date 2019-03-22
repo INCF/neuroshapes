@@ -2,10 +2,10 @@
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
-      "this": "https://neuroshapes.org/dash/trace/shapes/"
+      "this": "https://neuroshapes.org/dash/in_vitro_slice_wholecellpatchclamp_electrophysiology_trace/shapes/"
     }
   ],
-  "@id": "https://neuroshapes.org/dash/trace",
+  "@id": "https://neuroshapes.org/dash/in_vitro_slice_wholecellpatchclamp_electrophysiology_trace",
   "@type": "nxv:Schema",
   "imports": [
     "https://neuroshapes.org/dash/trace"
@@ -16,8 +16,7 @@
       "@id": "this:TraceShape",
       "@type": "sh:NodeShape",
       "label": "Electrophysiology trace shape definition. A trace should have an IRI as identifier",
-      "targetClass": ["nsg:Trace",
-                      "nsg:InVitroSliceWholeCellPatchClampElectrophysiologyTrace"],
+      "targetClass": ["nsg:Trace","nsg:InVitroSliceWholeCellPatchClampElectrophysiologyTrace"],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
