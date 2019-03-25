@@ -29,7 +29,8 @@
                 "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/entity/v0.1.0/shapes/EntityShape"
             },
             {
-                "property": [{
+                "property": [
+                    {
                         "path": "nsg:modelOf",
                         "name": "Model of",
                         "description": "Models of many things such as cells, ion channels, circuits, whole brains,...",
@@ -40,8 +41,8 @@
                         "name": "Name",
                         "description": "the name of the model project",
                         "datatype": "xsd:string",
-                        "mincount": "1",
-                        "maxcount": "1"
+                        "minCount": "1",
+                        "maxCount": "1"
                     },
                     {
                         "path": "nsg:alias",
@@ -49,7 +50,7 @@
                         "description": "the alias of the model project.",
                         "editorialNote": "used as an identifier, should be unique.",
                         "datatype": "xsd:string",
-                        "maxcount": "1"
+                        "maxCount": "1"
                     },
                     {
                         "path": "nsg:brainRegion",
@@ -92,23 +93,23 @@
                         "name": "Author",
                         "description": "Author of the model Project",
                         "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
-                        "mincount": "1"
+                        "minCount": "1"
                     },
                     {
                         "path": "nsg:owner",
                         "name": "Owner",
                         "description": "Owner of the model Project",
                         "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
-                        "maxcount": "1",
-                        "mincount": "1"
+                        "maxCount": "1",
+                        "minCount": "1"
                     },
                     {
                         "path": "schema:description",
                         "name": "Description",
                         "description": "model project description",
                         "datatype": "xsd:string",
-                        "mincount": "1",
-                        "maxcount": "1"
+                        "minCount": "1",
+                        "maxCount": "1"
                     },
                     {
                         "path": "nsg:collabID",
