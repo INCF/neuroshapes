@@ -8,16 +8,16 @@
             },
             "owl": "http://www.w3.org/2002/07/owl#"
         },
-        "https://nexus-int.humanbrainproject.org/v0/contexts/nexus/core/resource/v0.3.0",
-        "https://nexus-int.humanbrainproject.org/v0/contexts/neurosciencegraph/core/schema/v0.1.0",
+        "{{base}}/contexts/nexus/core/resource/v0.3.0",
+        "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
         {
-            "this": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/simulation/modelproject/v0.1.0/shapes/"
+            "this": "{{base}}/schemas/neuralactivity/simulation/modelproject/v0.1.0/shapes/"
         }
     ],
     "@type": "nxv:Schema",
     "imports": [
-        "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/entity/v0.1.0",
-        "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2"
+        "{{base}}/schemas/neuralactivity/commons/entity/v0.1.0",
+        "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2"
     ],
     "shapes": [{
         "@id": "this:ModelProjectShape",
@@ -26,7 +26,7 @@
         "nodekind": "sh:BlankNodeOrIRI",
         "targetClass": "nsg:ModelProject",
         "and": [{
-                "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/entity/v0.1.0/shapes/EntityShape"
+                "node": "{{base}}/schemas/neuralactivity/commons/entity/v0.1.0/shapes/EntityShape"
             },
             {
                 "property": [
@@ -56,31 +56,31 @@
                         "path": "nsg:brainRegion",
                         "name": "Brain region",
                         "description": "Brain region",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape"
+                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape"
                     },
                     {
                         "path": "nsg:species",
                         "name": "Species",
                         "description": "Species",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape"
+                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape"
                     },
                     {
                         "path": "nsg:celltype",
                         "name": "Cell type",
                         "description": "Cell type",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/CellTypeOntologyTermShape"
+                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/CellTypeOntologyTermShape"
                     },
                     {
                         "path": "nsg:organization",
                         "name": "Organization",
                         "description": "Organization",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/organization/v0.1.0/shapes/OrganizationShape"
+                        "node": "{{base}}/schemas/neuralactivity/commons/organization/v0.1.0/shapes/OrganizationShape"
                     },
                     {
                         "path": "nsg:abstractionLevel",
                         "name": "Abstraction Level",
                         "description": "Abstraction level of the model",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/AbstractionLevelOntologyTermShape"
+                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/AbstractionLevelOntologyTermShape"
                     },
                     {
                         "path": "nsg:private",
@@ -92,14 +92,14 @@
                         "path": "schema:author",
                         "name": "Author",
                         "description": "Author of the model Project",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
+                        "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
                         "minCount": "1"
                     },
                     {
                         "path": "nsg:owner",
                         "name": "Owner",
                         "description": "Owner of the model Project",
-                        "node": "https://nexus-int.humanbrainproject.org/v0/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
+                        "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
                         "maxCount": "1",
                         "minCount": "1"
                     },
