@@ -43,7 +43,7 @@
                 },
                 {
                   "description": "The subjects collection used to construct the atlas. This collection is used when the used subjects are individually known.",
-                  "class": "nsg:Collection",
+                  "class": "prov:Collection",
                   "seeAlso": "https://neuroshapes.org/commons/subjectcollection/shapes/SubjectCollectionShape"
                 }
               ]

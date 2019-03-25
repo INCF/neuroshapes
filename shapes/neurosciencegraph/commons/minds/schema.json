@@ -86,13 +86,14 @@
               "path": "schema:distribution",
               "name": "Distribution",
               "description": "Details about the dataset download such as access and format information.",
-              "minCount": 1,
               "class": "schema:DataDownload",
-              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
+              "minCount": 1
             },{
               "path": "nsg:annotation",
               "name": "Annotation",
               "description": "Annotations of the dataset.",
+              "class": "nsg:Annotation",
               "node": "https://neuroshapes.org/commons/annotation/shapes/AnnotationShape"
             }
           ]

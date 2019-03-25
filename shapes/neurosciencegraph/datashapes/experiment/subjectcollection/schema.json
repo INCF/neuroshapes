@@ -17,7 +17,7 @@
       "@type": "sh:NodeShape",
       "label": "Subject Collection",
       "comment": "All subjects in the collection should be of the same species.",
-      "targetClass": "nsg:Collection",
+      "targetClass": "nsg:SubjectCollection",
       "node": "https://neuroshapes.org/commons/subjectcollection/shapes/SubjectCollectionShape"
     }
   ]

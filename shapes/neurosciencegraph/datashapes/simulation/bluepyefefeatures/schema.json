@@ -28,21 +28,21 @@
             {
               "path": "nsg:features",
               "description": "Extracted features(features.json)",
-              "class": "nsg:Entity",
+              "class": "prov:Entity",
               "minCount": 1,
               "maxCount": 1
             },
             {
               "path": "nsg:hadProtocol",
               "description": "Experimental protocols which produced traces having extracted features(protocols.json)",
-              "class": "nsg:Entity",
+              "class": "prov:Entity",
               "minCount": 1,
               "maxCount": 1
             },
             {
               "path": "nsg:hypampThreshold",
               "description": "Holding currents and thresholds per cell from experimental traces(hypamp_threshold.json)",
-              "class": "nsg:Entity",
+              "class": "prov:Entity",
               "maxCount": 1
             },
             {

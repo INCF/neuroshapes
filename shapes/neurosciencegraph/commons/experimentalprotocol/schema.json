@@ -25,29 +25,34 @@
           "node": "https://neuroshapes.org/commons/protocol/shapes/ProtocolShape"
         },
         {
-          "path": "nsg:materials",
-          "name": "Materials",
-          "description": "Materials used in protocol",
-          "node": "this:MaterialsShape"
-        },
-        {
-          "path": "nsg:vendor",
-          "name": "Vendor",
-          "description": "Name of vendor of protocol",
-          "class": "schema:Organization"
-        },
-        {
-          "path": "nsg:steps",
-          "name": "Steps",
-          "description": "Steps of protocol",
-          "datatype": "xsd:string"
-        },
-        {
-          "path": "nsg:warning",
-          "name": "Warning",
-          "description": "Warning for protocol",
-          "datatype": "xsd:string"
+          "property":[
+            {
+              "path": "nsg:materials",
+              "name": "Materials",
+              "description": "Materials used in protocol",
+              "node": "this:MaterialsShape"
+            },
+            {
+              "path": "nsg:vendor",
+              "name": "Vendor",
+              "description": "Name of vendor of protocol",
+              "class": "schema:Organization"
+            },
+            {
+              "path": "nsg:steps",
+              "name": "Steps",
+              "description": "Steps of protocol",
+              "datatype": "xsd:string"
+            },
+            {
+              "path": "nsg:warning",
+              "name": "Warning",
+              "description": "Warning for protocol",
+              "datatype": "xsd:string"
+            }
+          ]
         }
+
       ]
     },
     {

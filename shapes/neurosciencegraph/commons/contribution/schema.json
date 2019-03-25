@@ -8,7 +8,7 @@
   "@id" : "https://neuroshapes.org/commons/contribution",
   "@type" : "nxv:Schema",
   "imports" : [
-    "https://neuroshapes.org/commons/labeledontologyentity"
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
   ],
   "shapes" : [
     {
@@ -23,11 +23,11 @@
         },
         {
           "path" : "prov:hadRole",
-          "node" : "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+          "class" : "prov:Role",
+          "node" : "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/RoleOntologyTermShape"
         },
         {
           "path" : "prov:agent",
-          "comment" : "Required",
           "class" : "prov:Agent",
           "nodeKind" : "sh:IRI",
           "maxCount" : 1,

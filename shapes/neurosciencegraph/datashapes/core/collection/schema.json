@@ -16,7 +16,7 @@
       "@id": "this:CollectionShape",
       "@type": "sh:NodeShape",
       "label": "A collection shape.",
-      "targetClass": "nsg:Collection",
+      "targetClass": "prov:Collection",
       "nodeKind": "sh:BlankNodeOrIRI",
       "node": "https://neuroshapes.org/commons/collection/shapes/CollectionShape"
     }

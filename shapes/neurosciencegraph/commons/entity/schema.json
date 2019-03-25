@@ -126,7 +126,7 @@
         {
           "path": "nsg:derivation",
           "name": "Qualified Derivation",
-          "description": "Derivation.",
+          "description": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.",
           "nodeKind": "sh:BlankNodeOrIRI",
           "class": "prov:Derivation",
           "seeAlso": "https://provshapes.org/commons/derivation/shapes/DerivationShape"

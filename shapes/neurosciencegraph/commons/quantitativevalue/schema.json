@@ -16,31 +16,26 @@
     {
       "@id": "this:QuantitativeValueShape",
       "@type": "sh:NodeShape",
-      "and": [
+      "property": [
         {
-          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
-        },
-        {
-          "property": [
+          "path": "schema:value",
+          "name": "Value",
+          "description": "The value of the quantitative value or property value node.",
+          "or": [
             {
-              "path": "schema:value",
-              "name": "Value",
-              "description": "The value of the quantitative value or property value node.",
-              "or": [
-                {
-                  "datatype": "xsd:float"
-                },
-                {
-                  "datatype": "xsd:decimal"
-                },
-                {
-                  "datatype": "xsd:double"
-                }
-              ],
-              "minCount": 1,
-              "maxCount": 1
+              "datatype": "xsd:float"
+            },
+            {
+              "datatype": "xsd:decimal"
+            },
+            {
+              "datatype": "xsd:double"
             }
-          ]
+          ],
+          "minCount": 1,
+          "maxCount": 1
+        },{
+          "@id":"https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
         }
       ]
     },

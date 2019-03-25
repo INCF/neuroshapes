@@ -16,6 +16,11 @@
       "@id": "this:SpeciesOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a species",
+      "nsg:expectedRootClass": {
+        "@id": "nsg:Species",
+        "label": "NCBI species taxonomy ontology",
+        "isDefinedBy": "http://bbp.epfl.ch/neurosciencegraph/ontologies/speciestaxonomy"
+      },
       "and": [
         {
           "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
@@ -50,6 +55,11 @@
       "@id": "this:SexOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a sex",
+      "nsg:expectedRootClass": {
+        "@id": "nsg:BiologicalSex",
+        "label": "Biological Sex",
+        "isDefinedBy": "http://bbp.epfl.ch/neurosciencegraph/ontologies/sex"
+      },
       "and": [
         {
           "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
@@ -60,6 +70,10 @@
       "@id": "this:CellTypeOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a cell type",
+      "nsg:expectedRootClass": {
+        "@id": "nsg:CellType",
+        "label": "Cell Type Ontology."
+      },
       "and": [
         {
           "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
@@ -79,7 +93,14 @@
     {
       "@id": "this:BrainRegionOntologyTermShape",
       "@type": "sh:NodeShape",
-      "label": "Brain regions",
+      "label": "The shape of an ontology term representing a brain region",
+      "nsg:expectedRootClass": {
+        "@id": "nsg:BrainRegion",
+        "label": "Brain Region ontology. This ontology is a subset of UBERON.",
+        "nsg:definingOntology": {
+          "@id": "http://bbp.epfl.ch/neurosciencegraph/ontologies/brainregion"
+        }
+      },
       "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
     },
     {

@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/brainlocation/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/brainlocation",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "shapes": [
+    {
+      "@id": "this:BrainLocationShape",
+      "@type": "sh:NodeShape",
+      "label": "Brain location shape definition",
+      "targetClass": "nsg:BrainLocation",
+      "node":"https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+    }
+  ]
+}

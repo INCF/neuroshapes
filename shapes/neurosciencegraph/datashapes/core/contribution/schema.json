@@ -1,0 +1,22 @@
+{
+  "@context" : [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this" : "https://neuroshapes.org/dash/contribution/shapes/"
+    }
+  ],
+  "@id" : "https://neuroshapes.org/dash/contribution",
+  "@type" : "nxv:Schema",
+  "imports" : [
+    "https://neuroshapes.org/commons/contribution"
+  ],
+  "shapes" : [
+    {
+      "@id" : "this:ContributionShape",
+      "@type" : "sh:NodeShape",
+      "nodeKind" : "sh:BlankNodeOrIRI",
+      "targetClass" : "nsg:Contribution",
+      "node":"https://neuroshapes.org/commons/contribution/shapes/ContributionShape"
+    }
+  ]
+}

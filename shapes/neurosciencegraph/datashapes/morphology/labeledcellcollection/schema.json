@@ -16,7 +16,7 @@
       "@id": "this:LabeledCellCollectionShape",
       "@type": "sh:NodeShape",
       "description": "Labeled cell collection",
-      "targetClass": "nsg:Collection",
+      "targetClass": "nsg:LabeledCellCollection",
       "and": [
         {
           "node": "https://neuroshapes.org/dash/collection/shapes/CollectionShape"

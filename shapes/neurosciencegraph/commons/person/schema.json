@@ -28,7 +28,7 @@
         {
           "path": "schema:affiliation",
           "name": "Person's affiliation",
-          "class": "nsg:Organization",
+          "class": "schema:Organization",
           "node": "https://neuroshapes.org/commons/organization/shapes/OrganizationShape"
         },
         {

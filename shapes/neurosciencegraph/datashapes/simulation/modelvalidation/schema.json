@@ -46,7 +46,7 @@
               "name": "Reference data",
               "description": "Data (entities) used as reference for validation.",
               "sh:qualifiedValueShape": {
-                "class": "nsg:Collection"
+                "class": "prov:Collection"
               },
               "qualifiedValueShapesDisjoint": true,
               "qualifiedMinCount": 1,

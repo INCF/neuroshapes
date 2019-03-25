@@ -35,7 +35,7 @@
               "path": "schema:hasPart",
               "name": "Recorded cells collection",
               "description": "The collections of recorded cells.",
-              "class": "nsg:Collection",
+              "class": "prov:Collection",
               "minCount": 1,
               "seeAlso": "https://neuroshapes.org/dash/intrasharprecordedcellcollection/shapes/IntraCellularSharpElectrodeRecordedCellCollectionShape"
             },

@@ -15,7 +15,8 @@
     {
       "@id": "this:EntityShape",
       "@type": "sh:NodeShape",
-      "targetClass": "nsg:Entity",
+      "targetClass": "prov:Entity",
+      "comment": "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary.",
       "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
     }
   ]
