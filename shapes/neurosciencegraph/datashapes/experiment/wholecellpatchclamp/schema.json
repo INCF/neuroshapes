@@ -26,8 +26,8 @@
           "property": [
             {
               "path": "prov:used",
-              "description": "The slice used",
-              "class": "nsg:Slice",
+              "description": "The slice collection used",
+              "class": "nsg:SliceCollection",
               "minCount": 1,
               "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
             },
@@ -35,7 +35,6 @@
               "path": "prov:generated",
               "description": "The patched slice generated",
               "class": "nsg:PatchedSlice",
-              "minCount": 1,
               "seeAlso": "https://neuroshapes.org/dash/slice/shapes/PatchedSliceShape"
             }
           ]
