@@ -17,29 +17,25 @@
       "@id": "this:BoundingBoxShape",
       "@type": "sh:NodeShape",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "and": [
+      "property": [
         {
-          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
+          "path": "nsg:upperPoint",
+          "name": "First Row",
+          "description": "The first row in the matrix",
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+          "minCount": 1,
+          "maxCount": 1
         },
         {
-          "property": [
-            {
-              "path": "nsg:upperPoint",
-              "name": "First Row",
-              "description": "The first row in the matrix",
-              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
-              "minCount": 1,
-              "maxCount": 1
-            },
-            {
-              "path": "nsg:lowerPoint",
-              "name": "Second Row",
-              "description": "The second row in the matrix",
-              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
-              "minCount": 1,
-              "maxCount": 1
-            }
-          ]
+          "path": "nsg:lowerPoint",
+          "name": "Second Row",
+          "description": "The second row in the matrix",
+          "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape",
+          "minCount": 1,
+          "maxCount": 1
+        },
+        {
+          "@id":"https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
         }
       ]
     }

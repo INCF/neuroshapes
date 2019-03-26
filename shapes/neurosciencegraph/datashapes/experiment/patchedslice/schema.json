@@ -36,7 +36,7 @@
               "path": "schema:hasPart",
               "name": "Patched cells collection",
               "description": "The collection of patched cells.",
-              "class": "nsg:Collection",
+              "class": "prov:Collection",
               "minCount": 1,
               "seeAlso": "https://neuroshapes.org/dash/patchedcellcollection/shapes/PatchedCellCollectionShape"
             },

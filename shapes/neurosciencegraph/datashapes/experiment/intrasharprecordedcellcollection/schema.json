@@ -16,7 +16,7 @@
       "@id": "this:IntraCellularSharpElectrodeRecordedCellCollectionShape",
       "@type": "sh:NodeShape",
       "label": "Intracellular sharp electrode-recorded cell collection shape",
-      "targetClass": "nsg:Collection",
+      "targetClass": "nsg:IntraCellularSharpElectrodeRecordedCellCollection",
       "and": [
         {
           "node": "https://neuroshapes.org/dash/collection/shapes/CollectionShape"

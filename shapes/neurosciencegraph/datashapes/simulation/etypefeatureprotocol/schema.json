@@ -37,7 +37,7 @@
               "name": "Was derived from",
               "description": "The entities from which this entity was derived from.",
               "editorialNote": "The node constraint should be added.",
-              "class": "nsg:Collection",
+              "class": "prov:Collection",
               "maxCount": 1
             }
           ]

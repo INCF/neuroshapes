@@ -17,7 +17,7 @@
       "@type": "sh:NodeShape",
       "label": "An empty collection shape.",
       "comment": "A size should be provided.",
-      "targetClass": "nsg:EmptyCollection",
+      "targetClass": "prov:EmptyCollection",
       "nodeKind": "sh:BlankNodeOrIRI",
       "node": "https://neuroshapes.org/commons/emptycollection/shapes/EmptyCollectionShape"
     }

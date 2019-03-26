@@ -16,7 +16,7 @@
       "@id": "this:TraceCollectionShape",
       "@type": "sh:NodeShape",
       "label": "Trace collection shape",
-      "targetClass": "nsg:Collection",
+      "targetClass": "nsg:TraceCollection",
       "nodekind": "sh:BlankNodeOrIRI",
       "and": [
         {

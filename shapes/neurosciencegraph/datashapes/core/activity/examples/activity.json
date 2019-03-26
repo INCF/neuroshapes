@@ -1,7 +1,7 @@
 {
   "@context": "https://incf.github.io/neuroshapes/contexts/data.json",
   "@id": "http://example.org/neurosciencegraph/data/activity/77d572c8-4219-4bb5-b430-0a79bad93aa8",
-  "@type": "nsg:Activity",
+  "@type": "prov:Activity",
   "sh:shapesGraph": {
     "@id": "https://neuroshapes.org/dash/activity/shapes/ActivityShape"
   },
