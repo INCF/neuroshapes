@@ -63,6 +63,7 @@ This release represents a commitment to backwards compatibility for contexts, vo
 ### Shapes changes
 
 Added:
+
 * contribution, license and language shapes
 * taxonomy and ontology shapes
 * boundingbox shape
@@ -70,6 +71,7 @@ Added:
 * BrainLocation shape
 
 Removed:
+
 * mediatype schema
 * https://neuroshapes.org/dash/agent schema
 * https://provshapes.org/dash/activity schema
@@ -80,6 +82,7 @@ Removed:
 * Reused usage shape in activity shape
 
 Constraints:
+
 * WholeCellPatchClamp activity now used nsg:SliceCollection instead of nsg:Slice
 * WholeCellPatchClamp activity now is not required to have one generated entity
 
@@ -103,10 +106,12 @@ Shapes are now grouped in two categories:
 
 * common shapes: these are libraries of useful shapes built mainly for reuse (e.g. QuantitativeValue). They often don't define a target thus preventing them from being used alone to validate data.
 The related namespaces are:
+
 ** `https://neuroshapes.org/commons/`
 ** `https://provshapes.org/commons/`
 
 * data shapes (`https://neuroshapes.org/dash/`): these shapes to be used to validate actual data. They often make use of common shapes and define a target.
 The related namespaces are:
+
 ** `https://neuroshapes.org/dash/`
 ** `https://provshapes.org/dash/`
