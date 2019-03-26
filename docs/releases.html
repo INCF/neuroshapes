@@ -190,7 +190,7 @@ INCF/neuroshapes
 <ul style="display: none">
 <li class="md-nav__item md-version" id="project.version">
 <label class="md-nav__link" for="__version">
-<i class="md-icon" title="Version">label_outline</i> 0.2.0+53-47b46d93
+<i class="md-icon" title="Version">label_outline</i> 0.2.0+54-fa31bdc5
 </label>
 </li>
 </ul>
@@ -234,7 +234,7 @@ INCF/neuroshapes
 <p>Neuroshapes has been used in production within various <a href="https://incf.github.io/neuroshapes/#adoption">organisations</a> for more than a year.</p>
 <p>Find below the notable changes from the previous release.</p>
 <h3><a href="#vocabulary-taxonomy-and-ontology-changes" name="vocabulary-taxonomy-and-ontology-changes" class="anchor"><span class="anchor-link"></span></a>Vocabulary, taxonomy and ontology changes</h3>
-<p>Neuroshapes main approach has been to build on top of existing initiatives for common vocabulary (<a href="http://schema.org">http://schema.org</a>) and provenance vocabulary (<a href="https://www.w3.org/TR/prov-o/)">https://www.w3.org/TR/prov-o/)</a>. The <code>v1.0.x</code> release includes major alignment in terms of vocabularies with a systematic map to schema.org and W3C PROV-O if relevant and available:</p>
+<p>Neuroshapes main approach has been to build on top of existing initiatives for common (<a href="http://schema.org">http://schema.org</a>) and provenance (<a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>) vocabularies. The <code>v1.0.x</code> release includes major alignment in terms of vocabularies with a systematic map to schema.org and W3C PROV-O if relevant and available:</p>
 <ul>
   <li>nsg:datePublished =&gt; schema:datePublished</li>
   <li>dcterms:hasPart =&gt; schema:hasPart</li>
@@ -247,28 +247,46 @@ INCF/neuroshapes
   <li>dcat:downloadURL =&gt; schema:contentUrl</li>
   <li>dcat:accessURL =&gt; schema:url</li>
   <li>nxv:digest =&gt; nsg:digest</li>
+  <li>nsg:Entity =&gt; prov:Entity</li>
+  <li>nsg:Activity =&gt; prov:Activity</li>
+  <li>nsg:SoftwareAgent =&gt; prov:SoftwareAgent</li>
+  <li>nsg:Organization =&gt; schema:Organization</li>
+  <li>nsg:Person =&gt; schema:Person</li>
+  <li>nsg:Collection =&gt; prov:Collection</li>
+  <li>nsg:Collection =&gt; nsg:SubjectCollection</li>
+  <li>nsg:Collection =&gt; prov:Collection</li>
+  <li>nsg:EmptyCollection =&gt; prov:EmptyCollection</li>
 </ul>
-<p>A <a href="https://github.com/INCF/neuroshapes/tree/master/ontologies">core ontology</a> is now introduced. It contains a set of types along their definitions. The neurosciencegraph core data and schema context are also removed to avoid having users to manage them with multiple versions. Instead, the two contexts will only be generated upon Neuroshapes release:</p>
+<p>The above mapping brings unicity in term of types (e.g. no more nsg:Activity and prov:Activity).</p>
+<p>Two new namespaces are introduced:</p>
+<ul>
+  <li><code>https://neuroshapes.org/</code> with <code>nsg</code> as prefix: for all neuroscience specific types, properties and shapes.</li>
+  <li><code>https://provshapes.org/</code> with prov as prefix: for all W3C PROV-0 provenance related types, properties and shapes.</li>
+</ul>
+<p>A <a href="https://github.com/INCF/neuroshapes/tree/master/ontologies">core ontology</a> is now introduced. It contains a set of types along with their definitions. The neurosciencegraph core data and schema contexts are also removed to avoid having users to manage them with multiple versions. Instead, the two contexts will only be generated upon Neuroshapes release:</p>
 <ul>
   <li>data context: this context is identified by and accessible at <a href="https://incf.github.io/neuroshapes/contexts/data.json">https://incf.github.io/neuroshapes/contexts/data.json</a></li>
   <li>schema context: this context is identified by and accessible at <a href="https://incf.github.io/neuroshapes/contexts/schema.json">https://incf.github.io/neuroshapes/contexts/schema.json</a></li>
 </ul>
 <p>This release represents a commitment to backwards compatibility for contexts, vocabulary and ontologies in all future releases.</p>
 <h3><a href="#shapes-changes" name="shapes-changes" class="anchor"><span class="anchor-link"></span></a>Shapes changes</h3>
-<p>Added: * contribution, license and language shapes * taxonomy and ontology shapes * boundingbox shape * distribution shape</p>
-<p>Removed * mediatype schema</p>
+<p>Added: * contribution, license and language shapes * taxonomy and ontology shapes * boundingbox shape * distribution shape * BrainLocation shape</p>
+<p>Removed: * mediatype schema * <a href="https://neuroshapes.org/dash/agent">https://neuroshapes.org/dash/agent</a> schema * <a href="https://provshapes.org/dash/activity">https://provshapes.org/dash/activity</a> schema * <a href="https://provshapes.org/dash/person">https://provshapes.org/dash/person</a> * <a href="https://provshapes.org/dash/organization">https://provshapes.org/dash/organization</a> * <a href="https://neuroshapes.org/dash/entity">https://neuroshapes.org/dash/entity</a> schema * <a href="https://provshapes.org/dash/collection">https://provshapes.org/dash/collection</a> * Reused usage shape in activity shape</p>
+<p>Constraints: * WholeCellPatchClamp activity now used nsg:SliceCollection instead of nsg:Slice * WholeCellPatchClamp activity now is not required to have one generated entity</p>
 <h3><a href="#technical-and-repository-structure-changes" name="technical-and-repository-structure-changes" class="anchor"><span class="anchor-link"></span></a>Technical and Repository structure changes</h3>
-<p>Previously, Neuroshapes&rsquo; github repository was made of multiple scala modules with one module for each neuroscience domain: Neuron Morphology, Brain Atlas, Ephys recording,&hellip; A set of schemas representing neuroscienceentities were defined in each module. The Neuroshapes scala modules themselves imported provenance schemas from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a> and some BlueBrain Nexus built-in schemas. This structure was complex and was not easy to understand and relate with the main goals of Neuroshapes as well as its content.</p>
+<p>Previously, Neuroshapes&rsquo; github repository was made of multiple scala modules with one module for each neuroscience domain: Neuron Morphology, Brain Atlas, Ephys recording,&hellip; A set of shapes representing neuroscience entities were defined in each module. The Neuroshapes scala modules themselves imported provenance shapes from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a> and some BlueBrain Nexus built-in shapes. This structure was complex and was not easy to understand and relate with the main goals of Neuroshapes.</p>
 <p>The <code>v1.0.x</code> release comes with a single scala module and a new simplified Github structure clearly showing:</p>
 <ul>
   <li>the recommended taxonomies: in <code>taxonomies</code> dir</li>
   <li>the recommended ontologies: in <code>ontologies</code> dir</li>
-  <li>the defined schemas for provenance description and for neuroscience entities and data types: in <code>shapes</code> dir. The <code>shapes</code> dir contains two categories of schemas: ** the provenance ones in <code>shapes/prov</code>: which are now located in the Neuroshapes Github repository instead of being inherited from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a>. ** the neuroscience ones: in <code>shapes/neurosciencegraph</code></li>
+  <li>the defined shapes for provenance description and for neuroscience entities and data types: in <code>shapes</code> dir. The <code>shapes</code> dir contains two categories of shapes: ** the provenance ones in <code>shapes/prov</code>: which are now located in the Neuroshapes Github repository instead of being inherited from <a href="https://github.com/BlueBrain/nexus-prov">BlueBrain/nexus-prov</a>. ** the neuroscience ones: in <code>shapes/neurosciencegraph</code></li>
 </ul>
-<p>Schemas are now grouped in two categories:</p>
+<p>Shapes are now grouped in two categories:</p>
 <ul>
-  <li>common shapes: these are libraries of useful shapes built mainly for reuse (e.g. QuantitativeValue). They often don&rsquo;t define a target thus preventing them from being used alone to validate data.</li>
-  <li>data shapes: these shapes to be used to validate actual data. They often make use of common shapes and define a target.</li>
+  <li>
+  <p>common shapes: these are libraries of useful shapes built mainly for reuse (e.g. QuantitativeValue). They often don&rsquo;t define a target thus preventing them from being used alone to validate data. The related namespaces are: ** <code>https://neuroshapes.org/commons/</code> ** <code>https://provshapes.org/commons/</code></p></li>
+  <li>
+  <p>data shapes (<code>https://neuroshapes.org/dash/</code>): these shapes to be used to validate actual data. They often make use of common shapes and define a target. The related namespaces are: ** <code>https://neuroshapes.org/dash/</code> ** <code>https://provshapes.org/dash/</code></p></li>
 </ul>
 </div>
 <div>
@@ -278,7 +296,7 @@ Edit this page
 </div>
 <div class="print-only">
 <span class="md-source-file md-version">
-0.2.0+53-47b46d93
+0.2.0+54-fa31bdc5
 </span>
 </div>
 </article>
