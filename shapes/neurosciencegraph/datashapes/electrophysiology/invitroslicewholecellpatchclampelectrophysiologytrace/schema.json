@@ -17,7 +17,6 @@
       "@type": "sh:NodeShape",
       "label": "Electrophysiology trace shape definition. A trace should have an IRI as identifier",
       "targetClass": ["nsg:Trace","nsg:InVitroSliceWholeCellPatchClampElectrophysiologyTrace"],
-
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
