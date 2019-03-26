@@ -38,7 +38,7 @@
               "xone": [
                 {
                   "description": "An empty collection of subject(s) used to construct the atlas. This empty collection is used when the used subjects are not known but their number is.",
-                  "class": "nsg:EmptyCollection",
+                  "class": "prov:EmptyCollection",
                   "seeAlso": "https://neuroshapes.org/commons/emptycollection/shapes/EmptyCollectionShape"
                 },
                 {

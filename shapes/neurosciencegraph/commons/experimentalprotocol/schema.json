@@ -10,7 +10,8 @@
   "imports": [
     "https://neuroshapes.org/commons/quantitativevalue",
     "https://neuroshapes.org/commons/protocol",
-    "https://neuroshapes.org/commons/identifier"
+    "https://neuroshapes.org/commons/identifier",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/experimentalprotocol/v0.1.1.json",
   "shapes": [
@@ -25,7 +26,7 @@
           "node": "https://neuroshapes.org/commons/protocol/shapes/ProtocolShape"
         },
         {
-          "property":[
+          "property": [
             {
               "path": "nsg:materials",
               "name": "Materials",
@@ -49,10 +50,15 @@
               "name": "Warning",
               "description": "Warning for protocol",
               "datatype": "xsd:string"
+            },
+            {
+              "path": "nsg:activityType",
+              "name": "Usable in activity",
+              "description": "Usable in activity",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/ActivityTypeOntologyTermShape"
             }
           ]
         }
-
       ]
     },
     {

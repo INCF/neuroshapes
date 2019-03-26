@@ -96,9 +96,21 @@
       "label": "The shape of an ontology term representing a brain region",
       "nsg:expectedRootClass": {
         "@id": "nsg:BrainRegion",
-        "label": "Brain Region ontology. This ontology is a subset of UBERON.",
+        "label": "Brain Region ontology",
         "nsg:definingOntology": {
           "@id": "http://bbp.epfl.ch/neurosciencegraph/ontologies/brainregion"
+        }
+      },
+      "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+    },{
+      "@id": "this:ActivityTypeOntologyTermShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of an ontology term representing an activity type",
+      "nsg:expectedRootClass": {
+        "@id": "prov:Activity",
+        "label": "Activity type ontology",
+        "nsg:definingOntology": {
+          "@id": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/"
         }
       },
       "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
