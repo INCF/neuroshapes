@@ -16,7 +16,7 @@
       "@id": "this:OrganizationShape",
       "@type": "sh:NodeShape",
       "label": "A shape for describing an organization based on http://schema.org/Organization.",
-      "comment": "A nsg:Organization can have a GRID identifier.",
+      "comment": "A schema:Organization can have a GRID identifier.",
       "seeAlso": [
         "http://schema.org/Organization",
         "https://www.grid.ac"

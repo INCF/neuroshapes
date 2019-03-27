@@ -31,7 +31,7 @@
               "description": "Collection of nrn files or syn2.",
               "editorialNote": "Add media type constraint: application/nrn.",
               "seeAlso": "https://neuroshapes.org/commons/entity/shapes/EntityShape",
-              "class": "nsg:Entity",
+              "class": "prov:Entity",
               "minCount": 1
             },
             {

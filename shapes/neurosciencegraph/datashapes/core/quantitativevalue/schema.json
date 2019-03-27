@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/quantitativevalue/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/quantitativevalue",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/quantitativevalue"
+  ],
+  "shapes": [
+    {
+      "@id": "this:QuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "targetClass":"schema:QuantitativeValue",
+      "node":"https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+    }
+  ]
+}

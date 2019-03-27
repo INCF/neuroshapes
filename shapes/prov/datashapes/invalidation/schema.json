@@ -17,6 +17,7 @@
       "label": "Entity Invalidation shape",
       "comment": "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.",
       "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "prov:Invalidation",
       "node": "https://provshapes.org/commons/invalidation/shapes/InvalidationShape"
     }
   ]

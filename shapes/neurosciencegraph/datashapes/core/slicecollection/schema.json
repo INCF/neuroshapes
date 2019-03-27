@@ -17,7 +17,7 @@
       "@type": "sh:NodeShape",
       "label": "Slice Collection",
       "comment": "Slice collection.",
-      "targetClass": "nsg:Collection",
+      "targetClass": "nsg:SliceCollection",
       "and": [
         {
           "node": "https://neuroshapes.org/commons/slicecollection/shapes/SliceCollectionShape"

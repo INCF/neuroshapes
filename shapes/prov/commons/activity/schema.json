@@ -7,6 +7,9 @@
   ],
   "@id": "https://provshapes.org/commons/activity",
   "@type": "nxv:Schema",
+  "imports": [
+    "https://provshapes.org/commons/usage"
+  ],
   "prov:wasDerivedFrom": "https://github.com/BlueBrain/nexus-prov/blob/v1.2.0/modules/prov/src/main/resources/schemas/nexus/provsh/activity/v1.0.0.json",
   "shapes": [
     {
@@ -73,7 +76,7 @@
           "path": "prov:qualifiedUsage",
           "description": "An activity qualified usage allows to further specify the context of an entity usage: it's role, the time at which the usage started, why the entity is used,...",
           "class": "prov:Usage",
-          "node": "UsageShape"
+          "node": "https://provshapes.org/commons/usage/shapes/UsageShape"
         }
       ]
     },
@@ -95,37 +98,6 @@
           "path": "prov:agent",
           "class": "prov:Agent",
           "nodeKind": "sh:IRI",
-          "maxCount": 1,
-          "minCount": 1
-        }
-      ]
-    },
-    {
-      "@id": "UsageShape",
-      "@type": "sh:NodeShape",
-      "label": "Usage shape",
-      "comment": "Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity.",
-      "nodeKind": "sh:BlankNodeOrIRI",
-      "property": [
-        {
-          "path": "prov:atTime",
-          "name": "At time",
-          "description": "The time at which the entity was used.",
-          "datatype": "xsd:dateTime",
-          "maxCount": 1
-        },
-        {
-          "path": "prov:hadRole",
-          "name": "Role",
-          "description": "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end.",
-          "nodeKind": "sh:IRI"
-        },
-        {
-          "path": "prov:entity",
-          "name": "Used entity",
-          "description": "The used entity.",
-          "nodeKind": "sh:IRI",
-          "class": "prov:Entity",
           "maxCount": 1,
           "minCount": 1
         }

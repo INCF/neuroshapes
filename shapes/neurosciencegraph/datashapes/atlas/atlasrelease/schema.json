@@ -17,7 +17,7 @@
       "@type": "sh:NodeShape",
       "description": "Atlas release description.",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:AtlasRelease",
+      "targetClass": ["nsg:AtlasRelease","nsg:BrainAtlasRelease"],
       "and": [
         {
           "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"

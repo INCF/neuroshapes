@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/distribution/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/distribution",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/distribution"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DistributionShape",
+      "@type": "sh:NodeShape",
+      "nodeKind" : "sh:BlankNodeOrIRI",
+      "targetClass" : "schema:DataDownload",
+      "node":"https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
+    }
+  ]
+}

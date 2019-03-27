@@ -21,7 +21,7 @@
       "@type": "sh:NodeShape",
       "label": "Atlas spatial reference system",
       "nodeKind": "sh:BlankNodeOrIRI",
-      "targetClass": "nsg:AtlasSpatialReferenceSystem",
+      "targetClass": ["nsg:AtlasSpatialReferenceSystem","nsg:BrainAtlasSpatialReferenceSystem"],
       "and": [
         {
           "@id": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
