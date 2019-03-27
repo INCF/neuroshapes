@@ -1,0 +1,159 @@
+	/* rect {
+	   fill: none;
+	   pointer-events: all;
+	 }*/
+
+	 rect {
+	   fill:black;
+	   stroke:none;
+	 }
+
+	 line {
+	   stroke: #000;
+	   stroke-width: 1.5px;
+	 }
+
+	 .string, .regexp {
+	   color: #f39;
+	 }
+
+
+
+
+	/*extra css*/
+
+	.node circle {
+	  cursor: pointer;
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 1.5px;
+	}
+
+	.node text {
+	  font-size: 11px;
+	}
+
+	path.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 1.5px;
+	}
+
+
+	.infoentity {
+	    stroke: white;
+	    stroke-width: 2.5px;
+	    opacity: 0.7;
+		background: linen;
+		line-height: 0.7em;
+	}
+
+
+	.smalldesc {
+		font-size: 20px;
+		margin-top: 0px;
+		color: black;
+	}
+
+
+	.hidden {
+		display: none;
+	}
+
+	kbd {
+		padding: 2px 4px;
+	    font-size: 90%;
+	    color: #fff;
+	    background-color: #333;
+	    border-radius: 3px;
+	    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);border-image-outset:
+	}
+
+	/*slider*/
+
+	.side-panel{
+		background-color: #E6E6E6;
+		padding: 10px;
+		/*word-wrap: break-word;*/
+	    overflow: auto;
+	    top: 50px;
+	}
+
+	.side-panel-left{
+		box-shadow: -5px 0 15px -6px #585858 inset;
+		top: 50px;
+	}
+
+	.side-panel-right{
+		box-shadow: 5px 0 15px -6px #585858 inset;
+	}
+
+
+	.turtlesource {
+		font-size: 12px;
+	}
+
+	dt {
+		color: darkslategrey;
+	}
+
+	.text-muted {
+		color: grey;
+	}
+
+
+    .credits {
+        color: gray;
+    }
+
+
+    .section-title {
+{#        text-transform: uppercase;#}
+        font-size: smaller;
+    }
+
+    .node {
+      cursor: pointer;
+    }
+
+    .node circle {
+      fill: #fff;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+
+    .node text {
+      font: 10px sans-serif;
+    }
+
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 1.5px;
+    }
+
+    .found {
+      fill: #ff4136;
+      stroke: #ff4136;
+    }
+
+    .search {
+      float: left;
+      font: 10px sans-serif;
+      width: 30%;
+    }
+
+    ul.select2-results {
+     max-height: 100px;
+    }
+
+    .select2-container,
+    .select2-drop,
+    .select2-search,
+    .select2-search input {
+      font: 10px sans-serif;
+    }
+
+    #block_container {
+      display: inline;
+    }
