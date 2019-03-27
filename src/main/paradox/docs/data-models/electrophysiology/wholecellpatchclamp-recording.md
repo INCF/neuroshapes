@@ -34,13 +34,13 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | -------------                                                             | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html)                            |     Subject that was used in the experiment     |
+| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
 | [Slice](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
-| [PatchedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedslicev011shapespatchedsliceshape.html)                  |     Brain slice containing patched cells      |
-| [PatchedCellCollection](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellcollectionv010shapespatchedcellcollectionshape.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
-| [PatchedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentpatchedcellv021shapespatchedcellshape.html)                    |     Cell that was patched in the slice      |
-| [Trace](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphelectrophysiologytracev100shapestraceshape.html)                         |     Individual recording trace of the patched cell (stimulation/input and response/output trace)     |
-| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [PatchedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgpatchedslice.html)                  |     Brain slice containing patched cells      |
+| [PatchedCellCollection](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgpatchedcellcollection.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
+| [PatchedCell](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgpatchedcell.html)                    |     Cell that was patched in the slice      |
+| [Trace](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtrace.html)                         |     Individual recording trace of the patched cell (stimulation/input and response/output trace)     |
+| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
     
 ### Activities
 
@@ -48,9 +48,9 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainslicingv100shapesbrainslicingshape.html)                      |     Technique used to obtain a brain slice for patching      |
-| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentwholecellpatchclampv010shapeswholecellpatchclampshape.html)        |     Technique used to study electrical activity of individual living cells    |
-| [StimulusExperiment](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphelectrophysiologystimulusexperimentv100shapesstimulusexperimentshape.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
+| [BrainSlicing](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgbrainslicing.html)                      |     Technique used to obtain a brain slice for patching      |
+| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgwholecellpatchclamp.html)        |     Technique used to study electrical activity of individual living cells    |
+| [StimulusExperiment](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgstimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
 
 ### Agents
 
@@ -58,9 +58,9 @@ The different agent types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html)                          |    Software associated with an activity      |
-| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html)                            |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
 
 ## Contributors
 

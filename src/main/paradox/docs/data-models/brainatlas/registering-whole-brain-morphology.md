@@ -27,30 +27,30 @@ The different entity types involved are described below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresubjectv010shapessubjectshape.html)                            |     Subject that was used in the experiment     |
-| [TemplateVolume](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastemplatevolumev010shapestemplatevolumeshape.html)  |  Template volume generated from the template image data  |
-| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasatlasspatialreferencesystemv010shapesatlasspatialreferencesystemshape.html)  |  The spatial coordinate system of the atlas space  |
-| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlasimagestackv020shapesimagestackshape.html)                            |     Image stack obtained from the brain tissue of the subject     |
-| [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructedcellv012shapesreconstructedcellshape.html)    |     Reconstructed cell      |
-| [Transform](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastransformv010shapestransformshape.html)    |     A linear or non-linear transform      |
-| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsexperimentalprotocolv011shapesexperimentalprotocolshape.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
+| [TemplateVolume](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtemplatevolume.html)  |  Template volume generated from the template image data  |
+| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
+| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgimagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
+| [Transform](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtransform.html)    |     A linear or non-linear transform      |
+| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
 ### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainImaging](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphexperimentbrainimagingv010shapesbrainimagingshape.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
-| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphmorphologyreconstructionfromimagev010shapesreconstructionfromimageshape.html)   |     Technique used to reconstruct the stained cell     |
-| [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphatlastransformationv010shapestransformationshape.html)   |     Transform a geometric object     |
+| [BrainImaging](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgbrainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
+| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgreconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
+| [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtransformation.html)   |     Transform a geometric object     |
 
 ### Agents
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonspersonv010shapespersonshape.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcoresoftwareagentv010shapessoftwareagentshape.html)                          |    Software associated with an activity      |
-| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/shape-neurosciencegraphcommonsorganizationv010shapesorganizationshape.html)                            |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
 
 
 ## Contributors
