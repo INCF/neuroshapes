@@ -122,7 +122,7 @@
                   "name": "GRID ID property",
                   "description": "The GRID property identifier.",
                   "datatype": "xsd:string",
-                  "hasValue": "http//orcid.org",
+                  "hasValue": "https://www.grid.ac",
                   "maxCount": 1
                 }
               ]
@@ -131,7 +131,7 @@
               "property": [
                 {
                   "path": "schema:name",
-                  "name": "Orcid ID",
+                  "name": "GRID ID",
                   "description": "The property name.",
                   "datatype": "xsd:string",
                   "hasValue": "grid",
