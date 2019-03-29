@@ -1,8 +1,8 @@
-@prefix : <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+@prefix : <https://neuroshapes.org/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix nsg: <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
-@prefix nxv: <https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/> .
+@prefix nsg: <https://neuroshapes.org/> .
+@prefix nxv: <https://bluebrain.github.io/nexus/vocabulary/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -14,12 +14,11 @@
 @prefix schema: <http://schema.org/> .
 @prefix context: <https://incf.github.io/neuroshapes/contexts/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+@base <https://neuroshapes.org/> .
 
-<https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> rdf:type owl:Ontology ;
-                                                                       vann:preferredNamespacePrefix "nsg" ;
-                                                                       rdfs:label "Neurosciencegraph Core Vocabulary"@en ;
-                                                                       skos:prefLabel "Neurosciencegraph Core Vocabulary"@en .
+<https://neuroshapes.org/> rdf:type owl:Ontology ;
+                            vann:preferredNamespacePrefix "nsg" ;
+                            rdfs:label "Neurosciencegraph Core Vocabulary"@en .
 
 #################################################################
 #    Annotation properties
@@ -29,7 +28,7 @@
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/definingOntology
+###  https://neuroshapes.org/definingOntology
 nsg:definingOntology rdf:type owl:AnnotationProperty .
 
 
@@ -419,902 +418,902 @@ prov:wasStartedBy rdf:type owl:ObjectProperty ;
                   rdfs:label "was Started By"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/activityType
+###  https://neuroshapes.org/activityType
 nsg:activityType rdf:type owl:ObjectProperty ;
                  rdfs:label "activity Type"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/age
+###  https://neuroshapes.org/age
 nsg:age rdf:type owl:ObjectProperty ;
         rdfs:label "age"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/analogToDigitalConverter
+###  https://neuroshapes.org/analogToDigitalConverter
 nsg:analogToDigitalConverter rdf:type owl:ObjectProperty ;
                              rdfs:label "analog To Digital Converter"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/annotation
+###  https://neuroshapes.org/annotation
 nsg:annotation rdf:type owl:ObjectProperty ;
                rdfs:label "annotation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/annotationAngle
+###  https://neuroshapes.org/annotationAngle
 nsg:annotationAngle rdf:type owl:ObjectProperty ;
                     rdfs:label "annotation Angle"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/annotatorComment
+###  https://neuroshapes.org/annotatorComment
 nsg:annotatorComment rdf:type owl:ObjectProperty ;
                      rdfs:label "annotator Comment"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/atlasSpatialReferenceSystem
+###  https://neuroshapes.org/atlasSpatialReferenceSystem
 nsg:atlasSpatialReferenceSystem rdf:type owl:ObjectProperty ;
                                 rdfs:label "atlas Spatial Reference System"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/atlasVersion
+###  https://neuroshapes.org/atlasVersion
 nsg:atlasVersion rdf:type owl:ObjectProperty ;
                  rdfs:label "atlas Version"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/axonProjection
+###  https://neuroshapes.org/axonProjection
 nsg:axonProjection rdf:type owl:ObjectProperty ;
                    rdfs:label "axon Projection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/bathSolution
+###  https://neuroshapes.org/bathSolution
 nsg:bathSolution rdf:type owl:ObjectProperty ;
                  rdfs:label "bath Solution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/bestScore
+###  https://neuroshapes.org/bestScore
 nsg:bestScore rdf:type owl:ObjectProperty ;
               rdfs:label "best Score"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/boundary
+###  https://neuroshapes.org/boundary
 nsg:boundary rdf:type owl:ObjectProperty ;
              rdfs:label "boundary"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/boundingBox
+###  https://neuroshapes.org/boundingBox
 nsg:boundingBox rdf:type owl:ObjectProperty ;
                 rdfs:label "bounding Box"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/brainLocation
+###  https://neuroshapes.org/brainLocation
 nsg:brainLocation rdf:type owl:ObjectProperty ;
                   rdfs:label "brain Location"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/brainRegion
+###  https://neuroshapes.org/brainRegion
 nsg:brainRegion rdf:type owl:ObjectProperty ;
                 rdfs:label "brain Region"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/cellLibraryFile
+###  https://neuroshapes.org/cellLibraryFile
 nsg:cellLibraryFile rdf:type owl:ObjectProperty ;
                     rdfs:label "cell Library File"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/cellLine
+###  https://neuroshapes.org/cellLine
 nsg:cellLine rdf:type owl:ObjectProperty ;
              rdfs:label "cell Line"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/center
+###  https://neuroshapes.org/center
 nsg:center rdf:type owl:ObjectProperty ;
            rdfs:label "center"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/channel
+###  https://neuroshapes.org/channel
 nsg:channel rdf:type owl:ObjectProperty ;
             rdfs:label "channel"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/chlorideReversalPotential
+###  https://neuroshapes.org/chlorideReversalPotential
 nsg:chlorideReversalPotential rdf:type owl:ObjectProperty ;
                               rdfs:label "chloride Reversal Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/circuitCellProperties
+###  https://neuroshapes.org/circuitCellProperties
 nsg:circuitCellProperties rdf:type owl:ObjectProperty ;
                           rdfs:label "circuit Cell Properties"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/column
+###  https://neuroshapes.org/column
 nsg:column rdf:type owl:ObjectProperty ;
            rdfs:label "column"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/compensationCurrent
+###  https://neuroshapes.org/compensationCurrent
 nsg:compensationCurrent rdf:type owl:ObjectProperty ;
                         rdfs:label "compensation Current"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/compressionCorrection
+###  https://neuroshapes.org/compressionCorrection
 nsg:compressionCorrection rdf:type owl:ObjectProperty ;
                           rdfs:label "compression Correction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/conformsTo
+###  https://neuroshapes.org/conformsTo
 nsg:conformsTo rdf:type owl:ObjectProperty ;
                rdfs:label "conforms To"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/contribution
+###  https://neuroshapes.org/contribution
 nsg:contribution rdf:type owl:ObjectProperty ;
                  rdfs:label "contribution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/coordinatesInBrainAtlas
+###  https://neuroshapes.org/coordinatesInBrainAtlas
 nsg:coordinatesInBrainAtlas rdf:type owl:ObjectProperty ;
                             rdfs:label "coordinates In Brain Atlas"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/coordinatesInSlice
+###  https://neuroshapes.org/coordinatesInSlice
 nsg:coordinatesInSlice rdf:type owl:ObjectProperty ;
                        rdfs:label "coordinates In Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/cuttingThickness
+###  https://neuroshapes.org/cuttingThickness
 nsg:cuttingThickness rdf:type owl:ObjectProperty ;
                      rdfs:label "cutting Thickness"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/dateOfSurgery
+###  https://neuroshapes.org/dateOfSurgery
 nsg:dateOfSurgery rdf:type owl:ObjectProperty ;
                   rdfs:label "date Of Surgery"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/derivation
+###  https://neuroshapes.org/derivation
 nsg:derivation rdf:type owl:ObjectProperty ;
                rdfs:label "derivation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/digest
+###  https://neuroshapes.org/digest
 nsg:digest rdf:type owl:ObjectProperty ;
            rdfs:label "digest"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/digitalToAnalogConverter
+###  https://neuroshapes.org/digitalToAnalogConverter
 nsg:digitalToAnalogConverter rdf:type owl:ObjectProperty ;
                              rdfs:label "digital To Analog Converter"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/disease
+###  https://neuroshapes.org/disease
 nsg:disease rdf:type owl:ObjectProperty ;
             rdfs:label "disease"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/diseaseModel
+###  https://neuroshapes.org/diseaseModel
 nsg:diseaseModel rdf:type owl:ObjectProperty ;
                  rdfs:label "disease Model"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/distanceToBoundary
+###  https://neuroshapes.org/distanceToBoundary
 nsg:distanceToBoundary rdf:type owl:ObjectProperty ;
                        rdfs:label "distance To Boundary"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/eCode
+###  https://neuroshapes.org/eCode
 nsg:eCode rdf:type owl:ObjectProperty ;
           rdfs:label "eCode"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/eModel
+###  https://neuroshapes.org/eModel
 nsg:eModel rdf:type owl:ObjectProperty ;
            rdfs:label "eModel"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/eType
+###  https://neuroshapes.org/eType
 nsg:eType rdf:type owl:ObjectProperty ;
           rdfs:label "eType"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/edgeCollection
+###  https://neuroshapes.org/edgeCollection
 nsg:edgeCollection rdf:type owl:ObjectProperty ;
                    rdfs:label "edge Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/edgePopulation
+###  https://neuroshapes.org/edgePopulation
 nsg:edgePopulation rdf:type owl:ObjectProperty ;
                    rdfs:label "edge Population"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/electrodeNumber
+###  https://neuroshapes.org/electrodeNumber
 nsg:electrodeNumber rdf:type owl:ObjectProperty ;
                     rdfs:label "electrode Number"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/electrodeResistance
+###  https://neuroshapes.org/electrodeResistance
 nsg:electrodeResistance rdf:type owl:ObjectProperty ;
                         rdfs:label "electrode Resistance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/emodelIndex
+###  https://neuroshapes.org/emodelIndex
 nsg:emodelIndex rdf:type owl:ObjectProperty ;
                 rdfs:label "emodel Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/emodelRelease
+###  https://neuroshapes.org/emodelRelease
 nsg:emodelRelease rdf:type owl:ObjectProperty ;
                   rdfs:label "emodel Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/endMembranePotential
+###  https://neuroshapes.org/endMembranePotential
 nsg:endMembranePotential rdf:type owl:ObjectProperty ;
                          rdfs:label "end Membrane Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/experimentalCell
+###  https://neuroshapes.org/experimentalCell
 nsg:experimentalCell rdf:type owl:ObjectProperty ;
                      rdfs:label "experimental Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/featureExtractionConfiguration
+###  https://neuroshapes.org/featureExtractionConfiguration
 nsg:featureExtractionConfiguration rdf:type owl:ObjectProperty ;
                                    rdfs:label "feature Extraction Configuration"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/features
+###  https://neuroshapes.org/features
 nsg:features rdf:type owl:ObjectProperty ;
              rdfs:label "features"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/firstRow
+###  https://neuroshapes.org/firstRow
 nsg:firstRow rdf:type owl:ObjectProperty ;
              rdfs:label "first Row"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/fixationMethod
+###  https://neuroshapes.org/fixationMethod
 nsg:fixationMethod rdf:type owl:ObjectProperty ;
                    rdfs:label "fixation Method"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/gain
+###  https://neuroshapes.org/gain
 nsg:gain rdf:type owl:ObjectProperty ;
          rdfs:label "gain"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/generation
+###  https://neuroshapes.org/generation
 nsg:generation rdf:type owl:ObjectProperty ;
                rdfs:label "generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/geometry
+###  https://neuroshapes.org/geometry
 nsg:geometry rdf:type owl:ObjectProperty ;
              rdfs:label "geometry"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/geometryParameter
+###  https://neuroshapes.org/geometryParameter
 nsg:geometryParameter rdf:type owl:ObjectProperty ;
                       rdfs:label "geometry Parameter"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hadProtocol
+###  https://neuroshapes.org/hadProtocol
 nsg:hadProtocol rdf:type owl:ObjectProperty ;
                 rdfs:label "had Protocol"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasApicalDendrite
+###  https://neuroshapes.org/hasApicalDendrite
 nsg:hasApicalDendrite rdf:type owl:ObjectProperty ;
                       rdfs:label "has Apical Dendrite"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasAxon
+###  https://neuroshapes.org/hasAxon
 nsg:hasAxon rdf:type owl:ObjectProperty ;
             rdfs:label "has Axon"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasBasalDendrite
+###  https://neuroshapes.org/hasBasalDendrite
 nsg:hasBasalDendrite rdf:type owl:ObjectProperty ;
                      rdfs:label "has Basal Dendrite"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasBody
+###  https://neuroshapes.org/hasBody
 nsg:hasBody rdf:type owl:ObjectProperty ;
             rdfs:label "has Body"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasSelector
+###  https://neuroshapes.org/hasSelector
 nsg:hasSelector rdf:type owl:ObjectProperty ;
                 rdfs:label "has Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasSoma
+###  https://neuroshapes.org/hasSoma
 nsg:hasSoma rdf:type owl:ObjectProperty ;
             rdfs:label "has Soma"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasSource
+###  https://neuroshapes.org/hasSource
 nsg:hasSource rdf:type owl:ObjectProperty ;
               rdfs:label "has Source"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hasTarget
+###  https://neuroshapes.org/hasTarget
 nsg:hasTarget rdf:type owl:ObjectProperty ;
               rdfs:label "has Target"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/heightResolution
+###  https://neuroshapes.org/heightResolution
 nsg:heightResolution rdf:type owl:ObjectProperty ;
                      rdfs:label "height Resolution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hemisphere
+###  https://neuroshapes.org/hemisphere
 nsg:hemisphere rdf:type owl:ObjectProperty ;
                rdfs:label "hemisphere"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/hypampThreshold
+###  https://neuroshapes.org/hypampThreshold
 nsg:hypampThreshold rdf:type owl:ObjectProperty ;
                     rdfs:label "hypamp Threshold"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/imageDirection
+###  https://neuroshapes.org/imageDirection
 nsg:imageDirection rdf:type owl:ObjectProperty ;
                    rdfs:label "image Direction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/imageModality
+###  https://neuroshapes.org/imageModality
 nsg:imageModality rdf:type owl:ObjectProperty ;
                   rdfs:label "image Modality"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/imageOrigin
+###  https://neuroshapes.org/imageOrigin
 nsg:imageOrigin rdf:type owl:ObjectProperty ;
                 rdfs:label "image Origin"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/imageVolume
+###  https://neuroshapes.org/imageVolume
 nsg:imageVolume rdf:type owl:ObjectProperty ;
                 rdfs:label "image Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/imagingMethod
+###  https://neuroshapes.org/imagingMethod
 nsg:imagingMethod rdf:type owl:ObjectProperty ;
                   rdfs:label "imaging Method"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/index
+###  https://neuroshapes.org/index
 nsg:index rdf:type owl:ObjectProperty ;
           rdfs:label "index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/inputResistance
+###  https://neuroshapes.org/inputResistance
 nsg:inputResistance rdf:type owl:ObjectProperty ;
                     rdfs:label "input Resistance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/invalidation
+###  https://neuroshapes.org/invalidation
 nsg:invalidation rdf:type owl:ObjectProperty ;
                  rdfs:label "invalidation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ionChannelGene
+###  https://neuroshapes.org/ionChannelGene
 nsg:ionChannelGene rdf:type owl:ObjectProperty ;
                    rdfs:label "ion Channel Gene"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/isRegisteredIn
+###  https://neuroshapes.org/isRegisteredIn
 nsg:isRegisteredIn rdf:type owl:ObjectProperty ;
                    rdfs:label "is Registered In"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/labelingCompound
+###  https://neuroshapes.org/labelingCompound
 nsg:labelingCompound rdf:type owl:ObjectProperty ;
                      rdfs:label "labeling Compound"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/layer
+###  https://neuroshapes.org/layer
 nsg:layer rdf:type owl:ObjectProperty ;
           rdfs:label "layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/liquidJunctionPotential
+###  https://neuroshapes.org/liquidJunctionPotential
 nsg:liquidJunctionPotential rdf:type owl:ObjectProperty ;
                             rdfs:label "liquid Junction Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/location
+###  https://neuroshapes.org/location
 nsg:location rdf:type owl:ObjectProperty ;
              rdfs:label "location"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/locationInSlice
+###  https://neuroshapes.org/locationInSlice
 nsg:locationInSlice rdf:type owl:ObjectProperty ;
                     rdfs:label "location In Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/longitudinalAxis
+###  https://neuroshapes.org/longitudinalAxis
 nsg:longitudinalAxis rdf:type owl:ObjectProperty ;
                      rdfs:label "longitudinal Axis"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/lowerPoint
+###  https://neuroshapes.org/lowerPoint
 nsg:lowerPoint rdf:type owl:ObjectProperty ;
                rdfs:label "lower Point"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/mType
+###  https://neuroshapes.org/mType
 nsg:mType rdf:type owl:ObjectProperty ;
           rdfs:label "mType"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/mainModelScript
+###  https://neuroshapes.org/mainModelScript
 nsg:mainModelScript rdf:type owl:ObjectProperty ;
                     rdfs:label "main Model Script"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/materials
+###  https://neuroshapes.org/materials
 nsg:materials rdf:type owl:ObjectProperty ;
               rdfs:label "materials"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/measuredHoldingPotential
+###  https://neuroshapes.org/measuredHoldingPotential
 nsg:measuredHoldingPotential rdf:type owl:ObjectProperty ;
                              rdfs:label "measured Holding Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/memodelIndex
+###  https://neuroshapes.org/memodelIndex
 nsg:memodelIndex rdf:type owl:ObjectProperty ;
                  rdfs:label "memodel Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/memodelRelease
+###  https://neuroshapes.org/memodelRelease
 nsg:memodelRelease rdf:type owl:ObjectProperty ;
                    rdfs:label "memodel Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/modelOf
+###  https://neuroshapes.org/modelOf
 nsg:modelOf rdf:type owl:ObjectProperty ;
             rdfs:label "model Of"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/modelScript
+###  https://neuroshapes.org/modelScript
 nsg:modelScript rdf:type owl:ObjectProperty ;
                 rdfs:label "model Script"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/morphology
+###  https://neuroshapes.org/morphology
 nsg:morphology rdf:type owl:ObjectProperty ;
                rdfs:label "morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/morphologyIndex
+###  https://neuroshapes.org/morphologyIndex
 nsg:morphologyIndex rdf:type owl:ObjectProperty ;
                     rdfs:label "morphology Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/morphologyRelease
+###  https://neuroshapes.org/morphologyRelease
 nsg:morphologyRelease rdf:type owl:ObjectProperty ;
                       rdfs:label "morphology Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/mountingMedia
+###  https://neuroshapes.org/mountingMedia
 nsg:mountingMedia rdf:type owl:ObjectProperty ;
                   rdfs:label "mounting Media"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/nodeCollection
+###  https://neuroshapes.org/nodeCollection
 nsg:nodeCollection rdf:type owl:ObjectProperty ;
                    rdfs:label "node Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/normalizedScore
+###  https://neuroshapes.org/normalizedScore
 nsg:normalizedScore rdf:type owl:ObjectProperty ;
                     rdfs:label "normalized Score"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/numberOfSlices
+###  https://neuroshapes.org/numberOfSlices
 nsg:numberOfSlices rdf:type owl:ObjectProperty ;
                    rdfs:label "number Of Slices"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/objectOfStudy
+###  https://neuroshapes.org/objectOfStudy
 nsg:objectOfStudy rdf:type owl:ObjectProperty ;
                   rdfs:label "object Of Study"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/objectiveMagnification
+###  https://neuroshapes.org/objectiveMagnification
 nsg:objectiveMagnification rdf:type owl:ObjectProperty ;
                            rdfs:label "objective Magnification"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/objectiveType
+###  https://neuroshapes.org/objectiveType
 nsg:objectiveType rdf:type owl:ObjectProperty ;
                   rdfs:label "objective Type"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/orientation
+###  https://neuroshapes.org/orientation
 nsg:orientation rdf:type owl:ObjectProperty ;
                 rdfs:label "orientation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/origin
+###  https://neuroshapes.org/origin
 nsg:origin rdf:type owl:ObjectProperty ;
            rdfs:label "origin"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/parcellationOntology
+###  https://neuroshapes.org/parcellationOntology
 nsg:parcellationOntology rdf:type owl:ObjectProperty ;
                          rdfs:label "parcellation Ontology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/parcellationVolume
+###  https://neuroshapes.org/parcellationVolume
 nsg:parcellationVolume rdf:type owl:ObjectProperty ;
                        rdfs:label "parcellation Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/period
+###  https://neuroshapes.org/period
 nsg:period rdf:type owl:ObjectProperty ;
            rdfs:label "period"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/pipetteNumber
+###  https://neuroshapes.org/pipetteNumber
 nsg:pipetteNumber rdf:type owl:ObjectProperty ;
                   rdfs:label "pipette Number"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/pipetteResistance
+###  https://neuroshapes.org/pipetteResistance
 nsg:pipetteResistance rdf:type owl:ObjectProperty ;
                       rdfs:label "pipette Resistance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/positionInLayer
+###  https://neuroshapes.org/positionInLayer
 nsg:positionInLayer rdf:type owl:ObjectProperty ;
                     rdfs:label "position In Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/projectName
+###  https://neuroshapes.org/projectName
 nsg:projectName rdf:type owl:ObjectProperty ;
                 rdfs:label "project Name"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/properties
+###  https://neuroshapes.org/properties
 nsg:properties rdf:type owl:ObjectProperty ;
                rdfs:label "properties"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/providerExperimentId
+###  https://neuroshapes.org/providerExperimentId
 nsg:providerExperimentId rdf:type owl:ObjectProperty ;
                          rdfs:label "provider Experiment Id"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/providerExperimentName
+###  https://neuroshapes.org/providerExperimentName
 nsg:providerExperimentName rdf:type owl:ObjectProperty ;
                            rdfs:label "provider Experiment Name"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/putativeEtype
+###  https://neuroshapes.org/putativeEtype
 nsg:putativeEtype rdf:type owl:ObjectProperty ;
                   rdfs:label "putative Etype"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/putativeMType
+###  https://neuroshapes.org/putativeMType
 nsg:putativeMType rdf:type owl:ObjectProperty ;
                   rdfs:label "putative MType"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/quality
+###  https://neuroshapes.org/quality
 nsg:quality rdf:type owl:ObjectProperty ;
             rdfs:label "quality"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/radius
+###  https://neuroshapes.org/radius
 nsg:radius rdf:type owl:ObjectProperty ;
            rdfs:label "radius"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reagentLinearFormula
+###  https://neuroshapes.org/reagentLinearFormula
 nsg:reagentLinearFormula rdf:type owl:ObjectProperty ;
                          rdfs:label "reagent Linear Formula"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reagentMolarWeight
+###  https://neuroshapes.org/reagentMolarWeight
 nsg:reagentMolarWeight rdf:type owl:ObjectProperty ;
                        rdfs:label "reagent Molar Weight"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reagentName
+###  https://neuroshapes.org/reagentName
 nsg:reagentName rdf:type owl:ObjectProperty ;
                 rdfs:label "reagent Name"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reagentVendor
+###  https://neuroshapes.org/reagentVendor
 nsg:reagentVendor rdf:type owl:ObjectProperty ;
                   rdfs:label "reagent Vendor"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reconstructable
+###  https://neuroshapes.org/reconstructable
 nsg:reconstructable rdf:type owl:ObjectProperty ;
                     rdfs:label "reconstructable"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/reconstructionRequested
+###  https://neuroshapes.org/reconstructionRequested
 nsg:reconstructionRequested rdf:type owl:ObjectProperty ;
                             rdfs:label "reconstruction Requested"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/repetition
+###  https://neuroshapes.org/repetition
 nsg:repetition rdf:type owl:ObjectProperty ;
                rdfs:label "repetition"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/row
+###  https://neuroshapes.org/row
 nsg:row rdf:type owl:ObjectProperty ;
         rdfs:label "row"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/scale
+###  https://neuroshapes.org/scale
 nsg:scale rdf:type owl:ObjectProperty ;
           rdfs:label "scale"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/score
+###  https://neuroshapes.org/score
 nsg:score rdf:type owl:ObjectProperty ;
           rdfs:label "score"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sealResistance
+###  https://neuroshapes.org/sealResistance
 nsg:sealResistance rdf:type owl:ObjectProperty ;
                    rdfs:label "seal Resistance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/secondRow
+###  https://neuroshapes.org/secondRow
 nsg:secondRow rdf:type owl:ObjectProperty ;
               rdfs:label "second Row"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/seriesResistance
+###  https://neuroshapes.org/seriesResistance
 nsg:seriesResistance rdf:type owl:ObjectProperty ;
                      rdfs:label "series Resistance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sex
+###  https://neuroshapes.org/sex
 nsg:sex rdf:type owl:ObjectProperty ;
         rdfs:label "sex"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sliceHeight
+###  https://neuroshapes.org/sliceHeight
 nsg:sliceHeight rdf:type owl:ObjectProperty ;
                 rdfs:label "slice Height"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sliceInterval
+###  https://neuroshapes.org/sliceInterval
 nsg:sliceInterval rdf:type owl:ObjectProperty ;
                   rdfs:label "slice Interval"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sliceIntervalValue
+###  https://neuroshapes.org/sliceIntervalValue
 nsg:sliceIntervalValue rdf:type owl:ObjectProperty ;
                        rdfs:label "slice Interval Value"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sliceResolution
+###  https://neuroshapes.org/sliceResolution
 nsg:sliceResolution rdf:type owl:ObjectProperty ;
                     rdfs:label "slice Resolution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sliceWidth
+###  https://neuroshapes.org/sliceWidth
 nsg:sliceWidth rdf:type owl:ObjectProperty ;
                rdfs:label "slice Width"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/slicingAngle
+###  https://neuroshapes.org/slicingAngle
 nsg:slicingAngle rdf:type owl:ObjectProperty ;
                  rdfs:label "slicing Angle"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/slicingPlane
+###  https://neuroshapes.org/slicingPlane
 nsg:slicingPlane rdf:type owl:ObjectProperty ;
                  rdfs:label "slicing Plane"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/solution
+###  https://neuroshapes.org/solution
 nsg:solution rdf:type owl:ObjectProperty ;
              rdfs:label "solution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/somaReconstructionType
+###  https://neuroshapes.org/somaReconstructionType
 nsg:somaReconstructionType rdf:type owl:ObjectProperty ;
                            rdfs:label "soma Reconstruction Type"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/source
+###  https://neuroshapes.org/source
 nsg:source rdf:type owl:ObjectProperty ;
            rdfs:label "source"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/spatialCellName
+###  https://neuroshapes.org/spatialCellName
 nsg:spatialCellName rdf:type owl:ObjectProperty ;
                     rdfs:label "spatial Cell Name"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/spatialIndex
+###  https://neuroshapes.org/spatialIndex
 nsg:spatialIndex rdf:type owl:ObjectProperty ;
                  rdfs:label "spatial Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/spatialReferenceSystem
+###  https://neuroshapes.org/spatialReferenceSystem
 nsg:spatialReferenceSystem rdf:type owl:ObjectProperty ;
                            rdfs:label "spatial Reference System"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/species
+###  https://neuroshapes.org/species
 nsg:species rdf:type owl:ObjectProperty ;
             rdfs:label "species"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/stain
+###  https://neuroshapes.org/stain
 nsg:stain rdf:type owl:ObjectProperty ;
           rdfs:label "stain"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/startMembranePotential
+###  https://neuroshapes.org/startMembranePotential
 nsg:startMembranePotential rdf:type owl:ObjectProperty ;
                            rdfs:label "start Membrane Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/status
+###  https://neuroshapes.org/status
 nsg:status rdf:type owl:ObjectProperty ;
            rdfs:label "status"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/steps
+###  https://neuroshapes.org/steps
 nsg:steps rdf:type owl:ObjectProperty ;
           rdfs:label "steps"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/stimuliToExperimentMap
+###  https://neuroshapes.org/stimuliToExperimentMap
 nsg:stimuliToExperimentMap rdf:type owl:ObjectProperty ;
                            rdfs:label "stimuli To Experiment Map"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/stimulus
+###  https://neuroshapes.org/stimulus
 nsg:stimulus rdf:type owl:ObjectProperty ;
              rdfs:label "stimulus"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/strain
+###  https://neuroshapes.org/strain
 nsg:strain rdf:type owl:ObjectProperty ;
            rdfs:label "strain"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/subCellularMechanism
+###  https://neuroshapes.org/subCellularMechanism
 nsg:subCellularMechanism rdf:type owl:ObjectProperty ;
                          rdfs:label "sub Cellular Mechanism"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/subCellularModel
+###  https://neuroshapes.org/subCellularModel
 nsg:subCellularModel rdf:type owl:ObjectProperty ;
                      rdfs:label "sub Cellular Model"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/subject
+###  https://neuroshapes.org/subject
 nsg:subject rdf:type owl:ObjectProperty ;
             rdfs:label "subject"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/sweep
+###  https://neuroshapes.org/sweep
 nsg:sweep rdf:type owl:ObjectProperty ;
           rdfs:label "sweep"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/synapse
+###  https://neuroshapes.org/synapse
 nsg:synapse rdf:type owl:ObjectProperty ;
             rdfs:label "synapse"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/synapseRelease
+###  https://neuroshapes.org/synapseRelease
 nsg:synapseRelease rdf:type owl:ObjectProperty ;
                    rdfs:label "synapse Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/target
+###  https://neuroshapes.org/target
 nsg:target rdf:type owl:ObjectProperty ;
            rdfs:label "target"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/targetHoldingPotential
+###  https://neuroshapes.org/targetHoldingPotential
 nsg:targetHoldingPotential rdf:type owl:ObjectProperty ;
                            rdfs:label "target Holding Potential"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/temperature
+###  https://neuroshapes.org/temperature
 nsg:temperature rdf:type owl:ObjectProperty ;
                 rdfs:label "temperature"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/templateVolume
+###  https://neuroshapes.org/templateVolume
 nsg:templateVolume rdf:type owl:ObjectProperty ;
                    rdfs:label "template Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/thirdRow
+###  https://neuroshapes.org/thirdRow
 nsg:thirdRow rdf:type owl:ObjectProperty ;
              rdfs:label "third Row"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/timeStep
+###  https://neuroshapes.org/timeStep
 nsg:timeStep rdf:type owl:ObjectProperty ;
              rdfs:label "time Step"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/transgenic
+###  https://neuroshapes.org/transgenic
 nsg:transgenic rdf:type owl:ObjectProperty ;
                rdfs:label "transgenic"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/treatment
+###  https://neuroshapes.org/treatment
 nsg:treatment rdf:type owl:ObjectProperty ;
               rdfs:label "treatment"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/upperPoint
+###  https://neuroshapes.org/upperPoint
 nsg:upperPoint rdf:type owl:ObjectProperty ;
                rdfs:label "upper Point"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/valueX
+###  https://neuroshapes.org/valueX
 nsg:valueX rdf:type owl:ObjectProperty ;
            rdfs:label "value"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/valueY
+###  https://neuroshapes.org/valueY
 nsg:valueY rdf:type owl:ObjectProperty ;
            rdfs:label "value"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/valueZ
+###  https://neuroshapes.org/valueZ
 nsg:valueZ rdf:type owl:ObjectProperty ;
            rdfs:label "value"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/variable
+###  https://neuroshapes.org/variable
 nsg:variable rdf:type owl:ObjectProperty ;
              rdfs:label "variable"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/vendor
+###  https://neuroshapes.org/vendor
 nsg:vendor rdf:type owl:ObjectProperty ;
            rdfs:label "vendor"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/view2d
+###  https://neuroshapes.org/view2d
 nsg:view2d rdf:type owl:ObjectProperty ;
            rdfs:label "view2d"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/view3d
+###  https://neuroshapes.org/view3d
 nsg:view3d rdf:type owl:ObjectProperty ;
            rdfs:label "view3d"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/volumeDimension
+###  https://neuroshapes.org/volumeDimension
 nsg:volumeDimension rdf:type owl:ObjectProperty ;
                     rdfs:label "volume Dimension"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/voxelResolution
+###  https://neuroshapes.org/voxelResolution
 nsg:voxelResolution rdf:type owl:ObjectProperty ;
                     rdfs:label "voxel Resolution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/voxelType
+###  https://neuroshapes.org/voxelType
 nsg:voxelType rdf:type owl:ObjectProperty ;
               rdfs:label "voxel Type"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/warning
+###  https://neuroshapes.org/warning
 nsg:warning rdf:type owl:ObjectProperty ;
             rdfs:label "warning"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/widthResolution
+###  https://neuroshapes.org/widthResolution
 nsg:widthResolution rdf:type owl:ObjectProperty ;
                     rdfs:label "width Resolution"@en .
 
@@ -1391,7 +1390,7 @@ prov:Activity rdf:type owl:Class ;
                          "Activity type ontology"@en ;
               skos:definition "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities (https://www.w3.org/TR/prov-o/#Activity)"@en ;
               skos:prefLabel "Activity"@en ;
-              nsg:definingOntology <https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/> .
+              nsg:definingOntology <https://neuroshapes.org/> .
 
 
 ###  http://www.w3.org/ns/prov#ActivityInfluence
@@ -1538,7 +1537,7 @@ prov:Usage rdf:type owl:Class ;
            skos:prefLabel "Entity usage"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AcquisitionAnnotation
+###  https://neuroshapes.org/AcquisitionAnnotation
 nsg:AcquisitionAnnotation rdf:type owl:Class ;
                           rdfs:subClassOf prov:Activity ;
                           rdfs:label "Acquisition Annotation"@en ;
@@ -1546,7 +1545,7 @@ nsg:AcquisitionAnnotation rdf:type owl:Class ;
                           skos:prefLabel "Acquisition Annotation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AffineLinearTransform
+###  https://neuroshapes.org/AffineLinearTransform
 nsg:AffineLinearTransform rdf:type owl:Class ;
                           rdfs:subClassOf nsg:Transform ;
                           rdfs:label "Affine Linear Transform"@en ;
@@ -1554,7 +1553,7 @@ nsg:AffineLinearTransform rdf:type owl:Class ;
                           skos:prefLabel "Affine Linear Transform"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Analysis
+###  https://neuroshapes.org/Analysis
 nsg:Analysis rdf:type owl:Class ;
              rdfs:subClassOf prov:Activity ;
              rdfs:label "Analysis"@en ;
@@ -1562,7 +1561,7 @@ nsg:Analysis rdf:type owl:Class ;
              skos:prefLabel "Analysis"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AnalysisResult
+###  https://neuroshapes.org/AnalysisResult
 nsg:AnalysisResult rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Analysis Result"@en ;
@@ -1570,7 +1569,7 @@ nsg:AnalysisResult rdf:type owl:Class ;
                    skos:prefLabel "Analysis Result"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AnnotatedSlice
+###  https://neuroshapes.org/AnnotatedSlice
 nsg:AnnotatedSlice rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Annotated Slice"@en ;
@@ -1578,7 +1577,7 @@ nsg:AnnotatedSlice rdf:type owl:Class ;
                    skos:prefLabel "Annotated Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Annotation
+###  https://neuroshapes.org/Annotation
 nsg:Annotation rdf:type owl:Class ;
                rdfs:subClassOf prov:Entity ;
                rdfs:label "Annotation"@en ;
@@ -1586,19 +1585,19 @@ nsg:Annotation rdf:type owl:Class ;
                skos:prefLabel "Annotation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AnnotationBody
+###  https://neuroshapes.org/AnnotationBody
 nsg:AnnotationBody rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Annotation Body"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AnnotationTarget
+###  https://neuroshapes.org/AnnotationTarget
 nsg:AnnotationTarget rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ;
                      rdfs:label "Annotation Target"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ApicalAnnotation
+###  https://neuroshapes.org/ApicalAnnotation
 nsg:ApicalAnnotation rdf:type owl:Class ;
                      rdfs:subClassOf prov:Activity ;
                      rdfs:label "Apical Annotation"@en ;
@@ -1606,7 +1605,7 @@ nsg:ApicalAnnotation rdf:type owl:Class ;
                      skos:prefLabel "Apical Annotation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AtlasConstruction
+###  https://neuroshapes.org/AtlasConstruction
 nsg:AtlasConstruction rdf:type owl:Class ;
                       rdfs:subClassOf prov:Activity ;
                       rdfs:label "Atlas Construction"@en ;
@@ -1614,7 +1613,7 @@ nsg:AtlasConstruction rdf:type owl:Class ;
                       skos:prefLabel "Atlas Construction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AtlasRelease
+###  https://neuroshapes.org/AtlasRelease
 nsg:AtlasRelease rdf:type owl:Class ;
                  rdfs:subClassOf nsg:BrainAtlas ;
                  rdfs:label "Atlas Release"@en ;
@@ -1622,7 +1621,7 @@ nsg:AtlasRelease rdf:type owl:Class ;
                  skos:prefLabel "Atlas Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/AtlasSpatialReferenceSystem
+###  https://neuroshapes.org/AtlasSpatialReferenceSystem
 nsg:AtlasSpatialReferenceSystem rdf:type owl:Class ;
                                 rdfs:subClassOf nsg:SpatialReferenceSystem ;
                                 rdfs:label "Atlas Spatial Reference System"@en ;
@@ -1630,12 +1629,12 @@ nsg:AtlasSpatialReferenceSystem rdf:type owl:Class ;
                                 skos:prefLabel "Atlas Spatial Reference System"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BiologicalSex
+###  https://neuroshapes.org/BiologicalSex
 nsg:BiologicalSex rdf:type owl:Class ;
                   rdfs:label "Biological Sex"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BluePyEfeFeatures
+###  https://neuroshapes.org/BluePyEfeFeatures
 nsg:BluePyEfeFeatures rdf:type owl:Class ;
                       rdfs:subClassOf prov:Entity ;
                       rdfs:label "Blue Py Efe Features"@en ;
@@ -1643,7 +1642,7 @@ nsg:BluePyEfeFeatures rdf:type owl:Class ;
                       skos:prefLabel "Blue Py Efe Features"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BoundingBox
+###  https://neuroshapes.org/BoundingBox
 nsg:BoundingBox rdf:type owl:Class ;
                 rdfs:subClassOf prov:Entity ;
                 rdfs:label "Bounding Box"@en ;
@@ -1651,12 +1650,12 @@ nsg:BoundingBox rdf:type owl:Class ;
                 skos:prefLabel "Bounding Box"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainAtlas
+###  https://neuroshapes.org/BrainAtlas
 nsg:BrainAtlas rdf:type owl:Class ;
                rdfs:subClassOf prov:Entity .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainAtlasRelease
+###  https://neuroshapes.org/BrainAtlasRelease
 nsg:BrainAtlasRelease rdf:type owl:Class ;
                       rdfs:subClassOf nsg:AtlasRelease ;
                       rdfs:label "Brain Atlas Release"@en ;
@@ -1664,7 +1663,7 @@ nsg:BrainAtlasRelease rdf:type owl:Class ;
                       skos:prefLabel "Brain Atlas Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainAtlasSpatialReferenceSystem
+###  https://neuroshapes.org/BrainAtlasSpatialReferenceSystem
 nsg:BrainAtlasSpatialReferenceSystem rdf:type owl:Class ;
                                      rdfs:subClassOf nsg:AtlasSpatialReferenceSystem ;
                                      rdfs:label "Brain Atlas Spatial Reference System"@en ;
@@ -1672,7 +1671,7 @@ nsg:BrainAtlasSpatialReferenceSystem rdf:type owl:Class ;
                                      skos:prefLabel "Brain Atlas Spatial Reference System"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainImaging
+###  https://neuroshapes.org/BrainImaging
 nsg:BrainImaging rdf:type owl:Class ;
                  rdfs:subClassOf prov:Activity ;
                  rdfs:label "Brain Imaging"@en ;
@@ -1680,14 +1679,14 @@ nsg:BrainImaging rdf:type owl:Class ;
                  skos:prefLabel "Brain Imaging"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainLocation
+###  https://neuroshapes.org/BrainLocation
 nsg:BrainLocation rdf:type owl:Class ;
                   rdfs:subClassOf prov:Entity ,
                                   prov:Location ;
                   rdfs:label "Brain Location"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationDataLayer
+###  https://neuroshapes.org/BrainParcellationDataLayer
 nsg:BrainParcellationDataLayer rdf:type owl:Class ;
                                rdfs:subClassOf nsg:VolumetricDataLayer ;
                                rdfs:label "Brain Parcellation Data Layer"@en ;
@@ -1695,7 +1694,7 @@ nsg:BrainParcellationDataLayer rdf:type owl:Class ;
                                skos:prefLabel "Brain Parcellation Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainParcellationMesh
+###  https://neuroshapes.org/BrainParcellationMesh
 nsg:BrainParcellationMesh rdf:type owl:Class ;
                           rdfs:subClassOf prov:Entity ;
                           rdfs:label "Brain Parcellation Mesh"@en ;
@@ -1703,14 +1702,14 @@ nsg:BrainParcellationMesh rdf:type owl:Class ;
                           skos:prefLabel "Brain Parcellation Mesh"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainRegion
+###  https://neuroshapes.org/BrainRegion
 nsg:BrainRegion rdf:type owl:Class ;
                 rdfs:label "Brain Region"@en ,
                            "Brain Region ontology"@en ;
                 nsg:definingOntology <http://bbp.epfl.ch/neurosciencegraph/ontologies/brainregion> .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/BrainSlicing
+###  https://neuroshapes.org/BrainSlicing
 nsg:BrainSlicing rdf:type owl:Class ;
                  rdfs:subClassOf prov:Activity ;
                  rdfs:label "Brain Slicing"@en ;
@@ -1718,7 +1717,7 @@ nsg:BrainSlicing rdf:type owl:Class ;
                  skos:prefLabel "Brain Slicing"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Cell
+###  https://neuroshapes.org/Cell
 nsg:Cell rdf:type owl:Class ;
          rdfs:subClassOf prov:Entity ;
          rdfs:label "Cell"@en ;
@@ -1726,7 +1725,7 @@ nsg:Cell rdf:type owl:Class ;
          skos:prefLabel "Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellDensityDataLayer
+###  https://neuroshapes.org/CellDensityDataLayer
 nsg:CellDensityDataLayer rdf:type owl:Class ;
                          rdfs:subClassOf nsg:VolumetricDataLayer ;
                          rdfs:label "Cell Density Data Layer"@en ;
@@ -1734,7 +1733,7 @@ nsg:CellDensityDataLayer rdf:type owl:Class ;
                          skos:prefLabel "Cell Density Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellPlacement
+###  https://neuroshapes.org/CellPlacement
 nsg:CellPlacement rdf:type owl:Class ;
                   rdfs:subClassOf prov:Entity ;
                   rdfs:label "Cell Placement"@en ;
@@ -1742,13 +1741,13 @@ nsg:CellPlacement rdf:type owl:Class ;
                   skos:prefLabel "Cell Placement"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CellType
+###  https://neuroshapes.org/CellType
 nsg:CellType rdf:type owl:Class ;
              rdfs:subClassOf prov:Entity ;
              rdfs:label "Cell Type Ontology."@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CircuitCellProperties
+###  https://neuroshapes.org/CircuitCellProperties
 nsg:CircuitCellProperties rdf:type owl:Class ;
                           rdfs:subClassOf prov:Entity ;
                           rdfs:label "Circuit Cell Properties"@en ;
@@ -1756,26 +1755,26 @@ nsg:CircuitCellProperties rdf:type owl:Class ;
                           skos:prefLabel "Circuit Cell Properties"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Configuration
+###  https://neuroshapes.org/Configuration
 nsg:Configuration rdf:type owl:Class ;
                   rdfs:subClassOf prov:Entity ;
                   rdfs:label "Configuration"@en ;
                   skos:prefLabel "Configuration"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Contribution
+###  https://neuroshapes.org/Contribution
 nsg:Contribution rdf:type owl:Class ;
                  rdfs:subClassOf prov:Association ;
                  rdfs:label "Contribution"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/CoordinateSystem
+###  https://neuroshapes.org/CoordinateSystem
 nsg:CoordinateSystem rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ,
                                      prov:Location .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DeformableTransform
+###  https://neuroshapes.org/DeformableTransform
 nsg:DeformableTransform rdf:type owl:Class ;
                         rdfs:subClassOf nsg:Transform ;
                         rdfs:label "Deformable Transform"@en ;
@@ -1783,7 +1782,7 @@ nsg:DeformableTransform rdf:type owl:Class ;
                         skos:prefLabel "Deformable Transform"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DetailedCircuit
+###  https://neuroshapes.org/DetailedCircuit
 nsg:DetailedCircuit rdf:type owl:Class ;
                     rdfs:subClassOf nsg:ModelInstance ;
                     rdfs:label "Detailed Circuit"@en ;
@@ -1791,13 +1790,13 @@ nsg:DetailedCircuit rdf:type owl:Class ;
                     skos:prefLabel "Detailed Circuit"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/DocumentIndexSelector
+###  https://neuroshapes.org/DocumentIndexSelector
 nsg:DocumentIndexSelector rdf:type owl:Class ;
                           rdfs:subClassOf nsg:Selector ;
                           rdfs:label "Document Index Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModel
+###  https://neuroshapes.org/EModel
 nsg:EModel rdf:type owl:Class ;
            rdfs:subClassOf nsg:ModelInstance ;
            rdfs:label "EModel"@en ;
@@ -1805,7 +1804,7 @@ nsg:EModel rdf:type owl:Class ;
            skos:prefLabel "EModel"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelBuilding
+###  https://neuroshapes.org/EModelBuilding
 nsg:EModelBuilding rdf:type owl:Class ;
                    rdfs:subClassOf prov:Activity ;
                    rdfs:label "EModel Building"@en ;
@@ -1813,7 +1812,7 @@ nsg:EModelBuilding rdf:type owl:Class ;
                    skos:prefLabel "EModel Building"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelRelease
+###  https://neuroshapes.org/EModelRelease
 nsg:EModelRelease rdf:type owl:Class ;
                   rdfs:subClassOf nsg:ModelRelease ;
                   rdfs:label "EModel Release"@en ;
@@ -1821,7 +1820,7 @@ nsg:EModelRelease rdf:type owl:Class ;
                   skos:prefLabel "EModel Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EModelScript
+###  https://neuroshapes.org/EModelScript
 nsg:EModelScript rdf:type owl:Class ;
                  rdfs:subClassOf nsg:ModelScript ;
                  rdfs:label "EModel Script"@en ;
@@ -1829,7 +1828,7 @@ nsg:EModelScript rdf:type owl:Class ;
                  skos:prefLabel "EModel Script"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ETypeFeatureProtocol
+###  https://neuroshapes.org/ETypeFeatureProtocol
 nsg:ETypeFeatureProtocol rdf:type owl:Class ;
                          rdfs:subClassOf nsg:ModelInstance ;
                          rdfs:label "EType Feature Protocol"@en ;
@@ -1837,7 +1836,7 @@ nsg:ETypeFeatureProtocol rdf:type owl:Class ;
                          skos:prefLabel "EType Feature Protocol"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EdgeCollection
+###  https://neuroshapes.org/EdgeCollection
 nsg:EdgeCollection rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Edge Collection"@en ;
@@ -1845,25 +1844,25 @@ nsg:EdgeCollection rdf:type owl:Class ;
                    skos:prefLabel "Edge Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ElectricalSeries
+###  https://neuroshapes.org/ElectricalSeries
 nsg:ElectricalSeries rdf:type owl:Class ;
                      rdfs:subClassOf nsg:TimeSeries .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EmodelFeatureGeneration
+###  https://neuroshapes.org/EmodelFeatureGeneration
 nsg:EmodelFeatureGeneration rdf:type owl:Class ;
                             rdfs:subClassOf prov:Generation ;
                             rdfs:label "Emodel Feature Generation"@en ;
                             skos:prefLabel "Emodel Feature Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/EquationSelector
+###  https://neuroshapes.org/EquationSelector
 nsg:EquationSelector rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Selector ;
                      rdfs:label "Equation Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalActivity
+###  https://neuroshapes.org/ExperimentalActivity
 nsg:ExperimentalActivity rdf:type owl:Class ;
                          rdfs:subClassOf prov:Activity ;
                          rdfs:label "Experimental Activity"@en ;
@@ -1871,7 +1870,7 @@ nsg:ExperimentalActivity rdf:type owl:Class ;
                          skos:prefLabel "Experimental Activity"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ExperimentalProtocol
+###  https://neuroshapes.org/ExperimentalProtocol
 nsg:ExperimentalProtocol rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Protocol ;
                          rdfs:label "Experimental Protocol"@en ;
@@ -1879,13 +1878,13 @@ nsg:ExperimentalProtocol rdf:type owl:Class ;
                          skos:prefLabel "Experimental Protocol"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FigureSelector
+###  https://neuroshapes.org/FigureSelector
 nsg:FigureSelector rdf:type owl:Class ;
                    rdfs:subClassOf nsg:Selector ;
                    rdfs:label "Figure Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixationStainingMounting
+###  https://neuroshapes.org/FixationStainingMounting
 nsg:FixationStainingMounting rdf:type owl:Class ;
                              rdfs:subClassOf prov:Activity ;
                              rdfs:label "Fixation Staining Mounting"@en ;
@@ -1893,7 +1892,7 @@ nsg:FixationStainingMounting rdf:type owl:Class ;
                              skos:prefLabel "Fixation Staining Mounting"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/FixedStainedSlice
+###  https://neuroshapes.org/FixedStainedSlice
 nsg:FixedStainedSlice rdf:type owl:Class ;
                       rdfs:subClassOf nsg:Slice ;
                       rdfs:label "Fixed Stained Slice"@en ;
@@ -1901,14 +1900,14 @@ nsg:FixedStainedSlice rdf:type owl:Class ;
                       skos:prefLabel "Fixed Stained Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/GeometricShape
+###  https://neuroshapes.org/GeometricShape
 nsg:GeometricShape rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Geometric Shape"@en ;
                    skos:prefLabel "Geometric Shape"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/HostCell
+###  https://neuroshapes.org/HostCell
 nsg:HostCell rdf:type owl:Class ;
              rdfs:subClassOf nsg:Cell ;
              rdfs:label "Host Cell"@en ;
@@ -1916,7 +1915,7 @@ nsg:HostCell rdf:type owl:Class ;
              skos:prefLabel "Host Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageStack
+###  https://neuroshapes.org/ImageStack
 nsg:ImageStack rdf:type owl:Class ;
                rdfs:subClassOf nsg:VolumeImageStack ;
                rdfs:label "Image Stack"@en ;
@@ -1924,7 +1923,7 @@ nsg:ImageStack rdf:type owl:Class ;
                skos:prefLabel "Image Stack"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ImageVolume
+###  https://neuroshapes.org/ImageVolume
 nsg:ImageVolume rdf:type owl:Class ;
                 rdfs:subClassOf nsg:Volume ;
                 rdfs:label "Image Volume"@en ;
@@ -1932,27 +1931,27 @@ nsg:ImageVolume rdf:type owl:Class ;
                 skos:prefLabel "Image Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/InVitroSliceReconstructedPatchedNeuron
+###  https://neuroshapes.org/InVitroSliceReconstructedPatchedNeuron
 nsg:InVitroSliceReconstructedPatchedNeuron rdf:type owl:Class ;
                                            rdfs:subClassOf nsg:ReconstructedNeuronMorphology ,
                                                            nsg:ReconstructedPatchedCell ;
                                            rdfs:label "In Vitro Slice Reconstructed Patched Neuron"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/InVitroSliceWholeCellPatchClampElectrophysiologyTrace
+###  https://neuroshapes.org/InVitroSliceWholeCellPatchClampElectrophysiologyTrace
 nsg:InVitroSliceWholeCellPatchClampElectrophysiologyTrace rdf:type owl:Class ;
                                                           rdfs:subClassOf nsg:Trace ;
                                                           rdfs:label "In Vitro Slice Whole Cell Patch Clamp Electrophysiology Trace"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/InVitroWholeBrainReconstructedNeuronMorphology
+###  https://neuroshapes.org/InVitroWholeBrainReconstructedNeuronMorphology
 nsg:InVitroWholeBrainReconstructedNeuronMorphology rdf:type owl:Class ;
                                                    rdfs:subClassOf nsg:ReconstructedNeuronMorphology ,
                                                                    nsg:ReconstructedWholeBrainCell ;
                                                    rdfs:label "In Vitro Whole Brain Reconstructed Neuron Morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrode
+###  https://neuroshapes.org/IntraCellularSharpElectrode
 nsg:IntraCellularSharpElectrode rdf:type owl:Class ;
                                 rdfs:subClassOf prov:Activity ;
                                 rdfs:label "Intra Cellular Sharp Electrode"@en ;
@@ -1960,7 +1959,7 @@ nsg:IntraCellularSharpElectrode rdf:type owl:Class ;
                                 skos:prefLabel "Intra Cellular Sharp Electrode"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedCell
+###  https://neuroshapes.org/IntraCellularSharpElectrodeRecordedCell
 nsg:IntraCellularSharpElectrodeRecordedCell rdf:type owl:Class ;
                                             rdfs:subClassOf nsg:Cell ;
                                             rdfs:label "Intra Cellular Sharp Electrode Recorded Cell"@en ;
@@ -1968,13 +1967,13 @@ nsg:IntraCellularSharpElectrodeRecordedCell rdf:type owl:Class ;
                                             skos:prefLabel "Intra Cellular Sharp Electrode Recorded Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedCellCollection
+###  https://neuroshapes.org/IntraCellularSharpElectrodeRecordedCellCollection
 nsg:IntraCellularSharpElectrodeRecordedCellCollection rdf:type owl:Class ;
                                                       rdfs:subClassOf prov:Collection ;
                                                       rdfs:label "Intra Cellular Sharp Electrode Recorded Cell Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IntraCellularSharpElectrodeRecordedSlice
+###  https://neuroshapes.org/IntraCellularSharpElectrodeRecordedSlice
 nsg:IntraCellularSharpElectrodeRecordedSlice rdf:type owl:Class ;
                                              rdfs:subClassOf nsg:Slice ;
                                              rdfs:label "Intra Cellular Sharp Electrode Recorded Slice"@en ;
@@ -1982,7 +1981,7 @@ nsg:IntraCellularSharpElectrodeRecordedSlice rdf:type owl:Class ;
                                              skos:prefLabel "Intra Cellular Sharp Electrode Recorded Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelGene
+###  https://neuroshapes.org/IonChannelGene
 nsg:IonChannelGene rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Ion Channel Gene"@en ;
@@ -1990,7 +1989,7 @@ nsg:IonChannelGene rdf:type owl:Class ;
                    skos:prefLabel "Ion Channel Gene"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/IonChannelMechanismRelease
+###  https://neuroshapes.org/IonChannelMechanismRelease
 nsg:IonChannelMechanismRelease rdf:type owl:Class ;
                                rdfs:subClassOf nsg:ModelRelease ;
                                rdfs:label "Ion Channel Mechanism Release"@en ;
@@ -1998,7 +1997,7 @@ nsg:IonChannelMechanismRelease rdf:type owl:Class ;
                                skos:prefLabel "Ion Channel Mechanism Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LabeledCell
+###  https://neuroshapes.org/LabeledCell
 nsg:LabeledCell rdf:type owl:Class ;
                 rdfs:subClassOf nsg:Cell ;
                 rdfs:label "Labeled Cell"@en ;
@@ -2006,19 +2005,19 @@ nsg:LabeledCell rdf:type owl:Class ;
                 skos:prefLabel "Labeled Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LabeledCellCollection
+###  https://neuroshapes.org/LabeledCellCollection
 nsg:LabeledCellCollection rdf:type owl:Class ;
                           rdfs:subClassOf prov:Collection ;
                           rdfs:label "Labeled Cell Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/License
+###  https://neuroshapes.org/License
 nsg:License rdf:type owl:Class ;
             rdfs:subClassOf prov:Entity ;
             rdfs:label "License"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/LinearTransform
+###  https://neuroshapes.org/LinearTransform
 nsg:LinearTransform rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Transform ;
                     rdfs:label "Linear Transform"@en ;
@@ -2026,7 +2025,7 @@ nsg:LinearTransform rdf:type owl:Class ;
                     skos:prefLabel "Linear Transform"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModel
+###  https://neuroshapes.org/MEModel
 nsg:MEModel rdf:type owl:Class ;
             rdfs:subClassOf nsg:ModelInstance ;
             rdfs:label "MEModel"@en ;
@@ -2034,7 +2033,7 @@ nsg:MEModel rdf:type owl:Class ;
             skos:prefLabel "MEModel"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MEModelRelease
+###  https://neuroshapes.org/MEModelRelease
 nsg:MEModelRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
                    rdfs:label "MEModel Release"@en ;
@@ -2042,7 +2041,7 @@ nsg:MEModelRelease rdf:type owl:Class ;
                    skos:prefLabel "MEModel Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelInstance
+###  https://neuroshapes.org/ModelInstance
 nsg:ModelInstance rdf:type owl:Class ;
                   rdfs:subClassOf prov:Entity ;
                   rdfs:label "Model Instance"@en ;
@@ -2050,7 +2049,7 @@ nsg:ModelInstance rdf:type owl:Class ;
                   skos:prefLabel "Model Instance"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelRelease
+###  https://neuroshapes.org/ModelRelease
 nsg:ModelRelease rdf:type owl:Class ;
                  rdfs:subClassOf prov:Entity ;
                  rdfs:label "Model Release"@en ;
@@ -2058,7 +2057,7 @@ nsg:ModelRelease rdf:type owl:Class ;
                  skos:prefLabel "Model Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelReleaseIndex
+###  https://neuroshapes.org/ModelReleaseIndex
 nsg:ModelReleaseIndex rdf:type owl:Class ;
                       rdfs:subClassOf prov:Entity ;
                       rdfs:label "Model Release Index"@en ;
@@ -2066,12 +2065,12 @@ nsg:ModelReleaseIndex rdf:type owl:Class ;
                       skos:prefLabel "Model Release Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelScript
+###  https://neuroshapes.org/ModelScript
 nsg:ModelScript rdf:type owl:Class ;
                 rdfs:subClassOf prov:Entity .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ModelValidation
+###  https://neuroshapes.org/ModelValidation
 nsg:ModelValidation rdf:type owl:Class ;
                     rdfs:subClassOf prov:Activity ;
                     rdfs:label "Model Validation"@en ;
@@ -2079,14 +2078,14 @@ nsg:ModelValidation rdf:type owl:Class ;
                     skos:prefLabel "Model Validation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Morphology
+###  https://neuroshapes.org/Morphology
 nsg:Morphology rdf:type owl:Class ;
                rdfs:subClassOf prov:Entity ;
                rdfs:label "Morphology"@en ;
                skos:prefLabel "Morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyDiversification
+###  https://neuroshapes.org/MorphologyDiversification
 nsg:MorphologyDiversification rdf:type owl:Class ;
                               rdfs:subClassOf prov:Activity ;
                               rdfs:label "Morphology Diversification"@en ;
@@ -2094,7 +2093,7 @@ nsg:MorphologyDiversification rdf:type owl:Class ;
                               skos:prefLabel "Morphology Diversification"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMesh
+###  https://neuroshapes.org/MorphologyMesh
 nsg:MorphologyMesh rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Morphology Mesh"@en ;
@@ -2102,7 +2101,7 @@ nsg:MorphologyMesh rdf:type owl:Class ;
                    skos:prefLabel "Morphology Mesh"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyMeshGeneration
+###  https://neuroshapes.org/MorphologyMeshGeneration
 nsg:MorphologyMeshGeneration rdf:type owl:Class ;
                              rdfs:subClassOf prov:Activity ;
                              rdfs:label "Morphology Mesh Generation"@en ;
@@ -2110,7 +2109,7 @@ nsg:MorphologyMeshGeneration rdf:type owl:Class ;
                              skos:prefLabel "Morphology Mesh Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyOrientationDataLayer
+###  https://neuroshapes.org/MorphologyOrientationDataLayer
 nsg:MorphologyOrientationDataLayer rdf:type owl:Class ;
                                    rdfs:subClassOf nsg:VolumetricDataLayer ;
                                    rdfs:label "Morphology Orientation Data Layer"@en ;
@@ -2118,7 +2117,7 @@ nsg:MorphologyOrientationDataLayer rdf:type owl:Class ;
                                    skos:prefLabel "Morphology Orientation Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/MorphologyRelease
+###  https://neuroshapes.org/MorphologyRelease
 nsg:MorphologyRelease rdf:type owl:Class ;
                       rdfs:subClassOf nsg:ModelRelease ;
                       rdfs:label "Morphology Release"@en ;
@@ -2126,7 +2125,7 @@ nsg:MorphologyRelease rdf:type owl:Class ;
                       skos:prefLabel "Morphology Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NISSLImageDataLayer
+###  https://neuroshapes.org/NISSLImageDataLayer
 nsg:NISSLImageDataLayer rdf:type owl:Class ;
                         rdfs:subClassOf nsg:VolumetricDataLayer ;
                         rdfs:label "NISSLImage Data Layer"@en ;
@@ -2134,14 +2133,14 @@ nsg:NISSLImageDataLayer rdf:type owl:Class ;
                         skos:prefLabel "NISSLImage Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NeuronMorphology
+###  https://neuroshapes.org/NeuronMorphology
 nsg:NeuronMorphology rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Morphology ;
                      rdfs:label "Neuron Morphology"@en ;
                      skos:prefLabel "A Neuron Morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NeuronMorphologyModel
+###  https://neuroshapes.org/NeuronMorphologyModel
 nsg:NeuronMorphologyModel rdf:type owl:Class ;
                           rdfs:subClassOf nsg:ModelInstance ,
                                           nsg:NeuronMorphology ;
@@ -2150,13 +2149,13 @@ nsg:NeuronMorphologyModel rdf:type owl:Class ;
                           skos:prefLabel "A model of a neuron morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NeuronMorphologyReconstruction
+###  https://neuroshapes.org/NeuronMorphologyReconstruction
 nsg:NeuronMorphologyReconstruction rdf:type owl:Class ;
                                    rdfs:subClassOf prov:Activity ;
                                    rdfs:label "Neuron Morphology Reconstruction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/NodeCollection
+###  https://neuroshapes.org/NodeCollection
 nsg:NodeCollection rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Node Collection"@en ;
@@ -2164,12 +2163,12 @@ nsg:NodeCollection rdf:type owl:Class ;
                    skos:prefLabel "Node Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ObjectOfStudy
+###  https://neuroshapes.org/ObjectOfStudy
 nsg:ObjectOfStudy rdf:type owl:Class ;
                   rdfs:label "Object Of Study"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/OntologyConversion
+###  https://neuroshapes.org/OntologyConversion
 nsg:OntologyConversion rdf:type owl:Class ;
                        rdfs:subClassOf prov:Activity ;
                        rdfs:label "Ontology Conversion"@en ;
@@ -2177,13 +2176,13 @@ nsg:OntologyConversion rdf:type owl:Class ;
                        skos:prefLabel "Ontology Conversion"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PDFAreaSelector
+###  https://neuroshapes.org/PDFAreaSelector
 nsg:PDFAreaSelector rdf:type owl:Class ;
                     rdfs:subClassOf nsg:Selector ;
                     rdfs:label "PDFArea Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PHDataLayer
+###  https://neuroshapes.org/PHDataLayer
 nsg:PHDataLayer rdf:type owl:Class ;
                 rdfs:subClassOf nsg:VolumetricDataLayer ;
                 rdfs:label "PHData Layer"@en ;
@@ -2191,7 +2190,7 @@ nsg:PHDataLayer rdf:type owl:Class ;
                 skos:prefLabel "PHData Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationImageData
+###  https://neuroshapes.org/ParcellationImageData
 nsg:ParcellationImageData rdf:type owl:Class ;
                           rdfs:subClassOf nsg:Volume ;
                           rdfs:label "Parcellation Image Data"@en ;
@@ -2199,7 +2198,7 @@ nsg:ParcellationImageData rdf:type owl:Class ;
                           skos:prefLabel "Parcellation Image Data"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationLabel
+###  https://neuroshapes.org/ParcellationLabel
 nsg:ParcellationLabel rdf:type owl:Class ;
                       rdfs:subClassOf prov:Entity ;
                       rdfs:label "Parcellation Label"@en ;
@@ -2207,7 +2206,7 @@ nsg:ParcellationLabel rdf:type owl:Class ;
                       skos:prefLabel "Parcellation Label"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationMeshGeneration
+###  https://neuroshapes.org/ParcellationMeshGeneration
 nsg:ParcellationMeshGeneration rdf:type owl:Class ;
                                rdfs:subClassOf prov:Activity ;
                                rdfs:label "Parcellation Mesh Generation"@en ;
@@ -2215,7 +2214,7 @@ nsg:ParcellationMeshGeneration rdf:type owl:Class ;
                                skos:prefLabel "Parcellation Mesh Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationOntology
+###  https://neuroshapes.org/ParcellationOntology
 nsg:ParcellationOntology rdf:type owl:Class ;
                          rdfs:subClassOf prov:Entity ;
                          rdfs:label "Parcellation Ontology"@en ;
@@ -2223,7 +2222,7 @@ nsg:ParcellationOntology rdf:type owl:Class ;
                          skos:prefLabel "Parcellation Ontology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationReconstruction
+###  https://neuroshapes.org/ParcellationReconstruction
 nsg:ParcellationReconstruction rdf:type owl:Class ;
                                rdfs:subClassOf prov:Activity ;
                                rdfs:label "Parcellation Reconstruction"@en ;
@@ -2231,7 +2230,7 @@ nsg:ParcellationReconstruction rdf:type owl:Class ;
                                skos:prefLabel "Parcellation Reconstruction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ParcellationVolume
+###  https://neuroshapes.org/ParcellationVolume
 nsg:ParcellationVolume rdf:type owl:Class ;
                        rdfs:subClassOf prov:Entity ;
                        rdfs:label "Parcellation Volume"@en ;
@@ -2239,7 +2238,7 @@ nsg:ParcellationVolume rdf:type owl:Class ;
                        skos:prefLabel "Parcellation Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchClamp
+###  https://neuroshapes.org/PatchClamp
 nsg:PatchClamp rdf:type owl:Class ;
                rdfs:subClassOf prov:Activity ;
                rdfs:label "Patch Clamp"@en ;
@@ -2247,7 +2246,7 @@ nsg:PatchClamp rdf:type owl:Class ;
                skos:prefLabel "Patch Clamp"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedCell
+###  https://neuroshapes.org/PatchedCell
 nsg:PatchedCell rdf:type owl:Class ;
                 rdfs:subClassOf nsg:Cell ;
                 rdfs:label "Patched Cell"@en ;
@@ -2255,13 +2254,13 @@ nsg:PatchedCell rdf:type owl:Class ;
                 skos:prefLabel "Patched Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedCellCollection
+###  https://neuroshapes.org/PatchedCellCollection
 nsg:PatchedCellCollection rdf:type owl:Class ;
                           rdfs:subClassOf prov:Collection ;
                           rdfs:label "Patched Cell Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/PatchedSlice
+###  https://neuroshapes.org/PatchedSlice
 nsg:PatchedSlice rdf:type owl:Class ;
                  rdfs:subClassOf nsg:Slice ;
                  rdfs:label "Patched Slice"@en ;
@@ -2269,7 +2268,7 @@ nsg:PatchedSlice rdf:type owl:Class ;
                  skos:prefLabel "Patched Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Protocol
+###  https://neuroshapes.org/Protocol
 nsg:Protocol rdf:type owl:Class ;
              rdfs:subClassOf prov:Entity ;
              rdfs:label "Protocol"@en ;
@@ -2277,7 +2276,7 @@ nsg:Protocol rdf:type owl:Class ;
              skos:prefLabel "Protocol"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCell
+###  https://neuroshapes.org/ReconstructedCell
 nsg:ReconstructedCell rdf:type owl:Class ;
                       rdfs:subClassOf prov:Entity ;
                       rdfs:label "Reconstructed Cell"@en ;
@@ -2285,7 +2284,7 @@ nsg:ReconstructedCell rdf:type owl:Class ;
                       skos:prefLabel "Reconstructed Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellFormatConversion
+###  https://neuroshapes.org/ReconstructedCellFormatConversion
 nsg:ReconstructedCellFormatConversion rdf:type owl:Class ;
                                       rdfs:subClassOf prov:Activity ;
                                       rdfs:label "Reconstructed Cell Format Conversion"@en ;
@@ -2293,7 +2292,7 @@ nsg:ReconstructedCellFormatConversion rdf:type owl:Class ;
                                       skos:prefLabel "Reconstructed Cell Format Conversion"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellRelease
+###  https://neuroshapes.org/ReconstructedCellRelease
 nsg:ReconstructedCellRelease rdf:type owl:Class ;
                              rdfs:subClassOf prov:Entity ;
                              rdfs:label "Reconstructed Cell Release"@en ;
@@ -2301,7 +2300,7 @@ nsg:ReconstructedCellRelease rdf:type owl:Class ;
                              skos:prefLabel "Reconstructed Cell Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseGeneration
+###  https://neuroshapes.org/ReconstructedCellReleaseGeneration
 nsg:ReconstructedCellReleaseGeneration rdf:type owl:Class ;
                                        rdfs:subClassOf prov:Generation ;
                                        rdfs:label "Reconstructed Cell Release Generation"@en ;
@@ -2309,7 +2308,7 @@ nsg:ReconstructedCellReleaseGeneration rdf:type owl:Class ;
                                        skos:prefLabel "Reconstructed Cell Release Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedCellReleaseProcess
+###  https://neuroshapes.org/ReconstructedCellReleaseProcess
 nsg:ReconstructedCellReleaseProcess rdf:type owl:Class ;
                                     rdfs:subClassOf prov:Activity ;
                                     rdfs:label "Reconstructed Cell Release Process"@en ;
@@ -2317,7 +2316,7 @@ nsg:ReconstructedCellReleaseProcess rdf:type owl:Class ;
                                     skos:prefLabel "Reconstructed Cell Release Process"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedNeuronMorphology
+###  https://neuroshapes.org/ReconstructedNeuronMorphology
 nsg:ReconstructedNeuronMorphology rdf:type owl:Class ;
                                   rdfs:subClassOf nsg:NeuronMorphology ,
                                                   nsg:ReconstructedCell ;
@@ -2326,7 +2325,7 @@ nsg:ReconstructedNeuronMorphology rdf:type owl:Class ;
                                   skos:prefLabel "Reconstructed Neuron Morphology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedPatchedCell
+###  https://neuroshapes.org/ReconstructedPatchedCell
 nsg:ReconstructedPatchedCell rdf:type owl:Class ;
                              rdfs:subClassOf nsg:ReconstructedCell ;
                              rdfs:label "Reconstructed Patched Cell"@en ;
@@ -2334,7 +2333,7 @@ nsg:ReconstructedPatchedCell rdf:type owl:Class ;
                              skos:prefLabel "Reconstructed Patched Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructedWholeBrainCell
+###  https://neuroshapes.org/ReconstructedWholeBrainCell
 nsg:ReconstructedWholeBrainCell rdf:type owl:Class ;
                                 rdfs:subClassOf nsg:ReconstructedCell ;
                                 rdfs:label "Reconstructed Whole Brain Cell"@en ;
@@ -2342,7 +2341,7 @@ nsg:ReconstructedWholeBrainCell rdf:type owl:Class ;
                                 skos:prefLabel "Reconstructed Whole Brain Cell"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Reconstruction
+###  https://neuroshapes.org/Reconstruction
 nsg:Reconstruction rdf:type owl:Class ;
                    rdfs:subClassOf prov:Activity ;
                    rdfs:label "Reconstruction"@en ;
@@ -2350,7 +2349,7 @@ nsg:Reconstruction rdf:type owl:Class ;
                    skos:prefLabel "Reconstruction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionCorrection
+###  https://neuroshapes.org/ReconstructionCorrection
 nsg:ReconstructionCorrection rdf:type owl:Class ;
                              rdfs:subClassOf prov:Activity ;
                              rdfs:label "Reconstruction Correction"@en ;
@@ -2358,7 +2357,7 @@ nsg:ReconstructionCorrection rdf:type owl:Class ;
                              skos:prefLabel "Reconstruction Correction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ReconstructionFromImage
+###  https://neuroshapes.org/ReconstructionFromImage
 nsg:ReconstructionFromImage rdf:type owl:Class ;
                             rdfs:subClassOf prov:Activity ;
                             rdfs:label "Reconstruction From Image"@en ;
@@ -2366,7 +2365,7 @@ nsg:ReconstructionFromImage rdf:type owl:Class ;
                             skos:prefLabel "Reconstruction From Image"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RegionOfInterest
+###  https://neuroshapes.org/RegionOfInterest
 nsg:RegionOfInterest rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ;
                      rdfs:label "Region Of Interest"@en ;
@@ -2374,7 +2373,7 @@ nsg:RegionOfInterest rdf:type owl:Class ;
                      skos:prefLabel "Region Of Interest"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RigidLinearTransform
+###  https://neuroshapes.org/RigidLinearTransform
 nsg:RigidLinearTransform rdf:type owl:Class ;
                          rdfs:subClassOf nsg:Transform ;
                          rdfs:label "Rigid Linear Transform"@en ;
@@ -2382,7 +2381,7 @@ nsg:RigidLinearTransform rdf:type owl:Class ;
                          skos:prefLabel "Rigid Linear Transform"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/RotationalMatrix
+###  https://neuroshapes.org/RotationalMatrix
 nsg:RotationalMatrix rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ;
                      rdfs:label "Rotational Matrix"@en ;
@@ -2390,12 +2389,12 @@ nsg:RotationalMatrix rdf:type owl:Class ;
                      skos:prefLabel "Rotational Matrix"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Selector
+###  https://neuroshapes.org/Selector
 nsg:Selector rdf:type owl:Class ;
              rdfs:subClassOf prov:Location .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SimplifiedCircuit
+###  https://neuroshapes.org/SimplifiedCircuit
 nsg:SimplifiedCircuit rdf:type owl:Class ;
                       rdfs:subClassOf nsg:ModelInstance ;
                       rdfs:label "Simplified Circuit"@en ;
@@ -2403,7 +2402,7 @@ nsg:SimplifiedCircuit rdf:type owl:Class ;
                       skos:prefLabel "Simplified Circuit"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Simulation
+###  https://neuroshapes.org/Simulation
 nsg:Simulation rdf:type owl:Class ;
                rdfs:subClassOf prov:Activity ;
                rdfs:label "Simulation"@en ;
@@ -2411,7 +2410,7 @@ nsg:Simulation rdf:type owl:Class ;
                skos:prefLabel "Simulation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellSimulationTrace
+###  https://neuroshapes.org/SingleCellSimulationTrace
 nsg:SingleCellSimulationTrace rdf:type owl:Class ;
                               rdfs:subClassOf nsg:Trace ;
                               rdfs:label "Single Cell Simulation Trace"@en ;
@@ -2419,7 +2418,7 @@ nsg:SingleCellSimulationTrace rdf:type owl:Class ;
                               skos:prefLabel "Single Cell Simulation Trace"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SingleCellTraceGeneration
+###  https://neuroshapes.org/SingleCellTraceGeneration
 nsg:SingleCellTraceGeneration rdf:type owl:Class ;
                               rdfs:subClassOf prov:Activity ;
                               rdfs:label "Single Cell Trace Generation"@en ;
@@ -2427,7 +2426,7 @@ nsg:SingleCellTraceGeneration rdf:type owl:Class ;
                               skos:prefLabel "Single Cell Trace Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Slice
+###  https://neuroshapes.org/Slice
 nsg:Slice rdf:type owl:Class ;
           rdfs:subClassOf prov:Entity ;
           rdfs:label "Slice"@en ;
@@ -2435,13 +2434,13 @@ nsg:Slice rdf:type owl:Class ;
           skos:prefLabel "Slice"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SliceCollection
+###  https://neuroshapes.org/SliceCollection
 nsg:SliceCollection rdf:type owl:Class ;
                     rdfs:subClassOf prov:Entity ;
                     rdfs:label "Slice Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndex
+###  https://neuroshapes.org/SpatialIndex
 nsg:SpatialIndex rdf:type owl:Class ;
                  rdfs:subClassOf prov:Entity ;
                  rdfs:label "Spatial Index"@en ;
@@ -2449,7 +2448,7 @@ nsg:SpatialIndex rdf:type owl:Class ;
                  skos:prefLabel "Spatial Index"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialIndexDerivation
+###  https://neuroshapes.org/SpatialIndexDerivation
 nsg:SpatialIndexDerivation rdf:type owl:Class ;
                            rdfs:subClassOf prov:Derivation ;
                            rdfs:label "Spatial Index Derivation"@en ;
@@ -2457,26 +2456,26 @@ nsg:SpatialIndexDerivation rdf:type owl:Class ;
                            skos:prefLabel "Spatial Index Derivation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SpatialReferenceSystem
+###  https://neuroshapes.org/SpatialReferenceSystem
 nsg:SpatialReferenceSystem rdf:type owl:Class ;
                            rdfs:subClassOf nsg:CoordinateSystem ;
                            rdfs:label "Spatial Reference System"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Species
+###  https://neuroshapes.org/Species
 nsg:Species rdf:type owl:Class ;
             rdfs:subClassOf prov:Entity ;
             rdfs:label "NCBI species taxonomy ontology"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Sphere
+###  https://neuroshapes.org/Sphere
 nsg:Sphere rdf:type owl:Class ;
            rdfs:subClassOf nsg:GeometricShape ;
            rdfs:label "Sphere"@en ;
            skos:prefLabel "Sphere"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/StimulusExperiment
+###  https://neuroshapes.org/StimulusExperiment
 nsg:StimulusExperiment rdf:type owl:Class ;
                        rdfs:subClassOf prov:Activity ;
                        rdfs:label "Stimulus Experiment"@en ;
@@ -2484,7 +2483,7 @@ nsg:StimulusExperiment rdf:type owl:Class ;
                        skos:prefLabel "Stimulus Experiment"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModel
+###  https://neuroshapes.org/SubCellularModel
 nsg:SubCellularModel rdf:type owl:Class ;
                      rdfs:subClassOf nsg:ModelInstance ;
                      rdfs:label "Sub Cellular Model"@en ;
@@ -2492,7 +2491,7 @@ nsg:SubCellularModel rdf:type owl:Class ;
                      skos:prefLabel "Sub Cellular Model"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubCellularModelScript
+###  https://neuroshapes.org/SubCellularModelScript
 nsg:SubCellularModelScript rdf:type owl:Class ;
                            rdfs:subClassOf nsg:ModelScript ;
                            rdfs:label "Sub Cellular Model Script"@en ;
@@ -2500,7 +2499,7 @@ nsg:SubCellularModelScript rdf:type owl:Class ;
                            skos:prefLabel "Sub Cellular Model Script"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Subject
+###  https://neuroshapes.org/Subject
 nsg:Subject rdf:type owl:Class ;
             rdfs:subClassOf prov:Entity ;
             rdfs:label "Subject"@en ;
@@ -2508,13 +2507,13 @@ nsg:Subject rdf:type owl:Class ;
             skos:prefLabel "Subject"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SubjectCollection
+###  https://neuroshapes.org/SubjectCollection
 nsg:SubjectCollection rdf:type owl:Class ;
                       rdfs:subClassOf prov:Collection ;
                       rdfs:label "Subject Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/SynapseRelease
+###  https://neuroshapes.org/SynapseRelease
 nsg:SynapseRelease rdf:type owl:Class ;
                    rdfs:subClassOf nsg:ModelRelease ;
                    rdfs:label "Synapse Release"@en ;
@@ -2522,13 +2521,13 @@ nsg:SynapseRelease rdf:type owl:Class ;
                    skos:prefLabel "Synapse Release"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TableSelector
+###  https://neuroshapes.org/TableSelector
 nsg:TableSelector rdf:type owl:Class ;
                   rdfs:subClassOf nsg:Selector ;
                   rdfs:label "Table Selector"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Target
+###  https://neuroshapes.org/Target
 nsg:Target rdf:type owl:Class ;
            rdfs:subClassOf prov:Entity ;
            rdfs:label "Target"@en ;
@@ -2536,7 +2535,7 @@ nsg:Target rdf:type owl:Class ;
            skos:prefLabel "Target"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateImageData
+###  https://neuroshapes.org/TemplateImageData
 nsg:TemplateImageData rdf:type owl:Class ;
                       rdfs:subClassOf prov:Entity ;
                       rdfs:label "Template Image Data"@en ;
@@ -2544,7 +2543,7 @@ nsg:TemplateImageData rdf:type owl:Class ;
                       skos:prefLabel "Template Image Data"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateReconstruction
+###  https://neuroshapes.org/TemplateReconstruction
 nsg:TemplateReconstruction rdf:type owl:Class ;
                            rdfs:subClassOf prov:Activity ;
                            rdfs:label "Template Reconstruction"@en ;
@@ -2552,7 +2551,7 @@ nsg:TemplateReconstruction rdf:type owl:Class ;
                            skos:prefLabel "Template Reconstruction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TemplateVolume
+###  https://neuroshapes.org/TemplateVolume
 nsg:TemplateVolume rdf:type owl:Class ;
                    rdfs:subClassOf nsg:Volume ;
                    rdfs:label "Template Volume"@en ;
@@ -2560,13 +2559,13 @@ nsg:TemplateVolume rdf:type owl:Class ;
                    skos:prefLabel "Template Volume"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TextPositionTarget
+###  https://neuroshapes.org/TextPositionTarget
 nsg:TextPositionTarget rdf:type owl:Class ;
                        rdfs:subClassOf nsg:AnnotationTarget ;
                        rdfs:label "Text Position Target"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Threshold
+###  https://neuroshapes.org/Threshold
 nsg:Threshold rdf:type owl:Class ;
               rdfs:subClassOf prov:Entity ;
               rdfs:label "Threshold"@en ;
@@ -2574,12 +2573,12 @@ nsg:Threshold rdf:type owl:Class ;
               skos:prefLabel "Threshold"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TimeSeries
+###  https://neuroshapes.org/TimeSeries
 nsg:TimeSeries rdf:type owl:Class ;
                rdfs:subClassOf prov:Entity .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Trace
+###  https://neuroshapes.org/Trace
 nsg:Trace rdf:type owl:Class ;
           rdfs:subClassOf nsg:ElectricalSeries ;
           rdfs:label "Trace"@en ;
@@ -2587,7 +2586,7 @@ nsg:Trace rdf:type owl:Class ;
           skos:prefLabel "Trace"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceCollection
+###  https://neuroshapes.org/TraceCollection
 nsg:TraceCollection rdf:type owl:Class ;
                     rdfs:subClassOf prov:Collection ;
                     rdfs:label "Trace Collection"@en ;
@@ -2595,7 +2594,7 @@ nsg:TraceCollection rdf:type owl:Class ;
                     skos:prefLabel "Trace Collection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeature
+###  https://neuroshapes.org/TraceFeature
 nsg:TraceFeature rdf:type owl:Class ;
                  rdfs:subClassOf prov:Entity ;
                  rdfs:label "Trace Feature"@en ;
@@ -2603,7 +2602,7 @@ nsg:TraceFeature rdf:type owl:Class ;
                  skos:prefLabel "Trace Feature"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceFeatureExtraction
+###  https://neuroshapes.org/TraceFeatureExtraction
 nsg:TraceFeatureExtraction rdf:type owl:Class ;
                            rdfs:subClassOf prov:Activity ;
                            rdfs:label "Trace Feature Extraction"@en ;
@@ -2611,7 +2610,7 @@ nsg:TraceFeatureExtraction rdf:type owl:Class ;
                            skos:prefLabel "Trace Feature Extraction"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TraceGeneration
+###  https://neuroshapes.org/TraceGeneration
 nsg:TraceGeneration rdf:type owl:Class ;
                     rdfs:subClassOf prov:Generation ;
                     rdfs:label "Trace Generation"@en ;
@@ -2619,7 +2618,7 @@ nsg:TraceGeneration rdf:type owl:Class ;
                     skos:prefLabel "Trace Generation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transfection
+###  https://neuroshapes.org/Transfection
 nsg:Transfection rdf:type owl:Class ;
                  rdfs:subClassOf prov:Activity ;
                  rdfs:label "Transfection"@en ;
@@ -2627,7 +2626,7 @@ nsg:Transfection rdf:type owl:Class ;
                  skos:prefLabel "Transfection"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transform
+###  https://neuroshapes.org/Transform
 nsg:Transform rdf:type owl:Class ;
               rdfs:subClassOf prov:Entity ;
               rdfs:label "Transform"@en ;
@@ -2635,13 +2634,13 @@ nsg:Transform rdf:type owl:Class ;
               skos:prefLabel "Transform"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TransformableObject
+###  https://neuroshapes.org/TransformableObject
 nsg:TransformableObject rdf:type owl:Class ;
                         rdfs:subClassOf prov:Entity ;
                         rdfs:label "Transformable Object"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Transformation
+###  https://neuroshapes.org/Transformation
 nsg:Transformation rdf:type owl:Class ;
                    rdfs:subClassOf prov:Activity ;
                    rdfs:label "Transformation"@en ;
@@ -2649,7 +2648,7 @@ nsg:Transformation rdf:type owl:Class ;
                    skos:prefLabel "Transformation"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/TwoPhotonImageDataLayer
+###  https://neuroshapes.org/TwoPhotonImageDataLayer
 nsg:TwoPhotonImageDataLayer rdf:type owl:Class ;
                             rdfs:subClassOf nsg:VolumetricDataLayer ;
                             rdfs:label "Two Photon Image Data Layer"@en ;
@@ -2657,7 +2656,7 @@ nsg:TwoPhotonImageDataLayer rdf:type owl:Class ;
                             skos:prefLabel "Two Photon Image Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/ValidationResult
+###  https://neuroshapes.org/ValidationResult
 nsg:ValidationResult rdf:type owl:Class ;
                      rdfs:subClassOf prov:Entity ;
                      rdfs:label "Validation Result"@en ;
@@ -2665,28 +2664,28 @@ nsg:ValidationResult rdf:type owl:Class ;
                      skos:prefLabel "Validation Result"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VariableReport
+###  https://neuroshapes.org/VariableReport
 nsg:VariableReport rdf:type owl:Class ;
                    rdfs:subClassOf prov:Entity ;
                    rdfs:label "Variable Report"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/Volume
+###  https://neuroshapes.org/Volume
 nsg:Volume rdf:type owl:Class ;
            rdfs:subClassOf prov:Entity .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumeImageStack
+###  https://neuroshapes.org/VolumeImageStack
 nsg:VolumeImageStack rdf:type owl:Class ;
                      rdfs:subClassOf nsg:Volume .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumeParcellation
+###  https://neuroshapes.org/VolumeParcellation
 nsg:VolumeParcellation rdf:type owl:Class ;
                        rdfs:subClassOf nsg:Volume .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/VolumetricDataLayer
+###  https://neuroshapes.org/VolumetricDataLayer
 nsg:VolumetricDataLayer rdf:type owl:Class ;
                         rdfs:subClassOf nsg:Volume ;
                         rdfs:label "Volumetric Data Layer"@en ;
@@ -2694,12 +2693,12 @@ nsg:VolumetricDataLayer rdf:type owl:Class ;
                         skos:prefLabel "Volumetric Data Layer"@en .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/WholeBrainImageStack
+###  https://neuroshapes.org/WholeBrainImageStack
 nsg:WholeBrainImageStack rdf:type owl:Class ;
                          rdfs:subClassOf nsg:ImageStack .
 
 
-###  https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/WholeCellPatchClamp
+###  https://neuroshapes.org/WholeCellPatchClamp
 nsg:WholeCellPatchClamp rdf:type owl:Class ;
                         rdfs:subClassOf prov:Activity ;
                         rdfs:label "Whole Cell Patch Clamp"@en ;

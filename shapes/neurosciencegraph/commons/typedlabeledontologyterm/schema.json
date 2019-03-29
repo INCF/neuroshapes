@@ -110,7 +110,7 @@
         "@id": "prov:Activity",
         "label": "Activity type ontology",
         "nsg:definingOntology": {
-          "@id": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/"
+          "@id": "https://neuroshapes.org/"
         }
       },
       "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
