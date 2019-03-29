@@ -12,8 +12,8 @@
       "shsh": "http://www.w3.org/ns/shacl-shacl#",
       "dcterms": "http://purl.org/dc/terms/",
       "schema": "http://schema.org/",
-      "nxv": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/",
-      "nsg": "https://bbp-nexus.epfl.ch/vocabs/bbp/neurosciencegraph/core/v0.1.0/",
+      "nxv": "https://bluebrain.github.io/nexus/vocabulary/",
+      "nsg": "https://neuroshapes.org/",
       "class": {
         "@id": "sh:class",
         "@type": "@id"
