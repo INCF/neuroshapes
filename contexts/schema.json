@@ -13,7 +13,7 @@
       "dcterms": "http://purl.org/dc/terms/",
       "schema": "http://schema.org/",
       "nxv": "https://bluebrain.github.io/nexus/vocabulary/",
-      "nsg": "https://neuropshapes.org/",
+      "nsg": "https://neuroshapes.org/",
       "class": {
         "@id": "sh:class",
         "@type": "@id"
