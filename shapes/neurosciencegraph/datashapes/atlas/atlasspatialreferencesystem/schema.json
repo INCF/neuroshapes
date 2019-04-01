@@ -24,7 +24,7 @@
       "targetClass": ["nsg:AtlasSpatialReferenceSystem","nsg:BrainAtlasSpatialReferenceSystem"],
       "and": [
         {
-          "@id": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
         },
         {
           "property": [
