@@ -20,7 +20,7 @@
       "targetClass": "nsg:Transformation",
       "and": [
         {
-          "@id": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
         },
         {
           "property": [
