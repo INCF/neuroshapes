@@ -45,7 +45,6 @@
               "name": "Type",
               "description": "The dataset type.",
               "nodeKind": "sh:IRI",
-              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/DataTypeOntologyTermShape",
               "minCount": 1
             },
             {
@@ -85,11 +84,12 @@
             {
               "path": "schema:distribution",
               "name": "Distribution",
-              "description": "Details about the dataset download such as access and format information.",
+              "description": "A dataset in downloadable form. The downloadable form has a specific format and is located at a specific location.",
               "class": "schema:DataDownload",
               "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
               "minCount": 1
-            },{
+            },
+            {
               "path": "nsg:annotation",
               "name": "Annotation",
               "description": "Annotations of the dataset.",
@@ -97,7 +97,8 @@
               "node": "https://neuroshapes.org/commons/annotation/shapes/AnnotationShape"
             }
           ]
-        }]
+        }
+      ]
     }
   ]
 }
