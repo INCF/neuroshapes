@@ -77,7 +77,7 @@ Removed:
 * https://provshapes.org/dash/activity schema
 * https://provshapes.org/dash/person
 * https://provshapes.org/dash/organization
-* https://neuroshapes.org/dash/entity schema
+* https://provshapes.org/dash/entity schema
 * https://provshapes.org/dash/collection
 * Reused usage shape in activity shape
 
