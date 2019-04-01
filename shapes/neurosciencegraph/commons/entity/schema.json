@@ -12,6 +12,7 @@
     "https://neuroshapes.org/commons/license",
     "https://neuroshapes.org/commons/language",
     "https://provshapes.org/commons/generation",
+    "https://provshapes.org/commons/distribution",
     "https://provshapes.org/commons/invalidation",
     "https://provshapes.org/commons/derivation"
   ],
@@ -160,6 +161,13 @@
           "name": "Preview",
           "description": "A reference to an entity representing an image that can be used as preview.",
           "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:distribution",
+          "name": "Distribution",
+          "description": "A dataset in downloadable form. The downloadable form has a specific format and is located at a specific location.",
+          "class": "schema:DataDownload",
+          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
         }
       ]
     }
