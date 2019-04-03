@@ -1,6 +1,5 @@
 {
   "@context": "https://incf.github.io/neuroshapes/contexts/data.json",
-  ],
   "@id": "http://example.org/neurosciencegraph/data/subject/uuid",
   "@type": [
     "Entity",
