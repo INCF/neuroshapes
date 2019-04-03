@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://neuroshapes.org",
+  ],
+  "@id": "mySubject",
+  "@type": [
+    "Entity",
+    "Subject"
+  ],
+  "name": "My subject",
+  "species": {
+    "@id": "https://www.ncbi.nlm.nih.gov/taxonomy/10090",
+    "label": "Mus musculus"
+  },
+  "strain": {
+    "@id": "http://www.mousemine.org/mousemine/portal.do?class=Strain&externalids=MGI:2159769",
+    "label": "C57BL/6"
+  },
+  "age": {
+    "period": "Post-natal",
+    "value": {
+      "@value": "15",
+      "@type": "xsd:decimal"
+    },
+    "unitCode": "days"
+  }
+}
