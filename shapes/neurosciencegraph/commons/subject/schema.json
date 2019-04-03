@@ -119,23 +119,23 @@
     {
       "@id": "this:AgeShape",
       "@type": "sh:NodeShape",
-      "property": [
+      "and": [
         {
-          "path": "nsg:period",
-          "name": "Period",
-          "in": [
-            "Pre-natal",
-            "Post-natal"
-          ],
-          "minCount": 1,
-          "maxCount": 1
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
         },
         {
-          "path": "schema:value",
-          "name": "Age value",
-          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
-          "minCount": 1,
-          "maxCount": 1
+          "property": [
+            {
+              "path": "nsg:period",
+              "name": "Period",
+              "in": [
+                "Pre-natal",
+                "Post-natal"
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
         }
       ]
     }
