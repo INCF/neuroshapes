@@ -1,0 +1,25 @@
+{
+  "@context": "https://incf.github.io/neuroshapes/contexts/data.json",
+  "@id": "http://example.org/neurosciencegraph/data/subject/uuid",
+  "@type": [
+    "Entity",
+    "Subject"
+  ],
+  "name": "My subject",
+  "species": {
+    "@id": "https://www.ncbi.nlm.nih.gov/taxonomy/10090",
+    "label": "Mus musculus"
+  },
+  "strain": {
+    "@id": "http://www.ebi.ac.uk/efo/EFO_0004472",
+    "label": "C57BL/6"
+  },
+  "age": {
+    "period": "Post-natal",
+    "value": {
+      "@value": "15",
+      "@type": "xsd:integer"
+    },
+    "unitCode": "days"
+  }
+}

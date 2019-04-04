@@ -30,6 +30,9 @@
             },
             {
               "datatype": "xsd:double"
+            },
+            {
+              "datatype": "xsd:integer"
             }
           ],
           "minCount": 1,
