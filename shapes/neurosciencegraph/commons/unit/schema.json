@@ -36,7 +36,14 @@
       "@type": "sh:PropertyShape",
       "path": "schema:unitCode",
       "name": "Unit code",
-      "node": "this:UnitShape",
+      "or": [
+        {
+          "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+        },
+        {
+          "datatype": "xsd:string"
+        }
+      ],
       "minCount": 1
     }
   ]
