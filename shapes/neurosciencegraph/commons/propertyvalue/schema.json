@@ -24,7 +24,6 @@
           "path": "schema:value",
           "name": "Value",
           "description": "The property value.",
-          "datatype": "xsd:string",
           "maxCount": 1
         }
       ]
