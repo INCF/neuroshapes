@@ -17,9 +17,10 @@
       "@type": "sh:NodeShape",
       "property": [
         {
+          "@id": "this:WithIdentifierPropertyShape",
           "path": "schema:identifier",
           "name": "Identifier",
-          "description": "A landing page describing the dataset.",
+          "description": "The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs.",
           "xone": [
             {
               "nodeKind": "sh:IRI"
@@ -33,13 +34,6 @@
           ]
         }
       ]
-    },
-    {
-      "@id": "this:WithIdentifierPropertyShape",
-      "@type": "sh:PropertyShape",
-      "label": "Schema.org identifier shape.",
-      "path": "schema:identifier",
-      "node": "https://neuroshapes.org/commons/identifier/shapes/IdentifierShape"
     },
     {
       "@id": "this:WithStructuredIdentifierShape",

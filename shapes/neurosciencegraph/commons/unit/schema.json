@@ -17,6 +17,7 @@
       "@type": "sh:NodeShape",
       "property": [
         {
+          "@id": "this:WithUnitCodeShape",
           "path": "schema:unitCode",
           "name": "Unit",
           "or": [
@@ -30,14 +31,6 @@
           "minCount": 1
         }
       ]
-    },
-    {
-      "@id": "this:WithUnitCodeShape",
-      "@type": "sh:PropertyShape",
-      "path": "schema:unitCode",
-      "name": "Unit code",
-      "node": "this:UnitShape",
-      "minCount": 1
     }
   ]
 }
