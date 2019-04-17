@@ -35,7 +35,7 @@
               "maxCount": 1
             },
             {
-              "@id": "https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
+              "@id": "https://neuroshapes.org/commons/unit/shapes/UnitCodePropertyShape"
             },
             {
               "path": "nsg:timeStep",
