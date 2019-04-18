@@ -102,52 +102,8 @@
       "label": "A shape for GRID (https://www.grid.ac) based organization identifier.",
       "seeAlso": "https://www.grid.ac",
       "path": "schema:identifier",
-      "nodeKind": "sh:BlankNodeOrIRI",
-      "and": [
-        {
-          "node": "https://neuroshapes.org/commons/propertyvalue/shapes/PropertyValueShape"
-        },
-        {
-          "or": [
-            {
-              "property": [
-                {
-                  "path": "schema:propertyID",
-                  "name": "GRID ID property",
-                  "description": "The GRID property identifier.",
-                  "datatype": "xsd:string",
-                  "hasValue": "https://www.grid.ac",
-                  "maxCount": 1
-                }
-              ]
-            },
-            {
-              "property": [
-                {
-                  "path": "schema:name",
-                  "name": "GRID ID",
-                  "description": "The property name.",
-                  "datatype": "xsd:string",
-                  "hasValue": "grid",
-                  "maxCount": 1
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "property": [
-            {
-              "path": "schema:value",
-              "name": "GRID ID",
-              "description": "The GRID identifier",
-              "nodeKind": "sh:IRI",
-              "minCount": 1,
-              "maxCount": 1
-            }
-          ]
-        }
-      ]
+      "pattern":"^(https://www.grid.ac)"
+
     }
   ]
 }
