@@ -50,7 +50,7 @@
       "label": "Stimulus shape definition",
       "property": [
         {
-          "path": "rdf:type",
+          "path": "nsg:stimulusType",
           "name": "Stimulus type",
           "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/StimulusTypeOntologyTermShape",
           "minCount": 1,
