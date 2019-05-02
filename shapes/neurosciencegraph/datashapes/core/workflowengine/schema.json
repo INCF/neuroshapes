@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/workflowengine/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/workflowengine",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/softwareagent",
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "shapes": [
+    {
+      "@id": "this:WorkflowEngineShape",
+      "@type": "sh:NodeShape",
+      "description": "Software agent which executes automated workflows.",
+      "targetClass": "nsg:WorkflowEngine",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/softwareagent/shapes/SoftwareAgentShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:name",
+              "name": "Name.",
+              "description": "Name of the workflow that engine was running.",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:description",
+              "name": "Description.",
+              "description": "Optional description of the workflow.",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            },
+            {
+              "path": "schema:version",
+              "name": "Version.",
+              "description": "Version of the workflow engine.",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:parameter",
+              "name": "Parameter.",
+              "description": "Parameters which were used to run the workflow.",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:configuration",
+              "name": "Workflow Engine Configuration file.",
+              "description": "Workflow configuration file.",
+              "class": "nsg:Configuration",
+              "node":"https://neuroshapes.org/commons/entity/shapes/EntityShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:task",
+              "name": "Task file.",
+              "description": "Workflow tasks definition file.",
+              "class": "prov:Entity",
+              "node":"https://neuroshapes.org/commons/entity/shapes/EntityShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
