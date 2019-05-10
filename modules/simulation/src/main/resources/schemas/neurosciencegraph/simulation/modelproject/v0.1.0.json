@@ -16,8 +16,8 @@
     ],
     "@type": "nxv:Schema",
     "imports": [
-        "{{base}}/schemas/neuralactivity/commons/entity/v0.1.0",
-        "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2"
+        "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+        "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2"
     ],
     "shapes": [{
         "@id": "this:ModelProjectShape",
@@ -26,7 +26,7 @@
         "nodekind": "sh:BlankNodeOrIRI",
         "targetClass": "nsg:ModelProject",
         "and": [{
-                "node": "{{base}}/schemas/neuralactivity/commons/entity/v0.1.0/shapes/EntityShape"
+                "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
             },
             {
                 "property": [
@@ -56,31 +56,31 @@
                         "path": "nsg:brainRegion",
                         "name": "Brain region",
                         "description": "Brain region",
-                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape"
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape"
                     },
                     {
                         "path": "nsg:species",
                         "name": "Species",
                         "description": "Species",
-                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape"
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape"
                     },
                     {
                         "path": "nsg:celltype",
                         "name": "Cell type",
                         "description": "Cell type",
-                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/CellTypeOntologyTermShape"
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/CellTypeOntologyTermShape"
                     },
                     {
                         "path": "nsg:organization",
                         "name": "Organization",
                         "description": "Organization",
-                        "node": "{{base}}/schemas/neuralactivity/commons/organization/v0.1.0/shapes/OrganizationShape"
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/organization/v0.1.0/shapes/OrganizationShape"
                     },
                     {
                         "path": "nsg:abstractionLevel",
                         "name": "Abstraction Level",
                         "description": "Abstraction level of the model",
-                        "node": "{{base}}/schemas/neuralactivity/commons/typedlabeledontologyterm/v0.1.2/shapes/AbstractionLevelOntologyTermShape"
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/AbstractionLevelOntologyTermShape"
                     },
                     {
                         "path": "nsg:private",
