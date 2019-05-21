@@ -41,8 +41,8 @@
                         "name": "Name",
                         "description": "the name of the model project",
                         "datatype": "xsd:string",
-                        "minCount": "1",
-                        "maxCount": "1"
+                        "minCount": 1,
+                        "maxCount": 1
                     },
                     {
                         "path": "nsg:alias",
@@ -50,7 +50,7 @@
                         "description": "the alias of the model project.",
                         "editorialNote": "used as an identifier, should be unique.",
                         "datatype": "xsd:string",
-                        "maxCount": "1"
+                        "maxCount": 1
                     },
                     {
                         "path": "nsg:brainRegion",
@@ -93,23 +93,23 @@
                         "name": "Author",
                         "description": "Author of the model Project",
                         "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
-                        "minCount": "1"
+                        "minCount": 1
                     },
                     {
                         "path": "nsg:owner",
                         "name": "Owner",
                         "description": "Owner of the model Project",
                         "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
-                        "maxCount": "1",
-                        "minCount": "1"
+                        "maxCount": 1,
+                        "minCount": 1
                     },
                     {
                         "path": "schema:description",
                         "name": "Description",
                         "description": "model project description",
                         "datatype": "xsd:string",
-                        "minCount": "1",
-                        "maxCount": "1"
+                        "minCount": 1,
+                        "maxCount": 1
                     },
                     {
                         "path": "nsg:collabID",
@@ -129,6 +129,11 @@
                         "name": "Provider ID",
                         "description": "An existing, alternative id of the model project",
                         "datatype": "xsd:string"
+                    },
+                    {
+                        "path": "nsg:partOf",
+                        "name": "Parent model project(s)",
+                        "node": "{{base}}/schemas/neuralactivity/simulation/modelproject/v0.1.0/shapes/ModelProject"
                     }
                 ]
             }
