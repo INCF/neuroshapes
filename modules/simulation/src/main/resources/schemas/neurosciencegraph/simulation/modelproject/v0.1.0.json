@@ -1,0 +1,142 @@
+{
+    "@context": [
+    	{
+            "imports": {
+                "@id": "owl:imports",
+                "@type": "@id",
+                "@container": "@set"
+            },
+            "owl": "http://www.w3.org/2002/07/owl#"
+        },
+        "{{base}}/contexts/nexus/core/resource/v0.3.0",
+        "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+        {
+            "this": "{{base}}/schemas/neuralactivity/simulation/modelproject/v0.1.0/shapes/"
+        }
+    ],
+    "@type": "nxv:Schema",
+    "imports": [
+        "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+        "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2"
+    ],
+    "shapes": [{
+        "@id": "this:ModelProjectShape",
+        "@type": "sh:NodeShape",
+        "label": "This shape represents a modelling project, and is a way to link related ModelInstances",
+        "nodekind": "sh:BlankNodeOrIRI",
+        "targetClass": "nsg:ModelProject",
+        "and": [{
+                "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+            },
+            {
+                "property": [
+                    {
+                        "path": "nsg:modelOf",
+                        "name": "Model of",
+                        "description": "Models of many things such as cells, ion channels, circuits, whole brains,...",
+                        "editorialNote": "The value of this property should be constrained by a sh:class corresponding to what is being modeled."
+                    },
+                    {
+                        "path": "schema:name",
+                        "name": "Name",
+                        "description": "the name of the model project",
+                        "datatype": "xsd:string",
+                        "minCount": 1,
+                        "maxCount": 1
+                    },
+                    {
+                        "path": "nsg:alias",
+                        "name": "Alias",
+                        "description": "the alias of the model project.",
+                        "editorialNote": "used as an identifier, should be unique.",
+                        "datatype": "xsd:string",
+                        "maxCount": 1
+                    },
+                    {
+                        "path": "nsg:brainRegion",
+                        "name": "Brain region",
+                        "description": "Brain region",
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/BrainRegionOntologyTermShape"
+                    },
+                    {
+                        "path": "nsg:species",
+                        "name": "Species",
+                        "description": "Species",
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/SpeciesOntologyTermShape"
+                    },
+                    {
+                        "path": "nsg:celltype",
+                        "name": "Cell type",
+                        "description": "Cell type",
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/CellTypeOntologyTermShape"
+                    },
+                    {
+                        "path": "nsg:organization",
+                        "name": "Organization",
+                        "description": "Organization",
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/organization/v0.1.0/shapes/OrganizationShape"
+                    },
+                    {
+                        "path": "nsg:abstractionLevel",
+                        "name": "Abstraction Level",
+                        "description": "Abstraction level of the model",
+                        "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/AbstractionLevelOntologyTermShape"
+                    },
+                    {
+                        "path": "nsg:private",
+                        "name": "Private",
+                        "description": "a boolean flag indicating whether access to the model should be restricted",
+                        "datatype": "xsd:boolean"
+                    },
+                    {
+                        "path": "schema:author",
+                        "name": "Author",
+                        "description": "Author of the model Project",
+                        "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
+                        "minCount": 1
+                    },
+                    {
+                        "path": "nsg:owner",
+                        "name": "Owner",
+                        "description": "Owner of the model Project",
+                        "node": "{{base}}/schemas/neuralactivity/commons/person/v0.1.0/shapes/PersonShape",
+                        "maxCount": 1,
+                        "minCount": 1
+                    },
+                    {
+                        "path": "schema:description",
+                        "name": "Description",
+                        "description": "model project description",
+                        "datatype": "xsd:string",
+                        "minCount": 1,
+                        "maxCount": 1
+                    },
+                    {
+                        "path": "nsg:collabID",
+                        "name": "collab id",
+                        "description": "collab id of the model project.",
+                        "editorialNote": "Note that this is not generic, and should be removed in a future schema version, but is retained here for short-term convenience.",
+                        "datatype": "xsd:int"
+                    },
+                    {
+                        "path": "schema:funder",
+                        "name": "Funding",
+                        "description": "Information about the funding for this project",
+                        "datatype": "xsd:string"
+                    },
+                    {
+                        "path": "nsg:providerId",
+                        "name": "Provider ID",
+                        "description": "An existing, alternative id of the model project",
+                        "datatype": "xsd:string"
+                    },
+                    {
+                        "path": "nsg:partOf",
+                        "name": "Parent model project(s)",
+                        "node": "{{base}}/schemas/neuralactivity/simulation/modelproject/v0.1.0/shapes/ModelProject"
+                    }
+                ]
+            }
+        ]
+    }]
+}
