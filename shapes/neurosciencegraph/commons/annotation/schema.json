@@ -36,6 +36,7 @@
               "path": "nsg:hasBody",
               "name": "Body",
               "description": "The entity or value that the target entity is being annotated with.",
+              "class": "nsg:AnnotationBody",
               "node": "this:HasBodyShape"
             },
             {
@@ -154,7 +155,6 @@
     {
       "@id": "this:HasBodyShape",
       "@type": "sh:NodeShape",
-      "class": "nsg:AnnotationBody",
       "nodeKind": "sh:BlankNodeOrIRI",
       "property": [
         {
