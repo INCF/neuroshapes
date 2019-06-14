@@ -37,7 +37,13 @@
               "name": "Body",
               "description": "The entity or value that the target entity is being annotated with.",
               "class": "nsg:AnnotationBody",
-              "nodeKind": "sh:BlankNodeOrIRI"
+              "node": "this:HasBodyShape"
+            },
+            {
+              "path": "skos:note",
+              "name": "Note",
+              "description": "A general note, for any purpose. This could include reasons on which an annotation - such as an mType classification - was based.",
+              "datatype": "xsd:string"
             }
           ]
         }
@@ -144,6 +150,20 @@
             }
           ]
         }
+      ]
+    },
+    {
+      "@id": "this:HasBodyShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "property": [
+        {
+          "path": "skos:note",
+          "name": "Note",
+          "description": "A general note, for any purpose. This could include reasons on which an annotation - such as an mType classification - was based.",
+          "datatype": "xsd:string"
+        }
+
       ]
     },
     {
