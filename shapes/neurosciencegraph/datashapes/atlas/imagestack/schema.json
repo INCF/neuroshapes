@@ -103,7 +103,18 @@
             "minCount": 1,
             "maxCount": 1
           },{
-            "@id":"https://neuroshapes.org/commons/unit/shapes/WithUnitCodeShape"
+            "path": "schema:unitCode",
+            "name": "Unit",
+            "or": [
+              {
+                "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+              },
+              {
+                "datatype": "xsd:string"
+              }
+            ],
+            "minCount": 1,
+            "maxCount": 1
           }
         ]
       },
