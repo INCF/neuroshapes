@@ -20,13 +20,7 @@
       "@type": "sh:NodeShape",
       "label": "Definition of n-dimensional raster dataset",
       "targetClass": [
-        "nsg:NdRaster",
-        "nsg:CellDensityDataLayer",
-        "nsg:PHDataLayer",
-        "nsg:BrainParcellationDataLayer",
-        "nsg:MorphologyOrientationDataLayer",
-        "nsg:NISSLImageDataLayer",
-        "nsg:TwoPhotonImageDataLayer"
+        "nsg:NdRaster"
       ],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
@@ -55,7 +49,6 @@
               "description": "List of dimensions, spectral, spatial or temporal, in the order of encoding in the buffer, from the fastest axis to the slowest axis.",
               "node": "this:dimensionShape",
               "minCount": 1,
-              "maxCount": 1
             },
 
             {
