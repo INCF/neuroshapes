@@ -27,6 +27,12 @@
           "minCount": 1
         },
         {
+          "path": "nsg:layer",
+          "name": "Brain region layer",
+          "description": "Brain region region (e.g. layer of the neocortex)",
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
+        },
+        {
           "path": "nsg:coordinatesInBrainAtlas",
           "name": "Coordinates in brain atlas",
           "description": "Coordinates in brain atlas",
