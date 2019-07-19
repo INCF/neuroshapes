@@ -30,7 +30,7 @@
           "path": "nsg:layer",
           "name": "Brain region layer",
           "description": "Brain region region (e.g. layer of the neocortex)",
-          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape"
         },
         {
           "path": "nsg:coordinatesInBrainAtlas",
