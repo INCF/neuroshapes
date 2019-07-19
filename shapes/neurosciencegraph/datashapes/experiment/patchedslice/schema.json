@@ -37,7 +37,6 @@
               "name": "Patched cells collection",
               "description": "The collection of patched cells.",
               "class": "prov:Collection",
-              "minCount": 1,
               "seeAlso": "https://neuroshapes.org/dash/patchedcellcollection/shapes/PatchedCellCollectionShape"
             },
             {
