@@ -91,7 +91,7 @@
           "path": "nsg:widthResolution",
           "name": "Width resolution",
           "description": "Slice resolution in width",
-          "datatype": "xsd:float",
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
           "minCount": 1,
           "maxCount": 1
         },
@@ -99,20 +99,7 @@
           "path": "nsg:heightResolution",
           "name": "Height resolution",
           "description": "Slice height",
-          "datatype": "xsd:float",
-          "minCount": 1,
-          "maxCount": 1
-        },{
-          "path": "schema:unitCode",
-          "name": "Unit",
-          "or": [
-            {
-              "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
-            },
-            {
-              "datatype": "xsd:string"
-            }
-          ],
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
           "minCount": 1,
           "maxCount": 1
         }
