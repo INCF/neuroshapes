@@ -10,7 +10,7 @@
     "shsh": "http://www.w3.org/ns/shacl-shacl#",
     "dcterms": "http://purl.org/dc/terms/",
     "schema": "http://schema.org/",
-    "nxv": "https://bbp-nexus.epfl.ch/vocabs/nexus/core/terms/v0.1.0/",
+    "nxv": "https://bluebrain.github.io/nexus/vocabulary/",
     "shext": "http://www.w3.org/ns/shacl/ext#",
     "class": {
       "@id": "sh:class",
