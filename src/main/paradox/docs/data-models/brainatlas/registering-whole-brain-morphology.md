@@ -27,30 +27,30 @@ The different entity types involved are described below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [TemplateVolume](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtemplatevolume.html)  |  Template volume generated from the template image data  |
-| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
-| [ImageStack](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgimagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
-| [ReconstructedCell](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
-| [Transform](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtransform.html)    |     A linear or non-linear transform      |
-| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
+| [TemplateVolume](https://bbp-nexus.epfl.ch/datamodels/class-nsgtemplatevolume.html)  |  Template volume generated from the template image data  |
+| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/datamodels/class-nsgatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
+| [ImageStack](https://bbp-nexus.epfl.ch/datamodels/class-nsgimagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
+| [Transform](https://bbp-nexus.epfl.ch/datamodels/class-nsgtransform.html)    |     A linear or non-linear transform      |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
 ### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainImaging](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgbrainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
-| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgreconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
-| [Transformation](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtransformation.html)   |     Transform a geometric object     |
+| [BrainImaging](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
+| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
+| [Transformation](https://bbp-nexus.epfl.ch/datamodels/class-nsgtransformation.html)   |     Transform a geometric object     |
 
 ### Agents
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
-| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
 
 
 ## Contributors

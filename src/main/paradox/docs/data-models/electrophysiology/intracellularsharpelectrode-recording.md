@@ -31,13 +31,13 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | -------------                                                             | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [Slice](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
-| [IntraCellularSharpElectrodeRecordedSlice](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgintracellularsharpelectroderecordedslice.html)                  |     Brain slice containing recorded cells      |
-| [IntraSharpRecordedCellCollection](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgintracellularsharpelectroderecordedslice.html)|     Collection of recorded cells in a single slice  |
-| [IntraCellularSharpElectrodeRecordedCell](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgintracellularsharpelectroderecordedcell.html)                    |     Cell that was recorded in the slice      |
-| [Trace](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgtrace.html)                         |     Individual recording trace of the cell (stimulation/input and response/output trace)     |
-| [Protocol](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
+| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
+| [IntraCellularSharpElectrodeRecordedSlice](https://bbp-nexus.epfl.ch/datamodels/class-nsgintracellularsharpelectroderecordedslice.html)                  |     Brain slice containing recorded cells      |
+| [IntraSharpRecordedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-nsgintracellularsharpelectroderecordedslice.html)|     Collection of recorded cells in a single slice  |
+| [IntraCellularSharpElectrodeRecordedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgintracellularsharpelectroderecordedcell.html)                    |     Cell that was recorded in the slice      |
+| [Trace](https://bbp-nexus.epfl.ch/datamodels/class-nsgtrace.html)                         |     Individual recording trace of the cell (stimulation/input and response/output trace)     |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
     
 ### Activities
 
@@ -45,9 +45,9 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgbrainslicing.html)                      |     Technique used to obtain a brain slice      |
-| [IntraCellularSharpElectrode](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgintracellularsharpelectrode.html)        |     Technique used to study electrical activity of individual living cells    |
-| [StimulusExperiment](https://bbp-nexus.epfl.ch/staging/datamodels/class-nsgstimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
+| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainslicing.html)                      |     Technique used to obtain a brain slice      |
+| [IntraCellularSharpElectrode](https://bbp-nexus.epfl.ch/datamodels/class-nsgintracellularsharpelectrode.html)        |     Technique used to study electrical activity of individual living cells    |
+| [StimulusExperiment](https://bbp-nexus.epfl.ch/datamodels/class-nsgstimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
 
 ### Agents
 
@@ -55,9 +55,9 @@ The different agent types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](https://bbp-nexus.epfl.ch/staging/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
-| [Organization](https://bbp-nexus.epfl.ch/staging/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
+| [Person](https://bbp-nexus.epfl.ch/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp-nexus.epfl.ch/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp-nexus.epfl.ch/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
 
 ## Contributors
 
