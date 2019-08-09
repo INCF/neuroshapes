@@ -8,17 +8,16 @@
   "@id": "https://neuroshapes.org/dash/volumetricdatalayer",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/transformableobject",
     "https://neuroshapes.org/commons/brainlocation",
     "https://neuroshapes.org/commons/typedlabeledontologyterm",
-    "https://neuroshapes.org/commons/distribution"
+    "https://neuroshapes.org/dash/ndraster"
   ],
   "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/volumetricdatalayer/v1.0.0.json",
   "shapes": [
     {
       "@id": "this:VolumetricDataLayerShape",
       "@type": "sh:NodeShape",
-      "label": "Data shape definition for VoxelBrain data",
+      "label": "Data shape definition for volumetric brain data",
       "targetClass": [
         "nsg:NdRaster",
         "nsg:VolumetricDataLayer",
@@ -45,56 +44,30 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:layer",
-              "name": "layer",
-              "description": "layer for PH data layer",
-              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/LayerOntologyTermShape",
+              "path": "nsg:isRegisteredIn",
+              "class": "nsg:BrainAtlasSpatialReferenceSystem",
               "maxCount": 1
             },
             {
-              "path": "schema:distribution",
-              "name": "Distribution",
-              "description": "Volumetric data layer location.",
-              "node": "this:VolumetricDataLayerDistributionShape"
+              "path": "nsg:imageModality",
+              "name": "Image modality",
+              "description": "The modality of data capture (MRI, fMRI, EM, etc.)",
+              "datatype": "xsd:string",
+              "maxCount": 1
             },
             {
               "path": "nsg:brainLocation",
               "name": "brain location",
               "description": "Brain Location (brain region, atlas space).",
-              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
+              "node": "this:BrainLocationShape",
               "minCount": 1,
               "maxCount": 1
             },
             {
-              "path": "nsg:voxelResolution",
-              "name": "Voxel resolution",
+              "path": "nsg:resolution",
+              "name": "Resolution",
               "description": "Resolution of the voxel.",
-              "node": "this:VoxelResolutionShape",
-              "minCount": 1,
-              "maxCount": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "@id": "this:VolumetricDataLayerDistributionShape",
-      "@type": "sh:NodeShape",
-      "label": "A volumetric data layer shape.",
-      "nodekind": "sh:BlankNodeOrIRI",
-      "and": [
-        {
-          "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
-        },
-        {
-          "property": [
-            {
-              "path": "schema:encodingFormat",
-              "name": "Media type",
-              "description": "Volumetric data layer allowed media types",
-              "in": [
-                "application/nrrd"
-              ],
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
               "minCount": 1,
               "maxCount": 1
             }
@@ -116,30 +89,7 @@
             {
               "path": "nsg:atlasSpatialReferenceSystem",
               "name": "Atlas Spatial Reference System",
-              "class": "nsg:AtlasSpatialReferenceSystem",
-              "minCount": 1,
-              "maxCount": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "@id": "this:VoxelResolutionShape",
-      "@type": "sh:NodeShape",
-      "label": "Voxel resolution shape",
-      "nodekind": "sh:BlankNodeOrIRI",
-      "and": [
-        {
-          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
-        },
-        {
-          "property": [
-            {
-              "path": "schema:value",
-              "name": "Voxel resolution value",
-              "description": "Voxel resolution value",
-              "datatype": "xsd:float",
+              "class": "nsg:BrainAtlasSpatialReferenceSystem",
               "minCount": 1,
               "maxCount": 1
             }

@@ -8,12 +8,8 @@
   "@id": "https://neuroshapes.org/dash/ndraster",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/transformableobject",
-    "https://neuroshapes.org/commons/brainlocation",
-    "https://neuroshapes.org/commons/typedlabeledontologyterm",
-    "https://neuroshapes.org/commons/distribution"
+    "https://neuroshapes.org/commons/entity"
   ],
-  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/atlas/src/main/resources/schemas/neurosciencegraph/atlas/volumetricdatalayer/v1.0.0.json",
   "shapes": [
     {
       "@id": "this:NdRasterShape",
@@ -25,65 +21,34 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/commons/transformableobject/shapes/TransformableObjectShape"
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
         },
         {
           "property": [
             {
-              "path": "nsg:isRegisteredIn",
-              "class": "nsg:AtlasSpatialReferenceSystem",
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:imageModality",
-              "name": "Image modality",
-              "description": "The modality of data capture (MRI, fMRI, EM, etc.)",
-              "node": "xsd:string",
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:dimensions",
+              "path": "nsg:dimension",
               "name": "Dimensions",
-              "description": "List of dimensions, spectral, spatial or temporal, in the order of encoding in the buffer, from the fastest axis to the slowest axis.",
-              "node": "this:dimensionShape",
-              "minCount": 1,
+              "description": "List of dimensions, spectral (components), spatial or temporal, in the order of encoding in the buffer, from the fastest axis to the slowest axis.",
+              "or": [
+                {
+                  "node": "this:TimeDimensionShape",
+                },
+                {
+                  "node": "this:SpaceDimensionShape",
+                },
+                {
+                  "node": "this:ComponentDimensionShape",
+                }
+
+              ],
+              "minCount": 1
             },
 
             {
-              "path": "nsg:timeResolution",
-              "name": "Time resolution",
-              "description": "Period of time between two records along the time axis.",
-              "node": "xsd:float",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:timeUnit",
-              "name": "Time unit",
-              "description": "Unit of time to use for time series. Applies to timeResolution.",
-              "node": "??? we have a schema for that",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-
-            {
-              "path": "nsg:timeUnitCode",
-              "name": "Time Unit",
-              "description": "Time dimension unit",
-              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/UnitOntologyTermShape",
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:v2wMatrix",
-              "name": "Voxel to world matrix",
+              "path": "nsg:worldMatrix",
+              "name": "World matrix",
               "description": "Column major matrix to perform the affine transformation from voxel position to world position. In world position, the measurement unit is 'spatialUnit'. The size of this matrix is numberOfSpatialDimensions x numberOfSpatialDimensions.",
-              "node": "xsd:float",
-              "minCount": 0,
+              "datatype": "xsd:double"
             },
 
             {
@@ -102,8 +67,8 @@
             },
 
             {
-              "path": "nsg:componentDataType",
-              "name": "Component data type",
+              "path": "nsg:componentEncoding",
+              "name": "Component Encoding",
               "description": "Encoding type of each component within a sample (pixels or voxels), if we have multiple components such as in RGB, vectors or quaternions, the componentDataType is applicable to each component. Ex: 'uint8', 'float32'",
               "in": [
                 "ascii",
@@ -124,9 +89,9 @@
             },
 
             {
-              "path": "nsg:endianess",
-              "name": "Endianess",
-              "description": "Endianess of the encoding, applicable for all componentDataType but not usefull for uint8 int8 and ascii",
+              "path": "nsg:endianness",
+              "name": "Endianness",
+              "description": "Endianness of the encoding, applicable for all componentDataType but not usefull for uint8 int8 and ascii",
               "in": [
                 "little",
                 "big"
@@ -136,25 +101,31 @@
             },
 
             {
-              "path": "nsg:encoding",
-              "name": "Encoding",
+              "path": "nsg:bufferEncoding",
+              "name": "Buffer Encoding",
               "description": "Encoding of the data part of the dataset (not the header)",
-              "in": [
-                "ascii",
-                "raw",
-                "gzip",
-                "bzip2",
-                "other"
+              "or": [
+                {
+                  "in": [
+                    "ascii",
+                    "raw",
+                    "gzip",
+                    "bzip2"
+                  ],
+                },
+                {
+                  "datatype": "xsd:string"
+                }
               ],
               "minCount": 1,
               "maxCount": 1
             },
 
             {
-              "path": "nsg:format",
-              "name": "Format",
+              "path": "nsg:fileExtension",
+              "name": "File Extension",
               "description": "Format of the file, by its extension ('nrrd', 'png', etc.)",
-              "node": "xsd:string",
+              "datatype": "xsd:string",
               "minCount": 1,
               "maxCount": 1
             },
@@ -166,45 +137,123 @@
 
 
     {
-      "@id": "this:dimensionShape",
+      "@id": "this:DimensionShape",
       "@type": "sh:NodeShape",
-      "label": "Dimension shape",
+      "label": "Generic Dimension shape",
       "nodekind": "sh:BlankNodeOrIRI",
+      "properties": [
+        {
+          "path": "nsg:size",
+          "name": "Size",
+          "description": "Number of elements along this dimension. For a spatial dimension, the size is the number of pixel or voxel. For a temporal dimension, the size is the number of time samples/records. For a component dimension, the size is the number of component per sample (ex: 3 for RGB color, 4 for quaternion, 1 for intensity, etc.)",
+          "datatype": "xsd:int",
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    },
+
+
+    {
+      "@id": "this:TimeDimensionShape",
+      "@type": "sh:NodeShape",
+      "label": "Time Dimension shape",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "class": "nsg:TimeDimension",
       "and": [
         {
-          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+          "node": "this:DimensionShape"
+        },
+        {
+          "properties": [
+            {
+              "path": "nsg:samplingPeriod",
+              "name": "Sampling Period",
+              "description": "Period of time between two contiguous sample",
+              "datatype": "xsd:double",
+              "minCount": 1,
+              "maxCount": 1
+            },
+            {
+              "path": "schema:unitCode",
+              "name": "Time Unit",
+              "description": "Unit of time used to qualify the sampling.",
+              "or": [
+                {
+                  "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+                },
+                {
+                  "datatype": "xsd:string"
+                }
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "@id": "this:SpaceDimensionShape",
+      "@type": "sh:NodeShape",
+      "label": "Space Dimension shape",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "class": "nsg:SpaceDimension",
+      "seeAlso": "UN/CEFACT codes http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
+      "and": [
+        {
+          "node": "this:DimensionShape"
         },
         {
           "property": [
-
             {
-              "path": "schema:type",
-              "name": "Type",
-              "description": "Type of the dimension (component, spatial, temporal). 'component' is used for non-spatial and non-temporal dimensions, such as multispectral colors or vector.",
-              "in": [
-                "component",
-                "space",
-                "time"
+              "path": "schema:unitCode",
+              "name": "Time Unit",
+              "description": "Unit of time used to qualify the sampling.",
+              "or": [
+                {
+                  "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+                },
+                {
+                  "datatype": "xsd:string"
+                }
               ],
               "minCount": 1,
               "maxCount": 1
             },
+          ]
+        }
+      ]
+    },
 
+
+
+    {
+      "@id": "this:ComponentDimensionShape",
+      "@type": "sh:NodeShape",
+      "label": "Component Dimension shape",
+      "nodekind": "sh:BlankNodeOrIRI",
+      "class": "nsg:ComponentDimension",
+      "and": [
+        {
+          "node": "this:DimensionShape"
+        },
+        {
+          "property": [
             {
-              "path": "schema:size",
-              "name": "Size",
-              "description": "Number of elements along this dimension. For a spatial dimension, the size is the number of pixel or voxel. For a temporal dimension, the size is the number of time samples. For a component dimension, the size is the number of component per sample (ex: 3 for RGB color, 4 for quaternion, 1 for intensity, etc.)",
-              "node": "xsd:int",
+              "path": "schema:name",
+              "name": "Name",
+              "description": "The name of the component (whether it's a color, a vector, a quaternion, etc.)",
+              "datatype": "xsd:string"
+              ],
               "minCount": 1,
               "maxCount": 1
-            }
-
+            },
           ]
         }
       ]
     }
-
-
 
   ]
 }
