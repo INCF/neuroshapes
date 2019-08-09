@@ -76,6 +76,7 @@
               "path": "nsg:sliceInterval",
               "name": "Slice interval",
               "description": "Interval at which individual slices in a stack of slices were sampled by the imaging method.",
+
               "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
               "minCount": 1,
               "maxCount": 1
@@ -95,7 +96,6 @@
               "minCount": 1,
               "maxCount": 1
             },
-
             {
               "path": "nsg:heightAnatomicalDirection",
               "name": "Height Anatomical Direction",
