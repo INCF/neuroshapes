@@ -1,0 +1,82 @@
+{
+  "@id": "urn:x-arq:DefaultGraphNode",
+  "@context": {
+    "rest": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type": "@id"
+    },
+    "first": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "worldMatrix": {
+      "@id": "http://example.org/worldMatrix",
+      "@type": "@id"
+    },
+    "description": "http://example.org/description",
+    "zipCodes": {
+      "@id": "http://example.org/zipCodes",
+      "@type": "@id"
+    },
+    "ingredients": {
+      "@id": "http://example.org/ingredients",
+      "@type": "@id"
+    },
+    "ex": "http://example.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:AGeoZoneWithIntegers",
+      "@type": "ex:GeoZone",
+      "description": "A 3D model of a cell",
+      "ex:zipCodes": {
+        "@list": [
+          1110,
+          3345,
+          4556
+        ]
+      }
+    },
+    {
+      "@id": "ex:ChocolateCakeRecipe",
+      "@type": "ex:Recepe",
+      "description": "My favorite chocolate cake",
+      "ex:ingredients": {
+        "@list": [
+          "egs",
+          "flour",
+          "milk",
+          "dark chocolate",
+          "butter"
+        ]
+      }
+    },
+    {
+      "@id": "ex:ListOfSixteenDoubles",
+      "@type": "ex:SyntheticModel",
+      "description": "A 3D model of a cell",
+      "ex:worldMatrix": {
+        "@list": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ]
+      }
+    }
+  ]
+}

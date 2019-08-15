@@ -1,0 +1,125 @@
+{
+  "@id" : "https://neuroshapes.org/commons/list/examples",
+  "@context": {
+    "rest": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type": "@id"
+    },
+    "first": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "zipCodes": {
+      "@id": "http://example.org/zipCodes",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "description": "http://example.org/description",
+    "ingredients": {
+      "@id": "http://example.org/ingredients",
+      "@type": "@id"
+    },
+    "worldMatrix": {
+      "@id": "http://example.org/worldMatrix",
+      "@type": "@id"
+    },
+    "ex": "http://example.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "ex:AGeoZoneWithDecimal",
+      "@type": "ex:GeoZone",
+      "description": "A 3D model of a cell",
+      "ex:zipCodes": {
+        "@list": [
+          1.1,
+          2.2,
+          3.3
+        ]
+      }
+    },
+    {
+      "@id": "ex:AGeoZoneWrongList",
+      "@type": "ex:GeoZone",
+      "description": "NotaList",
+      "ex:zipCodes": 1234
+    },
+    {
+      "@id": "ex:ChocolateCakeRecipeNoDesc",
+      "@type": "ex:Recipe",
+      "ex:ingredients": {
+        "@list": [
+          "egs",
+          "flour",
+          "milk",
+          "dark chocolate",
+          "butter"
+        ]
+      }
+    },
+    {
+      "@id": "ex:ChocolateCakeRecipeNoIngridents",
+      "@type": "ex:Recipe",
+      "description": "ChocolateCakeRecipeNoIngridents",
+      "ex:ingredients": {
+        "@list": []
+      }
+    },
+    {
+      "@id": "ex:ChocolateCakeRecipeWrongIngridents",
+      "@type": "ex:Recipe",
+      "description": "ChocolateCakeRecipeWrongIngridents",
+      "ex:ingredients": {
+        "@list": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "@id": "ex:ListOfSixteenIntegers",
+      "@type": "ex:SyntheticModel",
+      "description": "A 3D model of a cell",
+      "ex:worldMatrix": {
+        "@list": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16
+        ]
+      }
+    },
+    {
+      "@id": "ex:ListOfThreeDoubles",
+      "@type": "ex:SyntheticModel",
+      "description": "A 3D model of a cell",
+      "ex:worldMatrix": {
+        "@list": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "@id": "ex:NotaList",
+      "@type": "ex:SyntheticModel",
+      "description": "NotaList",
+      "ex:worldMatrix": "some text"
+    }
+  ]
+}

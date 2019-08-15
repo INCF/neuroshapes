@@ -1,0 +1,352 @@
+{
+  "@id" : "https://neuroshapes.org/commons/list",
+  "@type" : "nxv:Schema",
+  "@context": {
+    "path": {
+      "@id": "http://www.w3.org/ns/shacl#path",
+      "@type": "@id"
+    },
+    "minCount": {
+      "@id": "http://www.w3.org/ns/shacl#minCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "maxCount": {
+      "@id": "http://www.w3.org/ns/shacl#maxCount",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "message": "http://www.w3.org/ns/shacl#message",
+    "datatype": {
+      "@id": "http://www.w3.org/ns/shacl#datatype",
+      "@type": "@id"
+    },
+    "zeroOrMorePath": {
+      "@id": "http://www.w3.org/ns/shacl#zeroOrMorePath",
+      "@type": "@id"
+    },
+    "oneOrMorePath": {
+      "@id": "http://www.w3.org/ns/shacl#oneOrMorePath",
+      "@type": "@id"
+    },
+    "property": {
+      "@id": "http://www.w3.org/ns/shacl#property",
+      "@type": "@id"
+    },
+    "hasValue": {
+      "@id": "http://www.w3.org/ns/shacl#hasValue",
+      "@type": "@id"
+    },
+    "rest": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type": "@id"
+    },
+    "first": {
+      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type": "@id"
+    },
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "targetClass": {
+      "@id": "http://www.w3.org/ns/shacl#targetClass",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type": "@id"
+    },
+    "comment": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "node": {
+      "@id": "http://www.w3.org/ns/shacl#node",
+      "@type": "@id"
+    },
+    "or": {
+      "@id": "http://www.w3.org/ns/shacl#or",
+      "@type": "@id"
+    },
+    "not": {
+      "@id": "http://www.w3.org/ns/shacl#not",
+      "@type": "@id"
+    },
+    "ex": "http://example.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "this": "https://neuroshapes.org/commons/list/shapes/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "@graph": [
+    {
+      "@id": "this:DataNode",
+      "not": {
+        "hasValue": {
+          "@list": []
+        }
+      },
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:DoubleNode",
+      "not": {
+        "hasValue": {
+          "@list": []
+        }
+      },
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:double",
+          "maxCount": 1,
+          "message": "Data should be double type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:EmptyNode",
+      "hasValue": {
+        "@list": []
+      },
+      "property": [
+        {
+          "maxCount": 0,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 0,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:IntegerNode",
+      "not": {
+        "hasValue": {
+          "@list": []
+        }
+      },
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:integer",
+          "maxCount": 1,
+          "message": "Data should be integer type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:ListNodeShape",
+      "@type": "sh:NodeShape",
+      "comment": {
+        "@language": "en",
+        "@value": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion."
+      },
+      "label": {
+        "@language": "en",
+        "@value": "List node shape"
+      },
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DataNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfDoublesNodeShape",
+      "@type": "sh:NodeShape",
+      "label": "List of doubles node shape",
+      "message": "List should contain only doubles",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DoubleNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfDoublesShape",
+      "@type": "sh:NodeShape",
+      "label": {
+        "@language": "en",
+        "@value": "List of doubles"
+      },
+      "property": {
+        "hasValue": {
+          "@list": []
+        },
+        "node": "this:ListOfDoublesNodeShape",
+        "path": {
+          "zeroOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListOfIntegersNodeShape",
+      "@type": "sh:NodeShape",
+      "label": "List of integers node shape",
+      "message": "List should contain only integers",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:IntegerNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfIntegersShape",
+      "@type": "sh:NodeShape",
+      "label": {
+        "@language": "en",
+        "@value": "List of integers"
+      },
+      "property": {
+        "hasValue": {
+          "@list": []
+        },
+        "node": "this:ListOfIntegersNodeShape",
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListOfOneOrMoreDoublesShape",
+      "@type": "sh:NodeShape",
+      "node": "this:ListOfDoublesShape",
+      "property": {
+        "minCount": 1,
+        "path": "_:b41"
+      }
+    },
+    {
+      "@id": "this:ListOfOneOrMoreIntegersShape",
+      "@type": "sh:NodeShape",
+      "node": "this:ListOfIntegersShape",
+      "property": {
+        "minCount": 1,
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListOfOneOrMoreItemsShape",
+      "@type": "sh:NodeShape",
+      "node": "this:ListShape",
+      "property": {
+        "minCount": 1,
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListOfOneOrMoreStringsShape",
+      "@type": "sh:NodeShape",
+      "node": "this:ListOfStringsShape",
+      "property": {
+        "minCount": 1,
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListOfStringsNodeShape",
+      "@type": "sh:NodeShape",
+      "label": "List of string node shape",
+      "message": "List should contain only strings",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:StringNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfStringsShape",
+      "@type": "sh:NodeShape",
+      "label": {
+        "@language": "en",
+        "@value": "List of strings"
+      },
+      "property": {
+        "hasValue": {
+          "@list": []
+        },
+        "node": "this:ListOfStringsNodeShape",
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:ListShape",
+      "@type": "sh:NodeShape",
+      "comment": {
+        "@language": "en",
+        "@value": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL."
+      },
+      "label": {
+        "@language": "en",
+        "@value": "List shape"
+      },
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "property": {
+        "comment": {
+          "@language": "en",
+          "@value": "Each list member (including this node) must be have the shape this:ListNodeShape."
+        },
+        "hasValue": {
+          "@list": []
+        },
+        "node": "this:ListNodeShape",
+        "path": {
+          "zeroOrMorePath": "rdf:rest"
+        }
+      }
+    },
+    {
+      "@id": "this:StringNode",
+      "not": {
+        "hasValue": {
+          "@list": []
+        }
+      },
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:string",
+          "maxCount": 1,
+          "message": "Data should be string type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    }
+  ]
+}
