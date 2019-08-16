@@ -213,12 +213,12 @@
       "label": {
         "@id": "rdfs:label",
         "@type": "xsd:string",
-        "language":"en"
+        "@language":"en"
       },
       "comment": {
         "@id": "rdfs:comment",
         "@type": "xsd:string",
-        "language":"en"
+        "@language":"en"
       },
       "editorialNote": {
         "@id": "skos:editorialNote",
