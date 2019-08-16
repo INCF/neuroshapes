@@ -212,11 +212,13 @@
       },
       "label": {
         "@id": "rdfs:label",
-        "@type": "xsd:string"
+        "@type": "xsd:string",
+        "language":"en"
       },
       "comment": {
         "@id": "rdfs:comment",
-        "@type": "xsd:string"
+        "@type": "xsd:string",
+        "language":"en"
       },
       "editorialNote": {
         "@id": "skos:editorialNote",
@@ -227,12 +229,10 @@
         "@type": "@id"
       },
       "zeroOrMorePath": {
-        "@id": "sh:zeroOrMorePath",
-        "@type": "@id"
+        "@id": "sh:zeroOrMorePath"
       },
       "oneOrMorePath": {
-        "@id": "sh:oneOrMorePath",
-        "@type": "@id"
+        "@id": "sh:oneOrMorePath"
       },
        "rest": {
         "@id": "rdf:rest",
