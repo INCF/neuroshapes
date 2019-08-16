@@ -1,78 +1,13 @@
 {
-  "@id" : "https://neuroshapes.org/commons/list",
-  "@type" : "nxv:Schema",
-  "@context": {
-    "path": {
-      "@id": "http://www.w3.org/ns/shacl#path",
-      "@type": "@id"
-    },
-    "minCount": {
-      "@id": "http://www.w3.org/ns/shacl#minCount",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "maxCount": {
-      "@id": "http://www.w3.org/ns/shacl#maxCount",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "message": "http://www.w3.org/ns/shacl#message",
-    "datatype": {
-      "@id": "http://www.w3.org/ns/shacl#datatype",
-      "@type": "@id"
-    },
-    "zeroOrMorePath": {
-      "@id": "http://www.w3.org/ns/shacl#zeroOrMorePath",
-      "@type": "@id"
-    },
-    "oneOrMorePath": {
-      "@id": "http://www.w3.org/ns/shacl#oneOrMorePath",
-      "@type": "@id"
-    },
-    "property": {
-      "@id": "http://www.w3.org/ns/shacl#property",
-      "@type": "@id"
-    },
-    "hasValue": {
-      "@id": "http://www.w3.org/ns/shacl#hasValue",
-      "@type": "@id"
-    },
-    "rest": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type": "@id"
-    },
-    "first": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type": "@id"
-    },
-    "label": "http://www.w3.org/2000/01/rdf-schema#label",
-    "targetClass": {
-      "@id": "http://www.w3.org/ns/shacl#targetClass",
-      "@type": "@id"
-    },
-    "seeAlso": {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-      "@type": "@id"
-    },
-    "comment": "http://www.w3.org/2000/01/rdf-schema#comment",
-    "node": {
-      "@id": "http://www.w3.org/ns/shacl#node",
-      "@type": "@id"
-    },
-    "or": {
-      "@id": "http://www.w3.org/ns/shacl#or",
-      "@type": "@id"
-    },
-    "not": {
-      "@id": "http://www.w3.org/ns/shacl#not",
-      "@type": "@id"
-    },
-    "ex": "http://example.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "sh": "http://www.w3.org/ns/shacl#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "this": "https://neuroshapes.org/commons/list/shapes/",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-  },
-  "@graph": [
+  "@id": "https://neuroshapes.org/commons/list",
+  "@type": "nxv:Schema",
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/list/shapes/"
+    }
+  ],
+  "shapes": [
     {
       "@id": "this:DataNode",
       "not": {

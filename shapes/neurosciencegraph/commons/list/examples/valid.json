@@ -1,14 +1,6 @@
 {
   "@id": "urn:x-arq:DefaultGraphNode",
   "@context": {
-    "rest": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type": "@id"
-    },
-    "first": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type": "http://www.w3.org/2001/XMLSchema#double"
-    },
     "worldMatrix": {
       "@id": "http://example.org/worldMatrix",
       "@type": "@id"
@@ -23,7 +15,6 @@
       "@type": "@id"
     },
     "ex": "http://example.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
@@ -59,22 +50,22 @@
       "description": "A 3D model of a cell",
       "ex:worldMatrix": {
         "@list": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16
+          1.01,
+          2.01,
+          3.01,
+          4.01,
+          5.01,
+          6.01,
+          7.01,
+          8.01,
+          9.01,
+          10.01,
+          11.01,
+          12.01,
+          13.01,
+          14.01,
+          15.01,
+          16.01
         ]
       }
     }

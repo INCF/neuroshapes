@@ -1,125 +1,106 @@
 {
-  "@id" : "https://neuroshapes.org/commons/list/examples",
-  "@context": {
-    "rest": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type": "@id"
-    },
-    "first": {
-      "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type": "http://www.w3.org/2001/XMLSchema#double"
-    },
-    "zipCodes": {
-      "@id": "http://example.org/zipCodes",
-      "@type": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "description": "http://example.org/description",
-    "ingredients": {
-      "@id": "http://example.org/ingredients",
-      "@type": "@id"
-    },
-    "worldMatrix": {
-      "@id": "http://example.org/worldMatrix",
-      "@type": "@id"
-    },
-    "ex": "http://example.org/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
-      "@id": "ex:AGeoZoneWithDecimal",
-      "@type": "ex:GeoZone",
-      "description": "A 3D model of a cell",
-      "ex:zipCodes": {
-        "@list": [
-          1.1,
-          2.2,
-          3.3
-        ]
+      "ex": "http://example.org/"
+    }
+  ],
+  "imports": [
+    "https://neuroshapes.org/commons/list/"
+  ],
+  "@id": "https://neuroshapes.org/commons/list/examples",
+  "shapes": [
+    {
+      "@id": "ex:GeoZoneShape",
+      "@type": "sh:NodeShape",
+      "label": "Geograpical zone based on zip codes",
+      "property": [
+        {
+          "message": "should contain one list of zip codes as integers",
+          "minCount": 1,
+          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreIntegersShape",
+          "path": "ex:zipCodes"
+        },
+        {
+          "datatype": "xsd:string",
+          "message": "should contain a description",
+          "minCount": 1,
+          "path": "ex:description"
+        }
+      ],
+      "targetClass": "ex:GeoZone"
+    },
+    {
+      "@id": "ex:RecipeShape",
+      "@type": "sh:NodeShape",
+      "label": "List of ingredients",
+      "property": [
+        {
+          "message": "the list of ingredients must be string",
+          "minCount": 1,
+          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreStringsShape",
+          "path": "ex:ingredients"
+        },
+        {
+          "datatype": "xsd:string",
+          "message": "should contain a description",
+          "minCount": 1,
+          "path": "ex:description"
+        }
+      ],
+      "targetClass": "ex:Recipe"
+    },
+    {
+      "@id": "ex:SyntheticModelShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "message": "One list for worldMatrix should be present",
+          "minCount": 1,
+          "node": "ex:WorldMatrixShape",
+          "path": "ex:worldMatrix"
+        },
+        {
+          "datatype": "xsd:string",
+          "message": "should contain a description",
+          "minCount": 1,
+          "path": "ex:description"
+        }
+      ],
+      "targetClass": "ex:SyntheticModel"
+    },
+    {
+      "@id": "ex:WhateverShape",
+      "@type": "sh:NodeShape",
+      "label": "Whatever",
+      "property": [
+        {
+          "datatype": "xsd:string",
+          "message": "should contain a description",
+          "minCount": 1,
+          "path": "ex:description"
+        },
+        {
+          "message": "should contain one list of things",
+          "minCount": 1,
+          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreItemsShape",
+          "path": "ex:things"
+        }
+      ],
+      "targetClass": "ex:Whatever"
+    },
+    {
+      "@id": "ex:WorldMatrixShape",
+      "@type": "sh:NodeShape",
+      "node": "https://neuroshapes.org/commons/list/shapes/ListOfDoublesShape",
+      "property": {
+        "maxCount": 16,
+        "message": "world matrix is a list of 16 doubles",
+        "minCount": 16,
+        "path": {
+          "oneOrMorePath": "rdf:rest"
+        }
       }
-    },
-    {
-      "@id": "ex:AGeoZoneWrongList",
-      "@type": "ex:GeoZone",
-      "description": "NotaList",
-      "ex:zipCodes": 1234
-    },
-    {
-      "@id": "ex:ChocolateCakeRecipeNoDesc",
-      "@type": "ex:Recipe",
-      "ex:ingredients": {
-        "@list": [
-          "egs",
-          "flour",
-          "milk",
-          "dark chocolate",
-          "butter"
-        ]
-      }
-    },
-    {
-      "@id": "ex:ChocolateCakeRecipeNoIngridents",
-      "@type": "ex:Recipe",
-      "description": "ChocolateCakeRecipeNoIngridents",
-      "ex:ingredients": {
-        "@list": []
-      }
-    },
-    {
-      "@id": "ex:ChocolateCakeRecipeWrongIngridents",
-      "@type": "ex:Recipe",
-      "description": "ChocolateCakeRecipeWrongIngridents",
-      "ex:ingredients": {
-        "@list": [
-          1,
-          2,
-          3,
-          4
-        ]
-      }
-    },
-    {
-      "@id": "ex:ListOfSixteenIntegers",
-      "@type": "ex:SyntheticModel",
-      "description": "A 3D model of a cell",
-      "ex:worldMatrix": {
-        "@list": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          14,
-          15,
-          16
-        ]
-      }
-    },
-    {
-      "@id": "ex:ListOfThreeDoubles",
-      "@type": "ex:SyntheticModel",
-      "description": "A 3D model of a cell",
-      "ex:worldMatrix": {
-        "@list": [
-          1,
-          2,
-          3
-        ]
-      }
-    },
-    {
-      "@id": "ex:NotaList",
-      "@type": "ex:SyntheticModel",
-      "description": "NotaList",
-      "ex:worldMatrix": "some text"
     }
   ]
 }

@@ -22,16 +22,16 @@
       "@id": "http://example.org/worldMatrix",
       "@type": "@id"
     },
-    "ex": "http://example.org/",
+    "this": "https://neuroshapes.org/commons/list/examples/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "ex:AGeoZoneWithDoubles",
-      "@type": "ex:GeoZone",
+      "@id": "this:AGeoZoneWithDoubles",
+      "@type": "this:GeoZone",
       "description": "A 3D model of a cell",
-      "ex:zipCodes": {
+      "this:zipCodes": {
         "@list": [
           1,
           2,
@@ -40,15 +40,15 @@
       }
     },
     {
-      "@id": "ex:AGeoZoneWrongList",
-      "@type": "ex:GeoZone",
+      "@id": "this:AGeoZoneWrongList",
+      "@type": "this:GeoZone",
       "description": "NotaList",
-      "ex:zipCodes": 1234
+      "this:zipCodes": 1234
     },
     {
-      "@id": "ex:ChocolateCakeRecipeNoDesc",
-      "@type": "ex:Recipe",
-      "ex:ingredients": {
+      "@id": "this:ChocolateCakeRecipeNoDesc",
+      "@type": "this:Recipe",
+      "this:ingredients": {
         "@list": [
           "egs",
           "flour",
@@ -59,18 +59,18 @@
       }
     },
     {
-      "@id": "ex:ChocolateCakeRecipeNoIngridents",
-      "@type": "ex:Recipe",
+      "@id": "this:ChocolateCakeRecipeNoIngridents",
+      "@type": "this:Recipe",
       "description": "ChocolateCakeRecipeNoIngridents",
-      "ex:ingredients": {
+      "this:ingredients": {
         "@list": []
       }
     },
     {
-      "@id": "ex:ChocolateCakeRecipeWrongIngridents",
-      "@type": "ex:Recipe",
+      "@id": "this:ChocolateCakeRecipeWrongIngridents",
+      "@type": "this:Recipe",
       "description": "ChocolateCakeRecipeWrongIngridents",
-      "ex:ingredients": {
+      "this:ingredients": {
         "@list": [
           1,
           2,
@@ -80,10 +80,10 @@
       }
     },
     {
-      "@id": "ex:ListOfSixteenIntegers",
-      "@type": "ex:SyntheticModel",
+      "@id": "this:ListOfSixteenIntegers",
+      "@type": "this:SyntheticModel",
       "description": "A 3D model of a cell",
-      "ex:worldMatrix": {
+      "this:worldMatrix": {
         "@list": [
           1,
           2,
@@ -104,10 +104,10 @@
       }
     },
     {
-      "@id": "ex:ListOfThreeDoubles",
-      "@type": "ex:SyntheticModel",
+      "@id": "this:ListOfThreeDoubles",
+      "@type": "this:SyntheticModel",
       "description": "A 3D model of a cell",
-      "ex:worldMatrix": {
+      "this:worldMatrix": {
         "@list": [
           1,
           2,
@@ -116,10 +116,10 @@
       }
     },
     {
-      "@id": "ex:NotaList",
-      "@type": "ex:SyntheticModel",
+      "@id": "this:NotaList",
+      "@type": "this:SyntheticModel",
       "description": "NotaList",
-      "ex:worldMatrix": "some text"
+      "this:worldMatrix": "some text"
     }
   ]
 }
