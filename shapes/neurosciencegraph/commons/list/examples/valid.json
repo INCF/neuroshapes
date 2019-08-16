@@ -14,15 +14,15 @@
       "@id": "http://example.org/ingredients",
       "@type": "@id"
     },
-    "ex": "http://example.org/",
+    "this": "https://neuroshapes.org/commons/list/examples/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
-      "@id": "ex:AGeoZoneWithIntegers",
-      "@type": "ex:GeoZone",
+      "@id": "this:AGeoZoneWithIntegers",
+      "@type": "this:GeoZone",
       "description": "A 3D model of a cell",
-      "ex:zipCodes": {
+      "this:zipCodes": {
         "@list": [
           1110,
           3345,
@@ -31,10 +31,10 @@
       }
     },
     {
-      "@id": "ex:ChocolateCakeRecipe",
-      "@type": "ex:Recepe",
+      "@id": "this:ChocolateCakeRecipe",
+      "@type": "this:Recepe",
       "description": "My favorite chocolate cake",
-      "ex:ingredients": {
+      "this:ingredients": {
         "@list": [
           "egs",
           "flour",
@@ -45,10 +45,10 @@
       }
     },
     {
-      "@id": "ex:ListOfSixteenDoubles",
-      "@type": "ex:SyntheticModel",
+      "@id": "this:ListOfSixteenDoubles",
+      "@type": "this:SyntheticModel",
       "description": "A 3D model of a cell",
-      "ex:worldMatrix": {
+      "this:worldMatrix": {
         "@list": [
           1.01,
           2.01,

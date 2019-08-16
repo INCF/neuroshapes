@@ -2,7 +2,7 @@
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
-      "ex": "http://example.org/"
+      "this": "https://neuroshapes.org/commons/list/examples/"
     }
   ],
   "imports": [
@@ -11,7 +11,7 @@
   "@id": "https://neuroshapes.org/commons/list/examples",
   "shapes": [
     {
-      "@id": "ex:GeoZoneShape",
+      "@id": "this:GeoZoneShape",
       "@type": "sh:NodeShape",
       "label": "Geograpical zone based on zip codes",
       "property": [
@@ -19,19 +19,19 @@
           "message": "should contain one list of zip codes as integers",
           "minCount": 1,
           "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreIntegersShape",
-          "path": "ex:zipCodes"
+          "path": "this:zipCodes"
         },
         {
           "datatype": "xsd:string",
           "message": "should contain a description",
           "minCount": 1,
-          "path": "ex:description"
+          "path": "this:description"
         }
       ],
-      "targetClass": "ex:GeoZone"
+      "targetClass": "this:GeoZone"
     },
     {
-      "@id": "ex:RecipeShape",
+      "@id": "this:RecipeShape",
       "@type": "sh:NodeShape",
       "label": "List of ingredients",
       "property": [
@@ -39,38 +39,38 @@
           "message": "the list of ingredients must be string",
           "minCount": 1,
           "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreStringsShape",
-          "path": "ex:ingredients"
+          "path": "this:ingredients"
         },
         {
           "datatype": "xsd:string",
           "message": "should contain a description",
           "minCount": 1,
-          "path": "ex:description"
+          "path": "this:description"
         }
       ],
-      "targetClass": "ex:Recipe"
+      "targetClass": "this:Recipe"
     },
     {
-      "@id": "ex:SyntheticModelShape",
+      "@id": "this:SyntheticModelShape",
       "@type": "sh:NodeShape",
       "property": [
         {
           "message": "One list for worldMatrix should be present",
           "minCount": 1,
-          "node": "ex:WorldMatrixShape",
-          "path": "ex:worldMatrix"
+          "node": "this:WorldMatrixShape",
+          "path": "this:worldMatrix"
         },
         {
           "datatype": "xsd:string",
           "message": "should contain a description",
           "minCount": 1,
-          "path": "ex:description"
+          "path": "this:description"
         }
       ],
-      "targetClass": "ex:SyntheticModel"
+      "targetClass": "this:SyntheticModel"
     },
     {
-      "@id": "ex:WhateverShape",
+      "@id": "this:WhateverShape",
       "@type": "sh:NodeShape",
       "label": "Whatever",
       "property": [
@@ -78,19 +78,19 @@
           "datatype": "xsd:string",
           "message": "should contain a description",
           "minCount": 1,
-          "path": "ex:description"
+          "path": "this:description"
         },
         {
           "message": "should contain one list of things",
           "minCount": 1,
           "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreItemsShape",
-          "path": "ex:things"
+          "path": "this:things"
         }
       ],
-      "targetClass": "ex:Whatever"
+      "targetClass": "this:Whatever"
     },
     {
-      "@id": "ex:WorldMatrixShape",
+      "@id": "this:WorldMatrixShape",
       "@type": "sh:NodeShape",
       "node": "https://neuroshapes.org/commons/list/shapes/ListOfDoublesShape",
       "property": {
