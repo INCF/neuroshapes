@@ -241,6 +241,9 @@
       "first": {
         "@id": "rdf:first",
         "@type": "@id"
+      },
+      "nil": {
+        "@id": "rdf:nil"
       }
     }
   ]
