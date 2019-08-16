@@ -46,6 +46,9 @@
         "@id": "sh:minCount",
         "@type": "xsd:integer"
       },
+      "message": {
+        "@id": "sh:message"
+      },
       "minInclusive": {
         "@id": "sh:minInclusive"
       },
@@ -199,7 +202,7 @@
         "@id": "sh:hasValue"
       },
       "resultMessage": {
-        "@id": "sh:message"
+        "@id": "sh:resultMessage"
       },
       "deactivated": {
         "@id": "sh:deactivated"
@@ -221,6 +224,22 @@
       },
       "seeAlso": {
         "@id": "rdfs:seeAlso",
+        "@type": "@id"
+      },
+      "zeroOrMorePath": {
+        "@id": "sh:zeroOrMorePath",
+        "@type": "@id"
+      },
+      "oneOrMorePath": {
+        "@id": "sh:oneOrMorePath",
+        "@type": "@id"
+      },
+       "rest": {
+        "@id": "rdf:rest",
+        "@type": "@id"
+      },
+      "first": {
+        "@id": "rdf:first",
         "@type": "@id"
       }
     }
