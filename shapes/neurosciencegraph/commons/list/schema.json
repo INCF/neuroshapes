@@ -12,17 +12,23 @@
       "@id": "this:DoubleNode",
       "not": [
         {
-          "hasValue": "rdf:nil"
+          "hasValue": {
+            "@list": []
+          }
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": "rdf:rest"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
         },
         {
-          "path": "rdf:first",
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+          },
           "message": "Data should be of type double",
           "datatype": "xsd:double",
           "maxCount": 1,
@@ -46,10 +52,14 @@
       "label": "List of doubles",
       "property": [
         {
-          "hasValue": "rdf:nil",
+          "hasValue": {
+            "@list": []
+          },
           "node": "this:ListOfDoublesNodeShape",
           "path": {
-            "zeroOrMorePath": "rdf:rest"
+            "zeroOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -60,7 +70,12 @@
       "node": "this:ListOfDoublesShape",
       "property": [
         {
-          "minCount": 1
+          "minCount": 1,
+          "path": {
+            "zeroOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
+          }
         }
       ]
     },
@@ -68,21 +83,27 @@
       "@id": "this:IntegerNode",
       "not": [
         {
-          "hasValue": "rdf:nil"
+          "hasValue": {
+            "@list": []
+          }
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": "rdf:rest"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
         },
         {
           "datatype": "xsd:integer",
           "maxCount": 1,
           "message": "Data should be integer type",
           "minCount": 1,
-          "path": "rdf:first"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+          }
         }
       ]
     },
@@ -102,10 +123,14 @@
       "label": "List of integers",
       "property": [
         {
-          "hasValue": "rdf:nil",
+          "hasValue": {
+            "@list": []
+          },
           "node": "this:ListOfIntegersNodeShape",
           "path": {
-            "oneOrMorePath": "rdf:rest"
+            "oneOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -118,7 +143,9 @@
         {
           "minCount": 1,
           "path": {
-            "oneOrMorePath": "rdf:rest"
+            "oneOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -131,7 +158,9 @@
         {
           "minCount": 1,
           "path": {
-            "oneOrMorePath": "rdf:rest"
+            "oneOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -144,7 +173,9 @@
         {
           "minCount": 1,
           "path": {
-            "oneOrMorePath": "rdf:rest"
+            "oneOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -165,10 +196,14 @@
       "label": "List of strings",
       "property": [
         {
-          "hasValue": "rdf:nil",
+          "hasValue": {
+            "@list": []
+          },
           "node": "this:ListOfStringsNodeShape",
           "path": {
-            "oneOrMorePath": "rdf:rest"
+            "oneOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           }
         }
       ]
@@ -176,15 +211,21 @@
     {
       "@id": "this:EmptyNode",
       "@type": "NodeShape",
-      "hasValue": "rdf:nil",
+      "hasValue": {
+        "@list": []
+      },
       "property": [
         {
           "maxCount": 0,
-          "path": "rdf:rest"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
         },
         {
           "maxCount": 0,
-          "path": "rdf:first"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+          }
         }
       ]
     },
@@ -193,19 +234,25 @@
       "@type": "NodeShape",
       "not": [
         {
-          "hasValue": "rdf:nil"
+          "hasValue": {
+            "@list": []
+          }
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": "rdf:rest"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
         },
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": "rdf:first"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+          }
         }
       ]
     },
@@ -228,12 +275,16 @@
       "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
       "property": [
         {
-          "description": "Each list member (including this node) must be have the shape this:ListNodeShape.",
+          "description": "Each list member (including this node) must be have the shape shsh:ListNodeShape.",
           "path": {
-            "zeroOrMorePath": "rdf:rest"
+            "zeroOrMorePath": {
+              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            }
           },
           "node": "shsh:ListNodeShape",
-          "hasValue": "rdf:nil"
+          "hasValue": {
+            "@list": []
+          }
         }
       ]
     },
@@ -241,21 +292,27 @@
       "@id": "this:StringNode",
       "not": [
         {
-          "hasValue": "rdf:nil"
+          "hasValue": {
+            "@list": []
+          }
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": "rdf:rest"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
         },
         {
           "datatype": "xsd:string",
           "maxCount": 1,
           "message": "Data should be string type",
           "minCount": 1,
-          "path": "rdf:first"
+          "path": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+          }
         }
       ]
     }
