@@ -1,40 +1,20 @@
 {
-  "@id": "https://neuroshapes.org/commons/list",
-  "@type": "nxv:Schema",
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
       "this": "https://neuroshapes.org/commons/list/shapes/"
     }
   ],
+  "@id": "nsg:commons/list",
+  "@type": "nxv:Schema",
   "shapes": [
     {
-      "@id": "this:DataNode",
-      "not": {
-        "hasValue": {
-          "@list": []
-        }
-      },
-      "property": [
-        {
-          "maxCount": 1,
-          "minCount": 1,
-          "path": "rdf:rest"
-        },
-        {
-          "maxCount": 1,
-          "minCount": 1,
-          "path": "rdf:first"
-        }
-      ]
-    },
-    {
       "@id": "this:DoubleNode",
-      "not": {
-        "hasValue": {
-          "@list": []
+      "not": [
+        {
+          "hasValue": "rdf:nil"
         }
-      },
+      ],
       "property": [
         {
           "maxCount": 1,
@@ -42,37 +22,55 @@
           "path": "rdf:rest"
         },
         {
+          "path": "rdf:first",
+          "message": "Data should be of type double",
           "datatype": "xsd:double",
           "maxCount": 1,
-          "message": "Data should be double type",
-          "minCount": 1,
-          "path": "rdf:first"
+          "minCount": 1
         }
       ]
     },
     {
-      "@id": "this:EmptyNode",
-      "hasValue": {
-        "@list": []
-      },
+      "@id": "this:ListOfDoublesNodeShape",
+      "@type": "NodeShape",
+      "label": "List of doubles node shape",
+      "message": "List should contain only doubles",
+      "or": [
+        "this:DoubleNode",
+        "this:EmptyNode"
+      ]
+    },
+    {
+      "@id": "this:ListOfDoublesShape",
+      "@type": "NodeShape",
+      "label": "List of doubles",
       "property": [
         {
-          "maxCount": 0,
-          "path": "rdf:rest"
-        },
+          "hasValue": "rdf:nil",
+          "node": "this:ListOfDoublesNodeShape",
+          "path": {
+            "zeroOrMorePath": "rdf:rest"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfOneOrMoreDoublesShape",
+      "@type": "NodeShape",
+      "node": "this:ListOfDoublesShape",
+      "property": [
         {
-          "maxCount": 0,
-          "path": "rdf:first"
+          "minCount": 1
         }
       ]
     },
     {
       "@id": "this:IntegerNode",
-      "not": {
-        "hasValue": {
-          "@list": []
+      "not": [
+        {
+          "hasValue": "rdf:nil"
         }
-      },
+      ],
       "property": [
         {
           "maxCount": 1,
@@ -89,185 +87,163 @@
       ]
     },
     {
-      "@id": "this:ListNodeShape",
-      "@type": "sh:NodeShape",
-      "comment": {
-        "@language": "en",
-        "@value": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion."
-      },
-      "label": {
-        "@language": "en",
-        "@value": "List node shape"
-      },
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:DataNode"
-        ]
-      }
-    },
-    {
-      "@id": "this:ListOfDoublesNodeShape",
-      "@type": "sh:NodeShape",
-      "label": "List of doubles node shape",
-      "message": "List should contain only doubles",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:DoubleNode"
-        ]
-      }
-    },
-    {
-      "@id": "this:ListOfDoublesShape",
-      "@type": "sh:NodeShape",
-      "label": {
-        "@language": "en",
-        "@value": "List of doubles"
-      },
-      "property": {
-        "hasValue": {
-          "@list": []
-        },
-        "node": "this:ListOfDoublesNodeShape",
-        "path": {
-          "zeroOrMorePath": "rdf:rest"
-        }
-      }
-    },
-    {
       "@id": "this:ListOfIntegersNodeShape",
-      "@type": "sh:NodeShape",
+      "@type": "NodeShape",
       "label": "List of integers node shape",
       "message": "List should contain only integers",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:IntegerNode"
-        ]
-      }
+      "or": [
+        "this:IntegerNode",
+        "this:EmptyNode"
+      ]
     },
     {
       "@id": "this:ListOfIntegersShape",
-      "@type": "sh:NodeShape",
-      "label": {
-        "@language": "en",
-        "@value": "List of integers"
-      },
-      "property": {
-        "hasValue": {
-          "@list": []
-        },
-        "node": "this:ListOfIntegersNodeShape",
-        "path": {
-          "oneOrMorePath": "rdf:rest"
+      "@type": "NodeShape",
+      "label": "List of integers",
+      "property": [
+        {
+          "hasValue": "rdf:nil",
+          "node": "this:ListOfIntegersNodeShape",
+          "path": {
+            "oneOrMorePath": "rdf:rest"
+          }
         }
-      }
-    },
-    {
-      "@id": "this:ListOfOneOrMoreDoublesShape",
-      "@type": "sh:NodeShape",
-      "node": "this:ListOfDoublesShape",
-      "property": {
-        "minCount": 1,
-        "path": "_:b41"
-      }
+      ]
     },
     {
       "@id": "this:ListOfOneOrMoreIntegersShape",
-      "@type": "sh:NodeShape",
+      "@type": "NodeShape",
       "node": "this:ListOfIntegersShape",
-      "property": {
-        "minCount": 1,
-        "path": {
-          "oneOrMorePath": "rdf:rest"
+      "property": [
+        {
+          "minCount": 1,
+          "path": {
+            "oneOrMorePath": "rdf:rest"
+          }
         }
-      }
+      ]
     },
     {
       "@id": "this:ListOfOneOrMoreItemsShape",
-      "@type": "sh:NodeShape",
+      "@type": "NodeShape",
       "node": "this:ListShape",
-      "property": {
-        "minCount": 1,
-        "path": {
-          "oneOrMorePath": "rdf:rest"
+      "property": [
+        {
+          "minCount": 1,
+          "path": {
+            "oneOrMorePath": "rdf:rest"
+          }
         }
-      }
+      ]
     },
     {
       "@id": "this:ListOfOneOrMoreStringsShape",
-      "@type": "sh:NodeShape",
+      "@type": "NodeShape",
       "node": "this:ListOfStringsShape",
-      "property": {
-        "minCount": 1,
-        "path": {
-          "oneOrMorePath": "rdf:rest"
+      "property": [
+        {
+          "minCount": 1,
+          "path": {
+            "oneOrMorePath": "rdf:rest"
+          }
         }
-      }
+      ]
     },
     {
       "@id": "this:ListOfStringsNodeShape",
-      "@type": "sh:NodeShape",
+      "@type": "NodeShape",
       "label": "List of string node shape",
       "message": "List should contain only strings",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:StringNode"
-        ]
-      }
+      "or": [
+        "this:EmptyNode",
+        "this:StringNode"
+      ]
     },
     {
       "@id": "this:ListOfStringsShape",
-      "@type": "sh:NodeShape",
-      "label": {
-        "@language": "en",
-        "@value": "List of strings"
-      },
-      "property": {
-        "hasValue": {
-          "@list": []
-        },
-        "node": "this:ListOfStringsNodeShape",
-        "path": {
-          "oneOrMorePath": "rdf:rest"
+      "@type": "NodeShape",
+      "label": "List of strings",
+      "property": [
+        {
+          "hasValue": "rdf:nil",
+          "node": "this:ListOfStringsNodeShape",
+          "path": {
+            "oneOrMorePath": "rdf:rest"
+          }
         }
-      }
+      ]
     },
     {
-      "@id": "this:ListShape",
-      "@type": "sh:NodeShape",
-      "comment": {
-        "@language": "en",
-        "@value": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL."
-      },
-      "label": {
-        "@language": "en",
-        "@value": "List shape"
-      },
-      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
-      "property": {
-        "comment": {
-          "@language": "en",
-          "@value": "Each list member (including this node) must be have the shape this:ListNodeShape."
+      "@id": "this:EmptyNode",
+      "@type": "NodeShape",
+      "hasValue": "rdf:nil",
+      "property": [
+        {
+          "maxCount": 0,
+          "path": "rdf:rest"
         },
-        "hasValue": {
-          "@list": []
-        },
-        "node": "this:ListNodeShape",
-        "path": {
-          "zeroOrMorePath": "rdf:rest"
+        {
+          "maxCount": 0,
+          "path": "rdf:first"
         }
-      }
+      ]
+    },
+    {
+      "@id": "this:DataNode",
+      "@type": "NodeShape",
+      "not": [
+        {
+          "hasValue": "rdf:nil"
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "shsh:ListNodeShape",
+      "@type": "NodeShape",
+      "description": "Taken from <http://www.w3.org/ns/shacl-shacl#>. Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
+      "label": "List node shape",
+      "seeAlso": "http://www.w3.org/ns/shacl-shacl#",
+      "or": [
+        "this:EmptyNode",
+        "this:DataNode"
+      ]
+    },
+    {
+      "@id": "shsh:ListShape",
+      "@type": "NodeShape",
+      "description": "Taken from <http://www.w3.org/ns/shacl-shacl#>. A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
+      "label": "List shape",
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "property": [
+        {
+          "description": "Each list member (including this node) must be have the shape this:ListNodeShape.",
+          "path": {
+            "zeroOrMorePath": "rdf:rest"
+          },
+          "node": "shsh:ListNodeShape",
+          "hasValue": "rdf:nil"
+        }
+      ]
     },
     {
       "@id": "this:StringNode",
-      "not": {
-        "hasValue": {
-          "@list": []
+      "not": [
+        {
+          "hasValue": "rdf:nil"
         }
-      },
+      ],
       "property": [
         {
           "maxCount": 1,
