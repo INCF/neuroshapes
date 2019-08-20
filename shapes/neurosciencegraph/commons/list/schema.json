@@ -12,9 +12,7 @@
       "@id": "this:DoubleNode",
       "not": [
         {
-          "hasValue": {
-            "@list": []
-          }
+          "hasValue": []
         }
       ],
       "property": [
@@ -52,9 +50,7 @@
       "label": "List of doubles",
       "property": [
         {
-          "hasValue": {
-            "@list": []
-          },
+          "hasValue": [],
           "node": "this:ListOfDoublesNodeShape",
           "path": {
             "zeroOrMorePath": {
@@ -83,9 +79,7 @@
       "@id": "this:IntegerNode",
       "not": [
         {
-          "hasValue": {
-            "@list": []
-          }
+          "hasValue": []
         }
       ],
       "property": [
@@ -123,9 +117,7 @@
       "label": "List of integers",
       "property": [
         {
-          "hasValue": {
-            "@list": []
-          },
+          "hasValue": [],
           "node": "this:ListOfIntegersNodeShape",
           "path": {
             "oneOrMorePath": {
@@ -196,9 +188,7 @@
       "label": "List of strings",
       "property": [
         {
-          "hasValue": {
-            "@list": []
-          },
+          "hasValue": [],
           "node": "this:ListOfStringsNodeShape",
           "path": {
             "oneOrMorePath": {
@@ -234,9 +224,7 @@
       "@type": "NodeShape",
       "not": [
         {
-          "hasValue": {
-            "@list": []
-          }
+          "hasValue": []
         }
       ],
       "property": [
@@ -282,9 +270,7 @@
             }
           },
           "node": "shsh:ListNodeShape",
-          "hasValue": {
-            "@list": []
-          }
+          "hasValue": []
         }
       ]
     },
@@ -292,9 +278,7 @@
       "@id": "this:StringNode",
       "not": [
         {
-          "hasValue": {
-            "@list": []
-          }
+          "hasValue": []
         }
       ],
       "property": [
