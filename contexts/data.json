@@ -508,6 +508,9 @@
       "atlasVersion": {
         "@id": "nsg:atlasVersion"
       },
+      "atlas_id": {
+        "@id": "mba:atlas_id"
+      },
       "author": {
         "@id": "schema:author",
         "@type": "@id"
@@ -559,6 +562,9 @@
       },
       "citation": {
         "@id": "schema:citation"
+      },
+      "color_hex_triplet": {
+        "@id": "mba:color_hex_triplet"
       },
       "column": {
         "@id": "nsg:column"
@@ -745,6 +751,9 @@
       "givenName": {
         "@id": "schema:givenName"
       },
+      "graph_order": {
+        "@id": "mba:graph_order"
+      },
       "hadActivity": {
         "@id": "prov:hadActivity"
       },
@@ -798,6 +807,9 @@
       },
       "hemisphere": {
         "@id": "nsg:hemisphere"
+      },
+      "hemisphere_id": {
+        "@id": "mba:hemisphere_id"
       },
       "hypampThreshold": {
         "@id": "nsg:hypampThreshold"
@@ -931,6 +943,9 @@
       },
       "normalizedScore": {
         "@id": "nsg:normalizedScore"
+      },
+      "notation": {
+        "@id": "skos:notation"
       },
       "note": {
         "@id": "skos:note"
@@ -1133,6 +1148,9 @@
       "species": {
         "@id": "nsg:species"
       },
+      "st_level": {
+        "@id": "mba:st_level"
+      },
       "stackAnatomicalDirection": {
         "@id": "nsg:stackAnatomicalDirection"
       },
@@ -1171,6 +1189,10 @@
       },
       "subCellularModel": {
         "@id": "nsg:subCellularModel"
+      },
+      "subClassOf": {
+        "@id": "rdfs:subClassOf",
+        "@type": "@id"
       },
       "subject": {
         "@id": "nsg:subject"
