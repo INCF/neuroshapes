@@ -2,6 +2,10 @@
   "@context": 
     {
       "@vocab": "https://neuroshapes.org/",
+      "isDefinedBy":{
+        "@id":"rdfs:isDefinedBy",
+        "@type":"@id"
+      },
       "AcquisitionAnnotation": {
         "@id": "nsg:AcquisitionAnnotation"
       },
