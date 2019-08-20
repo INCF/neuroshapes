@@ -1,5 +1,6 @@
 {
-  "@context": {
+  "@context": 
+    {
       "@vocab": "https://neuroshapes.org/",
       "AcquisitionAnnotation": {
         "@id": "nsg:AcquisitionAnnotation"
@@ -785,7 +786,8 @@
         "@id": "nsg:hasBody"
       },
       "hasPart": {
-        "@id": "schema:hasPart"
+        "@id": "schema:hasPart",
+        "@type": "@id"
       },
       "hasSelector": {
         "@id": "nsg:hasSelector"
@@ -854,7 +856,8 @@
         "@id": "nsg:ionChannelGene"
       },
       "isPartOf": {
-        "@id": "schema:isPartOf"
+        "@id": "schema:isPartOf",
+        "@type": "@id"
       },
       "isRegisteredIn": {
         "@id": "nsg:isRegisteredIn"
