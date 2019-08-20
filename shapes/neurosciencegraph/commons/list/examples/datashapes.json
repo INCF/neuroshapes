@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "exsh": "https://neuroshapes.org/examples/shapes/"
+    }
+  ],
+  "imports": [
+    "https://neuroshapes.org/commons/list/"
+  ],
+  "@id": "nsg:commons/list/examples",
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "exsh:RecipeShape",
+      "@type": "sh:NodeShape",
+      "label": "A Recipe shape",
+      "targetClass": "schema:Recipe",
+      "property": [
+        {
+          "path": "schema:ingredients",
+          "name": "ingredients",
+          "message": "should contain a list of ingredients",
+          "minCount": 1,
+          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreStringsShape"
+        },
+        {
+          "path": "schema:description",
+          "name": "description",
+          "message": "should contain a description",
+          "datatype": "xsd:string",
+          "minCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "exsh:HexagonShape",
+      "@type": "sh:NodeShape",
+      "label": "Hexagon Shape",
+      "comment": "Pick the right type of node and define the list lenght inside property",
+      "node": "https://neuroshapes.org/commons/list/shapes/ListOfDoublesShape",
+      "property": {
+        "path": {
+          "oneOrMorePath": {
+            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          }
+        },
+        "message": "A list of 12 doubles numbers",
+        "maxCount": 12,
+        "minCount": 12
+      }
+    },
+    {
+      "@id": "exsh:GeoShapeShape",
+      "@type": "sh:NodeShape",
+      "label": "GeoShape shape",
+      "targetClass": "schema:GeoShape",
+      "property": [
+        {
+          "path": "schema:polygon",
+          "name" : "polygon",
+          "message": "List of 6 points to form an hexagon (2x6 numbers)",
+          "node": "exsh:HexagonShape",
+          "minCount": 1
+        },
+        {
+          "path": "schema:description",
+          "name": "description",
+          "datatype": "xsd:string",
+          "message": "should contain a description",
+          "minCount": 1
+        }
+      ]
+    }
+  ]
+}
