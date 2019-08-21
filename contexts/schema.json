@@ -176,8 +176,7 @@
       },
       "or": {
         "@id": "sh:or",
-        "@type": "@id",
-        "@container": "@list"
+        "@type": "@id"
       },
       "and": {
         "@id": "sh:and",
