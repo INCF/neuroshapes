@@ -176,7 +176,8 @@
       },
       "or": {
         "@id": "sh:or",
-        "@type": "@id"
+        "@type": "@id",
+        "@container": "@list"
       },
       "and": {
         "@id": "sh:and",
@@ -190,8 +191,7 @@
       },
       "not": {
         "@id": "sh:not",
-        "@type": "@id",
-        "@container": "@list"
+        "@type": "@id"
       },
       "lessThan": {
         "@id": "sh:lessThan",
