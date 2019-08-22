@@ -8,6 +8,7 @@
       }
     }
   ],
+  "@id" : "Hexagon1",
   "@type": "schema:GeoShape",
   "description": "An hexagon shape",
   "polygon": [

@@ -8,6 +8,7 @@
       }
     }
   ],
+  "@id" : "octagon",
   "@type": "schema:GeoShape",
   "description": "An octagon shape",
   "polygon": [

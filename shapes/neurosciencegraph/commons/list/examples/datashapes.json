@@ -2,7 +2,8 @@
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
-      "exsh": "https://neuroshapes.org/examples/shapes/"
+      "exsh": "https://neuroshapes.org/examples/shapes/",
+      "this": "https://neuroshapes.org/commons/list/shapes/"
     }
   ],
   "imports": [
@@ -21,8 +22,8 @@
           "path": "schema:ingredients",
           "name": "ingredients",
           "message": "should contain a list of ingredients",
-          "minCount": 1,
-          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreStringsShape"
+          "node": "this:ListOfOneOrMoreStringsShape",
+          "minCount": 1
         },
         {
           "path": "schema:description",
@@ -38,11 +39,11 @@
       "@type": "sh:NodeShape",
       "label": "Hexagon Shape",
       "comment": "Pick the right type of node and define the list lenght inside property",
-      "node": "https://neuroshapes.org/commons/list/shapes/ListOfDoublesShape",
+      "node": "this:ListOfDoublesShape",
       "property": {
         "path": {
           "oneOrMorePath": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+            "@id": "rdf:rest"
           }
         },
         "message": "A list of 12 doubles numbers",
@@ -58,7 +59,7 @@
       "property": [
         {
           "path": "schema:polygon",
-          "name" : "polygon",
+          "name": "polygon",
           "message": "List of 6 points to form an hexagon (2x6 numbers)",
           "node": "exsh:HexagonShape",
           "minCount": 1
@@ -68,6 +69,85 @@
           "name": "description",
           "datatype": "xsd:string",
           "message": "should contain a description",
+          "minCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "exsh:AreaCodeNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "path": "rdf:first",
+          "datatype": "xsd:integer",
+          "maxCount": 1,
+          "message": "Data should be integer type between 200 and 999",
+          "minCount": 1,
+          "minInclusive": 200,
+          "maxInclusive": 999
+        }
+      ]
+    },
+    {
+      "@id": "exsh:ListOfAreaCodesNodeShape",
+      "@type": "sh:NodeShape",
+      "label": "Area Codes Node Shape",
+      "message": "List should contain only AreaCode Nodes",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "exsh:AreaCodeNode"
+        ]
+      }
+    },
+    {
+      "@id": "exsh:ListOfAreaCodesShape",
+      "@type": "sh:NodeShape",
+      "label": "Area Codes List Shape",
+      "property": {
+        "path": {
+          "oneOrMorePath": {
+            "@id": "rdf:rest"
+          }
+        },
+        "node": "exsh:ListOfAreaCodesNodeShape",
+        "hasValue": [
+          {
+            "@list": []
+          }
+        ]
+      }
+    },
+    {
+      "@id": "exsh:StateShape",
+      "@type": "sh:NodeShape",
+      "label": "State shape",
+      "targetClass": "schema:State",
+      "property": [
+        {
+          "path": "schema:code",
+          "name": "code",
+          "message": "List of area codes shoud contain AreaCodeShape",
+          "node": "exsh:ListOfAreaCodesShape"
+        },
+        {
+          "path": "schema:name",
+          "name": "name",
+          "datatype": "xsd:string",
+          "message": "state name",
           "minCount": 1
         }
       ]

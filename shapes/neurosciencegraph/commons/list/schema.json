@@ -9,69 +9,44 @@
   "@type": "nxv:Schema",
   "shapes": [
     {
-      "@id": "this:DoubleNode",
+      "@id": "this:EmptyNode",
+      "hasValue": [
+        {
+          "@list": []
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 0,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 0,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:DataNode",
       "not": [
         {
-          "hasValue": []
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-          }
+          "path": "rdf:rest"
         },
         {
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-          },
-          "message": "Data should be of type double",
-          "datatype": "xsd:double",
           "maxCount": 1,
-          "minCount": 1
-        }
-      ]
-    },
-    {
-      "@id": "this:ListOfDoublesNodeShape",
-      "@type": "NodeShape",
-      "label": "List of doubles node shape",
-      "message": "List should contain only doubles",
-      "or": [
-        "this:DoubleNode",
-        "this:EmptyNode"
-      ]
-    },
-    {
-      "@id": "this:ListOfDoublesShape",
-      "@type": "NodeShape",
-      "label": "List of doubles",
-      "property": [
-        {
-          "hasValue": [],
-          "node": "this:ListOfDoublesNodeShape",
-          "path": {
-            "zeroOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "@id": "this:ListOfOneOrMoreDoublesShape",
-      "@type": "NodeShape",
-      "node": "this:ListOfDoublesShape",
-      "property": [
-        {
           "minCount": 1,
-          "path": {
-            "zeroOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-            }
-          }
+          "path": "rdf:first"
         }
       ]
     },
@@ -79,66 +54,224 @@
       "@id": "this:IntegerNode",
       "not": [
         {
-          "hasValue": []
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
         }
       ],
       "property": [
         {
           "maxCount": 1,
           "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-          }
+          "path": "rdf:rest"
         },
         {
           "datatype": "xsd:integer",
           "maxCount": 1,
           "message": "Data should be integer type",
           "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-          }
+          "path": "rdf:first"
         }
       ]
     },
     {
+      "@id": "this:StringNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "datatype": "xsd:string",
+          "maxCount": 1,
+          "message": "Data should be string type",
+          "minCount": 1,
+          "path": "rdf:first"
+        },
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        }
+      ]
+    },
+    {
+      "@id": "this:DoubleNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:double",
+          "maxCount": 1,
+          "message": "Data should be double type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:ListNodeShape",
+      "@type": "NodeShape",
+      "rdfs:comment": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
+      "rdfs:label": "List node shape",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DataNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfStringsNodeShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of string node shape",
+      "message": "List should contain only strings",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:StringNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfDoublesNodeShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of doubles node shape",
+      "message": "List should contain only doubles",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DoubleNode"
+        ]
+      }
+    },
+    {
       "@id": "this:ListOfIntegersNodeShape",
       "@type": "NodeShape",
-      "label": "List of integers node shape",
+      "rdfs:label": "List of integers node shape",
       "message": "List should contain only integers",
-      "or": [
-        "this:IntegerNode",
-        "this:EmptyNode"
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:IntegerNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListShape",
+      "@type": "NodeShape",
+      "rdfs:comment": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
+      "rdfs:label": "List shape",
+      "rdfs:seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "rdfs:comment": "Each list member (including this node) must be have the shape this:ListNodeShape.",
+          "node": "this:ListNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
       ]
     },
     {
       "@id": "this:ListOfIntegersShape",
       "@type": "NodeShape",
-      "label": "List of integers",
+      "rdfs:label": "List of integers",
       "property": [
         {
-          "hasValue": [],
-          "node": "this:ListOfIntegersNodeShape",
-          "path": {
-            "oneOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          }
+          ],
+          "node": "this:ListOfIntegersNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
         }
       ]
     },
     {
-      "@id": "this:ListOfOneOrMoreIntegersShape",
+      "@id": "this:ListOfStringsShape",
       "@type": "NodeShape",
-      "node": "this:ListOfIntegersShape",
+      "rdfs:label": "List of strings",
       "property": [
         {
-          "minCount": 1,
-          "path": {
-            "oneOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          }
+          ],
+          "node": "this:ListOfStringsNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfDoublesShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of doubles",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "node": "this:ListOfDoublesNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
         }
       ]
     },
@@ -149,154 +282,73 @@
       "property": [
         {
           "minCount": 1,
-          "path": {
-            "oneOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          }
+          ]
         }
       ]
     },
     {
       "@id": "this:ListOfOneOrMoreStringsShape",
       "@type": "NodeShape",
+      "message": "at leass one string item shoud be present",
       "node": "this:ListOfStringsShape",
       "property": [
         {
-          "minCount": 1,
-          "path": {
-            "oneOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          }
+          ],
+          "minCount": 1
         }
       ]
     },
     {
-      "@id": "this:ListOfStringsNodeShape",
+      "@id": "this:ListOfOneOrMoreIntegersShape",
       "@type": "NodeShape",
-      "label": "List of string node shape",
-      "message": "List should contain only strings",
-      "or": [
-        "this:EmptyNode",
-        "this:StringNode"
-      ]
-    },
-    {
-      "@id": "this:ListOfStringsShape",
-      "@type": "NodeShape",
-      "label": "List of strings",
+      "node": "this:ListOfIntegersShape",
       "property": [
         {
-          "hasValue": [],
-          "node": "this:ListOfStringsNodeShape",
-          "path": {
-            "oneOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "minCount": 1,
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          }
+          ]
         }
       ]
     },
     {
-      "@id": "this:EmptyNode",
+      "@id": "this:ListOfOneOrMoreDoublesShape",
       "@type": "NodeShape",
-      "hasValue": {
-        "@list": []
-      },
+      "node": "this:ListOfDoublesShape",
       "property": [
         {
-          "maxCount": 0,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-          }
-        },
-        {
-          "maxCount": 0,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-          }
-        }
-      ]
-    },
-    {
-      "@id": "this:DataNode",
-      "@type": "NodeShape",
-      "not": [
-        {
-          "hasValue": []
-        }
-      ],
-      "property": [
-        {
-          "maxCount": 1,
           "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-          }
-        },
-        {
-          "maxCount": 1,
-          "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-          }
-        }
-      ]
-    },
-    {
-      "@id": "shsh:ListNodeShape",
-      "@type": "NodeShape",
-      "description": "Taken from <http://www.w3.org/ns/shacl-shacl#>. Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
-      "label": "List node shape",
-      "seeAlso": "http://www.w3.org/ns/shacl-shacl#",
-      "or": [
-        "this:EmptyNode",
-        "this:DataNode"
-      ]
-    },
-    {
-      "@id": "shsh:ListShape",
-      "@type": "NodeShape",
-      "description": "Taken from <http://www.w3.org/ns/shacl-shacl#>. A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
-      "label": "List shape",
-      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
-      "property": [
-        {
-          "description": "Each list member (including this node) must be have the shape shsh:ListNodeShape.",
-          "path": {
-            "zeroOrMorePath": {
-              "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
             }
-          },
-          "node": "shsh:ListNodeShape",
-          "hasValue": []
-        }
-      ]
-    },
-    {
-      "@id": "this:StringNode",
-      "not": [
-        {
-          "hasValue": []
-        }
-      ],
-      "property": [
-        {
-          "maxCount": 1,
-          "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest"
-          }
-        },
-        {
-          "datatype": "xsd:string",
-          "maxCount": 1,
-          "message": "Data should be string type",
-          "minCount": 1,
-          "path": {
-            "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
-          }
+          ]
         }
       ]
     }

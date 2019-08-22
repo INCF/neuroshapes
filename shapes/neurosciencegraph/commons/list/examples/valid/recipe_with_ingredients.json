@@ -8,7 +8,14 @@
       }
     }
   ],
-  "@id" : "RecipeNoIngridients",
+  "@id" : "ChcolateRecipe",
   "@type": "Recipe",
-  "description": "My favorite chocolate cake"
+  "description": "My favorite chocolate cake",
+  "ingredients": [
+    "egs",
+    "flour",
+    "milk",
+    "dark chocolate",
+    "butter"
+  ]
 }
