@@ -1,0 +1,21 @@
+{
+  "@context": [
+    "http://schema.org",
+    {
+      "ingredients": {
+        "@id": "http://schema.org/ingredients",
+        "@container": "@list"
+      }
+    }
+  ],
+  "@id": "RecipeWithNumbers",
+  "@type": "Recipe",
+  "description": "My favorite chocolate cake",
+  "ingredients": [
+    "flour",
+    2,
+    "milk",
+    4.3,
+    "butter"
+  ]
+}
