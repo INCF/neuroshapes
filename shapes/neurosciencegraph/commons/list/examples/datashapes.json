@@ -2,8 +2,7 @@
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
     {
-      "exsh": "https://neuroshapes.org/examples/shapes/",
-      "this": "https://neuroshapes.org/commons/list/shapes/"
+      "exsh": "https://neuroshapes.org/examples/shapes/"
     }
   ],
   "imports": [
@@ -22,7 +21,7 @@
           "path": "schema:ingredients",
           "name": "ingredients",
           "message": "should contain a list of ingredients",
-          "node": "this:ListOfOneOrMoreStringsShape",
+          "node": "https://neuroshapes.org/commons/list/shapes/ListOfOneOrMoreStringsShape",
           "minCount": 1
         },
         {
@@ -39,7 +38,7 @@
       "@type": "sh:NodeShape",
       "label": "Hexagon Shape",
       "comment": "Pick the right type of node and define the list lenght inside property",
-      "node": "this:ListOfDoublesShape",
+      "node": "https://neuroshapes.org/commons/list/shapes/ListOfDoublesShape",
       "property": {
         "path": {
           "oneOrMorePath": {
@@ -108,7 +107,7 @@
       "message": "List should contain only AreaCode Nodes",
       "or": {
         "@list": [
-          "this:EmptyNode",
+          "https://neuroshapes.org/commons/list/shapes/EmptyNode",
           "exsh:AreaCodeNode"
         ]
       }

@@ -129,10 +129,12 @@
       ]
     },
     {
-      "@id": "this:ListNodeShape",
+      "@id": "shsh:ListNodeShape",
       "@type": "NodeShape",
-      "rdfs:comment": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
-      "rdfs:label": "List node shape",
+      "comment": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
+      "label": "List node shape",
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListNodeShape",
       "or": {
         "@list": [
           "this:EmptyNode",
@@ -177,11 +179,12 @@
       }
     },
     {
-      "@id": "this:ListShape",
+      "@id": "shsh:ListShape",
       "@type": "NodeShape",
       "rdfs:comment": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
-      "rdfs:label": "List shape",
-      "rdfs:seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "label": "List shape",
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListShape",
       "property": [
         {
           "path": [
@@ -193,8 +196,8 @@
               ]
             }
           ],
-          "rdfs:comment": "Each list member (including this node) must be have the shape this:ListNodeShape.",
-          "node": "this:ListNodeShape",
+          "rdfs:comment": "Each list member (including this node) must be have the shape shsh:ListNodeShape.",
+          "node": "shsh:ListNodeShape",
           "hasValue": [
             {
               "@list": []
@@ -278,7 +281,7 @@
     {
       "@id": "this:ListOfOneOrMoreItemsShape",
       "@type": "NodeShape",
-      "node": "this:ListShape",
+      "node": "shsh:ListShape",
       "property": [
         {
           "minCount": 1,
