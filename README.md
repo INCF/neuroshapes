@@ -101,6 +101,23 @@ To test an specific shape add a parameter --scan_dir, for example:
 
     pytest tests/validating_schemas.py --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
 
+These tests are going to validate that schemas conforms with the SHACL specifications. And if you add examples you want the tests to validate you need to provide them inside a directory called `valid` or `invalid` as depicted next:
+
+```
+|-- shapes
+|   |-- neurosciencegraph
+|   |   |-- commons
+|   |   `-- datashapes
+|   |       `-- person
+|   |           |-- schema.json
+|   |           `-- valid
+|   |           |   `-- person_all_data.json
+|   |           `-- invalid
+|   |               `-- person_missing_name.json
+|   `-- prov     
+`-- ...
+
+```
 
 # Roadmap
 
