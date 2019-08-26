@@ -1,28 +1,39 @@
-language: scala
-scala:
-- 2.12.2
-stages:
-- name: test
-  if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
-    type = pull_request"
-- name: bintraypublish
-  if: "(tag =~ ^v)"
-jobs:
+matrix:
   include:
-  - stage: test
-    script:
-    - sbt clean compile
-    - sbt test
-  - stage: bintraypublish
-    before_install:
-    - openssl aes-256-cbc -K $encrypted_b14561f0d260_key -iv $encrypted_b14561f0d260_iv
-      -in .travis/secrets.tar.enc -out .travis/local.secrets.tar -d;
-    - tar xv -C .travis -f .travis/local.secrets.tar;
-    script:
-    - sbt releaseEarly
-env:
-  global:
-  - secure: Mw/BpJUUFHbB7MAJIZOWgVjjQkM89Nzt2YVWHU51ErTu2FZMXvrg7etg2+CRXpI442lMJn8N2VLyFSphtDNAQ48kC7ZC0Nl1OrmhCJVDW+jtKwH6oDEUMAvCvdoRElYIoqZgD4rrN0BEOr4C8kxA3BBM+bnn/NCowB0wt+syywnF1uZPaGUttenCAjo4Zk8qrAgkTNuyJZo7kXiwf0em/jTknWA2SUdbMEb+LOV8CxgF5ILvM98Owr2XDzCerFR9uGMjHUwMHpbWWXlTN/ud9clLuohpuxO3yQu7GIibh0mMmvTjRpGUa6TG3xraP5tQ387pu+pYFPuyOJCys4dLHU9xzBkNEgmzdHtrR9GM088P7Sw5VCsZpi+t6WK7JSXRPL7WYsGAXhI71bcgpWeGdiYxbU4WhLuuPdhadorY0mzaNTnFyT9RvTAPGG4S/lMzoJ/+eTuvy3Vh37pAd1SdY9bl4dcg5jZmg91IqhAZqW4lvW4G5HKlhkQCUf6QEtP1Q3BuGcOtTJ5kwZ728JQb/gDvh3zArd16/WDZ10eVpwnx5wWVlcXr9ctdg6kTpAqQVPBlXDwTSPapgvKWV5nF8UmNuh5ikXxrc4xASKsCPsXampwariJ1qZQYsgDfjfrYlIea8RzeWZc675RBDqn1Cn6Hsox3WMYRlbO4KF4N4o8=
-  - secure: PLbxXgQuhDrDsD7XiqpXc5UGAMKzXcwd6HIHU5CXzZmFV6BZ46m2nDwLWDZMXJsCP1UaGRWabhler1tqMwkL1/LrbMxe8xyxQzHCXShRVOexFPwaYB1u+GwXfkmiuG9+Ns7USjlQzB2xFiOg3JxG9sXOdezc01Q5LJDyczMQaW/lUtZ0WdW+pWXjT9xbzx/5+nyi8ox3ZOu0KhK9FBs3b4zhVde0bVGjnEcOEGCg9WJwM4RYXpRIiARXmLyI+ulXJpXR6BmV0NPCmZj1U+0zmXvrnQ6mEu5hLFy/AONtwDjX0MO84o6s3X5eo5RApJDakhVSORd48MlNLndnypGH5l9ykSH80m2Pp1nfpdH9LZFwHOESeoeK4Lr7zMOW5Eq5UxuSXucectIY74eptAfproxjlESwLDjZuEk2XuJz/hswp5WXjGnbe6Uh8nzdiN7+FowWMmJdbiXele5Nyg5Q0i8othMSS9WtPy10QSrto3VRTMgUu5pWMTJwsdP23555g2BmF32eGu8PbSIYVEkNRSSrWZ0R6eUn5wF13vjr50X5TU5CMgpBXMa2qGjrCc/zN7HiD3GnAV/ubKRKYtbGyLcyIfBHN1hARs+Yxw2UZHXpCRvdzQ5HXKeBBbqsFFuPgWgd+00pfZH1dsJGgNmRKBMcEuyLa+pEJS4kNe7MAGo=
-  - secure: qSjYaMvclez8l9lulfQ8A87FoGixDHFCVnvvkAWF2jPMk/PbIUWLbghe1CoHd/z1UVmoy1B7fzc8CHpc016S71Y5ZCspsAJkU43EbU/15QaFU/+G9rzmXPV3Z5pwRDDPB9rZHzsrtRAyKtEY120aFOWqmEHrTp64qIyR6nFcni9pJUXME5g9ePJpvJlOn3Qpco0jb8fVsRnIwrFBoRz5iI8MQfMc4jebn6rZgJvgfTIELsGoYr/kQMkRu4fXUKnemxGtwvkyys7oxV6ClQdMpp1PHFthrKZcPtxcff2U7Pj8eqK2rQlL4T9aWRVyWIn6idWFOE06i9SbVN+fJqAKNTPtXFiebbRgkFee8yknvlUWWrA4iSTNCSK2eBYD3qqNQ84xiakPao+LkHcfwLIS0kxahmjcEvwmNhoPWT6ajvzadziZYS8nKx1TWZjh1lGLT8E1vBO6627+vQB2Gr4b1w6EIzzgFIzNHtl71d48G7SXx3E3JfnNNw+eAnZL2YXFC3QAFIukl3ZRMAum/uawmg0wXX0s6G0Kl5zX5fNqbBIwMO/5ni4Ay+Z0vNPndLyX5szBbz4mJKG5Xf15Mouk9MVRNqfqNhrcg0kGK55jnEMT6DY9+ojTeNIEZiJv7+CbhvMb08gXXC5EUkE0aZ47rg+TBJqOTAunYcQy9ZAgwkA=
-  - secure: R7p7v5R14gHELsbxNG5mEHgP7/U2AFf8OAKbghjZaJ+xJDm9okdqbunUhimtrH4SJNOgWxrq0aVvKu6HHHZMsmKazqTqcRLoWiiKiM0MR7u4cCRoAyTOLVpN8qJ9zLJRrxXrkQxLADi+RXbYKQH44Z2Oyywx3HSRg+8Z5PC7bOCeEMbuh4Lb2eSCMra4dZgd/R+nZDhv3YJlNWKFVQQMu7goCxIDaZCM6138/9MP8yt0pvwxqqraGIYFHLDmzyEO8Ns6e8Rs4Rp510ThY6LTQTbE5rMZhlAzU8Qx3CSj/Yt8ieNZlSaTgfICdbX+1haGOI3RUaF0pip7GLdQy/Pz/gUmoq/uuRocXKY5pCYKGiHvseOWGfQ1e3REnfO5e6a2Tit8vuiaR+PGLS4p0Sz5TiYguJ7N/9i2hQiXt33wmvj329BWLWndzQb3kgrglDEVkzwd+WyIbzcLkgam7pv+aZs2dUSF9Lk222VRpB6vnzY3L/wKlMYjhG+fyZYoyDgYqYQUXucWPN/BSSGxSndHzO+/Hf+OsRQybB2TcWztC/WqsJiXW+QQ5a2wc8biY8Op5pmuN7Esh1upQDV7XZEjnVZXnsa7SRr0tDhT3UiYzeNCZtZ9DtQGBSbYmxq/3YP7iR5/LUOQOINWHP3UPOLKWq0WCQdhX4zFxKb3Y52b2Z0=
+    - language: python
+      python: 3.7
+      install:
+        - pip install pyshacl
+        - pip install pytest
+      before_script:
+        - mv virtualenv/bin/owlrl.py virtualenv/bin/owlrl
+      script:
+        - pytest tests/validating_schemas.py
+
+    - language: scala
+      scala: 2.12.2
+      stages:
+      - name: test
+        if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
+          type = pull_request"
+      - name: bintraypublish
+        if: "(tag =~ ^v)"
+      jobs:
+        include:
+        - stage: test
+          script:
+          - sbt clean compile
+          - sbt test
+        - stage: bintraypublish
+          before_install:
+          - openssl aes-256-cbc -K $encrypted_b14561f0d260_key -iv $encrypted_b14561f0d260_iv
+            -in .travis/secrets.tar.enc -out .travis/local.secrets.tar -d;
+          - tar xv -C .travis -f .travis/local.secrets.tar;
+          script:
+          - sbt releaseEarly
+      env:
+        global:
+        - secure: Mw/BpJUUFHbB7MAJIZOWgVjjQkM89Nzt2YVWHU51ErTu2FZMXvrg7etg2+CRXpI442lMJn8N2VLyFSphtDNAQ48kC7ZC0Nl1OrmhCJVDW+jtKwH6oDEUMAvCvdoRElYIoqZgD4rrN0BEOr4C8kxA3BBM+bnn/NCowB0wt+syywnF1uZPaGUttenCAjo4Zk8qrAgkTNuyJZo7kXiwf0em/jTknWA2SUdbMEb+LOV8CxgF5ILvM98Owr2XDzCerFR9uGMjHUwMHpbWWXlTN/ud9clLuohpuxO3yQu7GIibh0mMmvTjRpGUa6TG3xraP5tQ387pu+pYFPuyOJCys4dLHU9xzBkNEgmzdHtrR9GM088P7Sw5VCsZpi+t6WK7JSXRPL7WYsGAXhI71bcgpWeGdiYxbU4WhLuuPdhadorY0mzaNTnFyT9RvTAPGG4S/lMzoJ/+eTuvy3Vh37pAd1SdY9bl4dcg5jZmg91IqhAZqW4lvW4G5HKlhkQCUf6QEtP1Q3BuGcOtTJ5kwZ728JQb/gDvh3zArd16/WDZ10eVpwnx5wWVlcXr9ctdg6kTpAqQVPBlXDwTSPapgvKWV5nF8UmNuh5ikXxrc4xASKsCPsXampwariJ1qZQYsgDfjfrYlIea8RzeWZc675RBDqn1Cn6Hsox3WMYRlbO4KF4N4o8=
+        - secure: PLbxXgQuhDrDsD7XiqpXc5UGAMKzXcwd6HIHU5CXzZmFV6BZ46m2nDwLWDZMXJsCP1UaGRWabhler1tqMwkL1/LrbMxe8xyxQzHCXShRVOexFPwaYB1u+GwXfkmiuG9+Ns7USjlQzB2xFiOg3JxG9sXOdezc01Q5LJDyczMQaW/lUtZ0WdW+pWXjT9xbzx/5+nyi8ox3ZOu0KhK9FBs3b4zhVde0bVGjnEcOEGCg9WJwM4RYXpRIiARXmLyI+ulXJpXR6BmV0NPCmZj1U+0zmXvrnQ6mEu5hLFy/AONtwDjX0MO84o6s3X5eo5RApJDakhVSORd48MlNLndnypGH5l9ykSH80m2Pp1nfpdH9LZFwHOESeoeK4Lr7zMOW5Eq5UxuSXucectIY74eptAfproxjlESwLDjZuEk2XuJz/hswp5WXjGnbe6Uh8nzdiN7+FowWMmJdbiXele5Nyg5Q0i8othMSS9WtPy10QSrto3VRTMgUu5pWMTJwsdP23555g2BmF32eGu8PbSIYVEkNRSSrWZ0R6eUn5wF13vjr50X5TU5CMgpBXMa2qGjrCc/zN7HiD3GnAV/ubKRKYtbGyLcyIfBHN1hARs+Yxw2UZHXpCRvdzQ5HXKeBBbqsFFuPgWgd+00pfZH1dsJGgNmRKBMcEuyLa+pEJS4kNe7MAGo=
+        - secure: qSjYaMvclez8l9lulfQ8A87FoGixDHFCVnvvkAWF2jPMk/PbIUWLbghe1CoHd/z1UVmoy1B7fzc8CHpc016S71Y5ZCspsAJkU43EbU/15QaFU/+G9rzmXPV3Z5pwRDDPB9rZHzsrtRAyKtEY120aFOWqmEHrTp64qIyR6nFcni9pJUXME5g9ePJpvJlOn3Qpco0jb8fVsRnIwrFBoRz5iI8MQfMc4jebn6rZgJvgfTIELsGoYr/kQMkRu4fXUKnemxGtwvkyys7oxV6ClQdMpp1PHFthrKZcPtxcff2U7Pj8eqK2rQlL4T9aWRVyWIn6idWFOE06i9SbVN+fJqAKNTPtXFiebbRgkFee8yknvlUWWrA4iSTNCSK2eBYD3qqNQ84xiakPao+LkHcfwLIS0kxahmjcEvwmNhoPWT6ajvzadziZYS8nKx1TWZjh1lGLT8E1vBO6627+vQB2Gr4b1w6EIzzgFIzNHtl71d48G7SXx3E3JfnNNw+eAnZL2YXFC3QAFIukl3ZRMAum/uawmg0wXX0s6G0Kl5zX5fNqbBIwMO/5ni4Ay+Z0vNPndLyX5szBbz4mJKG5Xf15Mouk9MVRNqfqNhrcg0kGK55jnEMT6DY9+ojTeNIEZiJv7+CbhvMb08gXXC5EUkE0aZ47rg+TBJqOTAunYcQy9ZAgwkA=
+        - secure: R7p7v5R14gHELsbxNG5mEHgP7/U2AFf8OAKbghjZaJ+xJDm9okdqbunUhimtrH4SJNOgWxrq0aVvKu6HHHZMsmKazqTqcRLoWiiKiM0MR7u4cCRoAyTOLVpN8qJ9zLJRrxXrkQxLADi+RXbYKQH44Z2Oyywx3HSRg+8Z5PC7bOCeEMbuh4Lb2eSCMra4dZgd/R+nZDhv3YJlNWKFVQQMu7goCxIDaZCM6138/9MP8yt0pvwxqqraGIYFHLDmzyEO8Ns6e8Rs4Rp510ThY6LTQTbE5rMZhlAzU8Qx3CSj/Yt8ieNZlSaTgfICdbX+1haGOI3RUaF0pip7GLdQy/Pz/gUmoq/uuRocXKY5pCYKGiHvseOWGfQ1e3REnfO5e6a2Tit8vuiaR+PGLS4p0Sz5TiYguJ7N/9i2hQiXt33wmvj329BWLWndzQb3kgrglDEVkzwd+WyIbzcLkgam7pv+aZs2dUSF9Lk222VRpB6vnzY3L/wKlMYjhG+fyZYoyDgYqYQUXucWPN/BSSGxSndHzO+/Hf+OsRQybB2TcWztC/WqsJiXW+QQ5a2wc8biY8Op5pmuN7Esh1upQDV7XZEjnVZXnsa7SRr0tDhT3UiYzeNCZtZ9DtQGBSbYmxq/3YP7iR5/LUOQOINWHP3UPOLKWq0WCQdhX4zFxKb3Y52b2Z0=
