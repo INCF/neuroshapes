@@ -20,10 +20,17 @@ def shacl_validator():
     return shacl_validator
 
 
+def pytest_addoption(parser):
+    default_scan_dir = os.path.join(PATH, '..','neuroshapes','shapes')
+    parser.addoption("--scan_dir", action="store", default=default_scan_dir)
+
+
 def pytest_generate_tests(metafunc):
 
     # perform schemas validation
-    scan_dir = os.path.join(PATH, '..','neuroshapes','shapes','neurosciencegraph','commons')
+    scan_dir = metafunc.config.option.scan_dir
+    logger.info(f'scanning {scan_dir}')
+
     schema_files = [f for f in glob.iglob( scan_dir + '/**/schema.json', recursive=True)]
 
     datashape_files = [f.replace('schema.json', os.path.join('examples','datashapes.json')) for f in schema_files]
@@ -34,7 +41,7 @@ def pytest_generate_tests(metafunc):
     if "schema_file" in metafunc.fixturenames:
         metafunc.parametrize("schema_file", shapes_files)
 
-    
+
     # perform examples validation
     test_sets = []
     logger.info(len(datashape_files))
