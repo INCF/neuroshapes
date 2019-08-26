@@ -7,23 +7,48 @@ from validator_helper import Validator
 logger = logging.getLogger(__name__)
 
 PATH = os.getcwd()
-SHACL_SHACL = os.path.join(PATH, 'tests','shacl-schema.ttl')
+pytest.SHACL_SHACL = os.path.join(PATH, 'tests','shacl-schema.ttl')
 
-if not os.path.exists(SHACL_SHACL):
-    logger.error(f'{SHACL_SHACL} not found')
+if not os.path.exists(pytest.SHACL_SHACL):
+    logger.error(f'{pytest.SHACL_SHACL} not found')
     sys.exit()
 
 @pytest.fixture(scope='session')
 def shacl_validator():
     logger.info("creating shacl validator")
-    shacl_validator = Validator(SHACL_SHACL)
+    shacl_validator = Validator(pytest.SHACL_SHACL)
     return shacl_validator
 
 
 def pytest_generate_tests(metafunc):
 
+    # perform schemas validation
     scan_dir = os.path.join(PATH, '..','neuroshapes','shapes','neurosciencegraph','commons')
     schema_files = [f for f in glob.iglob( scan_dir + '/**/schema.json', recursive=True)]
 
+    datashape_files = [f.replace('schema.json', os.path.join('examples','datashapes.json')) for f in schema_files]
+    datashape_files = list(filter(lambda f: os.path.exists(f), datashape_files))
+
+    shapes_files = schema_files + datashape_files
+
     if "schema_file" in metafunc.fixturenames:
-        metafunc.parametrize("schema_file", schema_files)
+        metafunc.parametrize("schema_file", shapes_files)
+
+    
+    # perform examples validation
+    test_sets = []
+    logger.info(len(datashape_files))
+    for ds in datashape_files:
+
+        valid_dir = ds.replace('datashapes.json','valid') + os.path.sep
+        if os.path.exists(valid_dir):
+            for f in glob.glob(valid_dir + '*.json'):
+                test_sets.append((ds, f, True))
+
+        invalid_dir = ds.replace('datashapes.json','invalid') + os.path.sep
+        if os.path.exists(invalid_dir):
+            for f in glob.glob(invalid_dir + '*.json'):
+                test_sets.append((ds, f, False))
+
+    if set(['data_shape_file', 'test_file', 'test_valid']).issubset(set(metafunc.fixturenames)):
+        metafunc.parametrize('data_shape_file, test_file, test_valid', test_sets)
