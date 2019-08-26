@@ -34,11 +34,11 @@
             },
             {
               "path": "nsg:templateVolume",
-              "class": "nsg:TemplateVolume"
+              "class": "nsg:BrainTemplateDataLayer"
             },
             {
               "path": "nsg:parcellationVolume",
-              "class": "nsg:ParcellationVolume",
+              "class": "nsg:BrainParcellationDataLayer",
               "minCount": 1,
               "maxCount": 1
             },
