@@ -35,7 +35,6 @@ def pytest_generate_tests(metafunc):
 
     datashape_files = [f.replace('schema.json', os.path.join('examples','datashapes.json')) for f in schema_files]
     datashape_files = list(filter(lambda f: os.path.exists(f), datashape_files))
-
     shapes_files = schema_files + datashape_files
 
     if "schema_file" in metafunc.fixturenames:
@@ -44,18 +43,18 @@ def pytest_generate_tests(metafunc):
 
     # perform examples validation
     test_sets = []
-    logger.info(len(datashape_files))
-    for ds in datashape_files:
 
-        valid_dir = ds.replace('datashapes.json','valid') + os.path.sep
+    for sh in schema_files:
+
+        valid_dir = sh.replace('schema.json', os.path.join('examples','valid')) + os.path.sep
         if os.path.exists(valid_dir):
             for f in glob.glob(valid_dir + '*.json'):
-                test_sets.append((ds, f, True))
+                test_sets.append((sh, f, True))
 
-        invalid_dir = ds.replace('datashapes.json','invalid') + os.path.sep
+        invalid_dir = sh.replace('schema.json', os.path.join('examples','invalid')) + os.path.sep
         if os.path.exists(invalid_dir):
             for f in glob.glob(invalid_dir + '*.json'):
-                test_sets.append((ds, f, False))
+                test_sets.append((sh, f, False))
 
     if set(['data_shape_file', 'test_file', 'test_valid']).issubset(set(metafunc.fixturenames)):
         metafunc.parametrize('data_shape_file, test_file, test_valid', test_sets)

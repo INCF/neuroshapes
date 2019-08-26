@@ -41,7 +41,7 @@ The main goal is to  promote:
 *  the use of  W3C PROV-O recommendation as a format to record (meta)data provenance: a SHACL version of the W3C PROV-O is created.
 
 
-Also, Neuroshapes aims at creating a community for an open and use case driven development of not only data models (schemas and vocabularies) and tools around them but also guidelines for FAIR neuroscience (meta)data. 
+Also, Neuroshapes aims at creating a community for an open and use case driven development of not only data models (schemas and vocabularies) and tools around them but also guidelines for FAIR neuroscience (meta)data.
 
 # Tutorials
 
@@ -59,13 +59,16 @@ The following projects have adopted Neuroshapes:
 * [Krembil Centre for Neuroinformatics](https://www.camh.ca/en/science-and-research/institutes-and-centres/krembil-centre-for-neuroinformatics)
 
 # Formats and standards
-All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas). 
+All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas).
 
 # License
 The license for all schemas and data is [CC-BY-4.0](https://github.com/INCF/neuroshapes/blob/master/LICENSE).
 
 # Testing the schemas
-Schemas in this repository are tested using a [shacl workbench](https://github.com/BlueBrain/sbt-nexus-workbench) which is a SBT plugin that helps in the development of SHACL schemas in JSON-LD format for use in the [Nexus platform](https://github.com/BlueBrain/nexus). 
+
+## With sbt
+
+Schemas in this repository are tested using a [shacl workbench](https://github.com/BlueBrain/sbt-nexus-workbench) which is a SBT plugin that helps in the development of SHACL schemas in JSON-LD format for use in the [Nexus platform](https://github.com/BlueBrain/nexus).
 Please follow these steps to run the tests:
 
 * [Install sbt](https://www.scala-sbt.org/1.0/docs/Setup.html)
@@ -87,8 +90,18 @@ sbt
 test
 
   ```
-  
-  
+
+## With Pytest
+
+To test all shapes inside neuroshapes run:
+
+    pytest tests/validating_schemas.py
+
+To test an specific shape add a parameter --scan_dir, for example:
+
+    pytest tests/validating_schemas.py --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
+
+
 # Roadmap
 
 * Creation of an INCF/neuroshapes Special Interest Group

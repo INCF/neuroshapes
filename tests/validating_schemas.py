@@ -21,11 +21,13 @@ def test_valid_data(data_shape_file, test_file, test_valid):
         assert results == 1, "Validation report expects only 1 entry"
 
 
-def make_validation(data_shape_file, test_file):
-    base_dir = data_shape_file.replace(os.path.join('examples','datashapes.json'),'')
-    schema_file = base_dir +'schema.json'
+def make_validation(shapes_file, test_file):
+
     data_validator = Validator(pytest.SHACL_SHACL)
-    data_validator.load_schema(schema_file)
-    data_validator.load_schema(data_shape_file, aggregate=True)
+    data_validator.load_schema(shapes_file)
+
+    datashape_example = shapes_file.replace('schema.json', os.path.join('examples','datashapes.json'))
+    if os.path.exists(datashape_example):
+        data_validator.load_schema(datashape_example, aggregate=True)
 
     return data_validator.validate_data_file(test_file)
