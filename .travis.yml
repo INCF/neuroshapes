@@ -6,7 +6,7 @@ matrix:
         - pip install pyshacl
         - pip install pytest
       before_script:
-        - mv virtualenv/bin/owlrl.py virtualenv/bin/owlrl
+        - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
       script:
         - pytest tests/validating_schemas.py
 
