@@ -33,7 +33,7 @@
               "maxCount": 1
             },
             {
-              "path": "nsg:templateVolume",
+              "path": "nsg:brainTemplateDataLayer",
               "class": "nsg:BrainTemplateDataLayer"
             },
             {
