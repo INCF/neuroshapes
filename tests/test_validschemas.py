@@ -1,14 +1,14 @@
-import sys, os
+import os
 import pytest
-import logging
-from validator_helper import Validator
+from shaclvalidator import Validator
+from shaclvalidator import run_validation
+from shaclvalidator import get_graph
 
 
-def test_valid_schema_file(shacl_validator, schema_file):
-    try:
-        shacl_validator.load_schema(schema_file)
-    except:
-        pytest.fail(f'Invalid schema {schema_file}')
+def test_valid_schema_file(shacl_schema, schema_file):
+    graph = get_graph(schema_file)
+    conforms, res, report = run_validation(graph, shacl_schema)
+    assert conforms, "shape does not conform with SHACL of SHACL: " + report
 
 
 def test_valid_data(data_shape_file, test_file, test_valid):
@@ -23,8 +23,8 @@ def test_valid_data(data_shape_file, test_file, test_valid):
 def make_validation(shapes_file, test_file):
     data_validator = Validator(pytest.SHACL_SHACL)
     data_validator.load_schema(shapes_file)
-
     datashape_example = shapes_file.replace('schema.json', os.path.join('examples', 'datashapes.json'))
+
     if os.path.exists(datashape_example):
         data_validator.load_schema(datashape_example, aggregate=True)
 

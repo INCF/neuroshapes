@@ -2,7 +2,7 @@ import os, sys
 import pytest
 import logging
 import glob
-from validator_helper import Validator
+from shaclvalidator import get_graph
 
 logger = logging.getLogger(__name__)
 
@@ -13,11 +13,11 @@ if not os.path.exists(pytest.SHACL_SHACL):
     logger.error(f'{pytest.SHACL_SHACL} not found')
     sys.exit()
 
+
 @pytest.fixture(scope='session')
-def shacl_validator():
-    logger.info("creating shacl validator")
-    shacl_validator = Validator(pytest.SHACL_SHACL)
-    return shacl_validator
+def shacl_schema():
+    logger.info("loading SHACL of SHACL schema")
+    return get_graph(pytest.SHACL_SHACL)
 
 
 def pytest_addoption(parser):
@@ -40,10 +40,7 @@ def pytest_generate_tests(metafunc):
     if "schema_file" in metafunc.fixturenames:
         metafunc.parametrize("schema_file", shapes_files)
 
-
-    # perform examples validation
     test_sets = []
-
     for sh in schema_files:
 
         valid_dir = sh.replace('schema.json', os.path.join('examples','valid')) + os.path.sep

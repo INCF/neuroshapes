@@ -95,7 +95,9 @@ test
 
 To test all shapes inside neuroshapes run:
 
-    pytest tests/validating_schemas.py
+    pip install pytest pyshacl
+    mv ~/virtualenv/python3.6/bin/owlrl.py ~/virtualenv/python3.6/bin/owlrl
+    pytest tests
 
 To test an specific shape add a parameter --scan_dir, for example:
 
