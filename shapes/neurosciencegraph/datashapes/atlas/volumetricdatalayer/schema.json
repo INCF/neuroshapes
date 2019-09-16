@@ -27,7 +27,8 @@
         "nsg:MorphologyOrientationDataLayer",
         "nsg:NISSLImageDataLayer",
         "nsg:TwoPhotonImageDataLayer",
-        "nsg:BrainTemplateDataLayer"
+        "nsg:BrainTemplateDataLayer",
+        "nsg:GeneExpressionVolumetricDataLayer"
       ],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [

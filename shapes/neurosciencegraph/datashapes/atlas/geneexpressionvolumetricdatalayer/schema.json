@@ -22,7 +22,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/ndraster/shapes/VolumetricDataLayer"
+          "node": "https://neuroshapes.org/dash/volumetricdatalayer/shapes/VolumetricDataLayer"
         },
         {
           "property": [
@@ -30,7 +30,7 @@
               "path": "nsg:gene",
               "name": "Gene",
               "description": "Name of the gene being expressed in this volumetric dataset",
-              "datatype": "xsd:string",
+              "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape",
               "minCount": 1,
               "maxCount": 1
             }
