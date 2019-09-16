@@ -16,7 +16,7 @@ def test_valid_data(data_shape_file, test_file, test_valid):
     if test_valid:
         assert conforms, report
     else:
-        assert conforms is False, report
+        assert conforms is False, "validation should fail"
         assert results == 1, "Validation report expects only 1 entry"
 
 

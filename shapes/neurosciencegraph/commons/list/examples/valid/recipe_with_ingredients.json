@@ -8,7 +8,7 @@
       }
     }
   ],
-  "@id" : "ChcolateRecipe",
+  "@id" : "ChocolateCakeRecipe",
   "@type": "Recipe",
   "description": "My favorite chocolate cake",
   "ingredients": [
