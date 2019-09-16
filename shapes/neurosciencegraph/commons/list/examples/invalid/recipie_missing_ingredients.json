@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "http://schema.org",
+    {
+      "ingredients": {
+        "@id": "http://schema.org/ingredients",
+        "@container": "@list"
+      }
+    }
+  ],
+  "@id" : "RecipeNoIngridients",
+  "@type": "Recipe",
+  "description": "My favorite chocolate cake"
+}

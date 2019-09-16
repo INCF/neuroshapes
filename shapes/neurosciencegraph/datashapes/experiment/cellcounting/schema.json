@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/cellcounting/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/cellcounting",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/activity",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "shapes": [
+    {
+      "@id": "this:CellCountingShape",
+      "@type": "sh:NodeShape",
+      "label": "Cell counting shape definition",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:CellCounting",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/activity/shapes/ActivityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

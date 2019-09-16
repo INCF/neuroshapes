@@ -1,0 +1,359 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/list/shapes/"
+    }
+  ],
+  "@id": "nsg:commons/list",
+  "@type": "nxv:Schema",
+  "shapes": [
+    {
+      "@id": "this:EmptyNode",
+      "hasValue": [
+        {
+          "@list": []
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 0,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 0,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:DataNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:IntegerNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:integer",
+          "maxCount": 1,
+          "message": "Data should be integer type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:StringNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "datatype": "xsd:string",
+          "maxCount": 1,
+          "message": "Data should be string type",
+          "minCount": 1,
+          "path": "rdf:first"
+        },
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        }
+      ]
+    },
+    {
+      "@id": "this:DoubleNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "datatype": "xsd:double",
+          "maxCount": 1,
+          "message": "Data should be double type",
+          "minCount": 1,
+          "path": "rdf:first"
+        }
+      ]
+    },
+    {
+      "@id": "this:ListNodeShape",
+      "@type": "NodeShape",
+      "comment": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
+      "label": "List node shape",
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListNodeShape",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DataNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfStringsNodeShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of string node shape",
+      "message": "List should contain only strings",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:StringNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfDoublesNodeShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of doubles node shape",
+      "message": "List should contain only doubles",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:DoubleNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListOfIntegersNodeShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of integers node shape",
+      "message": "List should contain only integers",
+      "or": {
+        "@list": [
+          "this:EmptyNode",
+          "this:IntegerNode"
+        ]
+      }
+    },
+    {
+      "@id": "this:ListShape",
+      "@type": "NodeShape",
+      "rdfs:comment": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
+      "label": "List shape",
+      "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
+      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListShape",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "rdfs:comment": "Each list member (including this node) must be have the shape this:ListNodeShape.",
+          "node": "this:ListNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfIntegersShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of integers",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "node": "this:ListOfIntegersNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfStringsShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of strings",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "node": "this:ListOfStringsNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfDoublesShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of doubles",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "node": "this:ListOfDoublesNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfOneOrMoreItemsShape",
+      "@type": "NodeShape",
+      "node": "this:ListShape",
+      "property": [
+        {
+          "minCount": 1,
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfOneOrMoreStringsShape",
+      "@type": "NodeShape",
+      "message": "at leass one string item shoud be present",
+      "node": "this:ListOfStringsShape",
+      "property": [
+        {
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "minCount": 1
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfOneOrMoreIntegersShape",
+      "@type": "NodeShape",
+      "node": "this:ListOfIntegersShape",
+      "property": [
+        {
+          "minCount": 1,
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfOneOrMoreDoublesShape",
+      "@type": "NodeShape",
+      "node": "this:ListOfDoublesShape",
+      "property": [
+        {
+          "minCount": 1,
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
