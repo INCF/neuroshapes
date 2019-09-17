@@ -10,7 +10,7 @@ logger.level = logging.DEBUG
 
 def test_valid_schema_file(shacl_schema, schema_file):
     logger.debug(f'validating {schema_file}')
-    graph = get_graph(schema_file)
+    graph = get_graph(schema_file, [])
     conforms, res, report = run_validation(graph, shacl_schema)
     assert conforms, "shape does not conform with SHACL of SHACL: " + report
 
