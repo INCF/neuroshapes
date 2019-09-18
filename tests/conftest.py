@@ -2,8 +2,7 @@ import os, sys
 import pytest
 import logging
 import glob
-from shaclvalidator import get_graph
-from shaclvalidator import Validator
+from .shaclvalidator import get_graph
 
 logger = logging.getLogger(__name__)
 

@@ -12,7 +12,8 @@ OWL = rdflib.namespace.Namespace('http://www.w3.org/2002/07/owl#')
 
 IMPORTS_MAP = {
     "https://provshapes.org": "shapes/prov",
-    "https://neuroshapes.org": "shapes/neurosciencegraph",
+    "https://neuroshapes.org/commons": "shapes/neurosciencegraph/commons",
+    "https://neuroshapes.org/dash": "shapes/neurosciencegraph/datashapes",
 }
 
 
@@ -37,7 +38,7 @@ def get_graph(file, imports=[]):
             # this will avoid loading resource more than once
             imports.append(local)
             if os.path.exists(local):
-                logging.debug(f'importing {o} as {local}')
+                logging.info(f'importing {o} as {local}')
                 imported_graph = get_graph(local, imports)
                 graph += imported_graph
             else:

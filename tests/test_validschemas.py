@@ -1,6 +1,6 @@
-from shaclvalidator import Validator
-from shaclvalidator import run_validation
-from shaclvalidator import get_graph
+from .shaclvalidator import Validator
+from .shaclvalidator import run_validation
+from .shaclvalidator import get_graph
 import pytest
 import logging
 

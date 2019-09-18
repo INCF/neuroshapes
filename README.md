@@ -93,16 +93,6 @@ test
 
 ## With Pytest
 
-To test all shapes inside neuroshapes run:
-
-    pip install pytest pyshacl
-    mv ~/virtualenv/python3.6/bin/owlrl.py ~/virtualenv/python3.6/bin/owlrl
-    pytest tests
-
-To test an specific shape add a parameter --scan_dir, for example:
-
-    pytest tests --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
-
 These tests are going to validate that schemas conforms with the SHACL specifications. And if you add examples you want the tests to validate you need to provide them inside a directory called `valid` or `invalid` as depicted next:
 
 ```
@@ -122,6 +112,21 @@ These tests are going to validate that schemas conforms with the SHACL specifica
 `-- ...
 
 ```
+
+Tests are proved to run test with python > 3.6. To run them follow next:
+
+    # create your virtual environment and install these requirements:
+    pip install pytest pyshacl
+    # fix owlrl isusue by removing the .py extension 
+    mv {virtual-env-path}/bin/owlrl.py {virtual-env-path}/bin/owlrl
+    pytest tests
+    
+More about the [issue with current released version of OWL-RL](https://github.com/RDFLib/OWL-RL/issues/29) on PyPI.
+
+To test an specific shape, add a parameter --scan_dir where the shape is, for example:
+
+    pytest --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
+    
 
 # Roadmap
 
