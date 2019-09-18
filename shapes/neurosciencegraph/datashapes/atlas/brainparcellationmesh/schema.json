@@ -34,8 +34,8 @@
             },
             {
               "path": "nsg:brainLocation",
-              "name": "Soma brain location",
-              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell soma.",
+              "name": "Brain location",
+              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) represented by the mesh",
               "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
               "minCount": 1,
               "maxCount": 1
