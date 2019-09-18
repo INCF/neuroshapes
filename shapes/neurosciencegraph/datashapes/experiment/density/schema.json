@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/density/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/density",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DensityShape",
+      "@type": "sh:NodeShape",
+      "label": "Density shape definition",
+      "targetClass": ["nsg:Density",
+                      "nsg:BoutonDensity",
+                      "nsg:CellDensity",
+                      "nsg:NeuronDensity"],
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information of the patchedcell",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:density",
+              "name": "Density",
+              "description": "Density of a neuroscience object such as neurons, cells or synaptic boutons.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
