@@ -24,7 +24,10 @@ def get_local(resource):
             return os.sep.join([path, resource.replace(key, IMPORTS_MAP[key]) ,'schema.json'])
 
 
-def get_graph(file, imports=[]):
+def get_graph(file, imports=None):
+
+    if imports is None:
+        imports = []
     file_type = rdflib.util.guess_format(file)
     if file_type is None:
         file_type = "json-ld"
@@ -38,7 +41,7 @@ def get_graph(file, imports=[]):
             # this will avoid loading resource more than once
             imports.append(local)
             if os.path.exists(local):
-                logging.info(f'importing {o} as {local}')
+                logging.debug(f'importing {o} as {local}')
                 imported_graph = get_graph(local, imports)
                 graph += imported_graph
             else:
@@ -56,12 +59,12 @@ def run_validation(data, schema):
 class Validator:
 
     def __init__(self, shacl_schema_file):
-        self.shacl_schema = get_graph(shacl_schema_file, [])
+        self.shacl_schema = get_graph(shacl_schema_file)
         self.schema_graph = None
 
     def load_schema(self, schema_file,):
         logger.debug(f'loading {schema_file}')
-        self.schema_graph = get_graph(schema_file, [])
+        self.schema_graph = get_graph(schema_file)
         conforms, res, report = run_validation(self.schema_graph , self.shacl_schema)
         if not conforms:
             msg = f'Invalid schema {schema_file}'
