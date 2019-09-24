@@ -86,7 +86,8 @@
               "name": "Distribution",
               "description": "A dataset in downloadable form. The downloadable form has a specific format and is located at a specific location.",
               "class": "schema:DataDownload",
-              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape"
+              "node": "https://neuroshapes.org/commons/distribution/shapes/DistributionShape",
+              "minCount": 1
             },
             {
               "path": "nsg:annotation",
