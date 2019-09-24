@@ -48,8 +48,27 @@
               "path": "nsg:density",
               "name": "Density",
               "description": "Density of a neuroscience object such as cells, neurons or synaptic boutons.",
-              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+              "node": "this:DensityShape",
               "minCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:DensityShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:statistic",
+              "name": "Statistic",
+              "description": "Statistic of the density (e.g. mean).",
+              "datatype": "xsd:string"
             }
           ]
         }
