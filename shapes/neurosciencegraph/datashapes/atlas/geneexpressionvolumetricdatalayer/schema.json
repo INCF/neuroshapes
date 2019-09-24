@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/geneexpressionvolumetricdatalayer/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/geneexpressionvolumetricdatalayer",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/dash/volumetricdatalayer"
+  ],
+  "shapes": [
+    {
+      "@id": "this:GeneExpressionVolumetricDataLayerShape",
+      "@type": "sh:NodeShape",
+      "label": "Data shape definition for volumetric brain data that characterizes gene expression",
+      "targetClass": [
+        "nsg:VolumetricDataLayer",
+        "nsg:GeneExpressionVolumetricDataLayer"
+      ],
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/dash/volumetricdatalayer/shapes/VolumetricDataLayer"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:gene",
+              "name": "Gene",
+              "description": "Name of the gene being expressed in this volumetric dataset",
+              "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
