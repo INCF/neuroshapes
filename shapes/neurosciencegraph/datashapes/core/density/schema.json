@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/density/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/density",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm",
+    "https://neuroshapes.org/commons/brainlocation"
+  ],
+  "shapes": [
+    {
+      "@id": "this:DensityShape",
+      "@type": "sh:NodeShape",
+      "label": "Density shape definition",
+      "targetClass": [
+        "nsg:Density",
+        "nsg:BoutonDensity",
+        "nsg:CellDensity",
+        "nsg:NeuronDensity"
+      ],
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:brainLocation",
+              "name": "Brain location",
+              "description": "Brain location information of the density (e.g. a specific cortical layer).",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape"
+            },
+            {
+              "path": "nsg:mType",
+              "name": "Morphology type",
+              "description": "The morphology type of the neurons for which the density was measured.",
+              "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/CellTypeOntologyTermShape",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:density",
+              "name": "Density",
+              "description": "Density of a neuroscience object such as cells, neurons or synaptic boutons.",
+              "node": "this:DensityQuantitativeValueShape",
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:DensityQuantitativeValueShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:statistic",
+              "name": "Statistic",
+              "description": "Statistic of the density (e.g. mean).",
+              "datatype": "xsd:string"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
