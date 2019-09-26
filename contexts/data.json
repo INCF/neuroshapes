@@ -629,6 +629,9 @@
       "definition": {
         "@id": "skos:definition"
       },
+      "density": {
+        "@id": "nsg:density"
+      },
       "derivation": {
         "@id": "nsg:derivation"
       },
