@@ -2,28 +2,26 @@ matrix:
   include:
     - language: python
       python: 3.7
-      install:
-        - pip install pyshacl
-        - pip install pytest
-      before_script:
-        - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
-      script:
-        - pytest tests
+      stages:
+        - name: test
+      jobs:
+        include:
+          - stage: test
+            install:
+              - pip install pyshacl
+              - pip install pytest
+            before_script:
+              - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
+            script:
+              - pytest tests
 
     - language: scala
       scala: 2.12.2
       stages:
-      - name: test
-        if: "(branch = master OR branch = simulation_schemas OR branch = ionchannel) AND
-          type = pull_request"
       - name: bintraypublish
         if: "(tag =~ ^v)"
       jobs:
         include:
-        - stage: test
-          script:
-          - sbt clean compile
-          - sbt test
         - stage: bintraypublish
           before_install:
           - openssl aes-256-cbc -K $encrypted_b14561f0d260_key -iv $encrypted_b14561f0d260_iv

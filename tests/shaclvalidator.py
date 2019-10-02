@@ -21,7 +21,7 @@ def get_local(resource):
     path = os.getcwd()
     for key in IMPORTS_MAP:
         if resource.startswith(key):
-            return os.sep.join([path, resource.replace(key, IMPORTS_MAP[key]) ,'schema.json'])
+            return os.sep.join([path, resource.replace(key, IMPORTS_MAP[key]), 'schema.json'])
 
 
 def get_graph(file, imports=None):
