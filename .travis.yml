@@ -2,19 +2,17 @@ matrix:
   include:
   - language: python
     python: 3.7
-    stages:
-      - test
     install:
-      - pip install pyshacl
-      - pip install pytest
+    - pip install pyshacl
+    - pip install pytest
     before_script:
-      - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
-    stage: test
-      script:
-      - pytest tests
+    - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
+    script:
+    - pytest tests
 
   - language: scala
     scala: 2.12.2
+    script: skip
     stages:
     - name: bintraypublish
       if: "(tag =~ ^v)"
