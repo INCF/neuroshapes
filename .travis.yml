@@ -4,12 +4,12 @@ matrix:
     python: 3.7
     stages:
       - test
+    install:
+      - pip install pyshacl
+      - pip install pytest
     jobs:
       include:
         - stage: test
-          install:
-          - pip install pyshacl
-          - pip install pytest
           before_script:
           - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
           script:
