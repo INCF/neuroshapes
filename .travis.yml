@@ -7,13 +7,11 @@ matrix:
     install:
       - pip install pyshacl
       - pip install pytest
-    jobs:
-      include:
-        - stage: test
-          before_script:
-          - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
-          script:
-          - pytest tests
+    before_script:
+      - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
+    stage: test
+      script:
+      - pytest tests
 
   - language: scala
     scala: 2.12.2
