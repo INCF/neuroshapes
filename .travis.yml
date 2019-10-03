@@ -1,14 +1,15 @@
 matrix:
   include:
-  - language: python
-    python: 3.7
-    install:
-    - pip install pyshacl
-    - pip install pytest
-    before_script:
-    - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
-    script:
-    - pytest tests
+  - stage: test
+    - language: python
+      install:
+      - pip install pyshacl
+      - pip install pytest
+      before_script:
+      - mv ~/virtualenv/python3.7/bin/owlrl.py ~/virtualenv/python3.7/bin/owlrl
+      python: 3.7
+      script:
+      - pytest tests
 
   - language: scala
     scala: 2.12.2
