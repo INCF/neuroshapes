@@ -41,7 +41,7 @@ The main goal is to  promote:
 *  the use of  W3C PROV-O recommendation as a format to record (meta)data provenance: a SHACL version of the W3C PROV-O is created.
 
 
-Also, Neuroshapes aims at creating a community for an open and use case driven development of not only data models (schemas and vocabularies) and tools around them but also guidelines for FAIR neuroscience (meta)data. 
+Also, Neuroshapes aims at creating a community for an open and use case driven development of not only data models (schemas and vocabularies) and tools around them but also guidelines for FAIR neuroscience (meta)data.
 
 # Tutorials
 
@@ -59,38 +59,50 @@ The following projects have adopted Neuroshapes:
 * [Krembil Centre for Neuroinformatics](https://www.camh.ca/en/science-and-research/institutes-and-centres/krembil-centre-for-neuroinformatics)
 
 # Formats and standards
-All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas). 
+All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas).
 
-# License
-The license for all schemas and data is [CC-BY-4.0](https://github.com/INCF/neuroshapes/blob/master/LICENSE).
+## Testing shapes 
 
-# Testing the schemas
-Schemas in this repository are tested using a [shacl workbench](https://github.com/BlueBrain/sbt-nexus-workbench) which is a SBT plugin that helps in the development of SHACL schemas in JSON-LD format for use in the [Nexus platform](https://github.com/BlueBrain/nexus). 
-Please follow these steps to run the tests:
+These tests are going to validate that schemas conforms with the SHACL specifications. And if you add examples you want the tests to validate you need to provide them inside a directory called `valid` or `invalid` as depicted next:
 
-* [Install sbt](https://www.scala-sbt.org/1.0/docs/Setup.html)
-* Clone the INCF/neuroshapes repository and run the tests
+```
+|-- shapes
+|   |-- neurosciencegraph
+|   |   |-- datashapes
+|   |   `-- commons
+|   |       `-- list
+|   |           |-- schema.json
+|   |           `-- examples
+|   |               |-- datashapes.json 
+|   |               `-- valid
+|   |               |   `-- recipe_ingredients_list.json 
+|   |               `-- invalid
+|   |                   `-- recipe_missing_ingredients.json
+|   `-- prov     
+`-- ...
 
-```shell
-# Go to home
-cd  ~
+```
 
-# Clone the repository
-git clone https://github.com/INCF/neuroshapes.git
+Tests are proved to run test with python > 3.6. To run them follow next:
 
-cd neuroshapes
+    # create your virtual environment and install these requirements:
+    pip install pytest pyshacl
+    # fix owlrl isusue by removing the .py extension 
+    mv {virtual-env-path}/bin/owlrl.py {virtual-env-path}/bin/owlrl
+    pytest tests
+    
+More about the [issue with current released version of OWL-RL](https://github.com/RDFLib/OWL-RL/issues/29) on PyPI.
 
-# Run 'sbt'
-sbt
+To test an specific shape, add a parameter --scan_dir where the shape is, for example:
 
-# Run 'test'
-test
+    pytest --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
+    
 
-  ```
-  
-  
 # Roadmap
 
 * Creation of an INCF/neuroshapes Special Interest Group
 * INCF endorsement as a standard and best practice that support FAIR neuroscience data
 * Extension of the current data model specifications
+
+# License
+The license for all schemas and data is [CC-BY-4.0](https://github.com/INCF/neuroshapes/blob/master/LICENSE).

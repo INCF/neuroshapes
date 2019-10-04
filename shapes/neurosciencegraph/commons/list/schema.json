@@ -134,49 +134,41 @@
       "comment": "Defines constraints on what it means for a node to be a node within a well-formed RDF list. Note that this does not check whether the rdf:rest items are also well-formed lists as this would lead to unsupported recursion.",
       "label": "List node shape",
       "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
-      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListNodeShape",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:DataNode"
-        ]
-      }
+      "prov:wasDerivedFrom": "https://www.w3.org/ns/shacl-shacl#ListNodeShape",
+      "or": [
+        "this:EmptyNode",
+        "this:DataNode"
+      ]
     },
     {
       "@id": "this:ListOfStringsNodeShape",
       "@type": "NodeShape",
       "rdfs:label": "List of string node shape",
       "message": "List should contain only strings",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:StringNode"
-        ]
-      }
+      "or": [
+        "this:EmptyNode",
+        "this:StringNode"
+      ]
     },
     {
       "@id": "this:ListOfDoublesNodeShape",
       "@type": "NodeShape",
       "rdfs:label": "List of doubles node shape",
       "message": "List should contain only doubles",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:DoubleNode"
-        ]
-      }
+      "or": [
+        "this:EmptyNode",
+        "this:DoubleNode"
+      ]
     },
     {
       "@id": "this:ListOfIntegersNodeShape",
       "@type": "NodeShape",
       "rdfs:label": "List of integers node shape",
       "message": "List should contain only integers",
-      "or": {
-        "@list": [
-          "this:EmptyNode",
-          "this:IntegerNode"
-        ]
-      }
+      "or": [
+        "this:EmptyNode",
+        "this:IntegerNode"
+      ]
     },
     {
       "@id": "this:ListShape",
@@ -184,7 +176,7 @@
       "rdfs:comment": "A shape describing well-formed RDF lists. Currently does not check for non-recursion. This could be expressed using SHACL-SPARQL.",
       "label": "List shape",
       "seeAlso": "https://www.w3.org/TR/shacl/#syntax-rule-SHACL-list",
-      "prov:wasDerivedFrom" : "https://www.w3.org/ns/shacl-shacl#ListShape",
+      "prov:wasDerivedFrom": "https://www.w3.org/ns/shacl-shacl#ListShape",
       "property": [
         {
           "path": [
@@ -300,7 +292,7 @@
     {
       "@id": "this:ListOfOneOrMoreStringsShape",
       "@type": "NodeShape",
-      "message": "at leass one string item shoud be present",
+      "message": "at least one string item should be present",
       "node": "this:ListOfStringsShape",
       "property": [
         {

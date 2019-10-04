@@ -8,7 +8,7 @@
       }
     }
   ],
-  "@id" : "RecipeNoIngridients",
+  "@id" : "RecipeNoIngredients",
   "@type": "Recipe",
   "description": "My favorite chocolate cake"
 }

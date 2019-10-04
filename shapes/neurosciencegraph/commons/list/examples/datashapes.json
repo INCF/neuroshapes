@@ -105,12 +105,10 @@
       "@type": "sh:NodeShape",
       "label": "Area Codes Node Shape",
       "message": "List should contain only AreaCode Nodes",
-      "or": {
-        "@list": [
-          "https://neuroshapes.org/commons/list/shapes/EmptyNode",
-          "exsh:AreaCodeNode"
-        ]
-      }
+      "or": [
+        "https://neuroshapes.org/commons/list/shapes/EmptyNode",
+        "exsh:AreaCodeNode"
+      ]
     },
     {
       "@id": "exsh:ListOfAreaCodesShape",
