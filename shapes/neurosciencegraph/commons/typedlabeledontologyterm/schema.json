@@ -28,6 +28,21 @@
       ]
     },
     {
+      "@id": "this:StrainOntologyTermShape",
+      "@type": "sh:NodeShape",
+      "label": "The shape of an ontology term representing an animal strain",
+      "nsg:expectedRootClass": {
+        "@id": "nsg:Strain",
+        "label": "Animal strain",
+        "isDefinedBy": "http://bbp.epfl.ch/neurosciencegraph/ontologies/strain"
+      },
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
+        }
+      ]
+    },
+    {
       "@id": "this:ModelSimulationStatusOntologyTermShape",
       "@type": "sh:NodeShape",
       "label": "The shape of an ontology term representing a model simulation status",
