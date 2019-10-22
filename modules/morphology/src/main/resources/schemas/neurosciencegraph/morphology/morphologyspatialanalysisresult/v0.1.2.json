@@ -1,0 +1,89 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/morphologyspatialanalysisresult/v0.1.2/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/morphology/reconstructedcell/v0.1.2"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MorphologySpatialAnalysisResultShape",
+      "@type": "sh:NodeShape",
+      "label": "Morphology Spatial Analysis Result",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "targetClass": "nsg:MorphologySpatialAnalysisResult",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:axonTerminal",
+              "description": "Axon terminal of the reconstructed cell.",
+              "name": "Axon terminal",
+              "node": "this:AxonTerminalShape"
+            },
+            {
+              "path": "nsg:somaLocation",
+              "name": "Soma brain location",
+              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell soma.",
+              "node": "this:brainLocationShape",
+              "maxCount": 1,
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:BrainLocationShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/brainLocation/v0.1.2/shapes/BrainLocationShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:hemisphere",
+              "description": "The hemisphere of the soma",
+              "name": "Soma hemisphere",
+              "sh:in": [
+                "Left",
+                "Right"
+              ],
+              "maxCount": 1,
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:AxonTerminalShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "this:brainLocationShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:axonTerminalPercentage",
+              "name": "Axon terminal percentage",
+              "description": "The percentage of the axon terminal number in this brain region",
+              "datatype": "xsd:float",
+              "maxCount": 1,
+              "minCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

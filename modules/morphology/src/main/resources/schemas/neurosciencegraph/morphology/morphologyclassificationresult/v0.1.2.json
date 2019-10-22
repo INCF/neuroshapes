@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+    {
+      "this": "{{base}}/schemas/neurosciencegraph/morphology/morphologyclassificationresult/v0.1.2/shapes/"
+    }
+  ],
+  "@type": "nxv:Schema",
+  "imports": [
+    "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0",
+    "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2"
+  ],
+  "shapes": [
+    {
+      "@id": "this:MorphologyClassificationResultShape",
+      "@type": "sh:NodeShape",
+      "label": "Morphology Classification Result",
+      "targetClass": "nsg:MorphologyClassificationResult",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v1.0.0/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:body",
+              "name": "Morphology type",
+              "class": "nsg:MorphologyAnnotation",
+              "description": "The morphology type of the reconstructed cell.",
+              "editorialNote": "Need the cell type for class restriction.",
+              "node": "this:MorphologyAnnotationShape",
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "nsg:target",
+              "class": "nsg:ReconstructedCell",
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "rdfs:comment",
+              "name": "Classification Justification",
+              "description": "Justification of the decision of cell classification",
+              "datatype": "xsd:string",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    },
+    {"@id": "this:MorphologyAnnotationShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "property": [
+            {
+              "path": "nsg:mTypeAnnotation",
+              "name": "",
+              "description": "",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/typedlabeledontologyterm/v0.1.2/shapes/MorphologicalCellTypeOntologyTermShape",
+              "maxCount": 1,
+              "minCount": 1
+            },
+            {
+              "path": "nsg:brainLocation",
+              "description": "Brain Location (brain region, position In Layer, longitudinalAxis) of the reconstructed cell soma.",
+              "name": "Soma brain location",
+              "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape",
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
