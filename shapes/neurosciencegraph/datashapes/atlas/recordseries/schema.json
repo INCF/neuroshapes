@@ -1,0 +1,164 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/dash/pointcloud/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/dash/pointcloud",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "shapes": [
+    {
+      "@id": "this:RecordSeriesShape",
+      "@type": "sh:NodeShape",
+      "label": "Record Series",
+      "description": "Definition of a series of records, each record having measures. Files types for this purpose are usually CSV, TSV or binary buffers",
+      "targetClass": [
+        "nsg:RecordSeries"
+      ],
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+
+            {
+              "path": "nsg:measure",
+              "name": "Measures",
+              "description": "List of measures performed or computed on a system",
+              "node": "this:MeasureShape",
+              "minCount": 1
+            },
+
+            {
+              "path": "nsg:NumberOfRecords",
+              "name": "Number Of Records",
+              "description": "Number of record in this series",
+              "datatype": "xsd:unsignedLong",
+              "minCount": 1
+            },
+
+            {
+              "path": "nsg:ByteOffset",
+              "name": "Byte Offset",
+              "description": "Number of byte at the begining of the file/buffer before the first measure or the first record. Mostly relevant for binary buffers as CSV would usually contain a header.",
+              "datatype": "xsd:unsignedLong"
+            },
+
+            {
+              "path": "nsg:bufferCompression",
+              "name": "Buffer Compression",
+              "description": "Compression method for the buffer. The absence of this fields means the data is uncompressed.",
+              "or": [
+                {
+                  "in": [
+                    "gzip",
+                    "bzip2"
+                  ]
+                },
+                {
+                  "datatype": "xsd:string"
+                }
+              ],
+              "maxCount": 1
+            },
+
+            {
+              "path": "nsg:bufferEncoding",
+              "name": "Buffer Encoding",
+              "description": "Encoding used for the whole series, once uncompressed if any compression method was used.",
+              "or": [
+                {
+                  "in": [
+                    "ascii",
+                    "binary"
+                  ]
+                },
+                {
+                  "datatype": "xsd:string"
+                }
+              ],
+              "minCount": 1,
+              "maxCount": 1
+            },
+
+            {
+              "path": "nsg:endianness",
+              "name": "Endianness",
+              "description": "Endianness of the encoding, not applicable if buffer encoding is ascii",
+              "in": [
+                "little",
+                "big"
+              ],
+              "maxCount": 1
+            },
+
+            {
+              "path": "nsg:fileExtension",
+              "name": "File Extension",
+              "description": "Format of the file, by its extension ('nrrd', 'png', etc.)",
+              "datatype": "xsd:string",
+              "minCount": 1,
+              "maxCount": 1
+            }
+
+          ]
+        }
+      ]
+    },
+
+    {
+      "@id": "this:MeasureShape",
+      "@type": "sh:NodeShape",
+      "label": "Measure Shape",
+      "comment": "A measure can be anything",
+      "property": [
+
+        {
+          "path": "schema:name",
+          "name": "Name",
+          "description": "Name of the measure",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1
+        },
+
+        {
+          "path": "schema:description",
+          "name": "Description",
+          "description": "Description of what this measure is about",
+          "datatype": "xsd:string",
+          "maxCount": 1
+        },
+
+        {
+          "path": "nsg:dataType",
+          "name": "Data Type",
+          "description": "Type of the value",
+          "datatype": "xsd:string",
+          "minCount": 1,
+          "maxCount": 1,
+          "in": [
+            "ascii",
+            "uint8",
+            "int8",
+            "uint16",
+            "int16",
+            "uint32",
+            "int32",
+            "uint64",
+            "int64",
+            "float16",
+            "float32",
+            "float64"
+          ]
+        }
+      ]
+    }
+  ]
+}
