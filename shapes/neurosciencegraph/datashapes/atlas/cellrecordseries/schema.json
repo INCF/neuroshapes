@@ -10,7 +10,7 @@
   "imports": [
     "https://neuroshapes.org/commons/brainlocation",
     "https://neuroshapes.org/commons/typedlabeledontologyterm"
-  ]
+  ],
   "shapes": [
     {
       "@id": "this:CellRecordSeries",
