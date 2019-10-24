@@ -13,7 +13,7 @@
   ],
   "shapes": [
     {
-      "@id": "this:CellRecordSeries",
+      "@id": "this:CellRecordSeriesShape",
       "@type": "sh:NodeShape",
       "label": "A Record Series for cells",
       "targetClass": [
