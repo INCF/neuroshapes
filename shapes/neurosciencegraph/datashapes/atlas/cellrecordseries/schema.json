@@ -22,7 +22,7 @@
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
-          "node": "https://neuroshapes.org/dash/ndraster/shapes/RecordSeriesShape"
+          "node": "https://neuroshapes.org/dash/recordseries/shapes/RecordSeriesShape"
         },
         {
           "property": [
