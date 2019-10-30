@@ -31,8 +31,6 @@
               "path": "nsg:recordMeasure",
               "name": "Record Measure",
               "description": "List of measures performed or computed on a system",
-              "class": "nsg:RecordMeasure",
-              "node": "this:RecordMeasureShape",
               "minCount": 1
             },
 
@@ -82,6 +80,7 @@
     {
       "@id": "this:RecordMeasureShape",
       "@type": "sh:NodeShape",
+      "targetClass": "nsg:RecordMeasure",
 
       "label": "Record Measure Shape",
       "description": "A measure can be anything",
