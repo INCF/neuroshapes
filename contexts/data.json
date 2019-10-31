@@ -1007,6 +1007,12 @@
       "postalCode": {
         "@id": "schema:postalCode"
       },
+      "preSynaptic": {
+        "@id": "nsg:preSynaptic"
+      },
+       "postSynaptic": {
+        "@id": "nsg:postSynaptic"
+      },
       "prefLabel": {
         "@id": "skos:prefLabel"
       },
@@ -1187,6 +1193,9 @@
       },
       "stimulusType": {
         "@id": "nsg:stimulusType"
+      },
+      "store": {
+        "@id": "nsg:store"
       },
       "strain": {
         "@id": "nsg:strain"
