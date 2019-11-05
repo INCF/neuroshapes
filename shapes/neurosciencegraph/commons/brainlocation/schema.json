@@ -29,8 +29,19 @@
         {
           "path": "nsg:layer",
           "name": "Brain region layer",
-          "description": "Brain region region (e.g. layer of the neocortex)",
+          "description": "Brain region layer (e.g. layer of the neocortex)",
           "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape"
+        },
+        {
+          "path": "nsg:hemisphere",
+          "name": "Brain hemisphere",
+          "description": "Brain hemisphere (left / right)",
+          "sh:in": {
+            "@list": [
+              "Left",
+              "Right"
+            ]
+          }
         },
         {
           "path": "nsg:coordinatesInBrainAtlas",
