@@ -33,7 +33,7 @@
           "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape"
         },
         {
-          "path": "nsg:hemisphere",
+          "path": "nsg:brainHemisphere",
           "name": "Brain hemisphere",
           "description": "Brain hemisphere (left / right)",
           "sh:in": {
