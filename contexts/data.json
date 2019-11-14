@@ -1269,7 +1269,8 @@
         "@id": "nsg:upperPoint"
       },
       "url": {
-        "@id": "schema:url"
+        "@id": "schema:url",
+        "@type": "@id"
       },
       "used": {
         "@id": "prov:used"
