@@ -34,7 +34,7 @@
             {
               "path": "prov:generated",
               "description": "The patched slice generated",
-              "class": "nsg:PatchedSlice",
+              "class": "nsg:SliceCollection",
               "seeAlso": "https://neuroshapes.org/dash/slice/shapes/PatchedSliceShape"
             }
           ]
