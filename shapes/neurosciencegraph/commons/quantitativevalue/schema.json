@@ -32,6 +32,18 @@
               "datatype": "xsd:double"
             },
             {
+              "datatype": "xsd:int"
+            },
+            {
+              "datatype": "xsd:long"
+            },
+            {
+              "datatype": "xsd:unsignedInt"
+            },
+            {
+              "datatype": "xsd:unsignedLong"
+            },
+            {
               "datatype": "xsd:integer"
             }
           ],

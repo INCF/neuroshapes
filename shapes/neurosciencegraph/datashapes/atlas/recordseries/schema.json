@@ -38,7 +38,7 @@
               "path": "nsg:numberOfRecords",
               "name": "Number Of Records",
               "description": "Number of record in this series",
-              "datatype": "xsd:integer",
+              "datatype": "xsd:long",
               "minCount": 1
             },
 
@@ -46,7 +46,7 @@
               "path": "nsg:byteOffset",
               "name": "Byte Offset",
               "description": "Number of byte at the begining of the file/buffer before the first measure or the first record. Mostly relevant for binary buffers as CSV would usually contain a header.",
-              "datatype": "xsd:integer"
+              "datatype": "xsd:long"
             },
 
             {
