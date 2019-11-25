@@ -1,0 +1,7 @@
+{
+  "@context": [
+    "file:///Users/agarcia/Developments/neuroshapes/context/data.json"
+  ],
+  "@type": "RecordMeasure",
+  "name": "test measure"
+}

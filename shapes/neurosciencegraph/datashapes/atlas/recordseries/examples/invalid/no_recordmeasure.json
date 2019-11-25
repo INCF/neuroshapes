@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "file:///Users/agarcia/Developments/neuroshapes/context/data.json"
+  ],
+  "@type": [
+    "Entity",
+    "RecordSeries",
+    "CellRecordSeries"
+  ],
+  "name": "Whole Brain Cell Positions 1 percent density",
+  "description": "This binary buffer contains the cell positions of 1% of the mouse brain",
+  "isRegisteredIn": {
+    "@type": "nsg:BrainAtlasSpatialReferenceSystem",
+    "@id": "https://example/rs1"
+  },
+  "atlasRelease": {
+    "@id": "https://example/loc1"
+  },
+  "brainLocation": {
+    "atlasSpatialReferenceSystem": {
+      "@type": "nsg:BrainAtlasSpatialReferenceSystem",
+      "@id": "https://example/rs1"
+    },
+    "brainRegion": {
+      "@id": "mba:997",
+      "label": "root"
+    }
+  },
+  "numberOfRecords": 989195,
+  "byteOffset": 0,
+  "bufferEncoding": "binary",
+  "endianness": "little",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentSize": {
+      "unitCode": "bytes",
+      "value": 13848730
+    },
+    "contentUrl": "https://example/1234.xyz",
+    "digest": {
+      "algorithm": "SHA-256",
+      "value": "222222"
+    },
+    "encodingFormat": "application/octet-stream",
+    "name": "1234.xyz"
+  }
+}

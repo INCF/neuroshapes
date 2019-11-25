@@ -1,0 +1,9 @@
+{
+  "@context": [
+    "file:///Users/agarcia/Developments/neuroshapes/context/data.json"
+  ],
+  "@type": "RecordMeasure",
+  "name": "x",
+  "description": "Cell position along the X axis",
+  "componentEncoding": "float32"
+}

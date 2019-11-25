@@ -26,14 +26,13 @@
         },
         {
           "property": [
-
             {
               "path": "nsg:recordMeasure",
               "name": "Record Measure",
               "description": "List of measures performed or computed on a system",
+              "node": "this:NotEmptyListOfRecordMeasureShape",
               "minCount": 1
             },
-
             {
               "path": "nsg:numberOfRecords",
               "name": "Number Of Records",
@@ -41,14 +40,12 @@
               "datatype": "xsd:integer",
               "minCount": 1
             },
-
             {
               "path": "nsg:byteOffset",
               "name": "Byte Offset",
               "description": "Number of byte at the begining of the file/buffer before the first measure or the first record. Mostly relevant for binary buffers as CSV would usually contain a header.",
               "datatype": "xsd:integer"
             },
-
             {
               "path": "nsg:bufferEncoding",
               "name": "Buffer Encoding",
@@ -60,7 +57,6 @@
               "minCount": 1,
               "maxCount": 1
             },
-
             {
               "path": "nsg:endianness",
               "name": "Endianness",
@@ -71,12 +67,10 @@
               ],
               "maxCount": 1
             }
-
           ]
         }
       ]
     },
-
     {
       "@id": "this:RecordMeasureShape",
       "@type": "sh:NodeShape",
@@ -121,6 +115,81 @@
             "float16",
             "float32",
             "float64"
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:RecordMeasureNode",
+      "not": [
+        {
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ],
+      "property": [
+        {
+          "maxCount": 1,
+          "minCount": 1,
+          "path": "rdf:rest"
+        },
+        {
+          "path": "rdf:first",
+          "class": "this:RecordMeasure"
+        }
+      ]
+    },
+    {
+      "@id": "this:ListOfRecordMeasureNodeShape",
+      "@type": "NodeShape",
+      "message": "List should contain only RecordMeasure or EmptyNode",
+      "or": [
+        "this:EmptyNode",
+        "this:RecordMeasureNode"
+      ]
+    },
+    {
+      "@id": "this:ListOfRecordMeasureShape",
+      "@type": "NodeShape",
+      "rdfs:label": "List of RecordMeasure",
+      "property": [
+        {
+          "path": [
+            {
+              "zeroOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
+          ],
+          "node": "this:ListOfRecordMeasureNodeShape",
+          "hasValue": [
+            {
+              "@list": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "this:NotEmptyListOfRecordMeasureShape",
+      "@type": "NodeShape",
+      "node": "this:ListOfRecordMeasureShape",
+      "property": [
+        {
+          "minCount": 1,
+          "path": [
+            {
+              "oneOrMorePath": [
+                {
+                  "@id": "rdf:rest"
+                }
+              ]
+            }
           ]
         }
       ]

@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "file:///Users/agarcia/Developments/neuroshapes/context/data.json"
+  ],
+  "@type": [
+    "Entity",
+    "RecordSeries",
+    "CellRecordSeries"
+  ],
+  "name": "Whole Brain Cell Positions 1 percent density",
+  "description": "This binary buffer contains the cell positions of 1% of the mouse brain",
+  "isRegisteredIn": {
+    "@type": "nsg:BrainAtlasSpatialReferenceSystem",
+    "@id": "https://bbp.epfl.ch/neurosciencegraph/data/allen_ccfv3_spatial_reference_system"
+  },
+  "atlasRelease": {
+    "@id": "https://bbp.epfl.ch/neurosciencegraph/data/e2e500ec-fe7e-4888-88b9-b72425315dda"
+  },
+  "brainLocation": {
+    "atlasSpatialReferenceSystem": {
+      "@type": "nsg:BrainAtlasSpatialReferenceSystem",
+      "@id": "https://bbp.epfl.ch/neurosciencegraph/data/allen_ccfv3_spatial_reference_system"
+    },
+    "brainRegion": {
+      "@id": "mba:997",
+      "label": "root"
+    }
+  },
+  "byteOffset": 0,
+  "bufferEncoding": "binary",
+  "endianness": "little",
+  "distribution": {
+    "@type": "DataDownload",
+    "contentSize": {
+      "unitCode": "bytes",
+      "value": 13848730
+    },
+    "contentUrl": "https://staging.nexus.ocp.bbp.epfl.ch/v1/files/bbp/atlas/10e9cab7-3940-45da-ad69-2eb042ece855",
+    "digest": {
+      "algorithm": "SHA-256",
+      "value": "29321e1397459f5a21eb85b113a66db6f3ab3f88618856b47c043d8197635035"
+    },
+    "encodingFormat": "application/octet-stream",
+    "name": "cell_x_y_z_type_ratio1pc.raw"
+  },
+  "numberOfRecords": 3,
+  "recordMeasure": [
+  ],
+
+}
