@@ -78,6 +78,9 @@
       "CellPlacement": {
         "@id": "nsg:CellPlacement"
       },
+      "CellRecordSeries": {
+        "@id": "nsg:CellRecordSeries"
+      },
       "CircuitCellProperties": {
         "@id": "nsg:CircuitCellProperties"
       },
@@ -336,6 +339,12 @@
       "ReconstructionFromImage": {
         "@id": "nsg:ReconstructionFromImage"
       },
+      "RecordMeasure": {
+        "@id": "nsg:RecordMeasure"
+      },
+      "RecordSeries": {
+        "@id": "nsg:RecordSeries"
+      },
       "RegionOfInterest": {
         "@id": "nsg:RegionOfInterest"
       },
@@ -371,6 +380,9 @@
       },
       "SoftwareAgent": {
         "@id": "prov:SoftwareAgent"
+      },
+      "SpaceDimension": {
+        "@id": "nsg:SpaceDimension"
       },
       "SpatialIndex": {
         "@id": "nsg:SpatialIndex"
@@ -507,8 +519,12 @@
       "atTime": {
         "@id": "prov:atTime"
       },
+      "atlasRelease": {
+        "@id": "nsg:atlasRelease"
+      },
       "atlasSpatialReferenceSystem": {
-        "@id": "nsg:atlasSpatialReferenceSystem"
+        "@id": "nsg:atlasSpatialReferenceSystem",
+        "@type": "@id"
       },
       "atlasVersion": {
         "@id": "nsg:atlasVersion"
@@ -546,6 +562,9 @@
       },
       "bufferEncoding": {
         "@id": "nsg:bufferEncoding"
+      },
+      "byteOffset": {
+        "@id": "nsg:byteOffset"
       },
       "cellLibraryFile": {
         "@id": "nsg:cellLibraryFile"
@@ -961,6 +980,9 @@
         "@id": "skos:note"
       },
       "nsg": "https://neuroshapes.org/",
+      "numberOfRecords": {
+        "@id": "nsg:numberOfRecords"
+      },
       "numberOfSlices": {
         "@id": "nsg:numberOfSlices"
       },
@@ -1072,6 +1094,10 @@
       },
       "reconstructionRequested": {
         "@id": "nsg:reconstructionRequested"
+      },
+      "recordMeasure": {
+        "@id": "nsg:recordMeasure",
+        "@container": "@list"
       },
       "releaseDate": {
         "@id": "schema:releaseDate"
