@@ -43,5 +43,10 @@
     },
     "encodingFormat": "application/octet-stream",
     "name": "file.xyz"
-  }
+  },
+  "recordMeasure": [
+    { "@type" : "Person", "name": "Tom"},
+    { "@type" : "Person", "name": "Ana"},
+    { "@type" : "Person", "name": "Sam"}
+  ]
 }

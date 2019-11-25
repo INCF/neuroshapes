@@ -8,7 +8,8 @@
   "@id": "https://neuroshapes.org/dash/recordseries",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/entity"
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/list/"
   ],
   "shapes": [
     {
@@ -31,7 +32,8 @@
               "name": "Record Measure",
               "description": "List of measures performed or computed on a system",
               "node": "this:NotEmptyListOfRecordMeasureShape",
-              "minCount": 1
+              "minCount": 1,
+              "maxCount": 1
             },
             {
               "path": "nsg:numberOfRecords",
@@ -75,7 +77,6 @@
       "@id": "this:RecordMeasureShape",
       "@type": "sh:NodeShape",
       "targetClass": "nsg:RecordMeasure",
-
       "label": "Record Measure Shape",
       "description": "A measure can be anything",
       "property": [
@@ -137,8 +138,12 @@
           "path": "rdf:rest"
         },
         {
-          "path": "rdf:first",
-          "class": "this:RecordMeasure"
+          "class": "nsg:RecordMeasure",
+          "maxCount": 1,
+          "minCount": 1,
+          "nodeKind": "sh:BlankNodeOrIRI",
+          "message": "Data should be of RecordMeasure type",
+          "path": "rdf:first"
         }
       ]
     },
@@ -147,7 +152,7 @@
       "@type": "NodeShape",
       "message": "List should contain only RecordMeasure or EmptyNode",
       "or": [
-        "this:EmptyNode",
+        "https://neuroshapes.org/commons/list/shapes/EmptyNode",
         "this:RecordMeasureNode"
       ]
     },
@@ -159,11 +164,9 @@
         {
           "path": [
             {
-              "zeroOrMorePath": [
-                {
-                  "@id": "rdf:rest"
-                }
-              ]
+              "zeroOrMorePath": {
+                "@id": "rdf:rest"
+              }
             }
           ],
           "node": "this:ListOfRecordMeasureNodeShape",

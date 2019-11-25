@@ -116,7 +116,7 @@
       "label": "Area Codes List Shape",
       "property": {
         "path": {
-          "oneOrMorePath": {
+          "zeroOrMorePath": {
             "@id": "rdf:rest"
           }
         },
