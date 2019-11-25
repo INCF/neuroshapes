@@ -1,6 +1,6 @@
 {
   "@context": [
-    "file:///Users/agarcia/Developments/neuroshapes/context/data.json"
+    "https://incf.github.io/neuroshapes/contexts/data.json"
   ],
   "@type": [
     "Entity",

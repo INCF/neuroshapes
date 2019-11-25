@@ -1383,6 +1383,5 @@
       "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "https://bluebrain.github.io/nexus/contexts/resource.json"
-  ],
-  "@id": "https://neuroshapes.org"
+  ]
 }
