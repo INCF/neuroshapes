@@ -257,7 +257,7 @@
       "NeuronDensity": {
         "@id": "nsg:NeuronDensity"
       },
-      "NeuronMorphologyq": {
+      "NeuronMorphology": {
         "@id": "nsg:NeuronMorphology"
       },
       "NeuronMorphologyReconstruction": {
