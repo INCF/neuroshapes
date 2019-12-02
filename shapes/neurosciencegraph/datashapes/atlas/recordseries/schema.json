@@ -45,7 +45,7 @@
             {
               "path": "nsg:byteOffset",
               "name": "Byte Offset",
-              "description": "Number of byte at the begining of the file/buffer before the first measure or the first record. Mostly relevant for binary buffers as CSV would usually contain a header.",
+              "description": "Number of byte at the beginning of the file/buffer before the first measure or the first record. Mostly relevant for binary buffers as CSV would usually contain a header.",
               "datatype": "xsd:long"
             },
 
@@ -81,7 +81,6 @@
       "@id": "this:RecordMeasureShape",
       "@type": "sh:NodeShape",
       "targetClass": "nsg:RecordMeasure",
-
       "label": "Record Measure Shape",
       "description": "A measure can be anything",
       "property": [
