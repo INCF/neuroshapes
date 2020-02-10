@@ -1,0 +1,45 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/optophysiology/roiselection/v0.1.0/shapes/"
+      }
+    ],
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+      {
+        "@id": "this:ROISelectionShape",
+        "@type": "sh:NodeShape",
+        "label": "Region of interest selection shape definition",
+        "description": "Process of selecting regions of interest, may be manual, semi-automated, or fully automated.",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "targetClass": "nsg:RegionOfInterestSelection",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
+          },
+          {
+            "property": [
+              {
+                "path": "prov:used",
+                "name": "Image sequence",
+                "description": "The image sequence used",
+                "class": "nsg:ImageSequence",
+                "minCount": 1
+              },
+              {
+                "path": "prov:generated",
+                "name": "Regions",
+                "description": "The ROIs generated",
+                "class": "nsg:RegionOfInterest",
+                "minCount": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

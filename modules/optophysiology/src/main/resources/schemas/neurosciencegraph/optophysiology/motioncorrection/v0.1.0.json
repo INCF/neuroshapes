@@ -1,0 +1,45 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/optophysiology/motioncorrection/v0.1.0/shapes/"
+      }
+    ],
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4"
+    ],
+    "@type": "nxv:Schema",
+    "shapes": [
+      {
+        "@id": "this:MotionCorrectionShape",
+        "@type": "sh:NodeShape",
+        "label": "Motion correction shape definition",
+        "description": "Correction for x-y movement in image frames.",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "targetClass": "nsg:MotionCorrection",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/activity/v0.1.4/shapes/ActivityShape"
+          },
+          {
+            "property": [
+              {
+                "path": "prov:used",
+                "name": "Before",
+                "description": "The image sequence used",
+                "class": "nsg:ImageSequence",
+                "minCount": 1
+              },
+              {
+                "path": "prov:generated",
+                "name": "After",
+                "description": "The corrected image sequence generated",
+                "class": "nsg:ImageSequence",
+                "minCount": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

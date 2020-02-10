@@ -1,0 +1,23 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "nsg:ImageSequence"
+    ],
+    "name": "seq002",
+    "nsg:imageSize": 512,
+    "nsg:imageCount": 700,
+    "nsg:frameRate": {
+        "unitText": "Hz",
+        "value": "14.4"
+    },
+    "prov:wasGeneratedBy": {
+        "@id": "{{base}}/data/neurosciencegraph/optophysiology/twophotonimaging/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
+        "@type": [
+          "nsg:TwoPhotonImaging",
+          "prov:Activity"
+        ]
+    }
+}

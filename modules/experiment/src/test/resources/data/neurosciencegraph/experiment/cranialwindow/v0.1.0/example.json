@@ -1,0 +1,16 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "nsg:CranialWindow"
+    ],
+    "name": "Window1",
+    "nsg:windowType": "thinned skull",
+    "nsg:diameter": {
+        "unitText": "mm",
+        "value": "3.0"
+    },
+    "nsg:labellingMethod": "injection of the viral construct AAV1.Syn.GCaMP6m.WPRE.SV40"
+}

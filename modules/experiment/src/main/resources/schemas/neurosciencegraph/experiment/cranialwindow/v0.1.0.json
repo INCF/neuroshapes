@@ -1,0 +1,60 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/schema/v0.1.0",
+      {
+        "this": "{{base}}/schemas/neurosciencegraph/experiment/cranialwindow/v0.1.1/shapes/"
+      }
+    ],
+    "@type": "nxv:Schema",
+    "imports": [
+      "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0",
+      "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1",
+      "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2"
+    ],
+    "shapes": [
+      {
+        "@id": "this:CranialWindowShape",
+        "@type": "sh:NodeShape",
+        "label": "Cranial window shape definition",
+        "targetClass": "nsg:CranialWindow",
+        "nodeKind": "sh:BlankNodeOrIRI",
+        "and": [
+          {
+            "node": "{{base}}/schemas/neurosciencegraph/commons/entity/v0.1.0/shapes/EntityShape"
+          },
+          {
+            "property": [
+              {
+                "path": "nsg:brainLocation",
+                "name": "Brain location",
+                "description": "Brain location information of the cranial window",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/brainlocation/v0.1.1/shapes/BrainLocationShape"
+              },
+              {
+                "path": "nsg:windowType",
+                "name": "Window type",
+                "in": [
+                    "open window",
+                    "thinned skull",
+                    "chronically implanted glass window"
+                ],
+                "description": "The type of window."
+              },
+              {
+                "path": "nsg:diameter",
+                "name": "Diameter",
+                "description": "Diameter of the window",
+                "node": "{{base}}/schemas/neurosciencegraph/commons/quantitativevalue/v0.1.2/shapes/QuantitativeValueShape"
+              },
+              {
+                "path": "nsg:labellingMethod",
+                "name": "Fluorescence labelling",
+                "datatype": "xsd:string",
+                "description": "Details of the labelling method (for example, injection of a viral construct)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

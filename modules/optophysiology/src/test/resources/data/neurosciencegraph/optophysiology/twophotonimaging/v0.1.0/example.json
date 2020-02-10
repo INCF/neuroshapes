@@ -1,0 +1,46 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "nsg:TwoPhotonImaging",
+      "prov:Activity"
+    ],
+    "generated": {
+      "@id": "{{base}}/data/neurosciencegraph/optophysiology/imagesequence/v0.1.0/87a00313-e95b-4282-8a84-94afc639d47e",
+      "@type": [
+        "nsg:ImageSequence",
+        "prov:Entity"
+      ]
+    },
+    "used": {
+      "@id": "{{base}}/data/neurosciencegraph/experiment/cranialwindow/v0.1.0/c33d5541-ac7a-4214-8928-f4edc48e893e",
+      "@type": [
+        "nsg:CranialWindow",
+        "prov:Entity"
+      ]
+    },
+    "nsg:microscope": "Leica SP5 resonant laser scanning microscope",
+    "nsg:brainState": "anesthetized",
+    "nsg:anesthesia": "1–2% isoflurane anesthesia",
+    "nsg:laser": "Spectra-Physics Mai Tai high-performance mode-locked Ti:sapphire",
+    "nsg:excitationWavelength": {
+        "unitText": "nm",
+        "min": 900,
+        "max": 940
+    },
+    "nsg:laserpower": {
+        "unitText": "mW",
+        "min": 14,
+        "max": 21
+    },
+    "nsg:collectionWavelength": {
+        "unitText": "nm",
+        "value": 525
+    },
+    "nsg:imagingDepth": {
+        "unitText": "µm",
+        "min": 140,
+        "max": 200
+    }
+  }

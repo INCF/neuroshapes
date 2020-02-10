@@ -1,0 +1,21 @@
+{
+    "@context": [
+      "{{base}}/contexts/neurosciencegraph/core/data/v0.1.0"
+    ],
+    "@type": [
+      "prov:Entity",
+      "nsg:RegionOfInterest"
+    ],
+    "name": "ROI3",
+    "nsg:position": {
+        "nsg:origin": "bottom-left",
+        "nsg:x": 87,
+        "nsg:y": 145
+    },
+    "nsg:shape": "rectangle",
+    "nsg:size": {
+        "nsg:width": 32,
+        "nsg:height": 56
+    },
+    "nsg:classification": "proximal dendrite"
+}
