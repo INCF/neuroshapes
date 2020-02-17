@@ -1334,6 +1334,12 @@
       "wasStartedBy": {
         "@id": "prov:wasStartedBy"
       },
+      "wasInformedBy": {
+        "@id": "prov:wasInformedBy"
+      },
+      "wasInfluencedBy": {
+        "@id": "prov:wasInfluencedBy"
+      },
       "weight": {
         "@id": "schema:weight"
       },
