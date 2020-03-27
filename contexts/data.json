@@ -21,6 +21,12 @@
       "Analysis": {
         "@id": "nsg:Analysis"
       },
+      "AnalysisConfiguration": {
+        "@id": "nsg:AnalysisConfiguration"
+      },
+      "AnalysisReport": {
+        "@id": "nsg:AnalysisReport"
+      },
       "AnalysisResult": {
         "@id": "nsg:AnalysisResult"
       },
@@ -68,6 +74,9 @@
       },
       "BrainSlicing": {
         "@id": "nsg:BrainSlicing"
+      },
+      "CampaignAnalysis": {
+        "@id": "nsg:CampaignAnalysis"
       },
       "Cell": {
         "@id": "nsg:Cell"
@@ -354,8 +363,14 @@
       "Simulation": {
         "@id": "nsg:Simulation"
       },
+      "SimulationCampaign": {
+        "@id": "nsg:SimulationCampaign"
+      },
       "SimulationTrace": {
         "@id": "nsg:SimulationTrace"
+      },
+      "SimWriterConfiguration": {
+        "@id": "nsg:SimWriterConfiguration"
       },
       "SingleCellSimulationTrace": {
         "@id": "nsg:SingleCellSimulationTrace"
@@ -453,8 +468,8 @@
       "WholeCellPatchClamp": {
         "@id": "nsg:WholeCellPatchClamp"
       },
-      "WorkflowEngine": {
-        "@id": "nsg:WorkflowEngine"
+      "WorkflowExecution": {
+        "@id": "nsg:WorkflowExecution"
       },
       "activity": {
         "@id": "prov:activity"
