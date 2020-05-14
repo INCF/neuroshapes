@@ -162,6 +162,15 @@
           "name": "Note",
           "description": "A general note, for any purpose. This could include reasons on which an annotation - such as an mType classification - was based.",
           "datatype": "xsd:string"
+        },
+        {
+          "path": "rdfs:label",
+          "name": "label",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "rdf:type",
+          "nodeKind": "sh:IRI"
         }
 
       ]
