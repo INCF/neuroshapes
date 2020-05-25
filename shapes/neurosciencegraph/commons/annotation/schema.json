@@ -167,12 +167,7 @@
           "path": "rdfs:label",
           "name": "label",
           "datatype": "xsd:string"
-        },
-        {
-          "path": "rdf:type",
-          "nodeKind": "sh:IRI"
         }
-
       ]
     },
     {

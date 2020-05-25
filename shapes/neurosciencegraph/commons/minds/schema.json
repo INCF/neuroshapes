@@ -41,13 +41,6 @@
               "maxCount": 1
             },
             {
-              "path": "rdf:type",
-              "name": "Type",
-              "description": "The dataset type.",
-              "nodeKind": "sh:IRI",
-              "minCount": 1
-            },
-            {
               "path": "nsg:subject",
               "name": "Subject",
               "description": "The subject of the study. This data represent an observation of this subject.",
