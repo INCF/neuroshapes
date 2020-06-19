@@ -31,9 +31,10 @@
           "maxCount": 1
         }
       ]
-    },{
+    },
+    {
       "@id": "this:WithUnitCodeShape",
-      "@type":"sh:PropertyShape",
+      "@type": "sh:PropertyShape",
       "path": "schema:unitCode",
       "name": "Unit",
       "or": [

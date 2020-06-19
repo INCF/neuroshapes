@@ -5,6 +5,7 @@
       "this": "https://neuroshapes.org/dash/ontologyentity/shapes/"
     }
   ],
+  "@id": "https://neuroshapes.org/dash/ontologyentity",
   "@type": "nxv:Schema",
   "shapes": [
     {
