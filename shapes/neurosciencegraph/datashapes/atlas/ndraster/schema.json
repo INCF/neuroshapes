@@ -114,10 +114,6 @@
         }
       ]
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
     {
       "@id": "this:DimensionShape",
       "@type": "sh:NodeShape",
@@ -134,11 +130,6 @@
         }
       ]
     },
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
     {
       "@id": "this:TimeDimensionShape",
       "@type": "sh:NodeShape",
