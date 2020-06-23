@@ -97,7 +97,7 @@
             {
               "path": "nsg:apicalDendriteCumulatedLength",
               "name": "Apical dendrite cumulated length",
-              "description": "Cumulated length of all the segments of all the apical dendrites present in this morphology, in the metric unit spacified in the linked brain location or spatial reference system (most likely micrometer)",
+              "description": "Cumulated length of all the segments of all the apical dendrites present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
               "datatype": "xsd:long",
               "minCount": 1,
               "maxCount": 1
@@ -107,7 +107,7 @@
             {
               "path": "nsg:basalDendriteCumulatedLength",
               "name": "Basal dendrite cumulated length",
-              "description": "Cumulated length of all the segments of all the basal dendrites present in this morphology, in the metric unit spacified in the linked brain location or spatial reference system (most likely micrometer)",
+              "description": "Cumulated length of all the segments of all the basal dendrites present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
               "datatype": "xsd:long",
               "minCount": 0,
               "maxCount": 1
@@ -117,7 +117,7 @@
             {
               "path": "nsg:axonCumulatedLength",
               "name": "Axon cumulated length",
-              "description": "Cumulated length of all the segments of all the axons present in this morphology, in the metric unit spacified in the linked brain location or spatial reference system (most likely micrometer)",
+              "description": "Cumulated length of all the segments of all the axons present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
               "datatype": "xsd:long",
               "minCount": 0,
               "maxCount": 1
