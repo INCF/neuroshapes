@@ -150,18 +150,7 @@
               "name": "Axon projection region",
               "description": "Brain region where the axon projection is",
               "datatype": "nsg:ParcellationOntology <TO FIX: This is probably not the correct node/type. Here we want things like 'mba:997'"
-            },
-
-
-            <mType and other types?>
-
-
-
-
-
-
-
-            
+            }            
           ]
         }
       ]
