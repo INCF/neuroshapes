@@ -1,0 +1,104 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/validationrules/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/validationrules",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ValidationRulesShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+            {
+              "path": "nsg:danglingBranch",
+              "name": "Dangling branch",
+              "description": "The range of acceptable distance for the first point of a dendrite/axon to be from the center of the soma.",
+              "node": "this:RangeShape"
+            },
+
+
+            {
+              "path": "nsg:zJump",
+              "name": "Z-jump",
+              "description": "The range of acceptable distance in Z between 2 adjacent points.",
+              "node": "this:RangeShape"
+            },
+
+
+            {
+              "path": "nsg:narrowStart",
+              "name": "Narrow start",
+              "description": "The range of acceptable values for the ratio (second_section_diameter / first_section_diameter), most likely [0, 1]. This ensures the second section always has a smaller diameter than the first section.",
+              "node": "this:RangeShape"
+            },
+
+
+            {
+              "path": "nsg:fatEnd",
+              "name": "Fat end",
+              "description": "The range of acceptable values for the ratio (last_section_diameter / average_section_diameter), most likely [0, 1]. This ensures the last section is not larger than the average.",
+              "node": "this:RangeShape"
+            },
+
+            {
+              "path": "nsg:numberOfChildren",
+              "name": "Number of children",
+              "description": "The range of acceptable number of children for a given node or point. Most likely [0, 3].",
+              "node": "this:RangeShape"
+            },
+
+            {
+              "path": "nsg:diameterChange",
+              "name": "Diameter change",
+              "description": "The range of acceptable percentage of diameter change for contiguous nodes. Most likely 30%, so in the range of [0, 30]",
+              "node": "this:RangeShape"
+            }
+
+          ]
+        }
+      ]
+    },
+    
+    
+    {
+      "@id": "this:RangeShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:minValue",
+              "name": "Minimum value",
+              "description": "The minimum value of the range.",
+              "minCount": 1,
+              "maxCount": 1,
+              "lessThan": "schema:maxValue"
+            },
+            {
+              "path": "schema:maxValue",
+              "name": "Maximum value",
+              "description": "The maximum value of the range.",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
