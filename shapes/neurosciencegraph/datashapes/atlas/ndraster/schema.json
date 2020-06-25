@@ -169,21 +169,13 @@
         }
       ]
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
     {
       "@id": "this:SpaceDimensionShape",
       "@type": "sh:NodeShape",
       "label": "Space Dimension shape",
       "nodekind": "sh:BlankNodeOrIRI",
       "class": "nsg:SpaceDimension",
-<<<<<<< HEAD
-      "seeAlso": "UN/CEFACT codes http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
-=======
       "seeAlso": "http://wiki.goodrelations-vocabulary.org/Documentation/UN/CEFACT_Common_Codes",
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
       "and": [
         {
           "node": "this:DimensionShape"
@@ -192,13 +184,8 @@
           "property": [
             {
               "path": "schema:unitCode",
-<<<<<<< HEAD
-              "name": "Time Unit",
-              "description": "Unit of time used to qualify the sampling.",
-=======
               "name": "Space Unit",
               "description": "Unit of space used to qualify the sampling.",
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
               "or": [
                 {
                   "node": "https://neuroshapes.org/commons/labeledontologyentity/shapes/LabeledOntologyEntityShape"
@@ -214,12 +201,6 @@
         }
       ]
     },
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe
     {
       "@id": "this:ComponentDimensionShape",
       "@type": "sh:NodeShape",
@@ -244,11 +225,5 @@
         }
       ]
     }
-<<<<<<< HEAD
-
   ]
 }
-=======
-  ]
-}
->>>>>>> 987214e685f25e8b7ba670a79e1c0bd602c562fe

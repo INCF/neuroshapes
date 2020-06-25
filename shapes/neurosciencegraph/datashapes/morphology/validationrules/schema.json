@@ -8,12 +8,17 @@
   "@id": "https://neuroshapes.org/commons/validationrules",
   "@type": "nxv:Schema",
   "imports": [
-    "https://neuroshapes.org/commons/entity"
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/quantitativevalue"
   ],
   "shapes": [
     {
       "@id": "this:ValidationRulesShape",
       "@type": "sh:NodeShape",
+      "label": "Set of ranges and tolerance theshold that defines what a valid morphology is.",
+      "targetClass": [
+        "nsg:ValidationRules"
+      ],
       "nodeKind": "sh:BlankNodeOrIRI",
       "and": [
         {
@@ -64,7 +69,33 @@
               "name": "Diameter change",
               "description": "The range of acceptable percentage of diameter change for contiguous nodes. Most likely 30%, so in the range of [0, 30]",
               "node": "this:RangeShape"
+            },
+
+            {
+              "path": "nsg:diameterDivergence",
+              "name": "Diameter divergence",
+              "description": "The range of acceptable percentage of diameter change between the stack (or slice) and the reconstruction. Most likely 10%, so in the range of [0, 10]",
+              "node": "this:RangeShape"
+            },
+
+
+            {
+              "path": "nsg:tooSmallSomaDiceCoeficient",
+              "name": "Too small soma DICE coefficient",
+              "description": "The range of DICE coeficient within which a soma is said to be too small. Most likely [0, 0.7]",
+              "node": "this:RangeShape"
+            },
+
+
+            {
+              "path": "nsg:axonButtonAnnotation",
+              "name": "Axon button annotation",
+              "description": "Boutons should be annotated for a sample axon lengths longer than a specific length in different regions. Most likely longer than 200um.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
             }
+
+
+
 
           ]
         }

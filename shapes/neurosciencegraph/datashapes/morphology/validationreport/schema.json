@@ -1,0 +1,174 @@
+{
+  "@context": [
+    "https://incf.github.io/neuroshapes/contexts/schema.json",
+    {
+      "this": "https://neuroshapes.org/commons/validationreport/shapes/"
+    }
+  ],
+  "@id": "https://neuroshapes.org/commons/validationreport",
+  "@type": "nxv:Schema",
+  "imports": [
+    "https://neuroshapes.org/commons/entity",
+    "https://neuroshapes.org/commons/vector3d",
+    "https://neuroshapes.org/dash/neuronmorphology",
+    "https://neuroshapes.org/commons/validationrules"
+  ],
+  "shapes": [
+    {
+      "@id": "this:ValidationReportShape",
+      "@type": "sh:NodeShape",
+      "nodeKind": "sh:BlankNodeOrIRI",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/entity/shapes/EntityShape"
+        },
+        {
+          "property": [
+
+
+            {
+              "path": "nsg:neuronMorphology",
+              "name": "Neuron morphology",
+              "description": "Neuron morphology resource used to generate this report",
+              "class": "nsg:NeuronMorphology"
+            },
+
+            {
+              "path": "nsg:validationRules",
+              "name": "Validation rules",
+              "description": "Set of rules that where used against a morphology to generate this report.",
+              "class": "nsg:ValidationRules"
+            },
+
+            {
+              "path": "nsg:danglingBranch",
+              "name": "Dangling branch",
+              "description": "Position (3D) of dangling branches (as pairs of nodes are involved, the position is the one of the node closer to the soma)",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+
+            {
+              "path": "nsg:zJump",
+              "name": "Z-jump",
+              "description": "Position (3D) of z-jumps (as pairs of nodes are involved, the position is the one of the node closer to the soma)",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:narrowStart",
+              "name": "Narrow start",
+              "description": "Position (3D) of the narrow starts",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:fatEnd",
+              "name": "Fat end",
+              "description": "Position (3D) of the fat end",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:numberOfChildren",
+              "name": "Number of children",
+              "description": "Position (3D) of the nodes that have more children than the threshold",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:diameterChange",
+              "name": "Diameter change",
+              "description": "Position (3D) of the nodes that have an inapropriate diameter",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:forkInsideSoma",
+              "name": "Fork inside soma",
+              "description": "Position (3D) of the node that are internal to the soma and are forking. Most likely a human check.",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+
+            {
+              "path": "nsg:neuriteIntersection",
+              "name": "Neurite intersection",
+              "description": "Position (3D) of same-cell neurite intersection. Most likely a human check.",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:missingNeurite",
+              "name": "Missing neurite",
+              "description": "Position (3D) of the nodes that are at the start of missing neurites. Most likely a human check.",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:diameterDivergence",
+              "name": "Diameter divergence",
+              "description": "Position (3D) of the nodes that have a diameter too different from the original dataset (stack, slice). Most likely a human check.",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:incorrectNeuriteLabel",
+              "name": "Incorrect neurite label",
+              "description": "Position (3D) of the first node of a neurite branch that is incorrectly labeled. Most likely a human check.",
+              "node": "https://neuroshapes.org/commons/vector3d/shapes/Vector3DShape"
+            },
+
+            {
+              "path": "nsg:tooSmallSomaDiceCoeficient",
+              "name": "Too small soma DICE coefficient",
+              "description": "If the soma DICE coeffcient is within the rule's range, then the soma is said too small and this value should be true.",
+              "datatype": "xsd:boolean"
+            },
+
+
+            {
+              "path": "nsg:axonButtonAnnotation",
+              "name": "Axon button annotation",
+              "description": "Axon length along which button were annotated.",
+              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape"
+            }
+            
+
+
+          ]
+        }
+      ]
+    },
+    
+    
+    {
+      "@id": "this:RangeShape",
+      "@type": "sh:NodeShape",
+      "and": [
+        {
+          "node": "https://neuroshapes.org/commons/unit/shapes/UnitShape"
+        },
+        {
+          "property": [
+            {
+              "path": "schema:minValue",
+              "name": "Minimum value",
+              "description": "The minimum value of the range.",
+              "minCount": 1,
+              "maxCount": 1,
+              "lessThan": "schema:maxValue"
+            },
+            {
+              "path": "schema:maxValue",
+              "name": "Maximum value",
+              "description": "The maximum value of the range.",
+              "minCount": 1,
+              "maxCount": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

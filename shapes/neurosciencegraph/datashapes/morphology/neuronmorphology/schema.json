@@ -9,7 +9,8 @@
   "@type": "nxv:Schema",
   "imports": [
     "https://neuroshapes.org/core/dataset",
-    "https://neuroshapes.org/commons/quantitativevalue"
+    "https://neuroshapes.org/commons/quantitativevalue",
+    "https://neuroshapes.org/commons/brainlocation"
   ],
   "shapes": [
     {
@@ -28,12 +29,19 @@
           "property": [
 
             {
-              "path": "nsg:isRegisteredIn", // change the name
+              "path": "nsg:isRegisteredIn", // change the name, but all the Atlas data are already using isRegisterdIn...
               "class": "nsg:BrainAtlasSpatialReferenceSystem",
               "maxCount": 1
             },
 
-
+            {
+              "path": "nsg:brainLocation",
+              "name": "brain location",
+              "description": "Brain Location (brain region, atlas space).",
+              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
+              "minCount": 0,
+              "maxCount": 1
+            },
 
 
             { // use types instead? Or taxonomy? (revise the set of types)
@@ -50,7 +58,6 @@
               "maxCount": 1
             },
 
-
             {
               "path": "nsg:somaNumberOfPoints",
               "name": "Soma number of points",
@@ -59,97 +66,75 @@
               "minCount": 0,
               "maxCount": 1
             },
-
+            
             {
-              "path": "nsg:numberOfApicalDendrites",
-              "name": "Number of apical dendrites",
-              "description": "Number of apical dendrites rooting from the soma",
-              "datatype": "xsd:int",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:numberOfBasalDendrites",
-              "name": "Number of basal dendrites",
-              "description": "Number of basal dendrites rooting from the soma",
-              "datatype": "xsd:int",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-            {
-              "path": "nsg:numberOfAxons",
-              "name": "Number of axons",
-              "description": "Number of axons rooting from the soma",
-              "datatype": "xsd:int",
-              "minCount": 0,
-              "maxCount": 1
+              "path": "nsg:basalDendriteFeature",
+              "name": "Basal dendrite feature",
+              "description": "Unopinionated metrics relative to the basal dendrites of this morphology",
+              "node": "this:NeuriteFeatures"
             },
 
 
             {
-              "path": "nsg:apicalDendriteCumulatedLength",
-              "name": "Apical dendrite cumulated length",
-              "description": "Cumulated length of all the segments of all the apical dendrites present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
-              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-
-            {
-              "path": "nsg:basalDendriteCumulatedLength",
-              "name": "Basal dendrite cumulated length",
-              "description": "Cumulated length of all the segments of all the basal dendrites present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
-              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-
-            {
-              "path": "nsg:axonCumulatedLength",
-              "name": "Axon cumulated length",
-              "description": "Cumulated length of all the segments of all the axons present in this morphology, in the metric unit specified in the linked brain location or spatial reference system (most likely micrometer)",
-              "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
-              "minCount": 0,
-              "maxCount": 1
-            },
-
-
-            {
-              "path": "nsg:apicalDendriteTraversedRegions",
-              "name": "Apical dendrite traversed regions",
-              "description": "List of brain regions being traversed by the apical dendrites of this neuron morphology",
-              "node": "nsg:ParcellationOntology <TO FIX: This is probably not the correct node/type. Here we want things like 'mba:997'>"
+              "path": "nsg:apicalDendriteFeature",
+              "name": "Apical dendrite feature",
+              "description": "Unopinionated metrics relative to the apical dendrites of this morphology",
+              "node": "this:NeuriteFeatures"
             },
 
             {
-              "path": "nsg:basalDendriteTraversedRegions",
-              "name": "Basal dendrite traversed regions",
-              "description": "List of brain regions being traversed by the basal dendrites of this neuron morphology",
-              "datatype": "nsg:ParcellationOntology <TO FIX: This is probably not the correct node/type. Here we want things like 'mba:997'"
-            },
-
-            {// "BrainRegion", not just "Region"
-              "path": "nsg:axonTraversedBrainRegions",
-              "name": "Axon traversed regions",
-              "description": "List of brain regions being traversed by the axons of this neuron morphology",
-              "datatype": "nsg:ParcellationOntology <TO FIX: This is probably not the correct node/type. Here we want things like 'mba:997'"
-            },
-
-            {
-              "path": "nsg:axonProjectionRegion",
-              "name": "Axon projection region",
-              "description": "Brain region where the axon projection is",
-              "datatype": "nsg:ParcellationOntology <TO FIX: This is probably not the correct node/type. Here we want things like 'mba:997'"
-            }       
-
-            // of have an axon object, with sub-prop being projection and traversed. And reuse this object for 
-            // dendrite
+              "path": "nsg:axonFeature",
+              "name": "Axon feature",
+              "description": "Unopinionated metrics relative to the axon of this morphology",
+              "node": "this:NeuriteFeatures"
+            }
           ]
         }
+      ]
+    },
+
+
+
+    {
+      "@id": "this:NeuriteFeatures",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "nsg:number",
+          "name": "Number",
+          "description": "The number of elements",
+          "datatype": "xsd:int",
+          "minCount": 0,
+          "maxCount": 1
+        },
+
+        {
+          "path": "nsg:cumulatedlength",
+          "name": "Cumulated length",
+          "description": "Total length of a neurite category",
+          "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
+          "minCount": 0,
+          "maxCount": 1
+        },
+
+        {
+          "path": "nsg:traversedBrainRegion",
+          "name": "Traversed brain region",
+          "description": "Brain regions being traversed by all the neurites of this category",
+          "node": "nsg:ParcellationOntology",
+          "minCount": 0,
+          "maxCount": 1
+        },
+
+        {
+          "path": "nsg:projectionBrainRegion",
+          "name": "Projection region",
+          "description": "Brain regions where all the neurites of this category have their projection (end)",
+          "node": "nsg:ParcellationOntology",
+          "minCount": 0,
+          "maxCount": 1
+        }
+        
       ]
     }
 
