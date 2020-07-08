@@ -26,7 +26,7 @@
         {
           "path": "schema:parentOrganization",
           "name": "Parent Organization",
-          "class": "this:Organization"
+          "class": "schema:Organization"
         },
         {
           "@id": "https://neuroshapes.org/commons/identifier/shapes/WithGridIdentifierPropertyShape"
