@@ -109,7 +109,7 @@
           "path": "schema:dateModified",
           "name": "Update date",
           "description": "The date of the last update of this entity.",
-          "datetype": "xsd:dateTime",
+          "datatype": "xsd:dateTime",
           "maxCount": 1
         },
         {

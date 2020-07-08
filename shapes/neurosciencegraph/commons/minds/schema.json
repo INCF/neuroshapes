@@ -37,7 +37,7 @@
               "path": "schema:releaseDate",
               "name": "Release date",
               "description": "The dataset release date.",
-              "datetype": "xsd:dateTime",
+              "datatype": "xsd:dateTime",
               "maxCount": 1
             },
             {
