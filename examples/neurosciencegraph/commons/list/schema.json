@@ -6,7 +6,7 @@
     }
   ],
   "imports": [
-    "https://neuroshapes.org/commons/list/"
+    "https://neuroshapes.org/commons/list"
   ],
   "@id": "nsg:commons/list/examples",
   "@type": "nxv:Schema",

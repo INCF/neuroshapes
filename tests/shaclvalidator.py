@@ -1,78 +1,61 @@
-from pyshacl import validate
-import rdflib
 import logging
-import os
+from typing import Tuple, List, Any
 
-logger = logging.getLogger()
-logger.level = logging.DEBUG
-
-SH = rdflib.Namespace('http://www.w3.org/ns/shacl#')
-RDF = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-OWL = rdflib.namespace.Namespace('http://www.w3.org/2002/07/owl#')
-
-IMPORTS_MAP = {
-    "https://provshapes.org": "shapes/prov",
-    "https://neuroshapes.org/commons": "shapes/neurosciencegraph/commons",
-    "https://neuroshapes.org/dash": "shapes/neurosciencegraph/datashapes",
-}
+from pyshacl import validate
+from rdflib import Graph, Namespace
+from rdflib.util import guess_format
 
 
-def get_local(resource):
-    path = os.getcwd()
-    for key in IMPORTS_MAP:
-        if resource.startswith(key):
-            return os.sep.join([path, resource.replace(key, IMPORTS_MAP[key]), 'schema.json'])
+LOGGER = logging.getLogger(__name__)
+
+SH = Namespace('http://www.w3.org/ns/shacl#')
+RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+OWL = Namespace('http://www.w3.org/2002/07/owl#')
 
 
-def get_graph(file, imports=None):
+def add_file_to_graph(graph: Graph, file: str, imports_map=None, imported: List[str] = None) -> Graph:
+    """Returns a graph with the loaded rdf file
 
-    if imports is None:
-        imports = []
-    file_type = rdflib.util.guess_format(file)
+    Args:
+        :param graph: graph to be used to parse the file
+        :param file: Rdf file to load
+        :param imports_map: a uri to file map
+        :param imported: collected imports from previous parsed files
+    Return:
+        :return: Graph
+    """
+
+    if imports_map is None:
+        imports_map = {}
+    if imported is None:
+        imported = []
+    file_type = guess_format(file)
     if file_type is None:
         file_type = "json-ld"
-    graph = rdflib.Graph()
     graph.parse(file, format=file_type)
-    for o in graph.objects(None, OWL.imports):
-        local = get_local(o)
-        if local in imports:
-            continue
-        else:
-            # this will avoid loading resource more than once
-            imports.append(local)
-            if os.path.exists(local):
-                logging.debug(f'importing {o} as {local}')
-                imported_graph = get_graph(local, imports)
-                graph += imported_graph
-            else:
-                logger.error(f'Could not import {local}, it does not exist')
+    for obj in graph.objects(None, OWL.imports):
+        try:
+            local = imports_map[str(obj)]
+            if local not in imported:
+                imported.append(local)
+                add_file_to_graph(graph, local, imports_map, imported)
+        except KeyError:
+            LOGGER.error("%s not in map", str(obj))
 
     return graph
 
 
-def run_validation(data, schema):
-    conforms, v_graph, v_text = validate(data, shacl_graph=schema, inference='rdfs', debug=False)
-    results = [r for r in v_graph.triples((None, RDF.type, SH.ValidationResult))]
+def run_validation(data: Graph, schema: Graph) -> Tuple[Any, int, Any]:
+    """Runs the validation of data against a schema
+
+    Args:
+        :param data: the data to validate in a graph
+        :param schema: the schema to use to validate the data
+
+    Return:
+        :return: a tuple: conforms, results in a graph, results
+    """
+    conforms, v_graph, v_text = validate(
+        data, shacl_graph=schema, inference="rdfs", debug=False)
+    results = list(v_graph.triples((None, RDF.type, SH.ValidationResult)))
     return conforms, len(results), v_text
-
-
-class Validator:
-
-    def __init__(self, shacl_schema_file):
-        self.shacl_schema = get_graph(shacl_schema_file)
-        self.schema_graph = None
-
-    def load_schema(self, schema_file,):
-        logger.debug(f'loading {schema_file}')
-        self.schema_graph = get_graph(schema_file)
-        conforms, res, report = run_validation(self.schema_graph , self.shacl_schema)
-        if not conforms:
-            msg = f'Invalid schema {schema_file}'
-            logger.error(msg)
-            logger.error(report)
-            raise Exception(msg)
-
-    def validate_data_file(self, data_file):
-
-        data_graph = get_graph(data_file)
-        return run_validation(data_graph, self.schema_graph)

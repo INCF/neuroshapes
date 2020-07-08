@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "description": "schema:description",
+    "ingredients": {
+      "@id": "schema:ingredients",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Recipe",
+  "description": "My favorite chocolate cake",
+  "ingredients": [
+    "egs",
+    "flour",
+    "milk",
+    "dark chocolate",
+    "butter"
+  ]
+}

@@ -1,13 +1,12 @@
 {
-  "@context": [
-    "http://schema.org",
-    {
-      "polygon": {
-        "@id": "http://schema.org/polygon",
-        "@container": "@list"
-      }
+  "@context": {
+    "schema": "http://schema.org/",
+    "description": "schema:description",
+    "polygon": {
+      "@id": "schema:polygon",
+      "@container": "@list"
     }
-  ],
+  },
   "@id" : "HexagonTextPoints",
   "@type": "schema:GeoShape",
   "description": "An hexagon shape",
