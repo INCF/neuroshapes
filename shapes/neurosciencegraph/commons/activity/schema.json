@@ -11,7 +11,7 @@
     "https://provshapes.org/commons/activity",
     "https://neuroshapes.org/commons/protocol"
   ],
-  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/src/main/resources/schemas/neurosciencegraph/commons/activity/v0.1.4.json",
+  "prov:wasDerivedFrom": "https://github.com/INCF/neuroshapes/blob/v0.3.15/modules/commons/sr                                                              c/main/resources/schemas/neurosciencegraph/commons/activity/v0.1.4.json",
   "shapes": [
     {
       "@id": "ActivityShape",

@@ -1,0 +1,19 @@
+{
+  "@context":  {
+    "schema": "http://schema.org/",
+    "name": "schema:name",
+    "code": {
+      "@id": "schema:code",
+      "@container": "@list"
+    }
+  },
+  "@id": "alabama",
+  "@type": "schema:State",
+  "name": "Illinois",
+  "code": [
+    205,
+    4,
+    256,
+    22
+  ]
+}
