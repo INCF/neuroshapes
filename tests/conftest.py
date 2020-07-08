@@ -1,67 +1,107 @@
-import os, sys
-import pytest
-import logging
+"""Tests generation and configuration"""
 import glob
-from .shaclvalidator import get_graph
+import logging
+import os
+from typing import List, Tuple
 
-logger = logging.getLogger(__name__)
+import pytest
+import sys
+from rdflib import Graph
 
-PATH = os.getcwd()
-pytest.SHACL_SHACL = os.path.join(PATH, 'tests', 'shacl-schema.ttl')
+from tests.shaclvalidator import add_file_to_graph
 
-if not os.path.exists(pytest.SHACL_SHACL):
-    logger.error(f'{pytest.SHACL_SHACL} not found')
-    sys.exit()
+LOGGER = logging.getLogger(__name__)
 
 
-@pytest.fixture(scope='session')
+def pytest_configure():
+    """Initializes pytest.shape_to_file variable with the mapping of shapes_id to its file"""
+    pytest.path_to_namespace = {
+        "shapes/prov/datashapes": "https://neuroshapes.org/dash",
+        "shapes/prov/commons": "https://provshapes.org/commons",
+        "shapes/neurosciencegraph/datashapes": "https://neuroshapes.org/dash",
+        "shapes/neurosciencegraph/commons": "https://neuroshapes.org/commons"
+    }
+    pytest.shape_to_file = dict()
+    for subdir, namespace in pytest.path_to_namespace.items():
+        pytest.shape_to_file.update(scan_shapes(subdir, namespace))
+
+
+@pytest.fixture(scope="session")
 def shacl_schema():
-    logger.info("loading SHACL of SHACL schema")
-    return get_graph(pytest.SHACL_SHACL)
+    """Provide an in memory graph with the SHACL schema"""
+    SHACL_SHACL = os.path.join("tests", "shacl-schema.ttl")
+    if not os.path.exists(SHACL_SHACL):
+        LOGGER.error("%s not found", SHACL_SHACL)
+        sys.exit()
+    graph = Graph()
+    add_file_to_graph(graph, SHACL_SHACL)
+    return graph
 
 
 def pytest_addoption(parser):
-    default_scan_dir = os.path.join(PATH, '..', 'neuroshapes', 'shapes')
-    parser.addoption("--scan_dir", action="store", default=default_scan_dir)
+    """Retrieve a parameter to test specific directory"""
+    parser.addoption("--testdir", action="store", default=None,
+                     help="test shapes inside a specific directory")
 
 
 def pytest_generate_tests(metafunc):
+    """Generates tests for shapes and examples"""
 
-    # perform schemas validation
-    scan_dir = metafunc.config.option.scan_dir
-    logger.info(f'scanning {scan_dir}')
-
-    schema_files = [f for f in glob.iglob(scan_dir + '/**/schema.json', recursive=True)]
-
-    datashape_files = [f.replace('schema.json', os.path.join('examples', 'datashapes.json')) for f in schema_files]
-    datashape_files = list(filter(lambda f: os.path.exists(f), datashape_files))
-    shapes_files = schema_files + datashape_files
+    examples_files = list()
+    schemas_files = dict()
+    if metafunc.config.option.testdir:
+        directory = metafunc.config.option.testdir
+        if os.path.exists(directory):
+            for subdir, namespace in pytest.path_to_namespace.items():
+                if directory.startswith(subdir):
+                    schemas_files = scan_shapes(directory, namespace).values()
+        else:
+            LOGGER.error("%s not found", directory)
+            sys.exit()
+    else:
+        schemas_files = pytest.shape_to_file.values()
+        for subdir, _ in pytest.path_to_namespace.items():
+            examples_files.extend(scan_examples(subdir))
 
     if "schema_file" in metafunc.fixturenames:
-        metafunc.parametrize("schema_file", shapes_files)
+        metafunc.parametrize("schema_file", schemas_files)
 
-    tests_payload = []
-    for sh in schema_files:
+    if "shapes_file" in metafunc.fixturenames:
+        metafunc.parametrize("shapes_file,test_file,assertion", examples_files)
 
-        subdir = sh.replace(os.sep + 'schema.json', '')
 
-        if not os.path.exists(os.sep.join([subdir, 'examples'])):
-            continue
+def scan_shapes(path, ns):
+    cwd = os.getcwd()
+    abs_path = os.path.join(cwd, path)
+    shape_file = dict()
+    for path_file in glob.iglob(abs_path + "/**/schema.json", recursive=True):
+        uri = path_file.replace(abs_path, ns).replace("/schema.json", "")
+        shape_file[uri] = path_file
+    return shape_file
 
-        shape_file = sh
-        datashape_example = os.sep.join([subdir, 'examples', 'datashapes.json'])
-        if os.path.exists(datashape_example):
-            shape_file = datashape_example
 
-        valid_dir = os.sep.join([subdir, 'examples', 'valid']) + os.sep
-        if os.path.exists(valid_dir):
-            for f in glob.glob(valid_dir + '*.json'):
-                tests_payload.append((shape_file, f, True))
+def scan_examples(path) -> List[Tuple[str, list, bool]]:
+    cwd = os.getcwd()
+    ex_path = path.replace("shapes", "examples", 1)
+    abs_path = os.path.join(cwd, ex_path)
+    examples: List[Tuple[str, list, bool]] = list()
+    schemas = [os.path.split(f)[0] for f in glob.glob(abs_path + "/**/schema.json", recursive=True)]
 
-        invalid_dir = os.sep.join([subdir, 'examples', 'invalid']) + os.sep
-        if os.path.exists(invalid_dir):
-            for f in glob.glob(invalid_dir + '*.json'):
-                tests_payload.append((shape_file, f, False))
+    for v in glob.glob(abs_path + "/**/valid/*.json", recursive=True):
+        head, _ = v.split("/valid")
+        schema = get_schema(head, schemas)
+        examples.append((schema, v, True))
 
-    if set(['shapes_file', 'test_file', 'test_valid']).issubset(set(metafunc.fixturenames)):
-        metafunc.parametrize('shapes_file, test_file, test_valid', tests_payload)
+    for v in glob.glob(abs_path + "/**/invalid/*.json", recursive=True):
+        head, _ = v.split("/invalid")
+        schema = get_schema(head, schemas)
+        examples.append((schema, v, False))
+
+    return examples
+
+
+def get_schema(path, schemas):
+    if path in schemas:
+        return f"{path}/schema.json"
+    else:
+        return f"{path.replace('examples', 'shapes', 1)}/schema.json"

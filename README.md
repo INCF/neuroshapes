@@ -61,12 +61,13 @@ The following projects have adopted Neuroshapes:
 # Formats and standards
 All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas).
 
-## Testing shapes 
+## Testing shapes with examples 
 
-These tests are going to validate that schemas conforms with the SHACL specifications. And if you add examples you want the tests to validate you need to provide them inside a directory called `valid` or `invalid` as depicted next:
+Two different tests are executed in the unittest. The first test validates that schemas conform with the SHACL specifications. 
+The second tests consist of having valid and invalid data samples that are going to be tested against the modeled shapes. These examples are placed in the `examples`  directory and follow the directory structure of the shape they should be tested against. 
 
 ```
-|-- shapes
+|-- examples
 |   |-- neurosciencegraph
 |   |   |-- datashapes
 |   |   `-- commons
@@ -83,21 +84,22 @@ These tests are going to validate that schemas conforms with the SHACL specifica
 
 ```
 
-Tests are proved to run test with python > 3.6. To run them follow next:
+Tests require python > 3.6, and pytest. To run them follow next:
 
-    # create your virtual environment and install these requirements:
+    # create your virtual environment and activate it
+    python3 -m venv env
+    source env/bin/activate
+    # install requirements
     pip install pytest pyshacl
-    # fix owlrl isusue by removing the .py extension 
-    mv {virtual-env-path}/bin/owlrl.py {virtual-env-path}/bin/owlrl
-    pytest tests
+    # run tests
+    pytest
     
-More about the [issue with current released version of OWL-RL](https://github.com/RDFLib/OWL-RL/issues/29) on PyPI.
+To test a set of shapes inside shapes directory, an optional argument can be used:
 
-To test an specific shape, add a parameter --scan_dir where the shape is, for example:
-
-    pytest --scan_dir=../neuroshapes/shapes/neurosciencegraph/commons/list/
+    pytest --testdir=shapes/neurosciencegraph/datashapes/atlas
     
 
+    
 # Roadmap
 
 * Creation of an INCF/neuroshapes Special Interest Group
