@@ -27,13 +27,11 @@
         },
         {
           "property": [
-
             {
               "path": "nsg:isRegisteredIn", // change the name, but all the Atlas data are already using isRegisterdIn...
               "class": "nsg:BrainAtlasSpatialReferenceSystem",
               "maxCount": 1
             },
-
             {
               "path": "nsg:brainLocation",
               "name": "brain location",
@@ -42,8 +40,6 @@
               "minCount": 0,
               "maxCount": 1
             },
-
-
             { // use types instead? Or taxonomy? (revise the set of types)
               "path": "nsg:morphologyOrigin",
               "name": "Morphology origin",
@@ -57,7 +53,6 @@
               "minCount": 1,
               "maxCount": 1
             },
-
             {
               "path": "nsg:somaNumberOfPoints",
               "name": "Soma number of points",
@@ -66,22 +61,18 @@
               "minCount": 0,
               "maxCount": 1
             },
-            
             {
               "path": "nsg:basalDendriteFeature",
               "name": "Basal dendrite feature",
               "description": "Unopinionated metrics relative to the basal dendrites of this morphology",
               "node": "this:NeuriteFeatures"
             },
-
-
             {
               "path": "nsg:apicalDendriteFeature",
               "name": "Apical dendrite feature",
               "description": "Unopinionated metrics relative to the apical dendrites of this morphology",
               "node": "this:NeuriteFeatures"
             },
-
             {
               "path": "nsg:axonFeature",
               "name": "Axon feature",
@@ -92,9 +83,6 @@
         }
       ]
     },
-
-
-
     {
       "@id": "this:NeuriteFeatures",
       "@type": "sh:NodeShape",
@@ -107,7 +95,6 @@
           "minCount": 0,
           "maxCount": 1
         },
-
         {
           "path": "nsg:cumulatedlength",
           "name": "Cumulated length",
@@ -116,7 +103,6 @@
           "minCount": 0,
           "maxCount": 1
         },
-
         {
           "path": "nsg:traversedBrainRegion",
           "name": "Traversed brain region",
@@ -125,7 +111,6 @@
           "minCount": 0,
           "maxCount": 1
         },
-
         {
           "path": "nsg:projectionBrainRegion",
           "name": "Projection region",
@@ -134,11 +119,7 @@
           "minCount": 0,
           "maxCount": 1
         }
-        
       ]
     }
-
-
-
   ]
 }
