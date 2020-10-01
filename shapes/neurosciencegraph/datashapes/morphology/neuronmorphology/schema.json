@@ -10,7 +10,8 @@
   "imports": [
     "https://neuroshapes.org/core/dataset",
     "https://neuroshapes.org/commons/quantitativevalue",
-    "https://neuroshapes.org/commons/brainlocation"
+    "https://neuroshapes.org/commons/brainlocation",
+    "https://neuroshapes.org/commons/typedlabeledontologyterm"
   ],
   "shapes": [
     {
@@ -28,27 +29,17 @@
         {
           "property": [
             {
-              "path": "nsg:isRegisteredIn", // change the name, but all the Atlas data are already using isRegisterdIn...
+              "path": "nsg:isRegisteredIn",
               "class": "nsg:BrainAtlasSpatialReferenceSystem",
               "maxCount": 1
             },
             {
-              "path": "nsg:brainLocation",
-              "name": "brain location",
-              "description": "Brain Location (brain region, atlas space).",
-              "node": "https://neuroshapes.org/commons/brainlocation/shapes/BrainLocationShape",
-              "minCount": 0,
-              "maxCount": 1
-            },
-            { // use types instead? Or taxonomy? (revise the set of types)
-              "path": "nsg:morphologyOrigin",
-              "name": "Morphology origin",
-              "description": "The kind of data or material a morphology was generated from.",
+              "path": "nsg:scale",
+              "name": "Morphology scale",
+              "description": "The scale of the neuron morphology.",
               "in": [
-                "slice",
-                "volume",
-                "in-silico",
-                "other"
+                "brain-slice",
+                "brain-wide"
               ],
               "minCount": 1,
               "maxCount": 1
@@ -58,19 +49,12 @@
               "name": "Soma number of points",
               "description": "Number of points involved in the modelisation of the soma",
               "datatype": "xsd:int",
-              "minCount": 0,
               "maxCount": 1
             },
             {
-              "path": "nsg:basalDendriteFeature",
-              "name": "Basal dendrite feature",
-              "description": "Unopinionated metrics relative to the basal dendrites of this morphology",
-              "node": "this:NeuriteFeatures"
-            },
-            {
-              "path": "nsg:apicalDendriteFeature",
-              "name": "Apical dendrite feature",
-              "description": "Unopinionated metrics relative to the apical dendrites of this morphology",
+              "path": "nsg:dendriteFeature",
+              "name": "Dendrite feature",
+              "description": "Unopinionated metrics relative to the dendrites of this morphology",
               "node": "this:NeuriteFeatures"
             },
             {
@@ -88,35 +72,31 @@
       "@type": "sh:NodeShape",
       "property": [
         {
-          "path": "nsg:number",
-          "name": "Number",
-          "description": "The number of elements",
+          "path": "nsg:count",
+          "name": "Count",
+          "description": "The count of elements",
           "datatype": "xsd:int",
-          "minCount": 0,
           "maxCount": 1
         },
         {
-          "path": "nsg:cumulatedlength",
+          "path": "nsg:cumulatedLength",
           "name": "Cumulated length",
           "description": "Total length of a neurite category",
           "node": "https://neuroshapes.org/commons/quantitativevalue/shapes/QuantitativeValueShape",
-          "minCount": 0,
           "maxCount": 1
         },
         {
           "path": "nsg:traversedBrainRegion",
-          "name": "Traversed brain region",
+          "name": "Traversed brain regions",
           "description": "Brain regions being traversed by all the neurites of this category",
-          "node": "nsg:ParcellationOntology",
-          "minCount": 0,
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
           "maxCount": 1
         },
         {
           "path": "nsg:projectionBrainRegion",
-          "name": "Projection region",
+          "name": "Projection brain regions",
           "description": "Brain regions where all the neurites of this category have their projection (end)",
-          "node": "nsg:ParcellationOntology",
-          "minCount": 0,
+          "node": "https://neuroshapes.org/commons/typedlabeledontologyterm/shapes/BrainRegionOntologyTermShape",
           "maxCount": 1
         }
       ]
