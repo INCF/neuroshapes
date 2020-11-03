@@ -22,8 +22,50 @@
           "datatype": "xsd:string"
         },
         {
+          "path": "schema:description",
+          "name": "Software description",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "nsg:configuration",
+          "name": "Software configuration",
+          "description": "The configuration used with the software. This can be an IRI or the actual configuration in JSON."
+        },
+        {
+          "path": "nsg:softwareSourceCode",
+          "name": "Software source code",
+          "description": "The software source code.",
+          "class": "schema:SoftwareSourceCode",
+          "node": "this:SoftwareSourceCodeShape"
+        }
+      ]
+    },
+    {
+      "@id": "this:SoftwareSourceCodeShape",
+      "@type": "sh:NodeShape",
+      "property": [
+        {
+          "path": "schema:codeRepository",
+          "name": "Code repository",
+          "description": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+          "nodeKind": "sh:IRI"
+        },
+        {
+          "path": "schema:programmingLanguage",
+          "name": "Programming language",
+          "description": "The computer programming language.",
+          "datatype": "xsd:string"
+        },
+        {
+          "path": "schema:runtimePlatform",
+          "name": "Runtime platform",
+          "description": "Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0).",
+          "datatype": "xsd:string"
+        },
+        {
           "path": "schema:version",
           "name": "Software version",
+          "description": "The version of the CreativeWork embodied by a specified resource.",
           "datatype": "xsd:string"
         }
       ]
