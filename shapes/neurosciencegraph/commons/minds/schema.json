@@ -65,6 +65,16 @@
               "minCount": 1
             },
             {
+              "path": "nsg:isRegisteredIn",
+              "class": "nsg:BrainAtlasSpatialReferenceSystem",
+              "maxCount": 1
+            },
+            {
+              "path": "nsg:atlasRelease",
+              "nodeKind": "sh:IRI",
+              "maxCount": 1
+            }
+            {
               "path": "nsg:objectOfStudy",
               "name": "Object of Study",
               "description": "Object of Study",
