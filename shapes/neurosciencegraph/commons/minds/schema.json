@@ -73,7 +73,7 @@
               "path": "nsg:atlasRelease",
               "nodeKind": "sh:IRI",
               "maxCount": 1
-            }
+            },
             {
               "path": "nsg:objectOfStudy",
               "name": "Object of Study",
