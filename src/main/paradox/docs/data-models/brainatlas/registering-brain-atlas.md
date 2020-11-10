@@ -5,7 +5,7 @@
 ### Description
 
 This specification describes the process of register a brain atlas. The process starts with a subject collection which
-are imaged and processed to generate 3 derived entities: a template image data, a parcellation image data, as well as
+is imaged and processed to generate 3 derived entities: a template image data, a parcellation image data, as well as
 brain parcellation labels. The first 2 entities are further transformed into volumetric representation, from which an
 atlas spatial reference system is derived. The parcellation labels are converted into ontology. The final template
 volume, parcellation volume, parcellation ontology as well as the atlas spatial reference system are used to form an
