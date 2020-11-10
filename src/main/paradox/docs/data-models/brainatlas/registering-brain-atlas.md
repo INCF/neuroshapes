@@ -34,26 +34,26 @@ The different entity types involved are described below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [SubjectCollection](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubjectcollection.html)  |     A collection of subject to be used in the experiment  |
-| [TemplateImageData](https://bbp-nexus.epfl.ch/datamodels/class-nsgtemplateimagedata.html)  |  Template image data acquired and processed from the subject collection  |
-| [ParcellationImageData](https://bbp-nexus.epfl.ch/datamodels/class-nsgparcellationimagedata.html)  |  Parcellation image data generated from the template image data  |
-| [ParcellationLabel](https://bbp-nexus.epfl.ch/datamodels/class-nsgparcellationlabel.html)  |  Parcellation labels correspond to the annotations in the parcellation image  |
-| [TemplateVolume](https://bbp-nexus.epfl.ch/datamodels/class-nsgtemplatevolume.html)  |  Template volume generated from the template image data  |
-| [ParcellationVolume](https://bbp-nexus.epfl.ch/datamodels/class-nsgparcellationvolume.html)  |  Parcellation volume generated from the parcellation image data  |
-| [ParcellationOntology](https://bbp-nexus.epfl.ch/datamodels/class-nsgparcellationontology.html)  |  Parcellation ontology converted from the parcellation label  |
-| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/datamodels/class-nsgatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
-| [AtlasRelease](https://bbp-nexus.epfl.ch/datamodels/class-nsgatlasrelease.html)  | An atlas release comprises template volume, parcellation volume, parcellation ontology as well as the atlas spatial reference system  |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [SubjectCollection](https://bbp-nexus.epfl.ch/datamodels/class-subjectcollection.html)  |     A collection of subject to be used in the experiment  |
+| [TemplateImageData](https://bbp-nexus.epfl.ch/datamodels/class-templateimagedata.html)  |  Template image data acquired and processed from the subject collection  |
+| [ParcellationImageData](https://bbp-nexus.epfl.ch/datamodels/class-parcellationimagedata.html)  |  Parcellation image data generated from the template image data  |
+| [ParcellationLabel](https://bbp-nexus.epfl.ch/datamodels/class-parcellationlabel.html)  |  Parcellation labels correspond to the annotations in the parcellation image  |
+| [TemplateVolume](https://bbp-nexus.epfl.ch/datamodels/class-templatevolume.html)  |  Template volume generated from the template image data  |
+| [ParcellationVolume](https://bbp-nexus.epfl.ch/datamodels/class-parcellationvolume.html)  |  Parcellation volume generated from the parcellation image data  |
+| [ParcellationOntology](https://bbp-nexus.epfl.ch/datamodels/class-parcellationontology.html)  |  Parcellation ontology converted from the parcellation label  |
+| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/datamodels/class-atlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
+| [AtlasRelease](https://bbp-nexus.epfl.ch/datamodels/class-atlasrelease.html)  | An atlas release comprises template volume, parcellation volume, parcellation ontology as well as the atlas spatial reference system  |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
 ### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Atlas Construction](https://bbp-nexus.epfl.ch/datamodels/class-nsgatlasconstruction.html)   |  Process to construct a brain atlas  |
-| [Template Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-nsgtemplatereconstruction.html)   |  Reconstruct the template image data into volumetric representation  |
-| [Parcellation Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-nsgparcellationreconstruction.html)   |  Reconstruct the parcellation image data into volumetric representation  |
-| [Ontology Conversion](https://bbp-nexus.epfl.ch/datamodels/class-nsgontologyconversion.html)   |  Convert the parcellation label into ontological representation  |
+| [Atlas Construction](https://bbp-nexus.epfl.ch/datamodels/class-atlasconstruction.html)   |  Process to construct a brain atlas  |
+| [Template Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-templatereconstruction.html)   |  Reconstruct the template image data into volumetric representation  |
+| [Parcellation Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-parcellationreconstruction.html)   |  Reconstruct the parcellation image data into volumetric representation  |
+| [Ontology Conversion](https://bbp-nexus.epfl.ch/datamodels/class-ontologyconversion.html)   |  Convert the parcellation label into ontological representation  |
 
 ### Agents
 

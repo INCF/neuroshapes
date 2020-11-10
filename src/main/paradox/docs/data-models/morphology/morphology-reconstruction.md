@@ -35,17 +35,17 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-[Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
-| [PatchedSlice](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedslice.html)                  |     Brain slice containing patched cells      |
-| [PatchedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedcellcollection.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
-| [PatchedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedcell.html)                    |     Cell that was patched in the slice      |
-| [FixedStainedSlice](https://bbp-nexus.epfl.ch/datamodels/class-nsgfixedstainedslice.html)    |     Brain slice after fixation and staining     |
-| [AnnotatedSlice](https://bbp-nexus.epfl.ch/datamodels/class-nsgannotatedslice.html)    |    Brain slice containing the identified and annotated stained cells      |
-| [LabeledCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-nsglabeledcellcollection.html)    |     Collection of labeled cells in a single slice     |
-| [LabeledCell](https://bbp-nexus.epfl.ch/datamodels/class-nsglabeledcell.html)    |     Cell that was labeled in the slice     |
-| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+[Subject](https://bbp-nexus.epfl.ch/datamodels/class-subject.html)                            |     Subject that was used in the experiment     |
+| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-slice.html)                                |     Brain slice obtained from the subject      |
+| [PatchedSlice](https://bbp-nexus.epfl.ch/datamodels/class-patchedslice.html)                  |     Brain slice containing patched cells      |
+| [PatchedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-patchedcellcollection.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
+| [PatchedCell](https://bbp-nexus.epfl.ch/datamodels/class-patchedcell.html)                    |     Cell that was patched in the slice      |
+| [FixedStainedSlice](https://bbp-nexus.epfl.ch/datamodels/class-fixedstainedslice.html)    |     Brain slice after fixation and staining     |
+| [AnnotatedSlice](https://bbp-nexus.epfl.ch/datamodels/class-annotatedslice.html)    |    Brain slice containing the identified and annotated stained cells      |
+| [LabeledCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-labeledcellcollection.html)    |     Collection of labeled cells in a single slice     |
+| [LabeledCell](https://bbp-nexus.epfl.ch/datamodels/class-labeledcell.html)    |     Cell that was labeled in the slice     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-reconstructedcell.html)    |     Reconstructed cell      |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 ### Activities
 
@@ -53,11 +53,11 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainslicing.html)                      |     Technique used to obtain a brain slice for patching      |
-| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/datamodels/class-nsgwholecellpatchclamp.html)        |     Technique used to study electrical activity of individual living cells    |
-| [FixationStainingMounting](https://bbp-nexus.epfl.ch/datamodels/class-nsgfixationstainingmounting.html)    |     Technique used to fix and stain the slice      |
-| [AcquisitionAnnotation](https://bbp-nexus.epfl.ch/datamodels/class-nsgacquisitionannotation.html)    |     Technique used to acquire an image of the slice and annotate the stained cells     |
-| [Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstruction.html)   |     Technique used to reconstruct the stained cell     |
+| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-brainslicing.html)                      |     Technique used to obtain a brain slice for patching      |
+| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/datamodels/class-wholecellpatchclamp.html)        |     Technique used to study electrical activity of individual living cells    |
+| [FixationStainingMounting](https://bbp-nexus.epfl.ch/datamodels/class-fixationstainingmounting.html)    |     Technique used to fix and stain the slice      |
+| [AcquisitionAnnotation](https://bbp-nexus.epfl.ch/datamodels/class-acquisitionannotation.html)    |     Technique used to acquire an image of the slice and annotate the stained cells     |
+| [Reconstruction](https://bbp-nexus.epfl.ch/datamodels/class-reconstruction.html)   |     Technique used to reconstruct the stained cell     |
 
 
 ### Agents

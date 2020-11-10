@@ -32,10 +32,10 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [ImageStack](https://bbp-nexus.epfl.ch/datamodels/class-nsgimagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
-| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-subject.html)                            |     Subject that was used in the experiment     |
+| [ImageStack](https://bbp-nexus.epfl.ch/datamodels/class-imagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-reconstructedcell.html)    |     Reconstructed cell      |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 ### Activities
 
@@ -43,8 +43,8 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainImaging](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
-| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
+| [BrainImaging](https://bbp-nexus.epfl.ch/datamodels/class-brainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
+| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/datamodels/class-reconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
 
 
 ### Agents

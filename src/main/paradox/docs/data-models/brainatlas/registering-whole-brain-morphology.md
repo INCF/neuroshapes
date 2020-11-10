@@ -27,22 +27,22 @@ The different entity types involved are described below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [TemplateVolume](https://bbp-nexus.epfl.ch/datamodels/class-nsgtemplatevolume.html)  |  Template volume generated from the template image data  |
-| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/datamodels/class-nsgatlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
-| [ImageStack](https://bbp-nexus.epfl.ch/datamodels/class-nsgimagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
-| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructedcell.html)    |     Reconstructed cell      |
-| [Transform](https://bbp-nexus.epfl.ch/datamodels/class-nsgtransform.html)    |     A linear or non-linear transform      |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-subject.html)                            |     Subject that was used in the experiment     |
+| [TemplateVolume](https://bbp-nexus.epfl.ch/datamodels/class-templatevolume.html)  |  Template volume generated from the template image data  |
+| [AtlasSpatialReferenceSystem](https://bbp-nexus.epfl.ch/datamodels/class-atlasspatialreferencesystem.html)  |  The spatial coordinate system of the atlas space  |
+| [ImageStack](https://bbp-nexus.epfl.ch/datamodels/class-imagestack.html)                            |     Image stack obtained from the brain tissue of the subject     |
+| [ReconstructedCell](https://bbp-nexus.epfl.ch/datamodels/class-reconstructedcell.html)    |     Reconstructed cell      |
+| [Transform](https://bbp-nexus.epfl.ch/datamodels/class-transform.html)    |     A linear or non-linear transform      |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
 
 
 ### Activities
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainImaging](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
-| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/datamodels/class-nsgreconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
-| [Transformation](https://bbp-nexus.epfl.ch/datamodels/class-nsgtransformation.html)   |     Transform a geometric object     |
+| [BrainImaging](https://bbp-nexus.epfl.ch/datamodels/class-brainimaging.html)                      |     Technique used to obtain an image stack of the brain tissue containing the cells for reconstruction      |
+| [ReconstructionFromImage](https://bbp-nexus.epfl.ch/datamodels/class-reconstructionfromimage.html)   |     Technique used to reconstruct the stained cell     |
+| [Transformation](https://bbp-nexus.epfl.ch/datamodels/class-transformation.html)   |     Transform a geometric object     |
 
 ### Agents
 

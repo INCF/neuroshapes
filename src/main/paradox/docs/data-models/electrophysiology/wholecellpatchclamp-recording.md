@@ -34,13 +34,13 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | -------------                                                             | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-nsgsubject.html)                            |     Subject that was used in the experiment     |
-| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-nsgslice.html)                                |     Brain slice obtained from the subject      |
-| [PatchedSlice](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedslice.html)                  |     Brain slice containing patched cells      |
-| [PatchedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedcellcollection.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
-| [PatchedCell](https://bbp-nexus.epfl.ch/datamodels/class-nsgpatchedcell.html)                    |     Cell that was patched in the slice      |
-| [Trace](https://bbp-nexus.epfl.ch/datamodels/class-nsgtrace.html)                         |     Individual recording trace of the patched cell (stimulation/input and response/output trace)     |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-nsgexperimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-subject.html)                            |     Subject that was used in the experiment     |
+| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-slice.html)                                |     Brain slice obtained from the subject      |
+| [PatchedSlice](https://bbp-nexus.epfl.ch/datamodels/class-patchedslice.html)                  |     Brain slice containing patched cells      |
+| [PatchedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-patchedcellcollection.html)|     Collection of patched cells in a single slice (e.g. for multi-patch recordings) |
+| [PatchedCell](https://bbp-nexus.epfl.ch/datamodels/class-patchedcell.html)                    |     Cell that was patched in the slice      |
+| [Trace](https://bbp-nexus.epfl.ch/datamodels/class-trace.html)                         |     Individual recording trace of the patched cell (stimulation/input and response/output trace)     |
+| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
     
 ### Activities
 
@@ -48,9 +48,9 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-nsgbrainslicing.html)                      |     Technique used to obtain a brain slice for patching      |
-| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/datamodels/class-nsgwholecellpatchclamp.html)        |     Technique used to study electrical activity of individual living cells    |
-| [StimulusExperiment](https://bbp-nexus.epfl.ch/datamodels/class-nsgstimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
+| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-brainslicing.html)                      |     Technique used to obtain a brain slice for patching      |
+| [WholeCellPatchClamp](https://bbp-nexus.epfl.ch/datamodels/class-wholecellpatchclamp.html)        |     Technique used to study electrical activity of individual living cells    |
+| [StimulusExperiment](https://bbp-nexus.epfl.ch/datamodels/class-stimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
 
 ### Agents
 
