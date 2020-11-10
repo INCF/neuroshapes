@@ -74,13 +74,6 @@
               "description": "Indicates if the cell can be reconstructed or not",
               "datatype": "xsd:string",
               "maxCount": 1
-            },
-            {
-              "path": "prov:wasRevisionOf",
-              "name": "Patched cell",
-              "description": "The patched cell this labeled cell is a revision of",
-              "class": "nsg:PatchedCell",
-              "maxCount": 1
             }
           ]
         }
