@@ -14,7 +14,7 @@ Future developments could include brain imaging, transcriptomic and clinical for
 Table of contents:
 
 * [Goal](#goal)
-* [Tutorials (WIP)](#tutorials)
+* [Tutorials](#tutorials)
 * [Adoption](#adoption)
 * [Formats and standards](#formats-and-standards)
 * [License](#License)
@@ -45,9 +45,9 @@ Also, Neuroshapes aims at creating a community for an open and use case driven d
 
 # Tutorials
 
-Please check out our tutorials:
- - [Nexus KG Schema Format](https://bbp-nexus.epfl.ch/staging/schema-documentation/documentation/shacl-schemas.html#nexus-kg-schemas)
- - [Jupyter notebook with basic operations using Nexus](https://github.com/BlueBrain/nexus/blob/v0/tutorial/basic_operations_nexus_v0.ipynb)
+A set of tutorials from the [Blue Brain Nexus Forge](https://nexus-forge.readthedocs.io/en/latest/#getting-started) project are available and use the schemas defined in Neuroshapes as data models to create and validate dataset as well as registering them in Blue Brain Nexus.
+
+Try them in Binder [![Tutorials](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BlueBrain/nexus-forge/v0.4.0?filepath=examples%2Fnotebooks%2Fgetting-started)
 
 
 # Adoption
@@ -59,7 +59,7 @@ The following projects have adopted Neuroshapes:
 * [Krembil Centre for Neuroinformatics](https://www.camh.ca/en/science-and-research/institutes-and-centres/krembil-centre-for-neuroinformatics)
 
 # Formats and standards
-All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/). For practical reasons, the defined schemas are combined in an envelop (an ontology actually) that conforms to [Nexus KG schema format](https://bbp-nexus.epfl.ch/dev/schema-documentation/documentation/shacl-schemas.html#shacl-schemas).
+All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/).
 
 ## Testing shapes with examples 
 
