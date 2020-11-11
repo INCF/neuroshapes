@@ -2,10 +2,6 @@
 [![Build Status](https://travis-ci.org/INCF/neuroshapes.svg?branch=master)](https://travis-ci.org/INCF/neuroshapes)
 ![GitHub release](https://img.shields.io/github/release/INCF/neuroshapes.svg)
 
-# Note
-
-This is the new simplified structure of Neuroshapes. A [v0](https://github.com/INCF/neuroshapes/tree/v0) branch is available to work with the previous schemas format.
-
 # Welcome to Neuroshapes
 The goal of Neuroshapes is the development of open, use case driven and shared validatable data models (schemas, vocabularies) to enable the FAIR principles (Findable, Accessible, Interoperable and Reusable) for basic, computational and clinical neuroscience (meta)data.
 The data models developed thus far entities for electrophysiology, neuron morphology, brain atlases, in vitro electrophysiology and computational modeling.
