@@ -29,13 +29,13 @@
               "description": "The slice collection used",
               "class": "nsg:SliceCollection",
               "minCount": 1,
-              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/SliceShape"
+              "seeAlso": "https://neuroshapes.org/dash/slicecollection/shapes/SliceCollectionShape"
             },
             {
               "path": "prov:generated",
               "description": "The patched slice generated",
-              "class": "nsg:PatchedSlice",
-              "seeAlso": "https://neuroshapes.org/dash/slice/shapes/PatchedSliceShape"
+              "class": "nsg:SliceCollection",
+              "seeAlso": "https://neuroshapes.org/dash/slicecollection/shapes/SliceCollectionShape"
             }
           ]
         }
