@@ -31,13 +31,13 @@ The different entity types involved in the experiment are listed below.
 
 | Type  | Description|
 | -------------                                                             | ------------- |
-| [Subject](https://bbp-nexus.epfl.ch/datamodels/class-subject.html)                            |     Subject that was used in the experiment     |
-| [Slice](https://bbp-nexus.epfl.ch/datamodels/class-slice.html)                                |     Brain slice obtained from the subject      |
-| [IntraCellularSharpElectrodeRecordedSlice](https://bbp-nexus.epfl.ch/datamodels/class-intracellularsharpelectroderecordedslice.html)                  |     Brain slice containing recorded cells      |
-| [IntraSharpRecordedCellCollection](https://bbp-nexus.epfl.ch/datamodels/class-intracellularsharpelectroderecordedslice.html)|     Collection of recorded cells in a single slice  |
-| [IntraCellularSharpElectrodeRecordedCell](https://bbp-nexus.epfl.ch/datamodels/class-intracellularsharpelectroderecordedcell.html)                    |     Cell that was recorded in the slice      |
-| [Trace](https://bbp-nexus.epfl.ch/datamodels/class-trace.html)                         |     Individual recording trace of the cell (stimulation/input and response/output trace)     |
-| [Protocol](https://bbp-nexus.epfl.ch/datamodels/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
+| [Subject](https://bbp.epfl.ch/schemas/neuroshapes/class-subject.html)                            |     Subject that was used in the experiment     |
+| [Slice](https://bbp.epfl.ch/schemas/neuroshapes/class-slice.html)                                |     Brain slice obtained from the subject      |
+| [IntraCellularSharpElectrodeRecordedSlice](https://bbp.epfl.ch/schemas/neuroshapes/class-intracellularsharpelectroderecordedslice.html)                  |     Brain slice containing recorded cells      |
+| [IntraSharpRecordedCellCollection](https://bbp.epfl.ch/schemas/neuroshapes/class-intracellularsharpelectroderecordedslice.html)|     Collection of recorded cells in a single slice  |
+| [IntraCellularSharpElectrodeRecordedCell](https://bbp.epfl.ch/schemas/neuroshapes/class-intracellularsharpelectroderecordedcell.html)                    |     Cell that was recorded in the slice      |
+| [Trace](https://bbp.epfl.ch/schemas/neuroshapes/class-trace.html)                         |     Individual recording trace of the cell (stimulation/input and response/output trace)     |
+| [Protocol](https://bbp.epfl.ch/schemas/neuroshapes/class-experimentalprotocol.html)                          |     Protocol that describes the method used in the design and execution of the experiment      |
     
 ### Activities
 
@@ -45,9 +45,9 @@ The different activity types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [BrainSlicing](https://bbp-nexus.epfl.ch/datamodels/class-brainslicing.html)                      |     Technique used to obtain a brain slice      |
-| [IntraCellularSharpElectrode](https://bbp-nexus.epfl.ch/datamodels/class-intracellularsharpelectrode.html)        |     Technique used to study electrical activity of individual living cells    |
-| [StimulusExperiment](https://bbp-nexus.epfl.ch/datamodels/class-stimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
+| [BrainSlicing](https://bbp.epfl.ch/schemas/neuroshapes/class-brainslicing.html)                      |     Technique used to obtain a brain slice      |
+| [IntraCellularSharpElectrode](https://bbp.epfl.ch/schemas/neuroshapes/class-intracellularsharpelectrode.html)        |     Technique used to study electrical activity of individual living cells    |
+| [StimulusExperiment](https://bbp.epfl.ch/schemas/neuroshapes/class-stimulusexperiment.html)   |     Technique used to obtain the electrical signature of cells through injection of a defined current pattern |
 
 ### Agents
 
@@ -55,9 +55,9 @@ The different agent types involved in the experiment are listed below.
 
 | Type  | Description|
 | ------------- | ------------- |
-| [Person](https://bbp-nexus.epfl.ch/datamodels/class-schemaperson.html)                                        |    Person associated with an activity      |
-| [SoftwareAgent](https://bbp-nexus.epfl.ch/datamodels/class-provsoftwareagent.html)                          |    Software associated with an activity      |
-| [Organization](https://bbp-nexus.epfl.ch/datamodels/class-schemaorganization.html)                            |    Organization associated with an activity      |
+| [Person](https://bbp.epfl.ch/schemas/neuroshapes/class-schemaperson.html)                                        |    Person associated with an activity      |
+| [SoftwareAgent](https://bbp.epfl.ch/schemas/neuroshapes/class-provsoftwareagent.html)                          |    Software associated with an activity      |
+| [Organization](https://bbp.epfl.ch/schemas/neuroshapes/class-schemaorganization.html)                            |    Organization associated with an activity      |
 
 ## Contributors
 
