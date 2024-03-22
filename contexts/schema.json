@@ -14,6 +14,7 @@
       "schema": "http://schema.org/",
       "nxv": "https://bluebrain.github.io/nexus/vocabulary/",
       "nsg": "https://neuroshapes.org/",
+      "bmo": "https://bbp.epfl.ch/ontologies/core/bmo/",
       "class": {
         "@id": "sh:class",
         "@type": "@id"
