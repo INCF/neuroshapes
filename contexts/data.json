@@ -2,10 +2,6 @@
   "@context": 
     {
       "@vocab": "https://neuroshapes.org/",
-      "isDefinedBy":{
-        "@id":"rdfs:isDefinedBy",
-        "@type":"@id"
-      },
       "AcquisitionAnnotation": {
         "@id": "nsg:AcquisitionAnnotation"
       },
@@ -78,6 +74,9 @@
       "CellPlacement": {
         "@id": "nsg:CellPlacement"
       },
+      "CellRecordSeries": {
+        "@id": "nsg:CellRecordSeries"
+      },
       "CircuitCellProperties": {
         "@id": "nsg:CircuitCellProperties"
       },
@@ -86,6 +85,9 @@
       },
       "Collection": {
         "@id": "prov:Collection"
+      },
+      "ComponentDimension": {
+        "@id": "nsg:ComponentDimension"
       },
       "Concept": {
         "@id": "skos:Concept"
@@ -155,6 +157,9 @@
       },
       "Generation": {
         "@id": "prov:Generation"
+      },
+      "GliaCellDensity": {
+        "@id": "nsg:GliaCellDensity"
       },
       "HostCell": {
         "@id": "nsg:HostCell"
@@ -240,11 +245,20 @@
       "MorphologyRelease": {
         "@id": "nsg:MorphologyRelease"
       },
+      "Mesh": {
+        "@id": "nsg:Mesh"
+      },
       "NISSLImageDataLayer": {
         "@id": "nsg:NISSLImageDataLayer"
       },
       "NdRaster": {
         "@id": "nsg:NdRaster"
+      },
+      "NeuronDensity": {
+        "@id": "nsg:NeuronDensity"
+      },
+      "NeuronMorphology": {
+        "@id": "nsg:NeuronMorphology"
       },
       "NeuronMorphologyReconstruction": {
         "@id": "nsg:NeuronMorphologyReconstruction"
@@ -336,6 +350,12 @@
       "ReconstructionFromImage": {
         "@id": "nsg:ReconstructionFromImage"
       },
+      "RecordMeasure": {
+        "@id": "nsg:RecordMeasure"
+      },
+      "RecordSeries": {
+        "@id": "nsg:RecordSeries"
+      },
       "RegionOfInterest": {
         "@id": "nsg:RegionOfInterest"
       },
@@ -372,11 +392,17 @@
       "SoftwareAgent": {
         "@id": "prov:SoftwareAgent"
       },
+      "SpaceDimension": {
+        "@id": "nsg:SpaceDimension"
+      },
       "SpatialIndex": {
         "@id": "nsg:SpatialIndex"
       },
       "SpatialIndexDerivation": {
         "@id": "nsg:SpatialIndexDerivation"
+      },
+      "StimulationTrace": {
+        "@id": "nsg:StimulationTrace"
       },
       "StimulusExperiment": {
         "@id": "nsg:StimulusExperiment"
@@ -507,6 +533,9 @@
       "atTime": {
         "@id": "prov:atTime"
       },
+      "atlasRelease": {
+        "@id": "nsg:atlasRelease"
+      },
       "atlasSpatialReferenceSystem": {
         "@id": "nsg:atlasSpatialReferenceSystem"
       },
@@ -547,6 +576,9 @@
       "bufferEncoding": {
         "@id": "nsg:bufferEncoding"
       },
+      "byteOffset": {
+        "@id": "nsg:byteOffset"
+      },
       "cellLibraryFile": {
         "@id": "nsg:cellLibraryFile"
       },
@@ -573,6 +605,9 @@
       },
       "column": {
         "@id": "nsg:column"
+      },
+      "comment": {
+        "@id": "rdfs:comment"
       },
       "compensationCurrent": {
         "@id": "nsg:compensationCurrent"
@@ -628,6 +663,10 @@
       },
       "definition": {
         "@id": "skos:definition"
+      },
+      "defines": {
+        "@id": "nsg:defines",
+        "@type": "@id"
       },
       "density": {
         "@id": "nsg:density"
@@ -862,6 +901,10 @@
       "ionChannelGene": {
         "@id": "nsg:ionChannelGene"
       },
+      "isDefinedBy":{
+        "@id":"rdfs:isDefinedBy",
+        "@type":"@id"
+      },
       "isPartOf": {
         "@id": "schema:isPartOf",
         "@type": "@id"
@@ -961,6 +1004,9 @@
         "@id": "skos:note"
       },
       "nsg": "https://neuroshapes.org/",
+      "numberOfRecords": {
+        "@id": "nsg:numberOfRecords"
+      },
       "numberOfSlices": {
         "@id": "nsg:numberOfSlices"
       },
@@ -1073,6 +1119,10 @@
       "reconstructionRequested": {
         "@id": "nsg:reconstructionRequested"
       },
+      "recordMeasure": {
+        "@id": "nsg:recordMeasure",
+        "@container": "@list"
+      },
       "releaseDate": {
         "@id": "schema:releaseDate"
       },
@@ -1106,6 +1156,9 @@
       },
       "secondRow": {
         "@id": "nsg:secondRow"
+      },
+      "series": {
+        "@id": "nsg:series"
       },
       "seriesResistance": {
         "@id": "nsg:seriesResistance"
@@ -1179,6 +1232,9 @@
       "startedAtTime": {
         "@id": "prov:startedAtTime"
       },
+      "statistic": {
+        "@id": "nsg:statistic"
+      },
       "status": {
         "@id": "nsg:status"
       },
@@ -1202,6 +1258,10 @@
       },
       "streetAddress": {
         "@id": "schema:streetAddress"
+      },
+      "sType": {
+        "@id": "nsg:sType",
+        "@type": "@id"
       },
       "subCellularMechanism": {
         "@id": "nsg:subCellularMechanism"
@@ -1243,11 +1303,17 @@
       "templateVolume": {
         "@id": "nsg:templateVolume"
       },
+      "thickness": {
+        "@id": "nsg:thickness"
+      },
       "thirdRow": {
         "@id": "nsg:thirdRow"
       },
       "timeStep": {
         "@id": "nsg:timeStep"
+      },
+      "title": {
+        "@id": "schema:title"
       },
       "topConceptOf": {
         "@id": "skos:topConceptOf"
