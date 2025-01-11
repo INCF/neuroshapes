@@ -2015,6 +2015,39 @@ nsg:LabeledCellCollection rdf:type owl:Class ;
 nsg:License rdf:type owl:Class ;
             rdfs:subClassOf prov:Entity ;
             rdfs:label "License"@en .
+# Add the OpenLicense subclass (for example, Creative Commons)
+nsg:OpenLicense rdf:type owl:Class ;
+    rdfs:subClassOf nsg:License ;
+    rdfs:label "Open License"@en ;
+    rdfs:comment "Represents an open license type like Creative Commons."@en .
+
+# Add the ProprietaryLicense subclass
+nsg:ProprietaryLicense rdf:type owl:Class ;
+    rdfs:subClassOf nsg:License ;
+    rdfs:label "Proprietary License"@en ;
+    rdfs:comment "Represents proprietary licenses like software licenses."@en .
+
+# Define the licenseType property
+nsg:licenseType rdf:type owl:DatatypeProperty ;
+    rdfs:domain nsg:License ;
+    rdfs:range xsd:string ;
+    rdfs:label "License Type"@en ;
+    rdfs:comment "The type of the license (e.g., open, proprietary, etc.)."@en .
+
+# Define the permissions property
+nsg:permissions rdf:type owl:DatatypeProperty ;
+    rdfs:domain nsg:License ;
+    rdfs:range xsd:string ;
+    rdfs:label "Permissions"@en ;
+    rdfs:comment "Permissions granted under this license (e.g., read, write, share)."@en .
+
+# Define the restrictions property
+nsg:restrictions rdf:type owl:DatatypeProperty ;
+    rdfs:domain nsg:License ;
+    rdfs:range xsd:string ;
+    rdfs:label "Restrictions"@en ;
+    rdfs:comment "Restrictions under the license (e.g., no commercial use)."@en .
+
 
 
 ###  https://neuroshapes.org/LinearTransform
