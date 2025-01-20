@@ -1,3 +1,4 @@
+
 {
   "@context": [
     "https://incf.github.io/neuroshapes/contexts/schema.json",
@@ -35,14 +36,14 @@
             {
               "path": "nsg:objectiveMagnification",
               "name": "Objective magnification",
-              "description": "Objective magnification .",
+              "description": "Objective magnification.",
               "datatype": "xsd:string",
               "maxCount": 1
             },
             {
               "path": "nsg:compressionCorrection",
               "name": "Reconstruction compression correction",
-              "description": "Reconstruction compression corrected refers to the correction applied to the cell reconstruction, expected value : x1.25 in Z.",
+              "description": "Reconstruction compression corrected refers to the correction applied to the cell reconstruction, expected value: x1.25 in Z.",
               "datatype": "xsd:string",
               "maxCount": 1
             },
@@ -59,6 +60,14 @@
               "class": "nsg:ReconstructedCell",
               "minCount": 1,
               "maxCount": 1
+            },
+            {
+              "path": "nsg:lowMagnificationImage",
+              "name": "Low Magnification Image",
+              "description": "Image taken at low magnification for anatomical context.",
+              "datatype": "xsd:string",
+              "maxCount": 1,
+              "comment": "File path or URL to the low magnification image."
             }
           ]
         }
