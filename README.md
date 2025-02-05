@@ -45,6 +45,24 @@ A set of tutorials from the [Blue Brain Nexus Forge](https://nexus-forge.readthe
 
 Try them in Binder [![Tutorials](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/BlueBrain/nexus-forge/v0.4.0?filepath=examples%2Fnotebooks%2Fgetting-started)
 
+# Why Neuroshapes?
+
+Neuroscience research generates vast amounts of data, but sharing and reusing this data has been challenging due to several issues:
+
+- **Lack of Standardization**: Different research groups use various formats, making it difficult to integrate data from multiple sources.
+- **Limited Validation Mechanisms**: Ensuring the accuracy and consistency of neuroscience data is a complex and manual process.
+- **Discoverability Issues**: Researchers often struggle to find relevant datasets due to inconsistent metadata practices.
+- **Interoperability Challenges**: Many neuroscience platforms and tools use incompatible data models, making it hard to exchange information.
+
+### **How Neuroshapes Solves These Problems**
+Neuroshapes provides a structured, standard-based approach to neuroscience data management by:
+- Using **[SHACL](https://www.w3.org/TR/shacl)** for **defining and enforcing** metadata rules.
+- Adopting **[JSON-LD](https://json-ld.org/)** for **semantic data structuring and discoverability**.
+- Leveraging **Linked Data Principles** to enable **federated access** to neuroscience datasets.
+- Promoting **reusability** and **interoperability**, making data easily shareable across projects.
+
+By addressing these challenges, Neuroshapes ensures neuroscience data is **Findable, Accessible, Interoperable, and Reusable (FAIR)**.
+
 
 # Adoption
 
