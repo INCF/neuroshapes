@@ -1,0 +1,77 @@
+# Complete Neuron Reconstruction Workflow Template
+# This template covers the full experimental pipeline from animal to reconstructed cell
+
+Subject:
+  id: ""
+  species: ""
+  strain: ""
+  sex: ""
+  age: ""
+  animal_weight: ""
+  date: ""
+  comment: ""
+
+Slice:
+  protocol: ""
+  person: ""
+  date: ""
+  solution: ""
+  brainLocation: ""
+  cuttingThickness: ""  # e.g., "300um"
+  generated: ""
+  hemisphere: ""  # "left" or "right"
+  slicingPlane: ""  # e.g., "sagittal", "coronal"
+  slicingAngle: ""
+  comment: ""
+
+PatchedSlice:
+  protocol: ""
+  person: ""
+  date: ""
+  name: ""
+  brainLocation: ""
+  bathSolution: ""
+  temperature: ""  # e.g., "32C"
+  recordingType: ""
+  intracellularSolution: ""
+  generated: ""
+  comment: ""
+
+FixedStainedSlice:
+  protocol: ""
+  person: ""
+  date: ""
+  name: ""
+  comment: ""
+
+ImagedSlice:
+  protocol: ""
+  person: ""
+  date: ""
+  name: ""
+  generated: ""
+  comment: ""
+
+LabeledCell:
+  name: ""
+  brainLocation: ""
+  coordinatesInBrainAtlas:
+    rostrocaudal: ""
+    lateral: ""
+    dorsal: ""
+  locationInSlice: ""
+  putativeMType: ""
+  generated: ""
+  comment: ""
+
+ReconstructedCell:
+  protocol: ""
+  person: ""
+  date: ""
+  name: ""
+  mType: ""
+  axonProjection: ""
+  compressionCorrection: ""
+  shrinkageCorrection: ""
+  geometryCorrected: ""
+  comment: ""

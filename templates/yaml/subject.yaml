@@ -1,0 +1,28 @@
+# Subject/Animal Metadata Template
+# Fill in the fields below with your experimental data
+# Remove or leave blank any fields that don't apply to your experiment
+
+Subject:
+  # Unique identifier for this subject (required)
+  id: ""
+  
+  # Species name (e.g., "Mus musculus") or taxonomy ID (e.g., "NCBITaxon:10090")
+  species: ""
+  
+  # Genetic strain (e.g., "C57BL/6", "Wistar")
+  strain: ""
+  
+  # Biological sex ("Male" or "Female")
+  sex: ""
+  
+  # Age of subject (e.g., "P21", "8 weeks", "3 months")
+  age: ""
+  
+  # Weight with unit (e.g., "25g", "250g")
+  animal_weight: ""
+  
+  # Date of experiment in ISO format (YYYY-MM-DD)
+  date: ""
+  
+  # Additional notes or comments
+  comment: ""

@@ -1,0 +1,14 @@
+# Brain Slice Preparation Template
+
+Slice:
+  protocol: ""
+  person: ""
+  date: ""
+  solution: ""
+  brainLocation: ""
+  cuttingThickness: ""  # e.g., "300um"
+  generated: ""
+  hemisphere: ""  # "left" or "right"
+  slicingPlane: ""  # e.g., "sagittal", "coronal", "horizontal"
+  slicingAngle: ""
+  comment: ""

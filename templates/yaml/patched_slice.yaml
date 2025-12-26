@@ -1,0 +1,14 @@
+# Electrophysiology Recording Template
+
+PatchedSlice:
+  protocol: ""
+  person: ""
+  date: ""
+  name: ""
+  brainLocation: ""
+  bathSolution: ""
+  temperature: ""  # e.g., "32C"
+  recordingType: ""  # e.g., "whole-cell patch clamp"
+  intracellularSolution: ""
+  generated: ""
+  comment: ""

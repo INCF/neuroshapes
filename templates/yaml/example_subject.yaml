@@ -1,0 +1,11 @@
+# Example: Mouse Hippocampus Experiment
+
+Subject:
+  id: "M001"
+  species: "Mus musculus"
+  strain: "C57BL/6"
+  sex: "Male"
+  age: "P21"
+  animal_weight: "25g"
+  date: "2024-03-15"
+  comment: "Healthy juvenile mouse"

@@ -57,6 +57,31 @@ The following projects have adopted Neuroshapes:
 # Formats and standards
 All schemas in this repository conform to the [W3C SHACL recommendation](https://www.w3.org/TR/shacl) and are serialized using [JSON-LD](https://www.w3.org/TR/2014/REC-json-ld-20140116/).
 
+## Using YAML templates for manual data entry
+
+For researchers who need to manually enter experimental metadata, we provide human-friendly YAML templates in the `templates/yaml/` directory. These templates are easier to edit than JSON-LD and can be converted automatically.
+
+### Quick start
+
+```bash
+# Copy a template
+cp templates/yaml/subject.yaml my_experiment.yaml
+
+# Fill in your data with any text editor
+nano my_experiment.yaml
+
+# Convert to JSON-LD
+python scripts/yaml_to_jsonld.py my_experiment.yaml my_experiment.json
+```
+
+Available templates:
+- `subject.yaml` - Animal/subject information
+- `slice.yaml` - Brain slice preparation
+- `patched_slice.yaml` - Electrophysiology recording
+- `reconstructed_cell.yaml` - Complete reconstruction workflow
+
+See [templates/yaml/README.md](templates/yaml/README.md) for detailed documentation.
+
 ## Testing shapes with examples 
 
 Two different tests are executed in the unittest. The first test validates that schemas conform with the SHACL specifications. 
@@ -86,7 +111,7 @@ Tests require python > 3.6, and pytest. To run them follow next:
     python3 -m venv env
     source env/bin/activate
     # install requirements
-    pip install pytest pyshacl
+    pip install -r requirements.txt
     # run tests
     pytest
     
