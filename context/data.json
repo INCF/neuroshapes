@@ -1149,8 +1149,10 @@
       "sh": "http://www.w3.org/ns/shacl#",
       "shsh": "http://www.w3.org/ns/shacl-shacl#",
       "size": {
-        "@id": "schema:size"
-      },
+      "@id": "schema:size",
+      "@type": "xsd:integer"
+      }
+
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "sku": {
         "@id": "schema:sku"
