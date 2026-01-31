@@ -50,7 +50,7 @@ Before you submit your proposal consider the following guidelines:
 ### Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-* Please join the [INCF SIG on Neuroshapes]() before sending Pull requests.
+* Please join the [INCF SIG on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open) before sending Pull requests.
   Proposals are managed and reviewed by members of that INCF SIG.
 
 
