@@ -1,6 +1,6 @@
 # How to contribute
 
-We would love for you to contribute to the Neuroshapes familly of data models and help make them even better than they are now!
+We would love for you to contribute to the Neuroshapes family of data models and help make them even better than they are now!
 As a contributor, find in the next sections the guidelines we would like you to follow.
 
 ## Got a Question or a Problem?
