@@ -8,17 +8,17 @@ Please do not hesitate to open an issue [here](https://github.com/INCF/neuroshap
 
 ## Found a Bug?
 If you find a bug in the source code of any tools, in any schema or vocabulary in this repository, you can help us fix it by
-[submitting an issue](#submit-issue) to our [GitHub Repository](https://github.com/INCF/neuroshapes). Even better, you can
-[submit a Pull Request](#submit-pr) with a fix.
+[submitting an issue](#submitting-an-issue) to our [GitHub Repository](https://github.com/INCF/neuroshape). Even better, you can
+[submit a Pull Request](#submitting-a-pull-request-pr) with a fix.
 
 ## Missing a Feature or a data model?
-You can *request* them by [submitting an issue](#submit-issue) to our GitHub
+You can *request* them by [submitting an issue](#submitting-an-issue) to our GitHub
 Repository. If you would like to *implement* a new feature or *propose* a new data model specification, please submit an issue with a proposal for your work first, to be sure it can be implemented and most importantly, to trigger discussions and enable collaborations with interested people.
 Please consider what kind of change it is:
 
 * For **a Data Model Specification Proposal or Extension**, first open an issue and outline your proposal so that it can be discussed.
 
-* **Data examples implementing/illustrating an existing Data Model** can be directly [submitted as a Pull Request](#submit-pr). For example different atlas releases conformant to the 
+* **Data examples implementing/illustrating an existing Data Model** can be directly [submitted as a Pull Request](#submitting-a-pull-request-pr). For example different atlas releases conformant to the 
 [atlas registration prov pattern](https://github.com/INCF/neuroshapes/blob/master/provpatterns/assets/atlas-registration-prov-template.svg) can be submitted.
 
 * For a **Major Feature** related to the tools and scripts made available in this repository, first open an issue and outline your proposal so that it can be
@@ -26,7 +26,7 @@ discussed. This will also allow us to better coordinate our efforts, prevent dup
 and help you to craft the change so that it is successfully accepted into the project.
 
 
-* **Small Features** can be crafted and directly [submitted as a Pull Request](#submit-pr).
+* **Small Features** can be crafted and directly [submitted as a Pull Request](#submitting-a-pull-request-pr).
 
 ## Submission Guidelines
 ### Submitting an Issue
@@ -50,7 +50,7 @@ Before you submit your proposal consider the following guidelines:
 ### Submitting a Pull Request (PR)
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-* Please join the [INCF SIG on Neuroshapes]() before sending Pull requests.
+* Please join the [INCF SIG on Neuroshapes](https://www.incf.org/activities/standards-and-best-practices/incf-special-interest-groups/incf-sig-on-neuroshapes-open) before sending Pull requests.
   Proposals are managed and reviewed by members of that INCF SIG.
 
 
